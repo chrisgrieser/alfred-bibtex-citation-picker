@@ -11,4 +11,4 @@ This workflow is made for academics who neither like Word nor LaTeX. As the name
 ➡️ [Latest Release on GitHub](https://github.com/chrisgrieser/pandoc_alfred/releases)
 
 ## Usage & Installation Guide
-➡️ [Complete Information on Usage, Installation & Initial Setup](https://chris-grieser.de/pandoc_alfred)
+➡️ [Complete Information on Usage, Installation, & Initial Setup](https://chris-grieser.de/pandoc_alfred)
