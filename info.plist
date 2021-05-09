@@ -60,6 +60,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>1CC45D25-897C-4640-A9D0-AD2B3FCD2EC8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F3DE0838-ED88-4664-BA3E-E75737CF8EB5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>1E75D41D-467E-425D-B8F5-C1C888C575F0</key>
 		<array>
 			<dict>
@@ -164,7 +177,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>B7DCB867-2984-4D03-8A6D-F9EDB92029C2</string>
+				<string>1CC45D25-897C-4640-A9D0-AD2B3FCD2EC8</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -784,19 +797,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>B7DCB867-2984-4D03-8A6D-F9EDB92029C2</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>F3DE0838-ED88-4664-BA3E-E75737CF8EB5</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>B914FAA4-CE6D-4FE6-8BF7-748E1F4EB1F9</key>
 		<array>
 			<dict>
@@ -1346,7 +1346,6 @@ fi</string>
 on run
 
 	--import major variables (Shell Script part necessary to handle encoding, see https://www.alfredforum.com/topic/15992-applescript-reads-alfred-environment-variables-in-wrong-encoding/
-	set zotero_style_folder to do shell script "echo " &amp; quoted form of (system attribute "zotero_style_folder") &amp; " | iconv -f UTF-8-MAC -t MACROMAN"
 	set csl_file to do shell script "echo " &amp; quoted form of (system attribute "csl_file") &amp; " | iconv -f UTF-8-MAC -t MACROMAN"
 	set bibtex_library_path to do shell script "echo " &amp; quoted form of (system attribute "bibtex_library_path") &amp; " | iconv -f UTF-8-MAC -t MACROMAN"
 	set reference_docx_path to do shell script "echo " &amp; quoted form of (system attribute "reference_docx_path") &amp; " | iconv -f UTF-8-MAC -t MACROMAN"
@@ -1377,7 +1376,6 @@ on run
 	set doc_name to text 1 thru ((offset of ".txt" in doc_name) - 1) of doc_name
 
 	-- building the pandoc command
-	set citation_style_path to ""
 	set bibliography to ""
 	set reference_docx to ""
 	set pdf_arg to ""
@@ -1387,7 +1385,7 @@ on run
 	set output to "-o " &amp; (quoted form of (parent_folder &amp; doc_name &amp; "." &amp; desired_format)) &amp; " "
 	set resource_path to "--resource-path=" &amp; (quoted form of parent_folder) &amp; " "
 	if bibtex_library_path ≠ "" then set bibliography to "--bibliography " &amp; (quoted form of bibtex_library_path) &amp; " "
-	if (zotero_style_folder ≠ "" and csl_file ≠ "") then set citation_style_path to "--csl " &amp; (quoted form of (zotero_style_folder &amp; csl_file)) &amp; " "
+	set citation_style_path to "--csl ~" &amp; (quoted form of ("/Zotero/styles/" &amp; csl_file)) &amp; " "
 	set slide_level_arg to "--slide-level=" &amp; slide_level &amp; " "
 	set further_args to further_pandoc_args &amp; " "
 	if reference_docx_path ≠ "" then set reference_docx to "--reference-doc " &amp; (quoted form of reference_docx_path) &amp; " "
@@ -1719,7 +1717,7 @@ end alfred_script</string>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>0</integer>
+				<integer>5</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -2192,13 +2190,15 @@ end run</string>
 					</dict>
 				</array>
 				<key>includesystem</key>
-				<false/>
+				<true/>
 				<key>limit</key>
 				<integer>0</integer>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>scopes</key>
-				<array/>
+				<array>
+					<string>~/Zotero/styles</string>
+				</array>
 				<key>sortmode</key>
 				<integer>0</integer>
 				<key>subtext</key>
@@ -2206,9 +2206,7 @@ end run</string>
 				<key>title</key>
 				<string>Search Citation Style Names...</string>
 				<key>types</key>
-				<array>
-					<string>dyn.ah62d4rv4ge80g65q</string>
-				</array>
+				<array/>
 				<key>withspace</key>
 				<false/>
 			</dict>
@@ -2243,24 +2241,17 @@ end run</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>json</key>
-				<string>{
-  "alfredworkflow" : {
-    "config" : {
-      "scopes" : [
-        "{var:zotero_style_folder}"
-      ]
-    },
-    "variables" : {
-      "folder" : "{var:zotero_style_folder}"
-    }
-  }
-}</string>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.json</string>
+			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>B7DCB867-2984-4D03-8A6D-F9EDB92029C2</string>
+			<string>1CC45D25-897C-4640-A9D0-AD2B3FCD2EC8</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -3358,7 +3349,9 @@ https://chris-grieser.de/pandoc_alfred
 
 release notes
 =============
-v 1.3 support for OneUpdater (https://github.com/vitorgalvao/alfred-workflows/tree/master/OneUpdater) and minor refactoring of the pconf-command
+v.1.3.1: simplifies installation by utomatically setting the style folder (this was previously not possible due to an issue with the now substited pandoc-citeproc)
+
+v 1.3: enables automatic updates via OneUpdater (https://github.com/vitorgalvao/alfred-workflows/tree/master/OneUpdater) and some minor refactoring of the pconf-command
 
 v 1.2.1: fix: uses "--citeproc" as parameter due to the deprecation of pandoc-citeproc with pandoc version 2.11 (fixes this workflow for people installing pandoc after November 2020)
 
@@ -3412,6 +3405,15 @@ added support for images while converting (with the --resource-path parameter)</
 			<integer>930</integer>
 			<key>ypos</key>
 			<integer>1065</integer>
+		</dict>
+		<key>1CC45D25-897C-4640-A9D0-AD2B3FCD2EC8</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>335</integer>
+			<key>ypos</key>
+			<integer>730</integer>
 		</dict>
 		<key>1E75D41D-467E-425D-B8F5-C1C888C575F0</key>
 		<dict>
@@ -3859,15 +3861,6 @@ added support for images while converting (with the --resource-path parameter)</
 			<key>ypos</key>
 			<integer>1185</integer>
 		</dict>
-		<key>B7DCB867-2984-4D03-8A6D-F9EDB92029C2</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>8</integer>
-			<key>xpos</key>
-			<integer>335</integer>
-			<key>ypos</key>
-			<integer>730</integer>
-		</dict>
 		<key>B914FAA4-CE6D-4FE6-8BF7-748E1F4EB1F9</key>
 		<dict>
 			<key>colorindex</key>
@@ -4067,18 +4060,15 @@ added support for images while converting (with the --resource-path parameter)</
 		<string>/Users/chrisgrieser/Google Drive/Academia/Vorlagen/Academic Presentation Template.pptx</string>
 		<key>slide_level</key>
 		<string>2</string>
-		<key>zotero_style_folder</key>
-		<string>/Users/chrisgrieser/Zotero/styles/</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
-		<string>zotero_style_folder</string>
 		<string>bibtex_library_path</string>
 		<string>reference_pptx_path</string>
 		<string>reference_docx_path</string>
 	</array>
 	<key>version</key>
-	<string>1.3</string>
+	<string>1.3.1</string>
 	<key>webaddress</key>
 	<string>chris-grieser.de</string>
 </dict>
