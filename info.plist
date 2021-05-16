@@ -5,7 +5,7 @@
 	<key>bundleid</key>
 	<string>de.chris-grieser.pandoc-alfred</string>
 	<key>category</key>
-	<string>created or edited by me</string>
+	<string>My Workflows</string>
 	<key>connections</key>
 	<dict>
 		<key>01C18AD5-1189-4DFA-82BB-5C863BB2F037</key>
@@ -13,19 +13,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>3E3A8C0C-E4AD-4403-AFB6-8B7FA0EFF71F</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>080C66A9-A6D8-401D-A394-B992FC87F507</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>BC2942FE-8B27-4B09-B7BE-344A9A98D511</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -60,6 +47,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>1586C092-4E94-4D4C-B43C-70C1C7103F66</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FD17D62A-FF7C-42DF-93C5-657F8C2B360A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>1CC45D25-897C-4640-A9D0-AD2B3FCD2EC8</key>
 		<array>
 			<dict>
@@ -73,11 +73,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>1E75D41D-467E-425D-B8F5-C1C888C575F0</key>
+		<key>1E5378C0-2F02-417C-B363-E2805FAF27E8</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>65CA24BA-2DA6-4DC0-A2BE-3E4E4D5FDD72</string>
+				<string>75F44825-564D-4C3A-BC1C-8C49DC7A3894</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -85,6 +85,9 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+		</array>
+		<key>1E75D41D-467E-425D-B8F5-C1C888C575F0</key>
+		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>CD10FB60-F2A7-4035-91C6-BED56464E0F5</string>
@@ -113,7 +116,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>67A601DA-66EE-45B7-8513-BB8E17D4A54D</string>
+				<string>AA87F73F-B3DC-452A-AA8D-B45E79D13BDA</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -148,21 +151,20 @@
 				<false/>
 			</dict>
 		</array>
-		<key>2BA68365-418A-4822-A4B3-DF266A9FFE24</key>
+		<key>2C9C9202-FD29-496C-BBE2-2858BF4A9641</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>D418259D-CA04-4109-9141-3132D3BF758A</string>
+				<string>DF96F627-1FFC-452B-B013-242983A6197B</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>sourceoutputuid</key>
+				<string>A778420C-F39C-486C-AF5D-A639F2612559</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
-		</array>
-		<key>2C9C9202-FD29-496C-BBE2-2858BF4A9641</key>
-		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>10000D18-BDC8-4A08-B089-D7164D917E8A</string>
@@ -299,7 +301,18 @@
 			</dict>
 		</array>
 		<key>329BF0DA-52B7-4D6F-8648-7280013C54AC</key>
-		<array/>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>01BD0B65-2695-4C72-A475-66D8A954CDD0</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>3303F829-CEC3-4465-B2A9-760449051745</key>
 		<array>
 			<dict>
@@ -313,11 +326,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>3A3139AC-C1FA-440D-B763-51B7393CFD2D</key>
+		<key>3525B1D4-FE5B-4087-B8D4-592A85B73ECA</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>C5CD1FB8-8FE5-4F75-BCE0-0D7F03887989</string>
+				<string>BC2942FE-8B27-4B09-B7BE-344A9A98D511</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -329,7 +342,32 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>2BA68365-418A-4822-A4B3-DF266A9FFE24</string>
+				<string>8BC9584A-510E-4BEE-A2E5-A7EBAAA90F96</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>3A3139AC-C1FA-440D-B763-51B7393CFD2D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EA5FC55D-EF41-48AB-8318-7FEBC5971355</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>D2294731-682D-45C9-9750-E3613E3F2BDD</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>C5CD1FB8-8FE5-4F75-BCE0-0D7F03887989</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -376,16 +414,6 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>65CA24BA-2DA6-4DC0-A2BE-3E4E4D5FDD72</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
 		</array>
 		<key>3E3A8C0C-E4AD-4403-AFB6-8B7FA0EFF71F</key>
 		<array>
@@ -405,6 +433,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>5335BA38-FC76-4B47-8D08-462A1AC06CC4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>48CFAE2D-926B-4B05-A586-48A7A9D395CE</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C5CD1FB8-8FE5-4F75-BCE0-0D7F03887989</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -504,6 +545,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>5E03C541-76F4-456C-AE68-1F63590CEE3B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9C4D210E-D3C9-4A87-8110-71B51B36DCF8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>61EAC824-FB0A-4032-BC04-BFCAE7C2C213</key>
 		<array>
 			<dict>
@@ -529,11 +583,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>686D88E4-FD66-4DBD-A63F-F30E058E5A68</key>
+		<key>6627A981-4C34-471F-A108-868F4C8F6C77</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>FD17D62A-FF7C-42DF-93C5-657F8C2B360A</string>
+				<string>C5CD1FB8-8FE5-4F75-BCE0-0D7F03887989</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -633,6 +687,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>75F44825-564D-4C3A-BC1C-8C49DC7A3894</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7D5245E3-DF34-4B83-A9EE-98ED7232686D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>776B385C-6D41-47B5-A954-4B6FD8CD9B57</key>
 		<array>
 			<dict>
@@ -671,21 +738,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>7BE45465-F9BC-4214-8642-1EA6AB3CF959</key>
+		<key>7BAC0AE1-EB76-46E6-9622-397A10FAC5A7</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>65CA24BA-2DA6-4DC0-A2BE-3E4E4D5FDD72</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>F304F009-68AD-4AB9-8B6C-D482B4CF7A59</string>
+				<string>E0161BB2-AEAF-414C-BC56-8903CCC21234</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -707,23 +764,23 @@
 				<false/>
 			</dict>
 		</array>
-		<key>895AB524-C851-4F84-8F83-F9384E671530</key>
+		<key>8BC9584A-510E-4BEE-A2E5-A7EBAAA90F96</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>BC2942FE-8B27-4B09-B7BE-344A9A98D511</string>
+				<string>C5CD1FB8-8FE5-4F75-BCE0-0D7F03887989</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>sourceoutputuid</key>
-				<string>D2294731-682D-45C9-9750-E3613E3F2BDD</string>
+				<string>6F33F6A8-49FA-4CD1-8452-AC704E363F33</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>686D88E4-FD66-4DBD-A63F-F30E058E5A68</string>
+				<string>F8165297-EDCE-486C-8145-74C244AFBB14</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -737,6 +794,32 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>1EDA81EE-9A5D-4315-8606-DC351F27CE7A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>9C4D210E-D3C9-4A87-8110-71B51B36DCF8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C5CD1FB8-8FE5-4F75-BCE0-0D7F03887989</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>AA87F73F-B3DC-452A-AA8D-B45E79D13BDA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>65CA24BA-2DA6-4DC0-A2BE-3E4E4D5FDD72</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -823,6 +906,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>BCF854A0-9393-4A26-9BE7-B1DD004B8847</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A824D01B-F6C7-4D3E-8687-1B43D309258F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>BD700704-F718-412C-B02A-65B822A7CF67</key>
 		<array>
 			<dict>
@@ -862,6 +958,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>C5F3870E-9179-475E-BCA9-D35E172DEE3D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6627A981-4C34-471F-A108-868F4C8F6C77</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>C6163D07-A2C0-4E02-8D6B-F42F6101E0F8</key>
 		<array>
 			<dict>
@@ -888,6 +997,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>CB4D33E2-A031-4542-A640-3B73D66EE39E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>65CA24BA-2DA6-4DC0-A2BE-3E4E4D5FDD72</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>CCEF019A-BFFB-4857-A25A-A8A67EBD3DDA</key>
 		<array>
 			<dict>
@@ -905,7 +1027,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>895AB524-C851-4F84-8F83-F9384E671530</string>
+				<string>3525B1D4-FE5B-4087-B8D4-592A85B73ECA</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -914,7 +1036,20 @@
 				<false/>
 			</dict>
 		</array>
-		<key>D418259D-CA04-4109-9141-3132D3BF758A</key>
+		<key>DF96F627-1FFC-452B-B013-242983A6197B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A293BD12-10A1-40CB-A7E3-E1D822471C40</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E0161BB2-AEAF-414C-BC56-8903CCC21234</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -945,6 +1080,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>543E28F6-B8FB-4ADA-AF17-D65A84CC3D0B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>EA5FC55D-EF41-48AB-8318-7FEBC5971355</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7190C69E-73FB-47E8-BA2A-1DD2FA694AC1</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -992,19 +1140,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>F304F009-68AD-4AB9-8B6C-D482B4CF7A59</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>895AB524-C851-4F84-8F83-F9384E671530</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>F3DE0838-ED88-4664-BA3E-E75737CF8EB5</key>
 		<array>
 			<dict>
@@ -1018,11 +1153,24 @@
 				<false/>
 			</dict>
 		</array>
+		<key>F8165297-EDCE-486C-8145-74C244AFBB14</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>BCF854A0-9393-4A26-9BE7-B1DD004B8847</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>FD17D62A-FF7C-42DF-93C5-657F8C2B360A</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>080C66A9-A6D8-401D-A394-B992FC87F507</string>
+				<string>48CFAE2D-926B-4B05-A586-48A7A9D395CE</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1060,45 +1208,13 @@
 	<key>createdby</key>
 	<string>Chris Grieser</string>
 	<key>description</key>
-	<string>Cite in Pandoc Markdown and convert it into .docs, .pdf, .html, or .pptx with proper citations &amp; bibliography</string>
+	<string>Cite in Markdown and convert Markdown files to .docx, .pdf, .html, or .pptx with proper citations &amp; bibliography</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
 	<string>Pandoc-Suite for Academic Writing in Markdown</string>
 	<key>objects</key>
 	<array>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>-- this script puts the app into foreground that was in focus when the hotkey was triggered.
--- this allows the following clipboard action later on to automatically paste the input into the app
-
-on run
-
-set focusedapp_id to (system attribute "focusedapp")
-tell application id focusedapp_id to activate --note: alfreds focused-app-variable passes not an app name, but the app-id, therefore they keyword "id" has to be added here.
-return "{query}" --passes through the query
-
-end run</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>6</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>535927EB-2ED1-4C7C-B7B2-3AE4B9C11B88</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -1117,6 +1233,44 @@ end run</string>
 			<string>CB4D33E2-A031-4542-A640-3B73D66EE39E</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>paths</key>
+				<array>
+					<string>/Applications/Zotero.app</string>
+				</array>
+				<key>toggle</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.launchfiles</string>
+			<key>uid</key>
+			<string>459B4CBB-47BC-4B5A-9882-9D9025F3D3E3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
+				<string>pandoc</string>
+				<key>subtext</key>
+				<string>Obsolete command! Will open Pandoc-Suite Guide with explanation</string>
+				<key>text</key>
+				<string>Convert a Markdown Document...</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>1E5378C0-2F02-417C-B363-E2805FAF27E8</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1180,19 +1334,65 @@ end run</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>paths</key>
-				<array>
-					<string>/Applications/Zotero.app</string>
-				</array>
-				<key>toggle</key>
+				<key>alignment</key>
+				<integer>0</integer>
+				<key>backgroundcolor</key>
+				<string></string>
+				<key>fadespeed</key>
+				<integer>0</integer>
+				<key>fillmode</key>
+				<integer>0</integer>
+				<key>font</key>
+				<string></string>
+				<key>ignoredynamicplaceholders</key>
 				<false/>
+				<key>largetypetext</key>
+				<string>You used a command that was valid in Pandoc-Suite 1.x but  has become obsolete in the new version 2.0.
+
+Triggering Pandoc has been simplified, please consult the usage guide that has just been opened.</string>
+				<key>textcolor</key>
+				<string></string>
+				<key>wrapat</key>
+				<integer>50</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.launchfiles</string>
+			<string>alfred.workflow.output.largetype</string>
 			<key>uid</key>
-			<string>459B4CBB-47BC-4B5A-9882-9D9025F3D3E3</string>
+			<string>75F44825-564D-4C3A-BC1C-8C49DC7A3894</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>-- this script puts the app into foreground that was in focus when the hotkey was triggered.
+-- this allows the following clipboard action later on to automatically paste the input into the app
+
+on run
+
+set focusedapp_id to (system attribute "focusedapp")
+tell application id focusedapp_id to activate --note: alfreds focused-app-variable passes not an app name, but the app-id, therefore they keyword "id" has to be added here.
+return "{query}" --passes through the query
+
+end run</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>535927EB-2ED1-4C7C-B7B2-3AE4B9C11B88</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1241,6 +1441,100 @@ end run</string>
 			<string>4CD979CC-3ADB-4C54-92FA-F2A9B569E75C</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+
+try
+  tell application "iA Writer"
+    set the_document to front document
+    save the_document
+    set hsf_path to file of the_document
+  end tell
+end try
+
+if (hsf_path = missing value) then return "no_file_recognized"
+set doc_path to (POSIX path of hsf_path) 
+return doc_path
+
+end alfred_script</string>
+				<key>cachescript</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>BC2942FE-8B27-4B09-B7BE-344A9A98D511</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>soundname</key>
+				<string>Basso</string>
+				<key>systemsound</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.playsound</string>
+			<key>uid</key>
+			<string>7190C69E-73FB-47E8-BA2A-1DD2FA694AC1</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alignment</key>
+				<integer>0</integer>
+				<key>backgroundcolor</key>
+				<string></string>
+				<key>fadespeed</key>
+				<integer>0</integer>
+				<key>fillmode</key>
+				<integer>0</integer>
+				<key>font</key>
+				<string></string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>largetypetext</key>
+				<string>iA Writer is open, but no file was recognized. 
+
+This usually only happens when you have created a new document and have not saved it yet. Please save the document and retry.</string>
+				<key>textcolor</key>
+				<string></string>
+				<key>wrapat</key>
+				<integer>50</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.largetype</string>
+			<key>uid</key>
+			<string>EA5FC55D-EF41-48AB-8318-7FEBC5971355</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://www.notion.so/chrisgrieser/Pandoc-Suite-for-Citations-and-Bibliographies-in-Markdown-4de4bd634ceb4533a1add8b105a487b1#6067e5b7a65448c195b602fb413068b0</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>7D5245E3-DF34-4B83-A9EE-98ED7232686D</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1336,6 +1630,188 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>1</integer>
+				<key>focusedappvariable</key>
+				<true/>
+				<key>focusedappvariablename</key>
+				<string>focusedapp</string>
+				<key>hotkey</key>
+				<integer>14</integer>
+				<key>hotmod</key>
+				<integer>1572864</integer>
+				<key>hotstring</key>
+				<string>E</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedApps</key>
+				<array>
+					<string>com.apple.finder</string>
+					<string>pro.writer.mac</string>
+				</array>
+				<key>relatedAppsMode</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>1E75D41D-467E-425D-B8F5-C1C888C575F0</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>no_file_recognized</string>
+						<key>outputlabel</key>
+						<string>no file recognized</string>
+						<key>uid</key>
+						<string>D2294731-682D-45C9-9750-E3613E3F2BDD</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>file recognized</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>3A3139AC-C1FA-440D-B763-51B7393CFD2D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:focusedapp}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>pro.writer.mac</string>
+						<key>outputlabel</key>
+						<string>iA Writer</string>
+						<key>uid</key>
+						<string>D2294731-682D-45C9-9750-E3613E3F2BDD</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>Finder</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>3525B1D4-FE5B-4087-B8D4-592A85B73ECA</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>desired_format</key>
+					<string>{var:hotkey_output_format}</string>
+					<key>doc_path</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>CD10FB60-F2A7-4035-91C6-BED56464E0F5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>4</integer>
+						<key>matchstring</key>
+						<string>.(md|txt|markdown|mdtxt|mdown|rmd|mdwn)$</string>
+						<key>outputlabel</key>
+						<string>md file selected</string>
+						<key>uid</key>
+						<string>6F33F6A8-49FA-4CD1-8452-AC704E363F33</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>other type selected</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>8BC9584A-510E-4BEE-A2E5-A7EBAAA90F96</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Markdown to {var:desired_format}</string>
+				<key>title</key>
+				<string>Pandoc processing running...</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>B914FAA4-CE6D-4FE6-8BF7-748E1F4EB1F9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>path</key>
+				<string>{var:doc_path}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.revealfile</string>
+			<key>uid</key>
+			<string>E5AE7980-8F19-44F4-8277-2D1E2EA8B18C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -1426,281 +1902,31 @@ end run</string>
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>Markdown to {var:desired_format}</string>
+				<string>{var:desired_format} sucessfully created.</string>
 				<key>title</key>
-				<string>Pandoc processing running...</string>
+				<string>Conversion complete</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>B914FAA4-CE6D-4FE6-8BF7-748E1F4EB1F9</string>
+			<string>203213EF-7CCC-4A0A-A034-41804B7CAF0D</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<true/>
-				<key>variables</key>
-				<dict>
-					<key>doc_path</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>C5CD1FB8-8FE5-4F75-BCE0-0D7F03887989</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>applescript</key>
-				<string>--automatic file recognion: currently only works for iA Writer
-on alfred_script(q)
-
-	try
-		tell application "iA Writer"
-			set the_document to front document
-			save the_document
-			set hsf_path to file of the_document
-		end tell
-	end try
-
-	--Ulysses does not support Applescript, but maybe sth. can be done with URL Schemes in the future? https://ulysses.app/kb/x-callback-url#get-item
-	--Scrivener supports neither Applescript nor URl Schemes.
-	--Ulysses seems not to save classic .md files, so this could be a problem, too
-
-	if (hsf_path = missing value) then return "no_file_recognized"
-	set doc_path to (POSIX path of hsf_path) (* terminal-friendly version *)
-	return doc_path
-
-end alfred_script</string>
-				<key>cachescript</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.applescript</string>
-			<key>uid</key>
-			<string>BC2942FE-8B27-4B09-B7BE-344A9A98D511</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>fixedorder</key>
-				<true/>
-				<key>items</key>
-				<string>[{"title":"Markdown to Word","arg":"docx","subtitle":".docx"},{"title":"Markdown to PDF","arg":"pdf","subtitle":".pdf"},{"title":"Markdown to HTML","arg":"html","subtitle":".html (standalone)"},{"title":"Markdown to Powerpoint","arg":"pptx","subtitle":".pptx"}]</string>
-				<key>keyword</key>
-				<string>pandoc</string>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>subtext</key>
-				<string>Converts iA Writer Markdown into the selected format.</string>
-				<key>title</key>
-				<string>Pandoc</string>
-				<key>withspace</key>
+				<key>soundname</key>
+				<string>Blow</string>
+				<key>systemsound</key>
 				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.listfilter</string>
+			<string>alfred.workflow.output.playsound</string>
 			<key>uid</key>
-			<string>7BE45465-F9BC-4214-8642-1EA6AB3CF959</string>
+			<string>AA87F73F-B3DC-452A-AA8D-B45E79D13BDA</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string></string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>1</integer>
-						<key>matchstring</key>
-						<string>pdf</string>
-						<key>outputlabel</key>
-						<string>docs / html /pptx</string>
-						<key>uid</key>
-						<string>D2294731-682D-45C9-9750-E3613E3F2BDD</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>pdf</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
-			<key>uid</key>
-			<string>895AB524-C851-4F84-8F83-F9384E671530</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string></string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>1</integer>
-						<key>matchstring</key>
-						<string>no_file_recognized</string>
-						<key>outputlabel</key>
-						<string>iA Writer file recognized</string>
-						<key>uid</key>
-						<string>D2294731-682D-45C9-9750-E3613E3F2BDD</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>no iA Writer file</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
-			<key>uid</key>
-			<string>3A3139AC-C1FA-440D-B763-51B7393CFD2D</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<true/>
-				<key>variables</key>
-				<dict>
-					<key>desired_format</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>F304F009-68AD-4AB9-8B6C-D482B4CF7A59</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>anchorfields</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>daterange</key>
-				<integer>0</integer>
-				<key>fields</key>
-				<array>
-					<dict>
-						<key>field</key>
-						<string>kMDItemDisplayName</string>
-						<key>not</key>
-						<false/>
-						<key>split</key>
-						<true/>
-						<key>value</key>
-						<string>{query}</string>
-						<key>words</key>
-						<true/>
-					</dict>
-					<dict>
-						<key>field</key>
-						<string>kMDItemAlternateNames</string>
-						<key>not</key>
-						<false/>
-						<key>split</key>
-						<true/>
-						<key>value</key>
-						<string>{query}</string>
-						<key>words</key>
-						<true/>
-					</dict>
-					<dict>
-						<key>field</key>
-						<string>kMDItemFinderComment</string>
-						<key>not</key>
-						<false/>
-						<key>split</key>
-						<true/>
-						<key>value</key>
-						<string>{query}</string>
-						<key>words</key>
-						<true/>
-					</dict>
-					<dict>
-						<key>field</key>
-						<string>kMDItemKind</string>
-						<key>not</key>
-						<true/>
-						<key>split</key>
-						<false/>
-						<key>value</key>
-						<string>log</string>
-						<key>words</key>
-						<true/>
-					</dict>
-					<dict>
-						<key>field</key>
-						<string>kMDItemKind</string>
-						<key>not</key>
-						<true/>
-						<key>split</key>
-						<false/>
-						<key>value</key>
-						<string>bib</string>
-						<key>words</key>
-						<true/>
-					</dict>
-				</array>
-				<key>includesystem</key>
-				<false/>
-				<key>limit</key>
-				<integer>0</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>scopes</key>
-				<array/>
-				<key>sortmode</key>
-				<integer>2</integer>
-				<key>subtext</key>
-				<string>Only text files from the default search scope are displayed. Press [space] to view the last modified ones.</string>
-				<key>title</key>
-				<string>Search for a Markdown file...</string>
-				<key>types</key>
-				<array>
-					<string>+public.plain-text</string>
-				</array>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.filefilter</string>
-			<key>uid</key>
-			<string>D418259D-CA04-4109-9141-3132D3BF758A</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1730,50 +1956,19 @@ end alfred_script</string>
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string></string>
+				<string>{query}</string>
 				<key>passthroughargument</key>
 				<false/>
 				<key>variables</key>
-				<dict/>
+				<dict>
+					<key>doc_path</key>
+					<string>{query}</string>
+				</dict>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>2BA68365-418A-4822-A4B3-DF266A9FFE24</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>pdf</string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>080C66A9-A6D8-401D-A394-B992FC87F507</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>{var:pdf_engine}</string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>686D88E4-FD66-4DBD-A63F-F30E058E5A68</string>
+			<string>C5CD1FB8-8FE5-4F75-BCE0-0D7F03887989</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1793,9 +1988,9 @@ end alfred_script</string>
 				<key>ignoredynamicplaceholders</key>
 				<false/>
 				<key>largetypetext</key>
-				<string>No PDF Engine 
+				<string>'{query}'
 
-Cannot convert into a PDF file without a PDF-Engine. Please install one and select it via "pconf".</string>
+Selected file seems not to be a Markdown file.</string>
 				<key>textcolor</key>
 				<string></string>
 				<key>wrapat</key>
@@ -1804,44 +1999,205 @@ Cannot convert into a PDF file without a PDF-Engine. Please install one and sele
 			<key>type</key>
 			<string>alfred.workflow.output.largetype</string>
 			<key>uid</key>
-			<string>3CF14B99-3525-4533-B7E0-D751B395446A</string>
+			<string>BCF854A0-9393-4A26-9BE7-B1DD004B8847</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>0</integer>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string>focusedapp</string>
-				<key>hotkey</key>
-				<integer>14</integer>
-				<key>hotmod</key>
-				<integer>1572864</integer>
-				<key>hotstring</key>
-				<string>E</string>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>0</integer>
-				<key>relatedApps</key>
-				<array>
-					<string>pro.writer.mac</string>
-				</array>
-				<key>relatedAppsMode</key>
-				<integer>1</integer>
+				<key>soundname</key>
+				<string>Basso</string>
+				<key>systemsound</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
+			<string>alfred.workflow.output.playsound</string>
 			<key>uid</key>
-			<string>1E75D41D-467E-425D-B8F5-C1C888C575F0</string>
+			<string>A824D01B-F6C7-4D3E-8687-1B43D309258F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string>.*\/([^\/]*)$</string>
+				<key>regexcaseinsensitive</key>
+				<true/>
+				<key>regexmultiline</key>
+				<false/>
+				<key>replacestring</key>
+				<string>$1</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.replace</string>
+			<key>uid</key>
+			<string>F8165297-EDCE-486C-8145-74C244AFBB14</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsmulti</key>
+				<false/>
+				<key>filetypes</key>
+				<array>
+					<string>+net.ia.markdown</string>
+					<string>+public.plain-text</string>
+				</array>
+				<key>name</key>
+				<string>Pandoc: Convert Markdown to .docx</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.action</string>
+			<key>uid</key>
+			<string>C5F3870E-9179-475E-BCA9-D35E172DEE3D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsmulti</key>
+				<false/>
+				<key>filetypes</key>
+				<array>
+					<string>+net.ia.markdown</string>
+					<string>+public.plain-text</string>
+				</array>
+				<key>name</key>
+				<string>Pandoc: Convert Markdown to .pptx</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.action</string>
+			<key>uid</key>
+			<string>7BAC0AE1-EB76-46E6-9622-397A10FAC5A7</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>desired_format</key>
+					<string>docx</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>6627A981-4C34-471F-A108-868F4C8F6C77</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>desired_format</key>
+					<string>pptx</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>E0161BB2-AEAF-414C-BC56-8903CCC21234</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsmulti</key>
+				<false/>
+				<key>filetypes</key>
+				<array>
+					<string>+net.ia.markdown</string>
+					<string>+public.plain-text</string>
+				</array>
+				<key>name</key>
+				<string>Pandoc: Convert Markdown to .html</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.action</string>
+			<key>uid</key>
+			<string>5E03C541-76F4-456C-AE68-1F63590CEE3B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>desired_format</key>
+					<string>html</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>9C4D210E-D3C9-4A87-8110-71B51B36DCF8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>desired_format</key>
+					<string>pdf</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>48CFAE2D-926B-4B05-A586-48A7A9D395CE</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsmulti</key>
+				<false/>
+				<key>filetypes</key>
+				<array>
+					<string>+net.ia.markdown</string>
+					<string>+public.plain-text</string>
+				</array>
+				<key>name</key>
+				<string>Pandoc: Convert Markdown to .pdf</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.action</string>
+			<key>uid</key>
+			<string>1586C092-4E94-4D4C-B43C-70C1C7103F66</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1861,11 +2217,44 @@ Cannot convert into a PDF file without a PDF-Engine. Please install one and sele
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alignment</key>
+				<integer>0</integer>
+				<key>backgroundcolor</key>
+				<string></string>
+				<key>fadespeed</key>
+				<integer>0</integer>
+				<key>fillmode</key>
+				<integer>0</integer>
+				<key>font</key>
+				<string></string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>largetypetext</key>
+				<string>No PDF Engine
+
+1) Make sure a pdf engine is installed.
+2) Select the pdf engine via "pconf".
+3) Rerun.</string>
+				<key>textcolor</key>
+				<string></string>
+				<key>wrapat</key>
+				<integer>50</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.largetype</string>
+			<key>uid</key>
+			<string>3CF14B99-3525-4533-B7E0-D751B395446A</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>conditions</key>
 				<array>
 					<dict>
 						<key>inputstring</key>
-						<string></string>
+						<string>{var:pdf_engine}</string>
 						<key>matchcasesensitive</key>
 						<false/>
 						<key>matchmode</key>
@@ -1891,35 +2280,98 @@ Cannot convert into a PDF file without a PDF-Engine. Please install one and sele
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string>{var:hotkey_output_format}</string>
-				<key>passthroughargument</key>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>fixedorder</key>
 				<false/>
-				<key>variables</key>
-				<dict>
-					<key>desired_format</key>
-					<string>{var:hotkey_output_format}</string>
-				</dict>
+				<key>items</key>
+				<string>[{"title":"Citation Style","arg":"set_csl","subtitle":"currently: {var:csl_file}"},{"title":"Install New Citation Style","arg":"install_csl","subtitle":"via Zotero's Style Repository"},{"title":"BibTeX Library","arg":"bibtex_lib","subtitle":"currently: {var:bibtex_library_path}"},{"title":"PDF-Engine","arg":"pdf_engine","subtitle":"currently: {var:pdf_engine}"},{"title":"Word Reference Document","arg":"reference_docx","subtitle":"currently: {var:reference_docx_path}"},{"title":"Hotkey Output Format","arg":"hotkey_format","subtitle":"currently: {var:hotkey_output_format}"},{"title":"Further Arguments","arg":"further_args","subtitle":"currently: {var:further_pandoc_args}"},{"title":"Powerpoint Reference Presentation","arg":"reference_pptx","subtitle":"currently: {var:reference_pptx_path}"},{"title":"Slide Level for Presentations","arg":"slide_level","subtitle":"currently: {var:slide_level}"},{"title":"Documentation &amp; Guide for the Pandoc Suite","arg":"workflow_documentation","subtitle":"visit for troubleshooting and further information"}]</string>
+				<key>keyword</key>
+				<string>pconf</string>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Display and Change Pandoc-Suide Settings</string>
+				<key>title</key>
+				<string>Configuration</string>
+				<key>withspace</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
+			<string>alfred.workflow.input.listfilter</string>
 			<key>uid</key>
-			<string>CD10FB60-F2A7-4035-91C6-BED56464E0F5</string>
+			<string>833D8349-8BA4-48F1-A985-F2CCCF284809</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>path</key>
-				<string>{var:doc_path}</string>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://chris-grieser.de/pandoc_alfred</string>
+				<key>utf8</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.revealfile</string>
+			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>E5AE7980-8F19-44F4-8277-2D1E2EA8B18C</string>
+			<string>A293BD12-10A1-40CB-A7E3-E1D822471C40</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>DF96F627-1FFC-452B-B013-242983A6197B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>on run
+
+tell application "Alfred" 
+    set configuration "hotkey_output_format" to value "{query}" in workflow "de.chris-grieser.pandoc-alfred" with exportable
+end tell
+
+return "{query}"
+
+end run</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>EA2DEFE7-F27D-426A-9CA8-DFF65F319151</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1972,66 +2424,6 @@ Cannot convert into a PDF file without a PDF-Engine. Please install one and sele
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>on run
-
-tell application "Alfred" 
-    set configuration "hotkey_output_format" to value "{query}" in workflow "de.chris-grieser.pandoc-alfred" with exportable
-end tell
-
-return "{query}"
-
-end run</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>6</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>EA2DEFE7-F27D-426A-9CA8-DFF65F319151</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>fixedorder</key>
-				<false/>
-				<key>items</key>
-				<string>[{"title":"Citation Style","arg":"set_csl","subtitle":"currently: {var:csl_file}"},{"title":"Install New Citation Style","arg":"install_csl","subtitle":"via Zotero's Style Repository"},{"title":"BibTeX Library","arg":"bibtex_lib","subtitle":"currently: {var:bibtex_library_path}"},{"title":"PDF-Engine","arg":"pdf_engine","subtitle":"currently: {var:pdf_engine}"},{"title":"Word Reference Document","arg":"reference_docx","subtitle":"currently: {var:reference_docx_path}"},{"title":"Hotkey Output Format","arg":"hotkey_format","subtitle":"currently: {var:hotkey_output_format}"},{"title":"Further Arguments","arg":"further_args","subtitle":"currently: {var:further_pandoc_args}"},{"title":"Powerpoint Reference Presentation","arg":"reference_pptx","subtitle":"currently: {var:reference_pptx_path}"},{"title":"Slide Level for Presentations","arg":"slide_level","subtitle":"currently: {var:slide_level}"}]</string>
-				<key>keyword</key>
-				<string>pconf</string>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>subtext</key>
-				<string>Display and Change Pandoc-Suide Settings</string>
-				<key>title</key>
-				<string>Configuration</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.listfilter</string>
-			<key>uid</key>
-			<string>833D8349-8BA4-48F1-A985-F2CCCF284809</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
@@ -2043,27 +2435,6 @@ end run</string>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>10000D18-BDC8-4A08-B089-D7164D917E8A</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{var:desired_format} sucessfully created.</string>
-				<key>title</key>
-				<string>Conversion complete</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>203213EF-7CCC-4A0A-A034-41804B7CAF0D</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -2096,6 +2467,27 @@ end run</string>
 			<string>F0A3E6A0-D3EA-4B46-AE8A-E6368F633452</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Citation Style changed</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>CCEF019A-BFFB-4857-A25A-A8A67EBD3DDA</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2220,27 +2612,6 @@ end run</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>Citation Style changed</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>CCEF019A-BFFB-4857-A25A-A8A67EBD3DDA</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
@@ -2292,21 +2663,6 @@ end run</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>soundname</key>
-				<string>Blow</string>
-				<key>systemsound</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.playsound</string>
-			<key>uid</key>
-			<string>67A601DA-66EE-45B7-8513-BB8E17D4A54D</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>browser</key>
 				<string></string>
 				<key>spaces</key>
@@ -2341,6 +2697,52 @@ end run</string>
 			<string>CAF6BC7B-0707-446C-B217-6E0EC407595B</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>soundname</key>
+				<string>Blow</string>
+				<key>systemsound</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.playsound</string>
+			<key>uid</key>
+			<string>67A601DA-66EE-45B7-8513-BB8E17D4A54D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alignment</key>
+				<integer>0</integer>
+				<key>backgroundcolor</key>
+				<string></string>
+				<key>fadespeed</key>
+				<integer>0</integer>
+				<key>fillmode</key>
+				<integer>0</integer>
+				<key>font</key>
+				<string></string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>largetypetext</key>
+				<string>Please choose a Citation Style here. Clicking a link will prompt Zotero to install the Style.
+
+Afterwards, you can set the citation style.</string>
+				<key>textcolor</key>
+				<string></string>
+				<key>wrapat</key>
+				<integer>50</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.largetype</string>
+			<key>uid</key>
+			<string>01BD0B65-2695-4C72-A475-66D8A954CDD0</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2395,27 +2797,6 @@ end run</string>
 			<string>C3488553-3AD8-4B2E-8280-D028B79AD0B5</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>Reference Word File set</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>748DBE25-7FDC-4884-8D0C-D68041D62DF3</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2500,6 +2881,27 @@ end run</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Reference Word File set</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>748DBE25-7FDC-4884-8D0C-D68041D62DF3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
@@ -2519,6 +2921,20 @@ end run</string>
 			<dict>
 				<key>conditions</key>
 				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>workflow_documentation</string>
+						<key>outputlabel</key>
+						<string>workflow_documentation</string>
+						<key>uid</key>
+						<string>A778420C-F39C-486C-AF5D-A639F2612559</string>
+					</dict>
 					<dict>
 						<key>inputstring</key>
 						<string></string>
@@ -2645,6 +3061,27 @@ end run</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Reference Powerpoint File set</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>10BB7075-C556-4FD7-8BAD-7ED68C74DC49</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -2678,27 +3115,6 @@ end run</string>
 			<string>27CA4A32-2FDE-47CF-80F1-3202B62EC696</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>Reference Powerpoint File set</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>10BB7075-C556-4FD7-8BAD-7ED68C74DC49</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2763,7 +3179,7 @@ end run</string>
 				<key>sortmode</key>
 				<integer>2</integer>
 				<key>subtext</key>
-				<string>Press [space] to view a list of the last modified .pptx Files.</string>
+				<string>Press [space] to view a list of recently modified .pptx Files.</string>
 				<key>title</key>
 				<string>Search for Powerpoint Documents...</string>
 				<key>types</key>
@@ -2859,7 +3275,7 @@ end run</string>
 				<key>fixedorder</key>
 				<true/>
 				<key>items</key>
-				<string>[{"title":"Consult Pandoc Manual on the Installation of PDF-Engines","arg":"pandoc_website","subtitle":"https:\/\/pandoc.org\/MANUAL.html#option--pdf-engine"},{"title":"pdflatex","arg":"pdflatex","subtitle":"Latex"},{"title":"pdfroff","arg":"pdfroff","subtitle":"ms"},{"title":"wkhtmltopdf","arg":"wkhtmltopdf","subtitle":"HTML"},{"title":"context","arg":"context","subtitle":"Tex"},{"title":"lualatex","arg":"lualatex","subtitle":"Latex"},{"title":"xelatex","arg":"xelatex","subtitle":"Latex"},{"title":"latexmk","arg":"latexmk","subtitle":"Latex"},{"title":"tectonic","arg":"tectonic","subtitle":"Latex"},{"title":"prince","arg":"prince","subtitle":"HTML"},{"title":"weasyprint","arg":"weasyprint","subtitle":"HTML"}]</string>
+				<string>[{"title":"Information on what PDF Engines are.","arg":"info_website","subtitle":"https:\/\/www.notion.so\/chrisgrieser\/Pandoc-Suite-for-Academic-Citation-and-Bibliography-Creation-in-Markdown-4de4bd634ceb4533a1add8b105a487b1#f1fc8aca886a4b17afbbd67cda664194"},{"title":"pdflatex","arg":"pdflatex","subtitle":"Latex"},{"title":"pdfroff","arg":"pdfroff","subtitle":"ms"},{"title":"wkhtmltopdf","arg":"wkhtmltopdf","subtitle":"HTML"},{"title":"context","arg":"context","subtitle":"Tex"},{"title":"lualatex","arg":"lualatex","subtitle":"Latex"},{"title":"xelatex","arg":"xelatex","subtitle":"Latex"},{"title":"latexmk","arg":"latexmk","subtitle":"Latex"},{"title":"tectonic","arg":"tectonic","subtitle":"Latex"},{"title":"prince","arg":"prince","subtitle":"HTML"},{"title":"weasyprint","arg":"weasyprint","subtitle":"HTML"}]</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>subtext</key>
@@ -2889,7 +3305,7 @@ end run</string>
 						<key>matchmode</key>
 						<integer>1</integer>
 						<key>matchstring</key>
-						<string>pandoc_website</string>
+						<string>info_website</string>
 						<key>outputlabel</key>
 						<string>engine chosen</string>
 						<key>uid</key>
@@ -2897,7 +3313,7 @@ end run</string>
 					</dict>
 				</array>
 				<key>elselabel</key>
-				<string>pandoc_website</string>
+				<string>info on pdf engines</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.conditional</string>
@@ -2931,7 +3347,7 @@ end run</string>
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>https://pandoc.org/MANUAL.html#option--pdf-engine</string>
+				<string>https://www.notion.so/chrisgrieser/Pandoc-Suite-for-Academic-Citation-and-Bibliography-Creation-in-Markdown-4de4bd634ceb4533a1add8b105a487b1#f1fc8aca886a4b17afbbd67cda664194</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -2939,6 +3355,27 @@ end run</string>
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
 			<string>AE83213B-C46B-449A-8A9B-AE608150E345</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Furhter Pandoc Arguments set</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>6B46A5A0-E361-4930-B125-7EE723D2F1E4</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -2995,27 +3432,6 @@ end run</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>Furhter Pandoc Arguments set</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>6B46A5A0-E361-4930-B125-7EE723D2F1E4</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string>{var:further_pandoc_args}</string>
 				<key>passthroughargument</key>
@@ -3029,6 +3445,43 @@ end run</string>
 			<string>AF051F12-7BF5-4D7A-B0AA-9FAAF9EDB3CA</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>on run
+
+--sets Alfred Environment Variable
+tell application "Alfred" 
+    set configuration "bibtex_library_path" to value "{query}" in workflow "de.chris-grieser.pandoc-alfred"
+end tell
+
+-- removes file path for Notificattion
+set bibtex_library_path to "{query}"
+repeat while (offset of "/" in bibtex_library_path) &gt; 0
+    set bibtex_library_path to text ((offset of "/" in bibtex_library_path) +1) thru - 1 of bibtex_library_path 
+end repeat
+return bibtex_library_path
+
+end run</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>78CC6B08-1B23-4498-89D9-BB736BC4BA81</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -3103,9 +3556,9 @@ end run</string>
 					<string>~</string>
 				</array>
 				<key>sortmode</key>
-				<integer>2</integer>
+				<integer>1</integer>
 				<key>subtext</key>
-				<string>Press [space] to view a list recently modified .docx Files-</string>
+				<string>Enter the file name, not path! Press [space] to view a list recently created libraries.</string>
 				<key>title</key>
 				<string>Search for BibTeX Library for your Bibliography...</string>
 				<key>types</key>
@@ -3119,43 +3572,6 @@ end run</string>
 			<string>alfred.workflow.input.filefilter</string>
 			<key>uid</key>
 			<string>3E3A8C0C-E4AD-4403-AFB6-8B7FA0EFF71F</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>on run
-
---sets Alfred Environment Variable
-tell application "Alfred" 
-    set configuration "bibtex_library_path" to value "{query}" in workflow "de.chris-grieser.pandoc-alfred"
-end tell
-
--- removes file path for Notificattion
-set bibtex_library_path to "{query}"
-repeat while (offset of "/" in bibtex_library_path) &gt; 0
-    set bibtex_library_path to text ((offset of "/" in bibtex_library_path) +1) thru - 1 of bibtex_library_path 
-end repeat
-return bibtex_library_path
-
-end run</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>6</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>78CC6B08-1B23-4498-89D9-BB736BC4BA81</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -3184,7 +3600,7 @@ end run</string>
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string></string>
+				<string> </string>
 				<key>passthroughargument</key>
 				<false/>
 				<key>variables</key>
@@ -3344,12 +3760,25 @@ end run</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>Documentation &amp; Usage Guide:
+	<string>PLEASE READ IF YOU USED PANDOC VERSION 1.x
+==========================================
+
+With version 2.0, the way the Pandoc-Suite has been vastly reworked. Please consult the guide how to use the Pandoc-Suite now. Do not worry – the changes have been made to greatly simplify use, especially for Alfred newcomers.
+
+See information here: https://www.notion.so/chrisgrieser/Pandoc-Suite-for-Citations-and-Bibliographies-in-Markdown-4de4bd634ceb4533a1add8b105a487b1#6067e5b7a65448c195b602fb413068b0
+
+The Documentation and Usage Guide has also been expanded with more explanations and troubleshooting.
+
+Documentation &amp; Usage Guide:
 https://chris-grieser.de/pandoc_alfred
 
-release notes
+
+
+Release Notes
 =============
-v.1.3.1: simplifies installation by utomatically setting the style folder (this was previously not possible due to an issue with the now substited pandoc-citeproc)
+v. 2.0: due to popular request, changed the trigger of this workflow: the hotkey now also works for files selected in Finder, an option most convenient for people not familiar with Alfred. Other than that, it is now also possible to trigger Pandoc via file action. 
+
+v 1.3.1: Because of the deprecation of pandoc-citeproc and its substitution with --citeproc (which was implemented in v 1.2.1 of this workflow), style folders can be set automatically. This means installation of this workflow for new users is simplified.
 
 v 1.3: enables automatic updates via OneUpdater (https://github.com/vitorgalvao/alfred-workflows/tree/master/OneUpdater) and some minor refactoring of the pconf-command
 
@@ -3361,131 +3790,144 @@ v 1.1: changed default hotkeys for higher compatibility &amp;
 added support for images while converting (with the --resource-path parameter)</string>
 	<key>uidata</key>
 	<dict>
+		<key>01BD0B65-2695-4C72-A475-66D8A954CDD0</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>845</integer>
+			<key>ypos</key>
+			<integer>1525</integer>
+		</dict>
 		<key>01C18AD5-1189-4DFA-82BB-5C863BB2F037</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>335</integer>
+			<integer>410</integer>
 			<key>ypos</key>
-			<integer>1450</integer>
-		</dict>
-		<key>080C66A9-A6D8-401D-A394-B992FC87F507</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>4</integer>
-			<key>xpos</key>
-			<integer>360</integer>
-			<key>ypos</key>
-			<integer>385</integer>
+			<integer>2155</integer>
 		</dict>
 		<key>0A379478-9939-4905-9781-F1145FC20901</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>335</integer>
+			<integer>410</integer>
 			<key>ypos</key>
-			<integer>1215</integer>
+			<integer>1920</integer>
 		</dict>
 		<key>10000D18-BDC8-4A08-B089-D7164D917E8A</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>335</integer>
+			<integer>410</integer>
 			<key>ypos</key>
-			<integer>610</integer>
+			<integer>1315</integer>
 		</dict>
 		<key>10BB7075-C556-4FD7-8BAD-7ED68C74DC49</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>930</integer>
+			<integer>1005</integer>
 			<key>ypos</key>
-			<integer>1065</integer>
+			<integer>1770</integer>
+		</dict>
+		<key>1586C092-4E94-4D4C-B43C-70C1C7103F66</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>note</key>
+			<string>convert to .pdf</string>
+			<key>xpos</key>
+			<integer>20</integer>
+			<key>ypos</key>
+			<integer>860</integer>
 		</dict>
 		<key>1CC45D25-897C-4640-A9D0-AD2B3FCD2EC8</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>335</integer>
+			<integer>410</integer>
 			<key>ypos</key>
-			<integer>730</integer>
+			<integer>1435</integer>
+		</dict>
+		<key>1E5378C0-2F02-417C-B363-E2805FAF27E8</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
+			<key>xpos</key>
+			<integer>1170</integer>
+			<key>ypos</key>
+			<integer>25</integer>
 		</dict>
 		<key>1E75D41D-467E-425D-B8F5-C1C888C575F0</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>4</integer>
+			<integer>5</integer>
 			<key>note</key>
-			<string>converts with Hotkey</string>
+			<string>GREEN HOTKEY: Double-click to define
+
+Triggers Pandoc when in Finder or iA Writer</string>
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>430</integer>
+			<integer>200</integer>
 		</dict>
 		<key>1EDA81EE-9A5D-4315-8606-DC351F27CE7A</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>930</integer>
+			<integer>1005</integer>
 			<key>ypos</key>
-			<integer>1180</integer>
+			<integer>1885</integer>
 		</dict>
 		<key>203213EF-7CCC-4A0A-A034-41804B7CAF0D</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>4</integer>
+			<integer>2</integer>
 			<key>xpos</key>
-			<integer>1130</integer>
+			<integer>1185</integer>
 			<key>ypos</key>
-			<integer>630</integer>
+			<integer>380</integer>
 		</dict>
 		<key>27CA4A32-2FDE-47CF-80F1-3202B62EC696</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>605</integer>
+			<integer>680</integer>
 			<key>ypos</key>
-			<integer>1065</integer>
+			<integer>1770</integer>
 		</dict>
 		<key>27DEB378-75B0-4A5B-B864-1791E42F9540</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>335</integer>
+			<integer>410</integer>
 			<key>ypos</key>
-			<integer>1095</integer>
-		</dict>
-		<key>2BA68365-418A-4822-A4B3-DF266A9FFE24</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>4</integer>
-			<key>xpos</key>
-			<integer>750</integer>
-			<key>ypos</key>
-			<integer>355</integer>
+			<integer>1800</integer>
 		</dict>
 		<key>2C9C9202-FD29-496C-BBE2-2858BF4A9641</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>115</integer>
+			<integer>140</integer>
 			<key>ypos</key>
-			<integer>985</integer>
+			<integer>1690</integer>
 		</dict>
 		<key>2D59F287-3F5D-4A64-9151-E43716142751</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>1</integer>
+			<integer>3</integer>
 			<key>xpos</key>
-			<integer>930</integer>
+			<integer>780</integer>
 			<key>ypos</key>
 			<integer>45</integer>
 		</dict>
@@ -3494,61 +3936,72 @@ added support for images while converting (with the --resource-path parameter)</
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>930</integer>
+			<integer>1005</integer>
 			<key>ypos</key>
-			<integer>1540</integer>
+			<integer>2245</integer>
 		</dict>
 		<key>329BF0DA-52B7-4D6F-8648-7280013C54AC</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>605</integer>
+			<integer>680</integer>
 			<key>ypos</key>
-			<integer>820</integer>
+			<integer>1525</integer>
 		</dict>
 		<key>3303F829-CEC3-4465-B2A9-760449051745</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>930</integer>
+			<integer>1005</integer>
 			<key>ypos</key>
-			<integer>1420</integer>
+			<integer>2125</integer>
+		</dict>
+		<key>3525B1D4-FE5B-4087-B8D4-592A85B73ECA</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>xpos</key>
+			<integer>255</integer>
+			<key>ypos</key>
+			<integer>220</integer>
 		</dict>
 		<key>3A3139AC-C1FA-440D-B763-51B7393CFD2D</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>4</integer>
+			<integer>2</integer>
 			<key>xpos</key>
-			<integer>575</integer>
+			<integer>685</integer>
 			<key>ypos</key>
-			<integer>305</integer>
+			<integer>205</integer>
 		</dict>
 		<key>3CF14B99-3525-4533-B7E0-D751B395446A</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>4</integer>
+			<integer>2</integer>
 			<key>xpos</key>
-			<integer>435</integer>
+			<integer>355</integer>
 			<key>ypos</key>
-			<integer>430</integer>
+			<integer>860</integer>
 		</dict>
 		<key>3DD1D430-5718-48E7-8B15-7FE6A647861D</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>435</integer>
+			<integer>510</integer>
 			<key>ypos</key>
-			<integer>1305</integer>
+			<integer>2010</integer>
 		</dict>
 		<key>3E233EB1-E0B2-48CC-9E6F-A5CAFDFD26AD</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>1</integer>
 			<key>note</key>
-			<string>Citation Picker</string>
+			<string>RED HOTKEY: Double-click to configure
+
+Citation Picker</string>
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
@@ -3559,25 +4012,34 @@ added support for images while converting (with the --resource-path parameter)</
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>435</integer>
+			<integer>510</integer>
 			<key>ypos</key>
-			<integer>1420</integer>
+			<integer>2125</integer>
 		</dict>
 		<key>459B4CBB-47BC-4B5A-9882-9D9025F3D3E3</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>1</integer>
+			<integer>3</integer>
 			<key>xpos</key>
-			<integer>240</integer>
+			<integer>285</integer>
 			<key>ypos</key>
 			<integer>25</integer>
+		</dict>
+		<key>48CFAE2D-926B-4B05-A586-48A7A9D395CE</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>xpos</key>
+			<integer>355</integer>
+			<key>ypos</key>
+			<integer>795</integer>
 		</dict>
 		<key>4CD979CC-3ADB-4C54-92FA-F2A9B569E75C</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>1</integer>
+			<integer>3</integer>
 			<key>xpos</key>
-			<integer>810</integer>
+			<integer>725</integer>
 			<key>ypos</key>
 			<integer>55</integer>
 		</dict>
@@ -3586,23 +4048,25 @@ added support for images while converting (with the --resource-path parameter)</
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>605</integer>
+			<integer>680</integer>
 			<key>ypos</key>
-			<integer>1305</integer>
+			<integer>2010</integer>
 		</dict>
 		<key>501917DB-D6D5-4C2B-87AE-D413E2FA0E2A</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>4</integer>
+			<integer>2</integer>
+			<key>note</key>
+			<string>runs pandoc</string>
 			<key>xpos</key>
-			<integer>1130</integer>
+			<integer>925</integer>
 			<key>ypos</key>
-			<integer>350</integer>
+			<integer>380</integer>
 		</dict>
 		<key>5335BA38-FC76-4B47-8D08-462A1AC06CC4</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>1</integer>
+			<integer>3</integer>
 			<key>xpos</key>
 			<integer>435</integer>
 			<key>ypos</key>
@@ -3611,9 +4075,9 @@ added support for images while converting (with the --resource-path parameter)</
 		<key>535927EB-2ED1-4C7C-B7B2-3AE4B9C11B88</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>1</integer>
+			<integer>3</integer>
 			<key>xpos</key>
-			<integer>605</integer>
+			<integer>585</integer>
 			<key>ypos</key>
 			<integer>25</integer>
 		</dict>
@@ -3622,38 +4086,58 @@ added support for images while converting (with the --resource-path parameter)</
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>930</integer>
+			<integer>1005</integer>
 			<key>ypos</key>
-			<integer>580</integer>
+			<integer>1285</integer>
 		</dict>
 		<key>5BA612AA-7B1A-44EC-8854-E5BBFF3C14D4</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>605</integer>
+			<integer>680</integer>
 			<key>ypos</key>
-			<integer>700</integer>
+			<integer>1405</integer>
+		</dict>
+		<key>5E03C541-76F4-456C-AE68-1F63590CEE3B</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>note</key>
+			<string>convert to .html</string>
+			<key>xpos</key>
+			<integer>20</integer>
+			<key>ypos</key>
+			<integer>730</integer>
 		</dict>
 		<key>61EAC824-FB0A-4032-BC04-BFCAE7C2C213</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>610</integer>
+			<integer>675</integer>
 			<key>ypos</key>
-			<integer>1210</integer>
+			<integer>1915</integer>
 		</dict>
 		<key>65CA24BA-2DA6-4DC0-A2BE-3E4E4D5FDD72</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>12</integer>
+			<integer>7</integer>
 			<key>note</key>
-			<string>OneUpdater</string>
+			<string>OneUpdater (automatic update function)</string>
 			<key>xpos</key>
-			<integer>240</integer>
+			<integer>1175</integer>
 			<key>ypos</key>
-			<integer>155</integer>
+			<integer>195</integer>
+		</dict>
+		<key>6627A981-4C34-471F-A108-868F4C8F6C77</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>xpos</key>
+			<integer>355</integer>
+			<key>ypos</key>
+			<integer>600</integer>
 		</dict>
 		<key>67A601DA-66EE-45B7-8513-BB8E17D4A54D</key>
 		<dict>
@@ -3662,384 +4146,490 @@ added support for images while converting (with the --resource-path parameter)</
 			<key>note</key>
 			<string>Sucess Sound</string>
 			<key>xpos</key>
-			<integer>1130</integer>
+			<integer>1195</integer>
 			<key>ypos</key>
-			<integer>820</integer>
-		</dict>
-		<key>686D88E4-FD66-4DBD-A63F-F30E058E5A68</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>4</integer>
-			<key>xpos</key>
-			<integer>275</integer>
-			<key>ypos</key>
-			<integer>385</integer>
+			<integer>1525</integer>
 		</dict>
 		<key>6B04082C-2281-4A10-950C-0B9A324EE9D6</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>4</integer>
+			<integer>2</integer>
+			<key>note</key>
+			<string>pandoc command construction</string>
 			<key>xpos</key>
-			<integer>980</integer>
+			<integer>665</integer>
 			<key>ypos</key>
-			<integer>220</integer>
+			<integer>380</integer>
 		</dict>
 		<key>6B46A5A0-E361-4930-B125-7EE723D2F1E4</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>930</integer>
+			<integer>1005</integer>
 			<key>ypos</key>
-			<integer>1305</integer>
+			<integer>2010</integer>
 		</dict>
 		<key>6C8285D8-0D81-4F19-ABC0-8EA43C9DD30A</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>770</integer>
+			<integer>845</integer>
 			<key>ypos</key>
-			<integer>770</integer>
+			<integer>1475</integer>
 		</dict>
 		<key>6DB891C7-AF7A-45A9-90CE-ECECF06EB40A</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>770</integer>
+			<integer>845</integer>
 			<key>ypos</key>
-			<integer>695</integer>
+			<integer>1400</integer>
 		</dict>
 		<key>6F19CED8-5C74-4F75-9683-F25D9EAE8841</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>335</integer>
+			<integer>410</integer>
 			<key>ypos</key>
-			<integer>1570</integer>
+			<integer>2275</integer>
+		</dict>
+		<key>7190C69E-73FB-47E8-BA2A-1DD2FA694AC1</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>note</key>
+			<string>Error Sound</string>
+			<key>xpos</key>
+			<integer>995</integer>
+			<key>ypos</key>
+			<integer>195</integer>
 		</dict>
 		<key>748DBE25-7FDC-4884-8D0C-D68041D62DF3</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>930</integer>
+			<integer>1005</integer>
 			<key>ypos</key>
-			<integer>940</integer>
+			<integer>1645</integer>
 		</dict>
 		<key>75136EA5-5D2F-4AB6-B598-4443286CAFCE</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>765</integer>
+			<integer>840</integer>
 			<key>ypos</key>
-			<integer>1490</integer>
+			<integer>2195</integer>
+		</dict>
+		<key>75F44825-564D-4C3A-BC1C-8C49DC7A3894</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
+			<key>xpos</key>
+			<integer>1325</integer>
+			<key>ypos</key>
+			<integer>25</integer>
 		</dict>
 		<key>776B385C-6D41-47B5-A954-4B6FD8CD9B57</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>605</integer>
+			<integer>680</integer>
 			<key>ypos</key>
-			<integer>1560</integer>
+			<integer>2265</integer>
 		</dict>
 		<key>78CC6B08-1B23-4498-89D9-BB736BC4BA81</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>605</integer>
+			<integer>680</integer>
 			<key>ypos</key>
-			<integer>1420</integer>
+			<integer>2125</integer>
 		</dict>
-		<key>7BE45465-F9BC-4214-8642-1EA6AB3CF959</key>
+		<key>7BAC0AE1-EB76-46E6-9622-397A10FAC5A7</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>4</integer>
+			<integer>2</integer>
 			<key>note</key>
-			<string>converts Markdown File</string>
+			<string>convert to .pptx</string>
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>285</integer>
+			<integer>600</integer>
+		</dict>
+		<key>7D5245E3-DF34-4B83-A9EE-98ED7232686D</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
+			<key>xpos</key>
+			<integer>1325</integer>
+			<key>ypos</key>
+			<integer>195</integer>
 		</dict>
 		<key>833D8349-8BA4-48F1-A985-F2CCCF284809</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>note</key>
-			<string>Configuration of PanDoc Parameters (= settings of this Workflow)</string>
+			<string>Configuration of PanDoc Parameters (= settings of this workflow)</string>
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>595</integer>
+			<integer>1025</integer>
 		</dict>
-		<key>895AB524-C851-4F84-8F83-F9384E671530</key>
+		<key>8BC9584A-510E-4BEE-A2E5-A7EBAAA90F96</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>4</integer>
+			<integer>2</integer>
 			<key>xpos</key>
-			<integer>235</integer>
+			<integer>355</integer>
 			<key>ypos</key>
-			<integer>305</integer>
+			<integer>270</integer>
 		</dict>
 		<key>8FED3311-38E2-4C5F-8A25-A19A29F47197</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>4</integer>
+			<integer>2</integer>
 			<key>note</key>
 			<string>Error Sound</string>
 			<key>xpos</key>
-			<integer>605</integer>
+			<integer>505</integer>
 			<key>ypos</key>
-			<integer>430</integer>
+			<integer>860</integer>
 		</dict>
 		<key>91000D05-4397-43D7-81D8-0FB992A27938</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>765</integer>
+			<integer>840</integer>
 			<key>ypos</key>
-			<integer>1130</integer>
+			<integer>1835</integer>
+		</dict>
+		<key>9C4D210E-D3C9-4A87-8110-71B51B36DCF8</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>xpos</key>
+			<integer>355</integer>
+			<key>ypos</key>
+			<integer>730</integer>
+		</dict>
+		<key>A293BD12-10A1-40CB-A7E3-E1D822471C40</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>510</integer>
+			<key>ypos</key>
+			<integer>1165</integer>
+		</dict>
+		<key>A824D01B-F6C7-4D3E-8687-1B43D309258F</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>note</key>
+			<string>Error Sound</string>
+			<key>xpos</key>
+			<integer>360</integer>
+			<key>ypos</key>
+			<integer>415</integer>
+		</dict>
+		<key>AA87F73F-B3DC-452A-AA8D-B45E79D13BDA</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>note</key>
+			<string>Sucess Sound</string>
+			<key>xpos</key>
+			<integer>1320</integer>
+			<key>ypos</key>
+			<integer>380</integer>
 		</dict>
 		<key>AB43E3DE-695A-4EE9-9F03-9A7C94D6F2FE</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>840</integer>
+			<integer>915</integer>
 			<key>ypos</key>
-			<integer>770</integer>
+			<integer>1475</integer>
 		</dict>
 		<key>AE83213B-C46B-449A-8A9B-AE608150E345</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>765</integer>
+			<integer>840</integer>
 			<key>ypos</key>
-			<integer>1240</integer>
+			<integer>1945</integer>
 		</dict>
 		<key>AF051F12-7BF5-4D7A-B0AA-9FAAF9EDB3CA</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>335</integer>
+			<integer>410</integer>
 			<key>ypos</key>
-			<integer>1335</integer>
+			<integer>2040</integer>
 		</dict>
 		<key>B4CEE8D7-BBF2-44A4-9654-D2C7A3AF904B</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>435</integer>
+			<integer>510</integer>
 			<key>ypos</key>
-			<integer>580</integer>
+			<integer>1285</integer>
 		</dict>
 		<key>B589A301-088E-4246-8B0C-664566684890</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>765</integer>
+			<integer>840</integer>
 			<key>ypos</key>
-			<integer>1605</integer>
+			<integer>2310</integer>
 		</dict>
 		<key>B5D0E485-4062-43CE-9E7B-B45FC97AD415</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>435</integer>
+			<integer>510</integer>
 			<key>ypos</key>
-			<integer>1185</integer>
+			<integer>1890</integer>
 		</dict>
 		<key>B914FAA4-CE6D-4FE6-8BF7-748E1F4EB1F9</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>4</integer>
+			<integer>2</integer>
 			<key>xpos</key>
-			<integer>1130</integer>
+			<integer>795</integer>
 			<key>ypos</key>
-			<integer>220</integer>
+			<integer>380</integer>
 		</dict>
 		<key>BC2942FE-8B27-4B09-B7BE-344A9A98D511</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>4</integer>
+			<integer>2</integer>
+			<key>note</key>
+			<string>file path extraction from iA Writer</string>
 			<key>xpos</key>
-			<integer>435</integer>
+			<integer>530</integer>
 			<key>ypos</key>
-			<integer>285</integer>
+			<integer>190</integer>
+		</dict>
+		<key>BCF854A0-9393-4A26-9BE7-B1DD004B8847</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>xpos</key>
+			<integer>230</integer>
+			<key>ypos</key>
+			<integer>415</integer>
 		</dict>
 		<key>BD700704-F718-412C-B02A-65B822A7CF67</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>435</integer>
+			<integer>510</integer>
 			<key>ypos</key>
-			<integer>1065</integer>
+			<integer>1770</integer>
 		</dict>
 		<key>C3488553-3AD8-4B2E-8280-D028B79AD0B5</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>605</integer>
+			<integer>680</integer>
 			<key>ypos</key>
-			<integer>940</integer>
+			<integer>1645</integer>
 		</dict>
 		<key>C5CD1FB8-8FE5-4F75-BCE0-0D7F03887989</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>4</integer>
+			<integer>2</integer>
+			<key>note</key>
+			<string>saves path for revealing in Finder</string>
 			<key>xpos</key>
-			<integer>920</integer>
+			<integer>590</integer>
 			<key>ypos</key>
-			<integer>250</integer>
+			<integer>410</integer>
+		</dict>
+		<key>C5F3870E-9179-475E-BCA9-D35E172DEE3D</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>note</key>
+			<string>convert to .docx</string>
+			<key>xpos</key>
+			<integer>20</integer>
+			<key>ypos</key>
+			<integer>470</integer>
 		</dict>
 		<key>C6163D07-A2C0-4E02-8D6B-F42F6101E0F8</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>335</integer>
+			<integer>410</integer>
 			<key>ypos</key>
-			<integer>970</integer>
+			<integer>1675</integer>
 		</dict>
 		<key>CAF6BC7B-0707-446C-B217-6E0EC407595B</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>435</integer>
+			<integer>510</integer>
 			<key>ypos</key>
-			<integer>820</integer>
+			<integer>1525</integer>
 		</dict>
 		<key>CB4D33E2-A031-4542-A640-3B73D66EE39E</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>1</integer>
+			<integer>3</integer>
+			<key>note</key>
+			<string>Paste</string>
 			<key>xpos</key>
-			<integer>1130</integer>
+			<integer>940</integer>
 			<key>ypos</key>
-			<integer>25</integer>
+			<integer>20</integer>
 		</dict>
 		<key>CCEF019A-BFFB-4857-A25A-A8A67EBD3DDA</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>930</integer>
+			<integer>1005</integer>
 			<key>ypos</key>
-			<integer>700</integer>
+			<integer>1405</integer>
 		</dict>
 		<key>CD10FB60-F2A7-4035-91C6-BED56464E0F5</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>4</integer>
+			<integer>2</integer>
 			<key>xpos</key>
-			<integer>165</integer>
+			<integer>190</integer>
 			<key>ypos</key>
-			<integer>460</integer>
+			<integer>230</integer>
 		</dict>
-		<key>D418259D-CA04-4109-9141-3132D3BF758A</key>
+		<key>DF96F627-1FFC-452B-B013-242983A6197B</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>4</integer>
+			<integer>8</integer>
 			<key>xpos</key>
-			<integer>830</integer>
+			<integer>410</integer>
 			<key>ypos</key>
-			<integer>350</integer>
+			<integer>1195</integer>
+		</dict>
+		<key>E0161BB2-AEAF-414C-BC56-8903CCC21234</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>xpos</key>
+			<integer>355</integer>
+			<key>ypos</key>
+			<integer>665</integer>
 		</dict>
 		<key>E5AE7980-8F19-44F4-8277-2D1E2EA8B18C</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>4</integer>
+			<integer>2</integer>
 			<key>xpos</key>
-			<integer>1130</integer>
+			<integer>1055</integer>
 			<key>ypos</key>
-			<integer>485</integer>
+			<integer>380</integer>
 		</dict>
 		<key>EA2DEFE7-F27D-426A-9CA8-DFF65F319151</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>605</integer>
+			<integer>680</integer>
 			<key>ypos</key>
-			<integer>580</integer>
+			<integer>1285</integer>
+		</dict>
+		<key>EA5FC55D-EF41-48AB-8318-7FEBC5971355</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>xpos</key>
+			<integer>860</integer>
+			<key>ypos</key>
+			<integer>195</integer>
 		</dict>
 		<key>EB248989-2356-4C5F-9E7F-3F0DD9F2B859</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>435</integer>
+			<integer>510</integer>
 			<key>ypos</key>
-			<integer>940</integer>
+			<integer>1645</integer>
 		</dict>
 		<key>F0A3E6A0-D3EA-4B46-AE8A-E6368F633452</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>840</integer>
+			<integer>915</integer>
 			<key>ypos</key>
-			<integer>695</integer>
+			<integer>1400</integer>
 		</dict>
 		<key>F2BF4F5F-7AB6-4DDB-AA0E-C3749ECF0D8B</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>335</integer>
+			<integer>410</integer>
 			<key>ypos</key>
-			<integer>850</integer>
-		</dict>
-		<key>F304F009-68AD-4AB9-8B6C-D482B4CF7A59</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>4</integer>
-			<key>xpos</key>
-			<integer>165</integer>
-			<key>ypos</key>
-			<integer>315</integer>
+			<integer>1555</integer>
 		</dict>
 		<key>F3DE0838-ED88-4664-BA3E-E75737CF8EB5</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>435</integer>
+			<integer>510</integer>
 			<key>ypos</key>
-			<integer>700</integer>
+			<integer>1405</integer>
+		</dict>
+		<key>F8165297-EDCE-486C-8145-74C244AFBB14</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>xpos</key>
+			<integer>180</integer>
+			<key>ypos</key>
+			<integer>445</integer>
 		</dict>
 		<key>FD17D62A-FF7C-42DF-93C5-657F8C2B360A</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>4</integer>
+			<integer>2</integer>
 			<key>xpos</key>
-			<integer>290</integer>
+			<integer>200</integer>
 			<key>ypos</key>
-			<integer>445</integer>
+			<integer>880</integer>
 		</dict>
 		<key>FFFA61F1-50F0-423F-A9DA-95C7E7D76086</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>435</integer>
+			<integer>510</integer>
 			<key>ypos</key>
-			<integer>1540</integer>
+			<integer>2245</integer>
 		</dict>
 	</dict>
 	<key>variables</key>
@@ -4068,7 +4658,7 @@ added support for images while converting (with the --resource-path parameter)</
 		<string>reference_docx_path</string>
 	</array>
 	<key>version</key>
-	<string>1.3.1</string>
+	<string>2.0</string>
 	<key>webaddress</key>
 	<string>chris-grieser.de</string>
 </dict>
