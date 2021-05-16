@@ -8,11 +8,12 @@ This workflow is made for academics who neither like Word nor LaTeX. As the name
 ## Download
 ➡️ [Latest Release on GitHub](https://github.com/chrisgrieser/pandoc_alfred/releases)
 
-## Usage & Installation Guide
 ➡️ [Complete Usage & Installation Guide](https://chris-grieser.de/pandoc_alfred)
 
-![Conversion Preview](https://i.imgur.com/hBkN8e3.png) *Converts Markdown into .docx, .pdf, .html, or .pptx with the proper bibliography via Alfred Keyword or Hotkey.*
+## Screenshots
 
-![Citation Picker Preview](https://i.imgur.com/XuSfGov.png) *Quick Zotero Citation Picker. Can be used systemwide, meaning you can use it in any app you like.*
+<img src="https://i.imgur.com/hBkN8e3.png" alt="Conversion Preview" width=50% height=50%>
 
-![Configuration Preview](https://i.imgur.com/BDUPYef.png) *Access settings of the Pandoc conversion, e.g. citation style, from Alfred itself. No need to ever open the Terminal if you are not tech-savvy.*
+<img src="https://i.imgur.com/XuSfGov.png" alt="Citation Picker Preview" width=50% height=50%>
+
+<img src="https://i.imgur.com/BDUPYef.png" alt="Configuration" width=50% height=50%>
