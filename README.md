@@ -15,4 +15,4 @@ This workflow is made for academics who neither like Word nor LaTeX. As the name
 ➡️ [Latest Release on GitHub](https://github.com/chrisgrieser/pandoc_alfred/releases)
 
 ## Usage & Installation Guide
-➡️ [Complete Usage & Installation Guide](https://chris-grieser.de/pandoc_alfred), including setup of BetterBibTeX and Scrivener template.
+➡️ [Complete Usage & Installation Guide](https://chris-grieser.de/pandoc_alfred)
