@@ -5,7 +5,7 @@
 	<key>bundleid</key>
 	<string>de.chris-grieser.pandoc-alfred</string>
 	<key>category</key>
-	<string>My Workflows</string>
+	<string>Mini-Apps</string>
 	<key>connections</key>
 	<dict>
 		<key>01C18AD5-1189-4DFA-82BB-5C863BB2F037</key>
@@ -25,7 +25,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>B5D0E485-4062-43CE-9E7B-B45FC97AD415</string>
+				<string>AF1507DD-81ED-4829-B6C2-C915E0FDD50D</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -268,6 +268,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>sourceoutputuid</key>
+				<string>F76F4D2B-60B1-4BF1-AD17-8F7186259355</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -596,6 +598,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>67A601DA-66EE-45B7-8513-BB8E17D4A54D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>13851D58-1F95-41E7-A686-9E1B91BD2086</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>6B04082C-2281-4A10-950C-0B9A324EE9D6</key>
 		<array>
 			<dict>
@@ -815,6 +830,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>A6C04D3D-22D1-4F6E-A0B0-BCD1BEAF8745</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>833D8349-8BA4-48F1-A985-F2CCCF284809</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>AA87F73F-B3DC-452A-AA8D-B45E79D13BDA</key>
 		<array>
 			<dict>
@@ -854,11 +882,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>B4CEE8D7-BBF2-44A4-9654-D2C7A3AF904B</key>
+		<key>AF1507DD-81ED-4829-B6C2-C915E0FDD50D</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>EA2DEFE7-F27D-426A-9CA8-DFF65F319151</string>
+				<string>61EAC824-FB0A-4032-BC04-BFCAE7C2C213</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -867,11 +895,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>B5D0E485-4062-43CE-9E7B-B45FC97AD415</key>
+		<key>B4CEE8D7-BBF2-44A4-9654-D2C7A3AF904B</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>61EAC824-FB0A-4032-BC04-BFCAE7C2C213</string>
+				<string>EA2DEFE7-F27D-426A-9CA8-DFF65F319151</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1212,7 +1240,7 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Pandoc-Suite for Academic Writing in Markdown</string>
+	<string>Pandoc-Suite for Citations and Bibliographies in Markdown</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -1295,8 +1323,11 @@
 				<integer>0</integer>
 				<key>relatedApps</key>
 				<array>
-					<string>com.microsoft.Word</string>
 					<string>org.zotero.zotero</string>
+					<string>com.microsoft.Word</string>
+					<string>com.readdle.PDFExpert-Mac</string>
+					<string>com.apple.Preview</string>
+					<string>com.google.Chrome</string>
 				</array>
 				<key>relatedAppsMode</key>
 				<integer>2</integer>
@@ -1347,9 +1378,9 @@
 				<key>ignoredynamicplaceholders</key>
 				<false/>
 				<key>largetypetext</key>
-				<string>You used a command that was valid in Pandoc-Suite 1.x but  has become obsolete in the new version 2.0.
+				<string>You used a command that was valid in Pandoc-Suite 1.x but has become obsolete in the new version 2.0.
 
-Triggering Pandoc has been simplified, please consult the usage guide that has just been opened.</string>
+Triggering Pandoc has been simplified, please consult the usage guide that has just been opened in the browser.</string>
 				<key>textcolor</key>
 				<string></string>
 				<key>wrapat</key>
@@ -2047,10 +2078,9 @@ Selected file seems not to be a Markdown file.</string>
 				<key>filetypes</key>
 				<array>
 					<string>+net.ia.markdown</string>
-					<string>+public.plain-text</string>
 				</array>
 				<key>name</key>
-				<string>Pandoc: Convert Markdown to .docx</string>
+				<string>Convert .md to .docx</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.action</string>
@@ -2067,10 +2097,9 @@ Selected file seems not to be a Markdown file.</string>
 				<key>filetypes</key>
 				<array>
 					<string>+net.ia.markdown</string>
-					<string>+public.plain-text</string>
 				</array>
 				<key>name</key>
-				<string>Pandoc: Convert Markdown to .pptx</string>
+				<string>Convert .md to .pptx</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.action</string>
@@ -2127,10 +2156,9 @@ Selected file seems not to be a Markdown file.</string>
 				<key>filetypes</key>
 				<array>
 					<string>+net.ia.markdown</string>
-					<string>+public.plain-text</string>
 				</array>
 				<key>name</key>
-				<string>Pandoc: Convert Markdown to .html</string>
+				<string>Convert .md to .html</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.action</string>
@@ -2187,10 +2215,9 @@ Selected file seems not to be a Markdown file.</string>
 				<key>filetypes</key>
 				<array>
 					<string>+net.ia.markdown</string>
-					<string>+public.plain-text</string>
 				</array>
 				<key>name</key>
-				<string>Pandoc: Convert Markdown to .pdf</string>
+				<string>Convert .md to .pdf</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.action</string>
@@ -2287,7 +2314,7 @@ Selected file seems not to be a Markdown file.</string>
 				<key>fixedorder</key>
 				<false/>
 				<key>items</key>
-				<string>[{"title":"Citation Style","arg":"set_csl","subtitle":"currently: {var:csl_file}"},{"title":"Install New Citation Style","arg":"install_csl","subtitle":"via Zotero's Style Repository"},{"title":"BibTeX Library","arg":"bibtex_lib","subtitle":"currently: {var:bibtex_library_path}"},{"title":"PDF-Engine","arg":"pdf_engine","subtitle":"currently: {var:pdf_engine}"},{"title":"Word Reference Document","arg":"reference_docx","subtitle":"currently: {var:reference_docx_path}"},{"title":"Hotkey Output Format","arg":"hotkey_format","subtitle":"currently: {var:hotkey_output_format}"},{"title":"Further Arguments","arg":"further_args","subtitle":"currently: {var:further_pandoc_args}"},{"title":"Powerpoint Reference Presentation","arg":"reference_pptx","subtitle":"currently: {var:reference_pptx_path}"},{"title":"Slide Level for Presentations","arg":"slide_level","subtitle":"currently: {var:slide_level}"},{"title":"Documentation &amp; Guide for the Pandoc Suite","arg":"workflow_documentation","subtitle":"visit for troubleshooting and further information"}]</string>
+				<string>[{"title":"Hotkey Output Format","arg":"hotkey_format","subtitle":"currently: {var:hotkey_output_format}"},{"title":"Citation Style","arg":"set_csl","subtitle":"currently: {var:csl_file}"},{"title":"BibTeX Library","arg":"bibtex_lib","subtitle":"currently: {var:bibtex_library_path}"},{"title":"Install New Citation Style","arg":"install_csl","subtitle":"via Zotero's Style Repository"},{"title":"PDF-Engine","arg":"pdf_engine","subtitle":"currently: {var:pdf_engine}"},{"title":"Word Reference Document","arg":"reference_docx","subtitle":"currently: {var:reference_docx_path}"},{"title":"Powerpoint Reference Presentation","arg":"reference_pptx","subtitle":"currently: {var:reference_pptx_path}"},{"title":"Slide Level for Presentations","arg":"slide_level","subtitle":"currently: {var:slide_level}"},{"title":"Further Arguments","arg":"further_args","subtitle":"currently: {var:further_pandoc_args}"},{"title":"Documentation &amp; Guide for the Pandoc Suite","arg":"workflow_documentation","subtitle":"visit for troubleshooting and further information"},{"title":"Exit this Configuration","arg":"exit"}]</string>
 				<key>keyword</key>
 				<string>pconf</string>
 				<key>runningsubtext</key>
@@ -2339,6 +2366,19 @@ Selected file seems not to be a Markdown file.</string>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>DF96F627-1FFC-452B-B013-242983A6197B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>triggerid</key>
+				<string>pconf-loop</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>A6C04D3D-22D1-4F6E-A0B0-BCD1BEAF8745</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -2659,6 +2699,25 @@ end run</string>
 			<string>6C8285D8-0D81-4F19-ABC0-8EA43C9DD30A</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>pconf-loop</string>
+				<key>passinputasargument</key>
+				<false/>
+				<key>passvariables</key>
+				<false/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>13851D58-1F95-41E7-A686-9E1B91BD2086</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -3047,9 +3106,23 @@ end run</string>
 						<key>uid</key>
 						<string>F9B7C73B-A049-491F-9E4F-4CB780499920</string>
 					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>slide_level</string>
+						<key>outputlabel</key>
+						<string>slide_level</string>
+						<key>uid</key>
+						<string>F76F4D2B-60B1-4BF1-AD17-8F7186259355</string>
+					</dict>
 				</array>
 				<key>elselabel</key>
-				<string>slide_level</string>
+				<string>exit</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.conditional</string>
@@ -3275,11 +3348,11 @@ end run</string>
 				<key>fixedorder</key>
 				<true/>
 				<key>items</key>
-				<string>[{"title":"Information on what PDF Engines are.","arg":"info_website","subtitle":"https:\/\/www.notion.so\/chrisgrieser\/Pandoc-Suite-for-Academic-Citation-and-Bibliography-Creation-in-Markdown-4de4bd634ceb4533a1add8b105a487b1#f1fc8aca886a4b17afbbd67cda664194"},{"title":"pdflatex","arg":"pdflatex","subtitle":"Latex"},{"title":"pdfroff","arg":"pdfroff","subtitle":"ms"},{"title":"wkhtmltopdf","arg":"wkhtmltopdf","subtitle":"HTML"},{"title":"context","arg":"context","subtitle":"Tex"},{"title":"lualatex","arg":"lualatex","subtitle":"Latex"},{"title":"xelatex","arg":"xelatex","subtitle":"Latex"},{"title":"latexmk","arg":"latexmk","subtitle":"Latex"},{"title":"tectonic","arg":"tectonic","subtitle":"Latex"},{"title":"prince","arg":"prince","subtitle":"HTML"},{"title":"weasyprint","arg":"weasyprint","subtitle":"HTML"}]</string>
+				<string>[{"title":"Information on what PDF Engines","arg":"info_website","subtitle":"https:\/\/www.notion.so\/chrisgrieser\/Pandoc-Suite-for-Academic-Citation-and-Bibliography-Creation-in-Markdown-4de4bd634ceb4533a1add8b105a487b1#f1fc8aca886a4b17afbbd67cda664194"},{"title":"wkhtmltopdf (recommended)","arg":"wkhtmltopdf","subtitle":"HTML"},{"title":"pdfroff (recommended)","arg":"pdfroff","subtitle":"groff"},{"title":"prince","arg":"prince","subtitle":"HTML"},{"title":"tectonic","arg":"tectonic","subtitle":"self-contained Latex"},{"title":"pdflatex","arg":"pdflatex","subtitle":"Latex"},{"title":"weasyprint","arg":"weasyprint","subtitle":"HTML"},{"title":"context","arg":"context","subtitle":"Tex"},{"title":"lualatex","arg":"lualatex","subtitle":"Latex"},{"title":"xelatex","arg":"xelatex","subtitle":"Latex"},{"title":"latexmk","arg":"latexmk","subtitle":"Latex"}]</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>subtext</key>
-				<string>ATTENTION: This command selects a PDF-Engine, but does NOT install it.</string>
+				<string>ATTENTION: This command only selects a PDF-Engine, is does NOT install it.</string>
 				<key>title</key>
 				<string>Select a PDF-Engine</string>
 				<key>withspace</key>
@@ -3288,7 +3361,7 @@ end run</string>
 			<key>type</key>
 			<string>alfred.workflow.input.listfilter</string>
 			<key>uid</key>
-			<string>B5D0E485-4062-43CE-9E7B-B45FC97AD415</string>
+			<string>AF1507DD-81ED-4829-B6C2-C915E0FDD50D</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -3767,7 +3840,7 @@ With version 2.0, the way the Pandoc-Suite has been vastly reworked. Please cons
 
 See information here: https://www.notion.so/chrisgrieser/Pandoc-Suite-for-Citations-and-Bibliographies-in-Markdown-4de4bd634ceb4533a1add8b105a487b1#6067e5b7a65448c195b602fb413068b0
 
-The Documentation and Usage Guide has also been expanded with more explanations and troubleshooting.
+The Documentation and Usage Guide has also been expanded with more detailed explanations and troubleshooting.
 
 Documentation &amp; Usage Guide:
 https://chris-grieser.de/pandoc_alfred
@@ -3776,6 +3849,8 @@ https://chris-grieser.de/pandoc_alfred
 
 Release Notes
 =============
+v. 2.1: improved info on PDF engines, improved documentation, loop for pconf to make the configuration of multiple settings easier
+
 v. 2.0: due to popular request, changed the trigger of this workflow: the hotkey now also works for files selected in Finder, an option most convenient for people not familiar with Alfred. Other than that, it is now also possible to trigger Pandoc via file action. 
 
 v 1.3.1: Because of the deprecation of pandoc-citeproc and its substitution with --citeproc (which was implemented in v 1.2.1 of this workflow), style folders can be set automatically. This means installation of this workflow for new users is simplified.
@@ -3834,6 +3909,15 @@ added support for images while converting (with the --resource-path parameter)</
 			<integer>1005</integer>
 			<key>ypos</key>
 			<integer>1770</integer>
+		</dict>
+		<key>13851D58-1F95-41E7-A686-9E1B91BD2086</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>1330</integer>
+			<key>ypos</key>
+			<integer>1525</integer>
 		</dict>
 		<key>1586C092-4E94-4D4C-B43C-70C1C7103F66</key>
 		<dict>
@@ -4038,6 +4122,8 @@ Citation Picker</string>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
+			<key>note</key>
+			<string>remove \n</string>
 			<key>xpos</key>
 			<integer>725</integer>
 			<key>ypos</key>
@@ -4057,7 +4143,7 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>note</key>
-			<string>runs pandoc</string>
+			<string>run pandoc</string>
 			<key>xpos</key>
 			<integer>925</integer>
 			<key>ypos</key>
@@ -4146,7 +4232,7 @@ Citation Picker</string>
 			<key>note</key>
 			<string>Sucess Sound</string>
 			<key>xpos</key>
-			<integer>1195</integer>
+			<integer>1190</integer>
 			<key>ypos</key>
 			<integer>1525</integer>
 		</dict>
@@ -4331,6 +4417,15 @@ Citation Picker</string>
 			<key>ypos</key>
 			<integer>1165</integer>
 		</dict>
+		<key>A6C04D3D-22D1-4F6E-A0B0-BCD1BEAF8745</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>170</integer>
+			<key>ypos</key>
+			<integer>1240</integer>
+		</dict>
 		<key>A824D01B-F6C7-4D3E-8687-1B43D309258F</key>
 		<dict>
 			<key>colorindex</key>
@@ -4380,6 +4475,15 @@ Citation Picker</string>
 			<key>ypos</key>
 			<integer>2040</integer>
 		</dict>
+		<key>AF1507DD-81ED-4829-B6C2-C915E0FDD50D</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>510</integer>
+			<key>ypos</key>
+			<integer>1890</integer>
+		</dict>
 		<key>B4CEE8D7-BBF2-44A4-9654-D2C7A3AF904B</key>
 		<dict>
 			<key>colorindex</key>
@@ -4397,15 +4501,6 @@ Citation Picker</string>
 			<integer>840</integer>
 			<key>ypos</key>
 			<integer>2310</integer>
-		</dict>
-		<key>B5D0E485-4062-43CE-9E7B-B45FC97AD415</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>8</integer>
-			<key>xpos</key>
-			<integer>510</integer>
-			<key>ypos</key>
-			<integer>1890</integer>
 		</dict>
 		<key>B914FAA4-CE6D-4FE6-8BF7-748E1F4EB1F9</key>
 		<dict>
@@ -4643,7 +4738,7 @@ Citation Picker</string>
 		<key>hotkey_output_format</key>
 		<string>docx</string>
 		<key>pdf_engine</key>
-		<string></string>
+		<string>wkhtmltopdf</string>
 		<key>reference_docx_path</key>
 		<string>/Users/chrisgrieser/Google Drive/Academia/Vorlagen/Academic Writing Template.docx</string>
 		<key>reference_pptx_path</key>
@@ -4658,8 +4753,8 @@ Citation Picker</string>
 		<string>reference_docx_path</string>
 	</array>
 	<key>version</key>
-	<string>2.0</string>
+	<string>2.1</string>
 	<key>webaddress</key>
-	<string>chris-grieser.de</string>
+	<string>https://chris-grieser.de/</string>
 </dict>
 </plist>
