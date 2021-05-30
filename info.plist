@@ -1529,11 +1529,11 @@
 				<integer>0</integer>
 				<key>relatedApps</key>
 				<array>
-					<string>com.google.Chrome</string>
+					<string>org.zotero.zotero</string>
 					<string>com.microsoft.Word</string>
 					<string>com.readdle.PDFExpert-Mac</string>
 					<string>com.apple.Preview</string>
-					<string>org.zotero.zotero</string>
+					<string>com.google.Chrome</string>
 				</array>
 				<key>relatedAppsMode</key>
 				<integer>2</integer>
@@ -2374,32 +2374,6 @@ You can do that by triggering Alfred, typing "pconf", and selecting "BibTeX Libr
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string># on the pdflatex location, see: https://superuser.com/questions/1038612/where-do-i-get-the-pdflatex-program-for-mac
-
-export PATH=/usr/local/bin:/usr/local/texlive/:/Library/TeX/texbin/:$PATH
-{query}</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>5</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>501917DB-D6D5-4C2B-87AE-D413E2FA0E2A</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -2549,6 +2523,32 @@ end run</string>
 			<string>AA87F73F-B3DC-452A-AA8D-B45E79D13BDA</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string># on the pdflatex location, see: https://superuser.com/questions/1038612/where-do-i-get-the-pdflatex-program-for-mac
+
+export PATH=/usr/local/bin:/usr/local/texlive/:/Library/TeX/texbin/:$PATH
+{query}</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>501917DB-D6D5-4C2B-87AE-D413E2FA0E2A</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -3052,7 +3052,7 @@ end run</string>
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string></string>
+				<string> </string>
 				<key>passthroughargument</key>
 				<false/>
 				<key>variables</key>
@@ -3382,7 +3382,7 @@ end run</string>
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string></string>
+				<string> </string>
 				<key>passthroughargument</key>
 				<false/>
 				<key>variables</key>
@@ -3714,7 +3714,7 @@ end run</string>
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string></string>
+				<string> </string>
 				<key>passthroughargument</key>
 				<false/>
 				<key>variables</key>
@@ -4046,18 +4046,6 @@ end run</string>
 						<key>words</key>
 						<true/>
 					</dict>
-					<dict>
-						<key>field</key>
-						<string>kMDItemKind</string>
-						<key>not</key>
-						<false/>
-						<key>split</key>
-						<false/>
-						<key>value</key>
-						<string>bib</string>
-						<key>words</key>
-						<true/>
-					</dict>
 				</array>
 				<key>includesystem</key>
 				<false/>
@@ -4072,12 +4060,13 @@ end run</string>
 				<key>sortmode</key>
 				<integer>1</integer>
 				<key>subtext</key>
-				<string>Enter the file name, not path! Press [space] to view a list recently created libraries.</string>
+				<string>If no file is listed, make sure you have changed the file extension to ".bibtex"</string>
 				<key>title</key>
 				<string>Search for BibTeX Library for your Bibliography...</string>
 				<key>types</key>
 				<array>
-					<string>+public.plain-text</string>
+					<string>dyn.ah62d4rv4ge80e4pcsvw1u</string>
+					<string>org.bibtex</string>
 				</array>
 				<key>withspace</key>
 				<false/>
@@ -4312,7 +4301,8 @@ https://chris-grieser.de/pandoc_alfred
 Release Notes
 =============
 2.2.1
-fixes a bug where some latex-based pdf engines are not recognized by Alfred due to missing PATH-inclusion
+- fixed a bug where some latex-based pdf engines are not recognized by Alfred due to missing PATH-inclusion
+- fixed a bug where bibtex files are somestimes not recognized in the pconf-settings
 
 
 2.2: 
@@ -5306,15 +5296,15 @@ Citation Picker</string>
 	<key>variables</key>
 	<dict>
 		<key>bibtex_library_path</key>
-		<string>~/Google Drive/Academia/BetterBibTex.bib</string>
+		<string>~/Google Drive/Academia/BetterBibTex.bibtex</string>
 		<key>csl_file</key>
 		<string>apa.csl</string>
 		<key>further_pandoc_args</key>
 		<string>--number-sections</string>
 		<key>hotkey_output_format</key>
-		<string>pdf</string>
+		<string>docx</string>
 		<key>pdf_engine</key>
-		<string>pdflatex</string>
+		<string>wkhtmltopdf</string>
 		<key>reference_docx_path</key>
 		<string>~/Google Drive/Academia/Vorlagen/Academic Writing Template.docx</string>
 		<key>reference_pptx_path</key>
