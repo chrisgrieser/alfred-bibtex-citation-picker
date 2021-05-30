@@ -1722,6 +1722,43 @@ Triggering Pandoc has been simplified, please consult the usage guide that has j
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>1</integer>
+				<key>focusedappvariable</key>
+				<true/>
+				<key>focusedappvariablename</key>
+				<string>focusedapp</string>
+				<key>hotkey</key>
+				<integer>14</integer>
+				<key>hotmod</key>
+				<integer>1572864</integer>
+				<key>hotstring</key>
+				<string>E</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedApps</key>
+				<array>
+					<string>com.apple.finder</string>
+					<string>pro.writer.mac</string>
+					<string>com.github.atom</string>
+				</array>
+				<key>relatedAppsMode</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>1E75D41D-467E-425D-B8F5-C1C888C575F0</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>applescript</key>
 				<string>ia Writer path extraction</string>
 				<key>cachescript</key>
@@ -1935,43 +1972,6 @@ This usually only happens when you have created a new document and have not save
 			<string>92FD4A05-28D1-4C72-B87F-FE9BF5455B6A</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>1</integer>
-				<key>focusedappvariable</key>
-				<true/>
-				<key>focusedappvariablename</key>
-				<string>focusedapp</string>
-				<key>hotkey</key>
-				<integer>14</integer>
-				<key>hotmod</key>
-				<integer>1572864</integer>
-				<key>hotstring</key>
-				<string>E</string>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>0</integer>
-				<key>relatedApps</key>
-				<array>
-					<string>com.apple.finder</string>
-					<string>pro.writer.mac</string>
-					<string>com.github.atom</string>
-				</array>
-				<key>relatedAppsMode</key>
-				<integer>1</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>1E75D41D-467E-425D-B8F5-C1C888C575F0</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2374,6 +2374,32 @@ You can do that by triggering Alfred, typing "pconf", and selecting "BibTeX Libr
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string># on the pdflatex location, see: https://superuser.com/questions/1038612/where-do-i-get-the-pdflatex-program-for-mac
+
+export PATH=/usr/local/bin:/usr/local/texlive/:/Library/TeX/texbin/:$PATH
+{query}</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>501917DB-D6D5-4C2B-87AE-D413E2FA0E2A</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -2523,30 +2549,6 @@ end run</string>
 			<string>AA87F73F-B3DC-452A-AA8D-B45E79D13BDA</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>export PATH=/usr/local/bin:$PATH
-{query}</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>5</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>501917DB-D6D5-4C2B-87AE-D413E2FA0E2A</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2759,17 +2761,8 @@ end run</string>
 			<integer>1</integer>
 		</dict>
 		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>{query}</string>
-				<key>passthroughargument</key>
-				<true/>
-				<key>variables</key>
-				<dict/>
-			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
+			<string>alfred.workflow.utility.junction</string>
 			<key>uid</key>
 			<string>DF96F627-1FFC-452B-B013-242983A6197B</string>
 			<key>version</key>
@@ -4318,7 +4311,11 @@ https://chris-grieser.de/pandoc_alfred
 
 Release Notes
 =============
-v. 2.2: 
+2.2.1
+fixes a bug where some latex-based pdf engines are not recognized by Alfred due to missing PATH-inclusion
+
+
+2.2: 
 - support for Hotkey use in Atom [they offer a plugin for Markdown](https://atom.io/packages/language-markdown). 
 - uses "~" instead of the home directory in the pconf-settings, to make life easier for people saving their data in the cloud. 
 - additional error messages when necessary settings have not been made
@@ -4473,7 +4470,7 @@ Triggers Pandoc when in Finder or iA Writer</string>
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>475</integer>
+			<integer>215</integer>
 		</dict>
 		<key>1EDA81EE-9A5D-4315-8606-DC351F27CE7A</key>
 		<dict>
@@ -4994,7 +4991,7 @@ Citation Picker</string>
 			<key>note</key>
 			<string>Sucess Sound</string>
 			<key>xpos</key>
-			<integer>1295</integer>
+			<integer>1290</integer>
 			<key>ypos</key>
 			<integer>1010</integer>
 		</dict>
@@ -5315,9 +5312,9 @@ Citation Picker</string>
 		<key>further_pandoc_args</key>
 		<string>--number-sections</string>
 		<key>hotkey_output_format</key>
-		<string>docx</string>
+		<string>pdf</string>
 		<key>pdf_engine</key>
-		<string>wkhtmltopdf</string>
+		<string>pdflatex</string>
 		<key>reference_docx_path</key>
 		<string>~/Google Drive/Academia/Vorlagen/Academic Writing Template.docx</string>
 		<key>reference_pptx_path</key>
@@ -5333,7 +5330,7 @@ Citation Picker</string>
 		<string>reference_docx_path</string>
 	</array>
 	<key>version</key>
-	<string>2.2</string>
+	<string>2.2.1</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>
