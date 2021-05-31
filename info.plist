@@ -479,6 +479,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>38D8D3B7-5FBE-4AD1-AD38-FB76FFEE2519</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>CE27E3EF-A408-4091-8012-14B020868C38</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>3A3139AC-C1FA-440D-B763-51B7393CFD2D</key>
 		<array>
 			<dict>
@@ -543,6 +556,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>42BDA197-AE7D-45F0-8929-3B154F42219F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>BE676612-EAE6-4389-85E0-FEAD2E60BE4C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>459B4CBB-47BC-4B5A-9882-9D9025F3D3E3</key>
 		<array>
 			<dict>
@@ -597,6 +623,16 @@
 		</array>
 		<key>501917DB-D6D5-4C2B-87AE-D413E2FA0E2A</key>
 		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>38D8D3B7-5FBE-4AD1-AD38-FB76FFEE2519</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 			<dict>
 				<key>destinationuid</key>
 				<string>E5AE7980-8F19-44F4-8277-2D1E2EA8B18C</string>
@@ -1173,6 +1209,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>BE676612-EAE6-4389-85E0-FEAD2E60BE4C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1EEF412E-0663-4CB2-9A38-F5E1498CD868</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>C3488553-3AD8-4B2E-8280-D028B79AD0B5</key>
 		<array>
 			<dict>
@@ -1286,6 +1335,21 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>CE27E3EF-A408-4091-8012-14B020868C38</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>42BDA197-AE7D-45F0-8929-3B154F42219F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>D2294731-682D-45C9-9750-E3613E3F2BDD</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -1835,97 +1899,6 @@ This usually only happens when you have created a new document and have not save
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string># THESE VARIABLES MUST BE SET. SEE THE ONEUPDATER README FOR AN EXPLANATION OF EACH.
-readonly remote_info_plist='https://raw.githubusercontent.com/chrisgrieser/pandoc_alfred/main/info.plist'
-readonly workflow_url='chrisgrieser/pandoc_alfred'
-readonly download_type='github_release'
-readonly frequency_check='1'
-
-# FROM HERE ON, CODE SHOULD BE LEFT UNTOUCHED!
-function abort {
-  echo "${1}" &gt;&amp;2
-  exit 1
-}
-
-function url_exists {
-  curl --silent --location --output /dev/null --fail --range 0-0 "${1}"
-}
-
-function notification {
-  local -r notificator="$(find . -type d -name 'Notificator.app')"
-  if [[ -n "${notificator}" ]]; then
-    "${notificator}/Contents/Resources/Scripts/notificator" --message "${1}" --title "${alfred_workflow_name}" --subtitle 'A new version is available'
-    return
-  fi
-
-  local -r terminal_notifier="$(find . -type f -name 'terminal-notifier')"
-  if [[ -n "${terminal_notifier}" ]]; then
-    "${terminal_notifier}" -title "${alfred_workflow_name}" -subtitle 'A new version is available' -message "${1}"
-    return
-  fi
-
-  osascript -e "display notification \"${1}\" with title \"${alfred_workflow_name}\" subtitle \"A new version is available\""
-}
-
-# Local sanity checks
-readonly local_info_plist='info.plist'
-readonly local_version="$(/usr/libexec/PlistBuddy -c 'print version' "${local_info_plist}")"
-
-[[ -n "${local_version}" ]] || abort 'You need to set a workflow version in the configuration sheet.'
-[[ "${download_type}" =~ ^(direct|page|github_release)$ ]] || abort "'download_type' (${download_type}) needs to be one of 'direct', 'page', or 'github_release'."
-[[ "${frequency_check}" =~ ^[0-9]+$ ]] || abort "'frequency_check' (${frequency_check}) needs to be a number."
-
-# Check for updates
-if [[ $(find "${local_info_plist}" -mtime +"${frequency_check}"d) ]]; then
-  if ! url_exists "${remote_info_plist}"; then abort "'remote_info_plist' (${remote_info_plist}) appears to not be reachable."; fi # Remote sanity check
-
-  readonly tmp_file="$(mktemp)"
-  curl --silent --location --output "${tmp_file}" "${remote_info_plist}"
-  readonly remote_version="$(/usr/libexec/PlistBuddy -c 'print version' "${tmp_file}")"
-
-  if [[ "${local_version}" == "${remote_version}" ]]; then
-    touch "${local_info_plist}" # Reset timer by touching local file
-    exit 0
-  fi
-
-  if [[ "${download_type}" == 'page' ]]; then
-    notification 'Opening download page…'
-    open "${workflow_url}"
-    exit 0
-  fi
-
-  download_url="$([[ "${download_type}" == 'github_release' ]] &amp;&amp; curl --silent "https://api.github.com/repos/${workflow_url}/releases/latest" | grep 'browser_download_url' | head -1 | sed -E 's/.*browser_download_url": "(.*)"/\1/' || echo "${workflow_url}")"
-
-  if url_exists "${download_url}"; then
-    notification 'Downloading and installing…'
-    curl --silent --location --output "${HOME}/Downloads/${alfred_workflow_name}.alfredworkflow" "${download_url}"
-    open "${HOME}/Downloads/${alfred_workflow_name}.alfredworkflow"
-  else
-    abort "'workflow_url' (${download_url}) appears to not be reachable."
-  fi
-fi</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>65CA24BA-2DA6-4DC0-A2BE-3E4E4D5FDD72</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>applescript</key>
 				<string>on alfred_script(q)
 
@@ -2162,6 +2135,97 @@ The selected file does not seem to be a Markdown file. Please select a markdown 
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string># THESE VARIABLES MUST BE SET. SEE THE ONEUPDATER README FOR AN EXPLANATION OF EACH.
+readonly remote_info_plist='https://raw.githubusercontent.com/chrisgrieser/pandoc_alfred/main/info.plist'
+readonly workflow_url='chrisgrieser/pandoc_alfred'
+readonly download_type='github_release'
+readonly frequency_check='1'
+
+# FROM HERE ON, CODE SHOULD BE LEFT UNTOUCHED!
+function abort {
+  echo "${1}" &gt;&amp;2
+  exit 1
+}
+
+function url_exists {
+  curl --silent --location --output /dev/null --fail --range 0-0 "${1}"
+}
+
+function notification {
+  local -r notificator="$(find . -type d -name 'Notificator.app')"
+  if [[ -n "${notificator}" ]]; then
+    "${notificator}/Contents/Resources/Scripts/notificator" --message "${1}" --title "${alfred_workflow_name}" --subtitle 'A new version is available'
+    return
+  fi
+
+  local -r terminal_notifier="$(find . -type f -name 'terminal-notifier')"
+  if [[ -n "${terminal_notifier}" ]]; then
+    "${terminal_notifier}" -title "${alfred_workflow_name}" -subtitle 'A new version is available' -message "${1}"
+    return
+  fi
+
+  osascript -e "display notification \"${1}\" with title \"${alfred_workflow_name}\" subtitle \"A new version is available\""
+}
+
+# Local sanity checks
+readonly local_info_plist='info.plist'
+readonly local_version="$(/usr/libexec/PlistBuddy -c 'print version' "${local_info_plist}")"
+
+[[ -n "${local_version}" ]] || abort 'You need to set a workflow version in the configuration sheet.'
+[[ "${download_type}" =~ ^(direct|page|github_release)$ ]] || abort "'download_type' (${download_type}) needs to be one of 'direct', 'page', or 'github_release'."
+[[ "${frequency_check}" =~ ^[0-9]+$ ]] || abort "'frequency_check' (${frequency_check}) needs to be a number."
+
+# Check for updates
+if [[ $(find "${local_info_plist}" -mtime +"${frequency_check}"d) ]]; then
+  if ! url_exists "${remote_info_plist}"; then abort "'remote_info_plist' (${remote_info_plist}) appears to not be reachable."; fi # Remote sanity check
+
+  readonly tmp_file="$(mktemp)"
+  curl --silent --location --output "${tmp_file}" "${remote_info_plist}"
+  readonly remote_version="$(/usr/libexec/PlistBuddy -c 'print version' "${tmp_file}")"
+
+  if [[ "${local_version}" == "${remote_version}" ]]; then
+    touch "${local_info_plist}" # Reset timer by touching local file
+    exit 0
+  fi
+
+  if [[ "${download_type}" == 'page' ]]; then
+    notification 'Opening download page…'
+    open "${workflow_url}"
+    exit 0
+  fi
+
+  download_url="$([[ "${download_type}" == 'github_release' ]] &amp;&amp; curl --silent "https://api.github.com/repos/${workflow_url}/releases/latest" | grep 'browser_download_url' | head -1 | sed -E 's/.*browser_download_url": "(.*)"/\1/' || echo "${workflow_url}")"
+
+  if url_exists "${download_url}"; then
+    notification 'Downloading and installing…'
+    curl --silent --location --output "${HOME}/Downloads/${alfred_workflow_name}.alfredworkflow" "${download_url}"
+    open "${HOME}/Downloads/${alfred_workflow_name}.alfredworkflow"
+  else
+    abort "'workflow_url' (${download_url}) appears to not be reachable."
+  fi
+fi</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>65CA24BA-2DA6-4DC0-A2BE-3E4E4D5FDD72</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>matchmode</key>
 				<integer>1</integer>
 				<key>matchstring</key>
@@ -2301,6 +2365,122 @@ You can do that by triggering Alfred, typing "pconf", and selecting "BibTeX Libr
 			<string>D6043255-D8CE-4E2F-8132-A05B5D40E30B</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>adduuid</key>
+				<false/>
+				<key>allowemptyfiles</key>
+				<false/>
+				<key>createintermediatefolders</key>
+				<false/>
+				<key>filename</key>
+				<string>{query}/pandoc_errors.log</string>
+				<key>filetext</key>
+				<string>{var:errorlog}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>relativepathmode</key>
+				<integer>0</integer>
+				<key>type</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.writefile</string>
+			<key>uid</key>
+			<string>1EEF412E-0663-4CB2-9A38-F5E1498CD868</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>1</integer>
+						<key>matchstring</key>
+						<string></string>
+						<key>outputlabel</key>
+						<string>errors</string>
+						<key>uid</key>
+						<string>D2294731-682D-45C9-9750-E3613E3F2BDD</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>CE27E3EF-A408-4091-8012-14B020868C38</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string>\/[^\/]*\.md</string>
+				<key>regexcaseinsensitive</key>
+				<true/>
+				<key>regexmultiline</key>
+				<false/>
+				<key>replacestring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.replace</string>
+			<key>uid</key>
+			<string>BE676612-EAE6-4389-85E0-FEAD2E60BE4C</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{var:doc_path}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>errorlog</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>42BDA197-AE7D-45F0-8929-3B154F42219F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>
+</string>
+				<key>replacestring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.replace</string>
+			<key>uid</key>
+			<string>38D8D3B7-5FBE-4AD1-AD38-FB76FFEE2519</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2470,6 +2650,7 @@ on run
 	if desired_format = "pdf" then set pandoc_command to (pandoc_command &amp; pdf_arg)
 	if desired_format = "html" then set pandoc_command to (pandoc_command &amp; "--standalone ")
 	if desired_format = "pptx" then set pandoc_command to (pandoc_command &amp; reference_pptx &amp; slide_level_arg)
+	set pandoc_command to (pandoc_command &amp; " 2&gt;&amp;1") 
 
 	-- returns the pandoc-command to Alfred, to process it as bash script
 	return pandoc_command
@@ -2535,7 +2716,7 @@ end run</string>
 				<string># on the pdflatex location, see: https://superuser.com/questions/1038612/where-do-i-get-the-pdflatex-program-for-mac
 
 export PATH=/usr/local/bin:/usr/local/texlive/:/Library/TeX/texbin/:$PATH
-{query}</string>
+echo -n | {query}</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -4300,9 +4481,13 @@ https://chris-grieser.de/pandoc_alfred
 
 Release Notes
 =============
+2.3
+when an error is encountered during the oandoc conversion (typically missing citations), an error log file is created and saved at the same location of the output
+
+
 2.2.1
 - fixed a bug where some latex-based pdf engines are not recognized by Alfred due to missing PATH-inclusion
-- fixed a bug where bibtex files are somestimes not recognized in the pconf-settings
+- fixed a bug where bibtex files are sometimes not recognized in the pconf-settings
 
 
 2.2: 
@@ -4471,12 +4656,23 @@ Triggers Pandoc when in Finder or iA Writer</string>
 			<key>ypos</key>
 			<integer>2380</integer>
 		</dict>
+		<key>1EEF412E-0663-4CB2-9A38-F5E1498CD868</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>11</integer>
+			<key>note</key>
+			<string>logs STDERR</string>
+			<key>xpos</key>
+			<integer>1305</integer>
+			<key>ypos</key>
+			<integer>835</integer>
+		</dict>
 		<key>203213EF-7CCC-4A0A-A034-41804B7CAF0D</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>1160</integer>
+			<integer>1175</integer>
 			<key>ypos</key>
 			<integer>1010</integer>
 		</dict>
@@ -4570,6 +4766,17 @@ Triggers Pandoc when in Finder or iA Writer</string>
 			<key>ypos</key>
 			<integer>480</integer>
 		</dict>
+		<key>38D8D3B7-5FBE-4AD1-AD38-FB76FFEE2519</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>11</integer>
+			<key>note</key>
+			<string>remove \n</string>
+			<key>xpos</key>
+			<integer>1040</integer>
+			<key>ypos</key>
+			<integer>865</integer>
+		</dict>
 		<key>3A3139AC-C1FA-440D-B763-51B7393CFD2D</key>
 		<dict>
 			<key>colorindex</key>
@@ -4610,6 +4817,17 @@ Citation Picker</string>
 			<key>ypos</key>
 			<integer>2620</integer>
 		</dict>
+		<key>42BDA197-AE7D-45F0-8929-3B154F42219F</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>11</integer>
+			<key>note</key>
+			<string>configures error-log-path</string>
+			<key>xpos</key>
+			<integer>1180</integer>
+			<key>ypos</key>
+			<integer>865</integer>
+		</dict>
 		<key>459B4CBB-47BC-4B5A-9882-9D9025F3D3E3</key>
 		<dict>
 			<key>colorindex</key>
@@ -4635,7 +4853,7 @@ Citation Picker</string>
 			<key>note</key>
 			<string>remove \n</string>
 			<key>xpos</key>
-			<integer>720</integer>
+			<integer>725</integer>
 			<key>ypos</key>
 			<integer>55</integer>
 		</dict>
@@ -4731,9 +4949,9 @@ Citation Picker</string>
 			<key>note</key>
 			<string>OneUpdater (automatic update function)</string>
 			<key>xpos</key>
-			<integer>1355</integer>
+			<integer>1480</integer>
 			<key>ypos</key>
-			<integer>440</integer>
+			<integer>605</integer>
 		</dict>
 		<key>6627A981-4C34-471F-A108-868F4C8F6C77</key>
 		<dict>
@@ -4883,7 +5101,7 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<integer>1040</integer>
+			<integer>1075</integer>
 			<key>ypos</key>
 			<integer>210</integer>
 		</dict>
@@ -4970,7 +5188,7 @@ Citation Picker</string>
 			<key>note</key>
 			<string>Error Sound</string>
 			<key>xpos</key>
-			<integer>1115</integer>
+			<integer>1075</integer>
 			<key>ypos</key>
 			<integer>520</integer>
 		</dict>
@@ -4981,7 +5199,7 @@ Citation Picker</string>
 			<key>note</key>
 			<string>Sucess Sound</string>
 			<key>xpos</key>
-			<integer>1290</integer>
+			<integer>1305</integer>
 			<key>ypos</key>
 			<integer>1010</integer>
 		</dict>
@@ -5086,6 +5304,15 @@ Citation Picker</string>
 			<key>ypos</key>
 			<integer>2265</integer>
 		</dict>
+		<key>BE676612-EAE6-4389-85E0-FEAD2E60BE4C</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>11</integer>
+			<key>xpos</key>
+			<integer>1240</integer>
+			<key>ypos</key>
+			<integer>865</integer>
+		</dict>
 		<key>C3488553-3AD8-4B2E-8280-D028B79AD0B5</key>
 		<dict>
 			<key>colorindex</key>
@@ -5102,7 +5329,7 @@ Citation Picker</string>
 			<key>note</key>
 			<string>saves path for revealing in Finder</string>
 			<key>xpos</key>
-			<integer>510</integer>
+			<integer>500</integer>
 			<key>ypos</key>
 			<integer>1040</integer>
 		</dict>
@@ -5175,6 +5402,15 @@ Citation Picker</string>
 			<key>ypos</key>
 			<integer>505</integer>
 		</dict>
+		<key>CE27E3EF-A408-4091-8012-14B020868C38</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>11</integer>
+			<key>xpos</key>
+			<integer>1100</integer>
+			<key>ypos</key>
+			<integer>855</integer>
+		</dict>
 		<key>D6043255-D8CE-4E2F-8132-A05B5D40E30B</key>
 		<dict>
 			<key>colorindex</key>
@@ -5207,7 +5443,7 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>1030</integer>
+			<integer>1045</integer>
 			<key>ypos</key>
 			<integer>1010</integer>
 		</dict>
@@ -5320,7 +5556,7 @@ Citation Picker</string>
 		<string>reference_docx_path</string>
 	</array>
 	<key>version</key>
-	<string>2.2.1</string>
+	<string>2.3</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>
