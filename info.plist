@@ -586,7 +586,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>EC47EAC3-A49F-43BA-87E1-08F4E9066DAB</string>
+				<string>2F0E643A-EE6B-4395-A1D6-ADD838B38167</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -763,7 +763,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>EC47EAC3-A49F-43BA-87E1-08F4E9066DAB</string>
+				<string>2F0E643A-EE6B-4395-A1D6-ADD838B38167</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1057,7 +1057,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>EC47EAC3-A49F-43BA-87E1-08F4E9066DAB</string>
+				<string>2F0E643A-EE6B-4395-A1D6-ADD838B38167</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1384,7 +1384,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>EC47EAC3-A49F-43BA-87E1-08F4E9066DAB</string>
+				<string>2F0E643A-EE6B-4395-A1D6-ADD838B38167</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1437,19 +1437,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>C8F5B7F4-789A-4A4F-9F3F-E154D2368696</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>EC47EAC3-A49F-43BA-87E1-08F4E9066DAB</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>2F0E643A-EE6B-4395-A1D6-ADD838B38167</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1593,11 +1580,11 @@
 				<integer>0</integer>
 				<key>relatedApps</key>
 				<array>
-					<string>org.zotero.zotero</string>
+					<string>com.google.Chrome</string>
 					<string>com.microsoft.Word</string>
 					<string>com.readdle.PDFExpert-Mac</string>
 					<string>com.apple.Preview</string>
-					<string>com.google.Chrome</string>
+					<string>org.zotero.zotero</string>
 				</array>
 				<key>relatedAppsMode</key>
 				<integer>2</integer>
@@ -2278,6 +2265,45 @@ You can do that by triggering Alfred, typing "pconf", and selecting "PDF-Engine"
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>acceptsmulti</key>
+				<false/>
+				<key>filetypes</key>
+				<array>
+					<string>+net.ia.markdown</string>
+				</array>
+				<key>name</key>
+				<string>Convert .md to .docx</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.action</string>
+			<key>uid</key>
+			<string>C5F3870E-9179-475E-BCA9-D35E172DEE3D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>desired_format</key>
+					<string>docx</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>6627A981-4C34-471F-A108-868F4C8F6C77</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>conditions</key>
 				<array>
 					<dict>
@@ -2426,6 +2452,25 @@ You can do that by triggering Alfred, typing "pconf", and selecting "BibTeX Libr
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>acceptsmulti</key>
+				<false/>
+				<key>filetypes</key>
+				<array>
+					<string>+net.ia.markdown</string>
+				</array>
+				<key>name</key>
+				<string>Convert .md to .pptx</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.action</string>
+			<key>uid</key>
+			<string>7BAC0AE1-EB76-46E6-9622-397A10FAC5A7</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>matchmode</key>
 				<integer>1</integer>
 				<key>matchstring</key>
@@ -2515,25 +2560,6 @@ You can do that by triggering Alfred, typing "pconf", and selecting "BibTeX Libr
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>acceptsmulti</key>
-				<false/>
-				<key>filetypes</key>
-				<array>
-					<string>+net.ia.markdown</string>
-				</array>
-				<key>name</key>
-				<string>Convert .md to .docx</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.action</string>
-			<key>uid</key>
-			<string>C5F3870E-9179-475E-BCA9-D35E172DEE3D</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
@@ -2541,13 +2567,32 @@ You can do that by triggering Alfred, typing "pconf", and selecting "BibTeX Libr
 				<key>variables</key>
 				<dict>
 					<key>desired_format</key>
-					<string>docx</string>
+					<string>pptx</string>
 				</dict>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>6627A981-4C34-471F-A108-868F4C8F6C77</string>
+			<string>E0161BB2-AEAF-414C-BC56-8903CCC21234</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsmulti</key>
+				<false/>
+				<key>filetypes</key>
+				<array>
+					<string>+net.ia.markdown</string>
+				</array>
+				<key>name</key>
+				<string>Convert .md to .html</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.action</string>
+			<key>uid</key>
+			<string>5E03C541-76F4-456C-AE68-1F63590CEE3B</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -2734,6 +2779,26 @@ echo -n | {query}</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>desired_format</key>
+					<string>html</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>9C4D210E-D3C9-4A87-8110-71B51B36DCF8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>matchmode</key>
 				<integer>0</integer>
 				<key>matchstring</key>
@@ -2765,92 +2830,6 @@ echo -n | {query}</string>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>C5CD1FB8-8FE5-4F75-BCE0-0D7F03887989</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>acceptsmulti</key>
-				<false/>
-				<key>filetypes</key>
-				<array>
-					<string>+net.ia.markdown</string>
-				</array>
-				<key>name</key>
-				<string>Convert .md to .pptx</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.action</string>
-			<key>uid</key>
-			<string>7BAC0AE1-EB76-46E6-9622-397A10FAC5A7</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<true/>
-				<key>variables</key>
-				<dict>
-					<key>desired_format</key>
-					<string>pptx</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>E0161BB2-AEAF-414C-BC56-8903CCC21234</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.junction</string>
-			<key>uid</key>
-			<string>EC47EAC3-A49F-43BA-87E1-08F4E9066DAB</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>acceptsmulti</key>
-				<false/>
-				<key>filetypes</key>
-				<array>
-					<string>+net.ia.markdown</string>
-				</array>
-				<key>name</key>
-				<string>Convert .md to .html</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.action</string>
-			<key>uid</key>
-			<string>5E03C541-76F4-456C-AE68-1F63590CEE3B</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<true/>
-				<key>variables</key>
-				<dict>
-					<key>desired_format</key>
-					<string>html</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>9C4D210E-D3C9-4A87-8110-71B51B36DCF8</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4227,6 +4206,18 @@ end run</string>
 						<key>words</key>
 						<true/>
 					</dict>
+					<dict>
+						<key>field</key>
+						<string>kMDItemKind</string>
+						<key>not</key>
+						<false/>
+						<key>split</key>
+						<false/>
+						<key>value</key>
+						<string>bib</string>
+						<key>words</key>
+						<true/>
+					</dict>
 				</array>
 				<key>includesystem</key>
 				<false/>
@@ -4245,10 +4236,7 @@ end run</string>
 				<key>title</key>
 				<string>Search for BibTeX Library for your Bibliography...</string>
 				<key>types</key>
-				<array>
-					<string>dyn.ah62d4rv4ge80e4pcsvw1u</string>
-					<string>org.bibtex</string>
-				</array>
+				<array/>
 				<key>withspace</key>
 				<false/>
 			</dict>
@@ -4481,8 +4469,11 @@ https://chris-grieser.de/pandoc_alfred
 
 Release Notes
 =============
+2.3.1
+- fixed yet another problem with Alfred finding .bib files. Seriously Alfred devs, I love you, but why are you making this so hard?
+
 2.3
-when an error is encountered during the oandoc conversion (typically missing citations), an error log file is created and saved at the same location of the output
+- when an error is encountered during the pandoc conversion (typically missing citations), an error log file is created and saved at the same location of the output
 
 
 2.2.1
@@ -4495,20 +4486,30 @@ when an error is encountered during the oandoc conversion (typically missing cit
 - uses "~" instead of the home directory in the pconf-settings, to make life easier for people saving their data in the cloud. 
 - additional error messages when necessary settings have not been made
 
-v. 2.1: improved info on PDF engines, improved documentation, loop for pconf to make the configuration of multiple settings easier
+2.1
+- improved info on PDF engines
+- improved documentation
+- loop for pconf to make the configuration of multiple settings easier
 
-v. 2.0: due to popular request, changed the trigger of this workflow: the hotkey now also works for files selected in Finder, an option most convenient for people not familiar with Alfred. Other than that, it is now also possible to trigger Pandoc via file action. 
+2.0
+- due to popular request, changed the trigger of this workflow: the hotkey now also works for files selected in Finder, an option most convenient for people not familiar with Alfred. 
+- other than that, it is now also possible to trigger Pandoc via file action. 
 
-v 1.3.1: Because of the deprecation of pandoc-citeproc and its substitution with --citeproc (which was implemented in v 1.2.1 of this workflow), style folders can be set automatically. This means installation of this workflow for new users is simplified.
+1.3.1
+- Because of the deprecation of pandoc-citeproc and its substitution with --citeproc (which was implemented in v 1.2.1 of this workflow), style folders can be set automatically. This means installation of this workflow for new users is simplified.
 
-v 1.3: enables automatic updates via OneUpdater (https://github.com/vitorgalvao/alfred-workflows/tree/master/OneUpdater) and some minor refactoring of the pconf-command
+v 1.3
+- enables automatic updates via OneUpdater (https://github.com/vitorgalvao/alfred-workflows/tree/master/OneUpdater) and some minor refactoring of the pconf-command
 
-v 1.2.1: fix: uses "--citeproc" as parameter due to the deprecation of pandoc-citeproc with pandoc version 2.11 (fixes this workflow for people installing pandoc after November 2020)
+v 1.2.1
+- fix: uses "--citeproc" as parameter due to the deprecation of pandoc-citeproc with pandoc version 2.11 (fixes this workflow for people installing pandoc after November 2020)
 
-v 1.2: conversion to Powerpoint and the addition of the respective settings
+v 1.2
+- conversion to Powerpoint and the addition of the respective settings
 
-v 1.1: changed default hotkeys for higher compatibility &amp; 
-added support for images while converting (with the --resource-path parameter)</string>
+v 1.1
+- changed default hotkeys for higher compatibility
+- added support for images while converting (with the --resource-path parameter)</string>
 	<key>uidata</key>
 	<dict>
 		<key>01BD0B65-2695-4C72-A475-66D8A954CDD0</key>
@@ -4585,7 +4586,7 @@ added support for images while converting (with the --resource-path parameter)</
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>1315</integer>
+			<integer>1120</integer>
 		</dict>
 		<key>165FFAAF-92C5-4F2C-BD2A-EFD28B7EFD48</key>
 		<dict>
@@ -4842,9 +4843,9 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>170</integer>
+			<integer>160</integer>
 			<key>ypos</key>
-			<integer>1345</integer>
+			<integer>1150</integer>
 		</dict>
 		<key>4CD979CC-3ADB-4C54-92FA-F2A9B569E75C</key>
 		<dict>
@@ -4931,7 +4932,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>1185</integer>
+			<integer>990</integer>
 		</dict>
 		<key>61EAC824-FB0A-4032-BC04-BFCAE7C2C213</key>
 		<dict>
@@ -4958,9 +4959,9 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>170</integer>
+			<integer>160</integer>
 			<key>ypos</key>
-			<integer>955</integer>
+			<integer>760</integer>
 		</dict>
 		<key>66D4F263-824D-4623-A5B2-624A274C064A</key>
 		<dict>
@@ -5094,7 +5095,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>1055</integer>
+			<integer>860</integer>
 		</dict>
 		<key>7D5245E3-DF34-4B83-A9EE-98ED7232686D</key>
 		<dict>
@@ -5159,9 +5160,9 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>170</integer>
+			<integer>160</integer>
 			<key>ypos</key>
-			<integer>1215</integer>
+			<integer>1020</integer>
 		</dict>
 		<key>A293BD12-10A1-40CB-A7E3-E1D822471C40</key>
 		<dict>
@@ -5342,7 +5343,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>925</integer>
+			<integer>730</integer>
 		</dict>
 		<key>C6163D07-A2C0-4E02-8D6B-F42F6101E0F8</key>
 		<dict>
@@ -5434,9 +5435,9 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>170</integer>
+			<integer>160</integer>
 			<key>ypos</key>
-			<integer>1085</integer>
+			<integer>890</integer>
 		</dict>
 		<key>E5AE7980-8F19-44F4-8277-2D1E2EA8B18C</key>
 		<dict>
@@ -5473,15 +5474,6 @@ Citation Picker</string>
 			<integer>510</integer>
 			<key>ypos</key>
 			<integer>2140</integer>
-		</dict>
-		<key>EC47EAC3-A49F-43BA-87E1-08F4E9066DAB</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>2</integer>
-			<key>xpos</key>
-			<integer>280</integer>
-			<key>ypos</key>
-			<integer>1145</integer>
 		</dict>
 		<key>F0A3E6A0-D3EA-4B46-AE8A-E6368F633452</key>
 		<dict>
@@ -5532,7 +5524,7 @@ Citation Picker</string>
 	<key>variables</key>
 	<dict>
 		<key>bibtex_library_path</key>
-		<string>~/Google Drive/Academia/BetterBibTex.bibtex</string>
+		<string>~/Google Drive/Academia/Zotero Library.bib</string>
 		<key>csl_file</key>
 		<string>apa.csl</string>
 		<key>further_pandoc_args</key>
@@ -5556,7 +5548,7 @@ Citation Picker</string>
 		<string>reference_docx_path</string>
 	</array>
 	<key>version</key>
-	<string>2.3</string>
+	<string>2.3.1</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>
