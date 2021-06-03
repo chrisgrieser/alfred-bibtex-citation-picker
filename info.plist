@@ -60,6 +60,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>10BB7075-C556-4FD7-8BAD-7ED68C74DC49</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>67A601DA-66EE-45B7-8513-BB8E17D4A54D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>1586C092-4E94-4D4C-B43C-70C1C7103F66</key>
 		<array>
 			<dict>
@@ -1794,8 +1807,8 @@ Triggering Pandoc has been simplified, please consult the usage guide that has j
 				<key>relatedApps</key>
 				<array>
 					<string>com.apple.finder</string>
-					<string>pro.writer.mac</string>
 					<string>com.github.atom</string>
+					<string>pro.writer.mac</string>
 				</array>
 				<key>relatedAppsMode</key>
 				<integer>1</integer>
@@ -3262,25 +3275,6 @@ end run</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>externaltriggerid</key>
-				<string>pconf-loop</string>
-				<key>passinputasargument</key>
-				<false/>
-				<key>passvariables</key>
-				<false/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>13851D58-1F95-41E7-A686-9E1B91BD2086</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>browser</key>
 				<string></string>
 				<key>spaces</key>
@@ -3708,6 +3702,25 @@ end run</string>
 			<string>alfred.workflow.utility.conditional</string>
 			<key>uid</key>
 			<string>2C9C9202-FD29-496C-BBE2-2858BF4A9641</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>pconf-loop</string>
+				<key>passinputasargument</key>
+				<false/>
+				<key>passvariables</key>
+				<false/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>13851D58-1F95-41E7-A686-9E1B91BD2086</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4453,8 +4466,8 @@ end run</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>PLEASE READ IF YOU USED PANDOC VERSION 1.x
-==========================================
+	<string>PLEASE READ IF YOU PREVIOUSLY USED PANDOC VERSION 1.x
+=====================================================
 
 With version 2.0, the way the Pandoc-Suite has been vastly reworked. Please consult the guide how to use the Pandoc-Suite now. Do not worry – the changes have been made to greatly simplify use, especially for Alfred newcomers.
 
@@ -4469,6 +4482,9 @@ https://chris-grieser.de/pandoc_alfred
 
 Release Notes
 =============
+2.3.2
+- minor bug fix with pconf
+
 2.3.1
 - fixed yet another problem with Alfred finding .bib files. Seriously Alfred devs, I love you, but why are you making this so hard?
 
@@ -4519,7 +4535,7 @@ v 1.1
 			<key>xpos</key>
 			<integer>890</integer>
 			<key>ypos</key>
-			<integer>2020</integer>
+			<integer>1775</integer>
 		</dict>
 		<key>01C18AD5-1189-4DFA-82BB-5C863BB2F037</key>
 		<dict>
@@ -4528,7 +4544,7 @@ v 1.1
 			<key>xpos</key>
 			<integer>410</integer>
 			<key>ypos</key>
-			<integer>2650</integer>
+			<integer>2405</integer>
 		</dict>
 		<key>09326943-79A7-4755-B7E8-94B09D15560C</key>
 		<dict>
@@ -4539,7 +4555,7 @@ v 1.1
 			<key>xpos</key>
 			<integer>655</integer>
 			<key>ypos</key>
-			<integer>2295</integer>
+			<integer>2050</integer>
 		</dict>
 		<key>0A379478-9939-4905-9781-F1145FC20901</key>
 		<dict>
@@ -4548,7 +4564,7 @@ v 1.1
 			<key>xpos</key>
 			<integer>410</integer>
 			<key>ypos</key>
-			<integer>2415</integer>
+			<integer>2170</integer>
 		</dict>
 		<key>10000D18-BDC8-4A08-B089-D7164D917E8A</key>
 		<dict>
@@ -4557,7 +4573,7 @@ v 1.1
 			<key>xpos</key>
 			<integer>410</integer>
 			<key>ypos</key>
-			<integer>1810</integer>
+			<integer>1565</integer>
 		</dict>
 		<key>10BB7075-C556-4FD7-8BAD-7ED68C74DC49</key>
 		<dict>
@@ -4566,7 +4582,7 @@ v 1.1
 			<key>xpos</key>
 			<integer>1050</integer>
 			<key>ypos</key>
-			<integer>2265</integer>
+			<integer>2020</integer>
 		</dict>
 		<key>13851D58-1F95-41E7-A686-9E1B91BD2086</key>
 		<dict>
@@ -4624,7 +4640,7 @@ v 1.1
 			<key>xpos</key>
 			<integer>410</integer>
 			<key>ypos</key>
-			<integer>1930</integer>
+			<integer>1685</integer>
 		</dict>
 		<key>1E5378C0-2F02-417C-B363-E2805FAF27E8</key>
 		<dict>
@@ -4655,7 +4671,7 @@ Triggers Pandoc when in Finder or iA Writer</string>
 			<key>xpos</key>
 			<integer>1050</integer>
 			<key>ypos</key>
-			<integer>2380</integer>
+			<integer>2135</integer>
 		</dict>
 		<key>1EEF412E-0663-4CB2-9A38-F5E1498CD868</key>
 		<dict>
@@ -4693,7 +4709,7 @@ Triggers Pandoc when in Finder or iA Writer</string>
 			<key>xpos</key>
 			<integer>725</integer>
 			<key>ypos</key>
-			<integer>2265</integer>
+			<integer>2020</integer>
 		</dict>
 		<key>27DEB378-75B0-4A5B-B864-1791E42F9540</key>
 		<dict>
@@ -4702,7 +4718,7 @@ Triggers Pandoc when in Finder or iA Writer</string>
 			<key>xpos</key>
 			<integer>410</integer>
 			<key>ypos</key>
-			<integer>2295</integer>
+			<integer>2050</integer>
 		</dict>
 		<key>2C9C9202-FD29-496C-BBE2-2858BF4A9641</key>
 		<dict>
@@ -4711,7 +4727,7 @@ Triggers Pandoc when in Finder or iA Writer</string>
 			<key>xpos</key>
 			<integer>140</integer>
 			<key>ypos</key>
-			<integer>2185</integer>
+			<integer>1940</integer>
 		</dict>
 		<key>2D59F287-3F5D-4A64-9151-E43716142751</key>
 		<dict>
@@ -4729,7 +4745,7 @@ Triggers Pandoc when in Finder or iA Writer</string>
 			<key>xpos</key>
 			<integer>1050</integer>
 			<key>ypos</key>
-			<integer>2740</integer>
+			<integer>2495</integer>
 		</dict>
 		<key>2F0E643A-EE6B-4395-A1D6-ADD838B38167</key>
 		<dict>
@@ -4747,7 +4763,7 @@ Triggers Pandoc when in Finder or iA Writer</string>
 			<key>xpos</key>
 			<integer>725</integer>
 			<key>ypos</key>
-			<integer>2020</integer>
+			<integer>1775</integer>
 		</dict>
 		<key>3303F829-CEC3-4465-B2A9-760449051745</key>
 		<dict>
@@ -4756,7 +4772,7 @@ Triggers Pandoc when in Finder or iA Writer</string>
 			<key>xpos</key>
 			<integer>1050</integer>
 			<key>ypos</key>
-			<integer>2620</integer>
+			<integer>2375</integer>
 		</dict>
 		<key>3525B1D4-FE5B-4087-B8D4-592A85B73ECA</key>
 		<dict>
@@ -4794,7 +4810,7 @@ Triggers Pandoc when in Finder or iA Writer</string>
 			<key>xpos</key>
 			<integer>510</integer>
 			<key>ypos</key>
-			<integer>2505</integer>
+			<integer>2260</integer>
 		</dict>
 		<key>3E233EB1-E0B2-48CC-9E6F-A5CAFDFD26AD</key>
 		<dict>
@@ -4816,7 +4832,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>510</integer>
 			<key>ypos</key>
-			<integer>2620</integer>
+			<integer>2375</integer>
 		</dict>
 		<key>42BDA197-AE7D-45F0-8929-3B154F42219F</key>
 		<dict>
@@ -4865,7 +4881,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>725</integer>
 			<key>ypos</key>
-			<integer>2505</integer>
+			<integer>2260</integer>
 		</dict>
 		<key>501917DB-D6D5-4C2B-87AE-D413E2FA0E2A</key>
 		<dict>
@@ -4903,7 +4919,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>1050</integer>
 			<key>ypos</key>
-			<integer>1780</integer>
+			<integer>1535</integer>
 		</dict>
 		<key>54C67FA1-C608-410C-8337-5AD248944C3A</key>
 		<dict>
@@ -4921,7 +4937,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>725</integer>
 			<key>ypos</key>
-			<integer>1900</integer>
+			<integer>1655</integer>
 		</dict>
 		<key>5E03C541-76F4-456C-AE68-1F63590CEE3B</key>
 		<dict>
@@ -4941,7 +4957,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>720</integer>
 			<key>ypos</key>
-			<integer>2405</integer>
+			<integer>2160</integer>
 		</dict>
 		<key>65CA24BA-2DA6-4DC0-A2BE-3E4E4D5FDD72</key>
 		<dict>
@@ -4981,7 +4997,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>1235</integer>
 			<key>ypos</key>
-			<integer>2020</integer>
+			<integer>1775</integer>
 		</dict>
 		<key>6B04082C-2281-4A10-950C-0B9A324EE9D6</key>
 		<dict>
@@ -5001,7 +5017,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>1050</integer>
 			<key>ypos</key>
-			<integer>2505</integer>
+			<integer>2260</integer>
 		</dict>
 		<key>6C8285D8-0D81-4F19-ABC0-8EA43C9DD30A</key>
 		<dict>
@@ -5010,7 +5026,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>890</integer>
 			<key>ypos</key>
-			<integer>1970</integer>
+			<integer>1725</integer>
 		</dict>
 		<key>6DB891C7-AF7A-45A9-90CE-ECECF06EB40A</key>
 		<dict>
@@ -5019,7 +5035,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>890</integer>
 			<key>ypos</key>
-			<integer>1895</integer>
+			<integer>1650</integer>
 		</dict>
 		<key>6ED2EDB1-B0C2-4894-8345-227BEB5D55D8</key>
 		<dict>
@@ -5039,7 +5055,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>410</integer>
 			<key>ypos</key>
-			<integer>2770</integer>
+			<integer>2525</integer>
 		</dict>
 		<key>748DBE25-7FDC-4884-8D0C-D68041D62DF3</key>
 		<dict>
@@ -5048,7 +5064,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>1050</integer>
 			<key>ypos</key>
-			<integer>2140</integer>
+			<integer>1895</integer>
 		</dict>
 		<key>75136EA5-5D2F-4AB6-B598-4443286CAFCE</key>
 		<dict>
@@ -5057,7 +5073,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>885</integer>
 			<key>ypos</key>
-			<integer>2690</integer>
+			<integer>2445</integer>
 		</dict>
 		<key>75F44825-564D-4C3A-BC1C-8C49DC7A3894</key>
 		<dict>
@@ -5075,7 +5091,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>725</integer>
 			<key>ypos</key>
-			<integer>2760</integer>
+			<integer>2515</integer>
 		</dict>
 		<key>78CC6B08-1B23-4498-89D9-BB736BC4BA81</key>
 		<dict>
@@ -5084,7 +5100,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>725</integer>
 			<key>ypos</key>
-			<integer>2620</integer>
+			<integer>2375</integer>
 		</dict>
 		<key>7BAC0AE1-EB76-46E6-9622-397A10FAC5A7</key>
 		<dict>
@@ -5115,7 +5131,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>1520</integer>
+			<integer>1275</integer>
 		</dict>
 		<key>890FC932-E9B3-4D12-B667-EA2C4D03E083</key>
 		<dict>
@@ -5126,7 +5142,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>655</integer>
 			<key>ypos</key>
-			<integer>2650</integer>
+			<integer>2405</integer>
 		</dict>
 		<key>8BC9584A-510E-4BEE-A2E5-A7EBAAA90F96</key>
 		<dict>
@@ -5144,7 +5160,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>885</integer>
 			<key>ypos</key>
-			<integer>2330</integer>
+			<integer>2085</integer>
 		</dict>
 		<key>92FD4A05-28D1-4C72-B87F-FE9BF5455B6A</key>
 		<dict>
@@ -5171,7 +5187,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>510</integer>
 			<key>ypos</key>
-			<integer>1660</integer>
+			<integer>1415</integer>
 		</dict>
 		<key>A6C04D3D-22D1-4F6E-A0B0-BCD1BEAF8745</key>
 		<dict>
@@ -5180,7 +5196,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>170</integer>
 			<key>ypos</key>
-			<integer>1735</integer>
+			<integer>1490</integer>
 		</dict>
 		<key>A824D01B-F6C7-4D3E-8687-1B43D309258F</key>
 		<dict>
@@ -5211,7 +5227,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>960</integer>
 			<key>ypos</key>
-			<integer>1970</integer>
+			<integer>1725</integer>
 		</dict>
 		<key>AE83213B-C46B-449A-8A9B-AE608150E345</key>
 		<dict>
@@ -5220,7 +5236,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>885</integer>
 			<key>ypos</key>
-			<integer>2440</integer>
+			<integer>2195</integer>
 		</dict>
 		<key>AF051F12-7BF5-4D7A-B0AA-9FAAF9EDB3CA</key>
 		<dict>
@@ -5229,7 +5245,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>410</integer>
 			<key>ypos</key>
-			<integer>2535</integer>
+			<integer>2290</integer>
 		</dict>
 		<key>AF1507DD-81ED-4829-B6C2-C915E0FDD50D</key>
 		<dict>
@@ -5238,7 +5254,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>510</integer>
 			<key>ypos</key>
-			<integer>2385</integer>
+			<integer>2140</integer>
 		</dict>
 		<key>B31553E5-A98A-47E1-8CBD-EF632C228C54</key>
 		<dict>
@@ -5256,7 +5272,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>510</integer>
 			<key>ypos</key>
-			<integer>1780</integer>
+			<integer>1535</integer>
 		</dict>
 		<key>B589A301-088E-4246-8B0C-664566684890</key>
 		<dict>
@@ -5265,7 +5281,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>885</integer>
 			<key>ypos</key>
-			<integer>2805</integer>
+			<integer>2560</integer>
 		</dict>
 		<key>B914FAA4-CE6D-4FE6-8BF7-748E1F4EB1F9</key>
 		<dict>
@@ -5303,7 +5319,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>510</integer>
 			<key>ypos</key>
-			<integer>2265</integer>
+			<integer>2020</integer>
 		</dict>
 		<key>BE676612-EAE6-4389-85E0-FEAD2E60BE4C</key>
 		<dict>
@@ -5321,7 +5337,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>725</integer>
 			<key>ypos</key>
-			<integer>2140</integer>
+			<integer>1895</integer>
 		</dict>
 		<key>C5CD1FB8-8FE5-4F75-BCE0-0D7F03887989</key>
 		<dict>
@@ -5352,7 +5368,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>410</integer>
 			<key>ypos</key>
-			<integer>2170</integer>
+			<integer>1925</integer>
 		</dict>
 		<key>C8F5B7F4-789A-4A4F-9F3F-E154D2368696</key>
 		<dict>
@@ -5363,7 +5379,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>655</integer>
 			<key>ypos</key>
-			<integer>2170</integer>
+			<integer>1925</integer>
 		</dict>
 		<key>CAF6BC7B-0707-446C-B217-6E0EC407595B</key>
 		<dict>
@@ -5372,7 +5388,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>510</integer>
 			<key>ypos</key>
-			<integer>2020</integer>
+			<integer>1775</integer>
 		</dict>
 		<key>CB4D33E2-A031-4542-A640-3B73D66EE39E</key>
 		<dict>
@@ -5392,7 +5408,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>1050</integer>
 			<key>ypos</key>
-			<integer>1900</integer>
+			<integer>1655</integer>
 		</dict>
 		<key>CD10FB60-F2A7-4035-91C6-BED56464E0F5</key>
 		<dict>
@@ -5428,7 +5444,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>410</integer>
 			<key>ypos</key>
-			<integer>1690</integer>
+			<integer>1445</integer>
 		</dict>
 		<key>E0161BB2-AEAF-414C-BC56-8903CCC21234</key>
 		<dict>
@@ -5455,7 +5471,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>725</integer>
 			<key>ypos</key>
-			<integer>1780</integer>
+			<integer>1535</integer>
 		</dict>
 		<key>EA5FC55D-EF41-48AB-8318-7FEBC5971355</key>
 		<dict>
@@ -5473,7 +5489,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>510</integer>
 			<key>ypos</key>
-			<integer>2140</integer>
+			<integer>1895</integer>
 		</dict>
 		<key>F0A3E6A0-D3EA-4B46-AE8A-E6368F633452</key>
 		<dict>
@@ -5482,7 +5498,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>960</integer>
 			<key>ypos</key>
-			<integer>1895</integer>
+			<integer>1650</integer>
 		</dict>
 		<key>F2BF4F5F-7AB6-4DDB-AA0E-C3749ECF0D8B</key>
 		<dict>
@@ -5491,7 +5507,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>410</integer>
 			<key>ypos</key>
-			<integer>2050</integer>
+			<integer>1805</integer>
 		</dict>
 		<key>F3DE0838-ED88-4664-BA3E-E75737CF8EB5</key>
 		<dict>
@@ -5500,7 +5516,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>510</integer>
 			<key>ypos</key>
-			<integer>1900</integer>
+			<integer>1655</integer>
 		</dict>
 		<key>F8165297-EDCE-486C-8145-74C244AFBB14</key>
 		<dict>
@@ -5518,7 +5534,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>510</integer>
 			<key>ypos</key>
-			<integer>2740</integer>
+			<integer>2495</integer>
 		</dict>
 	</dict>
 	<key>variables</key>
@@ -5548,7 +5564,7 @@ Citation Picker</string>
 		<string>reference_docx_path</string>
 	</array>
 	<key>version</key>
-	<string>2.3.1</string>
+	<string>2.3.2</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>
