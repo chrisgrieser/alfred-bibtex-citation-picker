@@ -495,7 +495,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>8BC9584A-510E-4BEE-A2E5-A7EBAAA90F96</string>
+				<string>971DA3B6-3838-4012-ADCD-D864EB9844BD</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -533,7 +533,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>66D4F263-824D-4623-A5B2-624A274C064A</string>
+				<string>971DA3B6-3838-4012-ADCD-D864EB9844BD</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -722,7 +722,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>66D4F263-824D-4623-A5B2-624A274C064A</string>
+				<string>971DA3B6-3838-4012-ADCD-D864EB9844BD</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -785,19 +785,6 @@
 			</dict>
 		</array>
 		<key>6627A981-4C34-471F-A108-868F4C8F6C77</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>2F0E643A-EE6B-4395-A1D6-ADD838B38167</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>66D4F263-824D-4623-A5B2-624A274C064A</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -1027,31 +1014,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>8BC9584A-510E-4BEE-A2E5-A7EBAAA90F96</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>66D4F263-824D-4623-A5B2-624A274C064A</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>sourceoutputuid</key>
-				<string>6F33F6A8-49FA-4CD1-8452-AC704E363F33</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>F8165297-EDCE-486C-8145-74C244AFBB14</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>91000D05-4397-43D7-81D8-0FB992A27938</key>
 		<array>
 			<dict>
@@ -1074,6 +1036,21 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>971DA3B6-3838-4012-ADCD-D864EB9844BD</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2F0E643A-EE6B-4395-A1D6-ADD838B38167</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>6F33F6A8-49FA-4CD1-8452-AC704E363F33</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -1828,10 +1805,10 @@ Triggering Pandoc has been simplified, please consult the usage guide that has j
 				<integer>0</integer>
 				<key>relatedApps</key>
 				<array>
-					<string>pro.writer.mac</string>
+					<string>com.apple.finder</string>
 					<string>com.coteditor.CotEditor</string>
 					<string>com.github.atom</string>
-					<string>com.apple.finder</string>
+					<string>pro.writer.mac</string>
 				</array>
 				<key>relatedAppsMode</key>
 				<integer>1</integer>
@@ -2116,14 +2093,6 @@ end alfred_script</string>
 			<integer>1</integer>
 		</dict>
 		<dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.junction</string>
-			<key>uid</key>
-			<string>66D4F263-824D-4623-A5B2-624A274C064A</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
 			<key>config</key>
 			<dict>
 				<key>alignment</key>
@@ -2153,36 +2122,6 @@ The selected file does not seem to be a Markdown file. Please select a markdown 
 			<string>BCF854A0-9393-4A26-9BE7-B1DD004B8847</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string></string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>4</integer>
-						<key>matchstring</key>
-						<string>.(md|txt|markdown|mdtxt|mdown|rmd|mdwn)$</string>
-						<key>outputlabel</key>
-						<string>md file selected</string>
-						<key>uid</key>
-						<string>6F33F6A8-49FA-4CD1-8452-AC704E363F33</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>other type selected</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
-			<key>uid</key>
-			<string>8BC9584A-510E-4BEE-A2E5-A7EBAAA90F96</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2295,6 +2234,36 @@ fi</string>
 			<string>F8165297-EDCE-486C-8145-74C244AFBB14</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>4</integer>
+						<key>matchstring</key>
+						<string>.(md|txt|markdown|mdtxt|mdown|rmd|mdwn)$</string>
+						<key>outputlabel</key>
+						<string>md file selected</string>
+						<key>uid</key>
+						<string>6F33F6A8-49FA-4CD1-8452-AC704E363F33</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>other type selected</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>971DA3B6-3838-4012-ADCD-D864EB9844BD</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4537,6 +4506,7 @@ Release Notes
 2.4
 - bugfix with iA Writer file recognition
 - support for file recognition from CotEditor
+- prevents running of non-Markdown files when in texteditors
 
 2.3.2
 - minor bug fix with pconf
@@ -4701,7 +4671,7 @@ v 1.1
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<integer>675</integer>
+			<integer>720</integer>
 			<key>ypos</key>
 			<integer>210</integer>
 		</dict>
@@ -4734,7 +4704,7 @@ Triggers Pandoc when in Finder or iA Writer</string>
 			<key>note</key>
 			<string>logs STDERR</string>
 			<key>xpos</key>
-			<integer>1305</integer>
+			<integer>1350</integer>
 			<key>ypos</key>
 			<integer>835</integer>
 		</dict>
@@ -4752,7 +4722,7 @@ Triggers Pandoc when in Finder or iA Writer</string>
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<integer>870</integer>
+			<integer>915</integer>
 			<key>ypos</key>
 			<integer>720</integer>
 		</dict>
@@ -4844,7 +4814,7 @@ Triggers Pandoc when in Finder or iA Writer</string>
 			<key>note</key>
 			<string>remove \n</string>
 			<key>xpos</key>
-			<integer>1040</integer>
+			<integer>1085</integer>
 			<key>ypos</key>
 			<integer>865</integer>
 		</dict>
@@ -4895,7 +4865,7 @@ Citation Picker</string>
 			<key>note</key>
 			<string>configures error-log-path</string>
 			<key>xpos</key>
-			<integer>1180</integer>
+			<integer>1225</integer>
 			<key>ypos</key>
 			<integer>865</integer>
 		</dict>
@@ -5020,9 +4990,9 @@ Citation Picker</string>
 			<key>note</key>
 			<string>OneUpdater (automatic update function)</string>
 			<key>xpos</key>
-			<integer>1480</integer>
+			<integer>1525</integer>
 			<key>ypos</key>
-			<integer>605</integer>
+			<integer>600</integer>
 		</dict>
 		<key>6627A981-4C34-471F-A108-868F4C8F6C77</key>
 		<dict>
@@ -5032,15 +5002,6 @@ Citation Picker</string>
 			<integer>160</integer>
 			<key>ypos</key>
 			<integer>760</integer>
-		</dict>
-		<key>66D4F263-824D-4623-A5B2-624A274C064A</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>2</integer>
-			<key>xpos</key>
-			<integer>720</integer>
-			<key>ypos</key>
-			<integer>560</integer>
 		</dict>
 		<key>67A601DA-66EE-45B7-8513-BB8E17D4A54D</key>
 		<dict>
@@ -5134,7 +5095,7 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<integer>870</integer>
+			<integer>915</integer>
 			<key>ypos</key>
 			<integer>210</integer>
 		</dict>
@@ -5172,7 +5133,7 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<integer>1075</integer>
+			<integer>1120</integer>
 			<key>ypos</key>
 			<integer>210</integer>
 		</dict>
@@ -5198,15 +5159,6 @@ Citation Picker</string>
 			<key>ypos</key>
 			<integer>2405</integer>
 		</dict>
-		<key>8BC9584A-510E-4BEE-A2E5-A7EBAAA90F96</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>2</integer>
-			<key>xpos</key>
-			<integer>360</integer>
-			<key>ypos</key>
-			<integer>605</integer>
-		</dict>
 		<key>91000D05-4397-43D7-81D8-0FB992A27938</key>
 		<dict>
 			<key>colorindex</key>
@@ -5221,9 +5173,18 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<integer>870</integer>
+			<integer>915</integer>
 			<key>ypos</key>
 			<integer>475</integer>
+		</dict>
+		<key>971DA3B6-3838-4012-ADCD-D864EB9844BD</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>xpos</key>
+			<integer>660</integer>
+			<key>ypos</key>
+			<integer>640</integer>
 		</dict>
 		<key>9C4D210E-D3C9-4A87-8110-71B51B36DCF8</key>
 		<dict>
@@ -5259,7 +5220,7 @@ Citation Picker</string>
 			<key>note</key>
 			<string>Error Sound</string>
 			<key>xpos</key>
-			<integer>1075</integer>
+			<integer>1120</integer>
 			<key>ypos</key>
 			<integer>520</integer>
 		</dict>
@@ -5369,7 +5330,7 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<integer>870</integer>
+			<integer>915</integer>
 			<key>ypos</key>
 			<integer>600</integer>
 		</dict>
@@ -5387,7 +5348,7 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<integer>1240</integer>
+			<integer>1285</integer>
 			<key>ypos</key>
 			<integer>865</integer>
 		</dict>
@@ -5485,7 +5446,7 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<integer>1100</integer>
+			<integer>1145</integer>
 			<key>ypos</key>
 			<integer>855</integer>
 		</dict>
@@ -5494,7 +5455,7 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<integer>870</integer>
+			<integer>915</integer>
 			<key>ypos</key>
 			<integer>835</integer>
 		</dict>
@@ -5539,7 +5500,7 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<integer>870</integer>
+			<integer>915</integer>
 			<key>ypos</key>
 			<integer>345</integer>
 		</dict>
@@ -5584,7 +5545,7 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<integer>820</integer>
+			<integer>865</integer>
 			<key>ypos</key>
 			<integer>630</integer>
 		</dict>
