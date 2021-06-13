@@ -459,6 +459,18 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
+				<string>A835DCFA-733A-44EB-93E0-30B7D6A78A2C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>136C26E2-BC61-4429-8443-0850A434056D</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>BC2942FE-8B27-4B09-B7BE-344A9A98D511</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -1092,6 +1104,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>A835DCFA-733A-44EB-93E0-30B7D6A78A2C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3A3139AC-C1FA-440D-B763-51B7393CFD2D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>AA87F73F-B3DC-452A-AA8D-B45E79D13BDA</key>
 		<array>
 			<dict>
@@ -1593,10 +1618,7 @@
 				<integer>0</integer>
 				<key>relatedApps</key>
 				<array>
-					<string>com.google.Chrome</string>
 					<string>com.microsoft.Word</string>
-					<string>com.readdle.PDFExpert-Mac</string>
-					<string>com.apple.Preview</string>
 					<string>org.zotero.zotero</string>
 				</array>
 				<key>relatedAppsMode</key>
@@ -1806,9 +1828,10 @@ Triggering Pandoc has been simplified, please consult the usage guide that has j
 				<integer>0</integer>
 				<key>relatedApps</key>
 				<array>
-					<string>com.apple.finder</string>
-					<string>com.github.atom</string>
 					<string>pro.writer.mac</string>
+					<string>com.coteditor.CotEditor</string>
+					<string>com.github.atom</string>
+					<string>com.apple.finder</string>
 				</array>
 				<key>relatedAppsMode</key>
 				<integer>1</integer>
@@ -1824,14 +1847,14 @@ Triggering Pandoc has been simplified, please consult the usage guide that has j
 			<key>config</key>
 			<dict>
 				<key>applescript</key>
-				<string>ia Writer path extraction</string>
+				<string>on alfred_script(q)		try		tell application "CotEditor"			set the_document to front document			save the_document			set hsf_path to file of the_document		end tell	end try		if (hsf_path = missing value) then return "no_file_recognized"	return POSIX path of hsf_path	end alfred_script</string>
 				<key>cachescript</key>
 				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.applescript</string>
 			<key>uid</key>
-			<string>BC2942FE-8B27-4B09-B7BE-344A9A98D511</string>
+			<string>A835DCFA-733A-44EB-93E0-30B7D6A78A2C</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1900,18 +1923,72 @@ This usually only happens when you have created a new document and have not save
 			<key>config</key>
 			<dict>
 				<key>applescript</key>
-				<string>on alfred_script(q)
-
-tell application "Atom" to activatetell application "System Events" to keystroke "s" using {command down} --workaround to savetell application "System Events" to tell process "Atom"	set atomPath to name of window 1end tellreturn atomPath
-
-end alfred_script</string>
+				<string>on alfred_script(q)		try		tell application "iA Writer.app"			set the_document to front document			save the_document			set hsf_path to file of the_document		end tell	end try		if (hsf_path = missing value) then return "no_file_recognized"	return POSIX path of hsf_path	end alfred_script</string>
 				<key>cachescript</key>
 				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.applescript</string>
 			<key>uid</key>
-			<string>1A6EB493-F111-4466-BF6D-2586D71918A1</string>
+			<string>BC2942FE-8B27-4B09-B7BE-344A9A98D511</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:focusedapp}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>com.coteditor.CotEditor</string>
+						<key>outputlabel</key>
+						<string>CotEditor</string>
+						<key>uid</key>
+						<string>136C26E2-BC61-4429-8443-0850A434056D</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:focusedapp}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>pro.writer.mac</string>
+						<key>outputlabel</key>
+						<string>iA Writer</string>
+						<key>uid</key>
+						<string>D2294731-682D-45C9-9750-E3613E3F2BDD</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:focusedapp}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>com.github.atom</string>
+						<key>outputlabel</key>
+						<string>Atom</string>
+						<key>uid</key>
+						<string>266417CC-F2CD-4FC2-B513-92C06C968CD4</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>Finder</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>3525B1D4-FE5B-4087-B8D4-592A85B73ECA</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1964,44 +2041,19 @@ This usually only happens when you have created a new document and have not save
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:focusedapp}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>pro.writer.mac</string>
-						<key>outputlabel</key>
-						<string>iA Writer</string>
-						<key>uid</key>
-						<string>D2294731-682D-45C9-9750-E3613E3F2BDD</string>
-					</dict>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:focusedapp}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>com.github.atom</string>
-						<key>outputlabel</key>
-						<string>Atom</string>
-						<key>uid</key>
-						<string>266417CC-F2CD-4FC2-B513-92C06C968CD4</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>Finder</string>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+
+tell application "Atom" to activatetell application "System Events" to keystroke "s" using {command down} --workaround to savetell application "System Events" to tell process "Atom"	set atomPath to name of window 1end tellreturn atomPath
+
+end alfred_script</string>
+				<key>cachescript</key>
+				<false/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
+			<string>alfred.workflow.action.applescript</string>
 			<key>uid</key>
-			<string>3525B1D4-FE5B-4087-B8D4-592A85B73ECA</string>
+			<string>1A6EB493-F111-4466-BF6D-2586D71918A1</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4482,6 +4534,10 @@ https://chris-grieser.de/pandoc_alfred
 
 Release Notes
 =============
+2.4
+- bugfix with iA Writer file recognition
+- support for file recognition from CotEditor
+
 2.3.2
 - minor bug fix with pconf
 
@@ -4617,12 +4673,10 @@ v 1.1
 		<dict>
 			<key>colorindex</key>
 			<integer>2</integer>
-			<key>note</key>
-			<string>Atom path extraction</string>
 			<key>xpos</key>
 			<integer>365</integer>
 			<key>ypos</key>
-			<integer>460</integer>
+			<integer>485</integer>
 		</dict>
 		<key>1B92DFF5-B773-4E2B-A9A3-0F97EBF33900</key>
 		<dict>
@@ -4779,9 +4833,9 @@ Triggers Pandoc when in Finder or iA Writer</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>260</integer>
+			<integer>240</integer>
 			<key>ypos</key>
-			<integer>480</integer>
+			<integer>465</integer>
 		</dict>
 		<key>38D8D3B7-5FBE-4AD1-AD38-FB76FFEE2519</key>
 		<dict>
@@ -5209,6 +5263,15 @@ Citation Picker</string>
 			<key>ypos</key>
 			<integer>520</integer>
 		</dict>
+		<key>A835DCFA-733A-44EB-93E0-30B7D6A78A2C</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>xpos</key>
+			<integer>365</integer>
+			<key>ypos</key>
+			<integer>265</integer>
+		</dict>
 		<key>AA87F73F-B3DC-452A-AA8D-B45E79D13BDA</key>
 		<dict>
 			<key>colorindex</key>
@@ -5296,12 +5359,10 @@ Citation Picker</string>
 		<dict>
 			<key>colorindex</key>
 			<integer>2</integer>
-			<key>note</key>
-			<string>file path extraction from iA Writer</string>
 			<key>xpos</key>
 			<integer>365</integer>
 			<key>ypos</key>
-			<integer>310</integer>
+			<integer>375</integer>
 		</dict>
 		<key>BCF854A0-9393-4A26-9BE7-B1DD004B8847</key>
 		<dict>
@@ -5564,7 +5625,7 @@ Citation Picker</string>
 		<string>reference_docx_path</string>
 	</array>
 	<key>version</key>
-	<string>2.3.2</string>
+	<string>2.4</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>
