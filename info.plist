@@ -1044,6 +1044,16 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
+				<string>F8165297-EDCE-486C-8145-74C244AFBB14</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>2F0E643A-EE6B-4395-A1D6-ADD838B38167</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -1719,9 +1729,9 @@ end run</string>
 				<key>keyword</key>
 				<string>pandoc</string>
 				<key>subtext</key>
-				<string>Obsolete command! Will open Pandoc-Suite Guide with explanation</string>
+				<string>Will open Pandoc-Suite Guide with explanation</string>
 				<key>text</key>
-				<string>Convert a Markdown Document...</string>
+				<string>⚠️ Obsolete command!</string>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -1767,7 +1777,7 @@ end run</string>
 				<key>ignoredynamicplaceholders</key>
 				<false/>
 				<key>largetypetext</key>
-				<string>You used a command that was valid in Pandoc-Suite 1.x but has become obsolete in the new version 2.0.
+				<string>⚠️ You used a command that was valid in Pandoc-Suite 1.x but has become obsolete in the new version 2.0.
 
 Triggering Pandoc has been simplified, please consult the usage guide that has just been opened in the browser.</string>
 				<key>textcolor</key>
@@ -1805,10 +1815,10 @@ Triggering Pandoc has been simplified, please consult the usage guide that has j
 				<integer>0</integer>
 				<key>relatedApps</key>
 				<array>
-					<string>com.apple.finder</string>
+					<string>pro.writer.mac</string>
 					<string>com.coteditor.CotEditor</string>
 					<string>com.github.atom</string>
-					<string>pro.writer.mac</string>
+					<string>com.apple.finder</string>
 				</array>
 				<key>relatedAppsMode</key>
 				<integer>1</integer>
@@ -1881,7 +1891,7 @@ Triggering Pandoc has been simplified, please consult the usage guide that has j
 				<key>ignoredynamicplaceholders</key>
 				<false/>
 				<key>largetypetext</key>
-				<string>iA Writer is open, but no file was recognized. 
+				<string>⚠️ iA Writer is open, but no file was recognized. 
 
 This usually only happens when you have created a new document and have not saved it yet. Please save the document and try again.</string>
 				<key>textcolor</key>
@@ -1914,64 +1924,6 @@ This usually only happens when you have created a new document and have not save
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:focusedapp}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>com.coteditor.CotEditor</string>
-						<key>outputlabel</key>
-						<string>CotEditor</string>
-						<key>uid</key>
-						<string>136C26E2-BC61-4429-8443-0850A434056D</string>
-					</dict>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:focusedapp}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>pro.writer.mac</string>
-						<key>outputlabel</key>
-						<string>iA Writer</string>
-						<key>uid</key>
-						<string>D2294731-682D-45C9-9750-E3613E3F2BDD</string>
-					</dict>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:focusedapp}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>com.github.atom</string>
-						<key>outputlabel</key>
-						<string>Atom</string>
-						<key>uid</key>
-						<string>266417CC-F2CD-4FC2-B513-92C06C968CD4</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>Finder</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
-			<key>uid</key>
-			<string>3525B1D4-FE5B-4087-B8D4-592A85B73ECA</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alignment</key>
 				<integer>0</integer>
 				<key>backgroundcolor</key>
@@ -1985,7 +1937,7 @@ This usually only happens when you have created a new document and have not save
 				<key>ignoredynamicplaceholders</key>
 				<false/>
 				<key>largetypetext</key>
-				<string>Atom is open, but no file was recognized. 
+				<string>⚠️ Atom is open, but no file was recognized. 
 
 This usually only happens when you have created a new document and have not saved it yet. Please save the document and try again.</string>
 				<key>textcolor</key>
@@ -2058,6 +2010,79 @@ end alfred_script</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>soundname</key>
+				<string>Basso</string>
+				<key>systemsound</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.playsound</string>
+			<key>uid</key>
+			<string>A824D01B-F6C7-4D3E-8687-1B43D309258F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:focusedapp}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>com.coteditor.CotEditor</string>
+						<key>outputlabel</key>
+						<string>CotEditor</string>
+						<key>uid</key>
+						<string>136C26E2-BC61-4429-8443-0850A434056D</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:focusedapp}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>pro.writer.mac</string>
+						<key>outputlabel</key>
+						<string>iA Writer</string>
+						<key>uid</key>
+						<string>D2294731-682D-45C9-9750-E3613E3F2BDD</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:focusedapp}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>com.github.atom</string>
+						<key>outputlabel</key>
+						<string>Atom</string>
+						<key>uid</key>
+						<string>266417CC-F2CD-4FC2-B513-92C06C968CD4</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>Finder</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>3525B1D4-FE5B-4087-B8D4-592A85B73ECA</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
@@ -2080,21 +2105,6 @@ end alfred_script</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>soundname</key>
-				<string>Basso</string>
-				<key>systemsound</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.playsound</string>
-			<key>uid</key>
-			<string>A824D01B-F6C7-4D3E-8687-1B43D309258F</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alignment</key>
 				<integer>0</integer>
 				<key>backgroundcolor</key>
@@ -2108,7 +2118,7 @@ end alfred_script</string>
 				<key>ignoredynamicplaceholders</key>
 				<false/>
 				<key>largetypetext</key>
-				<string>'{query}'
+				<string>⚠️ '{query}'
 
 The selected file does not seem to be a Markdown file. Please select a markdown file and try again.</string>
 				<key>textcolor</key>
@@ -2281,7 +2291,7 @@ fi</string>
 				<key>ignoredynamicplaceholders</key>
 				<false/>
 				<key>largetypetext</key>
-				<string>You have to set a PDF engine before using "pdf" as output format.
+				<string>⚠️ You have to set a PDF engine before using "pdf" as output format.
 
 You can do that by triggering Alfred, typing "pconf", and selecting "PDF-Engine".</string>
 				<key>textcolor</key>
@@ -2411,7 +2421,7 @@ You can do that by triggering Alfred, typing "pconf", and selecting "PDF-Engine"
 				<key>ignoredynamicplaceholders</key>
 				<false/>
 				<key>largetypetext</key>
-				<string>You have not selected a BibTex-Library.
+				<string>⚠️ You have not selected a BibTex-Library.
 
 You can do that by triggering Alfred, typing "pconf", and selecting "BibTeX Library".</string>
 				<key>textcolor</key>
@@ -2438,7 +2448,8 @@ You can do that by triggering Alfred, typing "pconf", and selecting "BibTeX Libr
 				<key>filename</key>
 				<string>{query}/pandoc_errors.log</string>
 				<key>filetext</key>
-				<string>{var:errorlog}</string>
+				<string>⚠️ 
+{var:errorlog}</string>
 				<key>ignoredynamicplaceholders</key>
 				<false/>
 				<key>relativepathmode</key>
@@ -2642,7 +2653,7 @@ You can do that by triggering Alfred, typing "pconf", and selecting "BibTeX Libr
 				<key>text</key>
 				<string>Markdown to {var:desired_format}</string>
 				<key>title</key>
-				<string>Pandoc processing running...</string>
+				<string>⏳ Pandoc processing running...</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -2760,7 +2771,7 @@ end run</string>
 				<key>text</key>
 				<string>{var:desired_format} sucessfully created.</string>
 				<key>title</key>
-				<string>Conversion complete</string>
+				<string>✅ Conversion complete</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -2916,7 +2927,7 @@ echo -n | {query}</string>
 				<key>fixedorder</key>
 				<false/>
 				<key>items</key>
-				<string>[{"title":"Exit this Configuration","arg":"exit"},{"title":"Documentation &amp; Guide for the Pandoc Suite","arg":"workflow_documentation","subtitle":"visit for troubleshooting and further information"},{"title":"BibTeX Library","arg":"bibtex_lib","subtitle":"currently: {var:bibtex_library_path}"},{"title":"Citation Style","arg":"set_csl","subtitle":"currently: {var:csl_file}"},{"title":"Hotkey Output Format","arg":"hotkey_format","subtitle":"currently: {var:hotkey_output_format}"},{"title":"Install New Citation Style","arg":"install_csl","subtitle":"via Zotero's Style Repository"},{"title":"Word Reference Document","arg":"reference_docx","subtitle":"currently: {var:reference_docx_path}"},{"title":"PDF-Engine","arg":"pdf_engine","subtitle":"currently: {var:pdf_engine}"},{"title":"Powerpoint Reference Presentation","arg":"reference_pptx","subtitle":"currently: {var:reference_pptx_path}"},{"title":"Slide Level for Presentations","arg":"slide_level","subtitle":"currently: {var:slide_level}"},{"title":"Further Arguments","arg":"further_args","subtitle":"currently: {var:further_pandoc_args}"}]</string>
+				<string>[{"title":"🚪 Exit this Configuration","arg":"exit"},{"title":"ℹ️ Documentation &amp; Guide for the Pandoc Suite","arg":"workflow_documentation","subtitle":"visit for troubleshooting and further information"},{"title":"📚 BibTeX Library","arg":"bibtex_lib","subtitle":"currently: {var:bibtex_library_path}"},{"title":"✍️ Citation Style","arg":"set_csl","subtitle":"currently: {var:csl_file}"},{"title":"⌨️ Hotkey Output Format","arg":"hotkey_format","subtitle":"currently: {var:hotkey_output_format}"},{"title":"⬇️ Install New Citation Style","arg":"install_csl","subtitle":"via Zotero's Style Repository"},{"title":"📄 Word Reference Document","arg":"reference_docx","subtitle":"currently: {var:reference_docx_path}"},{"title":"🏎 PDF-Engine","arg":"pdf_engine","subtitle":"currently: {var:pdf_engine}"},{"title":"🧑‍🏫 Powerpoint Reference Presentation","arg":"reference_pptx","subtitle":"currently: {var:reference_pptx_path}"},{"title":"📊 Slide Level for Presentations","arg":"slide_level","subtitle":"currently: {var:slide_level}"},{"title":"❗️ Further Arguments","arg":"further_args","subtitle":"currently: {var:further_pandoc_args}"}]</string>
 				<key>keyword</key>
 				<string>pconf</string>
 				<key>runningsubtext</key>
@@ -3018,7 +3029,7 @@ end run</string>
 				<key>text</key>
 				<string>{query}</string>
 				<key>title</key>
-				<string>Hotkey Output Format changed</string>
+				<string>✅ Hotkey Output Format changed</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -3113,7 +3124,7 @@ end run</string>
 				<key>text</key>
 				<string>{query}</string>
 				<key>title</key>
-				<string>Citation Style changed</string>
+				<string>✅ Citation Style changed</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -3523,7 +3534,7 @@ end run</string>
 				<key>text</key>
 				<string>{query}</string>
 				<key>title</key>
-				<string>Reference Word File set</string>
+				<string>✅ Reference Word File set</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -3757,7 +3768,7 @@ end run</string>
 				<key>text</key>
 				<string>{query}</string>
 				<key>title</key>
-				<string>Reference Powerpoint File set</string>
+				<string>✅ Reference Powerpoint File set</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -3964,7 +3975,7 @@ end run</string>
 				<key>text</key>
 				<string>{query}</string>
 				<key>title</key>
-				<string>PDF Engine changed</string>
+				<string>✅ PDF Engine changed</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -4078,7 +4089,7 @@ end run</string>
 				<key>text</key>
 				<string>{query}</string>
 				<key>title</key>
-				<string>Furhter Pandoc Arguments set</string>
+				<string>✅ Further Pandoc Arguments set</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -4293,7 +4304,7 @@ end run</string>
 				<key>text</key>
 				<string>{query}</string>
 				<key>title</key>
-				<string>BibTex-Library set</string>
+				<string>✅ BibTex-Library set</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -4410,7 +4421,7 @@ end run</string>
 				<key>text</key>
 				<string>H{query} will now be used for slide titles.</string>
 				<key>title</key>
-				<string>Slide Level {query} set</string>
+				<string>✅ Slide Level {query} set</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -4503,6 +4514,10 @@ https://chris-grieser.de/pandoc_alfred
 
 Release Notes
 =============
+2.5
+- better visualizations of notifications and messages, and the pconf-menu
+
+
 2.4
 - bugfix with iA Writer file recognition
 - support for file recognition from CotEditor
@@ -4704,7 +4719,7 @@ Triggers Pandoc when in Finder or iA Writer</string>
 			<key>note</key>
 			<string>logs STDERR</string>
 			<key>xpos</key>
-			<integer>1350</integer>
+			<integer>1340</integer>
 			<key>ypos</key>
 			<integer>835</integer>
 		</dict>
@@ -4724,7 +4739,7 @@ Triggers Pandoc when in Finder or iA Writer</string>
 			<key>xpos</key>
 			<integer>915</integer>
 			<key>ypos</key>
-			<integer>720</integer>
+			<integer>715</integer>
 		</dict>
 		<key>27CA4A32-2FDE-47CF-80F1-3202B62EC696</key>
 		<dict>
@@ -4803,9 +4818,9 @@ Triggers Pandoc when in Finder or iA Writer</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>240</integer>
+			<integer>235</integer>
 			<key>ypos</key>
-			<integer>465</integer>
+			<integer>530</integer>
 		</dict>
 		<key>38D8D3B7-5FBE-4AD1-AD38-FB76FFEE2519</key>
 		<dict>
@@ -5332,7 +5347,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>915</integer>
 			<key>ypos</key>
-			<integer>600</integer>
+			<integer>595</integer>
 		</dict>
 		<key>BD700704-F718-412C-B02A-65B822A7CF67</key>
 		<dict>
@@ -5437,9 +5452,9 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>185</integer>
+			<integer>170</integer>
 			<key>ypos</key>
-			<integer>505</integer>
+			<integer>570</integer>
 		</dict>
 		<key>CE27E3EF-A408-4091-8012-14B020868C38</key>
 		<dict>
@@ -5547,7 +5562,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>865</integer>
 			<key>ypos</key>
-			<integer>630</integer>
+			<integer>625</integer>
 		</dict>
 		<key>FFFA61F1-50F0-423F-A9DA-95C7E7D76086</key>
 		<dict>
@@ -5586,7 +5601,7 @@ Citation Picker</string>
 		<string>reference_docx_path</string>
 	</array>
 	<key>version</key>
-	<string>2.4</string>
+	<string>2.5</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>
