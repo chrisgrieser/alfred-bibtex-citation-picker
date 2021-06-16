@@ -495,11 +495,13 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>971DA3B6-3838-4012-ADCD-D864EB9844BD</string>
+				<string>7085C0CF-F857-4806-B96D-1FADD51E37EE</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>sourceoutputuid</key>
+				<string>F79799D6-F571-4650-A3AF-299C32810952</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -880,6 +882,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>FFFA61F1-50F0-423F-A9DA-95C7E7D76086</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>7085C0CF-F857-4806-B96D-1FADD51E37EE</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>971DA3B6-3838-4012-ADCD-D864EB9844BD</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1798,7 +1813,7 @@ Triggering Pandoc has been simplified, please consult the usage guide that has j
 				<key>action</key>
 				<integer>0</integer>
 				<key>argument</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>focusedappvariable</key>
 				<true/>
 				<key>focusedappvariablename</key>
@@ -1813,15 +1828,8 @@ Triggering Pandoc has been simplified, please consult the usage guide that has j
 				<false/>
 				<key>modsmode</key>
 				<integer>0</integer>
-				<key>relatedApps</key>
-				<array>
-					<string>pro.writer.mac</string>
-					<string>com.coteditor.CotEditor</string>
-					<string>com.github.atom</string>
-					<string>com.apple.finder</string>
-				</array>
 				<key>relatedAppsMode</key>
-				<integer>1</integer>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.hotkey</string>
@@ -1834,7 +1842,7 @@ Triggering Pandoc has been simplified, please consult the usage guide that has j
 			<key>config</key>
 			<dict>
 				<key>applescript</key>
-				<string>on alfred_script(q)		try		tell application "CotEditor"			set the_document to front document			save the_document			set hsf_path to file of the_document		end tell	end try		if (hsf_path = missing value) then return "no_file_recognized"	return POSIX path of hsf_path	end alfred_script</string>
+				<string>on alfred_script(q)	try	tell application "CotEditor"		set the_document to front document		save the_document		set hsf_path to file of the_document	end tellend tryif (hsf_path = missing value) then	return "no_file_recognized"else	return POSIX path of hsf_pathend if	end alfred_script</string>
 				<key>cachescript</key>
 				<false/>
 			</dict>
@@ -1891,7 +1899,7 @@ Triggering Pandoc has been simplified, please consult the usage guide that has j
 				<key>ignoredynamicplaceholders</key>
 				<false/>
 				<key>largetypetext</key>
-				<string>⚠️ iA Writer is open, but no file was recognized. 
+				<string>⚠️ No file was recognized. 
 
 This usually only happens when you have created a new document and have not saved it yet. Please save the document and try again.</string>
 				<key>textcolor</key>
@@ -1910,7 +1918,7 @@ This usually only happens when you have created a new document and have not save
 			<key>config</key>
 			<dict>
 				<key>applescript</key>
-				<string>on alfred_script(q)		try		tell application "iA Writer.app"			set the_document to front document			save the_document			set hsf_path to file of the_document		end tell	end try		if (hsf_path = missing value) then return "no_file_recognized"	return POSIX path of hsf_path	end alfred_script</string>
+				<string>on alfred_script(q)	try	tell application "iA Writer"		set the_document to front document		save the_document		set hsf_path to file of the_document	end tellend tryif (hsf_path = missing value) then	return "no_file_recognized"else	return POSIX path of hsf_pathend if	end alfred_script</string>
 				<key>cachescript</key>
 				<false/>
 			</dict>
@@ -2069,9 +2077,23 @@ end alfred_script</string>
 						<key>uid</key>
 						<string>266417CC-F2CD-4FC2-B513-92C06C968CD4</string>
 					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:focusedapp}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>com.apple.finder</string>
+						<key>outputlabel</key>
+						<string>Finder</string>
+						<key>uid</key>
+						<string>F79799D6-F571-4650-A3AF-299C32810952</string>
+					</dict>
 				</array>
 				<key>elselabel</key>
-				<string>Finder</string>
+				<string>--</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.conditional</string>
@@ -2118,9 +2140,9 @@ end alfred_script</string>
 				<key>ignoredynamicplaceholders</key>
 				<false/>
 				<key>largetypetext</key>
-				<string>⚠️ '{query}'
+				<string>⚠️ The selected file does not seem to be a Markdown file. Please select a markdown file and try again.
 
-The selected file does not seem to be a Markdown file. Please select a markdown file and try again.</string>
+'{query}'</string>
 				<key>textcolor</key>
 				<string></string>
 				<key>wrapat</key>
@@ -2132,6 +2154,25 @@ The selected file does not seem to be a Markdown file. Please select a markdown 
 			<string>BCF854A0-9393-4A26-9BE7-B1DD004B8847</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+
+tell application "Finder" to set sel to selectionif ((count sel) &gt; 1) then	set firstItem to item 1 of sel	return POSIX path of (firstItem as text)else	return POSIX path of (sel as text)end if
+
+end alfred_script</string>
+				<key>cachescript</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>7085C0CF-F857-4806-B96D-1FADD51E37EE</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2291,9 +2332,9 @@ fi</string>
 				<key>ignoredynamicplaceholders</key>
 				<false/>
 				<key>largetypetext</key>
-				<string>⚠️ You have to set a PDF engine before using "pdf" as output format.
+				<string>⚠️ No PDF Engine set.
 
-You can do that by triggering Alfred, typing "pconf", and selecting "PDF-Engine".</string>
+You have to set a PDF engine before using "pdf" as output format. You can do that by triggering Alfred, typing "pconf", and selecting "PDF-Engine".</string>
 				<key>textcolor</key>
 				<string></string>
 				<key>wrapat</key>
@@ -2313,6 +2354,7 @@ You can do that by triggering Alfred, typing "pconf", and selecting "PDF-Engine"
 				<false/>
 				<key>filetypes</key>
 				<array>
+					<string>+net.daringfireball.markdown</string>
 					<string>+net.ia.markdown</string>
 				</array>
 				<key>name</key>
@@ -2501,6 +2543,7 @@ You can do that by triggering Alfred, typing "pconf", and selecting "BibTeX Libr
 				<false/>
 				<key>filetypes</key>
 				<array>
+					<string>+net.daringfireball.markdown</string>
 					<string>+net.ia.markdown</string>
 				</array>
 				<key>name</key>
@@ -2629,6 +2672,7 @@ You can do that by triggering Alfred, typing "pconf", and selecting "BibTeX Libr
 				<false/>
 				<key>filetypes</key>
 				<array>
+					<string>+net.daringfireball.markdown</string>
 					<string>+net.ia.markdown</string>
 				</array>
 				<key>name</key>
@@ -2653,7 +2697,7 @@ You can do that by triggering Alfred, typing "pconf", and selecting "BibTeX Libr
 				<key>text</key>
 				<string>Markdown to {var:desired_format}</string>
 				<key>title</key>
-				<string>⏳ Pandoc processing running...</string>
+				<string>⏳ Pandoc is processing...</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -2885,6 +2929,7 @@ echo -n | {query}</string>
 				<false/>
 				<key>filetypes</key>
 				<array>
+					<string>+net.daringfireball.markdown</string>
 					<string>+net.ia.markdown</string>
 				</array>
 				<key>name</key>
@@ -4514,6 +4559,10 @@ https://chris-grieser.de/pandoc_alfred
 
 Release Notes
 =============
+2.6
+- refactoring and other internal improvements
+- minor corrections in spelling
+
 2.5
 - better visualizations of notifications and messages, and the pconf-menu
 
@@ -5087,6 +5136,15 @@ Citation Picker</string>
 			<key>ypos</key>
 			<integer>2525</integer>
 		</dict>
+		<key>7085C0CF-F857-4806-B96D-1FADD51E37EE</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>xpos</key>
+			<integer>365</integer>
+			<key>ypos</key>
+			<integer>600</integer>
+		</dict>
 		<key>748DBE25-7FDC-4884-8D0C-D68041D62DF3</key>
 		<dict>
 			<key>colorindex</key>
@@ -5148,7 +5206,7 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<integer>1120</integer>
+			<integer>1095</integer>
 			<key>ypos</key>
 			<integer>210</integer>
 		</dict>
@@ -5235,7 +5293,7 @@ Citation Picker</string>
 			<key>note</key>
 			<string>Error Sound</string>
 			<key>xpos</key>
-			<integer>1120</integer>
+			<integer>1100</integer>
 			<key>ypos</key>
 			<integer>520</integer>
 		</dict>
@@ -5454,7 +5512,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>170</integer>
 			<key>ypos</key>
-			<integer>570</integer>
+			<integer>585</integer>
 		</dict>
 		<key>CE27E3EF-A408-4091-8012-14B020868C38</key>
 		<dict>
@@ -5560,7 +5618,7 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<integer>865</integer>
+			<integer>855</integer>
 			<key>ypos</key>
 			<integer>625</integer>
 		</dict>
