@@ -4661,8 +4661,8 @@ https://chris-grieser.de/pandoc_alfred
 Release Notes
 =============
 2.7
-- improved citation picker: Zotero stays in the background
-- improved citaiton picker: properly starts alfred when it is not running, then displaying the Picker
+- Zotero stays in the background when triggering the Citation Picker
+- properly starts Zotero before displaying the picker
 
 2.6
 - refactoring and other internal improvements
@@ -4851,7 +4851,7 @@ v 1.1
 			<key>note</key>
 			<string>GREEN HOTKEY: Double-click to define
 
-Triggers Pandoc when in Finder or iA Writer</string>
+Triggers Pandoc Conversion</string>
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
