@@ -5,7 +5,7 @@
 	<key>bundleid</key>
 	<string>de.chris-grieser.pandoc-alfred</string>
 	<key>category</key>
-	<string>Mini-Apps</string>
+	<string>Academic</string>
 	<key>connections</key>
 	<dict>
 		<key>01C18AD5-1189-4DFA-82BB-5C863BB2F037</key>
@@ -506,6 +506,31 @@
 				<false/>
 			</dict>
 		</array>
+		<key>38C21D9E-DF0C-408D-8376-6D78BD3486FC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5335BA38-FC76-4B47-8D08-462A1AC06CC4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>C4023B39-2525-4472-9AA8-9A01509C40E1</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>4636F2C5-20F7-41CE-AB2B-5CEB248DF292</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>38D8D3B7-5FBE-4AD1-AD38-FB76FFEE2519</key>
 		<array>
 			<dict>
@@ -561,7 +586,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>459B4CBB-47BC-4B5A-9882-9D9025F3D3E3</string>
+				<string>FE874084-CB56-4BDF-9FF0-A3B1920C26F2</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -596,7 +621,7 @@
 				<false/>
 			</dict>
 		</array>
-		<key>459B4CBB-47BC-4B5A-9882-9D9025F3D3E3</key>
+		<key>4636F2C5-20F7-41CE-AB2B-5CEB248DF292</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -1013,7 +1038,7 @@
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
-				<false/>
+				<true/>
 			</dict>
 		</array>
 		<key>890FC932-E9B3-4D12-B667-EA2C4D03E083</key>
@@ -1537,6 +1562,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>FE874084-CB56-4BDF-9FF0-A3B1920C26F2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>38C21D9E-DF0C-408D-8376-6D78BD3486FC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>FFFA61F1-50F0-423F-A9DA-95C7E7D76086</key>
 		<array>
 			<dict>
@@ -1583,17 +1621,22 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>paths</key>
-				<array>
-					<string>/Applications/Zotero.app</string>
-				</array>
-				<key>toggle</key>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+    if application "Zotero" is not running then
+		display notification "" with title "⏳ Starting Zotero..." subtitle "" 
+		tell application "Zotero" to activate
+		delay 2.5
+	end if
+	return "started Zotero"
+end alfred_script</string>
+				<key>cachescript</key>
 				<false/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.launchfiles</string>
+			<string>alfred.workflow.action.applescript</string>
 			<key>uid</key>
-			<string>459B4CBB-47BC-4B5A-9882-9D9025F3D3E3</string>
+			<string>FE874084-CB56-4BDF-9FF0-A3B1920C26F2</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1701,6 +1744,36 @@ end run</string>
 						<key>matchmode</key>
 						<integer>1</integer>
 						<key>matchstring</key>
+						<string>started Zotero</string>
+						<key>outputlabel</key>
+						<string>Zotero was running</string>
+						<key>uid</key>
+						<string>C4023B39-2525-4472-9AA8-9A01509C40E1</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>Zotero started</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>38C21D9E-DF0C-408D-8376-6D78BD3486FC</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>1</integer>
+						<key>matchstring</key>
 						<string></string>
 						<key>outputlabel</key>
 						<string>Output not empty</string>
@@ -1733,6 +1806,34 @@ end run</string>
 			<string>alfred.workflow.utility.replace</string>
 			<key>uid</key>
 			<string>4CD979CC-3ADB-4C54-92FA-F2A9B569E75C</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>on run
+
+set focusedapp_id to (system attribute "focusedapp")
+tell application id focusedapp_id to activate --note: alfreds focused-app-variable passes not an app name, but the app-id, therefore they keyword "id" has to be added here.
+
+end run</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>4636F2C5-20F7-41CE-AB2B-5CEB248DF292</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -4559,6 +4660,10 @@ https://chris-grieser.de/pandoc_alfred
 
 Release Notes
 =============
+2.7
+- improved citation picker: Zotero stays in the background
+- improved citaiton picker: properly starts alfred when it is not running, then displaying the Picker
+
 2.6
 - refactoring and other internal improvements
 - minor corrections in spelling
@@ -4822,7 +4927,7 @@ Triggers Pandoc when in Finder or iA Writer</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>785</integer>
+			<integer>1070</integer>
 			<key>ypos</key>
 			<integer>45</integer>
 		</dict>
@@ -4870,6 +4975,15 @@ Triggers Pandoc when in Finder or iA Writer</string>
 			<integer>235</integer>
 			<key>ypos</key>
 			<integer>530</integer>
+		</dict>
+		<key>38C21D9E-DF0C-408D-8376-6D78BD3486FC</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>415</integer>
+			<key>ypos</key>
+			<integer>45</integer>
 		</dict>
 		<key>38D8D3B7-5FBE-4AD1-AD38-FB76FFEE2519</key>
 		<dict>
@@ -4933,14 +5047,16 @@ Citation Picker</string>
 			<key>ypos</key>
 			<integer>865</integer>
 		</dict>
-		<key>459B4CBB-47BC-4B5A-9882-9D9025F3D3E3</key>
+		<key>4636F2C5-20F7-41CE-AB2B-5CEB248DF292</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
+			<key>note</key>
+			<string>switch back before picker appears</string>
 			<key>xpos</key>
-			<integer>285</integer>
+			<integer>575</integer>
 			<key>ypos</key>
-			<integer>25</integer>
+			<integer>85</integer>
 		</dict>
 		<key>48CFAE2D-926B-4B05-A586-48A7A9D395CE</key>
 		<dict>
@@ -4958,7 +5074,7 @@ Citation Picker</string>
 			<key>note</key>
 			<string>remove \n</string>
 			<key>xpos</key>
-			<integer>725</integer>
+			<integer>1010</integer>
 			<key>ypos</key>
 			<integer>55</integer>
 		</dict>
@@ -4986,8 +5102,10 @@ Citation Picker</string>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
+			<key>note</key>
+			<string>display picker</string>
 			<key>xpos</key>
-			<integer>435</integer>
+			<integer>730</integer>
 			<key>ypos</key>
 			<integer>25</integer>
 		</dict>
@@ -4995,8 +5113,10 @@ Citation Picker</string>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
+			<key>note</key>
+			<string>switch back</string>
 			<key>xpos</key>
-			<integer>585</integer>
+			<integer>870</integer>
 			<key>ypos</key>
 			<integer>25</integer>
 		</dict>
@@ -5492,7 +5612,7 @@ Citation Picker</string>
 			<key>note</key>
 			<string>Paste</string>
 			<key>xpos</key>
-			<integer>940</integer>
+			<integer>1225</integer>
 			<key>ypos</key>
 			<integer>20</integer>
 		</dict>
@@ -5622,6 +5742,17 @@ Citation Picker</string>
 			<key>ypos</key>
 			<integer>625</integer>
 		</dict>
+		<key>FE874084-CB56-4BDF-9FF0-A3B1920C26F2</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>note</key>
+			<string>if Zotero is not running, start it</string>
+			<key>xpos</key>
+			<integer>275</integer>
+			<key>ypos</key>
+			<integer>25</integer>
+		</dict>
 		<key>FFFA61F1-50F0-423F-A9DA-95C7E7D76086</key>
 		<dict>
 			<key>colorindex</key>
@@ -5659,7 +5790,7 @@ Citation Picker</string>
 		<string>reference_docx_path</string>
 	</array>
 	<key>version</key>
-	<string>2.5</string>
+	<string>2.7</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>
