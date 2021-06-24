@@ -1637,8 +1637,8 @@
 		display notification "" with title "⏳ Starting Zotero..." subtitle "" 
 		tell application "Zotero" to activate
 		delay 2.5
+		return "started Zotero"
 	end if
-	return "started Zotero"
 end alfred_script</string>
 				<key>cachescript</key>
 				<false/>
@@ -4668,6 +4668,9 @@ https://chris-grieser.de/pandoc_alfred
 
 Release Notes
 =============
+2.9
+- speed up of the Citation Picker
+
 2.8
 - fixed yet another issue with BibTeX-Library recognition. (This is an Alfred/Spotlight issue, not an issue with the workflow, sorry!) [See here for further information](https://www.notion.so/chrisgrieser/Pandoc-Suite-for-Citations-and-Bibliographies-in-Markdown-4de4bd634ceb4533a1add8b105a487b1#fee2253fe00c4e62a6f2a818dd4397c3), when you have trouble selecting a library file via `pconf`.
 
@@ -5800,7 +5803,7 @@ Citation Picker</string>
 		<string>reference_docx_path</string>
 	</array>
 	<key>version</key>
-	<string>2.8</string>
+	<string>2.9</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>
