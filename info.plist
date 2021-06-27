@@ -8,6 +8,19 @@
 	<string>Academic</string>
 	<key>connections</key>
 	<dict>
+		<key>013CC437-A57B-4A6E-BE78-84D244D5ED44</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E44C3803-33D8-4E7C-98D1-831A2F2359DB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>01C18AD5-1189-4DFA-82BB-5C863BB2F037</key>
 		<array>
 			<dict>
@@ -141,6 +154,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>C5CD1FB8-8FE5-4F75-BCE0-0D7F03887989</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>1B940DA6-6D1A-4572-9DC4-1192C3CEAF71</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E07255AA-BD02-45CF-8FE3-817111A25346</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -353,6 +379,16 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
+				<string>13464BBD-A691-40F0-A7E4-6ED4AEC2B37B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>01C18AD5-1189-4DFA-82BB-5C863BB2F037</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -372,6 +408,18 @@
 				<string></string>
 				<key>sourceoutputuid</key>
 				<string>F76F4D2B-60B1-4BF1-AD17-8F7186259355</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>1B940DA6-6D1A-4572-9DC4-1192C3CEAF71</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>63A4B444-681D-4D2A-A7FA-EB275F5925F3</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -1115,6 +1163,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>A293BD12-10A1-40CB-A7E3-E1D822471C40</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>57DF4B82-9DCC-4C7C-B933-A6D37B230A13</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>A6C04D3D-22D1-4F6E-A0B0-BCD1BEAF8745</key>
 		<array>
 			<dict>
@@ -1460,6 +1521,32 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>2F0E643A-EE6B-4395-A1D6-ADD838B38167</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E07255AA-BD02-45CF-8FE3-817111A25346</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>013CC437-A57B-4A6E-BE78-84D244D5ED44</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E44C3803-33D8-4E7C-98D1-831A2F2359DB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9853BE5C-1B7A-4CAC-9674-AC5F568C5AEC</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1946,10 +2033,13 @@ Triggering Pandoc has been simplified, please consult the usage guide that has j
 				<integer>0</integer>
 				<key>relatedApps</key>
 				<array>
-					<string>com.literatureandlatte.scrivener3</string>
+					<string>com.apple.finder</string>
+					<string>com.coteditor.CotEditor</string>
+					<string>com.github.atom</string>
+					<string>pro.writer.mac</string>
 				</array>
 				<key>relatedAppsMode</key>
-				<integer>2</integer>
+				<integer>1</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.hotkey</string>
@@ -3090,9 +3180,9 @@ echo -n | {query}</string>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>fixedorder</key>
-				<false/>
+				<true/>
 				<key>items</key>
-				<string>[{"title":"🚪 Exit this Configuration","arg":"exit"},{"title":"ℹ️ Documentation &amp; Guide for the Pandoc Suite","arg":"workflow_documentation","subtitle":"visit for troubleshooting and further information"},{"title":"📚 BibTeX Library","arg":"bibtex_lib","subtitle":"currently: {var:bibtex_library_path}"},{"title":"✍️ Set Citation Style","arg":"set_csl","subtitle":"currently: {var:csl_file}"},{"title":"⌨️ Hotkey Output Format","arg":"hotkey_format","subtitle":"currently: {var:hotkey_output_format}"},{"title":"⬇️ Install New Citation Style","arg":"install_csl","subtitle":"via Zotero's Style Repository"},{"title":"📄 Word Reference Document","arg":"reference_docx","subtitle":"currently: {var:reference_docx_path}"},{"title":"🏎 PDF-Engine","arg":"pdf_engine","subtitle":"currently: {var:pdf_engine}"},{"title":"🧑‍🏫 Powerpoint Reference Presentation","arg":"reference_pptx","subtitle":"currently: {var:reference_pptx_path}"},{"title":"📊 Slide Level for Presentations","arg":"slide_level","subtitle":"currently: {var:slide_level}"},{"title":"❗️ Further Arguments","arg":"further_args","subtitle":"currently: {var:further_pandoc_args}"}]</string>
+				<string>[{"title":"🚪 Exit this Configuration","arg":"exit"},{"title":"ℹ️ Documentation &amp; Guide for the Pandoc Suite","arg":"workflow_documentation","subtitle":"Troubleshooting &amp; further Information"},{"title":"📚 BibTeX Library","arg":"bibtex_lib","subtitle":"currently: {var:bibtex_library_path}"},{"title":"✍️ Set Citation Style","arg":"set_csl","subtitle":"currently: {var:csl_file}"},{"title":"⌨️ Hotkey Output Format","arg":"hotkey_format","subtitle":"currently: {var:hotkey_output_format}"},{"title":"⬇️ Install New Citation Style","arg":"install_csl","subtitle":"via Zotero's Style Repository"},{"title":"📄 Word Reference Document","arg":"reference_docx","subtitle":"currently: {var:reference_docx_path}"},{"title":"🏎 PDF-Engine","arg":"pdf_engine","subtitle":"currently: {var:pdf_engine}"},{"title":"🧑‍🏫 Powerpoint Reference Presentation","arg":"reference_pptx","subtitle":"currently: {var:reference_pptx_path}"},{"title":"📊 Slide Level for Presentations","arg":"slide_level","subtitle":"currently: {var:slide_level}"},{"title":"❇️ Further Arguments","arg":"further_args","subtitle":"currently: {var:further_pandoc_args}"},{"title":"📧 Report an Issue to the Developer","arg":"email","subtitle":"will open your default mail client"}]</string>
 				<key>keyword</key>
 				<string>pconf</string>
 				<key>runningsubtext</key>
@@ -3127,6 +3217,14 @@ echo -n | {query}</string>
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
 			<string>A293BD12-10A1-40CB-A7E3-E1D822471C40</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.hidealfred</string>
+			<key>uid</key>
+			<string>57DF4B82-9DCC-4C7C-B933-A6D37B230A13</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -3891,6 +3989,20 @@ end run</string>
 						<key>uid</key>
 						<string>F76F4D2B-60B1-4BF1-AD17-8F7186259355</string>
 					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>email</string>
+						<key>outputlabel</key>
+						<string>email</string>
+						<key>uid</key>
+						<string>63A4B444-681D-4D2A-A7FA-EB275F5925F3</string>
+					</dict>
 				</array>
 				<key>elselabel</key>
 				<string>exit</string>
@@ -4477,6 +4589,14 @@ end run</string>
 			<integer>1</integer>
 		</dict>
 		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.hidealfred</string>
+			<key>uid</key>
+			<string>13464BBD-A691-40F0-A7E4-6ED4AEC2B37B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
 			<key>config</key>
 			<dict>
 				<key>matchmode</key>
@@ -4659,6 +4779,81 @@ end run</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>mailto:grieser.chris%2bpandoc@gmail.com?subject=[Pandoc-Suite] Issue Report&amp;body=Please report your issue here. %0A%0A---%0AAlfred Version: {var:version1}%0APandoc-Suite Version: {var:version2}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>E44C3803-33D8-4E7C-98D1-831A2F2359DB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>echo -n $alfred_version,$alfred_workflow_version</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>E07255AA-BD02-45CF-8FE3-817111A25346</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>delimiter</key>
+				<string>,</string>
+				<key>trimarguments</key>
+				<true/>
+				<key>variableprefix</key>
+				<string>version</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.split</string>
+			<key>uid</key>
+			<string>013CC437-A57B-4A6E-BE78-84D244D5ED44</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>1B940DA6-6D1A-4572-9DC4-1192C3CEAF71</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.hidealfred</string>
+			<key>uid</key>
+			<string>9853BE5C-1B7A-4CAC-9674-AC5F568C5AEC</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>PLEASE READ IF YOU PREVIOUSLY USED PANDOC VERSION 1.x
@@ -4677,6 +4872,10 @@ https://chris-grieser.de/pandoc_alfred
 
 Release Notes
 =============
+2.11
+- send an email to report issues to the developer via `pconf`
+- fixed bug keeping `pconf` open even though exiting
+
 2.10
 - fix with the startup of Zotero when calling the Citaiton Picker
 
@@ -4748,6 +4947,15 @@ v 1.1
 - added support for images while converting (with the --resource-path parameter)</string>
 	<key>uidata</key>
 	<dict>
+		<key>013CC437-A57B-4A6E-BE78-84D244D5ED44</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>655</integer>
+			<key>ypos</key>
+			<integer>2660</integer>
+		</dict>
 		<key>01BD0B65-2695-4C72-A475-66D8A954CDD0</key>
 		<dict>
 			<key>colorindex</key>
@@ -4804,6 +5012,15 @@ v 1.1
 			<key>ypos</key>
 			<integer>2020</integer>
 		</dict>
+		<key>13464BBD-A691-40F0-A7E4-6ED4AEC2B37B</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>190</integer>
+			<key>ypos</key>
+			<integer>2390</integer>
+		</dict>
 		<key>13851D58-1F95-41E7-A686-9E1B91BD2086</key>
 		<dict>
 			<key>colorindex</key>
@@ -4850,6 +5067,15 @@ v 1.1
 			<integer>585</integer>
 			<key>ypos</key>
 			<integer>870</integer>
+		</dict>
+		<key>1B940DA6-6D1A-4572-9DC4-1192C3CEAF71</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>410</integer>
+			<key>ypos</key>
+			<integer>2660</integer>
 		</dict>
 		<key>1CC45D25-897C-4640-A9D0-AD2B3FCD2EC8</key>
 		<dict>
@@ -5143,6 +5369,15 @@ Citation Picker</string>
 			<key>ypos</key>
 			<integer>480</integer>
 		</dict>
+		<key>57DF4B82-9DCC-4C7C-B933-A6D37B230A13</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>655</integer>
+			<key>ypos</key>
+			<integer>1445</integer>
+		</dict>
 		<key>5BA612AA-7B1A-44EC-8854-E5BBFF3C14D4</key>
 		<dict>
 			<key>colorindex</key>
@@ -5392,6 +5627,15 @@ Citation Picker</string>
 			<integer>660</integer>
 			<key>ypos</key>
 			<integer>640</integer>
+		</dict>
+		<key>9853BE5C-1B7A-4CAC-9674-AC5F568C5AEC</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>885</integer>
+			<key>ypos</key>
+			<integer>2690</integer>
 		</dict>
 		<key>9C4D210E-D3C9-4A87-8110-71B51B36DCF8</key>
 		<dict>
@@ -5693,6 +5937,26 @@ Citation Picker</string>
 			<key>ypos</key>
 			<integer>890</integer>
 		</dict>
+		<key>E07255AA-BD02-45CF-8FE3-817111A25346</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>note</key>
+			<string>get workflow and Alfred version</string>
+			<key>xpos</key>
+			<integer>510</integer>
+			<key>ypos</key>
+			<integer>2630</integer>
+		</dict>
+		<key>E44C3803-33D8-4E7C-98D1-831A2F2359DB</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>720</integer>
+			<key>ypos</key>
+			<integer>2630</integer>
+		</dict>
 		<key>E5AE7980-8F19-44F4-8277-2D1E2EA8B18C</key>
 		<dict>
 			<key>colorindex</key>
@@ -5813,7 +6077,7 @@ Citation Picker</string>
 		<string>reference_docx_path</string>
 	</array>
 	<key>version</key>
-	<string>2.10</string>
+	<string>2.11</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>
