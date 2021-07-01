@@ -1,6 +1,6 @@
 # Pandoc-Suite for Citation and Bibliographies in Markdown
 
-![](https://img.shields.io/github/downloads/chrisgrieser/pandoc_alfred/total?label=Total%20Downloads&style=plastic)
+![](https://img.shields.io/github/downloads/chrisgrieser/pandoc_alfred/total?label=Total%20Downloads&style=plastic)  ![](https://img.shields.io/github/v/release/chrisgrieser/pandoc_alfred?label=Latest%20Release&style=plastic)
 
 ## What is does
 This Alfred workflow enables academic citing and publishing with any markdown app like iA Writer, Ulysses, or Scrivener. It does so by offering a Zotero Citation Picker for [Pandoc Markdown Citations](https://pandoc.org/MANUAL.html#pandocs-markdown) and by automatically converting Markdown files into `.docx`, `.pdf`, `.html`, or `.pptx` with the proper bibliography. 
