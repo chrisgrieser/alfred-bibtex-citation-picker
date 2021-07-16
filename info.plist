@@ -34,6 +34,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>06B181F5-F117-4F94-ADED-0AD74C78C40E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8C8E6A55-B3BD-4622-9C3F-CE3DB8BB547F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>09326943-79A7-4755-B7E8-94B09D15560C</key>
 		<array>
 			<dict>
@@ -153,7 +166,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>C5CD1FB8-8FE5-4F75-BCE0-0D7F03887989</string>
+				<string>06B181F5-F117-4F94-ADED-0AD74C78C40E</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -227,6 +240,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>1E80514F-CEFA-44DA-8EE1-6A87B1E52EA8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>67A601DA-66EE-45B7-8513-BB8E17D4A54D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>1EDA81EE-9A5D-4315-8606-DC351F27CE7A</key>
 		<array>
 			<dict>
@@ -258,6 +284,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>A824D01B-F6C7-4D3E-8687-1B43D309258F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>22EB574B-20E3-4E92-9A20-3CA6ADAFA7C9</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2F0E643A-EE6B-4395-A1D6-ADD838B38167</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -405,16 +444,6 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>13464BBD-A691-40F0-A7E4-6ED4AEC2B37B</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
 				<string>01C18AD5-1189-4DFA-82BB-5C863BB2F037</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -422,6 +451,16 @@
 				<string></string>
 				<key>sourceoutputuid</key>
 				<string>F9B7C73B-A049-491F-9E4F-4CB780499920</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>13464BBD-A691-40F0-A7E4-6ED4AEC2B37B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -458,6 +497,18 @@
 				<string></string>
 				<key>sourceoutputuid</key>
 				<string>9F9A7827-77AC-4374-AF4A-FAB8EE096855</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>527A7408-04E2-4890-A68D-C49D05B7CD4F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>1EAB8AD1-8313-4277-9413-9443C611B9CE</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -669,6 +720,19 @@
 				<true/>
 			</dict>
 		</array>
+		<key>41C30D83-3D29-41B3-9652-C036001F040A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>84CF6CEA-7CE8-490B-BC37-EB2276156189</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+		</array>
 		<key>42BDA197-AE7D-45F0-8929-3B154F42219F</key>
 		<array>
 			<dict>
@@ -699,7 +763,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>2F0E643A-EE6B-4395-A1D6-ADD838B38167</string>
+				<string>22EB574B-20E3-4E92-9A20-3CA6ADAFA7C9</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -749,6 +813,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>E5AE7980-8F19-44F4-8277-2D1E2EA8B18C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>527A7408-04E2-4890-A68D-C49D05B7CD4F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>41C30D83-3D29-41B3-9652-C036001F040A</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -902,7 +979,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>2F0E643A-EE6B-4395-A1D6-ADD838B38167</string>
+				<string>22EB574B-20E3-4E92-9A20-3CA6ADAFA7C9</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1025,6 +1102,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>72C458A4-0C76-41D5-B9A1-7D55DF474832</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1E80514F-CEFA-44DA-8EE1-6A87B1E52EA8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>748DBE25-7FDC-4884-8D0C-D68041D62DF3</key>
 		<array>
 			<dict>
@@ -1115,6 +1205,19 @@
 				<true/>
 			</dict>
 		</array>
+		<key>84CF6CEA-7CE8-490B-BC37-EB2276156189</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>72C458A4-0C76-41D5-B9A1-7D55DF474832</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>890FC932-E9B3-4D12-B667-EA2C4D03E083</key>
 		<array>
 			<dict>
@@ -1158,6 +1261,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>FE874084-CB56-4BDF-9FF0-A3B1920C26F2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>8C8E6A55-B3BD-4622-9C3F-CE3DB8BB547F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C5CD1FB8-8FE5-4F75-BCE0-0D7F03887989</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1232,7 +1348,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>2F0E643A-EE6B-4395-A1D6-ADD838B38167</string>
+				<string>22EB574B-20E3-4E92-9A20-3CA6ADAFA7C9</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1260,7 +1376,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>2F0E643A-EE6B-4395-A1D6-ADD838B38167</string>
+				<string>22EB574B-20E3-4E92-9A20-3CA6ADAFA7C9</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1649,6 +1765,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>C9A1F971-9BA7-40E6-991D-469B35E5B162</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5BA612AA-7B1A-44EC-8854-E5BBFF3C14D4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>CAF6BC7B-0707-446C-B217-6E0EC407595B</key>
 		<array>
 			<dict>
@@ -1772,7 +1901,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>2F0E643A-EE6B-4395-A1D6-ADD838B38167</string>
+				<string>22EB574B-20E3-4E92-9A20-3CA6ADAFA7C9</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1915,7 +2044,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>5BA612AA-7B1A-44EC-8854-E5BBFF3C14D4</string>
+				<string>C9A1F971-9BA7-40E6-991D-469B35E5B162</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2121,7 +2250,7 @@ bibtex_library_path = bibtex_library_path.replace(/^~/, homepath);
 
 input = app.doShellScript('cat "' + bibtex_library_path + '"');
 
-// proper encoding
+// proper encoding that is not saved in some .bib files
 input = input.replaceAll ('{\\"a}','ä');
 input = input.replaceAll ('{\\"o}','ö');
 input = input.replaceAll ('{\\"u}','ü');
@@ -2159,6 +2288,7 @@ entry.forEach(element =&gt; {
   let year = "";
   let authormatches = "";
   let type = "";
+  let editor = "";
   properties.forEach (elem =&gt; {
     if (elem.includes ("@")){
   		citekey = elem.replace (/@.*{(.*),/,"$1");
@@ -2167,12 +2297,23 @@ entry.forEach(element =&gt; {
 	if (elem.includes ("author =")){
   		author = elem.replace (/.*{(.*)},/,"$1");
 		author = author.replace (/(, [A-Z]).+?(?= and|$)/gm,""); //remove first names
-		author = author.replaceAll ("and","&amp;");
+		author = author.replaceAll (" and "," &amp; ");
 		author = author.replace (/[{|}]/g,"");
 		authormatches = author; //to ensure that et al authors are still matched
 		author = author.replace (/\&amp;.*\&amp;.*/,"et al."); // insert et al
   	};
-	if (elem.includes (" title =")){
+
+	if (elem.includes ("editor =")){
+  		editor = elem.replace (/.*{(.*)},/,"$1");
+		editor = editor.replace (/(, [A-Z]).+?(?= and|$)/gm,""); //remove first names
+		editor = editor.replaceAll (" and "," &amp; ");
+		editor = editor.replace (/[{|}]/g,"");
+		authormatches = editor + " " + authormatches; //to ensure that et al authors are still matched
+		editor = editor.replace (/\&amp;.*\&amp;.*/,"et al."); // insert et al
+  	};
+
+	let titlematch = elem.match(/\stitle \=/i);
+	if (titlematch != null){
   		title = elem.replace (/.*?{(.*)},/,"$1");
 		title = title.replace (/[{|}]/g,"");
 		//shorten, if title too long
@@ -2183,7 +2324,7 @@ entry.forEach(element =&gt; {
 			
   	};
 	if (elem.includes ("year =")){
-  		year = elem.replace (/.*{(.*)},/,"$1");
+  		year = elem.replace (/.*{(.*)}[,\}]/,"$1");
   	};
 	if (elem.includes ("doi =")){
   		doi = elem.replace (/.*{(.*)},/,"$1");
@@ -2212,9 +2353,16 @@ entry.forEach(element =&gt; {
     type_icon = "conference.png";
   }
 
+  var authoreditor = author + " ";
+  if ((author == "") &amp;&amp; (editor != "")) {
+	authoreditor = editor + " (Ed.) ";
+  } else if ((author == "") &amp;&amp; (editor == "")) {
+	authoreditor = "";
+  }
+
   entry_array.push ({
     'title': title,
-    'subtitle': author + " " + year + "",
+    'subtitle': authoreditor + year,
 	'match': title + " " + authormatches + " " + year,
     'arg': "@" + citekey,
 	'icon': {'path': type_icon }
@@ -2314,6 +2462,37 @@ JSON.stringify({ 'items': entry_array });</string>
 			<string>1C0964D1-AA81-478A-B406-28E96DDD9E82</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<true/>
+				<key>focusedappvariablename</key>
+				<string>focusedapp</string>
+				<key>hotkey</key>
+				<integer>42</integer>
+				<key>hotmod</key>
+				<integer>1048576</integer>
+				<key>hotstring</key>
+				<string>#</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>3E233EB1-E0B2-48CC-9E6F-A5CAFDFD26AD</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2489,42 +2668,6 @@ end alfred_script</string>
 			<string>C56AF146-03E0-448E-8592-491D12F5534A</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>0</integer>
-				<key>focusedappvariable</key>
-				<true/>
-				<key>focusedappvariablename</key>
-				<string>focusedapp</string>
-				<key>hotkey</key>
-				<integer>42</integer>
-				<key>hotmod</key>
-				<integer>1048576</integer>
-				<key>hotstring</key>
-				<string>#</string>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>0</integer>
-				<key>relatedApps</key>
-				<array>
-					<string>com.microsoft.Word</string>
-					<string>org.zotero.zotero</string>
-				</array>
-				<key>relatedAppsMode</key>
-				<integer>2</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>3E233EB1-E0B2-48CC-9E6F-A5CAFDFD26AD</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -3031,7 +3174,7 @@ end alfred_script</string>
 				<key>largetypetext</key>
 				<string>⚠️ No PDF Engine set.
 
-You have to set a PDF engine before using "pdf" as output format. You can do that by triggering Alfred, typing "pconf", and selecting "PDF-Engine".</string>
+You have to set a PDF engine before using "pdf" as output format. You can do sp by triggering Alfred, typing "pconf", and selecting "PDF-Engine".</string>
 				<key>textcolor</key>
 				<string></string>
 				<key>wrapat</key>
@@ -3145,6 +3288,14 @@ You have to set a PDF engine before using "pdf" as output format. You can do tha
 			<integer>1</integer>
 		</dict>
 		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>22EB574B-20E3-4E92-9A20-3CA6ADAFA7C9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
 			<key>config</key>
 			<dict>
 				<key>alignment</key>
@@ -3160,7 +3311,7 @@ You have to set a PDF engine before using "pdf" as output format. You can do tha
 				<key>ignoredynamicplaceholders</key>
 				<false/>
 				<key>largetypetext</key>
-				<string>⚠️ You have not selected a BibTex-Library.
+				<string>⚠️ You have not selected a BibTeX-Library.
 
 You can do that by triggering Alfred, typing "pconf", and selecting "BibTeX Library".</string>
 				<key>textcolor</key>
@@ -3187,7 +3338,8 @@ You can do that by triggering Alfred, typing "pconf", and selecting "BibTeX Libr
 				<key>filename</key>
 				<string>{query}/pandoc_errors.log</string>
 				<key>filetext</key>
-				<string>⚠️ 
+				<string>⚠️ ⚠️ ⚠️ 
+=========
 {var:errorlog}</string>
 				<key>ignoredynamicplaceholders</key>
 				<false/>
@@ -3581,19 +3733,20 @@ echo -n | {query}</string>
 
 on run
 
-	--import major variables (Shell Script part necessary to handle encoding, see https://www.alfredforum.com/topic/15992-applescript-reads-alfred-environment-variables-in-wrong-encoding/
+	--import environment variables (Shell Script part necessary to handle encoding, see https://www.alfredforum.com/topic/15992-applescript-reads-alfred-environment-variables-in-wrong-encoding/
 	set csl_file to do shell script "echo " &amp; quoted form of (system attribute "csl_file") &amp; " | iconv -f UTF-8-MAC -t MACROMAN"
 	set bibtex_library_path to do shell script "echo " &amp; quoted form of (system attribute "bibtex_library_path") &amp; " | iconv -f UTF-8-MAC -t MACROMAN"
 	set reference_docx_path to do shell script "echo " &amp; quoted form of (system attribute "reference_docx_path") &amp; " | iconv -f UTF-8-MAC -t MACROMAN"
 	set reference_pptx_path to do shell script "echo " &amp; quoted form of (system attribute "reference_pptx_path") &amp; " | iconv -f UTF-8-MAC -t MACROMAN"
 	set further_pandoc_args to do shell script "echo " &amp; quoted form of (system attribute "further_pandoc_args") &amp; " | iconv -f UTF-8-MAC -t MACROMAN"
-	set pdf_engine to (system attribute "pdf_engine") (*these omit the shell script detour as they will only have preset values*)
+	set second_library to do shell script "echo " &amp; quoted form of (system attribute "second_library") &amp; " | iconv -f UTF-8-MAC -t MACROMAN"
+	-- these omit the shell script detour as they will only have preset values without special characters
+	set pdf_engine to (system attribute "pdf_engine")
 	set desired_format to (system attribute "desired_format")
 	set slide_level to (system attribute "slide_level")
 
 	--split doc_path into parent_folder and doc_name
 	set doc_path to "{query}"
-
 	set doc_name to doc_path
 	repeat while (offset of "/" in doc_name) &gt; 0 --loop checks whether a Slash is still in the string
 		set doc_name to text ((offset of "/" in doc_name) + 1) thru -1 of doc_name
@@ -3611,8 +3764,9 @@ on run
 	set doc_name to text 1 thru ((offset of ".mdown" in doc_name) - 1) of doc_name
 	set doc_name to text 1 thru ((offset of ".txt" in doc_name) - 1) of doc_name
 
-	-- building the pandoc command
+	-- building the elements of the pandoc command
 	set bibliography to ""
+	set bibliography2 to ""
 	set reference_docx to ""
 	set pdf_arg to ""
 	set reference_pptx to ""
@@ -3621,22 +3775,23 @@ on run
 	set output to "-o " &amp; (quoted form of (parent_folder &amp; doc_name &amp; "." &amp; desired_format)) &amp; " "
 	set resource_path to "--resource-path=" &amp; (quoted form of parent_folder) &amp; " "
 	if bibtex_library_path ≠ "" then set bibliography to "--bibliography " &amp; (quoted form of bibtex_library_path) &amp; " "
-	set citation_style_path to "--csl ~" &amp; (quoted form of ("/Zotero/styles/" &amp; csl_file)) &amp; " "
+	if second_library ≠ "" then set bibliography2 to "--bibliography " &amp; (quoted form of second_library) &amp; " "
+	set citation_style to "--csl " &amp; (quoted form of csl_file) &amp; " "
 	set slide_level_arg to "--slide-level=" &amp; slide_level &amp; " "
 	set further_args to further_pandoc_args &amp; " "
 	if reference_docx_path ≠ "" then set reference_docx to "--reference-doc " &amp; (quoted form of reference_docx_path) &amp; " "
 	if reference_pptx_path ≠ "" then set reference_pptx to "--reference-doc " &amp; (quoted form of reference_pptx_path) &amp; " "
 	if pdf_engine ≠ "" then set pdf_arg to "--pdf-engine=" &amp; pdf_engine &amp; " "
 
-	-- modifies command based on desired output format.
-	set pandoc_command to ("pandoc " &amp; input &amp; output &amp; "--citeproc " &amp; resource_path &amp; bibliography &amp; citation_style_path &amp; further_args)
+	-- modifies command based on desired output format
+	set pandoc_command to ("pandoc " &amp; input &amp; output &amp; "--citeproc " &amp; resource_path &amp; bibliography &amp; bibliography2 &amp; citation_style &amp; further_args)
 	if desired_format = "docx" then set pandoc_command to (pandoc_command &amp; reference_docx)
 	if desired_format = "pdf" then set pandoc_command to (pandoc_command &amp; pdf_arg)
 	if desired_format = "html" then set pandoc_command to (pandoc_command &amp; "--standalone ")
 	if desired_format = "pptx" then set pandoc_command to (pandoc_command &amp; reference_pptx &amp; slide_level_arg)
-	set pandoc_command to (pandoc_command &amp; " 2&gt;&amp;1") 
+	set pandoc_command to (pandoc_command &amp; " 2&gt;&amp;1")
 
-	-- returns the pandoc-command to Alfred, to process it as bash script
+	-- returns the pandoc-command to Alfred to process it as bash script
 	return pandoc_command
 end run</string>
 				<key>scriptargtype</key>
@@ -3650,6 +3805,39 @@ end run</string>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>6B04082C-2281-4A10-950C-0B9A324EE9D6</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>set csl_file to do shell script "echo " &amp; quoted form of (system attribute "csl_file") &amp; " | iconv -f UTF-8-MAC -t MACROMAN"
+
+-- before, the workflow only searched the Zotero Style folder, making the saving of the full path  unecessary
+if csl_file does not contain "/" then
+	set csl_file_path to "~/Zotero/styles/" &amp; csl_file
+	tell application id "com.runningwithcrayons.Alfred" to set configuration "csl_file" to value csl_file_path in workflow "de.chris-grieser.pandoc-alfred"
+end if
+
+
+--pass through query
+return "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>06B181F5-F117-4F94-ADED-0AD74C78C40E</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -3687,6 +3875,24 @@ end run</string>
 			<string>alfred.workflow.utility.replace</string>
 			<key>uid</key>
 			<string>6ED2EDB1-B0C2-4894-8345-227BEB5D55D8</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>
+</string>
+				<key>replacestring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.replace</string>
+			<key>uid</key>
+			<string>8C8E6A55-B3BD-4622-9C3F-CE3DB8BB547F</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -3760,7 +3966,7 @@ end run</string>
 				<key>fixedorder</key>
 				<true/>
 				<key>items</key>
-				<string>[{"title":"🚪 Exit this Configuration","arg":"exit"},{"title":"🆕✴️ Citation Picker","arg":"citation_picker","subtitle":"currently: {var:citation_picker}"},{"title":"ℹ️ Documentation &amp; Guide for the Pandoc Suite","arg":"workflow_documentation","subtitle":"Troubleshooting &amp; further Information"},{"title":"📚 BibTeX Library","arg":"bibtex_lib","subtitle":"currently: {var:bibtex_library_path}"},{"title":"✍️ Set Citation Style","arg":"set_csl","subtitle":"currently: {var:csl_file}"},{"title":"⌨️ Hotkey Output Format","arg":"hotkey_format","subtitle":"currently: {var:hotkey_output_format}"},{"title":"⬇️ Install New Citation Style","arg":"install_csl","subtitle":"via Zotero's Style Repository"},{"title":"📄 Word Reference Document","arg":"reference_docx","subtitle":"currently: {var:reference_docx_path}"},{"title":"🏎 PDF-Engine","arg":"pdf_engine","subtitle":"currently: {var:pdf_engine}"},{"title":"🧑‍🏫 Powerpoint Reference Presentation","arg":"reference_pptx","subtitle":"currently: {var:reference_pptx_path}"},{"title":"📊 Slide Level for Presentations","arg":"slide_level","subtitle":"currently: {var:slide_level}"},{"title":"❇️ Further Arguments","arg":"further_args","subtitle":"currently: {var:further_pandoc_args}"},{"title":"📧 Report an Issue to the Developer","arg":"email","subtitle":"will open your default mail client"}]</string>
+				<string>[{"title":"🚪 Exit this Configuration","arg":"exit"},{"title":"🆕 ✴️ Citation Picker","arg":"citation_picker","subtitle":"currently: {var:citation_picker}"},{"title":"❓ Documentation &amp; Guide for the Pandoc Suite","arg":"workflow_documentation","subtitle":"Troubleshooting &amp; further Information"},{"title":"📚1️⃣ BibTeX Library","arg":"bibtex_lib","subtitle":"currently: {var:bibtex_library_path}"},{"title":"📚2️⃣ Additional Library (optional)","arg":"second_library","subtitle":"currently: {var:second_library}"},{"title":"✍️ Set Citation Style","arg":"set_csl","subtitle":"currently: {var:csl_file}"},{"title":"⬇️ Download New Citation Style","arg":"install_csl","subtitle":"From the CSL Style Repository"},{"title":"🔘 Hotkey Output Format","arg":"hotkey_format","subtitle":"currently: {var:hotkey_output_format}"},{"title":"📄 Word Reference Document","arg":"reference_docx","subtitle":"currently: {var:reference_docx_path}"},{"title":"🏎 PDF-Engine","arg":"pdf_engine","subtitle":"currently: {var:pdf_engine}"},{"title":"🧑‍🏫 Powerpoint Reference Presentation","arg":"reference_pptx","subtitle":"currently: {var:reference_pptx_path}"},{"title":"📊 Slide Level for Powerpoint","arg":"slide_level","subtitle":"currently: {var:slide_level}"},{"title":"❇️ Further Arguments","arg":"further_args","subtitle":"currently: {var:further_pandoc_args}"},{"title":"📧 Report an Issue to the Developer","arg":"email","subtitle":"will open your default mail client"}]</string>
 				<key>keyword</key>
 				<string>pconf</string>
 				<key>runningsubtext</key>
@@ -3982,26 +4188,20 @@ end run</string>
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>on run
-
-set chosen_csl_path to "{query}" (* Alfred input*)
+				<string>-- sets file-name as csl_file in global variable
+tell application "Alfred" 
+    set configuration "csl_file" to value "{query}"  in workflow "de.chris-grieser.pandoc-alfred" with exportable
+end tell
 
 -- removes file path
-set chosen_csl to chosen_csl_path
+set chosen_csl to "{query}" 
 repeat while (offset of "/" in chosen_csl) &gt; 0
     set chosen_csl to text ((offset of "/" in chosen_csl) +1) thru - 1 of chosen_csl 
 end repeat
 
--- sets file-name as csl_file in global variable
-tell application "Alfred" 
-    set configuration "csl_file" to value chosen_csl in workflow "de.chris-grieser.pandoc-alfred" with exportable
-end tell
-
 -- Returns without extension for the Alfred notification
 set chosen_csl_no_ext to text 1 thru -5 of chosen_csl
-return chosen_csl_no_ext
-
-end run</string>
+return chosen_csl_no_ext</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -4065,6 +4265,18 @@ end run</string>
 						<key>words</key>
 						<true/>
 					</dict>
+					<dict>
+						<key>field</key>
+						<string>kMDItemKind</string>
+						<key>not</key>
+						<false/>
+						<key>split</key>
+						<false/>
+						<key>value</key>
+						<string>csl</string>
+						<key>words</key>
+						<true/>
+					</dict>
 				</array>
 				<key>includesystem</key>
 				<true/>
@@ -4074,7 +4286,7 @@ end run</string>
 				<string></string>
 				<key>scopes</key>
 				<array>
-					<string>~/Zotero/styles</string>
+					<string>~</string>
 				</array>
 				<key>sortmode</key>
 				<integer>0</integer>
@@ -4115,6 +4327,27 @@ end run</string>
 			<key>config</key>
 			<dict>
 				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string>^\/users\/[^\/]*(\/.*)$</string>
+				<key>regexcaseinsensitive</key>
+				<true/>
+				<key>regexmultiline</key>
+				<false/>
+				<key>replacestring</key>
+				<string>~$1</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.replace</string>
+			<key>uid</key>
+			<string>C9A1F971-9BA7-40E6-991D-469B35E5B162</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>matchmode</key>
 				<integer>0</integer>
 				<key>matchstring</key>
 				<string>fur</string>
@@ -4148,27 +4381,12 @@ end run</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>soundname</key>
-				<string>Blow</string>
-				<key>systemsound</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.playsound</string>
-			<key>uid</key>
-			<string>67A601DA-66EE-45B7-8513-BB8E17D4A54D</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>subtext</key>
 				<string>search Zotero's Style Repository for "..."</string>
 				<key>text</key>
-				<string>Install Citation Style</string>
+				<string>Download Citation Style</string>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -4216,6 +4434,8 @@ end run</string>
 				<key>largetypetext</key>
 				<string>Please choose a Citation Style here. Clicking a link will prompt Zotero to install the Style.
 
+If you use a citation manager other than Zotero, move the downloaded .csl file to a location in your home folder.
+
 Afterwards, you can set the citation style by using the 'pconf' command again.</string>
 				<key>textcolor</key>
 				<string></string>
@@ -4243,6 +4463,21 @@ Afterwards, you can set the citation style by using the 'pconf' command again.</
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>F2BF4F5F-7AB6-4DDB-AA0E-C3749ECF0D8B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>soundname</key>
+				<string>Blow</string>
+				<key>systemsound</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.playsound</string>
+			<key>uid</key>
+			<string>67A601DA-66EE-45B7-8513-BB8E17D4A54D</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4594,6 +4829,20 @@ end run</string>
 						<string>citation_picker</string>
 						<key>uid</key>
 						<string>9F9A7827-77AC-4374-AF4A-FAB8EE096855</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>second_library</string>
+						<key>outputlabel</key>
+						<string>second_library</string>
+						<key>uid</key>
+						<string>1EAB8AD1-8313-4277-9413-9443C611B9CE</string>
 					</dict>
 				</array>
 				<key>elselabel</key>
@@ -5117,9 +5366,9 @@ end run</string>
 				<key>sortmode</key>
 				<integer>2</integer>
 				<key>subtext</key>
-				<string>If no file is listed, open the Pandoc Suite Documentation for a workaround</string>
+				<string>if your library isn't showing up, open the Pandoc Suite Documentation for a workaround</string>
 				<key>title</key>
-				<string>Search for BibTeX Library for your Bibliography...</string>
+				<string>Search for your BibTeX Library...</string>
 				<key>types</key>
 				<array/>
 				<key>withspace</key>
@@ -5144,7 +5393,7 @@ end run</string>
 				<key>text</key>
 				<string>{query}</string>
 				<key>title</key>
-				<string>✅ BibTex-Library set</string>
+				<string>✅ BibTeX-Library set</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -5189,14 +5438,6 @@ end run</string>
 			<string>78CC6B08-1B23-4498-89D9-BB736BC4BA81</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.hidealfred</string>
-			<key>uid</key>
-			<string>13464BBD-A691-40F0-A7E4-6ED4AEC2B37B</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -5266,6 +5507,14 @@ end run</string>
 			<string>75136EA5-5D2F-4AB6-B598-4443286CAFCE</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.hidealfred</string>
+			<key>uid</key>
+			<string>13464BBD-A691-40F0-A7E4-6ED4AEC2B37B</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -5544,7 +5793,7 @@ end run</string>
 				<key>fixedorder</key>
 				<true/>
 				<key>items</key>
-				<string>[{"title":"🏛 Classic Citation Picker","arg":"classic","subtitle":"uses native Zotero GUI, Zotero must be running"},{"title":"🆕 Alternative Citation Picker","arg":"alternative","subtitle":"quicker, uses Alfred as GUI, Zotero does not need to be running"}]</string>
+				<string>[{"title":"🏛 Classic Citation Picker","arg":"classic","subtitle":"uses native Zotero GUI, Zotero must be running"},{"title":"🆕 ✴️ Alternative Citation Picker","arg":"alternative","subtitle":"quicker, uses Alfred as GUI, Zotero does not need to be running"}]</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>subtext</key>
@@ -5609,6 +5858,192 @@ end run</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>✅ Second Library set</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>1E80514F-CEFA-44DA-8EE1-6A87B1E52EA8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>on run
+
+--sets Alfred Environment Variable
+tell application "Alfred" 
+    set configuration "second_library" to value "{query}" in workflow "de.chris-grieser.pandoc-alfred"
+end tell
+
+-- removes file path for Notificattion
+set second_library to "{query}"
+repeat while (offset of "/" in bibtex_library_path) &gt; 0
+    set second_library to text ((offset of "/" in second_library) +1) thru - 1 of second_library 
+end repeat
+return second_library
+
+end run</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>72C458A4-0C76-41D5-B9A1-7D55DF474832</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>anchorfields</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>daterange</key>
+				<integer>0</integer>
+				<key>fields</key>
+				<array>
+					<dict>
+						<key>field</key>
+						<string>kMDItemDisplayName</string>
+						<key>not</key>
+						<false/>
+						<key>split</key>
+						<true/>
+						<key>value</key>
+						<string>{query}</string>
+						<key>words</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>field</key>
+						<string>kMDItemAlternateNames</string>
+						<key>not</key>
+						<false/>
+						<key>split</key>
+						<true/>
+						<key>value</key>
+						<string>{query}</string>
+						<key>words</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>field</key>
+						<string>kMDItemFinderComment</string>
+						<key>not</key>
+						<false/>
+						<key>split</key>
+						<true/>
+						<key>value</key>
+						<string>{query}</string>
+						<key>words</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>field</key>
+						<string>kMDItemKind</string>
+						<key>not</key>
+						<false/>
+						<key>split</key>
+						<false/>
+						<key>value</key>
+						<string>bib</string>
+						<key>words</key>
+						<true/>
+					</dict>
+				</array>
+				<key>includesystem</key>
+				<false/>
+				<key>limit</key>
+				<integer>0</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>scopes</key>
+				<array>
+					<string>/</string>
+				</array>
+				<key>sortmode</key>
+				<integer>2</integer>
+				<key>subtext</key>
+				<string>if your library isn't showing up, open the Pandoc Suite Documentation for a workaround</string>
+				<key>title</key>
+				<string>Search additional BibTeX Library. Press [Esc] to leave this setting empty and only use one library file.</string>
+				<key>types</key>
+				<array/>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.filefilter</string>
+			<key>uid</key>
+			<string>41C30D83-3D29-41B3-9652-C036001F040A</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string> </string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>527A7408-04E2-4890-A68D-C49D05B7CD4F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string>^\/users\/[^\/]*(\/.*)$</string>
+				<key>regexcaseinsensitive</key>
+				<true/>
+				<key>regexmultiline</key>
+				<false/>
+				<key>replacestring</key>
+				<string>~$1</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.replace</string>
+			<key>uid</key>
+			<string>84CF6CEA-7CE8-490B-BC37-EB2276156189</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>Documentation &amp; Usage Guide
@@ -5616,14 +6051,19 @@ end run</string>
 https://chris-grieser.de/pandoc_alfred
 
 
-
 Release Notes
 =============
+3.1: Support for other reference managers than Zotero &amp; Option to use an additional BibTeX library
+- The reference management app should use BibTeX as library format. [Jabref](https://www.jabref.org) and [BibDesk](http://bibdesk.sourceforge.net) are two open source reference managers that do so. To use the Pandoc Suite without Zotero, you must select the **alternative citation picker**. The Pandoc Suite now searches the home folder when locating .csl files.
+- Option to set a second bibliography via `pconf`. Leave empty to only use one bibliography. 
+- displays editors of the publication in the alternative citation picker when there is no author
+- various smaller fixes
+
 3.0: Alternative Citation Picker!
 - ➡️ Select the new citation picker via the `pconf` command. If you prefer the classic citation picker, just switch back via `pconf`
-- Zotero does not need to be running to pick citations (uses the BibTeX-Library)
+- Zotero does not need to be running to pick citations (uses the BibTeX-Library directly)
 - uses Alfred instead of Zotero as GUI for the Picker
-- works faster
+- works much faster &amp; is more reliable
 - `⌘ ↵` to add page numbers, `⌥ ↵` to add another citation. `⌘⌥ ↵` to add page numbers and then add another citation.
 
 2.11
@@ -5728,6 +6168,17 @@ Release Notes
 			<key>ypos</key>
 			<integer>2720</integer>
 		</dict>
+		<key>06B181F5-F117-4F94-ADED-0AD74C78C40E</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>note</key>
+			<string>necessary for migration from 3.0 to 3.1</string>
+			<key>xpos</key>
+			<integer>305</integer>
+			<key>ypos</key>
+			<integer>1325</integer>
+		</dict>
 		<key>09326943-79A7-4755-B7E8-94B09D15560C</key>
 		<dict>
 			<key>colorindex</key>
@@ -5773,16 +6224,16 @@ Release Notes
 			<key>xpos</key>
 			<integer>190</integer>
 			<key>ypos</key>
-			<integer>2705</integer>
+			<integer>2765</integer>
 		</dict>
 		<key>13851D58-1F95-41E7-A686-9E1B91BD2086</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>1455</integer>
+			<integer>1460</integer>
 			<key>ypos</key>
-			<integer>2330</integer>
+			<integer>2320</integer>
 		</dict>
 		<key>1586C092-4E94-4D4C-B43C-70C1C7103F66</key>
 		<dict>
@@ -5869,9 +6320,18 @@ Release Notes
 
 Triggers Pandoc Conversion</string>
 			<key>xpos</key>
-			<integer>20</integer>
+			<integer>15</integer>
 			<key>ypos</key>
-			<integer>530</integer>
+			<integer>430</integer>
+		</dict>
+		<key>1E80514F-CEFA-44DA-8EE1-6A87B1E52EA8</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>1050</integer>
+			<key>ypos</key>
+			<integer>3220</integer>
 		</dict>
 		<key>1EDA81EE-9A5D-4315-8606-DC351F27CE7A</key>
 		<dict>
@@ -5889,7 +6349,7 @@ Triggers Pandoc Conversion</string>
 			<key>note</key>
 			<string>logs STDERR</string>
 			<key>xpos</key>
-			<integer>1340</integer>
+			<integer>1380</integer>
 			<key>ypos</key>
 			<integer>1150</integer>
 		</dict>
@@ -5898,7 +6358,7 @@ Triggers Pandoc Conversion</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>1175</integer>
+			<integer>1245</integer>
 			<key>ypos</key>
 			<integer>1325</integer>
 		</dict>
@@ -5910,6 +6370,15 @@ Triggers Pandoc Conversion</string>
 			<integer>915</integer>
 			<key>ypos</key>
 			<integer>1030</integer>
+		</dict>
+		<key>22EB574B-20E3-4E92-9A20-3CA6ADAFA7C9</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>xpos</key>
+			<integer>280</integer>
+			<key>ypos</key>
+			<integer>1135</integer>
 		</dict>
 		<key>27CA4A32-2FDE-47CF-80F1-3202B62EC696</key>
 		<dict>
@@ -6008,7 +6477,7 @@ Triggers Pandoc Conversion</string>
 			<key>note</key>
 			<string>remove \n</string>
 			<key>xpos</key>
-			<integer>1085</integer>
+			<integer>1125</integer>
 			<key>ypos</key>
 			<integer>1180</integer>
 		</dict>
@@ -6039,9 +6508,9 @@ Triggers Pandoc Conversion</string>
 
 Citation Picker</string>
 			<key>xpos</key>
-			<integer>20</integer>
+			<integer>15</integer>
 			<key>ypos</key>
-			<integer>350</integer>
+			<integer>250</integer>
 		</dict>
 		<key>3E3A8C0C-E4AD-4403-AFB6-8B7FA0EFF71F</key>
 		<dict>
@@ -6052,6 +6521,15 @@ Citation Picker</string>
 			<key>ypos</key>
 			<integer>2690</integer>
 		</dict>
+		<key>41C30D83-3D29-41B3-9652-C036001F040A</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>510</integer>
+			<key>ypos</key>
+			<integer>3220</integer>
+		</dict>
 		<key>42BDA197-AE7D-45F0-8929-3B154F42219F</key>
 		<dict>
 			<key>colorindex</key>
@@ -6059,7 +6537,7 @@ Citation Picker</string>
 			<key>note</key>
 			<string>configures error-log-path</string>
 			<key>xpos</key>
-			<integer>1225</integer>
+			<integer>1265</integer>
 			<key>ypos</key>
 			<integer>1180</integer>
 		</dict>
@@ -6108,9 +6586,18 @@ Citation Picker</string>
 			<key>note</key>
 			<string>run pandoc</string>
 			<key>xpos</key>
-			<integer>900</integer>
+			<integer>970</integer>
 			<key>ypos</key>
 			<integer>1325</integer>
+		</dict>
+		<key>527A7408-04E2-4890-A68D-C49D05B7CD4F</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>410</integer>
+			<key>ypos</key>
+			<integer>3250</integer>
 		</dict>
 		<key>5335BA38-FC76-4B47-8D08-462A1AC06CC4</key>
 		<dict>
@@ -6244,9 +6731,9 @@ Citation Picker</string>
 			<key>note</key>
 			<string>Sucess Sound</string>
 			<key>xpos</key>
-			<integer>1235</integer>
+			<integer>1240</integer>
 			<key>ypos</key>
-			<integer>2090</integer>
+			<integer>2210</integer>
 		</dict>
 		<key>6B04082C-2281-4A10-950C-0B9A324EE9D6</key>
 		<dict>
@@ -6255,7 +6742,7 @@ Citation Picker</string>
 			<key>note</key>
 			<string>pandoc command construction</string>
 			<key>xpos</key>
-			<integer>575</integer>
+			<integer>605</integer>
 			<key>ypos</key>
 			<integer>1325</integer>
 		</dict>
@@ -6293,7 +6780,7 @@ Citation Picker</string>
 			<key>note</key>
 			<string>~ for zsh</string>
 			<key>xpos</key>
-			<integer>710</integer>
+			<integer>760</integer>
 			<key>ypos</key>
 			<integer>1355</integer>
 		</dict>
@@ -6314,6 +6801,15 @@ Citation Picker</string>
 			<integer>365</integer>
 			<key>ypos</key>
 			<integer>915</integer>
+		</dict>
+		<key>72C458A4-0C76-41D5-B9A1-7D55DF474832</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>720</integer>
+			<key>ypos</key>
+			<integer>3220</integer>
 		</dict>
 		<key>748DBE25-7FDC-4884-8D0C-D68041D62DF3</key>
 		<dict>
@@ -6373,6 +6869,17 @@ Citation Picker</string>
 			<key>ypos</key>
 			<integer>1590</integer>
 		</dict>
+		<key>84CF6CEA-7CE8-490B-BC37-EB2276156189</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>note</key>
+			<string>replace home with ~</string>
+			<key>xpos</key>
+			<integer>655</integer>
+			<key>ypos</key>
+			<integer>3250</integer>
+		</dict>
 		<key>890FC932-E9B3-4D12-B667-EA2C4D03E083</key>
 		<dict>
 			<key>colorindex</key>
@@ -6401,6 +6908,17 @@ Citation Picker</string>
 			<integer>480</integer>
 			<key>ypos</key>
 			<integer>375</integer>
+		</dict>
+		<key>8C8E6A55-B3BD-4622-9C3F-CE3DB8BB547F</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>note</key>
+			<string>remove \n</string>
+			<key>xpos</key>
+			<integer>455</integer>
+			<key>ypos</key>
+			<integer>1355</integer>
 		</dict>
 		<key>91000D05-4397-43D7-81D8-0FB992A27938</key>
 		<dict>
@@ -6454,9 +6972,9 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>885</integer>
+			<integer>910</integer>
 			<key>ypos</key>
-			<integer>3005</integer>
+			<integer>3010</integer>
 		</dict>
 		<key>986EF1F7-54A1-4C67-A490-4DFCC60FA328</key>
 		<dict>
@@ -6548,7 +7066,7 @@ Citation Picker</string>
 			<key>note</key>
 			<string>Sucess Sound</string>
 			<key>xpos</key>
-			<integer>1305</integer>
+			<integer>1375</integer>
 			<key>ypos</key>
 			<integer>1325</integer>
 		</dict>
@@ -6629,7 +7147,7 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>765</integer>
+			<integer>835</integer>
 			<key>ypos</key>
 			<integer>1325</integer>
 		</dict>
@@ -6665,7 +7183,7 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<integer>1285</integer>
+			<integer>1325</integer>
 			<key>ypos</key>
 			<integer>1180</integer>
 		</dict>
@@ -6703,7 +7221,7 @@ Citation Picker</string>
 			<key>note</key>
 			<string>saves path for revealing in Finder</string>
 			<key>xpos</key>
-			<integer>500</integer>
+			<integer>535</integer>
 			<key>ypos</key>
 			<integer>1355</integer>
 		</dict>
@@ -6746,6 +7264,17 @@ Citation Picker</string>
 			<integer>655</integer>
 			<key>ypos</key>
 			<integer>2240</integer>
+		</dict>
+		<key>C9A1F971-9BA7-40E6-991D-469B35E5B162</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>note</key>
+			<string>replace home with ~</string>
+			<key>xpos</key>
+			<integer>655</integer>
+			<key>ypos</key>
+			<integer>2000</integer>
 		</dict>
 		<key>CAF6BC7B-0707-446C-B217-6E0EC407595B</key>
 		<dict>
@@ -6790,7 +7319,7 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<integer>1145</integer>
+			<integer>1185</integer>
 			<key>ypos</key>
 			<integer>1170</integer>
 		</dict>
@@ -6882,7 +7411,7 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>1045</integer>
+			<integer>1115</integer>
 			<key>ypos</key>
 			<integer>1325</integer>
 		</dict>
@@ -6954,7 +7483,7 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>note</key>
-			<string>if Zotero is not running, start it</string>
+			<string>if Zotero is not running, launch it</string>
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
@@ -6973,23 +7502,25 @@ Citation Picker</string>
 	<key>variables</key>
 	<dict>
 		<key>alfred_bar_length</key>
-		<string>63</string>
+		<string>61</string>
 		<key>bibtex_library_path</key>
-		<string>~/Google Drive/Academia/Zotero Library.bib</string>
+		<string>~/Google Drive/BibDesk/My Library.bib</string>
 		<key>citation_picker</key>
 		<string>classic</string>
 		<key>csl_file</key>
-		<string>social-studies-of-science.csl</string>
+		<string>~/Google Drive/BibDesk/Citation Styles/apa.csl</string>
 		<key>further_pandoc_args</key>
 		<string>--number-sections</string>
 		<key>hotkey_output_format</key>
 		<string>docx</string>
 		<key>pdf_engine</key>
-		<string>wkhtmltopdf</string>
+		<string>pdflatex</string>
 		<key>reference_docx_path</key>
 		<string>~/Google Drive/Academia/Vorlagen/Academic Writing Template.docx</string>
 		<key>reference_pptx_path</key>
 		<string>~/Google Drive/Academia/Vorlagen/Academic Presentation Template.pptx</string>
+		<key>second_library</key>
+		<string></string>
 		<key>slide_level</key>
 		<string>2</string>
 	</dict>
@@ -6999,9 +7530,10 @@ Citation Picker</string>
 		<string>reference_pptx_path</string>
 		<string>pdf_engine</string>
 		<string>reference_docx_path</string>
+		<string>second_library</string>
 	</array>
 	<key>version</key>
-	<string>3.0</string>
+	<string>3.1</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/</string>
 </dict>
