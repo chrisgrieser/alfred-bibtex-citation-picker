@@ -305,6 +305,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>23C0777C-4FFE-416F-8CAA-4219A37DF0B0</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>986EF1F7-54A1-4C67-A490-4DFCC60FA328</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>27CA4A32-2FDE-47CF-80F1-3202B62EC696</key>
 		<array>
 			<dict>
@@ -1665,7 +1678,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>986EF1F7-54A1-4C67-A490-4DFCC60FA328</string>
+				<string>23C0777C-4FFE-416F-8CAA-4219A37DF0B0</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2284,7 +2297,7 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 				<key>subtext</key>
 				<string></string>
 				<key>text</key>
-				<string>Enter Page Numbers</string>
+				<string>Enter Page Number(s)</string>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -2700,6 +2713,27 @@ JSON.stringify({ 'items': entry_array });
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string>(@.*);;;.*</string>
+				<key>regexcaseinsensitive</key>
+				<false/>
+				<key>regexmultiline</key>
+				<false/>
+				<key>replacestring</key>
+				<string>$1</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.replace</string>
+			<key>uid</key>
+			<string>23C0777C-4FFE-416F-8CAA-4219A37DF0B0</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>autopaste</key>
 				<true/>
 				<key>clipboardtext</key>
@@ -2754,7 +2788,7 @@ JSON.stringify({ 'items': entry_array });
 				<key>subtext</key>
 				<string></string>
 				<key>text</key>
-				<string>Enter Page Numbers</string>
+				<string>Enter Page Number(s)</string>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -2885,10 +2919,10 @@ JSON.stringify({ 'items': entry_array });
 				<integer>0</integer>
 				<key>relatedApps</key>
 				<array>
-					<string>com.apple.finder</string>
+					<string>pro.writer.mac</string>
 					<string>com.coteditor.CotEditor</string>
 					<string>com.github.atom</string>
-					<string>pro.writer.mac</string>
+					<string>com.apple.finder</string>
 				</array>
 				<key>relatedAppsMode</key>
 				<integer>1</integer>
@@ -6387,7 +6421,7 @@ end run</string>
 	<key>readme</key>
 	<string>Documentation &amp; Usage Guide
 ===========================
-https://chris-grieser.de/pandoc_alfred
+➡️ https://chris-grieser.de/pandoc_alfred
 
 
 Release Notes
@@ -6395,7 +6429,7 @@ Release Notes
 
 ℹ️📍 3.5: Improved Alternative Ciation Picker
 ----------------------------------------------
-Essentially, it is now a versatile Citation Picker, allowing you to copy a citation, open the URL, copy the full bibliography, or open the entry in BibDesk. Give it a try by selecting the new citation picker via the `pconf` command. If you prefer the classic citation picker, you can switch back via `pconf` anytime.
+Essentially, it is now an extensive Citation Picker, allowing you to copy a citation, open the URL, copy the full bibliography, or open the entry in BibDesk. Give it a try by selecting the new citation picker via the `pconf` command. If you prefer the classic citation picker, you can switch back via `pconf` anytime.
 [Visit the documentation for a description of all features of the Alternative citation picker.](https://www.notion.so/chrisgrieser/Pandoc-Suite-for-Citations-and-Bibliographies-in-Markdown-4de4bd634ceb4533a1add8b105a487b1#1b6226f58f1046a5af0a5d1568277135)
 
 Changes in Detail
@@ -6735,6 +6769,15 @@ Triggers Pandoc Conversion</string>
 			<integer>280</integer>
 			<key>ypos</key>
 			<integer>1295</integer>
+		</dict>
+		<key>23C0777C-4FFE-416F-8CAA-4219A37DF0B0</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
+			<key>xpos</key>
+			<integer>895</integer>
+			<key>ypos</key>
+			<integer>300</integer>
 		</dict>
 		<key>27CA4A32-2FDE-47CF-80F1-3202B62EC696</key>
 		<dict>
@@ -7974,13 +8017,13 @@ Citation Picker</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
-		<string>pdf_engine</string>
 		<string>reference_pptx_path</string>
-		<string>reference_docx_path</string>
 		<string>second_library</string>
-		<string>citation_picker</string>
 		<string>bibtex_library_path</string>
 		<string>csl_file</string>
+		<string>citation_picker</string>
+		<string>pdf_engine</string>
+		<string>reference_docx_path</string>
 	</array>
 	<key>version</key>
 	<string>3.5</string>
