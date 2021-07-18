@@ -2393,18 +2393,15 @@ bibtex_library_path = bibtex_library_path.replace(/^~/, homepath);
 var input = app.doShellScript('cat "' + bibtex_library_path + '" | grep -vwE "(abstract|annotate|publisher|Bdsk-Url-1|Bdsk-Url-2|date-modified|date-added|volume|keywords|issn|langid|doi|urlyear|isbn|location|pagetotal|series|eprint) ="');
 
 // BibTeX-Decoding
-input = input.replaceAll ('{\\"a}','ä');
-input = input.replaceAll ('{\\"o}','ö');
-input = input.replaceAll ('{\\"u}','ü');
-input = input.replaceAll ('\\"a','ä');
-input = input.replaceAll ('\\"A','Ä');
-input = input.replaceAll ('\\"U','Ü');
-input = input.replaceAll ('\\"u','ü');
-input = input.replaceAll ('\\"o','ö');
-input = input.replaceAll ('\\"O','Ö');
+input = input.replace (/{?\\"u}?/g,'ü');
+input = input.replace (/{?\\"o}?/g,'ö');
+input = input.replace (/{?\\"a}?/g,'ä');
+input = input.replace (/{?\\"U}?/g,'Ü');
+input = input.replace (/{?\\"O}?/g,'Ö');
+input = input.replace (/{?\\"A}?/g,'Ä');
+input = input.replace (/(---?|\\textendash{})/g,'—');
 input = input.replaceAll ('\\"e','ë');
 input = input.replaceAll ('\\ss','ß');
-input = input.replaceAll ('\\textendash{}','–');
 input = input.replaceAll ('\\&amp;','&amp;');
 input = input.replaceAll ('``','"');
 input = input.replaceAll ('`',"'");
@@ -2485,7 +2482,7 @@ entry.forEach(element =&gt; {
 
   	let collectionmatch = elem.match(/\s(journal|booktitle) \=/i);
 	if (collectionmatch != null){
-  		collection = elem.replace (/.*{{?(.*)}}?,?/,"$1");
+  		collection = elem.replace (/.*{{?(.*?)}.*/,"$1");
 		collection = "    In: " + collection;
   	};
   });
@@ -2754,10 +2751,10 @@ JSON.stringify({ 'items': entry_array });
 				<integer>0</integer>
 				<key>relatedApps</key>
 				<array>
-					<string>com.apple.finder</string>
+					<string>pro.writer.mac</string>
 					<string>com.coteditor.CotEditor</string>
 					<string>com.github.atom</string>
-					<string>pro.writer.mac</string>
+					<string>com.apple.finder</string>
 				</array>
 				<key>relatedAppsMode</key>
 				<integer>1</integer>
@@ -5650,23 +5647,6 @@ end run</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string> </string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>01C18AD5-1189-4DFA-82BB-5C863BB2F037</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>matchmode</key>
 				<integer>1</integer>
 				<key>matchstring</key>
@@ -5684,6 +5664,23 @@ end run</string>
 			<string>890FC932-E9B3-4D12-B667-EA2C4D03E083</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string> </string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>01C18AD5-1189-4DFA-82BB-5C863BB2F037</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -6267,7 +6264,7 @@ Release Notes
 - improved speed of the Citation Picker
 - prevent accidental triggering of URLs in the Picker when there is none
 - now also shows book titles when the entry is a book chapter
-- enabled autocompletion (via `tab`) with the citation picker
+- enabled autocompletion (via `tab`)
 - citation picker now remembers choices, i.e. when an entry is chosen multiple times, it will appear on top
 
 
@@ -7788,7 +7785,7 @@ Citation Picker</string>
 	<key>variables</key>
 	<dict>
 		<key>alfred_bar_length</key>
-		<string>62</string>
+		<string>70</string>
 		<key>bibtex_library_path</key>
 		<string>~/Google Drive/BibDesk/My Library.bib</string>
 		<key>citation_picker</key>
@@ -7814,13 +7811,13 @@ Citation Picker</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
+		<string>pdf_engine</string>
 		<string>reference_pptx_path</string>
+		<string>reference_docx_path</string>
 		<string>second_library</string>
+		<string>citation_picker</string>
 		<string>bibtex_library_path</string>
 		<string>csl_file</string>
-		<string>citation_picker</string>
-		<string>pdf_engine</string>
-		<string>reference_docx_path</string>
 	</array>
 	<key>version</key>
 	<string>3.6</string>
