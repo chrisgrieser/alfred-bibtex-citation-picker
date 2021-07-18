@@ -305,19 +305,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>23C0777C-4FFE-416F-8CAA-4219A37DF0B0</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>986EF1F7-54A1-4C67-A490-4DFCC60FA328</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>27CA4A32-2FDE-47CF-80F1-3202B62EC696</key>
 		<array>
 			<dict>
@@ -579,19 +566,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>2F58F314-EDCB-4486-AAB5-0B9F41C7F519</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>30006A6B-EAF9-4531-8694-5E878A0FB80E</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>329BF0DA-52B7-4D6F-8648-7280013C54AC</key>
 		<array>
 			<dict>
@@ -764,19 +738,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>BE676612-EAE6-4389-85E0-FEAD2E60BE4C</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>46A55051-4E81-4845-9A01-7CE08CB042B1</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>5B9676C6-1ED4-4548-835F-8E5B18BB5392</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1386,19 +1347,6 @@
 				<true/>
 			</dict>
 		</array>
-		<key>95B2AEEF-580C-4858-BB44-B5394C3CC3F4</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>C64ACAF0-66C8-48A8-A3C4-B55C7E282697</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>96FCE9BC-5201-4357-9B63-588F73AEF5F3</key>
 		<array>
 			<dict>
@@ -1540,19 +1488,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>AAA17860-26D0-4DCC-BB6C-563DE9A9D630</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>DD59F90F-8FD2-486D-A8A8-2FFA47DE45F6</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>AB43E3DE-695A-4EE9-9F03-9A7C94D6F2FE</key>
 		<array>
 			<dict>
@@ -1658,7 +1593,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>46A55051-4E81-4845-9A01-7CE08CB042B1</string>
+				<string>5B9676C6-1ED4-4548-835F-8E5B18BB5392</string>
 				<key>modifiers</key>
 				<integer>1572864</integer>
 				<key>modifiersubtext</key>
@@ -1668,7 +1603,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>95B2AEEF-580C-4858-BB44-B5394C3CC3F4</string>
+				<string>C64ACAF0-66C8-48A8-A3C4-B55C7E282697</string>
 				<key>modifiers</key>
 				<integer>524288</integer>
 				<key>modifiersubtext</key>
@@ -1678,7 +1613,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>23C0777C-4FFE-416F-8CAA-4219A37DF0B0</string>
+				<string>986EF1F7-54A1-4C67-A490-4DFCC60FA328</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1688,7 +1623,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>AAA17860-26D0-4DCC-BB6C-563DE9A9D630</string>
+				<string>DD59F90F-8FD2-486D-A8A8-2FFA47DE45F6</string>
 				<key>modifiers</key>
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
@@ -1698,7 +1633,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>2F58F314-EDCB-4486-AAB5-0B9F41C7F519</string>
+				<string>30006A6B-EAF9-4531-8694-5E878A0FB80E</string>
 				<key>modifiers</key>
 				<integer>262144</integer>
 				<key>modifiersubtext</key>
@@ -2232,11 +2167,9 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>query="{query}"
+				<string>export PATH=/usr/local/bin:$PATH
 
-export PATH=/usr/local/bin:$PATH
-
-citekey=`echo $query | cut -d ";" -f 1`
+citekey="{query}"
 bibfile=~`echo -n $bibtex_library_path | sed -e "s/~//"`
 csl=~`echo -n $csl_file | sed -e "s/~//"`
 dummyBib="---\nnocite: |\n  "$citekey"\n---\n::: {#refs}\n:::"
@@ -2307,27 +2240,6 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 			<string>DC77C4D7-6154-4281-B7B5-5E14299C4D30</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>matchmode</key>
-				<integer>1</integer>
-				<key>matchstring</key>
-				<string>(@.*);;;.*</string>
-				<key>regexcaseinsensitive</key>
-				<false/>
-				<key>regexmultiline</key>
-				<false/>
-				<key>replacestring</key>
-				<string>$1</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.replace</string>
-			<key>uid</key>
-			<string>46A55051-4E81-4845-9A01-7CE08CB042B1</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2408,27 +2320,6 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>matchmode</key>
-				<integer>1</integer>
-				<key>matchstring</key>
-				<string>(@.*);;;.*</string>
-				<key>regexcaseinsensitive</key>
-				<false/>
-				<key>regexmultiline</key>
-				<false/>
-				<key>replacestring</key>
-				<string>$1</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.replace</string>
-			<key>uid</key>
-			<string>95B2AEEF-580C-4858-BB44-B5394C3CC3F4</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>action</key>
 				<integer>0</integer>
 				<key>argument</key>
@@ -2486,20 +2377,22 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 				<string></string>
 				<key>script</key>
 				<string>ObjC.import('stdlib');
-var alfred_bar_length_string = $.getenv('alfred_bar_length');
-var alfred_bar_length = parseInt(alfred_bar_length_string);
+const alfred_bar_length_string = $.getenv('alfred_bar_length');
+const alfred_bar_length = parseInt(alfred_bar_length_string);
 var bibtex_library_path = $.getenv('bibtex_library_path');
-var urlIcon = $.getenv('urlIcon');
+const urlIcon = $.getenv('urlIcon');
 
 // resolve ~
 app = Application.currentApplication();
 app.includeStandardAdditions = true;
-let homepath = app.pathTo('home folder');
+const homepath = app.pathTo('home folder');
 bibtex_library_path = bibtex_library_path.replace(/^~/, homepath);
 
-input = app.doShellScript('cat "' + bibtex_library_path + '"');
+//read bib file
+//remove unecessary info to increase speed
+var input = app.doShellScript('cat "' + bibtex_library_path + '" | grep -vwE "(abstract|annotate|publisher|Bdsk-Url-1|Bdsk-Url-2|date-modified|date-added|volume|keywords|issn|langid|doi|urlyear|isbn|location|pagetotal|series|eprint) ="');
 
-// proper encoding that is not saved in some .bib files
+// BibTeX-Decoding
 input = input.replaceAll ('{\\"a}','ä');
 input = input.replaceAll ('{\\"o}','ö');
 input = input.replaceAll ('{\\"u}','ü');
@@ -2540,9 +2433,10 @@ entry.forEach(element =&gt; {
   let type = "";
   let editor = "";
   let url = "";
-  let journal = "";
+  let collection = "";
   let urlAppendix = "";
   let numberOfEditors = 0;
+  let urlExists = false;
 
   properties.forEach (elem =&gt; {
     if (elem.includes ("@")){
@@ -2580,18 +2474,19 @@ entry.forEach(element =&gt; {
 
   	};
 	if (elem.includes ("year =")){
-  		year = elem.replace (/.*{(.*)}[,\}]/,"$1");
+  		year = elem.replace (/.*= {?(\d{4}).*/,"$1");
   	};
 
 	if (elem.includes ("url =")){
   		url = elem.replace (/.*{(.*)},?/,"$1");
 		urlAppendix = "    " + urlIcon;
+		urlExists = true;
   	};
 
-	let journalmatch = elem.match(/\sjournal \=/i);
-	if (journalmatch != null){
-  		journal = elem.replace (/.*{{?(.*)}}?,?/,"$1");
-		journal = "    In: " + journal;
+  	let collectionmatch = elem.match(/\s(journal|booktitle) \=/i);
+	if (collectionmatch != null){
+  		collection = elem.replace (/.*{{?(.*)}}?,?/,"$1");
+		collection = "    In: " + collection;
   	};
   });
 
@@ -2634,10 +2529,13 @@ entry.forEach(element =&gt; {
 
   entry_array.push ({
     'title': title,
-    'subtitle': authoreditor + year + journal + urlAppendix,
-	'match': title + " " + authormatches + " " + year + " " + journal,
-    'arg': "@" + citekey + ";;;" + url,
-	'icon': {'path': type_icon }
+    'autocomplete': authoreditor,
+    'subtitle': authoreditor + year + collection + urlAppendix,
+	'match': title + " " + authormatches + " " + year + " " + collection,
+    'arg': "@" + citekey,
+	'icon': {'path': type_icon },
+	'uid': citekey,
+	"mods": { "ctrl": { "valid": urlExists, "arg": url }},
   })
 });
 
@@ -2713,27 +2611,6 @@ JSON.stringify({ 'items': entry_array });
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>matchmode</key>
-				<integer>1</integer>
-				<key>matchstring</key>
-				<string>(@.*);;;.*</string>
-				<key>regexcaseinsensitive</key>
-				<false/>
-				<key>regexmultiline</key>
-				<false/>
-				<key>replacestring</key>
-				<string>$1</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.replace</string>
-			<key>uid</key>
-			<string>23C0777C-4FFE-416F-8CAA-4219A37DF0B0</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>autopaste</key>
 				<true/>
 				<key>clipboardtext</key>
@@ -2802,6 +2679,24 @@ JSON.stringify({ 'items': entry_array });
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>
+</string>
+				<key>replacestring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.replace</string>
+			<key>uid</key>
+			<string>4CD979CC-3ADB-4C54-92FA-F2A9B569E75C</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
@@ -2822,45 +2717,6 @@ JSON.stringify({ 'items': entry_array });
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>matchmode</key>
-				<integer>0</integer>
-				<key>matchstring</key>
-				<string>
-</string>
-				<key>replacestring</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.replace</string>
-			<key>uid</key>
-			<string>4CD979CC-3ADB-4C54-92FA-F2A9B569E75C</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>matchmode</key>
-				<integer>1</integer>
-				<key>matchstring</key>
-				<string>(@.*);;;.*</string>
-				<key>regexcaseinsensitive</key>
-				<false/>
-				<key>regexmultiline</key>
-				<false/>
-				<key>replacestring</key>
-				<string>$1</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.replace</string>
-			<key>uid</key>
-			<string>AAA17860-26D0-4DCC-BB6C-563DE9A9D630</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string>{var:pageless_citation}, p. {query}</string>
 				<key>passthroughargument</key>
@@ -2874,27 +2730,6 @@ JSON.stringify({ 'items': entry_array });
 			<string>1C0964D1-AA81-478A-B406-28E96DDD9E82</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>matchmode</key>
-				<integer>1</integer>
-				<key>matchstring</key>
-				<string>@.*;;;(.*)</string>
-				<key>regexcaseinsensitive</key>
-				<false/>
-				<key>regexmultiline</key>
-				<false/>
-				<key>replacestring</key>
-				<string>$1</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.replace</string>
-			<key>uid</key>
-			<string>2F58F314-EDCB-4486-AAB5-0B9F41C7F519</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2919,10 +2754,10 @@ JSON.stringify({ 'items': entry_array });
 				<integer>0</integer>
 				<key>relatedApps</key>
 				<array>
-					<string>pro.writer.mac</string>
+					<string>com.apple.finder</string>
 					<string>com.coteditor.CotEditor</string>
 					<string>com.github.atom</string>
-					<string>com.apple.finder</string>
+					<string>pro.writer.mac</string>
 				</array>
 				<key>relatedAppsMode</key>
 				<integer>1</integer>
@@ -2978,7 +2813,7 @@ JSON.stringify({ 'items': entry_array });
 				<key>matchmode</key>
 				<integer>1</integer>
 				<key>matchstring</key>
-				<string>@(.*);;;.*</string>
+				<string>@(.*)</string>
 				<key>regexcaseinsensitive</key>
 				<false/>
 				<key>regexmultiline</key>
@@ -6426,6 +6261,15 @@ end run</string>
 
 Release Notes
 =============
+ℹ️📍3.6: More Improvements to the alternative Citation Picker
+-------------------------------------------------------------
+- `cmd+c` to copy the citekey to the clipboard (without pasting, page numbers or further citations)
+- improved speed of the Citation Picker
+- prevent accidental triggering of URLs in the Picker when there is none
+- now also shows book titles when the entry is a book chapter
+- enabled autocompletion (via `tab`) with the citation picker
+- citation picker now remembers choices, i.e. when an entry is chosen multiple times, it will appear on top
+
 
 ℹ️📍 3.5: Improved Alternative Ciation Picker
 ----------------------------------------------
@@ -6770,15 +6614,6 @@ Triggers Pandoc Conversion</string>
 			<key>ypos</key>
 			<integer>1295</integer>
 		</dict>
-		<key>23C0777C-4FFE-416F-8CAA-4219A37DF0B0</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>7</integer>
-			<key>xpos</key>
-			<integer>895</integer>
-			<key>ypos</key>
-			<integer>300</integer>
-		</dict>
 		<key>27CA4A32-2FDE-47CF-80F1-3202B62EC696</key>
 		<dict>
 			<key>colorindex</key>
@@ -6842,23 +6677,12 @@ Triggers Pandoc Conversion</string>
 			<key>ypos</key>
 			<integer>1285</integer>
 		</dict>
-		<key>2F58F314-EDCB-4486-AAB5-0B9F41C7F519</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>7</integer>
-			<key>note</key>
-			<string>URL</string>
-			<key>xpos</key>
-			<integer>595</integer>
-			<key>ypos</key>
-			<integer>400</integer>
-		</dict>
 		<key>30006A6B-EAF9-4531-8694-5E878A0FB80E</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>xpos</key>
-			<integer>745</integer>
+			<integer>695</integer>
 			<key>ypos</key>
 			<integer>460</integer>
 		</dict>
@@ -6960,15 +6784,6 @@ Citation Picker</string>
 			<integer>1265</integer>
 			<key>ypos</key>
 			<integer>1340</integer>
-		</dict>
-		<key>46A55051-4E81-4845-9A01-7CE08CB042B1</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>7</integer>
-			<key>xpos</key>
-			<integer>515</integer>
-			<key>ypos</key>
-			<integer>170</integer>
 		</dict>
 		<key>4771A40C-E741-46C5-93EF-82CEB4BD23D8</key>
 		<dict>
@@ -7409,15 +7224,6 @@ Citation Picker</string>
 			<key>ypos</key>
 			<integer>3250</integer>
 		</dict>
-		<key>95B2AEEF-580C-4858-BB44-B5394C3CC3F4</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>7</integer>
-			<key>xpos</key>
-			<integer>780</integer>
-			<key>ypos</key>
-			<integer>225</integer>
-		</dict>
 		<key>96FCE9BC-5201-4357-9B63-588F73AEF5F3</key>
 		<dict>
 			<key>colorindex</key>
@@ -7539,15 +7345,6 @@ Citation Picker</string>
 			<key>ypos</key>
 			<integer>1485</integer>
 		</dict>
-		<key>AAA17860-26D0-4DCC-BB6C-563DE9A9D630</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>7</integer>
-			<key>xpos</key>
-			<integer>620</integer>
-			<key>ypos</key>
-			<integer>345</integer>
-		</dict>
 		<key>AB43E3DE-695A-4EE9-9F03-9A7C94D6F2FE</key>
 		<dict>
 			<key>colorindex</key>
@@ -7618,7 +7415,7 @@ Citation Picker</string>
 			<key>note</key>
 			<string>display Alternative Citation Picker</string>
 			<key>xpos</key>
-			<integer>335</integer>
+			<integer>325</integer>
 			<key>ypos</key>
 			<integer>270</integer>
 		</dict>
@@ -7828,7 +7625,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>680</integer>
 			<key>ypos</key>
-			<integer>345</integer>
+			<integer>370</integer>
 		</dict>
 		<key>DF96F627-1FFC-452B-B013-242983A6197B</key>
 		<dict>
@@ -8026,7 +7823,7 @@ Citation Picker</string>
 		<string>reference_docx_path</string>
 	</array>
 	<key>version</key>
-	<string>3.5</string>
+	<string>3.6</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/pandoc_alfred</string>
 </dict>
