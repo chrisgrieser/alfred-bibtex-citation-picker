@@ -1,4 +1,4 @@
-# Pandoc-Suite for Citation and Bibliographies in Markdown
+# Pandoc-Suite and BibTeX-Zotero-Citation-Picker for Academic Writing in Markdown
 
 ![](https://img.shields.io/github/downloads/chrisgrieser/pandoc_alfred/total?label=Total%20Downloads&style=plastic)  ![](https://img.shields.io/github/v/release/chrisgrieser/pandoc_alfred?label=Latest%20Release&style=plastic)
 
