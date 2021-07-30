@@ -333,6 +333,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>26F37632-6D01-4F0C-AEC5-8B418A2A87E9</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C1A7CE22-0937-40FD-8227-9814C6153362</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+		</array>
 		<key>27CA4A32-2FDE-47CF-80F1-3202B62EC696</key>
 		<array>
 			<dict>
@@ -497,28 +510,6 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>9243B177-F039-48CF-A7D9-8D4F3C2664B1</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>sourceoutputuid</key>
-				<string>E1372B24-0172-44FD-92EC-5E6DD66FAF36</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>13464BBD-A691-40F0-A7E4-6ED4AEC2B37B</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
 				<string>6F19CED8-5C74-4F75-9683-F25D9EAE8841</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -543,6 +534,28 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
+				<string>9243B177-F039-48CF-A7D9-8D4F3C2664B1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>E1372B24-0172-44FD-92EC-5E6DD66FAF36</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>13464BBD-A691-40F0-A7E4-6ED4AEC2B37B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>E089F2B7-2FE8-4E77-B050-9AE8287186D8</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -562,6 +575,18 @@
 				<string></string>
 				<key>sourceoutputuid</key>
 				<string>1EAB8AD1-8313-4277-9413-9443C611B9CE</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>FC416094-1EB1-4464-97E2-8A6E678A45AC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>D8BEB576-CDD0-45F5-8045-CABD5E4C21DB</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -854,7 +879,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>6B46A5A0-E361-4930-B125-7EE723D2F1E4</string>
+				<string>77DFE852-B38C-42A8-82D5-E3453FDC8EDE</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1269,6 +1294,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>77DFE852-B38C-42A8-82D5-E3453FDC8EDE</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6B46A5A0-E361-4930-B125-7EE723D2F1E4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>78CC6B08-1B23-4498-89D9-BB736BC4BA81</key>
 		<array>
 			<dict>
@@ -1480,6 +1518,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>4CD979CC-3ADB-4C54-92FA-F2A9B569E75C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>9A2C6F2E-2ED7-4F96-B3E9-3F569F3799CD</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>67A601DA-66EE-45B7-8513-BB8E17D4A54D</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1825,6 +1876,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>1EEF412E-0663-4CB2-9A38-F5E1498CD868</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C1A7CE22-0937-40FD-8227-9814C6153362</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9A2C6F2E-2ED7-4F96-B3E9-3F569F3799CD</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2256,6 +2320,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>BCF854A0-9393-4A26-9BE7-B1DD004B8847</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>FC416094-1EB1-4464-97E2-8A6E678A45AC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>26F37632-6D01-4F0C-AEC5-8B418A2A87E9</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2978,11 +3055,11 @@ JSON.stringify({ 'items': entry_array });
 				<integer>0</integer>
 				<key>relatedApps</key>
 				<array>
-					<string>pro.writer.mac</string>
 					<string>md.obsidian</string>
+					<string>com.apple.finder</string>
 					<string>com.coteditor.CotEditor</string>
 					<string>com.github.atom</string>
-					<string>com.apple.finder</string>
+					<string>pro.writer.mac</string>
 				</array>
 				<key>relatedAppsMode</key>
 				<integer>1</integer>
@@ -3052,6 +3129,59 @@ JSON.stringify({ 'items': entry_array });
 			<string>6ACECC5E-0168-4F34-87C7-A1C6EFF8FCBC</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+
+if application "Zotero" is running then
+	return true
+else
+	return false
+end if
+
+end alfred_script</string>
+				<key>cachescript</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>C56AF146-03E0-448E-8592-491D12F5534A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>true</string>
+						<key>outputlabel</key>
+						<string>Zotero running</string>
+						<key>uid</key>
+						<string>4F6B18B4-5071-4DD9-8558-A68B97E733FA</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>not running</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>8BDFC290-8E56-42A6-91F5-91266806DB1C</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -3130,29 +3260,6 @@ end run</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>applescript</key>
-				<string>on alfred_script(q)
-
-if application "Zotero" is running then
-	return true
-else
-	return false
-end if
-
-end alfred_script</string>
-				<key>cachescript</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.applescript</string>
-			<key>uid</key>
-			<string>C56AF146-03E0-448E-8592-491D12F5534A</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>conditions</key>
 				<array>
 					<dict>
@@ -3197,36 +3304,6 @@ end alfred_script</string>
 			<string>4CD979CC-3ADB-4C54-92FA-F2A9B569E75C</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string></string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>true</string>
-						<key>outputlabel</key>
-						<string>Zotero running</string>
-						<key>uid</key>
-						<string>4F6B18B4-5071-4DD9-8558-A68B97E733FA</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>not running</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
-			<key>uid</key>
-			<string>8BDFC290-8E56-42A6-91F5-91266806DB1C</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4194,8 +4271,9 @@ fi</string>
 				<integer>0</integer>
 				<key>script</key>
 				<string># on the pdflatex location, see: https://superuser.com/questions/1038612/where-do-i-get-the-pdflatex-program-for-mac
+# further path additions as pandoc is installed a different location for ARM Macs
 
-export PATH=/usr/local/bin:/usr/local/texlive/:/Library/TeX/texbin/:$PATH
+export PATH=/usr/local/bin:/usr/local/texlive/:/Library/TeX/texbin/:/opt/homebrew/bin/:$PATH
 echo -n | {query}</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
@@ -4219,7 +4297,8 @@ echo -n | {query}</string>
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>--pandoc command construction
+				<string>#!/usr/bin/env osascript
+--pandoc command construction
 
 on run
 
@@ -4230,6 +4309,7 @@ on run
 	set reference_pptx_path to do shell script "echo " &amp; quoted form of (system attribute "reference_pptx_path") &amp; " | iconv -f UTF-8-MAC -t MACROMAN"
 	set further_pandoc_args to do shell script "echo " &amp; quoted form of (system attribute "further_pandoc_args") &amp; " | iconv -f UTF-8-MAC -t MACROMAN"
 	set second_library to do shell script "echo " &amp; quoted form of (system attribute "second_library") &amp; " | iconv -f UTF-8-MAC -t MACROMAN"
+	set resource_path_subfolder to do shell script "echo " &amp; quoted form of (system attribute "resource_path_subfolder") &amp; " | iconv -f UTF-8-MAC -t MACROMAN"
 	-- these omit the shell script detour as they will only have preset values without special characters
 	set pdf_engine to (system attribute "pdf_engine")
 	set desired_format to (system attribute "desired_format")
@@ -4241,8 +4321,8 @@ on run
 	repeat while (offset of "/" in doc_name) &gt; 0 --loop checks whether a Slash is still in the string
 		set doc_name to text ((offset of "/" in doc_name) + 1) thru -1 of doc_name
 	end repeat
-
 	set parent_folder to text 1 thru -(1 + (length of doc_name)) of doc_path
+	set resource_path_subfolder (to parent_folder &amp; resource_path_subfolder &amp; "/")
 
 	--removes common Markdown file extensions from the doc_name
 	set doc_name to text 1 thru ((offset of ".md" in doc_name) - 1) of doc_name
@@ -4260,6 +4340,7 @@ on run
 	set reference_docx to ""
 	set pdf_arg to ""
 	set reference_pptx to ""
+	set second_ressource_path to ""
 
 	set input to (quoted form of doc_path) &amp; " "
 	set output to "-o " &amp; (quoted form of (parent_folder &amp; doc_name &amp; "." &amp; desired_format)) &amp; " "
@@ -4272,9 +4353,10 @@ on run
 	if reference_docx_path ≠ "" then set reference_docx to "--reference-doc " &amp; (quoted form of reference_docx_path) &amp; " "
 	if reference_pptx_path ≠ "" then set reference_pptx to "--reference-doc " &amp; (quoted form of reference_pptx_path) &amp; " "
 	if pdf_engine ≠ "" then set pdf_arg to "--pdf-engine=" &amp; pdf_engine &amp; " "
+	if resource_path_subfolder ≠ "" then set second_ressource_path to "--resource-path=" &amp; (quoted form of parent_folder) &amp; " "
 
 	-- modifies command based on desired output format
-	set pandoc_command to ("pandoc " &amp; input &amp; output &amp; "--citeproc --metadata link-citations=true " &amp; resource_path &amp; bibliography &amp; bibliography2 &amp; citation_style &amp; further_args)
+	set pandoc_command to ("pandoc " &amp; input &amp; output &amp; "--citeproc --metadata link-citations=true " &amp; resource_path &amp; second_ressource_path &amp; bibliography &amp; bibliography2 &amp; citation_style &amp; further_args)
 	if desired_format = "docx" then set pandoc_command to (pandoc_command &amp; reference_docx)
 	if desired_format = "pdf" then set pandoc_command to (pandoc_command &amp; pdf_arg)
 	if desired_format = "html" then set pandoc_command to (pandoc_command &amp; "--standalone ")
@@ -4536,7 +4618,7 @@ return "{query}"</string>
 				<key>fixedorder</key>
 				<true/>
 				<key>items</key>
-				<string>[{"title":"🚪 Exit this Configuration","arg":"exit"},{"title":"🆕 ✴️ Citation Picker","arg":"citation_picker","subtitle":"currently: {var:citation_picker}"},{"title":"❓ Documentation &amp; Guide for the Pandoc Suite","arg":"workflow_documentation","subtitle":"Troubleshooting &amp; further Information"},{"title":"📚1️⃣ BibTeX Library","arg":"bibtex_lib","subtitle":"currently: {var:bibtex_library_path}"},{"title":"📚2️⃣ Additional Library (optional)","arg":"second_library","subtitle":"currently: {var:second_library}"},{"title":"✍️ Set Citation Style","arg":"set_csl","subtitle":"currently: {var:csl_file}"},{"title":"⬇️ Download New Citation Style","arg":"install_csl","subtitle":"From the CSL Style Repository"},{"title":"🔘 Hotkey Output Format","arg":"hotkey_format","subtitle":"currently: {var:hotkey_output_format}"},{"title":"📄 Word Reference Document","arg":"reference_docx","subtitle":"currently: {var:reference_docx_path}"},{"title":"🏎 PDF-Engine","arg":"pdf_engine","subtitle":"currently: {var:pdf_engine}"},{"title":"🧑‍🏫 Powerpoint Reference Presentation","arg":"reference_pptx","subtitle":"currently: {var:reference_pptx_path}"},{"title":"📊 Slide Level for Powerpoint","arg":"slide_level","subtitle":"currently: {var:slide_level}"},{"title":"❇️ Further Arguments","arg":"further_args","subtitle":"currently: {var:further_pandoc_args}"},{"title":"📧 Report an Issue to the Developer","arg":"email","subtitle":"will open your default mail client"},{"title":"🔄 Force Buffer Reload","arg":"force-buffer-reload","subtitle":"afterwards, launches BibTeX citation picker"}]</string>
+				<string>[{"title":"🚪 Exit this Configuration","arg":"exit"},{"title":"❓ Documentation &amp; Guide for the Pandoc Suite","arg":"workflow_documentation","subtitle":"Troubleshooting &amp; further Information"},{"title":"🆕 ✴️ Citation Picker","arg":"citation_picker","subtitle":"currently: {var:citation_picker}"},{"title":"📚 1️⃣ BibTeX Library","arg":"bibtex_lib","subtitle":"currently: {var:bibtex_library_path}"},{"title":"📚 2️⃣ Additional Library (optional)","arg":"second_library","subtitle":"currently: {var:second_library}"},{"title":"✍️ Set Citation Style","arg":"set_csl","subtitle":"currently: {var:csl_file}"},{"title":"⬇️ Download New Citation Style","arg":"install_csl","subtitle":"From the CSL Style Repository"},{"title":"🔘 Hotkey Output Format","arg":"hotkey_format","subtitle":"currently: {var:hotkey_output_format}"},{"title":"📇 Set Ressource Path subfolder","arg":"second_ressource_path","subtitle":"crrently: {var:resource_path_subfolder}"},{"title":"📄 Word Reference Document","arg":"reference_docx","subtitle":"currently: {var:reference_docx_path}"},{"title":"🏎 PDF-Engine","arg":"pdf_engine","subtitle":"currently: {var:pdf_engine}"},{"title":"🧑‍🏫 Powerpoint Reference Presentation","arg":"reference_pptx","subtitle":"currently: {var:reference_pptx_path}"},{"title":"📊 Slide Level for Powerpoint","arg":"slide_level","subtitle":"currently: {var:slide_level}"},{"title":"❇️ Further Arguments","arg":"further_args","subtitle":"currently: {var:further_pandoc_args}"},{"title":"🔄 Force Buffer Reload","arg":"force-buffer-reload","subtitle":"afterwards, launches BibTeX citation picker"},{"title":"📧 Report an Issue to the Developer","arg":"email","subtitle":"will open your default mail client"}]</string>
 				<key>keyword</key>
 				<string>pconf</string>
 				<key>runningsubtext</key>
@@ -5387,6 +5469,20 @@ end run</string>
 						<key>matchmode</key>
 						<integer>0</integer>
 						<key>matchstring</key>
+						<string>second_ressource_path</string>
+						<key>outputlabel</key>
+						<string>second_ressource_path</string>
+						<key>uid</key>
+						<string>D8BEB576-CDD0-45F5-8045-CABD5E4C21DB</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
 						<string>force-buffer-reload</string>
 						<key>outputlabel</key>
 						<string>force-buffer-reload</string>
@@ -5793,7 +5889,7 @@ end run</string>
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>{query}</string>
+				<string>'{query}'</string>
 				<key>title</key>
 				<string>✅ Further Pandoc Arguments set</string>
 			</dict>
@@ -5839,6 +5935,27 @@ end run</string>
 			<string>AF051F12-7BF5-4D7A-B0AA-9FAAF9EDB3CA</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string>^\/users\/[^\/]*(\/.*)$</string>
+				<key>regexcaseinsensitive</key>
+				<true/>
+				<key>regexmultiline</key>
+				<false/>
+				<key>replacestring</key>
+				<string>~$1</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.replace</string>
+			<key>uid</key>
+			<string>77DFE852-B38C-42A8-82D5-E3453FDC8EDE</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -6060,25 +6177,6 @@ end run</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>externaltriggerid</key>
-				<string>force-buffer-reload</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>9243B177-F039-48CF-A7D9-8D4F3C2664B1</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>matchmode</key>
 				<integer>0</integer>
 				<key>matchstring</key>
@@ -6139,14 +6237,6 @@ end run</string>
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
 			<string>2E691790-6430-4F5F-AF70-6FDB26F6BF35</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.hidealfred</string>
-			<key>uid</key>
-			<string>13464BBD-A691-40F0-A7E4-6ED4AEC2B37B</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -6255,7 +6345,7 @@ end run</string>
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>mailto:grieser.chris%2bpandoc@gmail.com?subject=[Pandoc-Suite] Issue Report&amp;body=Please report your issue here. %0A%0A---%0AAlfred Version: {var:version1}%0APandoc-Suite Version: {var:version2}</string>
+				<string>mailto:grieser.chris%2bpandoc@gmail.com?subject=[Pandoc-Suite] Issue Report&amp;body=Please report your issue here. Be sure to attach some screenshots and ideally also a debugging log as those help me to identify your problem more quickly. %0AYou can get a debugging log by opening the workflow in Alfred preferences and pressing cmd + D. A small window will open up which will log everything happening during the execution of the Pandoc-Suite. Use the Pandoc-Suite once more, copypaste the content of the log window, and attach it as a text file in your mail. %0A%0A---%0AAlfred Version: {var:version1}%0APandoc-Suite Version: {var:version2}</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -6288,6 +6378,33 @@ end run</string>
 			<string>alfred.workflow.utility.split</string>
 			<key>uid</key>
 			<string>013CC437-A57B-4A6E-BE78-84D244D5ED44</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>force-buffer-reload</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>9243B177-F039-48CF-A7D9-8D4F3C2664B1</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.hidealfred</string>
+			<key>uid</key>
+			<string>13464BBD-A691-40F0-A7E4-6ED4AEC2B37B</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -6612,6 +6729,94 @@ end run</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>subtext</key>
+				<string>Any folder named '{query}' in the same directory as the .md file will also be used</string>
+				<key>text</key>
+				<string>Set regular subfolder-name for an additional Ressource-Path</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>26F37632-6D01-4F0C-AEC5-8B418A2A87E9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>on run
+
+tell application "Alfred" 
+    set configuration "resource_path_subfolder" to value "{query}" in workflow "de.chris-grieser.pandoc-alfred" with exportable
+end tell
+
+return "{query}"
+
+end run</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>C1A7CE22-0937-40FD-8227-9814C6153362</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>'{query}'</string>
+				<key>title</key>
+				<string>✅ Image Subfolder set</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>9A2C6F2E-2ED7-4F96-B3E9-3F569F3799CD</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>FC416094-1EB1-4464-97E2-8A6E678A45AC</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>Documentation &amp; Usage Guide
@@ -6621,9 +6826,15 @@ end run</string>
 
 Release Notes
 =============
+3.9
+- `ppconf` option to set an additional resource path subfolder (e.g. "attachments"). Pandoc will then always look for resources (e.g. images) in a subfolder of that name located in the same directory as the Markdown file. (In addition to the directory of the Markdown file itself. )
+- improved debugging
+- Fixed an issue with homebrew-installed Pandoc on ARM Macs ("M1 Macs").
+- Issues with Chinese characters ahve been noted and will be adressed in the next release
+
 3.8
 - ➡️ Support for using the hotkey from in *Obsidian*. However, [it requires some minor setup](https://www.notion.so/chrisgrieser/Pandoc-Suite-for-Citations-and-Bibliographies-in-Markdown-4de4bd634ceb4533a1add8b105a487b1#379bf518f185417097eafa8f528e4cf5).
-- 👉 Name Change: due to the increasing role of the Citation Picker(s), the name of this workflow has been changed to reflect it's functionality more approriately. It is now called "Pandoc Suite and BibTeX-Zotero-Citation Picker for Academic Writing in Markdown". For now...
+- 👉 Name Change: due to the increasing role of the Citation Picker(s), the name of this workflow has been changed to reflect it's functionality more appropriately. It is now called "Pandoc Suite and BibTeX-Zotero-Citation Picker for Academic Writing in Markdown". For now...
 - `pconf` option to force reload the buffer. Useful for debugging, when the BibTeX citation picker acts up. (Buffer normally only reloads when there have been changes to the .bib file)
 
 
@@ -6845,9 +7056,9 @@ Changes in Detail
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>95</integer>
+			<integer>30</integer>
 			<key>ypos</key>
-			<integer>2765</integer>
+			<integer>2945</integer>
 		</dict>
 		<key>13851D58-1F95-41E7-A686-9E1B91BD2086</key>
 		<dict>
@@ -7014,6 +7225,15 @@ Triggers Pandoc Conversion</string>
 			<key>ypos</key>
 			<integer>1295</integer>
 		</dict>
+		<key>26F37632-6D01-4F0C-AEC5-8B418A2A87E9</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>510</integer>
+			<key>ypos</key>
+			<integer>3290</integer>
+		</dict>
 		<key>27CA4A32-2FDE-47CF-80F1-3202B62EC696</key>
 		<dict>
 			<key>colorindex</key>
@@ -7057,9 +7277,9 @@ Triggers Pandoc Conversion</string>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>140</integer>
+			<integer>135</integer>
 			<key>ypos</key>
-			<integer>2190</integer>
+			<integer>2235</integer>
 		</dict>
 		<key>2D59F287-3F5D-4A64-9151-E43716142751</key>
 		<dict>
@@ -7524,6 +7744,17 @@ Citation Picker</string>
 			<key>ypos</key>
 			<integer>2770</integer>
 		</dict>
+		<key>77DFE852-B38C-42A8-82D5-E3453FDC8EDE</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>note</key>
+			<string>replace home with ~</string>
+			<key>xpos</key>
+			<integer>930</integer>
+			<key>ypos</key>
+			<integer>2560</integer>
+		</dict>
 		<key>78CC6B08-1B23-4498-89D9-BB736BC4BA81</key>
 		<dict>
 			<key>colorindex</key>
@@ -7591,9 +7822,9 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>480</integer>
+			<integer>475</integer>
 			<key>ypos</key>
-			<integer>615</integer>
+			<integer>565</integer>
 		</dict>
 		<key>8C8E6A55-B3BD-4622-9C3F-CE3DB8BB547F</key>
 		<dict>
@@ -7631,9 +7862,9 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>210</integer>
+			<integer>110</integer>
 			<key>ypos</key>
-			<integer>2725</integer>
+			<integer>2920</integer>
 		</dict>
 		<key>92FD4A05-28D1-4C72-B87F-FE9BF5455B6A</key>
 		<dict>
@@ -7688,6 +7919,15 @@ Citation Picker</string>
 			<integer>1280</integer>
 			<key>ypos</key>
 			<integer>295</integer>
+		</dict>
+		<key>9A2C6F2E-2ED7-4F96-B3E9-3F569F3799CD</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>1050</integer>
+			<key>ypos</key>
+			<integer>3290</integer>
 		</dict>
 		<key>9C4D210E-D3C9-4A87-8110-71B51B36DCF8</key>
 		<dict>
@@ -7911,6 +8151,15 @@ Citation Picker</string>
 			<key>ypos</key>
 			<integer>1340</integer>
 		</dict>
+		<key>C1A7CE22-0937-40FD-8227-9814C6153362</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>720</integer>
+			<key>ypos</key>
+			<integer>3290</integer>
+		</dict>
 		<key>C3488553-3AD8-4B2E-8280-D028B79AD0B5</key>
 		<dict>
 			<key>colorindex</key>
@@ -7934,9 +8183,9 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>325</integer>
+			<integer>315</integer>
 			<key>ypos</key>
-			<integer>580</integer>
+			<integer>500</integer>
 		</dict>
 		<key>C5CD1FB8-8FE5-4F75-BCE0-0D7F03887989</key>
 		<dict>
@@ -8164,7 +8413,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>915</integer>
 			<key>ypos</key>
-			<integer>820</integer>
+			<integer>830</integer>
 		</dict>
 		<key>EB248989-2356-4C5F-9E7F-3F0DD9F2B859</key>
 		<dict>
@@ -8229,6 +8478,15 @@ Citation Picker</string>
 			<key>ypos</key>
 			<integer>1100</integer>
 		</dict>
+		<key>FC416094-1EB1-4464-97E2-8A6E678A45AC</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>405</integer>
+			<key>ypos</key>
+			<integer>3320</integer>
+		</dict>
 		<key>FE874084-CB56-4BDF-9FF0-A3B1920C26F2</key>
 		<dict>
 			<key>colorindex</key>
@@ -8274,6 +8532,8 @@ Citation Picker</string>
 		<string>~/Google Drive/Academia/Vorlagen/Academic Writing Template.docx</string>
 		<key>reference_pptx_path</key>
 		<string>~/Google Drive/Academia/Vorlagen/Academic Presentation Template.pptx</string>
+		<key>resource_path_subfolder</key>
+		<string>attachments</string>
 		<key>second_library</key>
 		<string></string>
 		<key>slide_level</key>
@@ -8290,7 +8550,7 @@ Citation Picker</string>
 		<string>csl_file</string>
 	</array>
 	<key>version</key>
-	<string>3.8</string>
+	<string>3.9</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/pandoc_alfred</string>
 </dict>
