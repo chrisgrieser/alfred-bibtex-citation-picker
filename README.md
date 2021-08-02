@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/github/downloads/chrisgrieser/pandoc_alfred/total?label=Total%20Downloads&style=plastic)  ![](https://img.shields.io/github/v/release/chrisgrieser/pandoc_alfred?label=Latest%20Release&style=plastic)
 
-## What is does
+## What it does
 This Alfred workflow enables academic citing and publishing with any markdown app like iA Writer, Ulysses, or Scrivener. It does so by offering a Citation Picker for [Pandoc Markdown Citations](https://pandoc.org/MANUAL.html#pandocs-markdown) and by automatically converting Markdown files into `.docx`, `.pdf`, `.html`, or `.pptx` with the proper bibliography. 
 
 This workflow is made for academics who neither like Word nor LaTeX. As the name suggests, this workflow is basically a user-friendly interface for Pandoc, allowing you to make use of Pandoc's capabilities without ever needing to open the Terminal. 
