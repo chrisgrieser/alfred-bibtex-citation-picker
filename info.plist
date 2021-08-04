@@ -86,6 +86,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>0DF9D355-2614-4147-A927-E6427A7546A9</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B89ACE5C-1308-4CFE-9560-B9B438F4F1E1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>10000D18-BDC8-4A08-B089-D7164D917E8A</key>
 		<array>
 			<dict>
@@ -114,19 +127,6 @@
 		</array>
 		<key>13464BBD-A691-40F0-A7E4-6ED4AEC2B37B</key>
 		<array/>
-		<key>13F72759-D1B9-4894-A96F-528427239688</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>7085C0CF-F857-4806-B96D-1FADD51E37EE</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>1586C092-4E94-4D4C-B43C-70C1C7103F66</key>
 		<array>
 			<dict>
@@ -734,7 +734,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>13F72759-D1B9-4894-A96F-528427239688</string>
+				<string>0DF9D355-2614-4147-A927-E6427A7546A9</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1750,6 +1750,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>A6A0F030-076E-4832-A635-806613DADE21</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>B89ACE5C-1308-4CFE-9560-B9B438F4F1E1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7085C0CF-F857-4806-B96D-1FADD51E37EE</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -3108,11 +3121,11 @@ JSON.stringify({ 'items': entry_array });
 				<integer>0</integer>
 				<key>relatedApps</key>
 				<array>
-					<string>com.apple.finder</string>
 					<string>pro.writer.mac</string>
+					<string>md.obsidian</string>
 					<string>com.coteditor.CotEditor</string>
 					<string>com.github.atom</string>
-					<string>md.obsidian</string>
+					<string>com.apple.finder</string>
 				</array>
 				<key>relatedAppsMode</key>
 				<integer>1</integer>
@@ -3742,21 +3755,19 @@ end alfred_script</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>applescript</key>
-				<string>on alfred_script(q)
-
-tell application "Obsidian" to activate
-tell application "System Events" to keystroke "r" using {command down, option down, shift down, control down}
-delay 0.2
-
-end alfred_script</string>
-				<key>cachescript</key>
-				<false/>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>obsidian://advanced-uri?vault=Vault&amp;commandid=open-with-default-app%253Ashow</string>
+				<key>utf8</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.applescript</string>
+			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>13F72759-D1B9-4894-A96F-528427239688</string>
+			<string>0DF9D355-2614-4147-A927-E6427A7546A9</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -3790,6 +3801,19 @@ end alfred_script</string>
 			<string>BCF854A0-9393-4A26-9BE7-B1DD004B8847</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>seconds</key>
+				<string>.1</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.delay</string>
+			<key>uid</key>
+			<string>B89ACE5C-1308-4CFE-9560-B9B438F4F1E1</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -6989,9 +7013,17 @@ end run</string>
 ===========================
 ➡️ https://chris-grieser.de/pandoc_alfred
 
+⚠️ Obsidian Users
+==================
+if you want to trigger the Pandoc Suite from inside Obsidian, you have to install the [Obsidian's Advanced-URI-Plugin](https://github.com/Vinzent03/obsidian-advanced-uri).
+
 
 Release Notes
 =============
+4.1
+- triggering the hotkey from Obsidian now works with [Obsidian's Advanced-URI-Plugin](https://github.com/Vinzent03/obsidian-advanced-uri) instead of the hacky custom keyboard shortcut. 
+
+
 4.0
 - appends date at filename of created file
 - `pconf` option to set american date format (mm-dd-yyyy) instead of the normal date format (dd-mm-yyyy)
@@ -7210,6 +7242,15 @@ Changes in Detail
 			<key>ypos</key>
 			<integer>2425</integer>
 		</dict>
+		<key>0DF9D355-2614-4147-A927-E6427A7546A9</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>xpos</key>
+			<integer>290</integer>
+			<key>ypos</key>
+			<integer>1065</integer>
+		</dict>
 		<key>10000D18-BDC8-4A08-B089-D7164D917E8A</key>
 		<dict>
 			<key>colorindex</key>
@@ -7245,17 +7286,6 @@ Changes in Detail
 			<integer>1460</integer>
 			<key>ypos</key>
 			<integer>2260</integer>
-		</dict>
-		<key>13F72759-D1B9-4894-A96F-528427239688</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>2</integer>
-			<key>note</key>
-			<string>trigger "Reveal in System explorer" in Obsidian</string>
-			<key>xpos</key>
-			<integer>265</integer>
-			<key>ypos</key>
-			<integer>1045</integer>
 		</dict>
 		<key>1586C092-4E94-4D4C-B43C-70C1C7103F66</key>
 		<dict>
@@ -8140,7 +8170,7 @@ Citation Picker</string>
 			<key>note</key>
 			<string>also has to match "alternative" due to prior Citation Picker naming</string>
 			<key>xpos</key>
-			<integer>175</integer>
+			<integer>180</integer>
 			<key>ypos</key>
 			<integer>295</integer>
 		</dict>
@@ -8273,6 +8303,15 @@ Citation Picker</string>
 			<integer>855</integer>
 			<key>ypos</key>
 			<integer>2815</integer>
+		</dict>
+		<key>B89ACE5C-1308-4CFE-9560-B9B438F4F1E1</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>xpos</key>
+			<integer>430</integer>
+			<key>ypos</key>
+			<integer>1095</integer>
 		</dict>
 		<key>B8AEF220-7CBC-4D07-BA5F-D28094B3D4B4</key>
 		<dict>
@@ -8758,16 +8797,16 @@ Citation Picker</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
-		<string>pdf_engine</string>
 		<string>reference_pptx_path</string>
-		<string>reference_docx_path</string>
 		<string>second_library</string>
-		<string>citation_picker</string>
 		<string>bibtex_library_path</string>
 		<string>csl_file</string>
+		<string>citation_picker</string>
+		<string>pdf_engine</string>
+		<string>reference_docx_path</string>
 	</array>
 	<key>version</key>
-	<string>4.0</string>
+	<string>4.1</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/pandoc_alfred</string>
 </dict>
