@@ -590,6 +590,18 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>845BF013-84DB-424E-8D00-B76EF3561521</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>BE9CD2CB-7BD4-460A-904F-A49065E9DB6F</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 		<key>2D59F287-3F5D-4A64-9151-E43716142751</key>
 		<array>
@@ -731,6 +743,19 @@
 				<string>3AFC5100-562E-484E-BA19-5240BCE36644</string>
 				<key>vitoclose</key>
 				<false/>
+			</dict>
+		</array>
+		<key>367167E6-8193-46E4-A342-A1B8B9BBD18D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F8F71FBC-41A3-41EB-B0A8-6CF13A61A67B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<true/>
 			</dict>
 		</array>
 		<key>38D8D3B7-5FBE-4AD1-AD38-FB76FFEE2519</key>
@@ -1344,6 +1369,19 @@
 				<string></string>
 				<key>vitoclose</key>
 				<true/>
+			</dict>
+		</array>
+		<key>845BF013-84DB-424E-8D00-B76EF3561521</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>367167E6-8193-46E4-A342-A1B8B9BBD18D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>84CF6CEA-7CE8-490B-BC37-EB2276156189</key>
@@ -2328,6 +2366,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>F8F71FBC-41A3-41EB-B0A8-6CF13A61A67B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D1616C9F-E68E-4FB2-8C35-D729295041E2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>FC416094-1EB1-4464-97E2-8A6E678A45AC</key>
 		<array>
 			<dict>
@@ -2706,6 +2757,8 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 				<integer>0</integer>
 				<key>escaping</key>
 				<integer>68</integer>
+				<key>keyword</key>
+				<string>cite</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -2944,11 +2997,11 @@ JSON.stringify({ 'items': entry_array });
 						<key>matchcasesensitive</key>
 						<false/>
 						<key>matchmode</key>
-						<integer>0</integer>
+						<integer>4</integer>
 						<key>matchstring</key>
-						<string>alternative</string>
+						<string>alternative|Alfred</string>
 						<key>outputlabel</key>
-						<string>BibTeX (alternative)</string>
+						<string>Alfred (alternative)</string>
 						<key>uid</key>
 						<string>4F6B18B4-5071-4DD9-8558-A68B97E733FA</string>
 					</dict>
@@ -3055,11 +3108,11 @@ JSON.stringify({ 'items': entry_array });
 				<integer>0</integer>
 				<key>relatedApps</key>
 				<array>
-					<string>md.obsidian</string>
 					<string>com.apple.finder</string>
+					<string>pro.writer.mac</string>
 					<string>com.coteditor.CotEditor</string>
 					<string>com.github.atom</string>
-					<string>pro.writer.mac</string>
+					<string>md.obsidian</string>
 				</array>
 				<key>relatedAppsMode</key>
 				<integer>1</integer>
@@ -3669,7 +3722,7 @@ end alfred_script</string>
 						<key>matchmode</key>
 						<integer>4</integer>
 						<key>matchstring</key>
-						<string>.(md|txt|markdown|mdtxt|mdown|rmd|mdwn)$</string>
+						<string>(md|txt|markdown|mdtxt|mdown|rmd|mdwn)$</string>
 						<key>outputlabel</key>
 						<string>md file</string>
 						<key>uid</key>
@@ -3794,7 +3847,7 @@ You have to set a PDF engine before using "pdf" as output format. You can do sp 
 			<key>config</key>
 			<dict>
 				<key>acceptsmulti</key>
-				<false/>
+				<integer>0</integer>
 				<key>filetypes</key>
 				<array>
 					<string>+net.daringfireball.markdown</string>
@@ -3992,7 +4045,7 @@ You can do that by triggering Alfred, typing "pconf", and selecting "BibTeX Libr
 			<key>config</key>
 			<dict>
 				<key>acceptsmulti</key>
-				<false/>
+				<integer>0</integer>
 				<key>filetypes</key>
 				<array>
 					<string>+net.daringfireball.markdown</string>
@@ -4212,7 +4265,7 @@ fi</string>
 			<key>config</key>
 			<dict>
 				<key>acceptsmulti</key>
-				<false/>
+				<integer>0</integer>
 				<key>filetypes</key>
 				<array>
 					<string>+net.daringfireball.markdown</string>
@@ -4272,9 +4325,9 @@ fi</string>
 				<key>script</key>
 				<string># on the pdflatex location, see: https://superuser.com/questions/1038612/where-do-i-get-the-pdflatex-program-for-mac
 # further path additions as pandoc is installed a different location for ARM Macs
-
 export PATH=/usr/local/bin:/usr/local/texlive/:/Library/TeX/texbin/:/opt/homebrew/bin/:$PATH
-echo -n | {query}</string>
+
+{query}</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -4334,6 +4387,9 @@ on run
 	set doc_name to text 1 thru ((offset of ".mdown" in doc_name) - 1) of doc_name
 	set doc_name to text 1 thru ((offset of ".txt" in doc_name) - 1) of doc_name
 
+	-- ARM workaround, see https://groups.google.com/g/pandoc-discuss/c/tWWIEgW94U0/m/yKMfldtYBgAJ?pli=1
+	if (pdf_engine is "pdflatex-arm") then set pdf_engine to "/Library/TeX/texbin/pdflatex"
+
 	-- building the elements of the pandoc command
 	set bibliography to ""
 	set bibliography2 to ""
@@ -4367,11 +4423,11 @@ on run
 	return pandoc_command
 end run</string>
 				<key>scriptargtype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>scriptfile</key>
-				<string></string>
+				<string>pandoc-command-construction.js</string>
 				<key>type</key>
-				<integer>6</integer>
+				<integer>8</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -4537,7 +4593,7 @@ return "{query}"</string>
 			<key>config</key>
 			<dict>
 				<key>acceptsmulti</key>
-				<false/>
+				<integer>0</integer>
 				<key>filetypes</key>
 				<array>
 					<string>+net.daringfireball.markdown</string>
@@ -4594,17 +4650,17 @@ return "{query}"</string>
 		</dict>
 		<dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.junction</string>
+			<string>alfred.workflow.utility.hidealfred</string>
 			<key>uid</key>
-			<string>DF96F627-1FFC-452B-B013-242983A6197B</string>
+			<string>57DF4B82-9DCC-4C7C-B933-A6D37B230A13</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.hidealfred</string>
+			<string>alfred.workflow.utility.junction</string>
 			<key>uid</key>
-			<string>57DF4B82-9DCC-4C7C-B933-A6D37B230A13</string>
+			<string>DF96F627-1FFC-452B-B013-242983A6197B</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4618,7 +4674,7 @@ return "{query}"</string>
 				<key>fixedorder</key>
 				<true/>
 				<key>items</key>
-				<string>[{"title":"🚪 Exit this Configuration","arg":"exit"},{"title":"❓ Documentation &amp; Guide for the Pandoc Suite","arg":"workflow_documentation","subtitle":"Troubleshooting &amp; further Information"},{"title":"🆕 ✴️ Citation Picker","arg":"citation_picker","subtitle":"currently: {var:citation_picker}"},{"title":"📚 1️⃣ BibTeX Library","arg":"bibtex_lib","subtitle":"currently: {var:bibtex_library_path}"},{"title":"📚 2️⃣ Additional Library (optional)","arg":"second_library","subtitle":"currently: {var:second_library}"},{"title":"✍️ Set Citation Style","arg":"set_csl","subtitle":"currently: {var:csl_file}"},{"title":"⬇️ Download New Citation Style","arg":"install_csl","subtitle":"From the CSL Style Repository"},{"title":"🔘 Hotkey Output Format","arg":"hotkey_format","subtitle":"currently: {var:hotkey_output_format}"},{"title":"📇 Set Ressource Path subfolder","arg":"second_ressource_path","subtitle":"crrently: {var:resource_path_subfolder}"},{"title":"📄 Word Reference Document","arg":"reference_docx","subtitle":"currently: {var:reference_docx_path}"},{"title":"🏎 PDF-Engine","arg":"pdf_engine","subtitle":"currently: {var:pdf_engine}"},{"title":"🧑‍🏫 Powerpoint Reference Presentation","arg":"reference_pptx","subtitle":"currently: {var:reference_pptx_path}"},{"title":"📊 Slide Level for Powerpoint","arg":"slide_level","subtitle":"currently: {var:slide_level}"},{"title":"❇️ Further Arguments","arg":"further_args","subtitle":"currently: {var:further_pandoc_args}"},{"title":"🔄 Force Buffer Reload","arg":"force-buffer-reload","subtitle":"afterwards, launches BibTeX citation picker"},{"title":"📧 Report an Issue to the Developer","arg":"email","subtitle":"will open your default mail client"}]</string>
+				<string>[{"title":"🚪 Exit this Configuration","arg":"exit"},{"title":"❓ Documentation &amp; Guide for the Pandoc Suite","arg":"workflow_documentation","subtitle":"Troubleshooting &amp; further Information"},{"title":"🆕 ✴️ Citation Picker","arg":"citation_picker","subtitle":"currently: {var:citation_picker}"},{"title":"📚 1️⃣ BibTeX Library","arg":"bibtex_lib","subtitle":"currently: {var:bibtex_library_path}"},{"title":"📚 2️⃣ Additional Library (optional)","arg":"second_library","subtitle":"currently: {var:second_library}"},{"title":"✍️ Set Citation Style","arg":"set_csl","subtitle":"currently: {var:csl_file}"},{"title":"⬇️ Download New Citation Style","arg":"install_csl","subtitle":"From the CSL Style Repository"},{"title":"🔘 Hotkey Output Format","arg":"hotkey_format","subtitle":"currently: {var:hotkey_output_format}"},{"title":"📅 Date to Append at Output File","arg":"date_to_append","subtitle":"currently: {var:date_to_append}"},{"title":"📇 Set Ressource Path subfolder","arg":"second_ressource_path","subtitle":"currently: {var:resource_path_subfolder}"},{"title":"📄 Word Reference Document","arg":"reference_docx","subtitle":"currently: {var:reference_docx_path}"},{"title":"🏎 PDF-Engine","arg":"pdf_engine","subtitle":"currently: {var:pdf_engine}"},{"title":"🧑‍🏫 Powerpoint Reference Presentation","arg":"reference_pptx","subtitle":"currently: {var:reference_pptx_path}"},{"title":"📊 Slide Level for Powerpoint","arg":"slide_level","subtitle":"currently: {var:slide_level}"},{"title":"❇️ Further Arguments","arg":"further_args","subtitle":"currently: {var:further_pandoc_args}"},{"title":"🔄 Force Buffer Reload","arg":"force-buffer-reload","subtitle":"afterwards, launches BibTeX citation picker"},{"title":"📧 Report an Issue to the Developer","arg":"email","subtitle":"will open your default mail client"}]</string>
 				<key>keyword</key>
 				<string>pconf</string>
 				<key>runningsubtext</key>
@@ -5483,6 +5539,20 @@ end run</string>
 						<key>matchmode</key>
 						<integer>0</integer>
 						<key>matchstring</key>
+						<string>date_to_append</string>
+						<key>outputlabel</key>
+						<string>date_to_append</string>
+						<key>uid</key>
+						<string>BE9CD2CB-7BD4-460A-904F-A49065E9DB6F</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
 						<string>force-buffer-reload</string>
 						<key>outputlabel</key>
 						<string>force-buffer-reload</string>
@@ -5757,7 +5827,7 @@ end run</string>
 				<key>fixedorder</key>
 				<true/>
 				<key>items</key>
-				<string>[{"title":"Information on PDF Engines","arg":"info_website","subtitle":"https:\/\/www.notion.so\/chrisgrieser\/Pandoc-Suite-for-Academic-Citation-and-Bibliography-Creation-in-Markdown-4de4bd634ceb4533a1add8b105a487b1#f1fc8aca886a4b17afbbd67cda664194"},{"title":"wkhtmltopdf (recommended)","arg":"wkhtmltopdf","subtitle":"HTML"},{"title":"pdfroff (recommended)","arg":"pdfroff","subtitle":"groff"},{"title":"prince","arg":"prince","subtitle":"HTML"},{"title":"tectonic","arg":"tectonic","subtitle":"self-contained Latex"},{"title":"pdflatex","arg":"pdflatex","subtitle":"Latex"},{"title":"weasyprint","arg":"weasyprint","subtitle":"HTML"},{"title":"context","arg":"context","subtitle":"Tex"},{"title":"lualatex","arg":"lualatex","subtitle":"Latex"},{"title":"xelatex","arg":"xelatex","subtitle":"Latex"},{"title":"latexmk","arg":"latexmk","subtitle":"Latex"}]</string>
+				<string>[{"title":"Information on PDF Engines","arg":"info_website","subtitle":"https:\/\/www.notion.so\/chrisgrieser\/Pandoc-Suite-for-Academic-Citation-and-Bibliography-Creation-in-Markdown-4de4bd634ceb4533a1add8b105a487b1#f1fc8aca886a4b17afbbd67cda664194"},{"title":"pdflatex (recommended)","arg":"pdflatex","subtitle":"Latex"},{"title":"wkhtmltopdf (recommended)","arg":"wkhtmltopdf","subtitle":"HTML"},{"title":"pdfroff (recommended)","arg":"pdfroff","subtitle":"groff"},{"title":"pdflatex (M1 Macs)","arg":"pdflatex-arm","subtitle":"Workaround for ARM Macs"},{"title":"prince","arg":"prince","subtitle":"HTML"},{"title":"tectonic","arg":"tectonic","subtitle":"self-contained Latex"},{"title":"weasyprint","arg":"weasyprint","subtitle":"HTML"},{"title":"context","arg":"context","subtitle":"Tex"},{"title":"lualatex","arg":"lualatex","subtitle":"Latex"},{"title":"xelatex","arg":"xelatex","subtitle":"Latex"},{"title":"latexmk","arg":"latexmk","subtitle":"Latex"}]</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>subtext</key>
@@ -6457,7 +6527,7 @@ end run</string>
 				<key>fixedorder</key>
 				<true/>
 				<key>items</key>
-				<string>[{"title":"🅩 Zotero Citation Picker (classic)","arg":"classic","subtitle":"Zotero GUI. (⚠️ Zotero must be installed!)"},{"title":"🅱️ BibTeX Citation Picker (alternative)","arg":"alternative","subtitle":"quicker, uses Alfred as GUI, works directly on BibTeX Library ( ➞ Zotero does not need to be running)"}]</string>
+				<string>[{"title":"🅩 Zotero Citation Picker (classic)","arg":"Zotero","subtitle":"uses native Zotero GUI (⚠️ Zotero must be installed)"},{"title":"🅰️ Alfred Citation Picker (alternative)","arg":"Alfred","subtitle":"uses Alfred as GUI, works directly on BibTeX Library"}]</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>subtext</key>
@@ -6817,6 +6887,102 @@ end run</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>fixedorder</key>
+				<true/>
+				<key>items</key>
+				<string>[{"title":"📅 Normal Date Format","arg":"normal","subtitle":"dd-mm-yyyy"},{"title":"🗓 American Date Format","arg":"american","subtitle":"mm-dd-yyyy"},{"title":"❌ Do not Append Date","arg":"none","subtitle":""}]</string>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Select Date Type to Append</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.listfilter</string>
+			<key>uid</key>
+			<string>367167E6-8193-46E4-A342-A1B8B9BBD18D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>on run
+
+tell application "Alfred" 
+    set configuration "date_to_append" to value "{query}" in workflow "de.chris-grieser.pandoc-alfred" with exportable
+end tell
+
+return "{query}"
+
+end run</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>F8F71FBC-41A3-41EB-B0A8-6CF13A61A67B</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>'{query}'</string>
+				<key>title</key>
+				<string>✅ Date to Append set</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>D1616C9F-E68E-4FB2-8C35-D729295041E2</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>845BF013-84DB-424E-8D00-B76EF3561521</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>Documentation &amp; Usage Guide
@@ -6826,11 +6992,22 @@ end run</string>
 
 Release Notes
 =============
+4.0
+- appends date at filename of created file
+- `pconf` option to set american date format (mm-dd-yyyy) instead of the normal date format (dd-mm-yyyy)
+- fixed bug where Chinese characters in filenames can break pandoc
+- rewritten core parts of the code in Javascript
+- improved matching of the Citation Picker
+- speed up of the citation picker
+- Workaround for pdflatex when using ARM (M1) Macs: use `pconf` and choose pdflatex-ARM. [More info on the problem](https://groups.google.com/g/pandoc-discuss/c/tWWIEgW94U0/m/yKMfldtYBgAJ).
+- more intuitive renaming of the citation pickers
+
+
 3.9
 - `ppconf` option to set an additional resource path subfolder (e.g. "attachments"). Pandoc will then always look for resources (e.g. images) in a subfolder of that name located in the same directory as the Markdown file. (In addition to the directory of the Markdown file itself. )
 - improved debugging
 - Fixed an issue with homebrew-installed Pandoc on ARM Macs ("M1 Macs").
-- Issues with Chinese characters ahve been noted and will be adressed in the next release
+- Issues with Chinese characters have been noted and will be adressed in the next release
 
 3.8
 - ➡️ Support for using the hotkey from in *Obsidian*. However, [it requires some minor setup](https://www.notion.so/chrisgrieser/Pandoc-Suite-for-Citations-and-Bibliographies-in-Markdown-4de4bd634ceb4533a1add8b105a487b1#379bf518f185417097eafa8f528e4cf5).
@@ -6998,7 +7175,7 @@ Changes in Detail
 			<key>note</key>
 			<string>check whether buffer is outdated</string>
 			<key>xpos</key>
-			<integer>315</integer>
+			<integer>335</integer>
 			<key>ypos</key>
 			<integer>155</integer>
 		</dict>
@@ -7056,7 +7233,7 @@ Changes in Detail
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>30</integer>
+			<integer>80</integer>
 			<key>ypos</key>
 			<integer>2945</integer>
 		</dict>
@@ -7344,6 +7521,15 @@ Triggers Pandoc Conversion</string>
 			<key>ypos</key>
 			<integer>880</integer>
 		</dict>
+		<key>367167E6-8193-46E4-A342-A1B8B9BBD18D</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>510</integer>
+			<key>ypos</key>
+			<integer>3415</integer>
+		</dict>
 		<key>38D8D3B7-5FBE-4AD1-AD38-FB76FFEE2519</key>
 		<dict>
 			<key>colorindex</key>
@@ -7519,9 +7705,9 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>655</integer>
+			<integer>665</integer>
 			<key>ypos</key>
-			<integer>1735</integer>
+			<integer>1700</integer>
 		</dict>
 		<key>5B9676C6-1ED4-4548-835F-8E5B18BB5392</key>
 		<dict>
@@ -7546,7 +7732,7 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>xpos</key>
-			<integer>450</integer>
+			<integer>470</integer>
 			<key>ypos</key>
 			<integer>175</integer>
 		</dict>
@@ -7626,7 +7812,7 @@ Citation Picker</string>
 			<key>note</key>
 			<string>citekey w/o @</string>
 			<key>xpos</key>
-			<integer>715</integer>
+			<integer>725</integer>
 			<key>ypos</key>
 			<integer>490</integer>
 		</dict>
@@ -7786,6 +7972,15 @@ Citation Picker</string>
 			<key>ypos</key>
 			<integer>1750</integer>
 		</dict>
+		<key>845BF013-84DB-424E-8D00-B76EF3561521</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>405</integer>
+			<key>ypos</key>
+			<integer>3445</integer>
+		</dict>
 		<key>84CF6CEA-7CE8-490B-BC37-EB2276156189</key>
 		<dict>
 			<key>colorindex</key>
@@ -7862,7 +8057,7 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>110</integer>
+			<integer>160</integer>
 			<key>ypos</key>
 			<integer>2920</integer>
 		</dict>
@@ -7941,11 +8136,13 @@ Citation Picker</string>
 		<key>9E303148-5BB4-4D8A-AF82-05EE222BD6F9</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
+			<key>note</key>
+			<string>also has to match "alternative" due to prior Citation Picker naming</string>
 			<key>xpos</key>
 			<integer>175</integer>
 			<key>ypos</key>
-			<integer>300</integer>
+			<integer>295</integer>
 		</dict>
 		<key>9EF875EC-CDA4-43CB-90A0-CB898397B9D3</key>
 		<dict>
@@ -8183,7 +8380,7 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>315</integer>
+			<integer>330</integer>
 			<key>ypos</key>
 			<integer>500</integer>
 		</dict>
@@ -8295,6 +8492,15 @@ Citation Picker</string>
 			<integer>1185</integer>
 			<key>ypos</key>
 			<integer>1330</integer>
+		</dict>
+		<key>D1616C9F-E68E-4FB2-8C35-D729295041E2</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>1050</integer>
+			<key>ypos</key>
+			<integer>3415</integer>
 		</dict>
 		<key>D38F9CCA-E436-47F3-BC3C-FD570EC9D933</key>
 		<dict>
@@ -8478,6 +8684,15 @@ Citation Picker</string>
 			<key>ypos</key>
 			<integer>1100</integer>
 		</dict>
+		<key>F8F71FBC-41A3-41EB-B0A8-6CF13A61A67B</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>720</integer>
+			<key>ypos</key>
+			<integer>3415</integer>
+		</dict>
 		<key>FC416094-1EB1-4464-97E2-8A6E678A45AC</key>
 		<dict>
 			<key>colorindex</key>
@@ -8522,6 +8737,8 @@ Citation Picker</string>
 		<string>alternative</string>
 		<key>csl_file</key>
 		<string>~/Google Drive/BibDesk/Citation Styles/apa.csl</string>
+		<key>date_to_append</key>
+		<string>normal</string>
 		<key>further_pandoc_args</key>
 		<string>--number-sections</string>
 		<key>hotkey_output_format</key>
@@ -8550,7 +8767,7 @@ Citation Picker</string>
 		<string>csl_file</string>
 	</array>
 	<key>version</key>
-	<string>3.9</string>
+	<string>4.0</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/pandoc_alfred</string>
 </dict>
