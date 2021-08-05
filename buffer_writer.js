@@ -82,7 +82,9 @@ input_array.forEach(entry => {
     		}
       	} else if (property.includes ("year =")){
       		year = property.replace (/.*=\s*{?(\d{4}).*/,"$1");
-      	} else if  (property.includes ("doi =")){
+      	} else if (property.includes ("date =")){
+            year = property.replace (/.*=\s*{?(\d{4}).*/,"$1");
+        } else if  (property.includes ("doi =")){
       		doi = extract (property);
       	} else if  (property.includes ("url =")){
       		url = extract (property);
