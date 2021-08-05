@@ -333,6 +333,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>238F8E7C-C458-496F-AB7B-0BFE96B8FBF6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6ACECC5E-0168-4F34-87C7-A1C6EFF8FCBC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>26F37632-6D01-4F0C-AEC5-8B418A2A87E9</key>
 		<array>
 			<dict>
@@ -2579,6 +2592,37 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<true/>
+				<key>focusedappvariablename</key>
+				<string>focusedapp</string>
+				<key>hotkey</key>
+				<integer>42</integer>
+				<key>hotmod</key>
+				<integer>1048576</integer>
+				<key>hotstring</key>
+				<string>#</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>3E233EB1-E0B2-48CC-9E6F-A5CAFDFD26AD</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>subtext</key>
@@ -2707,6 +2751,45 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<true/>
+				<key>focusedappvariablename</key>
+				<string>focusedapp</string>
+				<key>hotkey</key>
+				<integer>14</integer>
+				<key>hotmod</key>
+				<integer>1966080</integer>
+				<key>hotstring</key>
+				<string>E</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedApps</key>
+				<array>
+					<string>pro.writer.mac</string>
+					<string>md.obsidian</string>
+					<string>com.coteditor.CotEditor</string>
+					<string>com.github.atom</string>
+					<string>com.apple.finder</string>
+				</array>
+				<key>relatedAppsMode</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>1E75D41D-467E-425D-B8F5-C1C888C575F0</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
@@ -2723,37 +2806,6 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 			<string>C64ACAF0-66C8-48A8-A3C4-B55C7E282697</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>0</integer>
-				<key>focusedappvariable</key>
-				<true/>
-				<key>focusedappvariablename</key>
-				<string>focusedapp</string>
-				<key>hotkey</key>
-				<integer>42</integer>
-				<key>hotmod</key>
-				<integer>1048576</integer>
-				<key>hotstring</key>
-				<string>#</string>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>0</integer>
-				<key>relatedAppsMode</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>3E233EB1-E0B2-48CC-9E6F-A5CAFDFD26AD</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -3002,30 +3054,13 @@ JSON.stringify({ 'items': entry_array });
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:citation_picker}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>4</integer>
-						<key>matchstring</key>
-						<string>alternative|Alfred</string>
-						<key>outputlabel</key>
-						<string>Alfred (alternative)</string>
-						<key>uid</key>
-						<string>4F6B18B4-5071-4DD9-8558-A68B97E733FA</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>Zotero (classic)</string>
+				<key>triggerid</key>
+				<string>citation-picker-loop</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
+			<string>alfred.workflow.trigger.external</string>
 			<key>uid</key>
-			<string>9E303148-5BB4-4D8A-AF82-05EE222BD6F9</string>
+			<string>4771A40C-E741-46C5-93EF-82CEB4BD23D8</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -3045,19 +3080,6 @@ JSON.stringify({ 'items': entry_array });
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
 			<string>8B51C1A0-EAD2-457B-A532-6CC16C7F015E</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>triggerid</key>
-				<string>citation-picker-loop</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
-			<key>uid</key>
-			<string>4771A40C-E741-46C5-93EF-82CEB4BD23D8</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -3101,41 +3123,53 @@ JSON.stringify({ 'items': entry_array });
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>0</integer>
-				<key>focusedappvariable</key>
-				<true/>
-				<key>focusedappvariablename</key>
-				<string>focusedapp</string>
-				<key>hotkey</key>
-				<integer>14</integer>
-				<key>hotmod</key>
-				<integer>1966080</integer>
-				<key>hotstring</key>
-				<string>E</string>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>0</integer>
-				<key>relatedApps</key>
+				<key>conditions</key>
 				<array>
-					<string>pro.writer.mac</string>
-					<string>md.obsidian</string>
-					<string>com.coteditor.CotEditor</string>
-					<string>com.github.atom</string>
-					<string>com.apple.finder</string>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:citation_picker}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>4</integer>
+						<key>matchstring</key>
+						<string>alternative|Alfred</string>
+						<key>outputlabel</key>
+						<string>Alfred (alternative)</string>
+						<key>uid</key>
+						<string>4F6B18B4-5071-4DD9-8558-A68B97E733FA</string>
+					</dict>
 				</array>
-				<key>relatedAppsMode</key>
-				<integer>1</integer>
+				<key>elselabel</key>
+				<string>Zotero (classic)</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
+			<string>alfred.workflow.utility.conditional</string>
 			<key>uid</key>
-			<string>1E75D41D-467E-425D-B8F5-C1C888C575F0</string>
+			<string>9E303148-5BB4-4D8A-AF82-05EE222BD6F9</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsfiles</key>
+				<false/>
+				<key>acceptsmulti</key>
+				<integer>0</integer>
+				<key>acceptstext</key>
+				<true/>
+				<key>acceptsurls</key>
+				<false/>
+				<key>name</key>
+				<string>Citekey: Reveal in BibDesk</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.universalaction</string>
+			<key>uid</key>
+			<string>238F8E7C-C458-496F-AB7B-0BFE96B8FBF6</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -3181,7 +3215,7 @@ JSON.stringify({ 'items': entry_array });
 				<key>matchmode</key>
 				<integer>1</integer>
 				<key>matchstring</key>
-				<string>@(.*)</string>
+				<string>@?(.*)</string>
 				<key>regexcaseinsensitive</key>
 				<false/>
 				<key>regexmultiline</key>
@@ -6521,7 +6555,7 @@ end run</string>
 				<string>on run
 
 tell application "Alfred" 
-    set configuration "citation_picker" to value "{query}" in workflow "de.chris-grieser.pandoc-alfred"
+    set configuration "citation_picker" to value "{query}" in workflow "de.chris-grieser.pandoc-alfred" with exportable
 end tell
 
 return "{query}"
@@ -7015,11 +7049,15 @@ end run</string>
 
 ⚠️ Obsidian Users
 ==================
-if you want to trigger the Pandoc Suite from inside Obsidian, you have to install the [Obsidian's Advanced-URI-Plugin](https://github.com/Vinzent03/obsidian-advanced-uri).
+If you want to trigger the Pandoc Suite from inside Obsidian, you have to install the [Advanced-URI-Plugin](https://github.com/Vinzent03/obsidian-advanced-uri).
 
 
 Release Notes
 =============
+4.2
+- Select a Citekey *in any app* and trigger [Alfred's Universal Action](https://www.alfredapp.com/universal-actions/) to reveal the corresponding entry in [BibDesk](http://bibdesk.sourceforge.net).
+- now also parses the `date` field of BibTeX-files, not only the `year`field. Some apps write in `date`, others in `year`. [Pull Request from @manuelhubacher](https://github.com/chrisgrieser/pandoc_alfred/commit/dd3801889319b738c60422115b296ba96d807ffb)
+
 4.1
 - triggering the hotkey from Obsidian now works with [Obsidian's Advanced-URI-Plugin](https://github.com/Vinzent03/obsidian-advanced-uri) instead of the hacky custom keyboard shortcut. 
 
@@ -7370,11 +7408,11 @@ Changes in Detail
 			<key>note</key>
 			<string>GREEN HOTKEY: Double-click to define
 
-Triggers Pandoc Conversion</string>
+Trigger Pandoc Conversion</string>
 			<key>xpos</key>
-			<integer>15</integer>
+			<integer>10</integer>
 			<key>ypos</key>
-			<integer>405</integer>
+			<integer>190</integer>
 		</dict>
 		<key>1E80514F-CEFA-44DA-8EE1-6A87B1E52EA8</key>
 		<dict>
@@ -7431,6 +7469,15 @@ Triggers Pandoc Conversion</string>
 			<integer>280</integer>
 			<key>ypos</key>
 			<integer>1295</integer>
+		</dict>
+		<key>238F8E7C-C458-496F-AB7B-0BFE96B8FBF6</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
+			<key>xpos</key>
+			<integer>10</integer>
+			<key>ypos</key>
+			<integer>460</integer>
 		</dict>
 		<key>26F37632-6D01-4F0C-AEC5-8B418A2A87E9</key>
 		<dict>
@@ -7547,7 +7594,7 @@ Triggers Pandoc Conversion</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>170</integer>
+			<integer>210</integer>
 			<key>ypos</key>
 			<integer>880</integer>
 		</dict>
@@ -7599,9 +7646,9 @@ Double-click to define
 
 Citation Picker</string>
 			<key>xpos</key>
-			<integer>15</integer>
+			<integer>10</integer>
 			<key>ypos</key>
-			<integer>230</integer>
+			<integer>15</integer>
 		</dict>
 		<key>3E3A8C0C-E4AD-4403-AFB6-8B7FA0EFF71F</key>
 		<dict>
@@ -7637,9 +7684,9 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>xpos</key>
-			<integer>520</integer>
+			<integer>510</integer>
 			<key>ypos</key>
-			<integer>370</integer>
+			<integer>300</integer>
 		</dict>
 		<key>48CFAE2D-926B-4B05-A586-48A7A9D395CE</key>
 		<dict>
@@ -8170,9 +8217,9 @@ Citation Picker</string>
 			<key>note</key>
 			<string>also has to match "alternative" due to prior Citation Picker naming</string>
 			<key>xpos</key>
-			<integer>180</integer>
+			<integer>200</integer>
 			<key>ypos</key>
-			<integer>295</integer>
+			<integer>370</integer>
 		</dict>
 		<key>9EF875EC-CDA4-43CB-90A0-CB898397B9D3</key>
 		<dict>
@@ -8421,7 +8468,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>330</integer>
 			<key>ypos</key>
-			<integer>500</integer>
+			<integer>545</integer>
 		</dict>
 		<key>C5CD1FB8-8FE5-4F75-BCE0-0D7F03887989</key>
 		<dict>
@@ -8519,7 +8566,7 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>115</integer>
+			<integer>150</integer>
 			<key>ypos</key>
 			<integer>950</integer>
 		</dict>
@@ -8773,7 +8820,7 @@ Citation Picker</string>
 		<key>bibtex_library_path</key>
 		<string>~/Google Drive/BibDesk/My Library.bib</string>
 		<key>citation_picker</key>
-		<string>alternative</string>
+		<string>Alfred</string>
 		<key>csl_file</key>
 		<string>~/Google Drive/BibDesk/Citation Styles/apa.csl</string>
 		<key>date_to_append</key>
@@ -8798,15 +8845,14 @@ Citation Picker</string>
 	<key>variablesdontexport</key>
 	<array>
 		<string>reference_pptx_path</string>
-		<string>second_library</string>
 		<string>bibtex_library_path</string>
+		<string>second_library</string>
 		<string>csl_file</string>
-		<string>citation_picker</string>
 		<string>pdf_engine</string>
 		<string>reference_docx_path</string>
 	</array>
 	<key>version</key>
-	<string>4.1</string>
+	<string>4.2</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/pandoc_alfred</string>
 </dict>
