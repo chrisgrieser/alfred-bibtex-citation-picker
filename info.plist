@@ -398,6 +398,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>2B75EA4F-7614-44CF-AD53-82665925E344</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8BDFC290-8E56-42A6-91F5-91266806DB1C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>2BA9612B-EB3F-465E-9875-D7965654F307</key>
 		<array>
 			<dict>
@@ -627,6 +640,16 @@
 				<string></string>
 				<key>sourceoutputuid</key>
 				<string>C4023B39-2525-4472-9AA8-9A01509C40E1</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>A824D01B-F6C7-4D3E-8687-1B43D309258F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -1181,7 +1204,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>6ED2EDB1-B0C2-4894-8345-227BEB5D55D8</string>
+				<string>B914FAA4-CE6D-4FE6-8BF7-748E1F4EB1F9</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1221,19 +1244,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>F0A3E6A0-D3EA-4B46-AE8A-E6368F633452</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>6ED2EDB1-B0C2-4894-8345-227BEB5D55D8</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>B914FAA4-CE6D-4FE6-8BF7-748E1F4EB1F9</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1619,7 +1629,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>C56AF146-03E0-448E-8592-491D12F5534A</string>
+				<string>2B75EA4F-7614-44CF-AD53-82665925E344</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1979,19 +1989,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>2BA9612B-EB3F-465E-9875-D7965654F307</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>C56AF146-03E0-448E-8592-491D12F5534A</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>8BDFC290-8E56-42A6-91F5-91266806DB1C</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2498,7 +2495,7 @@
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string></string>
+				<string>starting citation picker afterwards</string>
 				<key>title</key>
 				<string>🔄 Reloading the Buffer...</string>
 			</dict>
@@ -2771,11 +2768,11 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 				<integer>0</integer>
 				<key>relatedApps</key>
 				<array>
-					<string>pro.writer.mac</string>
 					<string>md.obsidian</string>
+					<string>com.apple.finder</string>
 					<string>com.coteditor.CotEditor</string>
 					<string>com.github.atom</string>
-					<string>com.apple.finder</string>
+					<string>pro.writer.mac</string>
 				</array>
 				<key>relatedAppsMode</key>
 				<integer>1</integer>
@@ -3135,7 +3132,7 @@ JSON.stringify({ 'items': entry_array });
 						<key>matchstring</key>
 						<string>alternative|Alfred</string>
 						<key>outputlabel</key>
-						<string>Alfred (alternative)</string>
+						<string>Alfred (alt.)</string>
 						<key>uid</key>
 						<string>4F6B18B4-5071-4DD9-8558-A68B97E733FA</string>
 					</dict>
@@ -3233,25 +3230,48 @@ JSON.stringify({ 'items': entry_array });
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>applescript</key>
-				<string>on alfred_script(q)
-
-if application "Zotero" is running then
-	return true
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>if application "Zotero" is running then
+	return "true"
 else
-	return false
-end if
-
-end alfred_script</string>
-				<key>cachescript</key>
+	return "false"
+end if</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>2B75EA4F-7614-44CF-AD53-82665925E344</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>[{query}]</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
 				<false/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.applescript</string>
+			<string>alfred.workflow.output.clipboard</string>
 			<key>uid</key>
-			<string>C56AF146-03E0-448E-8592-491D12F5534A</string>
+			<string>CB4D33E2-A031-4542-A640-3B73D66EE39E</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -3282,25 +3302,6 @@ end alfred_script</string>
 			<string>8BDFC290-8E56-42A6-91F5-91266806DB1C</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<true/>
-				<key>clipboardtext</key>
-				<string>[{query}]</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>CB4D33E2-A031-4542-A640-3B73D66EE39E</string>
-			<key>version</key>
-			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -3372,13 +3373,13 @@ end run</string>
 						<key>matchstring</key>
 						<string></string>
 						<key>outputlabel</key>
-						<string>Output not empty</string>
+						<string>not empty</string>
 						<key>uid</key>
 						<string>C4023B39-2525-4472-9AA8-9A01509C40E1</string>
 					</dict>
 				</array>
 				<key>elselabel</key>
-				<string></string>
+				<string>empty</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.conditional</string>
@@ -3794,7 +3795,7 @@ end alfred_script</string>
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>obsidian://advanced-uri?vault=Vault&amp;commandid=open-with-default-app%253Ashow</string>
+				<string>obsidian://advanced-uri?commandid=open-with-default-app%253Ashow</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -4618,23 +4619,6 @@ return "{query}"</string>
 				<key>matchmode</key>
 				<integer>0</integer>
 				<key>matchstring</key>
-				<string>'~</string>
-				<key>replacestring</key>
-				<string>~'</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.replace</string>
-			<key>uid</key>
-			<string>6ED2EDB1-B0C2-4894-8345-227BEB5D55D8</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>matchmode</key>
-				<integer>0</integer>
-				<key>matchstring</key>
 				<string>
 </string>
 				<key>replacestring</key>
@@ -4673,7 +4657,7 @@ return "{query}"</string>
 				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
-				<false/>
+				<true/>
 				<key>variables</key>
 				<dict>
 					<key>desired_format</key>
@@ -7054,6 +7038,12 @@ If you want to trigger the Pandoc Suite from inside Obsidian, you have to instal
 
 Release Notes
 =============
+4.3
+- fixed file-action for converting to PDF
+- fixed small bug when using hotkey from Obsidian
+- Groundwork for better Citation Style Search
+
+
 4.2
 - Select a Citekey *in any app* and trigger [Alfred's Universal Action](https://www.alfredapp.com/universal-actions/) to reveal the corresponding entry in [BibDesk](http://bibdesk.sourceforge.net).
 - now also parses the `date` field of BibTeX-files, not only the `year`field. Some apps write in `date`, others in `year`. [Pull Request from @manuelhubacher](https://github.com/chrisgrieser/pandoc_alfred/commit/dd3801889319b738c60422115b296ba96d807ffb)
@@ -7517,6 +7507,15 @@ Trigger Pandoc Conversion</string>
 			<key>ypos</key>
 			<integer>10</integer>
 		</dict>
+		<key>2B75EA4F-7614-44CF-AD53-82665925E344</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>350</integer>
+			<key>ypos</key>
+			<integer>550</integer>
+		</dict>
 		<key>2BA9612B-EB3F-465E-9875-D7965654F307</key>
 		<dict>
 			<key>colorindex</key>
@@ -7540,7 +7539,7 @@ Trigger Pandoc Conversion</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>1220</integer>
+			<integer>1225</integer>
 			<key>ypos</key>
 			<integer>600</integer>
 		</dict>
@@ -7900,7 +7899,7 @@ Citation Picker</string>
 			<key>note</key>
 			<string>pandoc command construction</string>
 			<key>xpos</key>
-			<integer>605</integer>
+			<integer>635</integer>
 			<key>ypos</key>
 			<integer>1485</integer>
 		</dict>
@@ -7930,17 +7929,6 @@ Citation Picker</string>
 			<integer>890</integer>
 			<key>ypos</key>
 			<integer>1905</integer>
-		</dict>
-		<key>6ED2EDB1-B0C2-4894-8345-227BEB5D55D8</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>2</integer>
-			<key>note</key>
-			<string>~ for zsh</string>
-			<key>xpos</key>
-			<integer>760</integer>
-			<key>ypos</key>
-			<integer>1515</integer>
 		</dict>
 		<key>6F19CED8-5C74-4F75-9683-F25D9EAE8841</key>
 		<dict>
@@ -8094,9 +8082,9 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>475</integer>
+			<integer>490</integer>
 			<key>ypos</key>
-			<integer>565</integer>
+			<integer>570</integer>
 		</dict>
 		<key>8C8E6A55-B3BD-4622-9C3F-CE3DB8BB547F</key>
 		<dict>
@@ -8217,7 +8205,7 @@ Citation Picker</string>
 			<key>note</key>
 			<string>also has to match "alternative" due to prior Citation Picker naming</string>
 			<key>xpos</key>
-			<integer>200</integer>
+			<integer>205</integer>
 			<key>ypos</key>
 			<integer>370</integer>
 		</dict>
@@ -8365,7 +8353,7 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>note</key>
-			<string>display Alternative Citation Picker</string>
+			<string>display Alfred Citation Picker</string>
 			<key>xpos</key>
 			<integer>740</integer>
 			<key>ypos</key>
@@ -8461,15 +8449,6 @@ Citation Picker</string>
 			<key>ypos</key>
 			<integer>3030</integer>
 		</dict>
-		<key>C56AF146-03E0-448E-8592-491D12F5534A</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>3</integer>
-			<key>xpos</key>
-			<integer>330</integer>
-			<key>ypos</key>
-			<integer>545</integer>
-		</dict>
 		<key>C5CD1FB8-8FE5-4F75-BCE0-0D7F03887989</key>
 		<dict>
 			<key>colorindex</key>
@@ -8477,7 +8456,7 @@ Citation Picker</string>
 			<key>note</key>
 			<string>saves path for revealing in Finder</string>
 			<key>xpos</key>
-			<integer>535</integer>
+			<integer>565</integer>
 			<key>ypos</key>
 			<integer>1515</integer>
 		</dict>
@@ -8548,7 +8527,7 @@ Citation Picker</string>
 			<key>note</key>
 			<string>Paste</string>
 			<key>xpos</key>
-			<integer>1365</integer>
+			<integer>1350</integer>
 			<key>ypos</key>
 			<integer>570</integer>
 		</dict>
@@ -8852,7 +8831,7 @@ Citation Picker</string>
 		<string>reference_docx_path</string>
 	</array>
 	<key>version</key>
-	<string>4.2</string>
+	<string>4.3</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/pandoc_alfred</string>
 </dict>
