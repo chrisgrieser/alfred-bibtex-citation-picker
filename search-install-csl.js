@@ -1,9 +1,14 @@
 #!/usr/bin/env osascript -l JavaScript
 
+//get CSL Array
 app = Application.currentApplication();
 app.includeStandardAdditions = true;
 var csl_list = app.doShellScript('curl -s "https://api.github.com/repos/citation-style-language/styles/git/trees/master?recursive=1" | grep ".csl" | cut -d ' + "'" + '"' + "'" + ' -f 4');
 work_array = csl_list.split("\r");
+
+//get current csl
+ObjC.import('stdlib');
+var current_csl = $.getenv('csl_file');
 
 String.prototype.toCapitalCase = function () {
    let capital = this.replace(/\w\S*/g, function(txt){
@@ -16,8 +21,8 @@ String.prototype.toCapitalCase = function () {
    capital = capital.replace ("An ", "an ");
    capital = capital.replace ("Of ", "of ");
    capital = capital.replace ("the ", "the ");
-   capital = capital.replace (" And ", " & ");
-   capital = capital.replace (" Und ", " & ");
+   capital = capital.replace ("And ", "& ");
+   capital = capital.replace ("Und ", "& ");
    capital = capital.replace ("Ieee ", "IEEE ");
    capital = capital.replace ("Acm ", "ACM ");
    capital = capital.replace ("On ", "on ");
@@ -25,6 +30,8 @@ String.prototype.toCapitalCase = function () {
    capital = capital.replace ("Doi ", "DOI ");
    capital = capital.replace ("Koln ", "Köln ");
    capital = capital.replace ("Universitat ", "Universität ");
+   capital = capital.replace ("With ", "with ");
+   capital = capital.replace ("No ", "no ");
    return capital;
 };
 
@@ -34,10 +41,13 @@ work_array.forEach(csl => {
 	title = title.replace("dependent/","");
 	title = title.toCapitalCase();
 	let url = "https://raw.githubusercontent.com/citation-style-language/styles/master/" + csl;
+	let current = "";
+	if (csl == current_csl){ current = "⭐️ "; };
 	jsonArray.push({
-		'title': title,
-		'subtitle': "",
+		'title': current + title,
+		'subtitle': csl,
 		'arg': url,
+		'uid': csl,
 	});
 });
 

@@ -7,7 +7,7 @@ tempbib="$alfred_workflow_cache""/temp_entry.bib"
 mkdir -p "$alfred_workflow_cache"
 echo -n $bibtexentry > $tempbib
 
-csl=~`echo -n $csl_file | sed -e "s/^~//"`
+csl="$alfred_preferences""/workflows/""$alfred_workflow_uid""/citation-styles/""$csl_file"
 dummyDoc="---\nnocite: |\n  "$citekey"\n---\n::: {#refs}\n:::"
 
 echo -n $dummyDoc | pandoc --citeproc --read=markdown --write=plain --csl $csl --bibliography $tempbib | tr "\n" " "
