@@ -2270,6 +2270,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>D1616C9F-E68E-4FB2-8C35-D729295041E2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>67A601DA-66EE-45B7-8513-BB8E17D4A54D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>D38F9CCA-E436-47F3-BC3C-FD570EC9D933</key>
 		<array>
 			<dict>
@@ -2913,11 +2926,11 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 				<integer>0</integer>
 				<key>relatedApps</key>
 				<array>
-					<string>pro.writer.mac</string>
 					<string>com.apple.finder</string>
+					<string>md.obsidian</string>
 					<string>com.coteditor.CotEditor</string>
 					<string>com.github.atom</string>
-					<string>md.obsidian</string>
+					<string>pro.writer.mac</string>
 				</array>
 				<key>relatedAppsMode</key>
 				<integer>1</integer>
@@ -3317,11 +3330,11 @@ JSON.stringify({ 'items': entry_array });
 				<integer>0</integer>
 				<key>relatedApps</key>
 				<array>
-					<string>md.obsidian</string>
 					<string>pro.writer.mac</string>
+					<string>com.apple.finder</string>
 					<string>com.coteditor.CotEditor</string>
 					<string>com.github.atom</string>
-					<string>com.apple.finder</string>
+					<string>md.obsidian</string>
 				</array>
 				<key>relatedAppsMode</key>
 				<integer>1</integer>
@@ -7347,6 +7360,11 @@ Due to some internal changes, you will have to set the citation style again via 
 
 Release Notes
 =============
+4.6.1
+- Fix for the Anticipatory Word count on ARM Macs (M1 Macs)
+- Fix for changing Dateformat in output filename
+
+
 4.6 Anticipatory Word Count even better
 - Anticipatory Word Count now also calculates the total word and character count
 - Changed file actions for the Anticipatory Word Count
@@ -7760,7 +7778,7 @@ Trigger Pandoc Conversion</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>250</integer>
+			<integer>240</integer>
 			<key>ypos</key>
 			<integer>1500</integer>
 		</dict>
@@ -7778,7 +7796,7 @@ Trigger Pandoc Conversion</string>
 		<key>25C0F17B-796E-4B29-9950-5C6351C88B26</key>
 		<dict>
 			<key>xpos</key>
-			<integer>230</integer>
+			<integer>245</integer>
 			<key>ypos</key>
 			<integer>1895</integer>
 		</dict>
@@ -8563,7 +8581,7 @@ Citation Picker</string>
 		<key>9E303148-5BB4-4D8A-AF82-05EE222BD6F9</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>9</integer>
+			<integer>10</integer>
 			<key>note</key>
 			<string>also has to match "alternative" due to prior Citation Picker naming</string>
 			<key>xpos</key>
@@ -9213,7 +9231,7 @@ Anticipatory Word Count</string>
 		<string>reference_pptx_path</string>
 	</array>
 	<key>version</key>
-	<string>4.6</string>
+	<string>4.6.1</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/pandoc_alfred</string>
 </dict>

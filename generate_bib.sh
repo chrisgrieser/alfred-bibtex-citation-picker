@@ -1,5 +1,6 @@
 #!/bin/zsh
-export PATH=/usr/local/bin:$PATH
+# further path additions as pandoc is installed a different location for ARM Macs
+export PATH=/usr/local/bin:/opt/homebrew/bin/:$PATH
 
 bibtexentry="$*"
 citekey="@"`echo -n $bibtexentry | cut -d "," -f 1 | cut -d "{" -f 2`

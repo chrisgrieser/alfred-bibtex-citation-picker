@@ -1,5 +1,6 @@
 #!/bin/zsh
-export PATH=/usr/local/bin:$PATH
+# further path additions as pandoc is installed a different location for ARM Macs
+export PATH=/usr/local/bin:/opt/homebrew/bin/:$PATH
 
 input="$*"
 csl="$alfred_preferences""/workflows/""$alfred_workflow_uid""/citation-styles/""$csl_file"
