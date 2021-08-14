@@ -1,12 +1,12 @@
 #!/usr/bin/env osascript -l JavaScript
 
-function run() {
+function run(argv) {
 
 	// =======================
 	// Import Alfred Variables
 	// =======================
 
-	// Basics
+	// Basic
 	ObjC.import("stdlib");
 	app = Application.currentApplication();
 	app.includeStandardAdditions = true;
@@ -42,23 +42,42 @@ function run() {
 	var resource_path_subfolder = $.getenv("resource_path_subfolder");
 	var date_to_append = $.getenv("date_to_append");
 	var further_pandoc_args = $.getenv("further_pandoc_args");
+	var reader_extensions = $.getenv("reader_extensions");
+	var writer_extensions = $.getenv("writer_extensions");
+	var pandoc_template = $.getenv("pandoc_template");
+	var pandoc_filters = $.getenv("pandoc_filters");
 
-	// get today's date
+	// get today's date & set it for the metadata date option
 	var today = new Date();
 	var dd = String(today.getDate()).padStart(2, "0");
 	var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
 	var yyyy = today.getFullYear();
+	var date_metadata = "";
 	switch (date_to_append) {
 		case "normal":
 			today = dd + "-" + mm + "-" + yyyy;
+			date_metadata = '--metadata date="$(date "+%e. %B %Y")" ';
 			break;
 		case "american":
 			today = mm + "-" + dd + "-" + yyyy;
+			date_metadata = '--metadata date="$(date "+%B %e, %Y")" ';
 			break;
 		case "none":
 			today = "";
 			break;
 	}
+
+	//output file
+	var output_file = doc_path.replace(/\.[^\.]*$/, "") + " " + today + "." + desired_format;
+
+	//for later revealing in Finder
+	Application('com.runningwithcrayons.Alfred').setConfiguration
+	 	('output_file', {
+			toValue: output_file,
+			inWorkflow: $.getenv('alfred_workflow_bundleid'),
+			exportable: false}
+		);
+
 
 	// ===========================
 	// construct pandoc parameters
@@ -69,6 +88,10 @@ function run() {
 	var pdf_arg = "";
 	var reference_pptx = "";
 	var second_ressource_path = "";
+	var reader_ext = "";
+	var writer_ext = "";
+	var template_arg = "";
+	var filter_arg = "";
 
 	//surrounds a string with quotation marks
 	function quoted(str) {
@@ -77,8 +100,7 @@ function run() {
 
 	//input & output
 	var input = quoted(doc_path) + " ";
-	var doc_without_ext = doc_path.replace(/\.[^\.]*$/, "");
-	var output = "-o " + quoted(doc_without_ext + " " + today + "." + desired_format) + " ";
+	var output = "-o " + quoted(output_file) + " ";
 
 	//bibtex files
 	if (bibtex_library_path != "") {
@@ -86,17 +108,6 @@ function run() {
 	}
 	if (second_library != "") {
 		bibliography2 = "--bibliography " + quoted(second_library) + " ";
-	}
-
-	//Misc
-	var citation_style = "--csl " + quoted(csl_file) + " ";
-	var slide_level_arg = "--slide-level=" + slide_level + " ";
-	var further_args = further_pandoc_args + " ";
-	if (reference_docx_path != "") {
-		reference_docx = "--reference-doc " + quoted(reference_docx_path) + " ";
-	}
-	if (reference_pptx_path != "") {
-		reference_pptx = "--reference-doc " + quoted(reference_pptx_path) + " ";
 	}
 
 	// PDF engines
@@ -117,11 +128,44 @@ function run() {
 			quoted(parent_folder + resource_path_subfolder + "/") + " ";
 	}
 
+	//Extensions
+	if (reader_extensions != ""){
+		reader_ext = "--from=markdown" + reader_extensions + " ";
+	}
+	if (writer_extensions != ""){
+		writer_ext = "--to=" + desired_format + writer_extensions + " ";
+	}
+
+	//Filters
+	if (pandoc_filters != ""){
+		filters = pandoc_filters.split (",");
+		for (let i = 0; i < filters.length; i++) {
+		  filters[i] = "--filter " + quoted(filters[i]) + " ";
+		}
+		filter_arg = filters.join("");
+	}
+
+	//Misc
+	var citation_style = "--csl " + quoted(csl_file) + " ";
+	var slide_level_arg = "--slide-level=" + slide_level + " ";
+	var further_args = further_pandoc_args + " ";
+	if (reference_docx_path != "") {
+		reference_docx = "--reference-doc " + quoted(reference_docx_path) + " ";
+	}
+	if (reference_pptx_path != "") {
+		reference_pptx = "--reference-doc " + quoted(reference_pptx_path) + " ";
+	}
+	if (pandoc_template != "") {
+		template_arg = "--template " + quoted(pandoc_template) + " ";
+	}
+
 	// construct pandoc command
 	var pandoc_command =
 		"pandoc " +
 		input +
 		output +
+		template_arg +
+		filter_arg +
 		"--citeproc " +
 		resource_path +
 		second_ressource_path +
@@ -129,7 +173,10 @@ function run() {
 		bibliography2 +
 		citation_style +
 		further_args +
-		"--metadata link-citations=true ";
+		reader_ext +
+		writer_ext +
+		"--metadata link-citations=true " +
+		date_metadata;
 
 	//additions depending on output format
 	switch (desired_format) {

@@ -7,9 +7,9 @@ csl="$alfred_preferences""/workflows/""$alfred_workflow_uid""/citation-styles/""
 bib=~`echo -n $bibtex_library_path | sed -e "s/~//"`
 
 # Bibliography only
-grep -Eo "[[^]]*@[^]]*]" $input > citationsOnly.txt
-echo "💟" >> citationsOnly.txt
-pandoc --citeproc --read=markdown --write=plain --csl $csl --bibliography $bib citationsOnly.txt | tr -d "\n" | cut -d "💟" -f 2 > referencesOnly.txt
+grep -Eo "[[^]]*@[^]]*]" $input | tr -d "§" > citationsOnly.txt
+echo "§" >> citationsOnly.txt
+pandoc --citeproc --read=markdown --write=plain --csl $csl --bibliography $bib citationsOnly.txt | tr -d "\n" | cut -d "§" -f 2 > referencesOnly.txt
 bib_words=`wc -w referencesOnly.txt | grep -Eo "[[:digit:]]+"`
 bib_chars=`wc -m referencesOnly.txt | grep -Eo "[[:digit:]]+"`
 bib_chars_without_spaces=`cat referencesOnly.txt | tr -d " " | wc -m | tr -d " "`
