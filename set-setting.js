@@ -10,6 +10,7 @@ function run (argv){
 
 	//import variables
 	var new_setting = argv.join("");
+	new_setting = new_setting.replace (/^\/users\/[^\/]*(\/.*)$/g,"~$1");
 	var setting_type = $.getenv('setting_type');
 	var export_setting = false
 	if (setting_type == "further_pandoc_args"){ export_setting = true; };
@@ -22,18 +23,45 @@ function run (argv){
       exportable: export_setting}
    );
 
+   function subt(){
+   	return ";;" + new_setting;
+   }
+
 	// Notification
 	switch (setting_type) {
 		case "further_pandoc_args":
-			return "✅ Further Pandoc Arguments set" + ";;" + new_setting;
+			return "✅ Further Pandoc Arguments set" + subt();
 		case "reader_extensions":
-			return "✅ Reader Extensions set" + ";;" + new_setting;
+			return "✅ Reader Extensions set" + subt();
 		case "writer_extensions":
-			return "✅ Writer Extensions set" + ";;" + new_setting;
-		case "pandoc_filters":
-			return "✅ Pandoc Filters set" + ";;" + new_setting;
+			return "✅ Writer Extensions set" + subt();
+		case "pandoc_filter":
+			return "✅ Pandoc Filters set" + subt();
 		case "pandoc_template":
-			return "✅ Pandoc Template set" + ";;" + new_setting;
+			return "✅ Pandoc Template set" + subt();
+		case "hard_bib_search":
+		case "bibtex_library_path":
+			return "✅ BibTeX-Library set" + subt();
+		case "second_library":
+			return "✅ Second Library set" + subt();
+		case "slide_level":
+			return "✅ Slide Level set" + ";;" + "H" + new_setting;
+		case "citation_picker":
+			return "✅ Now using: " + ";;" + new_setting + " Citation Picker";
+		case "resource_path_subfolder":
+			return "✅ Regular subfolder for resources set" + subt();
+		case "date_to_append":
+			return "✅ Date to Add: " + subt();
+		case "pdf_engine":
+			return "✅ PDF Engine set" + subt();
+		case "reference_docx":
+			return "✅ Reference Word Document set" + subt();
+		case "reference_pptx":
+			return "✅ Reference Powerpoint Presentation set" + subt();
+		case "csl_file":
+			return "✅ Citation Style selected" + subt();
+		case "hotkey_output_format":
+			return "✅ Hotkey Output Format set" + subt();
 		default:
 			return "error";
 	}

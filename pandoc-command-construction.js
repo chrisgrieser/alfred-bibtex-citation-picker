@@ -45,7 +45,7 @@ function run(argv) {
 	var reader_extensions = $.getenv("reader_extensions");
 	var writer_extensions = $.getenv("writer_extensions");
 	var pandoc_template = $.getenv("pandoc_template");
-	var pandoc_filters = $.getenv("pandoc_filters");
+	var pandoc_filter = $.getenv("pandoc_filter");
 
 	// get today's date & set it for the metadata date option
 	var today = new Date();
@@ -137,10 +137,10 @@ function run(argv) {
 	}
 
 	//Filters
-	if (pandoc_filters != ""){
-		filters = pandoc_filters.split (",");
+	if (pandoc_filter != ""){
+		filters = pandoc_filter.split (",");
 		for (let i = 0; i < filters.length; i++) {
-		  filters[i] = "--filter " + quoted(filters[i]) + " ";
+		  filters[i] = "--filter=" + quoted(filters[i]) + " ";
 		}
 		filter_arg = filters.join("");
 	}
@@ -156,7 +156,7 @@ function run(argv) {
 		reference_pptx = "--reference-doc " + quoted(reference_pptx_path) + " ";
 	}
 	if (pandoc_template != "") {
-		template_arg = "--template " + quoted(pandoc_template) + " ";
+		template_arg = "--template=" + quoted(pandoc_template) + " ";
 	}
 
 	// construct pandoc command
