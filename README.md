@@ -7,7 +7,7 @@ This Alfred workflow enables academic citing and publishing with any markdown ap
 
 This workflow is made for academics who neither like Word nor LaTeX. As the name suggests, this workflow is basically a user-friendly interface for Pandoc, allowing you to make use of Pandoc's capabilities without ever having to open the Terminal. 
 
-The workflow otherwise also features some useful auxiliary functions, like for example the word count that your bibliography will have after the conversion (markdown app cannot calculate the word count of the bibliography as it hasn't been created yet).
+The workflow otherwise also features some useful auxiliary functions, like for example "anticipatory word count", i.e.  number of words that your bibliography will have after the conversion (markdown apps cannot calculate the word count of the bibliography as it hasn't been created yet).
 
 ## Download
 ➡️ [Latest Release on GitHub](https://github.com/chrisgrieser/pandoc_alfred/releases)
