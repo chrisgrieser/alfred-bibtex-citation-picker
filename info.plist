@@ -5091,19 +5091,6 @@ echo -n "$csl_name"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>triggerid</key>
-				<string>set-new-setting</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
-			<key>uid</key>
-			<string>5119EDE6-2845-436B-8B2A-4354D1FF28FF</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>externaltriggerid</key>
 				<string>pconf-loop</string>
 				<key>passinputasargument</key>
@@ -5117,6 +5104,19 @@ echo -n "$csl_name"</string>
 			<string>alfred.workflow.output.callexternaltrigger</string>
 			<key>uid</key>
 			<string>13851D58-1F95-41E7-A686-9E1B91BD2086</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>triggerid</key>
+				<string>set-new-setting</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>5119EDE6-2845-436B-8B2A-4354D1FF28FF</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -5349,6 +5349,33 @@ echo -n "$csl_name"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>fixedorder</key>
+				<true/>
+				<key>items</key>
+				<string>[{"title":"Word Document","arg":"docx","subtitle":".docx"},{"title":"PDF Document","arg":"pdf","subtitle":".pdf"},{"title":"HTLM File (Standalone)","arg":"html","subtitle":".html"},{"title":"Powerpoint Presentation","arg":"pptx","subtitle":".pptx"}]</string>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Sets the Output Format for the Hotkey</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.listfilter</string>
+			<key>uid</key>
+			<string>B4CEE8D7-BBF2-44A4-9654-D2C7A3AF904B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>triggerid</key>
 				<string>open-url</string>
 			</dict>
@@ -5385,41 +5412,6 @@ echo -n "$csl_name"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>fixedorder</key>
-				<true/>
-				<key>items</key>
-				<string>[{"title":"Word Document","arg":"docx","subtitle":".docx"},{"title":"PDF Document","arg":"pdf","subtitle":".pdf"},{"title":"HTLM File (Standalone)","arg":"html","subtitle":".html"},{"title":"Powerpoint Presentation","arg":"pptx","subtitle":".pptx"}]</string>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Sets the Output Format for the Hotkey</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.listfilter</string>
-			<key>uid</key>
-			<string>B4CEE8D7-BBF2-44A4-9654-D2C7A3AF904B</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.hidealfred</string>
-			<key>uid</key>
-			<string>E39AFAE2-FEBE-438E-AB36-CF10EC6DBBFD</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
@@ -5434,6 +5426,14 @@ echo -n "$csl_name"</string>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>10000D18-BDC8-4A08-B089-D7164D917E8A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.hidealfred</string>
+			<key>uid</key>
+			<string>E39AFAE2-FEBE-438E-AB36-CF10EC6DBBFD</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -5765,7 +5765,7 @@ echo -n "$csl_name"</string>
 				<key>fixedorder</key>
 				<true/>
 				<key>items</key>
-				<string>[{"title":"📅 Normal Date Format","arg":"normal","subtitle":"dd-mm-yyyy"},{"title":"🗓 American Date Format","arg":"american","subtitle":"mm-dd-yyyy"},{"title":"❌ Do not Append Date","arg":"none","subtitle":""}]</string>
+				<string>[{"title":"📅 Normal Date Format","arg":"normal","subtitle":"dd-mm-yyyy"},{"title":"🗓 American Date Format","arg":"american","subtitle":"mm-dd-yyyy"},{"title":"❌ Do not append any Date","arg":"none","subtitle":""}]</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>subtext</key>
@@ -5815,9 +5815,9 @@ echo -n "$csl_name"</string>
 						<key>matchmode</key>
 						<integer>0</integer>
 						<key>matchstring</key>
-						<string>install_csl</string>
+						<string>csl_file</string>
 						<key>outputlabel</key>
-						<string>install_csl</string>
+						<string>csl_file</string>
 						<key>uid</key>
 						<string>2706F6C8-2B83-45A4-BA8C-21469583F939</string>
 					</dict>
@@ -5829,9 +5829,9 @@ echo -n "$csl_name"</string>
 						<key>matchmode</key>
 						<integer>0</integer>
 						<key>matchstring</key>
-						<string>hotkey_format</string>
+						<string>hotkey_output_format</string>
 						<key>outputlabel</key>
-						<string>hotkey_format</string>
+						<string>hotkey_output_format</string>
 						<key>uid</key>
 						<string>D2294731-682D-45C9-9750-E3613E3F2BDD</string>
 					</dict>
@@ -6863,11 +6863,17 @@ Due to some internal changes, you will have to set the citation style again via 
 
 Release Notes
 =============
+4.9
+- small bugfix when using multiple filters
+- The `pconf` now remembers your choices, displaying recent / frequent submenu-items further to the top
+- bugfix with selecting csl via `pconf`
+
 4.8
 - Improved matching in pconf
 - Bugfixes for templates &amp; filter
 - Proper labelling
 - `pconf` restructuring
+- fixed ressource path bug
 
 4.7: Extension, Template &amp; Filter Support
 - Support for [Pandoc extensions](https://pandoc.org/MANUAL.html#extensions), as they cannot be entered as further arguments. Define extensions with the respective `pconf`command
@@ -7221,7 +7227,7 @@ Trigger Pandoc Conversion</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>1205</integer>
+			<integer>1200</integer>
 			<key>ypos</key>
 			<integer>1590</integer>
 		</dict>
@@ -7266,9 +7272,9 @@ Trigger Pandoc Conversion</string>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>1200</integer>
+			<integer>1190</integer>
 			<key>ypos</key>
-			<integer>2210</integer>
+			<integer>2240</integer>
 		</dict>
 		<key>25C0F17B-796E-4B29-9950-5C6351C88B26</key>
 		<dict>
@@ -7372,9 +7378,9 @@ Trigger Pandoc Conversion</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>310</integer>
+			<integer>325</integer>
 			<key>ypos</key>
-			<integer>1010</integer>
+			<integer>1015</integer>
 		</dict>
 		<key>367167E6-8193-46E4-A342-A1B8B9BBD18D</key>
 		<dict>
@@ -7549,7 +7555,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>1190</integer>
 			<key>ypos</key>
-			<integer>2070</integer>
+			<integer>2075</integer>
 		</dict>
 		<key>527A7408-04E2-4890-A68D-C49D05B7CD4F</key>
 		<dict>
@@ -8104,8 +8110,6 @@ Citation Picker</string>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
-			<key>note</key>
-			<string>set new settings</string>
 			<key>xpos</key>
 			<integer>1340</integer>
 			<key>ypos</key>
@@ -8299,7 +8303,7 @@ Anticipatory Word Count</string>
 			<key>xpos</key>
 			<integer>1340</integer>
 			<key>ypos</key>
-			<integer>2210</integer>
+			<integer>2240</integer>
 		</dict>
 		<key>D38F9CCA-E436-47F3-BC3C-FD570EC9D933</key>
 		<dict>
@@ -8393,7 +8397,7 @@ Anticipatory Word Count</string>
 			<key>xpos</key>
 			<integer>1485</integer>
 			<key>ypos</key>
-			<integer>2240</integer>
+			<integer>2270</integer>
 		</dict>
 		<key>E5822F67-7265-45F3-BEC1-2966601D1F12</key>
 		<dict>
@@ -8530,26 +8534,26 @@ Anticipatory Word Count</string>
 		<string>🌐</string>
 		<key>alfred_bar_length</key>
 		<string>65</string>
-		<key>bibtex_lib</key>
-		<string>~/Google Drive/BibDesk/My Library.bib</string>
 		<key>bibtex_library_path</key>
 		<string>~/Google Drive/BibDesk/My Library.bib</string>
 		<key>citation_picker</key>
 		<string>Alfred</string>
 		<key>csl_file</key>
-		<string>research-policy.csl</string>
+		<string>zeitschrift-fur-soziologie.csl</string>
 		<key>date_to_append</key>
 		<string>normal</string>
 		<key>further_pandoc_args</key>
-		<string>--number-sections</string>
+		<string>--number-sections -M url2cite-allow-dangling-citations=true</string>
 		<key>hotkey_output_format</key>
 		<string>docx</string>
+		<key>local_csl_folder</key>
+		<string>/Users/chrisgrieser/Google Drive/Dokumente/IT Backups/Alfred.alfredpreferences/workflows/user.workflow.41B90DCD-A99E-4943-A19A-E91859557FB0/citation-styles/</string>
 		<key>pandoc_filter</key>
-		<string>pandoc-url2cite</string>
+		<string>pandoc-manubot-cite, pandoc-crossref, mermaid-filter</string>
 		<key>pandoc_template</key>
 		<string></string>
 		<key>pdf_engine</key>
-		<string>wkhtmltopdf</string>
+		<string>pdflatex</string>
 		<key>reader_extensions</key>
 		<string>+lists_without_preceding_blankline</string>
 		<key>reference_docx_path</key>
@@ -8567,12 +8571,13 @@ Anticipatory Word Count</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
-		<string>bibtex_lib</string>
 		<string>pdf_engine</string>
+		<string>hotkey_output_format</string>
 		<string>pandoc_filter</string>
 		<string>reference_pptx_path</string>
 		<string>reader_extensions</string>
 		<string>reference_docx_path</string>
+		<string>local_csl_folder</string>
 		<string>second_library</string>
 		<string>writer_extensions</string>
 		<string>pandoc_template</string>
@@ -8580,7 +8585,7 @@ Anticipatory Word Count</string>
 		<string>csl_file</string>
 	</array>
 	<key>version</key>
-	<string>4.8</string>
+	<string>4.9</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/pandoc_alfred</string>
 </dict>

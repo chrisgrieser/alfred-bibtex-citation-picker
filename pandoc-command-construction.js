@@ -50,7 +50,7 @@ function run(argv) {
 	// get today's date & set it for the metadata date option
 	var today = new Date();
 	var dd = String(today.getDate()).padStart(2, "0");
-	var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+	var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0
 	var yyyy = today.getFullYear();
 	var date_metadata = "";
 	switch (date_to_append) {
@@ -87,7 +87,7 @@ function run(argv) {
 	var reference_docx = "";
 	var pdf_arg = "";
 	var reference_pptx = "";
-	var second_ressource_path = "";
+	var second_resource_path = "";
 	var reader_ext = "";
 	var writer_ext = "";
 	var template_arg = "";
@@ -121,10 +121,10 @@ function run(argv) {
 	}
 
 	//resource paths
-	var resource_path = "--resource-path=" + quoted(parent_folder) + " ";
 	var parent_folder = doc_path.replace(/[^\/]*$/, "");
+	var resource_path = "--resource-path=" + quoted(parent_folder) + " ";
 	if (resource_path_subfolder != "") {
-		second_ressource_path =	"--resource-path=" +
+		second_resource_path =	"--resource-path=" +
 			quoted(parent_folder + resource_path_subfolder + "/") + " ";
 	}
 
@@ -140,7 +140,9 @@ function run(argv) {
 	if (pandoc_filter != ""){
 		filters = pandoc_filter.split (",");
 		for (let i = 0; i < filters.length; i++) {
-		  filters[i] = "--filter=" + quoted(filters[i]) + " ";
+			//remove preceding spaces when user accidentally sets a comata
+			filters[i] = filters[i].replace(/^ /,"");
+			filters[i] = "--filter=" + quoted(filters[i]) + " ";
 		}
 		filter_arg = filters.join("");
 	}
@@ -166,9 +168,9 @@ function run(argv) {
 		output +
 		template_arg +
 		filter_arg +
-		"--citeproc " +
+		"--citeproc " + //has to come after most filters
 		resource_path +
-		second_ressource_path +
+		second_resource_path +
 		bibliography +
 		bibliography2 +
 		citation_style +
