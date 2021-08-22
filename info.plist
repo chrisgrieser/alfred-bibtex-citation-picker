@@ -177,6 +177,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>1BD05DD1-96B4-4180-93BD-1BD3EC5A304C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>72C61AC9-74D5-4159-B80E-3C4CE8ECFAE4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+		</array>
 		<key>1C0964D1-AA81-478A-B406-28E96DDD9E82</key>
 		<array>
 			<dict>
@@ -314,7 +327,7 @@
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
-				<false/>
+				<true/>
 			</dict>
 		</array>
 		<key>27DEB378-75B0-4A5B-B864-1791E42F9540</key>
@@ -391,6 +404,18 @@
 				<string></string>
 				<key>sourceoutputuid</key>
 				<string>03CDC350-36B7-4E50-B4A5-04EC5F9B13DA</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>534793CB-6918-434B-9923-C0A40DBD8B30</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>0C8F705D-6CFC-4437-B0AF-CD1BB2412571</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -523,6 +548,18 @@
 				<string></string>
 				<key>sourceoutputuid</key>
 				<string>1EAB8AD1-8313-4277-9413-9443C611B9CE</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>EC0EBA26-482F-4840-93EF-CEA0C7A0661A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>7428DEBE-24CD-4692-8617-E0D8F9985E95</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -770,7 +807,7 @@
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
-				<false/>
+				<true/>
 			</dict>
 		</array>
 		<key>38D8D3B7-5FBE-4AD1-AD38-FB76FFEE2519</key>
@@ -873,7 +910,7 @@
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
-				<false/>
+				<true/>
 			</dict>
 		</array>
 		<key>42BDA197-AE7D-45F0-8929-3B154F42219F</key>
@@ -1034,6 +1071,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>535927EB-2ED1-4C7C-B7B2-3AE4B9C11B88</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>534793CB-6918-434B-9923-C0A40DBD8B30</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>97776C17-E690-4E00-A470-C1FE4D952723</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1358,7 +1408,7 @@
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
-				<false/>
+				<true/>
 			</dict>
 		</array>
 		<key>7B2B3CB9-CBCA-4BFF-A5BD-E04261F66A2F</key>
@@ -1500,7 +1550,7 @@
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
-				<false/>
+				<true/>
 			</dict>
 		</array>
 		<key>96FCE9BC-5201-4357-9B63-588F73AEF5F3</key>
@@ -1539,6 +1589,19 @@
 				<string>6F33F6A8-49FA-4CD1-8452-AC704E363F33</string>
 				<key>vitoclose</key>
 				<false/>
+			</dict>
+		</array>
+		<key>97776C17-E690-4E00-A470-C1FE4D952723</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5CCDAB00-DD7F-42E9-B0A7-045744A96453</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<true/>
 			</dict>
 		</array>
 		<key>9859D608-FC9F-44E5-B4B0-55FBFD8CA431</key>
@@ -1990,6 +2053,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>C5164F81-AFF9-41E3-B457-ACB055240C18</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E5F7248C-68EE-440F-8B5F-65C9F470F9CB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>C5F3870E-9179-475E-BCA9-D35E172DEE3D</key>
 		<array>
 			<dict>
@@ -2212,6 +2288,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>E5F7248C-68EE-440F-8B5F-65C9F470F9CB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>22EB574B-20E3-4E92-9A20-3CA6ADAFA7C9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>E621AAB9-7B81-4628-AEAF-9328BDD2A803</key>
 		<array>
 			<dict>
@@ -2275,6 +2364,19 @@
 				<string></string>
 				<key>vitoclose</key>
 				<true/>
+			</dict>
+		</array>
+		<key>EC0EBA26-482F-4840-93EF-CEA0C7A0661A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1BD05DD1-96B4-4180-93BD-1BD3EC5A304C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>F0B06555-1434-41AC-960C-F1CF6094C0FF</key>
@@ -2372,7 +2474,7 @@
 	<key>createdby</key>
 	<string>Chris Grieser</string>
 	<key>description</key>
-	<string>Cite in and convert Markdown files to .docx, .pdf, .html, or .pptx with proper citations &amp; bibliography</string>
+	<string>Cite in and convert Markdown files to .docx, .pdf, .odt, .html, or .pptx with proper citations &amp; bibliography</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -2725,11 +2827,11 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 				<integer>0</integer>
 				<key>relatedApps</key>
 				<array>
-					<string>md.obsidian</string>
 					<string>pro.writer.mac</string>
+					<string>com.apple.finder</string>
 					<string>com.coteditor.CotEditor</string>
 					<string>com.github.atom</string>
-					<string>com.apple.finder</string>
+					<string>md.obsidian</string>
 				</array>
 				<key>relatedAppsMode</key>
 				<integer>1</integer>
@@ -3129,11 +3231,11 @@ JSON.stringify({ 'items': entry_array });
 				<integer>0</integer>
 				<key>relatedApps</key>
 				<array>
-					<string>com.apple.finder</string>
 					<string>md.obsidian</string>
+					<string>pro.writer.mac</string>
 					<string>com.coteditor.CotEditor</string>
 					<string>com.github.atom</string>
-					<string>pro.writer.mac</string>
+					<string>com.apple.finder</string>
 				</array>
 				<key>relatedAppsMode</key>
 				<integer>1</integer>
@@ -3935,46 +4037,6 @@ end if</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>matchmode</key>
-				<integer>1</integer>
-				<key>matchstring</key>
-				<string>.*\/([^\/]*)$</string>
-				<key>regexcaseinsensitive</key>
-				<true/>
-				<key>regexmultiline</key>
-				<false/>
-				<key>replacestring</key>
-				<string>$1</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.replace</string>
-			<key>uid</key>
-			<string>F8165297-EDCE-486C-8145-74C244AFBB14</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>obsidian://advanced-uri?commandid=open-with-default-app%253Ashow</string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>0DF9D355-2614-4147-A927-E6427A7546A9</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>acceptsfiles</key>
 				<false/>
 				<key>acceptsmulti</key>
@@ -4009,6 +4071,46 @@ end if</string>
 			<string>alfred.workflow.output.callexternaltrigger</string>
 			<key>uid</key>
 			<string>795480E8-4945-4E27-80D2-9FBB00E97A68</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string>.*\/([^\/]*)$</string>
+				<key>regexcaseinsensitive</key>
+				<true/>
+				<key>regexmultiline</key>
+				<false/>
+				<key>replacestring</key>
+				<string>$1</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.replace</string>
+			<key>uid</key>
+			<string>F8165297-EDCE-486C-8145-74C244AFBB14</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>obsidian://advanced-uri?commandid=open-with-default-app%253Ashow</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>0DF9D355-2614-4147-A927-E6427A7546A9</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4067,12 +4169,12 @@ You have to set a PDF engine before using "pdf" as output format. You can do sp 
 					<string>+net.ia.markdown</string>
 				</array>
 				<key>name</key>
-				<string>Convert .md to .docx</string>
+				<string>Convert .md to .odt</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.action</string>
 			<key>uid</key>
-			<string>C5F3870E-9179-475E-BCA9-D35E172DEE3D</string>
+			<string>C5164F81-AFF9-41E3-B457-ACB055240C18</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4086,7 +4188,7 @@ You have to set a PDF engine before using "pdf" as output format. You can do sp 
 				<key>variables</key>
 				<dict>
 					<key>desired_format</key>
-					<string>docx</string>
+					<string>odt</string>
 					<key>mode</key>
 					<string>conversion</string>
 				</dict>
@@ -4094,7 +4196,7 @@ You have to set a PDF engine before using "pdf" as output format. You can do sp 
 			<key>type</key>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>6627A981-4C34-471F-A108-868F4C8F6C77</string>
+			<string>E5F7248C-68EE-440F-8B5F-65C9F470F9CB</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4162,6 +4264,26 @@ You can do that by triggering Alfred, typing "pconf", and selecting "BibTeX Libr
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>acceptsmulti</key>
+				<integer>0</integer>
+				<key>filetypes</key>
+				<array>
+					<string>+net.daringfireball.markdown</string>
+					<string>+net.ia.markdown</string>
+				</array>
+				<key>name</key>
+				<string>Convert .md to .docx</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.action</string>
+			<key>uid</key>
+			<string>C5F3870E-9179-475E-BCA9-D35E172DEE3D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>conditions</key>
 				<array>
 					<dict>
@@ -4192,26 +4314,6 @@ You can do that by triggering Alfred, typing "pconf", and selecting "BibTeX Libr
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>acceptsmulti</key>
-				<integer>0</integer>
-				<key>filetypes</key>
-				<array>
-					<string>+net.daringfireball.markdown</string>
-					<string>+net.ia.markdown</string>
-				</array>
-				<key>name</key>
-				<string>Convert .md to .pptx</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.action</string>
-			<key>uid</key>
-			<string>7BAC0AE1-EB76-46E6-9622-397A10FAC5A7</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
@@ -4219,7 +4321,7 @@ You can do that by triggering Alfred, typing "pconf", and selecting "BibTeX Libr
 				<key>variables</key>
 				<dict>
 					<key>desired_format</key>
-					<string>pptx</string>
+					<string>docx</string>
 					<key>mode</key>
 					<string>conversion</string>
 				</dict>
@@ -4227,7 +4329,7 @@ You can do that by triggering Alfred, typing "pconf", and selecting "BibTeX Libr
 			<key>type</key>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>E0161BB2-AEAF-414C-BC56-8903CCC21234</string>
+			<string>6627A981-4C34-471F-A108-868F4C8F6C77</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4350,10 +4452,22 @@ You can do that by triggering Alfred, typing "pconf", and selecting "BibTeX Libr
 			<integer>2</integer>
 		</dict>
 		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsmulti</key>
+				<integer>0</integer>
+				<key>filetypes</key>
+				<array>
+					<string>+net.daringfireball.markdown</string>
+					<string>+net.ia.markdown</string>
+				</array>
+				<key>name</key>
+				<string>Convert .md to .pptx</string>
+			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.junction</string>
+			<string>alfred.workflow.trigger.action</string>
 			<key>uid</key>
-			<string>22EB574B-20E3-4E92-9A20-3CA6ADAFA7C9</string>
+			<string>7BAC0AE1-EB76-46E6-9622-397A10FAC5A7</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4390,20 +4504,22 @@ You can do that by triggering Alfred, typing "pconf", and selecting "BibTeX Libr
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>acceptsmulti</key>
-				<integer>0</integer>
-				<key>filetypes</key>
-				<array>
-					<string>+net.daringfireball.markdown</string>
-					<string>+net.ia.markdown</string>
-				</array>
-				<key>name</key>
-				<string>Convert .md to .html</string>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>desired_format</key>
+					<string>pptx</string>
+					<key>mode</key>
+					<string>conversion</string>
+				</dict>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.trigger.action</string>
+			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>5E03C541-76F4-456C-AE68-1F63590CEE3B</string>
+			<string>E0161BB2-AEAF-414C-BC56-8903CCC21234</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4429,28 +4545,6 @@ You can do that by triggering Alfred, typing "pconf", and selecting "BibTeX Libr
 			<string>BB3A40E5-9C0F-411F-A274-483D82413DFC</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<true/>
-				<key>variables</key>
-				<dict>
-					<key>desired_format</key>
-					<string>html</string>
-					<key>mode</key>
-					<string>conversion</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>9C4D210E-D3C9-4A87-8110-71B51B36DCF8</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4483,12 +4577,18 @@ You can do that by triggering Alfred, typing "pconf", and selecting "BibTeX Libr
 				<key>script</key>
 				<string># on the pdflatex location, see: https://superuser.com/questions/1038612/where-do-i-get-the-pdflatex-program-for-mac
 # further path additions as pandoc is installed a different location for ARM Macs
+
 export PATH=/usr/local/bin:/usr/local/texlive/:/Library/TeX/texbin/:/opt/homebrew/bin/:$PATH
 
 {query}
 
 # Reveal in Finder
-open --reveal $output_file</string>
+if [ "$open_after" == "true" ]; then
+	open --reveal "$output_file"
+	open "$output_file"
+else
+	open --reveal "$output_file"
+fi</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -4615,6 +4715,34 @@ end run</string>
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
 			<string>203213EF-7CCC-4A0A-A034-41804B7CAF0D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>22EB574B-20E3-4E92-9A20-3CA6ADAFA7C9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsmulti</key>
+				<integer>0</integer>
+				<key>filetypes</key>
+				<array>
+					<string>+net.daringfireball.markdown</string>
+					<string>+net.ia.markdown</string>
+				</array>
+				<key>name</key>
+				<string>Convert .md to .html</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.action</string>
+			<key>uid</key>
+			<string>5E03C541-76F4-456C-AE68-1F63590CEE3B</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4747,26 +4875,6 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>acceptsmulti</key>
-				<integer>0</integer>
-				<key>filetypes</key>
-				<array>
-					<string>+net.daringfireball.markdown</string>
-					<string>+net.ia.markdown</string>
-				</array>
-				<key>name</key>
-				<string>Convert .md to .pdf</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.action</string>
-			<key>uid</key>
-			<string>1586C092-4E94-4D4C-B43C-70C1C7103F66</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
@@ -4774,7 +4882,7 @@ fi</string>
 				<key>variables</key>
 				<dict>
 					<key>desired_format</key>
-					<string>pdf</string>
+					<string>html</string>
 					<key>mode</key>
 					<string>conversion</string>
 				</dict>
@@ -4782,7 +4890,7 @@ fi</string>
 			<key>type</key>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>48CFAE2D-926B-4B05-A586-48A7A9D395CE</string>
+			<string>9C4D210E-D3C9-4A87-8110-71B51B36DCF8</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4892,6 +5000,26 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>acceptsmulti</key>
+				<integer>0</integer>
+				<key>filetypes</key>
+				<array>
+					<string>+net.daringfireball.markdown</string>
+					<string>+net.ia.markdown</string>
+				</array>
+				<key>name</key>
+				<string>Convert .md to .pdf</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.action</string>
+			<key>uid</key>
+			<string>1586C092-4E94-4D4C-B43C-70C1C7103F66</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>conditions</key>
 				<array>
 					<dict>
@@ -4922,42 +5050,22 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>acceptsmulti</key>
-				<integer>0</integer>
-				<key>filetypes</key>
-				<array>
-					<string>+net.daringfireball.markdown</string>
-					<string>+net.ia.markdown</string>
-				</array>
-				<key>name</key>
-				<string>Anticipatory Bibliography Word Count</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.action</string>
-			<key>uid</key>
-			<string>ADEF7B7C-9CF5-4D05-B1D2-1E7A8FE76C2A</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
 				<true/>
 				<key>variables</key>
 				<dict>
-					<key>count_input</key>
-					<string>file</string>
+					<key>desired_format</key>
+					<string>pdf</string>
 					<key>mode</key>
-					<string>count</string>
+					<string>conversion</string>
 				</dict>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>E9D3936C-666C-456A-858F-0A02F54F9ED6</string>
+			<string>48CFAE2D-926B-4B05-A586-48A7A9D395CE</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -5010,6 +5118,48 @@ fi</string>
 			<integer>1</integer>
 		</dict>
 		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsmulti</key>
+				<integer>0</integer>
+				<key>filetypes</key>
+				<array>
+					<string>+net.daringfireball.markdown</string>
+					<string>+net.ia.markdown</string>
+				</array>
+				<key>name</key>
+				<string>Anticipatory Bibliography Word Count</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.action</string>
+			<key>uid</key>
+			<string>ADEF7B7C-9CF5-4D05-B1D2-1E7A8FE76C2A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>count_input</key>
+					<string>file</string>
+					<key>mode</key>
+					<string>count</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>E9D3936C-666C-456A-858F-0A02F54F9ED6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.junction</string>
 			<key>uid</key>
@@ -5035,28 +5185,6 @@ fi</string>
 			<string>alfred.workflow.trigger.universalaction</string>
 			<key>uid</key>
 			<string>8E00927B-35AF-4E16-85E4-0C88428D5512</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<true/>
-				<key>variables</key>
-				<dict>
-					<key>count_input</key>
-					<string>{query}</string>
-					<key>mode</key>
-					<string>count</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>21CCA00D-A560-43B3-AFC1-C28F2CD84A94</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -5104,6 +5232,28 @@ echo -n "$csl_name"</string>
 			<string>alfred.workflow.output.callexternaltrigger</string>
 			<key>uid</key>
 			<string>13851D58-1F95-41E7-A686-9E1B91BD2086</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>count_input</key>
+					<string>{query}</string>
+					<key>mode</key>
+					<string>count</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>21CCA00D-A560-43B3-AFC1-C28F2CD84A94</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -5180,55 +5330,6 @@ echo -n "$csl_name"</string>
 			<string>99879D56-2467-4AC3-AEA0-F8437EA6766D</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<true/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>pconf</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>pconf.sh</string>
-				<key>subtext</key>
-				<string>Display and Change Pandoc-Suide Settings</string>
-				<key>title</key>
-				<string>Configuration</string>
-				<key>type</key>
-				<integer>8</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>753C7C90-E112-4443-AF75-6173EA0E8B4D</string>
-			<key>version</key>
-			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -5349,6 +5450,55 @@ echo -n "$csl_name"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>pconf</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>pconf.sh</string>
+				<key>subtext</key>
+				<string>Display and Change Pandoc-Suide Settings</string>
+				<key>title</key>
+				<string>Configuration</string>
+				<key>type</key>
+				<integer>8</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>753C7C90-E112-4443-AF75-6173EA0E8B4D</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -5356,7 +5506,7 @@ echo -n "$csl_name"</string>
 				<key>fixedorder</key>
 				<true/>
 				<key>items</key>
-				<string>[{"title":"Word Document","arg":"docx","subtitle":".docx"},{"title":"PDF Document","arg":"pdf","subtitle":".pdf"},{"title":"HTLM File (Standalone)","arg":"html","subtitle":".html"},{"title":"Powerpoint Presentation","arg":"pptx","subtitle":".pptx"}]</string>
+				<string>[{"title":"Word Document","arg":"docx","subtitle":".docx"},{"title":"PDF Document","arg":"pdf","subtitle":".pdf"},{"title":"HTLM File (Standalone)","arg":"html","subtitle":".html"},{"title":"Powerpoint Presentation","arg":"pptx","subtitle":".pptx"},{"title":"Open Office Writer Document","arg":"odt","subtitle":".odt"}]</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>subtext</key>
@@ -5632,6 +5782,106 @@ echo -n "$csl_name"</string>
 				<key>sortmode</key>
 				<integer>2</integer>
 				<key>subtext</key>
+				<string>Press [space] to view a list of the last modified .odt Files.</string>
+				<key>title</key>
+				<string>Search for OpenOffice Documents...</string>
+				<key>types</key>
+				<array>
+					<string>org.oasis-open.opendocument.text</string>
+				</array>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.filefilter</string>
+			<key>uid</key>
+			<string>97776C17-E690-4E00-A470-C1FE4D952723</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string> </string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>setting_type</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>534793CB-6918-434B-9923-C0A40DBD8B30</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>anchorfields</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>daterange</key>
+				<integer>0</integer>
+				<key>fields</key>
+				<array>
+					<dict>
+						<key>field</key>
+						<string>kMDItemDisplayName</string>
+						<key>not</key>
+						<false/>
+						<key>split</key>
+						<true/>
+						<key>value</key>
+						<string>{query}</string>
+						<key>words</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>field</key>
+						<string>kMDItemAlternateNames</string>
+						<key>not</key>
+						<false/>
+						<key>split</key>
+						<true/>
+						<key>value</key>
+						<string>{query}</string>
+						<key>words</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>field</key>
+						<string>kMDItemFinderComment</string>
+						<key>not</key>
+						<false/>
+						<key>split</key>
+						<true/>
+						<key>value</key>
+						<string>{query}</string>
+						<key>words</key>
+						<true/>
+					</dict>
+				</array>
+				<key>includesystem</key>
+				<false/>
+				<key>limit</key>
+				<integer>0</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>scopes</key>
+				<array>
+					<string>~</string>
+				</array>
+				<key>sortmode</key>
+				<integer>2</integer>
+				<key>subtext</key>
 				<string>Press [space] to view a list of recently modified .pptx Files.</string>
 				<key>title</key>
 				<string>Search for Powerpoint Documents...</string>
@@ -5758,53 +6008,6 @@ echo -n "$csl_name"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>fixedorder</key>
-				<true/>
-				<key>items</key>
-				<string>[{"title":"📅 Normal Date Format","arg":"normal","subtitle":"dd-mm-yyyy"},{"title":"🗓 American Date Format","arg":"american","subtitle":"mm-dd-yyyy"},{"title":"❌ Do not append any Date","arg":"none","subtitle":""}]</string>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Select Date Type to Append</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.listfilter</string>
-			<key>uid</key>
-			<string>367167E6-8193-46E4-A342-A1B8B9BBD18D</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict>
-					<key>setting_type</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>845BF013-84DB-424E-8D00-B76EF3561521</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>conditions</key>
 				<array>
 					<dict>
@@ -5843,9 +6046,9 @@ echo -n "$csl_name"</string>
 						<key>matchmode</key>
 						<integer>0</integer>
 						<key>matchstring</key>
-						<string>reference_docx</string>
+						<string>reference_docx_path</string>
 						<key>outputlabel</key>
-						<string>reference_docx</string>
+						<string>reference_docx_path</string>
 						<key>uid</key>
 						<string>03CDC350-36B7-4E50-B4A5-04EC5F9B13DA</string>
 					</dict>
@@ -5857,9 +6060,23 @@ echo -n "$csl_name"</string>
 						<key>matchmode</key>
 						<integer>0</integer>
 						<key>matchstring</key>
-						<string>reference_pptx</string>
+						<string>reference_odt_path</string>
 						<key>outputlabel</key>
-						<string>reference_pptx</string>
+						<string>reference_odt_path</string>
+						<key>uid</key>
+						<string>0C8F705D-6CFC-4437-B0AF-CD1BB2412571</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>reference_pptx_path</string>
+						<key>outputlabel</key>
+						<string>reference_pptx_path</string>
 						<key>uid</key>
 						<string>5420E790-9B93-492C-81B1-3C54B0E7CB1D</string>
 					</dict>
@@ -6011,6 +6228,20 @@ echo -n "$csl_name"</string>
 						<key>matchmode</key>
 						<integer>0</integer>
 						<key>matchstring</key>
+						<string>open_after</string>
+						<key>outputlabel</key>
+						<string>open_after</string>
+						<key>uid</key>
+						<string>7428DEBE-24CD-4692-8617-E0D8F9985E95</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
 						<string>slide_level</string>
 						<key>outputlabel</key>
 						<string>slide_level</string>
@@ -6115,6 +6346,53 @@ echo -n "$csl_name"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>fixedorder</key>
+				<true/>
+				<key>items</key>
+				<string>[{"title":"📅 Normal Date Format","arg":"normal","subtitle":"dd-mm-yyyy"},{"title":"🗓 American Date Format","arg":"american","subtitle":"mm-dd-yyyy"},{"title":"❌ Do not append any Date","arg":"none","subtitle":""}]</string>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Select Date Type to Append</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.listfilter</string>
+			<key>uid</key>
+			<string>367167E6-8193-46E4-A342-A1B8B9BBD18D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>setting_type</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>845BF013-84DB-424E-8D00-B76EF3561521</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>subtext</key>
@@ -6193,6 +6471,25 @@ echo -n "$csl_name"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>externaltriggerid</key>
+				<string>set-new-setting</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>72C61AC9-74D5-4159-B80E-3C4CE8ECFAE4</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>subtext</key>
@@ -6226,25 +6523,6 @@ echo -n "$csl_name"</string>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>9F29D610-B925-4C90-AE78-901C4B527146</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>externaltriggerid</key>
-				<string>set-new-setting</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>72C61AC9-74D5-4159-B80E-3C4CE8ECFAE4</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -6290,27 +6568,86 @@ echo -n "$csl_name"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>subtext</key>
-				<string>Displayed is the current template. Enter only the template name.</string>
-				<key>text</key>
-				<string>Set Pandoc template extensions</string>
-				<key>withspace</key>
+				<key>anchorfields</key>
 				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>daterange</key>
+				<integer>0</integer>
+				<key>fields</key>
+				<array>
+					<dict>
+						<key>field</key>
+						<string>kMDItemDisplayName</string>
+						<key>not</key>
+						<false/>
+						<key>split</key>
+						<true/>
+						<key>value</key>
+						<string>{query}</string>
+						<key>words</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>field</key>
+						<string>kMDItemAlternateNames</string>
+						<key>not</key>
+						<false/>
+						<key>split</key>
+						<true/>
+						<key>value</key>
+						<string>{query}</string>
+						<key>words</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>field</key>
+						<string>kMDItemFinderComment</string>
+						<key>not</key>
+						<false/>
+						<key>split</key>
+						<true/>
+						<key>value</key>
+						<string>{query}</string>
+						<key>words</key>
+						<true/>
+					</dict>
+				</array>
+				<key>includesystem</key>
+				<false/>
+				<key>limit</key>
+				<integer>0</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>scopes</key>
+				<array/>
+				<key>sortmode</key>
+				<integer>0</integer>
+				<key>subtext</key>
+				<string>Press [space] to view a list of the last modified template files.</string>
+				<key>title</key>
+				<string>Set Pandoc Template (.latex File)</string>
+				<key>types</key>
+				<array>
+					<string>dyn.ah62d4rv4ge8022pyqz6a</string>
+				</array>
+				<key>withspace</key>
+				<false/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
+			<string>alfred.workflow.input.filefilter</string>
 			<key>uid</key>
 			<string>B84BD2AF-06AD-44C8-8062-6AE0604C9916</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string>{var:pandoc_template}</string>
+				<string> </string>
 				<key>passthroughargument</key>
 				<false/>
 				<key>variables</key>
@@ -6511,7 +6848,7 @@ echo -n "$csl_name"</string>
 				<key>sortmode</key>
 				<integer>2</integer>
 				<key>subtext</key>
-				<string>if your library isn't showing up, open the Pandoc Suite Documentation for a workaround</string>
+				<string></string>
 				<key>title</key>
 				<string>Search additional BibTeX Library. Press [Esc] to leave this setting empty and only use one library file.</string>
 				<key>types</key>
@@ -6543,6 +6880,53 @@ echo -n "$csl_name"</string>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>527A7408-04E2-4890-A68D-C49D05B7CD4F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>fixedorder</key>
+				<true/>
+				<key>items</key>
+				<string>[{"title":"✅ Open Output File after Conversion","arg":"true","subtitle":"with default application"},{"title":"❌ Do Open Output File after Conversion","arg":"false","subtitle":"only reveal it in Finder"}]</string>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Select Date Type to Append</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.listfilter</string>
+			<key>uid</key>
+			<string>1BD05DD1-96B4-4180-93BD-1BD3EC5A304C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>open_after</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>EC0EBA26-482F-4840-93EF-CEA0C7A0661A</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -6806,7 +7190,7 @@ echo -n "$csl_name"</string>
 				<string># idea from https://brettterpstra.com/2014/08/05/shell-tricks-man-pages/
 man -t pandoc | open -f -a Preview</string>
 				<key>scriptargtype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
@@ -6863,6 +7247,12 @@ Due to some internal changes, you will have to set the citation style again via 
 
 Release Notes
 =============
+5.0
+- new output format: `.odt`
+- new option: open output file after conversion
+- changed `pconf` setting for templates to file filter
+- bugfix when setting reference documents for Word or Powerpoint
+
 4.9
 - small bugfix when using multiple filters
 - The `pconf` now remembers your choices, displaying recent / frequent submenu-items further to the top
@@ -7075,7 +7465,7 @@ Changes in Detail
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>3520</integer>
+			<integer>3655</integer>
 		</dict>
 		<key>06928646-A3C8-4D15-A526-2D6E9A4233A6</key>
 		<dict>
@@ -7095,7 +7485,7 @@ Changes in Detail
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>3070</integer>
+			<integer>3210</integer>
 		</dict>
 		<key>07E85B51-4AC8-41B8-898E-74356FC21A6C</key>
 		<dict>
@@ -7104,7 +7494,7 @@ Changes in Detail
 			<key>xpos</key>
 			<integer>680</integer>
 			<key>ypos</key>
-			<integer>3860</integer>
+			<integer>4100</integer>
 		</dict>
 		<key>0A379478-9939-4905-9781-F1145FC20901</key>
 		<dict>
@@ -7113,7 +7503,7 @@ Changes in Detail
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>4020</integer>
+			<integer>4260</integer>
 		</dict>
 		<key>0DF9D355-2614-4147-A927-E6427A7546A9</key>
 		<dict>
@@ -7140,7 +7530,7 @@ Changes in Detail
 			<key>xpos</key>
 			<integer>615</integer>
 			<key>ypos</key>
-			<integer>4630</integer>
+			<integer>4870</integer>
 		</dict>
 		<key>13851D58-1F95-41E7-A686-9E1B91BD2086</key>
 		<dict>
@@ -7158,9 +7548,9 @@ Changes in Detail
 			<key>note</key>
 			<string>convert to .pdf</string>
 			<key>xpos</key>
-			<integer>10</integer>
+			<integer>15</integer>
 			<key>ypos</key>
-			<integer>1670</integer>
+			<integer>1770</integer>
 		</dict>
 		<key>165FFAAF-92C5-4F2C-BD2A-EFD28B7EFD48</key>
 		<dict>
@@ -7188,6 +7578,15 @@ Changes in Detail
 			<integer>575</integer>
 			<key>ypos</key>
 			<integer>1515</integer>
+		</dict>
+		<key>1BD05DD1-96B4-4180-93BD-1BD3EC5A304C</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>680</integer>
+			<key>ypos</key>
+			<integer>3855</integer>
 		</dict>
 		<key>1C0964D1-AA81-478A-B406-28E96DDD9E82</key>
 		<dict>
@@ -7234,9 +7633,9 @@ Trigger Pandoc Conversion</string>
 		<key>21CCA00D-A560-43B3-AFC1-C28F2CD84A94</key>
 		<dict>
 			<key>xpos</key>
-			<integer>150</integer>
+			<integer>155</integer>
 			<key>ypos</key>
-			<integer>1975</integer>
+			<integer>2075</integer>
 		</dict>
 		<key>21CE81FE-25A9-458F-91ED-EDECC004F8D0</key>
 		<dict>
@@ -7252,9 +7651,9 @@ Trigger Pandoc Conversion</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>245</integer>
+			<integer>250</integer>
 			<key>ypos</key>
-			<integer>1500</integer>
+			<integer>1600</integer>
 		</dict>
 		<key>238F8E7C-C458-496F-AB7B-0BFE96B8FBF6</key>
 		<dict>
@@ -7263,9 +7662,9 @@ Trigger Pandoc Conversion</string>
 			<key>note</key>
 			<string>Reveal entry in BibDesk</string>
 			<key>xpos</key>
-			<integer>10</integer>
+			<integer>15</integer>
 			<key>ypos</key>
-			<integer>1150</integer>
+			<integer>1115</integer>
 		</dict>
 		<key>245395CA-A94A-4764-9700-EE3C8C833DEA</key>
 		<dict>
@@ -7279,9 +7678,9 @@ Trigger Pandoc Conversion</string>
 		<key>25C0F17B-796E-4B29-9950-5C6351C88B26</key>
 		<dict>
 			<key>xpos</key>
-			<integer>245</integer>
+			<integer>250</integer>
 			<key>ypos</key>
-			<integer>1895</integer>
+			<integer>1995</integer>
 		</dict>
 		<key>26F37632-6D01-4F0C-AEC5-8B418A2A87E9</key>
 		<dict>
@@ -7290,7 +7689,7 @@ Trigger Pandoc Conversion</string>
 			<key>xpos</key>
 			<integer>680</integer>
 			<key>ypos</key>
-			<integer>2690</integer>
+			<integer>2830</integer>
 		</dict>
 		<key>27DEB378-75B0-4A5B-B864-1791E42F9540</key>
 		<dict>
@@ -7299,7 +7698,7 @@ Trigger Pandoc Conversion</string>
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>2495</integer>
+			<integer>2625</integer>
 		</dict>
 		<key>2A53A3E8-F0F6-4331-95FE-472A3A007E59</key>
 		<dict>
@@ -7389,7 +7788,7 @@ Trigger Pandoc Conversion</string>
 			<key>xpos</key>
 			<integer>680</integer>
 			<key>ypos</key>
-			<integer>2800</integer>
+			<integer>2945</integer>
 		</dict>
 		<key>38D8D3B7-5FBE-4AD1-AD38-FB76FFEE2519</key>
 		<dict>
@@ -7425,7 +7824,7 @@ Trigger Pandoc Conversion</string>
 			<key>xpos</key>
 			<integer>680</integer>
 			<key>ypos</key>
-			<integer>2925</integer>
+			<integer>3065</integer>
 		</dict>
 		<key>3E233EB1-E0B2-48CC-9E6F-A5CAFDFD26AD</key>
 		<dict>
@@ -7457,7 +7856,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>680</integer>
 			<key>ypos</key>
-			<integer>3615</integer>
+			<integer>3740</integer>
 		</dict>
 		<key>42BDA197-AE7D-45F0-8929-3B154F42219F</key>
 		<dict>
@@ -7506,16 +7905,16 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>3890</integer>
+			<integer>4130</integer>
 		</dict>
 		<key>48CFAE2D-926B-4B05-A586-48A7A9D395CE</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>150</integer>
+			<integer>155</integer>
 			<key>ypos</key>
-			<integer>1700</integer>
+			<integer>1800</integer>
 		</dict>
 		<key>4CD979CC-3ADB-4C54-92FA-F2A9B569E75C</key>
 		<dict>
@@ -7564,7 +7963,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>3645</integer>
+			<integer>3770</integer>
 		</dict>
 		<key>5335BA38-FC76-4B47-8D08-462A1AC06CC4</key>
 		<dict>
@@ -7576,6 +7975,15 @@ Citation Picker</string>
 			<integer>840</integer>
 			<key>ypos</key>
 			<integer>580</integer>
+		</dict>
+		<key>534793CB-6918-434B-9923-C0A40DBD8B30</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>610</integer>
+			<key>ypos</key>
+			<integer>2505</integer>
 		</dict>
 		<key>535927EB-2ED1-4C7C-B7B2-3AE4B9C11B88</key>
 		<dict>
@@ -7640,9 +8048,9 @@ Citation Picker</string>
 			<key>note</key>
 			<string>convert to .html</string>
 			<key>xpos</key>
-			<integer>10</integer>
+			<integer>15</integer>
 			<key>ypos</key>
-			<integer>1540</integer>
+			<integer>1640</integer>
 		</dict>
 		<key>5EFAE918-D2C2-4A97-9DC4-1EFF1D81A85E</key>
 		<dict>
@@ -7667,7 +8075,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>680</integer>
 			<key>ypos</key>
-			<integer>3265</integer>
+			<integer>3405</integer>
 		</dict>
 		<key>65CA24BA-2DA6-4DC0-A2BE-3E4E4D5FDD72</key>
 		<dict>
@@ -7685,9 +8093,9 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>150</integer>
+			<integer>155</integer>
 			<key>ypos</key>
-			<integer>1310</integer>
+			<integer>1410</integer>
 		</dict>
 		<key>6ACECC5E-0168-4F34-87C7-A1C6EFF8FCBC</key>
 		<dict>
@@ -7718,7 +8126,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>860</integer>
 			<key>ypos</key>
-			<integer>3880</integer>
+			<integer>4120</integer>
 		</dict>
 		<key>6F19CED8-5C74-4F75-9683-F25D9EAE8841</key>
 		<dict>
@@ -7727,7 +8135,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>3765</integer>
+			<integer>4005</integer>
 		</dict>
 		<key>7085C0CF-F857-4806-B96D-1FADD51E37EE</key>
 		<dict>
@@ -7770,7 +8178,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>680</integer>
 			<key>ypos</key>
-			<integer>3155</integer>
+			<integer>3295</integer>
 		</dict>
 		<key>74F55929-395A-4A89-BCD9-E2BB9E297A1E</key>
 		<dict>
@@ -7797,18 +8205,18 @@ Citation Picker</string>
 			<key>note</key>
 			<string>Configuration of this workflow</string>
 			<key>xpos</key>
-			<integer>10</integer>
+			<integer>15</integer>
 			<key>ypos</key>
-			<integer>2110</integer>
+			<integer>2190</integer>
 		</dict>
 		<key>795480E8-4945-4E27-80D2-9FBB00E97A68</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>xpos</key>
-			<integer>185</integer>
+			<integer>190</integer>
 			<key>ypos</key>
-			<integer>1150</integer>
+			<integer>1115</integer>
 		</dict>
 		<key>7B2B3CB9-CBCA-4BFF-A5BD-E04261F66A2F</key>
 		<dict>
@@ -7817,7 +8225,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>3295</integer>
+			<integer>3435</integer>
 		</dict>
 		<key>7BAC0AE1-EB76-46E6-9622-397A10FAC5A7</key>
 		<dict>
@@ -7826,9 +8234,9 @@ Citation Picker</string>
 			<key>note</key>
 			<string>convert to .pptx</string>
 			<key>xpos</key>
-			<integer>10</integer>
+			<integer>15</integer>
 			<key>ypos</key>
-			<integer>1410</integer>
+			<integer>1510</integer>
 		</dict>
 		<key>7CF492B3-EED7-4A51-A743-C01BC792CBE5</key>
 		<dict>
@@ -7846,7 +8254,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>2830</integer>
+			<integer>2975</integer>
 		</dict>
 		<key>8B058D94-4984-47A7-A097-709430105D5C</key>
 		<dict>
@@ -7855,7 +8263,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>1005</integer>
 			<key>ypos</key>
-			<integer>4105</integer>
+			<integer>4345</integer>
 		</dict>
 		<key>8B51C1A0-EAD2-457B-A532-6CC16C7F015E</key>
 		<dict>
@@ -7880,9 +8288,9 @@ Citation Picker</string>
 			<key>note</key>
 			<string>Anticipatory Count for text</string>
 			<key>xpos</key>
-			<integer>10</integer>
+			<integer>15</integer>
 			<key>ypos</key>
-			<integer>1945</integer>
+			<integer>2045</integer>
 		</dict>
 		<key>8FA3F450-D3DE-44FF-B49B-34410B525D4D</key>
 		<dict>
@@ -7900,7 +8308,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>4205</integer>
+			<integer>4445</integer>
 		</dict>
 		<key>92FD4A05-28D1-4C72-B87F-FE9BF5455B6A</key>
 		<dict>
@@ -7918,7 +8326,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>680</integer>
 			<key>ypos</key>
-			<integer>2580</integer>
+			<integer>2715</integer>
 		</dict>
 		<key>96FCE9BC-5201-4357-9B63-588F73AEF5F3</key>
 		<dict>
@@ -7937,6 +8345,15 @@ Citation Picker</string>
 			<integer>870</integer>
 			<key>ypos</key>
 			<integer>1045</integer>
+		</dict>
+		<key>97776C17-E690-4E00-A470-C1FE4D952723</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>680</integer>
+			<key>ypos</key>
+			<integer>2475</integer>
 		</dict>
 		<key>9859D608-FC9F-44E5-B4B0-55FBFD8CA431</key>
 		<dict>
@@ -7970,9 +8387,9 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>150</integer>
+			<integer>155</integer>
 			<key>ypos</key>
-			<integer>1570</integer>
+			<integer>1670</integer>
 		</dict>
 		<key>9E303148-5BB4-4D8A-AF82-05EE222BD6F9</key>
 		<dict>
@@ -7992,7 +8409,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>3185</integer>
+			<integer>3325</integer>
 		</dict>
 		<key>A3AAE7A8-ADBD-4AF6-90F9-FEB634A8BEED</key>
 		<dict>
@@ -8001,7 +8418,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>680</integer>
 			<key>ypos</key>
-			<integer>2115</integer>
+			<integer>2120</integer>
 		</dict>
 		<key>A4184CCE-A1F6-48A9-9035-D0A0AE06BF9D</key>
 		<dict>
@@ -8059,16 +8476,16 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>3405</integer>
+			<integer>3545</integer>
 		</dict>
 		<key>ADEF7B7C-9CF5-4D05-B1D2-1E7A8FE76C2A</key>
 		<dict>
 			<key>note</key>
 			<string>Anticipatory Count for files</string>
 			<key>xpos</key>
-			<integer>10</integer>
+			<integer>15</integer>
 			<key>ypos</key>
-			<integer>1800</integer>
+			<integer>1900</integer>
 		</dict>
 		<key>AF051F12-7BF5-4D7A-B0AA-9FAAF9EDB3CA</key>
 		<dict>
@@ -8077,7 +8494,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>2955</integer>
+			<integer>3095</integer>
 		</dict>
 		<key>AF1507DD-81ED-4829-B6C2-C915E0FDD50D</key>
 		<dict>
@@ -8086,7 +8503,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>680</integer>
 			<key>ypos</key>
-			<integer>3990</integer>
+			<integer>4230</integer>
 		</dict>
 		<key>B31553E5-A98A-47E1-8CBD-EF632C228C54</key>
 		<dict>
@@ -8122,7 +8539,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>680</integer>
 			<key>ypos</key>
-			<integer>3375</integer>
+			<integer>3515</integer>
 		</dict>
 		<key>B89ACE5C-1308-4CFE-9560-B9B438F4F1E1</key>
 		<dict>
@@ -8205,7 +8622,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>680</integer>
 			<key>ypos</key>
-			<integer>2465</integer>
+			<integer>2595</integer>
 		</dict>
 		<key>BE676612-EAE6-4389-85E0-FEAD2E60BE4C</key>
 		<dict>
@@ -8225,6 +8642,17 @@ Citation Picker</string>
 			<key>ypos</key>
 			<integer>460</integer>
 		</dict>
+		<key>C5164F81-AFF9-41E3-B457-ACB055240C18</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>note</key>
+			<string>convert to .odt</string>
+			<key>xpos</key>
+			<integer>15</integer>
+			<key>ypos</key>
+			<integer>1245</integer>
+		</dict>
 		<key>C5F3870E-9179-475E-BCA9-D35E172DEE3D</key>
 		<dict>
 			<key>colorindex</key>
@@ -8232,9 +8660,9 @@ Citation Picker</string>
 			<key>note</key>
 			<string>convert to .docx</string>
 			<key>xpos</key>
-			<integer>10</integer>
+			<integer>15</integer>
 			<key>ypos</key>
-			<integer>1280</integer>
+			<integer>1380</integer>
 		</dict>
 		<key>C6163D07-A2C0-4E02-8D6B-F42F6101E0F8</key>
 		<dict>
@@ -8332,7 +8760,7 @@ Anticipatory Word Count</string>
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>4325</integer>
+			<integer>4565</integer>
 		</dict>
 		<key>DC77C4D7-6154-4281-B7B5-5E14299C4D30</key>
 		<dict>
@@ -8357,9 +8785,9 @@ Anticipatory Word Count</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>150</integer>
+			<integer>155</integer>
 			<key>ypos</key>
-			<integer>1440</integer>
+			<integer>1540</integer>
 		</dict>
 		<key>E07255AA-BD02-45CF-8FE3-817111A25346</key>
 		<dict>
@@ -8370,7 +8798,7 @@ Anticipatory Word Count</string>
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>4460</integer>
+			<integer>4700</integer>
 		</dict>
 		<key>E089F2B7-2FE8-4E77-B050-9AE8287186D8</key>
 		<dict>
@@ -8379,7 +8807,7 @@ Anticipatory Word Count</string>
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>2610</integer>
+			<integer>2745</integer>
 		</dict>
 		<key>E1D3B211-1CE6-4A09-B45E-7C55A61CDC06</key>
 		<dict>
@@ -8408,6 +8836,15 @@ Anticipatory Word Count</string>
 			<key>ypos</key>
 			<integer>2075</integer>
 		</dict>
+		<key>E5F7248C-68EE-440F-8B5F-65C9F470F9CB</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>xpos</key>
+			<integer>155</integer>
+			<key>ypos</key>
+			<integer>1275</integer>
+		</dict>
 		<key>E621AAB9-7B81-4628-AEAF-9328BDD2A803</key>
 		<dict>
 			<key>colorindex</key>
@@ -8415,7 +8852,7 @@ Anticipatory Word Count</string>
 			<key>xpos</key>
 			<integer>680</integer>
 			<key>ypos</key>
-			<integer>3040</integer>
+			<integer>3180</integer>
 		</dict>
 		<key>E9994D9D-E843-4F55-A9A3-DB5CA63F33B7</key>
 		<dict>
@@ -8424,14 +8861,14 @@ Anticipatory Word Count</string>
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>4135</integer>
+			<integer>4375</integer>
 		</dict>
 		<key>E9D3936C-666C-456A-858F-0A02F54F9ED6</key>
 		<dict>
 			<key>xpos</key>
-			<integer>150</integer>
+			<integer>155</integer>
 			<key>ypos</key>
-			<integer>1830</integer>
+			<integer>1930</integer>
 		</dict>
 		<key>EA5FC55D-EF41-48AB-8318-7FEBC5971355</key>
 		<dict>
@@ -8451,6 +8888,15 @@ Anticipatory Word Count</string>
 			<key>ypos</key>
 			<integer>2350</integer>
 		</dict>
+		<key>EC0EBA26-482F-4840-93EF-CEA0C7A0661A</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>610</integer>
+			<key>ypos</key>
+			<integer>3885</integer>
+		</dict>
 		<key>EEF73BE0-D215-459C-A69F-A7921ACF45F6</key>
 		<dict>
 			<key>colorindex</key>
@@ -8467,7 +8913,7 @@ Anticipatory Word Count</string>
 			<key>xpos</key>
 			<integer>680</integer>
 			<key>ypos</key>
-			<integer>3490</integer>
+			<integer>3625</integer>
 		</dict>
 		<key>F2BF4F5F-7AB6-4DDB-AA0E-C3749ECF0D8B</key>
 		<dict>
@@ -8476,7 +8922,7 @@ Anticipatory Word Count</string>
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>2145</integer>
+			<integer>2150</integer>
 		</dict>
 		<key>F4C7EC85-3826-4507-B556-C5335C17E07E</key>
 		<dict>
@@ -8503,7 +8949,7 @@ Anticipatory Word Count</string>
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>2720</integer>
+			<integer>2860</integer>
 		</dict>
 		<key>FE874084-CB56-4BDF-9FF0-A3B1920C26F2</key>
 		<dict>
@@ -8523,7 +8969,7 @@ Anticipatory Word Count</string>
 			<key>xpos</key>
 			<integer>680</integer>
 			<key>ypos</key>
-			<integer>3735</integer>
+			<integer>3975</integer>
 		</dict>
 	</dict>
 	<key>variables</key>
@@ -8548,6 +8994,8 @@ Anticipatory Word Count</string>
 		<string>docx</string>
 		<key>local_csl_folder</key>
 		<string>/Users/chrisgrieser/Google Drive/Dokumente/IT Backups/Alfred.alfredpreferences/workflows/user.workflow.41B90DCD-A99E-4943-A19A-E91859557FB0/citation-styles/</string>
+		<key>open_after</key>
+		<string>true</string>
 		<key>pandoc_filter</key>
 		<string>pandoc-manubot-cite, pandoc-crossref, mermaid-filter</string>
 		<key>pandoc_template</key>
@@ -8558,6 +9006,8 @@ Anticipatory Word Count</string>
 		<string>+lists_without_preceding_blankline</string>
 		<key>reference_docx_path</key>
 		<string>~/Google Drive/Academia/Vorlagen/Academic Writing Template.docx</string>
+		<key>reference_odt_path</key>
+		<string></string>
 		<key>reference_pptx_path</key>
 		<string>~/Google Drive/Academia/Vorlagen/Academic Presentation Template.pptx</string>
 		<key>resource_path_subfolder</key>
@@ -8571,21 +9021,24 @@ Anticipatory Word Count</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
+		<string>second_library</string>
 		<string>pdf_engine</string>
+		<string>csl_file</string>
+		<string>pandoc_template</string>
+		<string>local_csl_folder</string>
+		<string>writer_extensions</string>
+		<string>reader_extensions</string>
+		<string>reference_odt_path</string>
+		<string>reference_docx_path</string>
+		<string>resource_path_subfolder</string>
+		<string>reference_pptx_path</string>
+		<string>further_pandoc_args</string>
 		<string>hotkey_output_format</string>
 		<string>pandoc_filter</string>
-		<string>reference_pptx_path</string>
-		<string>reader_extensions</string>
-		<string>reference_docx_path</string>
-		<string>local_csl_folder</string>
-		<string>second_library</string>
-		<string>writer_extensions</string>
-		<string>pandoc_template</string>
 		<string>bibtex_library_path</string>
-		<string>csl_file</string>
 	</array>
 	<key>version</key>
-	<string>4.9</string>
+	<string>5.0</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/pandoc_alfred</string>
 </dict>

@@ -66,8 +66,8 @@ cat << EOB
 		},
 		{
 			"title": "📄 Word Reference Document",
-			"match":"word docx reference document",
-			"arg": "reference_docx",
+			"match":"word docx reference document template office microsoft",
+			"arg": "reference_docx_path",
 			"uid": "10",
 			"subtitle": "currently: $reference_docx_path"
 		},
@@ -80,8 +80,8 @@ cat << EOB
 		},
 		{
 			"title": "🧑‍🏫 Powerpoint Reference Presentation",
-			"match":"reference powerpoint presentation pptx",
-			"arg": "reference_pptx",
+			"match":"reference powerpoint presentation pptx template office microsoft slides",
+			"arg": "reference_pptx_path",
 			"uid": "12",
 			"subtitle": "currently: $reference_pptx_path"
 		},
@@ -115,14 +115,14 @@ cat << EOB
 		},
 		{
 			"title": "⚙️ Writer Extensions",
-			"match":"extensions writer addtional options",
+			"match":"extensions writer additional options",
 			"arg": "writer_extensions",
 			"uid": "17",
 			"subtitle": "currently: $writer_extensions"
 		},
 		{
 			"title": "⚙️ Reader Extensions",
-			"match":"extensions reader addtional options",
+			"match":"extensions reader additional options",
 			"arg": "reader_extensions",
 			"uid": "18",
 			"subtitle": "currently: $reader_extensions"
@@ -154,6 +154,20 @@ cat << EOB
 			"arg": "email",
 			"uid": "22",
 			"subtitle": "will open default mail client"
+		},
+		{
+			"title": "🚀 Open Output File after Conversion",
+			"match":"open output after conversion Finder reveal",
+			"arg": "open_after",
+			"uid": "23",
+			"subtitle": "currently: $open_after"
+		},
+		{
+			"title": "📄 OpenOffice Reference Document",
+			"match":"writer openoffice office odt reference document template",
+			"arg": "reference_odt_path",
+			"uid": "24",
+			"subtitle": "currently: $reference_odt"
 		}
 	]
 }

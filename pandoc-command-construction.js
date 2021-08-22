@@ -33,6 +33,8 @@ function run(argv) {
 	second_library = second_library.replace(/^~/, homepath);
 	var reference_docx_path = $.getenv("reference_docx_path");
 	reference_docx_path = reference_docx_path.replace(/^~/, homepath);
+	var reference_odt_path = $.getenv("reference_odt_path");
+	reference_odt_path = reference_odt_path.replace(/^~/, homepath);
 	var reference_pptx_path = $.getenv("reference_pptx_path");
 	reference_pptx_path = reference_pptx_path.replace(/^~/, homepath);
 	var pdf_engine = $.getenv("pdf_engine");
@@ -87,6 +89,7 @@ function run(argv) {
 	var reference_docx = "";
 	var pdf_arg = "";
 	var reference_pptx = "";
+	var reference_odt = "";
 	var second_resource_path = "";
 	var reader_ext = "";
 	var writer_ext = "";
@@ -147,19 +150,25 @@ function run(argv) {
 		filter_arg = filters.join("");
 	}
 
-	//Misc
-	var citation_style = "--csl " + quoted(csl_file) + " ";
-	var slide_level_arg = "--slide-level=" + slide_level + " ";
-	var further_args = further_pandoc_args + " ";
+	// Reference Documents & Templates
 	if (reference_docx_path != "") {
-		reference_docx = "--reference-doc " + quoted(reference_docx_path) + " ";
+		reference_docx = "--reference-doc=" + quoted(reference_docx_path) + " ";
+	}
+	if (reference_odt_path != "") {
+		reference_odt = "--reference-doc=" + quoted(reference_odt_path) + " ";
 	}
 	if (reference_pptx_path != "") {
-		reference_pptx = "--reference-doc " + quoted(reference_pptx_path) + " ";
+		reference_pptx = "--reference-doc=" + quoted(reference_pptx_path) + " ";
 	}
 	if (pandoc_template != "") {
 		template_arg = "--template=" + quoted(pandoc_template) + " ";
 	}
+
+	//Misc
+	var citation_style = "--csl " + quoted(csl_file) + " ";
+	var slide_level_arg = "--slide-level=" + slide_level + " ";
+	var further_args = further_pandoc_args + " ";
+
 
 	// construct pandoc command
 	var pandoc_command =
@@ -184,6 +193,9 @@ function run(argv) {
 	switch (desired_format) {
 		case "docx":
 			pandoc_command += reference_docx;
+			break;
+		case "odt":
+			pandoc_command += reference_odt;
 			break;
 		case "pdf":
 			pandoc_command += pdf_arg;

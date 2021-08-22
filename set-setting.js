@@ -13,6 +13,16 @@ function run (argv){
 	new_setting = new_setting.replace (/^\/users\/[^\/]*(\/.*)$/g,"~$1");
 	var setting_type = $.getenv('setting_type');
 	var export_setting = false
+	switch (setting_type) {
+		case "date_to_append":
+		case "slide_level":
+		case "open_after":
+			export_setting = true;
+			break;
+		default:
+			break;
+	}
+
 	if (setting_type == "further_pandoc_args"){ export_setting = true; };
 
 	// Set Setting
@@ -23,6 +33,7 @@ function run (argv){
       exportable: export_setting}
    );
 
+	//Alfred Splitter will work with ";;"
    function subt(){
    	return ";;" + new_setting;
    }
@@ -54,14 +65,18 @@ function run (argv){
 			return "✅ Date to Add: " + subt();
 		case "pdf_engine":
 			return "✅ PDF Engine set" + subt();
-		case "reference_docx":
+		case "reference_docx_path":
 			return "✅ Reference Word Document set" + subt();
-		case "reference_pptx":
+		case "reference_odt_path":
+			return "✅ Reference OpenOffice Document set" + subt();
+		case "reference_pptx_path":
 			return "✅ Reference Powerpoint Presentation set" + subt();
 		case "csl_file":
 			return "✅ Citation Style selected" + subt();
 		case "hotkey_output_format":
 			return "✅ Hotkey Output Format set" + subt();
+		case "open_after":
+			return "✅ Open Output File after Conversion" + subt();
 		default:
 			return "error";
 	}
