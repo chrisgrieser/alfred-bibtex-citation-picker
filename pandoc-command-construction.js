@@ -48,6 +48,7 @@ function run(argv) {
 	var writer_extensions = $.getenv("writer_extensions");
 	var pandoc_template = $.getenv("pandoc_template");
 	var pandoc_filter = $.getenv("pandoc_filter");
+	var link_citations_biblio = $.getenv("link_citations_biblio");
 
 	// get today's date & set it for the metadata date option
 	var today = new Date();
@@ -169,6 +170,11 @@ function run(argv) {
 	var slide_level_arg = "--slide-level=" + slide_level + " ";
 	var further_args = further_pandoc_args + " ";
 
+	var automatic_linking = "--metadata link-citations=false --metadata link-bibliography=false ";
+	if (link_citations_biblio == "true"){
+		automatic_linking = "--metadata link-citations=true --metadata link-bibliography=true ";
+	}
+
 
 	// construct pandoc command
 	var pandoc_command =
@@ -186,7 +192,7 @@ function run(argv) {
 		further_args +
 		reader_ext +
 		writer_ext +
-		"--metadata link-citations=true " +
+		automatic_linking +
 		date_metadata;
 
 	//additions depending on output format

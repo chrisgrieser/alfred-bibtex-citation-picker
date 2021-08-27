@@ -168,6 +168,13 @@ cat << EOB
 			"arg": "reference_odt_path",
 			"uid": "24",
 			"subtitle": "currently: $reference_odt"
+		},
+		{
+			"title": "🔗 Link Citations to Bibliography & Bibliography to URLs",
+			"match":"link autolink URL hyperlink citations bibliography",
+			"arg": "link_citations_biblio",
+			"uid": "25",
+			"subtitle": "currently: $link_citations_biblio"
 		}
 	]
 }

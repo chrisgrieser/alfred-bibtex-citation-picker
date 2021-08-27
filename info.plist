@@ -469,6 +469,18 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
+				<string>CB1CCA03-D334-4827-8E5F-3BC3565E4C82</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>5330EC81-604F-4884-800D-4F5937494BB4</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>AF051F12-7BF5-4D7A-B0AA-9FAAF9EDB3CA</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -846,6 +858,19 @@
 				<string></string>
 				<key>vitoclose</key>
 				<false/>
+			</dict>
+		</array>
+		<key>3CB148CF-6172-497D-8C2B-2032EE3359C1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>72C61AC9-74D5-4159-B80E-3C4CE8ECFAE4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<true/>
 			</dict>
 		</array>
 		<key>3DA6CC1B-1830-4668-B974-736468C55BB5</key>
@@ -2110,6 +2135,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>8FA3F450-D3DE-44FF-B49B-34410B525D4D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>CB1CCA03-D334-4827-8E5F-3BC3565E4C82</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3CB148CF-6172-497D-8C2B-2032EE3359C1</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -6130,6 +6168,20 @@ echo -n "$csl_name"</string>
 						<key>matchmode</key>
 						<integer>0</integer>
 						<key>matchstring</key>
+						<string>link_citations_biblio</string>
+						<key>outputlabel</key>
+						<string>link_citations_biblio</string>
+						<key>uid</key>
+						<string>5330EC81-604F-4884-800D-4F5937494BB4</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
 						<string>further_pandoc_args</string>
 						<key>outputlabel</key>
 						<string>further_pandoc_args</string>
@@ -6387,6 +6439,53 @@ echo -n "$csl_name"</string>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>845BF013-84DB-424E-8D00-B76EF3561521</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>fixedorder</key>
+				<true/>
+				<key>items</key>
+				<string>[{"title":"🔗 Create Automatic Hyperlinks","arg":"true","subtitle":"Citations to Bibliography &amp; Bibliography to URLs"},{"title":"❌ No Automatic Links","arg":"false","subtitle":""}]</string>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Select whether to create automatic links</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.listfilter</string>
+			<key>uid</key>
+			<string>3CB148CF-6172-497D-8C2B-2032EE3359C1</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string> </string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>setting_type</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>CB1CCA03-D334-4827-8E5F-3BC3565E4C82</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -6940,7 +7039,7 @@ echo -n "$csl_name"</string>
 				<key>fixedorder</key>
 				<true/>
 				<key>items</key>
-				<string>[{"title":"Slide-Level 1️⃣","arg":"1","subtitle":"H1 will be used as slide titles"},{"title":"Slide-Level 2️⃣","arg":"2","subtitle":"H2 will be used as slide titles"},{"title":"Slide-Level 3️⃣","arg":"3","subtitle":"H3 will be used as slide titles"},{"title":"Slide-Level 4️⃣","arg":"4","subtitle":"H4 will be used as slide titles"},{"title":"Consult Pandoc Manual on Slide Levels &amp; Slide Structure","arg":"url","subtitle":"in the Pandoc documentation"}]</string>
+				<string>[{"title":"Slide-Level 0️⃣","arg":"0","subtitle":"'---' will be used as slide seperator"},{"title":"Slide-Level 1️⃣","arg":"1","subtitle":"H1 will be used as slide titles"},{"title":"Slide-Level 2️⃣","arg":"2","subtitle":"H2 will be used as slide titles"},{"title":"Slide-Level 3️⃣","arg":"3","subtitle":"H3 will be used as slide titles"},{"title":"Slide-Level 4️⃣","arg":"4","subtitle":"H4 will be used as slide titles"},{"title":"Consult Pandoc Manual on Slide Levels &amp; Slide Structure","arg":"url","subtitle":"in the Pandoc documentation"}]</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>subtext</key>
@@ -7247,6 +7346,10 @@ Due to some internal changes, you will have to set the citation style again via 
 
 Release Notes
 =============
+5.1
+- support for Slide-Level 0, in accordance with Pandoc release 2.14.2
+- Option to turn off the linking of citations to the bibliography and of the bibliography to URLs/DOIs
+
 5.0
 - new output format: `.odt`
 - new option: open output file after conversion
@@ -7465,7 +7568,7 @@ Changes in Detail
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>3655</integer>
+			<integer>3780</integer>
 		</dict>
 		<key>06928646-A3C8-4D15-A526-2D6E9A4233A6</key>
 		<dict>
@@ -7485,7 +7588,7 @@ Changes in Detail
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>3210</integer>
+			<integer>3335</integer>
 		</dict>
 		<key>07E85B51-4AC8-41B8-898E-74356FC21A6C</key>
 		<dict>
@@ -7494,7 +7597,7 @@ Changes in Detail
 			<key>xpos</key>
 			<integer>680</integer>
 			<key>ypos</key>
-			<integer>4100</integer>
+			<integer>4225</integer>
 		</dict>
 		<key>0A379478-9939-4905-9781-F1145FC20901</key>
 		<dict>
@@ -7503,7 +7606,7 @@ Changes in Detail
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>4260</integer>
+			<integer>4385</integer>
 		</dict>
 		<key>0DF9D355-2614-4147-A927-E6427A7546A9</key>
 		<dict>
@@ -7530,7 +7633,7 @@ Changes in Detail
 			<key>xpos</key>
 			<integer>615</integer>
 			<key>ypos</key>
-			<integer>4870</integer>
+			<integer>4995</integer>
 		</dict>
 		<key>13851D58-1F95-41E7-A686-9E1B91BD2086</key>
 		<dict>
@@ -7586,7 +7689,7 @@ Changes in Detail
 			<key>xpos</key>
 			<integer>680</integer>
 			<key>ypos</key>
-			<integer>3855</integer>
+			<integer>3980</integer>
 		</dict>
 		<key>1C0964D1-AA81-478A-B406-28E96DDD9E82</key>
 		<dict>
@@ -7810,6 +7913,15 @@ Trigger Pandoc Conversion</string>
 			<key>ypos</key>
 			<integer>975</integer>
 		</dict>
+		<key>3CB148CF-6172-497D-8C2B-2032EE3359C1</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>680</integer>
+			<key>ypos</key>
+			<integer>3065</integer>
+		</dict>
 		<key>3DA6CC1B-1830-4668-B974-736468C55BB5</key>
 		<dict>
 			<key>xpos</key>
@@ -7824,7 +7936,7 @@ Trigger Pandoc Conversion</string>
 			<key>xpos</key>
 			<integer>680</integer>
 			<key>ypos</key>
-			<integer>3065</integer>
+			<integer>3190</integer>
 		</dict>
 		<key>3E233EB1-E0B2-48CC-9E6F-A5CAFDFD26AD</key>
 		<dict>
@@ -7856,7 +7968,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>680</integer>
 			<key>ypos</key>
-			<integer>3740</integer>
+			<integer>3865</integer>
 		</dict>
 		<key>42BDA197-AE7D-45F0-8929-3B154F42219F</key>
 		<dict>
@@ -7905,7 +8017,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>4130</integer>
+			<integer>4255</integer>
 		</dict>
 		<key>48CFAE2D-926B-4B05-A586-48A7A9D395CE</key>
 		<dict>
@@ -7963,7 +8075,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>3770</integer>
+			<integer>3895</integer>
 		</dict>
 		<key>5335BA38-FC76-4B47-8D08-462A1AC06CC4</key>
 		<dict>
@@ -8075,7 +8187,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>680</integer>
 			<key>ypos</key>
-			<integer>3405</integer>
+			<integer>3530</integer>
 		</dict>
 		<key>65CA24BA-2DA6-4DC0-A2BE-3E4E4D5FDD72</key>
 		<dict>
@@ -8126,7 +8238,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>860</integer>
 			<key>ypos</key>
-			<integer>4120</integer>
+			<integer>4245</integer>
 		</dict>
 		<key>6F19CED8-5C74-4F75-9683-F25D9EAE8841</key>
 		<dict>
@@ -8135,7 +8247,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>4005</integer>
+			<integer>4130</integer>
 		</dict>
 		<key>7085C0CF-F857-4806-B96D-1FADD51E37EE</key>
 		<dict>
@@ -8169,7 +8281,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>990</integer>
 			<key>ypos</key>
-			<integer>3255</integer>
+			<integer>3380</integer>
 		</dict>
 		<key>7499CBB3-C313-433B-8D06-52F9859C9DA5</key>
 		<dict>
@@ -8178,7 +8290,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>680</integer>
 			<key>ypos</key>
-			<integer>3295</integer>
+			<integer>3420</integer>
 		</dict>
 		<key>74F55929-395A-4A89-BCD9-E2BB9E297A1E</key>
 		<dict>
@@ -8225,7 +8337,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>3435</integer>
+			<integer>3560</integer>
 		</dict>
 		<key>7BAC0AE1-EB76-46E6-9622-397A10FAC5A7</key>
 		<dict>
@@ -8263,7 +8375,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>1005</integer>
 			<key>ypos</key>
-			<integer>4345</integer>
+			<integer>4470</integer>
 		</dict>
 		<key>8B51C1A0-EAD2-457B-A532-6CC16C7F015E</key>
 		<dict>
@@ -8308,7 +8420,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>4445</integer>
+			<integer>4570</integer>
 		</dict>
 		<key>92FD4A05-28D1-4C72-B87F-FE9BF5455B6A</key>
 		<dict>
@@ -8409,7 +8521,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>3325</integer>
+			<integer>3450</integer>
 		</dict>
 		<key>A3AAE7A8-ADBD-4AF6-90F9-FEB634A8BEED</key>
 		<dict>
@@ -8476,7 +8588,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>3545</integer>
+			<integer>3670</integer>
 		</dict>
 		<key>ADEF7B7C-9CF5-4D05-B1D2-1E7A8FE76C2A</key>
 		<dict>
@@ -8494,7 +8606,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>3095</integer>
+			<integer>3220</integer>
 		</dict>
 		<key>AF1507DD-81ED-4829-B6C2-C915E0FDD50D</key>
 		<dict>
@@ -8503,7 +8615,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>680</integer>
 			<key>ypos</key>
-			<integer>4230</integer>
+			<integer>4355</integer>
 		</dict>
 		<key>B31553E5-A98A-47E1-8CBD-EF632C228C54</key>
 		<dict>
@@ -8539,7 +8651,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>680</integer>
 			<key>ypos</key>
-			<integer>3515</integer>
+			<integer>3640</integer>
 		</dict>
 		<key>B89ACE5C-1308-4CFE-9560-B9B438F4F1E1</key>
 		<dict>
@@ -8695,6 +8807,15 @@ Anticipatory Word Count</string>
 			<key>ypos</key>
 			<integer>400</integer>
 		</dict>
+		<key>CB1CCA03-D334-4827-8E5F-3BC3565E4C82</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>610</integer>
+			<key>ypos</key>
+			<integer>3095</integer>
+		</dict>
 		<key>CB4D33E2-A031-4542-A640-3B73D66EE39E</key>
 		<dict>
 			<key>colorindex</key>
@@ -8760,7 +8881,7 @@ Anticipatory Word Count</string>
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>4565</integer>
+			<integer>4690</integer>
 		</dict>
 		<key>DC77C4D7-6154-4281-B7B5-5E14299C4D30</key>
 		<dict>
@@ -8798,7 +8919,7 @@ Anticipatory Word Count</string>
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>4700</integer>
+			<integer>4825</integer>
 		</dict>
 		<key>E089F2B7-2FE8-4E77-B050-9AE8287186D8</key>
 		<dict>
@@ -8852,7 +8973,7 @@ Anticipatory Word Count</string>
 			<key>xpos</key>
 			<integer>680</integer>
 			<key>ypos</key>
-			<integer>3180</integer>
+			<integer>3305</integer>
 		</dict>
 		<key>E9994D9D-E843-4F55-A9A3-DB5CA63F33B7</key>
 		<dict>
@@ -8861,7 +8982,7 @@ Anticipatory Word Count</string>
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>4375</integer>
+			<integer>4500</integer>
 		</dict>
 		<key>E9D3936C-666C-456A-858F-0A02F54F9ED6</key>
 		<dict>
@@ -8895,7 +9016,7 @@ Anticipatory Word Count</string>
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>3885</integer>
+			<integer>4010</integer>
 		</dict>
 		<key>EEF73BE0-D215-459C-A69F-A7921ACF45F6</key>
 		<dict>
@@ -8913,7 +9034,7 @@ Anticipatory Word Count</string>
 			<key>xpos</key>
 			<integer>680</integer>
 			<key>ypos</key>
-			<integer>3625</integer>
+			<integer>3750</integer>
 		</dict>
 		<key>F2BF4F5F-7AB6-4DDB-AA0E-C3749ECF0D8B</key>
 		<dict>
@@ -8969,7 +9090,7 @@ Anticipatory Word Count</string>
 			<key>xpos</key>
 			<integer>680</integer>
 			<key>ypos</key>
-			<integer>3975</integer>
+			<integer>4100</integer>
 		</dict>
 	</dict>
 	<key>variables</key>
@@ -8992,6 +9113,8 @@ Anticipatory Word Count</string>
 		<string>--number-sections -M url2cite-allow-dangling-citations=true</string>
 		<key>hotkey_output_format</key>
 		<string>docx</string>
+		<key>link_citations_biblio</key>
+		<string>true</string>
 		<key>local_csl_folder</key>
 		<string>/Users/chrisgrieser/Google Drive/Dokumente/IT Backups/Alfred.alfredpreferences/workflows/user.workflow.41B90DCD-A99E-4943-A19A-E91859557FB0/citation-styles/</string>
 		<key>open_after</key>
@@ -9038,7 +9161,7 @@ Anticipatory Word Count</string>
 		<string>bibtex_library_path</string>
 	</array>
 	<key>version</key>
-	<string>5.0</string>
+	<string>5.1</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/pandoc_alfred</string>
 </dict>

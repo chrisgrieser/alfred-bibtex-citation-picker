@@ -56,7 +56,7 @@ function run (argv){
 		case "second_library":
 			return "✅ Second Library set" + subt();
 		case "slide_level":
-			return "✅ Slide Level set" + ";;" + "H" + new_setting;
+			return "✅ Slide Level set" + ";;" + "slide-level " + new_setting;
 		case "citation_picker":
 			return "✅ Now using: " + ";;" + new_setting + " Citation Picker";
 		case "resource_path_subfolder":
@@ -77,6 +77,8 @@ function run (argv){
 			return "✅ Hotkey Output Format set" + subt();
 		case "open_after":
 			return "✅ Open Output File after Conversion" + subt();
+		case "link_citations_biblio":
+			return "✅ Create Automatic Linking Setting" + subt();
 		default:
 			return "error";
 	}
