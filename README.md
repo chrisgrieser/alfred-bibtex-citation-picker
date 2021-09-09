@@ -20,5 +20,5 @@ The workflow otherwise also features some useful auxiliary functions, like for e
 
 <img src="https://i.imgur.com/XuSfGov.png" alt="Zotero Citation Picker" width=50% height=50%>
 
-<img alt="Alfred Citation Picker" src="https://user-images.githubusercontent.com/73286100/129382692-30451535-309e-41e0-8ac9-98a99fdfa22e.png" width=50% height=50%>
+<img width=50% height=50% alt="Screenshot 2021-09-09 22 08 42" src="https://user-images.githubusercontent.com/73286100/132755578-cce9892e-d3c0-4ba3-9666-4649d8b96202.png">
 
