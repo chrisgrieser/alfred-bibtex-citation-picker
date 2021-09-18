@@ -1732,6 +1732,19 @@
 				<true/>
 			</dict>
 		</array>
+		<key>A3F7715C-171B-4417-A9E3-284A526B48FF</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>BCC79CD9-1DDB-4C82-ABB5-FB0720CB08B0</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>A4184CCE-A1F6-48A9-9035-D0A0AE06BF9D</key>
 		<array>
 			<dict>
@@ -1767,6 +1780,29 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A8C87004-3BE2-48E4-9907-268F9549402C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1BAA05D8-8499-4BD6-8D88-6BB5E6A99813</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>A3F7715C-171B-4417-A9E3-284A526B48FF</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>⌥: Copy Link to Clipboard</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -2865,11 +2901,11 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 				<integer>0</integer>
 				<key>relatedApps</key>
 				<array>
+					<string>md.obsidian</string>
 					<string>pro.writer.mac</string>
-					<string>com.apple.finder</string>
 					<string>com.coteditor.CotEditor</string>
 					<string>com.github.atom</string>
-					<string>md.obsidian</string>
+					<string>com.apple.finder</string>
 				</array>
 				<key>relatedAppsMode</key>
 				<integer>1</integer>
@@ -3269,11 +3305,11 @@ JSON.stringify({ 'items': entry_array });
 				<integer>0</integer>
 				<key>relatedApps</key>
 				<array>
+					<string>com.apple.finder</string>
 					<string>md.obsidian</string>
-					<string>pro.writer.mac</string>
 					<string>com.coteditor.CotEditor</string>
 					<string>com.github.atom</string>
-					<string>com.apple.finder</string>
+					<string>pro.writer.mac</string>
 				</array>
 				<key>relatedAppsMode</key>
 				<integer>1</integer>
@@ -3594,6 +3630,74 @@ end run</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>pdoc</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading...</string>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>pandoc-documentation-search.js</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>🔎 Search Pandoc Documentation for: '{query}'</string>
+				<key>type</key>
+				<integer>8</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>A8C87004-3BE2-48E4-9907-268F9549402C</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string></string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>1BAA05D8-8499-4BD6-8D88-6BB5E6A99813</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -3689,6 +3793,46 @@ This usually only happens when you have created a new document and have not save
 			<string>alfred.workflow.output.largetype</string>
 			<key>uid</key>
 			<string>92FD4A05-28D1-4C72-B87F-FE9BF5455B6A</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>✅ Link copied</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>BCC79CD9-1DDB-4C82-ABB5-FB0720CB08B0</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>A3F7715C-171B-4417-A9E3-284A526B48FF</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -7346,9 +7490,14 @@ Due to some internal changes, you will have to set the citation style again via 
 
 Release Notes
 =============
+5.2
+- new keyword `pdoc` to search the pandoc documentation online. 
+	- select to open the documentation in your default browser
+	- Use `opt + return` to copy the link to the clipboard
+
 5.1
 - support for Slide-Level 0, in accordance with Pandoc release 2.14.2
-- Option to turn off the linking of citations to the bibliography and of the bibliography to URLs/DOIs
+- Option to turn off the linking of citations to the bibliography and of the bibliography to URLs/DOIs (via `pconf`)
 
 5.0
 - new output format: `.odt`
@@ -7681,6 +7830,13 @@ Changes in Detail
 			<integer>575</integer>
 			<key>ypos</key>
 			<integer>1515</integer>
+		</dict>
+		<key>1BAA05D8-8499-4BD6-8D88-6BB5E6A99813</key>
+		<dict>
+			<key>xpos</key>
+			<integer>170</integer>
+			<key>ypos</key>
+			<integer>715</integer>
 		</dict>
 		<key>1BD05DD1-96B4-4180-93BD-1BD3EC5A304C</key>
 		<dict>
@@ -8532,12 +8688,19 @@ Citation Picker</string>
 			<key>ypos</key>
 			<integer>2120</integer>
 		</dict>
+		<key>A3F7715C-171B-4417-A9E3-284A526B48FF</key>
+		<dict>
+			<key>xpos</key>
+			<integer>20</integer>
+			<key>ypos</key>
+			<integer>875</integer>
+		</dict>
 		<key>A4184CCE-A1F6-48A9-9035-D0A0AE06BF9D</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>230</integer>
+			<integer>265</integer>
 			<key>ypos</key>
 			<integer>375</integer>
 		</dict>
@@ -8569,6 +8732,13 @@ Citation Picker</string>
 			<integer>460</integer>
 			<key>ypos</key>
 			<integer>885</integer>
+		</dict>
+		<key>A8C87004-3BE2-48E4-9907-268F9549402C</key>
+		<dict>
+			<key>xpos</key>
+			<integer>15</integer>
+			<key>ypos</key>
+			<integer>715</integer>
 		</dict>
 		<key>AA87F73F-B3DC-452A-AA8D-B45E79D13BDA</key>
 		<dict>
@@ -8717,6 +8887,13 @@ Citation Picker</string>
 			<integer>460</integer>
 			<key>ypos</key>
 			<integer>995</integer>
+		</dict>
+		<key>BCC79CD9-1DDB-4C82-ABB5-FB0720CB08B0</key>
+		<dict>
+			<key>xpos</key>
+			<integer>170</integer>
+			<key>ypos</key>
+			<integer>875</integer>
 		</dict>
 		<key>BCF854A0-9393-4A26-9BE7-B1DD004B8847</key>
 		<dict>
@@ -9147,11 +9324,12 @@ Anticipatory Word Count</string>
 		<string>second_library</string>
 		<string>pdf_engine</string>
 		<string>csl_file</string>
-		<string>pandoc_template</string>
+		<string>link_citations_biblio</string>
 		<string>local_csl_folder</string>
-		<string>writer_extensions</string>
+		<string>pandoc_template</string>
 		<string>reader_extensions</string>
 		<string>reference_odt_path</string>
+		<string>writer_extensions</string>
 		<string>reference_docx_path</string>
 		<string>resource_path_subfolder</string>
 		<string>reference_pptx_path</string>
@@ -9161,7 +9339,7 @@ Anticipatory Word Count</string>
 		<string>bibtex_library_path</string>
 	</array>
 	<key>version</key>
-	<string>5.1</string>
+	<string>5.2</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/pandoc_alfred</string>
 </dict>
