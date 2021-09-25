@@ -67,14 +67,12 @@ function run(){
             author = extract (property);
             author = author.replace (/(, [A-Z]).+?(?= and|$)/gm,""); //remove first names
             author = author.replaceAll (" and "," & ");
-            authormatches = author;
             author = author.replace (/\&.*\&.*/,"et al."); // insert et al
 
          } else if (property.includes ("editor =")){
             editor = extract (property);
             editor = editor.replace (/(, [A-Z]).+?(?= and|$)/gm,""); //remove first names
             editor = editor.replaceAll (" and "," & ");
-            authormatches = editor + " " + authormatches;
             numberOfEditors = editor.split("&").length;
             editor = editor.replace (/\&.*\&.*/,"et al."); // insert et al
 
@@ -85,7 +83,6 @@ function run(){
        			title = title.substring(0, alfred_bar_length);
        			title = title + "...";
        		}
-       		titlematch = title.replaceAll ("-"," "); //better matching by Alfred
 
          } else if (property.includes ("year =")){
          		year = property.replace (/.*=\s*{?(\d{4}).*/,"$1");
@@ -113,7 +110,7 @@ function run(){
       let bibtex_entry = "@" + entry;
       let opening_brackets = (bibtex_entry.match(/\{/g) || []).length;
       let closing_brackets = (bibtex_entry.match(/\}/g) || []).length;
-      if (opening_brackets > closing_brackets) { bibtex_entry = bibtex_entry + "}" };
+      if (opening_brackets > closing_brackets) bibtex_entry = bibtex_entry + "}";
 
       //when no URL, try to use DOI
       let urlAppendix = "";
@@ -121,7 +118,7 @@ function run(){
       if (url != "") {
       	URLsubtitle = "⌃: Open URL " + urlIcon;
       	urlAppendix = "    " + urlIcon;
-      	if (doi != ""){ urlAppendix = urlAppendix + " " + doiIcon };
+      	if (doi != "") urlAppendix = urlAppendix + " " + doiIcon;
       } else if (doi != "") {
         URLsubtitle = "⌃: Open DOI " + doiIcon;
         urlAppendix = "    " + doiIcon;
@@ -133,17 +130,18 @@ function run(){
         type_icon = "article.png";
         collection = collection + " " + volume + issue;
       }
-      else if (type == "book") { type_icon = "book.png"}
-      else if (type == "inbook") { type_icon = "book_chapter.png"}
-      else if (type == "incollection") { type_icon = "book_chapter.png"}
-      else if (type == "misc") { type_icon = "manuscript.png"}
-      else if (type == "unpublished") { type_icon = "manuscript.png"}
-      else if (type == "techreport") { type_icon = "technical_report.png"}
-      else if (type == "inproceedings") { type_icon = "conference.png"}
+      else if (type == "book") type_icon = "book.png";
+      else if (type == "inbook") type_icon = "book_chapter.png";
+      else if (type == "incollection") type_icon = "book_chapter.png";
+      else if (type == "misc") type_icon = "manuscript.png";
+      else if (type == "unpublished") type_icon = "manuscript.png";
+      else if (type == "techreport") type_icon = "technical_report.png";
+      else if (type == "inproceedings") type_icon = "conference.png";
 
       // determines correct editor-abbreviation
-      if (numberOfEditors > 1) {var editorAbbrev = "(Eds.)"}
-      else {var editorAbbrev = "(Ed.)"}
+      var editorAbbrev = "";
+      if (numberOfEditors > 1) editorAbbrev = "(Eds.)";
+      else editorAbbrev = "(Ed.)";
 
       // displays editor when there are no authors
       var authoreditor = author + " ";
@@ -153,11 +151,16 @@ function run(){
       	authoreditor = "";
       }
 
+      let alfredMatcher = 
+      	[title, author, editor, year, collection, citekey]
+      	.join(" ")
+      	.replaceAll (" ", "");
+
       entry_array.push ({
          'title': title,
          'autocomplete': authoreditor,
          'subtitle': authoreditor + year + collection + urlAppendix,
-         'match': titlematch + " " + authormatches + " " + year + " " + collection,
+         'match': alfredMatcher,
          'arg': "@" + citekey,
          'icon': {'path': type_icon },
          'uid': citekey,
@@ -170,7 +173,7 @@ function run(){
             },
             "fn": {"arg": bibtex_entry }
          }
-      })
+      });
    });
 
    return JSON.stringify({ 'items': entry_array });

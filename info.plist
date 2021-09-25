@@ -4122,6 +4122,27 @@ end if</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string>.*\/([^\/]*)$</string>
+				<key>regexcaseinsensitive</key>
+				<true/>
+				<key>regexmultiline</key>
+				<false/>
+				<key>replacestring</key>
+				<string>$1</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.replace</string>
+			<key>uid</key>
+			<string>F8165297-EDCE-486C-8145-74C244AFBB14</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -4255,27 +4276,6 @@ end if</string>
 			<string>795480E8-4945-4E27-80D2-9FBB00E97A68</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>matchmode</key>
-				<integer>1</integer>
-				<key>matchstring</key>
-				<string>.*\/([^\/]*)$</string>
-				<key>regexcaseinsensitive</key>
-				<true/>
-				<key>regexmultiline</key>
-				<false/>
-				<key>replacestring</key>
-				<string>$1</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.replace</string>
-			<key>uid</key>
-			<string>F8165297-EDCE-486C-8145-74C244AFBB14</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4765,7 +4765,7 @@ export PATH=/usr/local/bin:/usr/local/texlive/:/Library/TeX/texbin/:/opt/homebre
 {query}
 
 # Reveal in Finder
-if [ "$open_after" == "true" ]; then
+if [[ "$open_after" == "true" ]] ; then
 	open --reveal "$output_file"
 	open "$output_file"
 else
@@ -6154,9 +6154,9 @@ echo -n "$csl_name"</string>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>subtext</key>
-				<string>Any folder named '{query}' in the same directory as the .md file will also be used</string>
+				<string>(Any file in the same directory as the Markdown file will also be used.)</string>
 				<key>text</key>
-				<string>Set regular subfolder-name for an additional Ressource-Path</string>
+				<string>Name of folder (must be in same directory as .md file): '{query}'</string>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -7490,6 +7490,11 @@ Due to some internal changes, you will have to set the citation style again via 
 
 Release Notes
 =============
+5.3
+- bugfix for the automatic opening
+- slightly improved matching bib the BibTeX Citation Picker
+- automatic ressource-path-finding when using Obsidian
+
 5.2
 - new keyword `pdoc` to search the pandoc documentation online. 
 	- select to open the documentation in your default browser
@@ -8038,7 +8043,7 @@ Trigger Pandoc Conversion</string>
 			<key>xpos</key>
 			<integer>325</integer>
 			<key>ypos</key>
-			<integer>1015</integer>
+			<integer>1010</integer>
 		</dict>
 		<key>367167E6-8193-46E4-A342-A1B8B9BBD18D</key>
 		<dict>
@@ -8092,7 +8097,7 @@ Trigger Pandoc Conversion</string>
 			<key>xpos</key>
 			<integer>680</integer>
 			<key>ypos</key>
-			<integer>3190</integer>
+			<integer>3185</integer>
 		</dict>
 		<key>3E233EB1-E0B2-48CC-9E6F-A5CAFDFD26AD</key>
 		<dict>
@@ -8352,7 +8357,7 @@ Citation Picker</string>
 			<key>note</key>
 			<string>OneUpdater (automatic update function)</string>
 			<key>xpos</key>
-			<integer>1840</integer>
+			<integer>1890</integer>
 			<key>ypos</key>
 			<integer>1655</integer>
 		</dict>
@@ -8482,7 +8487,7 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>xpos</key>
-			<integer>190</integer>
+			<integer>185</integer>
 			<key>ypos</key>
 			<integer>1115</integer>
 		</dict>
@@ -8776,7 +8781,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>3220</integer>
+			<integer>3215</integer>
 		</dict>
 		<key>AF1507DD-81ED-4829-B6C2-C915E0FDD50D</key>
 		<dict>
@@ -9236,9 +9241,9 @@ Anticipatory Word Count</string>
 			<key>colorindex</key>
 			<integer>12</integer>
 			<key>xpos</key>
-			<integer>1005</integer>
+			<integer>1010</integer>
 			<key>ypos</key>
-			<integer>1125</integer>
+			<integer>1065</integer>
 		</dict>
 		<key>FC416094-1EB1-4464-97E2-8A6E678A45AC</key>
 		<dict>
@@ -9277,7 +9282,7 @@ Anticipatory Word Count</string>
 		<key>IconURL</key>
 		<string>🌐</string>
 		<key>alfred_bar_length</key>
-		<string>65</string>
+		<string>64</string>
 		<key>bibtex_library_path</key>
 		<string>~/Google Drive/BibDesk/My Library.bib</string>
 		<key>citation_picker</key>
@@ -9297,7 +9302,7 @@ Anticipatory Word Count</string>
 		<key>open_after</key>
 		<string>true</string>
 		<key>pandoc_filter</key>
-		<string>pandoc-manubot-cite, pandoc-crossref, mermaid-filter</string>
+		<string></string>
 		<key>pandoc_template</key>
 		<string></string>
 		<key>pdf_engine</key>
@@ -9339,7 +9344,7 @@ Anticipatory Word Count</string>
 		<string>bibtex_library_path</string>
 	</array>
 	<key>version</key>
-	<string>5.2</string>
+	<string>5.3</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/pandoc_alfred</string>
 </dict>

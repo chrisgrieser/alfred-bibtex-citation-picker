@@ -27,16 +27,11 @@ function run(argv) {
 	}
 
 	// other imports
-	var bibtex_library_path = $.getenv("bibtex_library_path");
-	bibtex_library_path = bibtex_library_path.replace(/^~/, homepath);
-	var second_library = $.getenv("second_library");
-	second_library = second_library.replace(/^~/, homepath);
-	var reference_docx_path = $.getenv("reference_docx_path");
-	reference_docx_path = reference_docx_path.replace(/^~/, homepath);
-	var reference_odt_path = $.getenv("reference_odt_path");
-	reference_odt_path = reference_odt_path.replace(/^~/, homepath);
-	var reference_pptx_path = $.getenv("reference_pptx_path");
-	reference_pptx_path = reference_pptx_path.replace(/^~/, homepath);
+	var bibtex_library_path = ($.getenv("bibtex_library_path")).replace(/^~/, homepath);
+	var second_library = ($.getenv("second_library")).replace(/^~/, homepath);
+	var reference_docx_path = ($.getenv("reference_docx_path")).replace(/^~/, homepath);
+	var reference_odt_path = ($.getenv("reference_odt_path")).replace(/^~/, homepath);
+	var reference_pptx_path = ($.getenv("reference_pptx_path")).replace(/^~/, homepath);
 	var pdf_engine = $.getenv("pdf_engine");
 	var desired_format = $.getenv("desired_format");
 	var slide_level = $.getenv("slide_level");
@@ -81,7 +76,6 @@ function run(argv) {
 			exportable: false}
 		);
 
-
 	// ===========================
 	// construct pandoc parameters
 	// ===========================
@@ -91,7 +85,6 @@ function run(argv) {
 	var pdf_arg = "";
 	var reference_pptx = "";
 	var reference_odt = "";
-	var second_resource_path = "";
 	var reader_ext = "";
 	var writer_ext = "";
 	var template_arg = "";
@@ -128,8 +121,16 @@ function run(argv) {
 	var parent_folder = doc_path.replace(/[^\/]*$/, "");
 	var resource_path = "--resource-path=" + quoted(parent_folder) + " ";
 	if (resource_path_subfolder != "") {
-		second_resource_path =	"--resource-path=" +
-			quoted(parent_folder + resource_path_subfolder + "/") + " ";
+		resource_path += "--resource-path=" + quoted(parent_folder + resource_path_subfolder) + " ";
+	}
+
+	// Add Vault Paths as Ressource Paths
+	const vault_list_json = homepath + "/Library/Application Support/obsidian/obsidian.json";
+	const vault_json = app.doShellScript('cat "' + vault_list_json + '" || echo "none" ');
+	if (vault_json != "none"){
+		vault_list = vault_json.match(/\"path\":\"(.*?)\"/g);
+		let vault_paths = vault_list.map(v => v.replace(/\"path\":\"(.*?)\"/,"$1"));
+		vault_paths.forEach (vpath =>	resource_path += "--resource-path=" + quoted(vpath) + " ");
 	}
 
 	//Extensions
@@ -185,7 +186,6 @@ function run(argv) {
 		filter_arg +
 		"--citeproc " + //has to come after most filters
 		resource_path +
-		second_resource_path +
 		bibliography +
 		bibliography2 +
 		citation_style +
