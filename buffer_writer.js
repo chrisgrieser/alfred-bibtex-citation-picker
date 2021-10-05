@@ -154,7 +154,7 @@ function run(){
       let alfredMatcher = 
       	[title, author, editor, year, collection, citekey]
       	.join(" ")
-      	.replaceAll (" ", "");
+      	.replaceAll ("-", " ");
 
       entry_array.push ({
          'title': title,

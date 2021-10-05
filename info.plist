@@ -2901,11 +2901,11 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 				<integer>0</integer>
 				<key>relatedApps</key>
 				<array>
-					<string>md.obsidian</string>
 					<string>pro.writer.mac</string>
+					<string>com.apple.finder</string>
 					<string>com.coteditor.CotEditor</string>
 					<string>com.github.atom</string>
-					<string>com.apple.finder</string>
+					<string>md.obsidian</string>
 				</array>
 				<key>relatedAppsMode</key>
 				<integer>1</integer>
@@ -3305,11 +3305,11 @@ JSON.stringify({ 'items': entry_array });
 				<integer>0</integer>
 				<key>relatedApps</key>
 				<array>
-					<string>com.apple.finder</string>
 					<string>md.obsidian</string>
+					<string>pro.writer.mac</string>
 					<string>com.coteditor.CotEditor</string>
 					<string>com.github.atom</string>
-					<string>pro.writer.mac</string>
+					<string>com.apple.finder</string>
 				</array>
 				<key>relatedAppsMode</key>
 				<integer>1</integer>
@@ -7490,10 +7490,13 @@ Due to some internal changes, you will have to set the citation style again via 
 
 Release Notes
 =============
+5.3.1
+- bugfix where the BibTeX Citation Picker does not match author-names (issue #4)
+
 5.3
-- bugfix for the automatic opening
-- slightly improved matching bib the BibTeX Citation Picker
-- automatic ressource-path-finding when using Obsidian
+- bugfix for the automatic opening after conversion
+- slightly improved matching with BibTeX Citation Picker
+- automatic resource-path-finding when using Obsidian
 
 5.2
 - new keyword `pdoc` to search the pandoc documentation online. 
@@ -9301,8 +9304,10 @@ Anticipatory Word Count</string>
 		<string>/Users/chrisgrieser/Google Drive/Dokumente/IT Backups/Alfred.alfredpreferences/workflows/user.workflow.41B90DCD-A99E-4943-A19A-E91859557FB0/citation-styles/</string>
 		<key>open_after</key>
 		<string>true</string>
+		<key>output_file</key>
+		<string>/Users/chrisgrieser/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault/Projects/Einzelprojekte/Anhang Begründung der Verlängerung wegen pandemiebedingter Verzögerungen bei der Erreichung des Qualifikationsziels 01-10-2021.docx</string>
 		<key>pandoc_filter</key>
-		<string></string>
+		<string>mermaid-filter</string>
 		<key>pandoc_template</key>
 		<string></string>
 		<key>pdf_engine</key>
@@ -9338,13 +9343,14 @@ Anticipatory Word Count</string>
 		<string>reference_docx_path</string>
 		<string>resource_path_subfolder</string>
 		<string>reference_pptx_path</string>
-		<string>further_pandoc_args</string>
+		<string>output_file</string>
 		<string>hotkey_output_format</string>
 		<string>pandoc_filter</string>
 		<string>bibtex_library_path</string>
+		<string>further_pandoc_args</string>
 	</array>
 	<key>version</key>
-	<string>5.3</string>
+	<string>5.3.1</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/pandoc_alfred</string>
 </dict>
