@@ -22,3 +22,12 @@ The workflow otherwise also features some useful auxiliary functions, like for e
 
 <img width=50% height=50% alt="Screenshot 2021-09-09 22 08 42" src="https://user-images.githubusercontent.com/73286100/132755578-cce9892e-d3c0-4ba3-9666-4649d8b96202.png">
 
+## Credits
+
+### Donations
+- [PayPal](https://www.paypal.com/paypalme/ChrisGrieser).
+- [Ko-Fi](https://ko-fi.com/pseudometa)
+- Thanks 🙏
+
+### About the Author
+This workflow has been created by [@pseudo_meta (Twitter)](https://twitter.com/pseudo_meta) aka Chris Grieser (rl). In my day job, I am a PhD student in sociology, studying the governance of the app economy. If you are interested in this subject, check out [my academic homepage](https://chris-grieser.de/) and get in touch.
