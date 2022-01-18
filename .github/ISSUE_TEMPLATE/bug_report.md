@@ -27,5 +27,4 @@ logdata
 ```
 
 **Checklist**
-- [ ] I have read and checked the [Troubleshooting](https://github.com/chrisgrieser/pdf-annotation-extractor-alfred#troubleshooting).
 - [ ] I have updated to the latest version.

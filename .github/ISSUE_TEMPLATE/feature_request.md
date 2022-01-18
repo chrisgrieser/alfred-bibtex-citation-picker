@@ -15,4 +15,3 @@ If applicable, add screenshots to help explain your request.
 
 **Checklist**
 - [ ] The feature would be useful to more users than just me.
-- [ ] I am aware that any extracting new types of annotations is dependent on [pdfannots](https://github.com/0xabu/pdfannots), i.e. requests on more types of annotations extracted should be reported there.
