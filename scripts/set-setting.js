@@ -78,7 +78,7 @@ function run (argv){
 		case "open_after":
 			return "✅ Open Output File after Conversion" + subt();
 		case "link_citations_biblio":
-			return "✅ Create Automatic Linking Setting" + subt();
+			return "✅ Automatic Linking" + subt();
 		default:
 			return "error";
 	}

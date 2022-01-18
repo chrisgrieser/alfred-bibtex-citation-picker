@@ -143,7 +143,7 @@ cat << EOB
 		},
 		{
 			"title": "🔄 Debugging: Force Citation Picker Buffer Reload",
-			"match":"debugging buffer citation picker reload cache reset bug",
+			"match":"debugging buffer citation picker reload cache reset bug force",
 			"arg": "force_buffer_reload",
 			"uid": "21",
 			"subtitle": "Try this when the Alfred Citation Picker misbehaves"

@@ -4,7 +4,7 @@ export PATH=/usr/local/bin:/opt/homebrew/bin/:$PATH
 
 bibtexentry="$*"
 citekey="@"`echo -n $bibtexentry | cut -d "," -f 1 | cut -d "{" -f 2`
-tempbib="$alfred_workflow_cache""/temp_entry.bib"
+tempbib="$alfred_workflow_cache""/temp_bibtex.bib"
 mkdir -p "$alfred_workflow_cache"
 echo -n $bibtexentry > $tempbib
 
