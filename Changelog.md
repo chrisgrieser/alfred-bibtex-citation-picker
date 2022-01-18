@@ -1,0 +1,16 @@
+- 2022-01-18	release 5.3.2
+- 2021-10-31	Update FUNDING.yml
+- 2021-10-05	fix #4
+- 2021-09-18	5.2
+- 2021-09-05	Create FUNDING.yml
+- 2021-08-05	Merge pull request #3 from manuelhubacher/main
+- 2021-08-05	feat: Use date field
+- 2021-06-02	added `2>&1` in the command construction to enable error-log saving later in the workflow
+- 2021-05-09	info.plist
+- 2021-05-08	info.plist
+- 2021-05-08	info.plist
+- 2021-04-26	v. 1.2.1
+- 2021-04-26	v. 1.2.1
+- 2020-11-16	version 1.2
+- 2020-10-22	Create README.md
+- 2020-10-22	Initial commit

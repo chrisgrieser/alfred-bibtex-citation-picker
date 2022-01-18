@@ -9045,7 +9045,7 @@ Anticipatory Word Count</string>
 		<string>bibtex_library_path</string>
 	</array>
 	<key>version</key>
-	<string>5.3.1</string>
+	<string>5.3.2</string>
 	<key>webaddress</key>
 	<string>https://chris-grieser.de/pandoc_alfred</string>
 </dict>
