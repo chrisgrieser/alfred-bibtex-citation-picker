@@ -5237,23 +5237,6 @@ echo -n "$csl_name"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>delimiter</key>
-				<string>;;</string>
-				<key>trimarguments</key>
-				<true/>
-				<key>variableprefix</key>
-				<string>notification</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.split</string>
-			<key>uid</key>
-			<string>99879D56-2467-4AC3-AEA0-F8437EA6766D</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -5283,7 +5266,7 @@ echo -n "$csl_name"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>search-install-csl.js</string>
+				<string>scripts/search-install-csl.js</string>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
@@ -5299,6 +5282,23 @@ echo -n "$csl_name"</string>
 			<string>A3AAE7A8-ADBD-4AF6-90F9-FEB634A8BEED</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>delimiter</key>
+				<string>;;</string>
+				<key>trimarguments</key>
+				<true/>
+				<key>variableprefix</key>
+				<string>notification</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.split</string>
+			<key>uid</key>
+			<string>99879D56-2467-4AC3-AEA0-F8437EA6766D</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -6988,7 +6988,7 @@ echo -n "$csl_name"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>search-bib-file.js</string>
+				<string>scripts/search-bib-file.js</string>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
@@ -8153,7 +8153,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>825</integer>
 			<key>ypos</key>
-			<integer>2140</integer>
+			<integer>2125</integer>
 		</dict>
 		<key>711C6E67-857B-4062-84E4-FCFE930970D0</key>
 		<dict>
@@ -8406,10 +8406,12 @@ Citation Picker</string>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
+			<key>note</key>
+			<string>install/search csl</string>
 			<key>xpos</key>
 			<integer>680</integer>
 			<key>ypos</key>
-			<integer>2120</integer>
+			<integer>2105</integer>
 		</dict>
 		<key>A3F7715C-171B-4417-A9E3-284A526B48FF</key>
 		<dict>
@@ -8916,9 +8918,9 @@ Anticipatory Word Count</string>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>610</integer>
+			<integer>605</integer>
 			<key>ypos</key>
-			<integer>2150</integer>
+			<integer>2135</integer>
 		</dict>
 		<key>F4C7EC85-3826-4507-B556-C5335C17E07E</key>
 		<dict>
