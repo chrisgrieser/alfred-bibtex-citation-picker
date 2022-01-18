@@ -66,7 +66,7 @@ function run() {
 			}
 			else if (/\stitle =/i.test(property)) {
 				title = extract(property);
-				if (title.length > alfredBarLength) title = title.substring(0, alfredBarLength) + "...";
+				if (title.length > alfredBarLength) title = title.substring(0, alfredBarLength).trim() + "...";
 			}
 			else if (property.includes ("year =")) year = property.replace (/.*=\s*{?(\d{4}).*/, "$1");
 			else if (property.includes ("date =")) year = property.replace (/.*=\s*{?(\d{4}).*/, "$1");
@@ -119,6 +119,10 @@ function run() {
 				break;
 			case "inproceedings":
 				typeIcon += "conference.png";
+				break;
+			case "online":
+			case "webpage":
+				typeIcon += "website.png";
 				break;
 		}
 
