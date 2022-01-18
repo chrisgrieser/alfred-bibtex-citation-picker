@@ -1,3 +1,4 @@
+- 2022-01-18	release 5.3.4
 - 2022-01-18	release 5.3.3
 - 2022-01-18	release 5.3.2
 - 2021-10-31	Update FUNDING.yml
