@@ -1,3 +1,5 @@
+- 2022-01-31	release 5.3.5
+- 2022-01-31	fix bibtex title key parsing for alternative formatting (#8)
 - 2022-01-18	release 5.3.4
 - 2022-01-18	release 5.3.3
 - 2022-01-18	release 5.3.2

@@ -3,9 +3,9 @@
 ![](https://img.shields.io/github/downloads/chrisgrieser/pandoc_alfred/total?label=Total%20Downloads&style=plastic)  ![](https://img.shields.io/github/v/release/chrisgrieser/pandoc_alfred?label=Latest%20Release&style=plastic)
 
 ## What it does
-This Alfred workflow enables academic citing and publishing with any markdown app. It does so by offering a **Citation Picker** for [Pandoc Markdown Citations](https://pandoc.org/MANUAL.html#pandocs-markdown) and by easily **converting Markdown files** into `.docx`, `.pdf`, `.html`, `.odt`, or `.pptx` with the proper bibliography. 
+This Alfred workflow enables academic citing and publishing with any markdown app. It does so by offering a **Citation Picker** for [Pandoc Markdown Citations](https://pandoc.org/MANUAL.html#pandocs-markdown) and by easily **converting Markdown files** into `.docx`, `.pdf`, `.html`, `.odt`, or `.pptx` with the proper bibliography.
 
-This workflow is made for academics who neither like Word nor LaTeX. As the name suggests, this workflow is basically a user-friendly interface for Pandoc, allowing you to make use of Pandoc's capabilities without ever having to open the Terminal. 
+This workflow is made for academics who neither like Word nor LaTeX. As the name suggests, this workflow is basically a user-friendly interface for Pandoc, allowing you to make use of Pandoc's capabilities without ever having to open the Terminal.
 
 The workflow otherwise also features some useful auxiliary functions, like for example "anticipatory word count", i.e.  number of words that your bibliography will have after the conversion (markdown apps cannot calculate the word count of the bibliography as it hasn't been created yet).
 
