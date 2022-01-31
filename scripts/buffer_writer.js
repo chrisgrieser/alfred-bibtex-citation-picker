@@ -64,7 +64,7 @@ function run() {
 				numberOfEditors = editor.split("&").length;
 				editor = editor.replace (/&.*&.*/, "et al."); // insert et al
 			}
-			else if (/\stitle =/i.test(property)) {
+			else if (/(^|\s)title =/i.test(property)) {
 				title = extract(property);
 				if (title.length > alfredBarLength) title = title.substring(0, alfredBarLength).trim() + "...";
 			}
@@ -74,7 +74,7 @@ function run() {
 			else if (property.includes ("url =")) url = extract(property);
 			else if (property.includes ("volume =")) volume = extract(property);
 			else if (property.includes ("number =")) issue = "(" + extract(property) + ")";
-			else if (/\s(journal|booktitle)\s*=/i.test(property)) collection = "    In: " + extract(property);
+			else if (/(^|\s)(journal|booktitle)\s*=/i.test(property)) collection = "    In: " + extract(property);
 
 		});
 

@@ -20,6 +20,11 @@ osascript -e 'tell application "Alfred Preferences" to if it is running then qui
 # insert new version number
 plutil -replace version -string "$nextVersion" info.plist
 
+# Lint
+cd "$(dirname "$0")"
+markdownlint --fix *.md
+markdownlint --fix docs/*.md
+
 # -----------------------
 # clean info.plist
 # -----------------------
