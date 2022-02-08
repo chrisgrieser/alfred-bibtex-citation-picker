@@ -226,32 +226,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>22EB574B-20E3-4E92-9A20-3CA6ADAFA7C9</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>2F0E643A-EE6B-4395-A1D6-ADD838B38167</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>238F8E7C-C458-496F-AB7B-0BFE96B8FBF6</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>795480E8-4945-4E27-80D2-9FBB00E97A68</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>245395CA-A94A-4764-9700-EE3C8C833DEA</key>
 		<array>
 			<dict>
@@ -841,7 +815,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>22EB574B-20E3-4E92-9A20-3CA6ADAFA7C9</string>
+				<string>165FFAAF-92C5-4F2C-BD2A-EFD28B7EFD48</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1019,7 +993,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>22EB574B-20E3-4E92-9A20-3CA6ADAFA7C9</string>
+				<string>1B92DFF5-B773-4E2B-A9A3-0F97EBF33900</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1360,7 +1334,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>22EB574B-20E3-4E92-9A20-3CA6ADAFA7C9</string>
+				<string>1B92DFF5-B773-4E2B-A9A3-0F97EBF33900</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1675,19 +1649,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>C497C64F-E20C-430C-AFB2-2B3C5F7754AB</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>6ACECC5E-0168-4F34-87C7-A1C6EFF8FCBC</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>C5164F81-AFF9-41E3-B457-ACB055240C18</key>
 		<array>
 			<dict>
@@ -1863,7 +1824,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>22EB574B-20E3-4E92-9A20-3CA6ADAFA7C9</string>
+				<string>1B92DFF5-B773-4E2B-A9A3-0F97EBF33900</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1927,7 +1888,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>22EB574B-20E3-4E92-9A20-3CA6ADAFA7C9</string>
+				<string>1B92DFF5-B773-4E2B-A9A3-0F97EBF33900</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2763,30 +2724,6 @@ JSON.stringify({ 'items': entry_array });
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<true/>
-				<key>variables</key>
-				<dict>
-					<key>desired_format</key>
-					<string>{var:hotkey_output_format}</string>
-					<key>doc_path</key>
-					<string>{query}</string>
-					<key>mode</key>
-					<string>conversion</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>CD10FB60-F2A7-4035-91C6-BED56464E0F5</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>subtext</key>
@@ -2837,19 +2774,6 @@ JSON.stringify({ 'items': entry_array });
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>1C0964D1-AA81-478A-B406-28E96DDD9E82</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>triggerid</key>
-				<string>bibdesk-url-scheme</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
-			<key>uid</key>
-			<string>C497C64F-E20C-430C-AFB2-2B3C5F7754AB</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -3276,6 +3200,28 @@ This usually only happens when you have created a new document and have not save
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>desired_format</key>
+					<string>{var:hotkey_output_format}</string>
+					<key>doc_path</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>CD10FB60-F2A7-4035-91C6-BED56464E0F5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>soundname</key>
 				<string>Basso</string>
 				<key>systemsound</key>
@@ -3322,40 +3268,20 @@ This usually only happens when you have created a new document and have not save
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>acceptsfiles</key>
-				<false/>
 				<key>acceptsmulti</key>
 				<integer>0</integer>
-				<key>acceptstext</key>
-				<true/>
-				<key>acceptsurls</key>
-				<false/>
+				<key>filetypes</key>
+				<array>
+					<string>+net.daringfireball.markdown</string>
+					<string>+net.ia.markdown</string>
+				</array>
 				<key>name</key>
-				<string>Citekey: Reveal in BibDesk</string>
+				<string>Convert .md to .pdf</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.trigger.universalaction</string>
+			<string>alfred.workflow.trigger.action</string>
 			<key>uid</key>
-			<string>238F8E7C-C458-496F-AB7B-0BFE96B8FBF6</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>externaltriggerid</key>
-				<string>bibdesk-url-scheme</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>795480E8-4945-4E27-80D2-9FBB00E97A68</string>
+			<string>1586C092-4E94-4D4C-B43C-70C1C7103F66</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -3379,6 +3305,86 @@ This usually only happens when you have created a new document and have not save
 			<string>F8165297-EDCE-486C-8145-74C244AFBB14</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:pdf_engine}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string></string>
+						<key>outputlabel</key>
+						<string>not set</string>
+						<key>uid</key>
+						<string>D2294731-682D-45C9-9750-E3613E3F2BDD</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>pdf_engine set</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>165FFAAF-92C5-4F2C-BD2A-EFD28B7EFD48</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>desired_format</key>
+					<string>pdf</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>48CFAE2D-926B-4B05-A586-48A7A9D395CE</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:desired_format}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>pdf</string>
+						<key>outputlabel</key>
+						<string>pdf</string>
+						<key>uid</key>
+						<string>D2294731-682D-45C9-9750-E3613E3F2BDD</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>not pdf</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>2F0E643A-EE6B-4395-A1D6-ADD838B38167</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -3442,8 +3448,6 @@ You have to set a PDF engine before using "pdf" as output format. You can do sp 
 				<dict>
 					<key>desired_format</key>
 					<string>odt</string>
-					<key>mode</key>
-					<string>conversion</string>
 				</dict>
 			</dict>
 			<key>type</key>
@@ -3487,36 +3491,6 @@ You can do that by triggering Alfred, typing "pconf", and selecting "BibTeX Libr
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:pdf_engine}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string></string>
-						<key>outputlabel</key>
-						<string>not set</string>
-						<key>uid</key>
-						<string>D2294731-682D-45C9-9750-E3613E3F2BDD</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>pdf_engine set</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
-			<key>uid</key>
-			<string>165FFAAF-92C5-4F2C-BD2A-EFD28B7EFD48</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>acceptsmulti</key>
 				<integer>0</integer>
 				<key>filetypes</key>
@@ -3537,36 +3511,6 @@ You can do that by triggering Alfred, typing "pconf", and selecting "BibTeX Libr
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:desired_format}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>pdf</string>
-						<key>outputlabel</key>
-						<string>pdf</string>
-						<key>uid</key>
-						<string>D2294731-682D-45C9-9750-E3613E3F2BDD</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>not pdf</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
-			<key>uid</key>
-			<string>2F0E643A-EE6B-4395-A1D6-ADD838B38167</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
@@ -3575,8 +3519,6 @@ You can do that by triggering Alfred, typing "pconf", and selecting "BibTeX Libr
 				<dict>
 					<key>desired_format</key>
 					<string>docx</string>
-					<key>mode</key>
-					<string>conversion</string>
 				</dict>
 			</dict>
 			<key>type</key>
@@ -3765,8 +3707,6 @@ You can do that by triggering Alfred, typing "pconf", and selecting "BibTeX Libr
 				<dict>
 					<key>desired_format</key>
 					<string>pptx</string>
-					<key>mode</key>
-					<string>conversion</string>
 				</dict>
 			</dict>
 			<key>type</key>
@@ -3972,14 +3912,6 @@ end run</string>
 			<integer>1</integer>
 		</dict>
 		<dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.junction</string>
-			<key>uid</key>
-			<string>22EB574B-20E3-4E92-9A20-3CA6ADAFA7C9</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
 			<key>config</key>
 			<dict>
 				<key>argument</key>
@@ -4136,56 +4068,12 @@ fi</string>
 				<dict>
 					<key>desired_format</key>
 					<string>html</string>
-					<key>mode</key>
-					<string>conversion</string>
 				</dict>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>9C4D210E-D3C9-4A87-8110-71B51B36DCF8</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>acceptsmulti</key>
-				<integer>0</integer>
-				<key>filetypes</key>
-				<array>
-					<string>+net.daringfireball.markdown</string>
-					<string>+net.ia.markdown</string>
-				</array>
-				<key>name</key>
-				<string>Convert .md to .pdf</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.action</string>
-			<key>uid</key>
-			<string>1586C092-4E94-4D4C-B43C-70C1C7103F66</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<true/>
-				<key>variables</key>
-				<dict>
-					<key>desired_format</key>
-					<string>pdf</string>
-					<key>mode</key>
-					<string>conversion</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>48CFAE2D-926B-4B05-A586-48A7A9D395CE</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -6368,16 +6256,16 @@ You need to force reload the citaiton picer buffer (pconf ➞ reload) once after
 			<key>xpos</key>
 			<integer>15</integer>
 			<key>ypos</key>
-			<integer>1770</integer>
+			<integer>1105</integer>
 		</dict>
 		<key>165FFAAF-92C5-4F2C-BD2A-EFD28B7EFD48</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>565</integer>
+			<integer>580</integer>
 			<key>ypos</key>
-			<integer>1360</integer>
+			<integer>1125</integer>
 		</dict>
 		<key>1B92DFF5-B773-4E2B-A9A3-0F97EBF33900</key>
 		<dict>
@@ -6447,26 +6335,6 @@ Trigger Pandoc Conversion</string>
 			<integer>1075</integer>
 			<key>ypos</key>
 			<integer>1220</integer>
-		</dict>
-		<key>22EB574B-20E3-4E92-9A20-3CA6ADAFA7C9</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>2</integer>
-			<key>xpos</key>
-			<integer>250</integer>
-			<key>ypos</key>
-			<integer>1600</integer>
-		</dict>
-		<key>238F8E7C-C458-496F-AB7B-0BFE96B8FBF6</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>7</integer>
-			<key>note</key>
-			<string>Reveal entry in BibDesk</string>
-			<key>xpos</key>
-			<integer>15</integer>
-			<key>ypos</key>
-			<integer>1115</integer>
 		</dict>
 		<key>245395CA-A94A-4764-9700-EE3C8C833DEA</key>
 		<dict>
@@ -6547,9 +6415,9 @@ Trigger Pandoc Conversion</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>440</integer>
+			<integer>425</integer>
 			<key>ypos</key>
-			<integer>1390</integer>
+			<integer>1200</integer>
 		</dict>
 		<key>30006A6B-EAF9-4531-8694-5E878A0FB80E</key>
 		<dict>
@@ -6686,7 +6554,7 @@ Citation Picker</string>
 			<key>xpos</key>
 			<integer>155</integer>
 			<key>ypos</key>
-			<integer>1800</integer>
+			<integer>1135</integer>
 		</dict>
 		<key>4CD979CC-3ADB-4C54-92FA-F2A9B569E75C</key>
 		<dict>
@@ -6879,6 +6747,8 @@ Citation Picker</string>
 		<dict>
 			<key>colorindex</key>
 			<integer>2</integer>
+			<key>note</key>
+			<string>get current file</string>
 			<key>xpos</key>
 			<integer>485</integer>
 			<key>ypos</key>
@@ -6932,15 +6802,6 @@ Citation Picker</string>
 			<integer>15</integer>
 			<key>ypos</key>
 			<integer>2190</integer>
-		</dict>
-		<key>795480E8-4945-4E27-80D2-9FBB00E97A68</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>7</integer>
-			<key>xpos</key>
-			<integer>185</integer>
-			<key>ypos</key>
-			<integer>1115</integer>
 		</dict>
 		<key>7B2B3CB9-CBCA-4BFF-A5BD-E04261F66A2F</key>
 		<dict>
@@ -7271,15 +7132,6 @@ Citation Picker</string>
 			<key>ypos</key>
 			<integer>1480</integer>
 		</dict>
-		<key>C497C64F-E20C-430C-AFB2-2B3C5F7754AB</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>7</integer>
-			<key>xpos</key>
-			<integer>510</integer>
-			<key>ypos</key>
-			<integer>460</integer>
-		</dict>
 		<key>C5164F81-AFF9-41E3-B457-ACB055240C18</key>
 		<dict>
 			<key>colorindex</key>
@@ -7345,9 +7197,9 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>165</integer>
+			<integer>410</integer>
 			<key>ypos</key>
-			<integer>325</integer>
+			<integer>980</integer>
 		</dict>
 		<key>CE27E3EF-A408-4091-8012-14B020868C38</key>
 		<dict>
