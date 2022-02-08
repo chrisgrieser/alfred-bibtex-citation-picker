@@ -736,7 +736,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>5FC91D06-0D35-4783-BD61-A31D275F9C64</string>
+				<string>7085C0CF-F857-4806-B96D-1FADD51E37EE</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -769,31 +769,6 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>3A3139AC-C1FA-440D-B763-51B7393CFD2D</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>971DA3B6-3838-4012-ADCD-D864EB9844BD</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>EA5FC55D-EF41-48AB-8318-7FEBC5971355</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>sourceoutputuid</key>
-				<string>D2294731-682D-45C9-9750-E3613E3F2BDD</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -959,19 +934,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>2D59F287-3F5D-4A64-9151-E43716142751</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>4EB700DE-06C4-44C0-98C7-DA1141605A2A</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>3A3139AC-C1FA-440D-B763-51B7393CFD2D</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1149,19 +1111,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>9859D608-FC9F-44E5-B4B0-55FBFD8CA431</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>5FC91D06-0D35-4783-BD61-A31D275F9C64</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>7085C0CF-F857-4806-B96D-1FADD51E37EE</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1935,19 +1884,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>B928B68D-85BC-410D-9523-0ACEB84AEAEF</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>BC2942FE-8B27-4B09-B7BE-344A9A98D511</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>4EB700DE-06C4-44C0-98C7-DA1141605A2A</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -3610,28 +3546,90 @@ end run</string>
 				<array>
 					<dict>
 						<key>inputstring</key>
-						<string></string>
+						<string>{var:focusedapp}</string>
 						<key>matchcasesensitive</key>
 						<false/>
 						<key>matchmode</key>
 						<integer>0</integer>
 						<key>matchstring</key>
-						<string>no_file_recognized</string>
+						<string>com.apple.finder</string>
 						<key>outputlabel</key>
-						<string>not recognized</string>
+						<string>Finder</string>
 						<key>uid</key>
-						<string>D2294731-682D-45C9-9750-E3613E3F2BDD</string>
+						<string>F79799D6-F571-4650-A3AF-299C32810952</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:focusedapp}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>md.obsidian</string>
+						<key>outputlabel</key>
+						<string>Obsidian</string>
+						<key>uid</key>
+						<string>3AFC5100-562E-484E-BA19-5240BCE36644</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:focusedapp}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>com.sublimetext.4</string>
+						<key>outputlabel</key>
+						<string>Sublime</string>
+						<key>uid</key>
+						<string>DBDF1162-13AF-45DD-9A76-59B10793F64D</string>
 					</dict>
 				</array>
 				<key>elselabel</key>
-				<string>file recognized</string>
+				<string>--</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.conditional</string>
 			<key>uid</key>
-			<string>3A3139AC-C1FA-440D-B763-51B7393CFD2D</string>
+			<string>3525B1D4-FE5B-4087-B8D4-592A85B73ECA</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>if (system attribute "focusedapp") is "md.obsidian" then
+	tell application "Obsidian"		open location "obsidian://advanced-uri?commandid=open-with%253Ashow-file-in-explorer"		open location "obsidian://advanced-uri?commandid=open-with-default-app%253Ashow"	end tell
+	delay 0.8
+end if
+
+tell application "Finder" to set sel to selection
+if ((count sel) &gt; 1) then
+	set firstItem to item 1 of sel
+	return POSIX path of (firstItem as text)
+else
+	return POSIX path of (sel as text)
+end if</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/get-current-file.applescript</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>7085C0CF-F857-4806-B96D-1FADD51E37EE</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -3667,62 +3665,6 @@ This usually only happens when you have created a new document and have not save
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>matchmode</key>
-				<integer>1</integer>
-				<key>matchstring</key>
-				<string>\n$</string>
-				<key>regexcaseinsensitive</key>
-				<false/>
-				<key>regexmultiline</key>
-				<false/>
-				<key>replacestring</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.replace</string>
-			<key>uid</key>
-			<string>4EB700DE-06C4-44C0-98C7-DA1141605A2A</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>try
-	tell application "iA Writer"
-		set the_document to front document
-		save the_document
-		set hsf_path to file of the_document
-	end tell
-end try
-
-if (hsf_path = missing value) then
-	return "no_file_recognized"
-else
-	return POSIX path of hsf_path
-end if</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>6</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>BC2942FE-8B27-4B09-B7BE-344A9A98D511</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -3738,50 +3680,6 @@ end if</string>
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
 			<string>BCC79CD9-1DDB-4C82-ABB5-FB0720CB08B0</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:focusedapp}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>com.apple.finder</string>
-						<key>outputlabel</key>
-						<string>Finder</string>
-						<key>uid</key>
-						<string>F79799D6-F571-4650-A3AF-299C32810952</string>
-					</dict>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:focusedapp}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>md.obsidian</string>
-						<key>outputlabel</key>
-						<string>Obsidian</string>
-						<key>uid</key>
-						<string>3AFC5100-562E-484E-BA19-5240BCE36644</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>--</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
-			<key>uid</key>
-			<string>3525B1D4-FE5B-4087-B8D4-592A85B73ECA</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -3837,36 +3735,6 @@ end if</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>tell application "Finder" to set sel to selection
-
-if ((count sel) &gt; 1) then
-	set firstItem to item 1 of sel
-	return POSIX path of (firstItem as text)
-else
-	return POSIX path of (sel as text)
-end if</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>6</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>7085C0CF-F857-4806-B96D-1FADD51E37EE</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>matchmode</key>
 				<integer>1</integer>
 				<key>matchstring</key>
@@ -3915,51 +3783,6 @@ This usually only happens when you have created a new document and have not save
 			<string>EA5FC55D-EF41-48AB-8318-7FEBC5971355</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>tell application "Obsidian"	open location "obsidian://advanced-uri?commandid=open-with%253Ashow-file-in-explorer"	open location "obsidian://advanced-uri?commandid=open-with-default-app%253Ashow"end tell
-delay 0.8</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>6</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>5FC91D06-0D35-4783-BD61-A31D275F9C64</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>matchmode</key>
-				<integer>1</integer>
-				<key>matchstring</key>
-				<string>.*\/([^\/]*)$</string>
-				<key>regexcaseinsensitive</key>
-				<true/>
-				<key>regexmultiline</key>
-				<false/>
-				<key>replacestring</key>
-				<string>$1</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.replace</string>
-			<key>uid</key>
-			<string>F8165297-EDCE-486C-8145-74C244AFBB14</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4046,6 +3869,27 @@ delay 0.8</string>
 			<string>795480E8-4945-4E27-80D2-9FBB00E97A68</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string>.*\/([^\/]*)$</string>
+				<key>regexcaseinsensitive</key>
+				<true/>
+				<key>regexmultiline</key>
+				<false/>
+				<key>replacestring</key>
+				<string>$1</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.replace</string>
+			<key>uid</key>
+			<string>F8165297-EDCE-486C-8145-74C244AFBB14</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -7534,9 +7378,9 @@ Trigger Pandoc Conversion</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>350</integer>
+			<integer>375</integer>
 			<key>ypos</key>
-			<integer>875</integer>
+			<integer>805</integer>
 		</dict>
 		<key>367167E6-8193-46E4-A342-A1B8B9BBD18D</key>
 		<dict>
@@ -7557,15 +7401,6 @@ Trigger Pandoc Conversion</string>
 			<integer>1060</integer>
 			<key>ypos</key>
 			<integer>1480</integer>
-		</dict>
-		<key>3A3139AC-C1FA-440D-B763-51B7393CFD2D</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>2</integer>
-			<key>xpos</key>
-			<integer>690</integer>
-			<key>ypos</key>
-			<integer>840</integer>
 		</dict>
 		<key>3CB148CF-6172-497D-8C2B-2032EE3359C1</key>
 		<dict>
@@ -7693,15 +7528,6 @@ Citation Picker</string>
 			<key>ypos</key>
 			<integer>610</integer>
 		</dict>
-		<key>4EB700DE-06C4-44C0-98C7-DA1141605A2A</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>2</integer>
-			<key>xpos</key>
-			<integer>630</integer>
-			<key>ypos</key>
-			<integer>850</integer>
-		</dict>
 		<key>501917DB-D6D5-4C2B-87AE-D413E2FA0E2A</key>
 		<dict>
 			<key>colorindex</key>
@@ -7825,15 +7651,6 @@ Citation Picker</string>
 			<key>ypos</key>
 			<integer>145</integer>
 		</dict>
-		<key>5FC91D06-0D35-4783-BD61-A31D275F9C64</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>2</integer>
-			<key>xpos</key>
-			<integer>485</integer>
-			<key>ypos</key>
-			<integer>1005</integer>
-		</dict>
 		<key>600AE4E3-5A4A-47EE-8FDB-855963B4D363</key>
 		<dict>
 			<key>colorindex</key>
@@ -7908,9 +7725,9 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>685</integer>
+			<integer>575</integer>
 			<key>ypos</key>
-			<integer>930</integer>
+			<integer>820</integer>
 		</dict>
 		<key>70FBFBD1-E904-4573-8AB5-87352510BD5E</key>
 		<dict>
@@ -8099,9 +7916,9 @@ Citation Picker</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>895</integer>
+			<integer>885</integer>
 			<key>ypos</key>
-			<integer>910</integer>
+			<integer>950</integer>
 		</dict>
 		<key>97776C17-E690-4E00-A470-C1FE4D952723</key>
 		<dict>
@@ -8344,15 +8161,6 @@ Citation Picker</string>
 			<integer>1485</integer>
 			<key>ypos</key>
 			<integer>1540</integer>
-		</dict>
-		<key>BC2942FE-8B27-4B09-B7BE-344A9A98D511</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>2</integer>
-			<key>xpos</key>
-			<integer>485</integer>
-			<key>ypos</key>
-			<integer>860</integer>
 		</dict>
 		<key>BCC79CD9-1DDB-4C82-ABB5-FB0720CB08B0</key>
 		<dict>
@@ -8702,9 +8510,9 @@ Anticipatory Word Count</string>
 			<key>colorindex</key>
 			<integer>12</integer>
 			<key>xpos</key>
-			<integer>1010</integer>
+			<integer>995</integer>
 			<key>ypos</key>
-			<integer>1065</integer>
+			<integer>1125</integer>
 		</dict>
 		<key>FC416094-1EB1-4464-97E2-8A6E678A45AC</key>
 		<dict>
