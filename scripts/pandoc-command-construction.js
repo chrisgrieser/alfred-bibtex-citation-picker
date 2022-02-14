@@ -20,9 +20,7 @@ function run(argv) {
 	} else {
 		// beginning with version 4.4: citation style only
 		// has filename and is saved in workflow folder
-		const alfred_preferences = $.getenv("alfred_preferences");
-		const alfred_workflow_uid = $.getenv("alfred_workflow_uid");
-		csl_file = alfred_preferences + "/workflows/" +	alfred_workflow_uid +
+		csl_file = $.getenv("alfred_preferences") + "/workflows/" +	$.getenv("alfred_workflow_uid") +
 			"/citation-styles/" + csl_file;
 	}
 
