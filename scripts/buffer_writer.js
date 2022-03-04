@@ -8,11 +8,9 @@ function run() {
 	const urlIcon = $.getenv("IconURL");
 	const doiIcon = $.getenv("IconDOI");
 	const library = $.getenv("bibtex_library_path").replace(/^~/, app.pathTo("home folder"));
-	const library2 = $.getenv("second_library").replace(/^~/, app.pathTo("home folder"));
 
 	// read bib file &  remove unnecessary info to increase speed
 	let input = app.doShellScript("cat \"" + library + "\" | grep -vwE \"(abstract|annotate|Bdsk-Url-1|Bdsk-Url-2|date-modified|date-added|keywords|issn|langid|urlyear|isbn|location|pagetotal|series|eprint) =\" | grep -vw \"%%\"");
-	if (library2) input += "\r" + app.doShellScript("cat \"" + library2 + "\" | grep -vwE \"(abstract|annotate|Bdsk-Url-1|Bdsk-Url-2|date-modified|date-added|keywords|issn|langid|urlyear|isbn|location|pagetotal|series|eprint) =\" | grep -vw \"%%\"");
 
 	// BibTeX-Decoding
 	const germanChars = ["{\\\"u};ü", "{\\\"a};ä", "{\\\"o};ö", "{\\\"U};Ü", "{\\\"A};Ä", "{\\\"O};Ö", "\\\"u;ü", "\\\"a;ä", "\\\"o;ö", "\\\"U;Ü", "\\\"A;Ä", "\\\"O;Ö", "\\ss;ß", "{\\ss};ß"];
