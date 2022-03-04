@@ -1352,7 +1352,7 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>cd "${csl_folder/#\~/$HOME}" || return
+				<string>cd ~/.pandoc/csl/
 
 curl -sO "$*"
 
@@ -1807,13 +1807,10 @@ to set a hotkey for the citaiton picker.</string>
 		<string>56</string>
 		<key>bibtex_library_path</key>
 		<string>~/Library/Mobile Documents/com~apple~CloudDocs/Dotfolder/Configs/pandoc/reference-database.bib</string>
-		<key>csl_folder</key>
-		<string>~/Library/Mobile Documents/com~apple~CloudDocs/Dotfolder/Configs/pandoc/csl/</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
 		<string>bibtex_library_path</string>
-		<string>csl_folder</string>
 	</array>
 	<key>version</key>
 	<string>6.1.1</string>

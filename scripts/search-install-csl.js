@@ -30,8 +30,7 @@ String.prototype.toCapitalCase = function () {
 };
 
 // get currently installed
-const CSLfolder= $.getenv("csl_folder").replace(/^~/, app.pathTo("home folder"));
-const localCSLs = app.doShellScript("ls -t \"" + CSLfolder + "\"")
+const localCSLs = app.doShellScript("ls -t $HOME/.pandoc/csl")
 	.split("\r");
 
 const onlineCSLs = JSON.parse(app.doShellScript("curl -s \"https://api.github.com/repos/citation-style-language/styles/git/trees/master?recursive=1\""))
