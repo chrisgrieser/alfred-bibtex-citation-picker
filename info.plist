@@ -1478,7 +1478,7 @@ echo "$*"</string>
 			<key>note</key>
 			<string>check whether buffer is outdated</string>
 			<key>xpos</key>
-			<integer>225</integer>
+			<integer>205</integer>
 			<key>ypos</key>
 			<integer>155</integer>
 		</dict>
@@ -1498,7 +1498,7 @@ to set a hotkey for Pandoc Conversion</string>
 		<key>131904BA-B28E-4245-8D68-03AB717DB9D0</key>
 		<dict>
 			<key>note</key>
-			<string>run "pd" alias</string>
+			<string>run "docx" alias</string>
 			<key>xpos</key>
 			<integer>205</integer>
 			<key>ypos</key>
@@ -1538,7 +1538,7 @@ to set a hotkey for Pandoc Conversion</string>
 			<key>xpos</key>
 			<integer>10</integer>
 			<key>ypos</key>
-			<integer>710</integer>
+			<integer>660</integer>
 		</dict>
 		<key>30006A6B-EAF9-4531-8694-5E878A0FB80E</key>
 		<dict>
@@ -1560,7 +1560,7 @@ to set a hotkey for Pandoc Conversion</string>
 
 to set a hotkey for the citaiton picker.</string>
 			<key>xpos</key>
-			<integer>15</integer>
+			<integer>10</integer>
 			<key>ypos</key>
 			<integer>155</integer>
 		</dict>
@@ -1589,7 +1589,7 @@ to set a hotkey for the citaiton picker.</string>
 			<key>xpos</key>
 			<integer>375</integer>
 			<key>ypos</key>
-			<integer>710</integer>
+			<integer>660</integer>
 		</dict>
 		<key>5B9676C6-1ED4-4548-835F-8E5B18BB5392</key>
 		<dict>
@@ -1743,7 +1743,7 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>225</integer>
+			<integer>205</integer>
 			<key>ypos</key>
 			<integer>15</integer>
 		</dict>
@@ -1788,7 +1788,7 @@ to set a hotkey for the citaiton picker.</string>
 			<key>xpos</key>
 			<integer>205</integer>
 			<key>ypos</key>
-			<integer>710</integer>
+			<integer>660</integer>
 		</dict>
 		<key>FE122FB8-705A-4169-9391-1F91038FDFB6</key>
 		<dict>

@@ -1,14 +1,13 @@
 #!/bin/zsh
-# further path additions as pandoc is installed a different location for ARM Macs
+# shellcheck disable=SC2154
 export PATH=/usr/local/bin:/opt/homebrew/bin/:$PATH
+CSL=apa-6th-edition.csl
 
-bibtexentry="$*"
-citekey="@"`echo -n $bibtexentry | cut -d "," -f 1 | cut -d "{" -f 2`
-tempbib="$alfred_workflow_cache""/temp_bibtex.bib"
+BIBTEXENTRY="$*"
+CITEKEY="@$(echo -n "$BIBTEXENTRY" | cut -d "," -f 1 | cut -d "{" -f 2)"
+TEMPBIB="$alfred_workflow_cache""/temp_bibtex.bib"
 mkdir -p "$alfred_workflow_cache"
-echo -n $bibtexentry > $tempbib
+echo -n "$BIBTEXENTRY" > "$TEMPBIB"
+DUMMYDOC="---\nnocite: |\n  $CITEKEY\n---\n::: {#refs}\n:::"
 
-csl="$alfred_preferences""/workflows/""$alfred_workflow_uid""/citation-styles/""$csl_file"
-dummyDoc="---\nnocite: |\n  "$citekey"\n---\n::: {#refs}\n:::"
-
-echo -n $dummyDoc | pandoc --citeproc --read=markdown --write=plain --csl $csl --bibliography $tempbib | tr "\n" " "
+echo -n "$DUMMYDOC" | pandoc --citeproc --read=markdown --write=plain --csl="$CSL" --bibliography "$TEMPBIB" | tr "\n" " "
