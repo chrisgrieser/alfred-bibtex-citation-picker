@@ -50,8 +50,8 @@ const onlineCSLs = JSON.parse(app.doShellScript("curl -s \"https://api.github.co
 			filename = filename.slice(10);
 		}
 		if (localCSLs.includes (filename)) {
-			prefix = "🔄 ";
-			sub += "Update local .csl with online version. ";
+			prefix = "✅ ";
+			sub += "↵: Update local .csl file. ";
 		}
 
 		const title = filename
