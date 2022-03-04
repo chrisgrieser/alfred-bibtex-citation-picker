@@ -1,31 +1,26 @@
-# Pandoc-Suite and BibTeX-Zotero-Citation-Picker for Academic Writing in Markdown
+# BibTeX-Citation-Picker for Pandoc
+![](https://img.shields.io/github/downloads/chrisgrieser/alfred-bibtex-citation-picker/total?label=Total%20Downloads&style=plastic)  ![](https://img.shields.io/github/v/release/chrisgrieser/alfred-bibtex-citation-picker?label=Latest%20Release&style=plastic)
 
-![](https://img.shields.io/github/downloads/chrisgrieser/pandoc_alfred/total?label=Total%20Downloads&style=plastic)  ![](https://img.shields.io/github/v/release/chrisgrieser/pandoc_alfred?label=Latest%20Release&style=plastic)
+Citation Picker for [Pandoc Citation Syntax](https://pandoc.org/MANUAL.html#citation-syntax) using a BibTeX File.
 
-## What it does
-This Alfred workflow enables academic citing and publishing with any markdown app. It does so by offering a **Citation Picker** for [Pandoc Markdown Citations](https://pandoc.org/MANUAL.html#pandocs-markdown) and by easily **converting Markdown files** into `.docx`, `.pdf`, `.html`, `.odt`, or `.pptx` with the proper bibliography.
+<img width=50% src="https://user-images.githubusercontent.com/73286100/132755578-cce9892e-d3c0-4ba3-9666-4649d8b96202.png">
 
-This workflow is made for academics who neither like Word nor LaTeX. As the name suggests, this workflow is basically a user-friendly interface for Pandoc, allowing you to make use of Pandoc's capabilities without ever having to open the Terminal.
+## Setup
+1. [Download the latest release](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/releases/latest).
+2. In the Alfred Environment Variables, set `bibtex_library_path` to your library file.
+3. Set a hotkey for the citation Picker.
 
-The workflow otherwise also features some useful auxiliary functions, like for example "anticipatory word count", i.e.  number of words that your bibliography will have after the conversion (markdown apps cannot calculate the word count of the bibliography as it hasn't been created yet).
+## About the Developer
+In my day job, I am a sociologist studying the social mechanisms underlying the digital economy. For my PhD project, I investigate the governance of the app economy and how software ecosystems manage the tension between innovation and compatibility. If you are interested in this subject, feel free to get in touch!
 
-## Download
-➡️ [Latest Release on GitHub](https://github.com/chrisgrieser/pandoc_alfred/releases)
+### Profiles
+- [Academic Website](https://chris-grieser.de/)
+- [ResearchGate](https://www.researchgate.net/profile/Christopher-Grieser)
+- Discord: `@pseudometa#9546`
+- [GitHub](https://github.com/chrisgrieser/)
+- [Twitter](https://twitter.com/pseudo_meta)
+- [LinkedIn](https://www.linkedin.com/in/christopher-grieser-ba693b17a/) <!-- markdown-link-check-disable-line -->
 
-➡️ [Complete Usage & Installation Guide](https://chris-grieser.de/pandoc_alfred)
-
-## Screenshots
-
-<img src="https://i.imgur.com/hBkN8e3.png" alt="Conversion" width=50% height=50%>
-
-<img src="https://i.imgur.com/XuSfGov.png" alt="Zotero Citation Picker" width=50% height=50%>
-
-<img width=50% height=50% alt="Screenshot 2021-09-09 22 08 42" src="https://user-images.githubusercontent.com/73286100/132755578-cce9892e-d3c0-4ba3-9666-4649d8b96202.png">
-
-## Credits
-
-### Donations
-Are much appreciated via [PayPal](https://www.paypal.com/paypalme/ChrisGrieser) or [Ko-Fi](https://ko-fi.com/pseudometa) 🙏
-
-### About the Author
-This workflow has been created by [@pseudo_meta (Twitter)](https://twitter.com/pseudo_meta) aka Chris Grieser (rl). In my day job, I am a PhD student in sociology, studying the governance of the app economy. If you are interested in this subject, check out [my academic homepage](https://chris-grieser.de/) and get in touch.
+### Donate
+- [PayPal](https://www.paypal.com/PayPalme/ChrisGrieser)
+- [Ko-Fi](https://ko-fi.com/pseudometa) <!-- markdown-link-check-disable-line -->
