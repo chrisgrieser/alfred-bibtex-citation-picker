@@ -39,20 +39,30 @@ const onlineCSLs = JSON.parse(app.doShellScript("curl -s \"https://api.github.co
 	.map(item => item.path)
 	.filter (item => item.endsWith(".csl"))
 	.map(csl => {
-		const filename = csl.replace("dependent/", "");
-		const title = filename.replace (/-|\.csl/g, " ")
-			.toCapitalCase();
-		const url = "https://raw.githubusercontent.com/citation-style-language/styles/master/" + csl;
 		let prefix = "";
 		let sub = "";
+		let dependentMatch = "";
+
+		let filename = csl;
+		if (filename.startsWith("dependent/")) {
+			sub += "[dependent] ";
+			dependentMatch = " dependent";
+			filename = filename.slice(10);
+		}
 		if (localCSLs.includes (filename)) {
 			prefix = "🔄 ";
-			sub = "Update local .csl with online version ";
+			sub += "Update local .csl with online version. ";
 		}
+
+		const title = filename
+			.slice (0, -4)
+			.replaceAll ("-", " ")
+			.toCapitalCase();
 		return {
 			"title": prefix + title,
 			"subtitle": sub,
-			"arg": url,
+			"match": title + dependentMatch,
+			"arg": "https://raw.githubusercontent.com/citation-style-language/styles/master/" + csl,
 		};
 	});
 
