@@ -137,6 +137,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>52B9C3DF-F265-4201-9508-55BA584F851F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F13D3E1D-211A-4C1E-B24A-C30383B5578A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>5B9676C6-1ED4-4548-835F-8E5B18BB5392</key>
 		<array>
 			<dict>
@@ -1333,9 +1346,9 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>&amp; copied</string>
+				<string>{query}</string>
 				<key>title</key>
-				<string>✅ Downloaded {query}</string>
+				<string>✅ Downloaded &amp; Copied</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -1356,8 +1369,6 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 
 curl -sO "$*"
 
-echo "$*" | pbcopy
-
 # for notification
 echo "$*"</string>
 				<key>scriptargtype</key>
@@ -1373,6 +1384,25 @@ echo "$*"</string>
 			<string>FC604ACD-94BE-4F8B-B73C-8475943837C7</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>F13D3E1D-211A-4C1E-B24A-C30383B5578A</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1780,6 +1810,13 @@ to set a hotkey for the citaiton picker.</string>
 			<key>ypos</key>
 			<integer>720</integer>
 		</dict>
+		<key>F13D3E1D-211A-4C1E-B24A-C30383B5578A</key>
+		<dict>
+			<key>xpos</key>
+			<integer>545</integer>
+			<key>ypos</key>
+			<integer>710</integer>
+		</dict>
 		<key>FC604ACD-94BE-4F8B-B73C-8475943837C7</key>
 		<dict>
 			<key>xpos</key>
@@ -1806,7 +1843,7 @@ to set a hotkey for the citaiton picker.</string>
 		<key>alfred_bar_length</key>
 		<string>56</string>
 		<key>bibtex_library_path</key>
-		<string>~/Library/Mobile Documents/com~apple~CloudDocs/Dotfolder/Configs/pandoc/reference-database.bib</string>
+		<string>~/.pandoc/main-bibliography.bib</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
