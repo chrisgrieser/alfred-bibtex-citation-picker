@@ -1,5 +1,5 @@
 # BibTeX-Citation-Picker for Pandoc
-![](https://img.shields.io/github/downloads/chrisgrieser/alfred-bibtex-citation-picker/total?label=Total%20Downloads&style=plastic)  ![](https://img.shields.io/github/v/release/chrisgrieser/alfred-bibtex-citation-picker?label=Latest%20Release&style=plastic)
+<!-- ![](https://img.shields.io/github/downloads/chrisgrieser/alfred-bibtex-citation-picker/total?label=Total%20Downloads&style=plastic)  ![](https://img.shields.io/github/v/release/chrisgrieser/alfred-bibtex-citation-picker?label=Latest%20Release&style=plastic) -->
 
 Citation Picker for [Pandoc Citation Syntax](https://pandoc.org/MANUAL.html#citation-syntax) using a BibTeX File.
 

@@ -25,11 +25,25 @@ body:
         1. Go to '...'
         2. Click on '...'
         3. Scroll down to '...'
+  - type: textarea
+    id: debugging-log
+    attributes:
+      label: Debugging Log
+      description: "You can get a debugging log by opening the workflow in Alfred preferences and pressing `⌘ + D`. A small window will open up which will log everything happening during the execution of the Workflow. Use the malfunctioning part of the workflow once more, copy the content of the log window, and paste it here. If the debugging log is long, please attach it as file instead of pasting everything in here."
+      render: Text
+    validations:
+      required: true
+  - type: textarea
+    id: workflow-configuration
+    attributes:
+      label: Workflow Configuration
+      description: "Please add a screenshot of all your [workflow variables](https://www.alfredapp.com/help/workflows/advanced/variables/)."
+    validations:
+      required: true
   - type: checkboxes
     id: checklist
     attributes:
       label: Checklist
       options:
-        - label: I updated to the latest version of the workflow.
+        - label: I have [updated to the latest version](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest) of this workflow.
           required: true
-
