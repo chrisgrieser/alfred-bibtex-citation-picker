@@ -1,7 +1,7 @@
-# BibTeX-Citation-Picker for Pandoc
+# BibTeX-Citation-Picker for Alfred
 <!-- ![](https://img.shields.io/github/downloads/chrisgrieser/alfred-bibtex-citation-picker/total?label=Total%20Downloads&style=plastic)  ![](https://img.shields.io/github/v/release/chrisgrieser/alfred-bibtex-citation-picker?label=Latest%20Release&style=plastic) -->
 
-Citation Picker for [Pandoc Citation Syntax](https://pandoc.org/MANUAL.html#citation-syntax) using a BibTeX File.
+[Alfred](https://www.alfredapp.com/) Workflow for selecting citations in [Pandoc Syntax](https://pandoc.org/MANUAL.html#citation-syntax) from a BibTeX File.
 
 <img width=50% src="https://user-images.githubusercontent.com/73286100/132755578-cce9892e-d3c0-4ba3-9666-4649d8b96202.png">
 
