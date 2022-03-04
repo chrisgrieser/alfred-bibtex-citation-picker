@@ -1,3 +1,5 @@
+- 2022-03-04	release 6.1.0
+- 2022-03-04	csl downloader added
 - 2022-03-04	release 6.0.1
 - 2022-03-04	release 6.0.0
 - 2022-03-04	release 1.0.0
