@@ -1,3 +1,4 @@
+- 2022-03-04	release 6.0.0
 - 2022-03-04	release 1.0.0
 - 2022-03-04	init
 - 2022-02-14	local csl folder not needed as value anymore

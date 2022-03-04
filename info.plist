@@ -1538,7 +1538,7 @@ to set a hotkey for the citaiton picker.</string>
 		<string>bibtex_library_path</string>
 	</array>
 	<key>version</key>
-	<string>1.0.0</string>
+	<string>6.0.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/chrisgrieser/alfred-bibtex-citation-picker</string>
 </dict>
