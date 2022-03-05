@@ -1,3 +1,5 @@
+- 2022-03-05	release 6.2.0
+- 2022-03-05	pandoc citation syntax cheat sheet
 - 2022-03-04	release 6.1.5
 - 2022-03-04	release 6.1.4
 - 2022-03-04	release 6.1.3
