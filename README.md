@@ -11,8 +11,8 @@
 
 ## Setup
 1. [Download the latest release](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/releases/latest).
-2. In the Alfred Environment Variables, set `bibtex_library_path` to your library file.
-3. Set a hotkey for the citation Picker.
+2. In the Alfred Environment Variables, set `bibtex_library_path` to your library file. (Tutorial: [How to set Environment Variables in Alfred](https://www.alfredapp.com/help/workflows/advanced/variables/#environment))
+3. Set a hotkey for the citation picker.
 
 ## Usage
 Press the hotkey in any text field to launch the citation picker.
