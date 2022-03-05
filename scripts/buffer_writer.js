@@ -4,6 +4,7 @@ function run() {
 	const app = Application.currentApplication();
 	app.includeStandardAdditions = true;
 
+	// import variables
 	const alfredBarLength = parseInt ($.getenv("alfred_bar_length"));
 	const urlIcon = $.getenv("IconURL");
 	const doiIcon = $.getenv("IconDOI");
