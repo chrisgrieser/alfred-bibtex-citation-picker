@@ -76,12 +76,6 @@ function run() {
 
 		});
 
-		// if the initial reading of the file cut away the closing bracket, add it
-		let bibtexEntry = "@" + entry;
-		const openingBrackets = (bibtexEntry.match(/\{/g) || []).length;
-		const closingBrackets = (bibtexEntry.match(/\}/g) || []).length;
-		if (openingBrackets > closingBrackets) bibtexEntry = bibtexEntry + "}";
-
 		// when no URL, try to use DOI
 		let urlAppendix = "";
 		let URLsubtitle = "⛔️ There is no URL or DOI.";
@@ -152,7 +146,6 @@ function run() {
 					"arg": url,
 					"subtitle": URLsubtitle,
 				},
-				"fn": { "arg": bibtexEntry }
 			}
 		});
 	});

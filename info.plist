@@ -469,7 +469,7 @@
 	<key>createdby</key>
 	<string>Chris Grieser</string>
 	<key>description</key>
-	<string>Citation Picker for Pandoc Citation Syntax using a BibTex File. Works System-wide.</string>
+	<string>Citation Picker for Pandoc Citation Syntax using a BibTex File.</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -1728,6 +1728,8 @@ to set a hotkey for the citaiton picker.</string>
 		<dict>
 			<key>colorindex</key>
 			<integer>7</integer>
+			<key>note</key>
+			<string>paste single bibliography</string>
 			<key>xpos</key>
 			<integer>1095</integer>
 			<key>ypos</key>
@@ -1857,7 +1859,7 @@ to set a hotkey for the citaiton picker.</string>
 		<key>FC604ACD-94BE-4F8B-B73C-8475943837C7</key>
 		<dict>
 			<key>xpos</key>
-			<integer>205</integer>
+			<integer>200</integer>
 			<key>ypos</key>
 			<integer>660</integer>
 		</dict>
