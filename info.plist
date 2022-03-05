@@ -34,6 +34,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>122D6EFC-8347-4294-A8D2-606E74EDA9CA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D0BD2652-1A83-42AC-BCC4-396E1691CA1B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>1C0964D1-AA81-478A-B406-28E96DDD9E82</key>
 		<array>
 			<dict>
@@ -1466,6 +1479,50 @@ echo "$*"</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
+				<string>pandoc</string>
+				<key>subtext</key>
+				<string>Cheat Sheet</string>
+				<key>text</key>
+				<string>Pandoc Citation Syntax</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>122D6EFC-8347-4294-A8D2-606E74EDA9CA</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>qlmanage -p "Pandoc Citation Syntax.pdf"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>D0BD2652-1A83-42AC-BCC4-396E1691CA1B</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>https://github.com/chrisgrieser/alfred-bibtex-citation-picker</string>
@@ -1494,6 +1551,13 @@ to set a hotkey for Pandoc Conversion</string>
 			<integer>10</integer>
 			<key>ypos</key>
 			<integer>480</integer>
+		</dict>
+		<key>122D6EFC-8347-4294-A8D2-606E74EDA9CA</key>
+		<dict>
+			<key>xpos</key>
+			<integer>10</integer>
+			<key>ypos</key>
+			<integer>790</integer>
 		</dict>
 		<key>131904BA-B28E-4245-8D68-03AB717DB9D0</key>
 		<dict>
@@ -1737,6 +1801,13 @@ to set a hotkey for the citaiton picker.</string>
 			<integer>1860</integer>
 			<key>ypos</key>
 			<integer>185</integer>
+		</dict>
+		<key>D0BD2652-1A83-42AC-BCC4-396E1691CA1B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>200</integer>
+			<key>ypos</key>
+			<integer>790</integer>
 		</dict>
 		<key>D1393F83-C584-4BAE-A19E-194D0FA6105D</key>
 		<dict>
