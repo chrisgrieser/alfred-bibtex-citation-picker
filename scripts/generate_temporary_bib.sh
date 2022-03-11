@@ -10,5 +10,6 @@ DUMMYDOC="---\nnocite: |\n  $CITEKEY\n---\n::: {#refs}\n:::"
 echo -n "$DUMMYDOC" \
 	| pandoc --citeproc \
 	--read=markdown --write=plain \
-	--csl="$CSL" --bibliography="$LIBRARY" \
-	| tr -d "\n"
+	--csl="assets/$CSL" --bibliography="$LIBRARY" \
+	| tr "\n" " " \
+	| tr -s " "

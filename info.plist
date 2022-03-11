@@ -1508,7 +1508,7 @@ echo "$*"</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>qlmanage -p "Pandoc Citation Syntax.pdf"</string>
+				<string>qlmanage -p "assets/Pandoc Citation Syntax.pdf"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1554,6 +1554,8 @@ to set a hotkey for Pandoc Conversion</string>
 		</dict>
 		<key>122D6EFC-8347-4294-A8D2-606E74EDA9CA</key>
 		<dict>
+			<key>note</key>
+			<string>cheatsheet</string>
 			<key>xpos</key>
 			<integer>10</integer>
 			<key>ypos</key>
@@ -1564,7 +1566,7 @@ to set a hotkey for Pandoc Conversion</string>
 			<key>note</key>
 			<string>run "docx" alias</string>
 			<key>xpos</key>
-			<integer>205</integer>
+			<integer>200</integer>
 			<key>ypos</key>
 			<integer>480</integer>
 		</dict>
@@ -1816,7 +1818,7 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>205</integer>
+			<integer>10</integer>
 			<key>ypos</key>
 			<integer>15</integer>
 		</dict>
