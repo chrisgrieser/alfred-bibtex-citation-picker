@@ -1,3 +1,5 @@
+- 2022-03-11	release 6.3.2
+- 2022-03-11	better spaces handling for fn+return
 - 2022-03-05	release 6.3.0
 - 2022-03-05	speed improvements though not writing whole bibtex for fn+return
 - 2022-03-05	release 6.2.0
