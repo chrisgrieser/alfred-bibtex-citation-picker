@@ -130,7 +130,7 @@ function run() {
 					typeIcon += "website.png";
 					break;
 				default:
-					typeIcon += "technical_report.png"; // rest
+					typeIcon += "technical_report.png";
 			}
 
 			// displays editor when there are no authors
