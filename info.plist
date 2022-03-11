@@ -921,7 +921,7 @@ fi</string>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>escaping</key>
 				<integer>68</integer>
 				<key>keyword</key>
@@ -1877,8 +1877,6 @@ to set a hotkey for the citaiton picker.</string>
 	</dict>
 	<key>variables</key>
 	<dict>
-		<key>IconDOI</key>
-		<string>🔟</string>
 		<key>IconURL</key>
 		<string>🌐</string>
 		<key>alfred_bar_length</key>
