@@ -1,3 +1,5 @@
+- 2022-03-11	release 6.5.0
+- 2022-03-11	quicklook preview of url via cmd + Y
 - 2022-03-11	release 6.4.0
 - 2022-03-11	replace url with doi if no URL
 - 2022-03-11	release 6.3.2
