@@ -98,6 +98,7 @@ function run() {
 			} else if (doi) {
 				URLsubtitle = "⌃: Open DOI " + urlIcon;
 				urlAppendix = "    " + urlIcon;
+				url = "doi.org/" + doi;
 			}
 
 			// icon selection

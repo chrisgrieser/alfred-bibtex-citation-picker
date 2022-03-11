@@ -18,7 +18,7 @@
 Press the hotkey in any text field to launch the citation picker.
 - `↵`: paste the citekey of the selected citation.
 - `⌘ + ↵`: add page numbers, then paste citekey.
-- `⌥ + ↵`:  add another citation. Use  `⌘ + ⌥ + ↵` to add page numbers to this citation and then add another citation.
+- `⌥ + ↵`:  add another citation. Use  `⌘⌥ + ↵` to add page numbers to this citation and then add another citation.
 - `⌘ + C`: to copy the URL to the clipboard, if there is one
 - `⇧ + ↵`: reveal the entry in [BibDesk](http://bibdesk.sourceforge.net), if installed.
 - `⌃ + ↵`: open the URL in the browser. (If the entry has an URL, a '🌐' will be shown.)
