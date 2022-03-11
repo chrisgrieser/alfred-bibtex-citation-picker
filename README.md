@@ -27,6 +27,7 @@ Press the hotkey in any text field to launch the citation picker.
 - `⌘ + ↵`: add page numbers, then paste citekey.
 - `⌥ + ↵`:  add another citation. Use  `⌘⌥ + ↵` to add page numbers to this citation and then add another citation.
 - `⌘ + C`: to copy the URL to the clipboard, if there is one
+- `⌘ + Y`: Quicklook-Preview of the URL, if there is one (e.g. for the Abstract).
 - `⇧ + ↵`: reveal the entry in [BibDesk](http://bibdesk.sourceforge.net), if installed.
 - `⌃ + ↵`: open the URL in the browser. (If the entry has an URL, a '🌐' will be shown.)
 - `fn + ↵`: Paste the full bibliographic entry as APA 6th. Requires [Pandoc](https://pandoc.org).

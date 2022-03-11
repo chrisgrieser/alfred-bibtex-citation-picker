@@ -98,7 +98,7 @@ function run() {
 			} else if (doi) {
 				URLsubtitle = "⌃: Open DOI " + urlIcon;
 				urlAppendix = "    " + urlIcon;
-				url = "doi.org/" + doi;
+				url = "https://doi.org/" + doi;
 			}
 
 			// icon selection
@@ -151,6 +151,7 @@ function run() {
 				"icon": { "path": typeIcon },
 				"uid": citekey,
 				"text": { "copy": url },
+				"quicklookurl": url,
 				"mods": {
 					"ctrl": {
 						"valid": (url !== ""),
