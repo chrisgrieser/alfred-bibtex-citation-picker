@@ -112,10 +112,6 @@ function run() {
 				case "inbook":
 					typeIcon += "book_chapter.png";
 					break;
-				case "misc":
-				case "unpublished":
-					typeIcon += "manuscript.png";
-					break;
 				case "book":
 					typeIcon += "book.png";
 					break;
@@ -129,8 +125,10 @@ function run() {
 				case "webpage":
 					typeIcon += "website.png";
 					break;
+				case "misc":
+				case "unpublished":
 				default:
-					typeIcon += "technical_report.png";
+					typeIcon += "manuscript.png";
 			}
 
 			// displays editor when there are no authors
