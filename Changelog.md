@@ -1,3 +1,7 @@
+- 2022-03-12	release 7.2.0
+- 2022-03-12	new icon
+- 2022-03-12	also match by type of entry
+- 2022-03-12	removal of more unnecessary fields
 - 2022-03-12	release 7.1.1
 - 2022-03-12	fix for workflow renaming
 - 2022-03-12	release 7.1.0
