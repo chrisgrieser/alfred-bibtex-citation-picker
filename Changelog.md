@@ -1,3 +1,5 @@
+- 2022-03-12	release 7.1.0
+- 2022-03-12	show URLs when holding ctrl
 - 2022-03-12	release 7.0.0
 - 2022-03-12	improved readme & opening literature notes
 - 2022-03-11	release 6.5.0
