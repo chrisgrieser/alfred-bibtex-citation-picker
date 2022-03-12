@@ -52,7 +52,8 @@ function run() {
 			let year = "";
 			let editor = "";
 			let url = "";
-			let collection = "";
+			let booktitle = "";
+			let journal = "";
 			let doi = "";
 			let volume = "";
 			let issue = "";
@@ -86,7 +87,8 @@ function run() {
 				else if (property.includes ("url =")) url = extract(property);
 				else if (property.includes ("volume =")) volume = extract(property);
 				else if (property.includes ("number =")) issue = extract(property);
-				else if (/(^|\s)(journal|booktitle)\s*=/i.test(property)) collection = "    In: " + extract(property);
+				else if (property.includes ("journal =")) journal = extract(property);
+				else if (property.includes ("booktitle =")) booktitle = extract(property);
 				else if (property.includes ("keywords =")) {
 					keywords = extract(property)
 						.split(",")
@@ -113,7 +115,7 @@ function run() {
 				quicklookPath = literatureNoteFolder + "/" + citekey.slice(1) + ".md";
 			}
 
-			// icon selection
+			// Icon selection
 			let typeIcon = "icons/";
 			switch (type) {
 				case "article":
@@ -142,25 +144,27 @@ function run() {
 					typeIcon += "manuscript.png";
 			}
 
-			// Collection
-			if (type === "article") collection = collection + " " + volume + "(" + issue + ")";
-
+			// Journal/Book Title
+			let collectionSubtitle = "   In: ";
+			if (type === "article") collectionSubtitle += journal + " " + volume + "(" + issue + ")";
+			if (type === "incollection") collectionSubtitle += booktitle;
 
 			// displays editor when there are no authors
 			let editorAbbrev = "(Ed.)";
 			if (numberOfEditors > 1) editorAbbrev = "(Eds.)";
+
 			let authoreditor = author + " ";
 			if (!author && editor) authoreditor = editor + " " + editorAbbrev + " ";
 			else if (!author && !editor) authoreditor = "";
 
-			const alfredMatcher = [title, author, editor, year, collection, type, citekey, ...keywords]
+			const alfredMatcher = [title, author, editor, year, booktitle, journal, type, citekey, ...keywords]
 				.join(" ")
 				.replaceAll ("-", " ");
 
 			return {
 				"title": title,
 				"autocomplete": authoreditor,
-				"subtitle": authoreditor + year + collection + appendix,
+				"subtitle": authoreditor + year + collectionSubtitle + appendix,
 				"match": alfredMatcher,
 				"arg": citekey,
 				"icon": { "path": typeIcon },
