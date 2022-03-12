@@ -145,7 +145,7 @@ function run() {
 			}
 
 			// Journal/Book Title
-			let collectionSubtitle = "   In: ";
+			let collectionSubtitle = "    In: ";
 			if (type === "article") collectionSubtitle += journal + " " + volume + "(" + issue + ")";
 			if (type === "incollection") collectionSubtitle += booktitle;
 
