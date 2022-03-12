@@ -21,6 +21,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>10ACA015-64F3-4D2E-A659-213C5A665FDE</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1B72EC4E-33E7-4144-B43B-3037510ADA3A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>122D6EFC-8347-4294-A8D2-606E74EDA9CA</key>
 		<array>
 			<dict>
@@ -90,7 +103,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>84F2F11E-96D4-4F28-9F0C-C74E381EE8C3</string>
+				<string>F4AE9C32-4A15-421F-A8FE-C71500135BA3</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -325,7 +338,7 @@
 				<key>modifiers</key>
 				<integer>9437184</integer>
 				<key>modifiersubtext</key>
-				<string>⌘+fn: Delete BibTeX Entry</string>
+				<string>⌘+fn: Delete BibTeX Entry (⚠️ Experimental)</string>
 				<key>vitoclose</key>
 				<true/>
 			</dict>
@@ -449,6 +462,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>F4AE9C32-4A15-421F-A8FE-C71500135BA3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>10ACA015-64F3-4D2E-A659-213C5A665FDE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>FC604ACD-94BE-4F8B-B73C-8475943837C7</key>
 		<array>
 			<dict>
@@ -479,7 +505,7 @@
 	<key>createdby</key>
 	<string>Chris Grieser</string>
 	<key>description</key>
-	<string>BibTeX Citation Picker for Pandoc Citation Syntax.</string>
+	<string>BibTeX Citation Picker for Pandoc Citation Syntax</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -1412,7 +1438,7 @@ echo "$*"</string>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>keyword</key>
-				<string>pandoc</string>
+				<string>pandoc citation</string>
 				<key>subtext</key>
 				<string>Cheat Sheet</string>
 				<key>text</key>
@@ -1489,42 +1515,97 @@ echo "$*"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>openwith</key>
-				<string></string>
-				<key>sourcefile</key>
-				<string>{var:literature_note_folder}/{query}.md</string>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>@{query}</string>
+				<key>title</key>
+				<string>✅ Entry deleted from BibTeX Library</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openfile</string>
+			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>84F2F11E-96D4-4F28-9F0C-C74E381EE8C3</string>
+			<string>1B72EC4E-33E7-4144-B43B-3037510ADA3A</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>matchmode</key>
+				<key>argumenttype</key>
 				<integer>1</integer>
-				<key>matchstring</key>
-				<string>@?(.*)</string>
-				<key>regexcaseinsensitive</key>
-				<false/>
-				<key>regexmultiline</key>
-				<false/>
-				<key>replacestring</key>
-				<string>$1</string>
+				<key>subtext</key>
+				<string>⚠️Experimental &amp; Irreversible.   [↵]: Confirm  [Esc]: Cancel</string>
+				<key>text</key>
+				<string>Delete {var:citekey} from BibTeX Library?</string>
+				<key>withspace</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.replace</string>
+			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>3FA32575-5519-475C-AFED-6182B53063A6</string>
+			<string>F4AE9C32-4A15-421F-A8FE-C71500135BA3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>export PATH=/usr/local/bin:$PATH
+
+citekey="{query}"
+bibfile=~`echo -n $bibtex_library_path | sed -e "s/~//"`
+csl=~`echo -n $csl_file | sed -e "s/~//"`
+dummyBib="---\nnocite: |\n  "$citekey"\n---\n::: {#refs}\n:::"
+
+echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl --bibliography $bibfile | tr "\n" " "</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/delete_entry.sh</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>10ACA015-64F3-4D2E-A659-213C5A665FDE</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string> </string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>citekey</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>3FA32575-5519-475C-AFED-6182B53063A6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
-	<string>https://github.com/chrisgrieser/alfred-bibtex-citation-picker</string>
+	<string>README:
+https://github.com/chrisgrieser/alfred-bibtex-citation-picker</string>
 	<key>uidata</key>
 	<dict>
 		<key>06928646-A3C8-4D15-A526-2D6E9A4233A6</key>
@@ -1538,6 +1619,17 @@ echo "$*"</string>
 			<key>ypos</key>
 			<integer>155</integer>
 		</dict>
+		<key>10ACA015-64F3-4D2E-A659-213C5A665FDE</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>note</key>
+			<string>Delete Entry</string>
+			<key>xpos</key>
+			<integer>1105</integer>
+			<key>ypos</key>
+			<integer>935</integer>
+		</dict>
 		<key>122D6EFC-8347-4294-A8D2-606E74EDA9CA</key>
 		<dict>
 			<key>colorindex</key>
@@ -1548,6 +1640,15 @@ echo "$*"</string>
 			<integer>10</integer>
 			<key>ypos</key>
 			<integer>740</integer>
+		</dict>
+		<key>1B72EC4E-33E7-4144-B43B-3037510ADA3A</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>xpos</key>
+			<integer>1265</integer>
+			<key>ypos</key>
+			<integer>935</integer>
 		</dict>
 		<key>1C0964D1-AA81-478A-B406-28E96DDD9E82</key>
 		<dict>
@@ -1583,7 +1684,7 @@ echo "$*"</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>note</key>
-			<string>open BibDesk</string>
+			<string>open URL/DOI</string>
 			<key>xpos</key>
 			<integer>995</integer>
 			<key>ypos</key>
@@ -1611,7 +1712,7 @@ to set a hotkey for the citaiton picker.</string>
 			<key>xpos</key>
 			<integer>820</integer>
 			<key>ypos</key>
-			<integer>960</integer>
+			<integer>965</integer>
 		</dict>
 		<key>4771A40C-E741-46C5-93EF-82CEB4BD23D8</key>
 		<dict>
@@ -1633,6 +1734,8 @@ to set a hotkey for the citaiton picker.</string>
 		<dict>
 			<key>colorindex</key>
 			<integer>2</integer>
+			<key>note</key>
+			<string>open Literature Note</string>
 			<key>xpos</key>
 			<integer>995</integer>
 			<key>ypos</key>
@@ -1710,15 +1813,6 @@ to set a hotkey for the citaiton picker.</string>
 			<integer>1140</integer>
 			<key>ypos</key>
 			<integer>385</integer>
-		</dict>
-		<key>84F2F11E-96D4-4F28-9F0C-C74E381EE8C3</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>2</integer>
-			<key>xpos</key>
-			<integer>995</integer>
-			<key>ypos</key>
-			<integer>930</integer>
 		</dict>
 		<key>8B51C1A0-EAD2-457B-A532-6CC16C7F015E</key>
 		<dict>
@@ -1856,10 +1950,21 @@ to set a hotkey for the citaiton picker.</string>
 		<dict>
 			<key>colorindex</key>
 			<integer>2</integer>
+			<key>note</key>
+			<string>open in BibDesk</string>
 			<key>xpos</key>
 			<integer>995</integer>
 			<key>ypos</key>
 			<integer>665</integer>
+		</dict>
+		<key>F4AE9C32-4A15-421F-A8FE-C71500135BA3</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>xpos</key>
+			<integer>930</integer>
+			<key>ypos</key>
+			<integer>935</integer>
 		</dict>
 		<key>FC604ACD-94BE-4F8B-B73C-8475943837C7</key>
 		<dict>

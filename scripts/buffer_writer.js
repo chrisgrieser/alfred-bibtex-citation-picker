@@ -9,7 +9,6 @@ function run() {
 	const app = Application.currentApplication();
 	app.includeStandardAdditions = true;
 
-	// import variables
 	const alfredBarLength = parseInt ($.getenv("alfred_bar_length"));
 	const urlIcon = $.getenv("URL_icon");
 	const literatureNoteIcon = $.getenv("literature_note_icon");
@@ -38,14 +37,14 @@ function run() {
 	// MAIN
 	// -------------------------------
 
-	const literatureNotes = app.doShellScript('ls "' + literatureNoteFolder + '"')
+	const literatureNoteArray = app.doShellScript('ls "' + literatureNoteFolder + '"')
 		.split("\r")
-		.map (filename => filename.slice(0, -3)); // remove file extension
+		.map (filename => filename.slice(0, -3)); // remove file extension (assuming .md)
 
 	const entryArray = app.doShellScript('grep -vwE "(abstract|annotate|Bdsk-Url-1|Bdsk-Url-2|date-modified|date-added|issn|langid|urlyear|isbn|location|pagetotal|series|eprint) =" "' + libraryPath + '"') // remove unnecessary info to increase speed
 		.BibtexDecode()
 		.split("@")
-		.slice(1) // first element is only bibtex metadata
+		.slice(1) // first element is only BibTeX metadata
 		.map(entry => {
 			const properties = entry.split ("\r");
 			let author = "";
@@ -57,6 +56,7 @@ function run() {
 			let doi = "";
 			let volume = "";
 			let issue = "";
+			let numberOfEditors = 0;
 			let keywords = [];
 
 			// extract properties
@@ -85,7 +85,7 @@ function run() {
 				else if (property.includes ("doi =")) doi = extract(property);
 				else if (property.includes ("url =")) url = extract(property);
 				else if (property.includes ("volume =")) volume = extract(property);
-				else if (property.includes ("number =")) issue = "(" + extract(property) + ")";
+				else if (property.includes ("number =")) issue = extract(property);
 				else if (/(^|\s)(journal|booktitle)\s*=/i.test(property)) collection = "    In: " + extract(property);
 				else if (property.includes ("keywords =")) {
 					keywords = extract(property)
@@ -99,16 +99,16 @@ function run() {
 			let URLsubtitle = "⛔️ There is no URL or DOI.";
 			if (url) {
 				URLsubtitle = "⌃: Open " + urlIcon + " URL: " + url;
-				appendix += urlIcon;
+				appendix += urlIcon + " ";
 			} else if (doi) {
 				URLsubtitle = "⌃: Open " + urlIcon + " DOI: " + doi;
-				appendix += urlIcon;
+				appendix += urlIcon + " ";
 				url = "https://doi.org/" + doi;
 			}
 
 			// Literature Note
 			let quicklookPath = "";
-			if (literatureNotes.includes(citekey.slice(1))) {
+			if (literatureNoteArray.includes(citekey.slice(1))) {
 				appendix += literatureNoteIcon;
 				quicklookPath = literatureNoteFolder + "/" + citekey.slice(1) + ".md";
 			}
@@ -118,7 +118,6 @@ function run() {
 			switch (type) {
 				case "article":
 					typeIcon += "article.png";
-					collection = collection + " " + volume + issue;
 					break;
 				case "incollection":
 				case "inbook":
@@ -143,9 +142,12 @@ function run() {
 					typeIcon += "manuscript.png";
 			}
 
+			// Collection
+			if (type === "article") collection = collection + " " + volume + "(" + issue + ")";
+
+
 			// displays editor when there are no authors
 			let editorAbbrev = "(Ed.)";
-			let numberOfEditors = 0;
 			if (numberOfEditors > 1) editorAbbrev = "(Eds.)";
 			let authoreditor = author + " ";
 			if (!author && editor) authoreditor = editor + " " + editorAbbrev + " ";
