@@ -153,7 +153,7 @@ function run() {
 			if (!author && editor) authoreditor = editor + " " + editorAbbrev + " ";
 			else if (!author && !editor) authoreditor = "";
 
-			const alfredMatcher = [title, author, editor, year, collection, citekey, ...keywords]
+			const alfredMatcher = [title, author, editor, year, collection, type, citekey, ...keywords]
 				.join(" ")
 				.replaceAll ("-", " ");
 
