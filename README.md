@@ -45,7 +45,7 @@ Press the hotkey in any text field to launch the citation picker.
 - `tab`: Tab-complete the author name, i.e. filter the search results for the author(s) of the selected entry.
 
 ### URL Actions
-- *If the entry has an URL, a `🌐` will be shown. In that case, the following actions are possible. (In case there is no URL, the DOI will be used.)*
+- *If the entry has an URL, a `🌐` will be shown. In case there is no URL, the DOI will be used.*
 - `⌃ + ↵`: Open the URL in the browser.
 - `⌘ + C`: Copy the URL to the clipboard.
 
@@ -55,8 +55,9 @@ Press the hotkey in any text field to launch the citation picker.
 - `⌘fn + ↵`: Delete the entry from the BibTeX library. (⚠️ Experimental – Feature untested with  BiBTeX files created with apps other than BibDesk. Please make backups before.)
 
 ### Literature Note Actions
-- `⌘⇧ + ↵`: Open the literature note, if there is one. If the entry has an URL, a `📓` will be shown.
+- `⌘⇧ + ↵`: Open the literature note, if there is one.
 - `⌘ + Y`: Quicklook the literature note (requires QLmarkdown or Peek[^1]).
+- *If the entry has an corresponding literature note, a `📓` will be shown.*
 - *Both actions look for literature specified in the environment variable `literature_note_folder`. The files must be named __exactly__ like the citekey (without `@`) and have a `.md` extension.*
 
 ## Auxiliary Features
