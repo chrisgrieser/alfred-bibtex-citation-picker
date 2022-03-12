@@ -41,7 +41,7 @@ function run() {
 		.split("\r")
 		.map (filename => filename.slice(0, -3)); // remove file extension (assuming .md)
 
-	const entryArray = app.doShellScript('grep -vwE "(abstract|annotate|Bdsk-Url-1|Bdsk-Url-2|date-modified|date-added|issn|langid|urlyear|isbn|location|pagetotal|series|eprint) =" "' + libraryPath + '"') // remove unnecessary info to increase speed
+	const entryArray = app.doShellScript('grep -vwE "(abstract|annotate|annotation|eprint|Bdsk-Url-1|Bdsk-Url-2|date-modified|date-added|issn|langid|urlyear|entrysubtype|isbn|location|pagetotal|series|eprint) =" "' + libraryPath + '"') // remove unnecessary info to increase speed
 		.BibtexDecode()
 		.split("@")
 		.slice(1) // first element is only BibTeX metadata
