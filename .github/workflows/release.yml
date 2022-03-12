@@ -6,7 +6,7 @@ on:
       - "*"
 
 env:
-  WORKFLOW_NAME: BibTeX-Citation-Picker # Change this to match your workflow name, replacing " " with "-"
+  WORKFLOW_NAME: Supercharged-Citation-Picker # Change this to match your workflow name, replacing " " with "-"
 
 jobs:
   build:
