@@ -1,3 +1,5 @@
+- 2022-03-12	release 7.0.0
+- 2022-03-12	improved readme & opening literature notes
 - 2022-03-11	release 6.5.0
 - 2022-03-11	quicklook preview of url via cmd + Y
 - 2022-03-11	release 6.4.0
