@@ -1,10 +1,10 @@
 #!/bin/zsh
-CSL_DIR=~/.pandoc/csl/
 
 URL="$*"
 
-mkdir -p "$CSL_DIR"
-cd "$CSL_DIR" || exit 1
+# shellcheck disable=SC2154
+mkdir -p "$csl_folder"
+cd "$csl_folder" || exit 1
 
 curl -sO "$URL"
 FILE_NAME=${URL##*/}

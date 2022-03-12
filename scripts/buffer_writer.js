@@ -11,8 +11,10 @@ function run() {
 
 	// import variables
 	const alfredBarLength = parseInt ($.getenv("alfred_bar_length"));
-	const urlIcon = $.getenv("IconURL");
+	const urlIcon = $.getenv("URL_icon");
+	const literatureNoteIcon = $.getenv("literature_note_icon");
 	const libraryPath = $.getenv("bibtex_library_path").replace(/^~/, app.pathTo("home folder"));
+	const literatureNoteFolder = $.getenv("literature_note_folder").replace(/^~/, app.pathTo("home folder"));
 
 	String.prototype.BibtexDecode = function () {
 		const germanChars = ["{\\\"u};ü", "{\\\"a};ä", "{\\\"o};ö", "{\\\"U};Ü", "{\\\"A};Ä", "{\\\"O};Ö", "\\\"u;ü", "\\\"a;ä", "\\\"o;ö", "\\\"U;Ü", "\\\"A;Ä", "\\\"O;Ö", "\\ss;ß", "{\\ss};ß"];
@@ -35,6 +37,10 @@ function run() {
 	// -------------------------------
 	// MAIN
 	// -------------------------------
+
+	const literatureNotes = app.doShellScript('ls "' + literatureNoteFolder + '"')
+		.split("\r")
+		.map (filename => filename.slice(0, -3)); // remove file extension
 
 	const entryArray = app.doShellScript('grep -vwE "(abstract|annotate|Bdsk-Url-1|Bdsk-Url-2|date-modified|date-added|issn|langid|urlyear|isbn|location|pagetotal|series|eprint) =" "' + libraryPath + '"') // remove unnecessary info to increase speed
 		.BibtexDecode()
@@ -90,15 +96,22 @@ function run() {
 			});
 
 			// when no URL, try to use DOI
-			let urlAppendix = "";
+			let appendix = "   ";
 			let URLsubtitle = "⛔️ There is no URL or DOI.";
 			if (url) {
 				URLsubtitle = "⌃: Open URL " + urlIcon;
-				urlAppendix = "    " + urlIcon;
+				appendix += urlIcon;
 			} else if (doi) {
 				URLsubtitle = "⌃: Open DOI " + urlIcon;
-				urlAppendix = "    " + urlIcon;
+				appendix += urlIcon;
 				url = "https://doi.org/" + doi;
+			}
+
+			// Literature Note
+			let quicklookPath = "";
+			if (literatureNotes.includes(citekey.slice(1))) {
+				appendix += literatureNoteIcon;
+				quicklookPath = literatureNoteFolder + "/" + citekey.slice(1) + ".md";
 			}
 
 			// icon selection
@@ -145,13 +158,13 @@ function run() {
 			return {
 				"title": title,
 				"autocomplete": authoreditor,
-				"subtitle": authoreditor + year + collection + urlAppendix,
+				"subtitle": authoreditor + year + collection + appendix,
 				"match": alfredMatcher,
 				"arg": citekey,
 				"icon": { "path": typeIcon },
 				"uid": citekey,
 				"text": { "copy": url },
-				"quicklookurl": url,
+				"quicklookurl": quicklookPath,
 				"mods": {
 					"ctrl": {
 						"valid": (url !== ""),
