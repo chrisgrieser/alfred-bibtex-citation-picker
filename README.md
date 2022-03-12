@@ -19,6 +19,7 @@
 - [About the Developer](#about-the-developer)
 	- [Profiles](#profiles)
 	- [Donate](#donate)
+- [Credits](#credits)
 
 <!-- /MarkdownTOC -->
 
@@ -80,5 +81,8 @@ In my day job, I am a sociologist studying the social mechanisms underlying the 
 ### Donate
 - [PayPal](https://www.paypal.com/PayPalme/ChrisGrieser)
 - [Ko-Fi](https://ko-fi.com/pseudometa)
+
+## Credits
+<a href="https://www.flaticon.com/authors/freepik">Icons created by Freepik - Flaticon.</a>
 
 [^1]: [QLmarkdown](https://github.com/sbarex/QLMarkdown) and [Peek](https://apps.apple.com/app/peek-quick-look-extension/id1554235898) both enable previewing of Markdown documents. Peek works with a wide range of other file types than Markdown, but costs around 5€. QLMarkdown is free, but only works for Markdown and requires some minor small setup. To enable the proper display of YAML headers, you need to enable the respective setting in the Advanced Options of QLMarkdown or Peek.

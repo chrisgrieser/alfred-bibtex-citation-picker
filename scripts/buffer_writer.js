@@ -41,6 +41,7 @@ function run() {
 		.split("\r")
 		.map (filename => filename.slice(0, -3)); // remove file extension (assuming .md)
 
+	console.log("before");
 	const entryArray = app.doShellScript('grep -vwE "(abstract|annotate|annotation|eprint|Bdsk-Url-1|Bdsk-Url-2|date-modified|date-added|issn|langid|urlyear|entrysubtype|isbn|location|pagetotal|series|eprint) =" "' + libraryPath + '"') // remove unnecessary info to increase speed
 		.BibtexDecode()
 		.split("@")
@@ -181,5 +182,6 @@ function run() {
 			};
 		});
 
+	console.log("after");
 	return JSON.stringify({ "items": entryArray });
 }

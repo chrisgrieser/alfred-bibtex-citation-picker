@@ -1539,7 +1539,7 @@ echo "$*"</string>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>subtext</key>
-				<string>⚠️Experimental &amp; Irreversible.   [↵]: Confirm  [Esc]: Cancel</string>
+				<string>⚠️Experimental. Irreversible.   [↵]: Confirm  [Esc]: Cancel</string>
 				<key>text</key>
 				<string>Delete {var:citekey} from BibTeX Library?</string>
 				<key>withspace</key>
@@ -1626,7 +1626,7 @@ https://github.com/chrisgrieser/alfred-bibtex-citation-picker</string>
 			<key>note</key>
 			<string>Delete Entry</string>
 			<key>xpos</key>
-			<integer>1105</integer>
+			<integer>1170</integer>
 			<key>ypos</key>
 			<integer>935</integer>
 		</dict>
@@ -1646,7 +1646,7 @@ https://github.com/chrisgrieser/alfred-bibtex-citation-picker</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>1265</integer>
+			<integer>1330</integer>
 			<key>ypos</key>
 			<integer>935</integer>
 		</dict>
@@ -1962,7 +1962,7 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>930</integer>
+			<integer>995</integer>
 			<key>ypos</key>
 			<integer>935</integer>
 		</dict>
