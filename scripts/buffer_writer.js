@@ -58,11 +58,10 @@ function run() {
 			let volume = "";
 			let issue = "";
 			let keywords = [];
-			let numberOfEditors = 0;
-			const citekey = "@" + properties[0].replace (/.*{(.*),/, "$1");
-			const type = properties[0].replace (/(.*){.*/, "$1");
 
 			// extract properties
+			const citekey = "@" + properties[0].replace (/.*{(.*),/, "$1");
+			const type = properties[0].replace (/(.*){.*/, "$1");
 			properties.forEach (property => {
 				if (property.includes ("author =")) {
 					author = extract(property)
@@ -99,10 +98,10 @@ function run() {
 			let appendix = "   ";
 			let URLsubtitle = "⛔️ There is no URL or DOI.";
 			if (url) {
-				URLsubtitle = "⌃: Open URL " + urlIcon;
+				URLsubtitle = "⌃: Open " + urlIcon + " URL: " + url;
 				appendix += urlIcon;
 			} else if (doi) {
-				URLsubtitle = "⌃: Open DOI " + urlIcon;
+				URLsubtitle = "⌃: Open " + urlIcon + " DOI: " + doi;
 				appendix += urlIcon;
 				url = "https://doi.org/" + doi;
 			}
@@ -146,6 +145,7 @@ function run() {
 
 			// displays editor when there are no authors
 			let editorAbbrev = "(Ed.)";
+			let numberOfEditors = 0;
 			if (numberOfEditors > 1) editorAbbrev = "(Eds.)";
 			let authoreditor = author + " ";
 			if (!author && editor) authoreditor = editor + " " + editorAbbrev + " ";
