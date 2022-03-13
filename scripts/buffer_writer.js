@@ -9,9 +9,10 @@ function run() {
 	const app = Application.currentApplication();
 	app.includeStandardAdditions = true;
 
+	const urlIcon = "🌐";
+	const literatureNoteIcon = "📓";
+	const tagIcon = "🏷";
 	const alfredBarLength = parseInt ($.getenv("alfred_bar_length"));
-	const urlIcon = $.getenv("URL_icon");
-	const literatureNoteIcon = $.getenv("literature_note_icon");
 	const libraryPath = $.getenv("bibtex_library_path").replace(/^~/, app.pathTo("home folder"));
 	const literatureNoteFolder = $.getenv("literature_note_folder").replace(/^~/, app.pathTo("home folder"));
 
@@ -28,10 +29,8 @@ function run() {
 		return str;
 	};
 
-	// extracts content of a BibTeX-field
-	function extract (str) {
-		return str.split(" = ")[1].replace (/{|}|,$/g, ""); // remove tex formatting
-	}
+	// extracts content of a BibTeX-field & removes TeX formatting
+	const extract = str => str.split(" = ")[1].replace (/{|}|,$/g, "");
 
 	// -------------------------------
 	// MAIN
@@ -47,7 +46,6 @@ function run() {
 		.split("@")
 		.slice(1) // first element is only BibTeX metadata
 		.map(entry => {
-			const properties = entry.split ("\r");
 			let author = "";
 			let title = "";
 			let year = "";
@@ -58,12 +56,15 @@ function run() {
 			let doi = "";
 			let volume = "";
 			let issue = "";
+			let keywords = "";
+			const emojis = [];
 			let numberOfEditors = 0;
-			let keywords = [];
 
 			// extract properties
+			const properties = entry.split ("\r");
 			const citekey = "@" + properties[0].replace (/.*{(.*),/, "$1");
 			const type = properties[0].replace (/(.*){.*/, "$1");
+
 			properties.forEach (property => {
 				if (property.includes ("author =")) {
 					author = extract(property)
@@ -90,30 +91,30 @@ function run() {
 				else if (property.includes ("number =")) issue = extract(property);
 				else if (property.includes ("journal =")) journal = extract(property);
 				else if (property.includes ("booktitle =")) booktitle = extract(property);
-				else if (property.includes ("keywords =")) {
-					keywords = extract(property)
-						.split(",")
-						.map (tag => "#" + tag.trim());
-				}
+				else if (property.includes ("keywords =")) keywords = extract(property);
 			});
 
 			// when no URL, try to use DOI
-			let appendix = "   ";
 			let URLsubtitle = "⛔️ There is no URL or DOI.";
-			if (url) {
-				URLsubtitle = "⌃: Open " + urlIcon + " URL: " + url;
-				appendix += urlIcon + " ";
-			} else if (doi) {
-				URLsubtitle = "⌃: Open " + urlIcon + " DOI: " + doi;
-				appendix += urlIcon + " ";
+			if (url || doi) emojis.push(urlIcon);
+			if (url) URLsubtitle = "⌃: Open " + urlIcon + " URL: " + url;
+			if (!url && doi) {
 				url = "https://doi.org/" + doi;
+				URLsubtitle = "⌃: Open " + urlIcon + " DOI: " + doi;
 			}
 
 			// Literature Note
 			let quicklookPath = "";
 			if (literatureNoteArray.includes(citekey.slice(1))) {
-				appendix += literatureNoteIcon;
+				emojis.push(literatureNoteIcon);
 				quicklookPath = literatureNoteFolder + "/" + citekey.slice(1) + ".md";
+			}
+
+			// Keywords (tags)
+			let keywordArr = [];
+			if (keywords) {
+				keywordArr = keywords.split(",").map(tag => "#" + tag.trim());
+				emojis.push(tagIcon + keywordArr.length.toString());
 			}
 
 			// Icon selection
@@ -146,26 +147,26 @@ function run() {
 			}
 
 			// Journal/Book Title
-			let collectionSubtitle = "    In: ";
-			if (type === "article") collectionSubtitle += journal + " " + volume + "(" + issue + ")";
-			if (type === "incollection") collectionSubtitle += booktitle;
+			let collectionSubtitle = "";
+			if (type === "article") collectionSubtitle += "    In: " + journal + " " + volume + "(" + issue + ")";
+			if (type === "incollection") collectionSubtitle += "    In: " + booktitle;
 
-			// displays editor when there are no authors
+			// display editor when no authors
 			let editorAbbrev = "(Ed.)";
 			if (numberOfEditors > 1) editorAbbrev = "(Eds.)";
-
 			let authoreditor = author + " ";
 			if (!author && editor) authoreditor = editor + " " + editorAbbrev + " ";
 			else if (!author && !editor) authoreditor = "";
 
-			const alfredMatcher = [title, author, editor, year, booktitle, journal, type, citekey, ...keywords]
+			// Matching for Smart Query
+			const alfredMatcher = [citekey, ...keywordArr, title, author, editor, year, booktitle, journal, type]
 				.join(" ")
 				.replaceAll ("-", " ");
 
 			return {
 				"title": title,
 				"autocomplete": authoreditor,
-				"subtitle": authoreditor + year + collectionSubtitle + appendix,
+				"subtitle": authoreditor + year + collectionSubtitle + "   " + emojis.join(" "),
 				"match": alfredMatcher,
 				"arg": citekey,
 				"icon": { "path": typeIcon },
