@@ -8,7 +8,7 @@ function run (argv) {
 	const citekey = argv.join("").replace(/^@/, "");
 	const literatureNotePath = $.getenv("literature_note_folder")
 		.replace(/^~/, app.pathTo("home folder"))
-		+ citekey + ".md";
+		+ "/" + citekey + ".md";
 
 	// Create literature note
 	const literatureNoteExists = Application("Finder").exists(Path(literatureNotePath));
