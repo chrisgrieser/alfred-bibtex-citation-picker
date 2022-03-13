@@ -500,7 +500,7 @@
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>subtext</key>
-				<string></string>
+				<string>⌘ or ⌥: add another citation afterwards</string>
 				<key>text</key>
 				<string>Enter Page Number(s)</string>
 				<key>withspace</key>
