@@ -1,3 +1,7 @@
+- 2022-03-13	release 7.7.0
+- 2022-03-13	bugfix for opening literature notes
+- 2022-03-13	added feature overview
+- 2022-03-13	new promo screenshot
 - 2022-03-13	release 7.6.0
 - 2022-03-13	if literature note is in Obsidian vault, will open in Obsidian
 - 2022-03-13	release 7.5.0
