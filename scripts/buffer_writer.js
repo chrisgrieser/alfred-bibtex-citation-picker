@@ -5,6 +5,7 @@ app.includeStandardAdditions = true;
 const urlIcon = "🌐";
 const literatureNoteIcon = "📓";
 const tagIcon = "🏷";
+const matchAuthorsInEtAl = $.getenv("match_authors_in_etal") === "true";
 const alfredBarLength = parseInt ($.getenv("alfred_bar_length"));
 const libraryPath = $.getenv("bibtex_library_path").replace(/^~/, app.pathTo("home folder"));
 const literatureNoteFolder = $.getenv("literature_note_folder").replace(/^~/, app.pathTo("home folder"));
@@ -94,7 +95,9 @@ const entryArray = bibtexParse(rawBibTex) // eslint-disable-line no-undef
 
 		// Matching for Smart Query
 		const keywordMatches = keywords.map(tag => "#" + tag);
-		const alfredMatcher = [citekey, ...keywordMatches, title, author, editor, year, booktitle, journal, type]
+		let authorMatches = [author, editor];
+		if (!matchAuthorsInEtAl) authorMatches = [entry.authorsEtAl, entry.editorsEtAl];
+		const alfredMatcher = [citekey, ...keywordMatches, title, ...authorMatches, year, booktitle, journal, type]
 			.join(" ")
 			.replaceAll ("-", " ");
 

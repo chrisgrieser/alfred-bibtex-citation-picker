@@ -25,7 +25,7 @@
 
 ## Setup
 1. [Download the latest release](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/releases/latest).
-2. In the Alfred Environment Variables, set `bibtex_library_path` to the absolute path to your BibTeX library file (Tutorial: [How to set Environment Variables in Alfred](https://www.alfredapp.com/help/workflows/advanced/variables/#environment)).
+2. In the workflow settings, set `bibtex_library_path` to the absolute path to your BibTeX library file (Workflow settings tutorial: [How to set environment variables in Alfred](https://www.alfredapp.com/help/workflows/advanced/variables/#environment)).
 3. Set a hotkey for the citation picker.
 
 ## Usage
@@ -36,7 +36,8 @@ Press the hotkey in any text field to launch the citation picker.
 - Search for the title, author/editor (last name), year, or, collection/journal-title.
 - Prepend `@` to search for a citekey, e.g. `@Grieser2020`.
 - Prepend `#` to search for keywords (tags), e.g. `#sociology`.
-- *Smart Queries*: You can search for any combination of the above. For example, the query `2020 #cognition Grieser` will filter for entries published in 2020, with the tag "cognition", and with fuzzy-matched "Grieser" as author/editor.
+- *Smart Queries*: You can search for any combination of the above. For example, the query `2020 #cognition Grieser` will filter for entries published in 2020, with the tag "cognition", and with (fuzzy-matched) "Grieser" as author/editor.
+- The workflow setting `match_authors_in_etal` determines whether authors (or editors) in the *et al.* are still matched when searching for them (default: *true*).
 
 ### Citation Actions
 - `↵`: Paste the citekey of the selected citation.
@@ -52,21 +53,21 @@ Press the hotkey in any text field to launch the citation picker.
 ### Bibliography Actions
 - `⇧ + ↵`: Reveal the entry in [BibDesk](http://bibdesk.sourceforge.net) (if installed).
 - `fn + ↵`: Paste the full bibliographic entry as APA 6th (requires [Pandoc](https://pandoc.org)).
-- `⌘fn + ↵`: Delete the entry from the BibTeX library. (⚠️ Experimental – Feature untested with  BiBTeX files created with apps other than BibDesk. Please make backups before.)
+- `⌘fn + ↵`: Delete the entry from the BibTeX library. (⚠️ Experimental – Feature untested with  BiBTeX files created with apps other than BibDesk. Please make backups.)
 
 ### Literature Note Actions
 - `⌘⇧ + ↵`: Open the literature note. If there is no literature note, a new one will be created and then opened.
 - `⌘ + Y`: Quicklook the literature note (requires QLmarkdown or Peek[^1]).
 - *If the entry has an corresponding literature note, a* `📓` *will be shown.*
-- *Both actions look for literature specified in the environment variable `literature_note_folder`. The files must be named __exactly__ like the citekey (without `@`) and have a `.md` extension.*
+- *Both actions look for literature specified in the workflow settings `literature_note_folder`. The files must be named __exactly__ like the citekey (without `@`) and have a `.md` extension.*
 
 ## Auxiliary Features
 Triggered via the Alfred Keyword `scp` (`S`upercharged `C`itation `P`icker)
-- __CSL Search__: Search for a citation style, which will be downloaded in the folder `csl_folder` specified in your environment variables.
+- __CSL Search__: Search for a citation style, which will be downloaded to the location `csl_folder` specified in your workflow settings (default: `~/.pandoc/csl/`).
 - __Bibliography Stats__: Brief statistical summary of your bibliography (Currently only total number of citation.)
 - __Cheatsheet: Pandoc Citation Syntax__: Open a cheat sheet for the Pandoc citation syntax.
 - __Cheatsheet: Citation Picker Actions__: Open a cheat sheet for [various actions](#usage) of the Supercharged Citation Picker.
-- __Buffer Reload__: Force a reload of the citation picker for debugging purposes.
+- __Buffer Reload__: Force a reload of the citation picker. Mostly for debugging purposes.
 
 ## About the Developer
 In my day job, I am a sociologist studying the social mechanisms underlying the digital economy. For my PhD project, I investigate the governance of the app economy and how software ecosystems manage the tension between innovation and compatibility. If you are interested in this subject, feel free to get in touch!
