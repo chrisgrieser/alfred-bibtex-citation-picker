@@ -57,12 +57,12 @@ Press the hotkey in any text field to launch the citation picker.
 
 ### Literature Note Actions
 - `⌘⇧ + ↵`: Open the literature note. If there is no literature note, a new one will be created and then opened.
-- `⌘ + Y`: Quicklook the literature note (requires QLmarkdown or Peek[^1]).
-- *If the entry has an corresponding literature note, a* `📓` *will be shown.*
+- `⌘ + Y`: Quicklook the literature note, if there is one (requires QLmarkdown or Peek[^1]).
+- *If the entry has a corresponding literature note, a* `📓` *will be shown.*
 - *Both actions look for literature specified in the workflow settings `literature_note_folder`. The files must be named __exactly__ like the citekey (without `@`) and have a `.md` extension.*
 
 ## Auxiliary Features
-Triggered via the Alfred Keyword `scp` (`S`upercharged `C`itation `P`icker)
+Triggered via the Alfred Keyword `scp` (*`S`upercharged `C`itation `P`icker*).
 - __CSL Search__: Search for a citation style, which will be downloaded to the location `csl_folder` specified in your workflow settings (default: `~/.pandoc/csl/`).
 - __Bibliography Stats__: Brief statistical summary of your bibliography (Currently only total number of citation.)
 - __Cheatsheet: Pandoc Citation Syntax__: Open a cheat sheet for the Pandoc citation syntax.
