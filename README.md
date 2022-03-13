@@ -1,7 +1,7 @@
 # Supercharged Citation Picker
 ![](https://img.shields.io/github/downloads/chrisgrieser/alfred-bibtex-citation-picker/total?label=Total%20Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/alfred-bibtex-citation-picker?label=Latest%20Release&style=plastic)
 
-[Alfred](https://www.alfredapp.com/) Workflow for selecting citations in [Pandoc Syntax](https://pandoc.org/MANUAL.html#citation-syntax) from a BibTeX File. Performs quicker than other citation pickers and also offers various utilities for interacting with literature notes and bibliography.
+[Alfred](https://www.alfredapp.com/) Workflow for selecting citations in [Pandoc Syntax](https://pandoc.org/MANUAL.html#citation-syntax) from a BibTeX File. Performs much quicker than other citation pickers and also offers various utilities for interacting with literature notes and bibliography.
 
 <img width=50% src="https://user-images.githubusercontent.com/73286100/132755578-cce9892e-d3c0-4ba3-9666-4649d8b96202.png">
 
@@ -43,10 +43,10 @@ Press the hotkey in any text field to launch the citation picker.
 - `↵`: Paste the citekey of the selected citation.
 - `⌥ + ↵`:  Add another citation.
 - `⌘ + ↵`: Add page numbers, then paste citekey. Confirm the page number with `⌥ + ↵` or `⌘ + ↵` to add another citation.
-- The citation picker includes tab completions of the author name(s).
+- *Tabcompletion*: `tab` completes of the author/editor name(s).
 
 ### URL Actions
-- *If the entry has an URL, a* `🌐` *will be shown. In case there is no URL, the DOI will be used.*
+- *If the entry has an URL, a* `🌐` *will be shown. In case there is no URL, the DOI will be used as substitute.*
 - `⌃ + ↵`: Open the URL in the browser.
 - `⌘ + C`: Copy the URL to the clipboard.
 
