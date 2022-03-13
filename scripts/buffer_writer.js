@@ -1,4 +1,5 @@
 #!/usr/bin/env osascript -l JavaScript
+
 function run() {
 
 	// -------------------------------
@@ -51,24 +52,23 @@ function run() {
 	// -------------------------------
 	// MAIN
 	// -------------------------------
+	const startTime = new Date();
 
 	const literatureNoteArray = app.doShellScript('ls "' + literatureNoteFolder + '"')
 		.split("\r")
 		.map (filename => filename.slice(0, -3)); // remove file extension (assuming .md)
 
-	const startTime = new Date();
 	const entryArray = app.doShellScript('cat "' + libraryPath + '"')
 		.BibtexDecode()
-		.split("@")
-		.slice(1) // first element is only BibTeX metadata
-		.map(entry => {
+		.split("@").slice(1) // first element is only BibTeX metadata
+		.map(bibEntry => {
 
-			const bEntry = new BibtexEntry();
-			const emojis = [];
+			const properties = bibEntry.split("\r");
+			const entry = new BibtexEntry();
 
-			const properties = entry.split("\r");
-			bEntry.type = properties[0].split("{")[0];
-			bEntry.citekey = "@" + properties[0].split("{")[1]?.slice(0, -1);
+			// parse first line (separate since different formatting)
+			entry.type = properties[0].split("{")[0];
+			entry.citekey = "@" + properties[0].split("{")[1]?.slice(0, -1);
 			properties.shift();
 
 			properties.forEach (property => {
@@ -77,72 +77,77 @@ function run() {
 
 				switch (field) {
 					case "author":
-						bEntry.author = value
+						entry.author = value
 							.replace (/(, [A-Z]).+?(?= and|$)/gm, "") // remove first names
 							.replaceAll (" and ", " & ")
 							.replace (/&.*&.*/, "et al."); // insert et al
 						break;
 					case "editor":
-						bEntry.editor = value
+						entry.editor = value
 							.replace (/(, [A-Z]).+?(?= and|$)/gm, "") // remove first names
 							.replaceAll (" and ", " & ");
-						bEntry.numberOfEditors = bEntry.editor.split("&").length;
-						bEntry.editor = bEntry.editor.replace (/&.*&.*/, "et al."); // insert et al
+						entry.numberOfEditors = entry.editor.split("&").length;
+						entry.editor = entry.editor.replace (/&.*&.*/, "et al."); // insert et al
 						break;
 					case "title":
-						bEntry.title = value;
-						if (bEntry.title.length > alfredBarLength) bEntry.title = bEntry.title.slice(0, alfredBarLength).trim() + "…";
+						entry.title = value;
+						if (entry.title.length > alfredBarLength) entry.title = entry.title.slice(0, alfredBarLength).trim() + "…";
 						break;
 					case "date": // some bibtx formats use date instead of year
 					case "year":
-						bEntry.year = value.match(/\d{4}/)[0];
+						entry.year = value.match(/\d{4}/)[0];
 						break;
 					case "doi":
-						bEntry.doi = value;
+						entry.doi = value;
 						break;
 					case "url":
-						bEntry.url = value;
+						entry.url = value;
 						break;
 					case "number":
-						bEntry.issue = value;
+						entry.issue = value;
 						break;
 					case "volume":
-						bEntry.volume = value;
+						entry.volume = value;
 						break;
 					case "journal":
-						bEntry.journal = value;
+						entry.journal = value;
 						break;
 					case "booktitle":
-						bEntry.booktitle = value;
+						entry.booktitle = value;
 						break;
 					case "keywords":
-						bEntry.keywords = value.split(",").map (t => t.trim());
+						entry.keywords = value.split(",").map (t => t.trim());
 						break;
 				}
 			});
 
+			return entry;
+		})
+		.map(entry => {
+			const emojis = [];
+
 			// when no URL, try to use DOI
 			let URLsubtitle = "⛔️ There is no URL or DOI.";
-			if (bEntry.url || bEntry.doi) emojis.push(urlIcon);
-			if (bEntry.url) URLsubtitle = "⌃: Open " + urlIcon + " URL: " + bEntry.url;
-			if (!bEntry.url && bEntry.doi) {
-				bEntry.url = "https://doi.org/" + bEntry.doi;
-				URLsubtitle = "⌃: Open " + urlIcon + " DOI: " + bEntry.doi;
+			if (entry.url || entry.doi) emojis.push(urlIcon);
+			if (entry.url) URLsubtitle = "⌃: Open " + urlIcon + " URL: " + entry.url;
+			if (!entry.url && entry.doi) {
+				entry.url = "https://doi.org/" + entry.doi;
+				URLsubtitle = "⌃: Open " + urlIcon + " DOI: " + entry.doi;
 			}
 
 			// Literature Note
 			let quicklookPath = "";
-			if (literatureNoteArray.includes(bEntry.citekey.slice(1))) {
+			if (literatureNoteArray.includes(entry.citekey.slice(1))) {
 				emojis.push(literatureNoteIcon);
-				quicklookPath = literatureNoteFolder + "/" + bEntry.citekey.slice(1) + ".md";
+				quicklookPath = literatureNoteFolder + "/" + entry.citekey.slice(1) + ".md";
 			}
 
 			// Keywords (tags)
-			if (bEntry.keywords.length) emojis.push(tagIcon + " " + bEntry.keywords.length.toString());
+			if (entry.keywords.length) emojis.push(tagIcon + " " + entry.keywords.length.toString());
 
 			// Icon selection
 			let typeIcon = "icons/";
-			switch (bEntry.type) {
+			switch (entry.type) {
 				case "article":
 					typeIcon += "article.png";
 					break;
@@ -171,39 +176,39 @@ function run() {
 
 			// Journal/Book Title
 			let collectionSubtitle = "";
-			if (bEntry.type === "article") {
-				collectionSubtitle += "    In: " + bEntry.journal + " " + bEntry.volume;
-				if (bEntry.issue) collectionSubtitle += "(" + bEntry.issue + ")";
+			if (entry.type === "article") {
+				collectionSubtitle += "    In: " + entry.journal + " " + entry.volume;
+				if (entry.issue) collectionSubtitle += "(" + entry.issue + ")";
 			}
-			if (bEntry.type === "incollection") collectionSubtitle += "    In: " + bEntry.booktitle;
+			if (entry.type === "incollection") collectionSubtitle += "    In: " + entry.booktitle;
 
 			// display editor when no authors
 			let editorAbbrev = "(Ed.)";
-			if (bEntry.numberOfEditors > 1) editorAbbrev = "(Eds.)";
-			let authoreditor = bEntry.author + " ";
-			if (!bEntry.author && bEntry.editor) authoreditor = bEntry.editor + " " + editorAbbrev + " ";
-			else if (!bEntry.author && !bEntry.editor) authoreditor = "";
+			if (entry.numberOfEditors > 1) editorAbbrev = "(Eds.)";
+			let authoreditor = entry.author + " ";
+			if (!entry.author && entry.editor) authoreditor = entry.editor + " " + editorAbbrev + " ";
+			else if (!entry.author && !entry.editor) authoreditor = "";
 
 			// Matching for Smart Query
-			const keywordMatches = bEntry.keywords.map(tag => "#" + tag);
-			const alfredMatcher = [bEntry.citekey, ...keywordMatches, bEntry.title, bEntry.author, bEntry.editor, bEntry.year, bEntry.booktitle, bEntry.journal, bEntry.type]
+			const keywordMatches = entry.keywords.map(tag => "#" + tag);
+			const alfredMatcher = [entry.citekey, ...keywordMatches, entry.title, entry.author, entry.editor, entry.year, entry.booktitle, entry.journal, entry.type]
 				.join(" ")
 				.replaceAll ("-", " ");
 
 			return {
-				"title": bEntry.title,
+				"title": entry.title,
 				"autocomplete": authoreditor,
-				"subtitle": authoreditor + bEntry.year + collectionSubtitle + "   " + emojis.join(" "),
+				"subtitle": authoreditor + entry.year + collectionSubtitle + "   " + emojis.join(" "),
 				"match": alfredMatcher,
-				"arg": bEntry.citekey,
+				"arg": entry.citekey,
 				"icon": { "path": typeIcon },
-				"uid": bEntry.citekey,
-				"text": { "copy": bEntry.url },
+				"uid": entry.citekey,
+				"text": { "copy": entry.url },
 				"quicklookurl": quicklookPath,
 				"mods": {
 					"ctrl": {
-						"valid": (bEntry.url !== ""),
-						"arg": bEntry.url,
+						"valid": (entry.url !== ""),
+						"arg": entry.url,
 						"subtitle": URLsubtitle,
 					},
 				}
