@@ -35,7 +35,7 @@ Press the hotkey in any text field to launch the citation picker.
 - Search for the title, author/editor (last name), year, or, collection/journal-title.
 - Prepend `@` to search for a citekey, e.g. `@Grieser2020`.
 - Prepend `#` to search for keywords (tags), e.g. `#sociology`.
-- *Smart Queries*: You can search for any combination of the above. For example, the query `2020 #cognition Franzen` will filter for entries published in 2020, with the tag "cognition", and with fuzzy-matched "Franzen" as author/editor.
+- *Smart Queries*: You can search for any combination of the above. For example, the query `2020 #cognition Grieser` will filter for entries published in 2020, with the tag "cognition", and with fuzzy-matched "Grieser" as author/editor.
 
 ### Citation Actions
 - `↵`: Paste the citekey of the selected citation.
@@ -55,16 +55,18 @@ Press the hotkey in any text field to launch the citation picker.
 - `⌘fn + ↵`: Delete the entry from the BibTeX library. (⚠️ Experimental – Feature untested with  BiBTeX files created with apps other than BibDesk. Please make backups before.)
 
 ### Literature Note Actions
-- `⌘⇧ + ↵`: Open the literature note, if there is one.
+- `⌘⇧ + ↵`: Open the literature note. If there is no literature note, a new one will be created and then opened.
 - `⌘ + Y`: Quicklook the literature note (requires QLmarkdown or Peek[^1]).
 - *If the entry has an corresponding literature note, a* `📓` *will be shown.*
 - *Both actions look for literature specified in the environment variable `literature_note_folder`. The files must be named __exactly__ like the citekey (without `@`) and have a `.md` extension.*
 
 ## Auxiliary Features
-(triggered as Alfred Keywords)
-- `csl`: Search for a citation style, which will be downloaded in the folder `csl_folder` specified in your environment variables.
-- `pandoc citation`: Open a cheat sheet for the Pandoc citation syntax.
-- `force reload`: Force a reload of the citation picker for debugging purposes.
+Triggered via the Alfred Keyword `scp` (`S`upercharged `C`itation `P`icker)
+- __CSL Search__: Search for a citation style, which will be downloaded in the folder `csl_folder` specified in your environment variables.
+- __Bibliography Stats__: 
+- __Cheatsheet: Pandoc Citation Syntax__: Open a cheat sheet for the Pandoc citation syntax.
+- __Cheatsheet: Citation Picker Actions__: Open a cheat sheet for [various actions](#usage) of the Supercharged Citation Picker.
+- __Buffer Reload__: Force a reload of the citation picker for debugging purposes.
 
 ## About the Developer
 In my day job, I am a sociologist studying the social mechanisms underlying the digital economy. For my PhD project, I investigate the governance of the app economy and how software ecosystems manage the tension between innovation and compatibility. If you are interested in this subject, feel free to get in touch!
@@ -82,6 +84,8 @@ In my day job, I am a sociologist studying the social mechanisms underlying the 
 ### Donate
 - [PayPal](https://www.paypal.com/PayPalme/ChrisGrieser)
 - [Ko-Fi](https://ko-fi.com/pseudometa)
+
+<!-- markdown-link-check-enable -->
 
 ## Credits
 <a href="https://www.flaticon.com/authors/freepik">Icons created by Freepik - Flaticon</a>
