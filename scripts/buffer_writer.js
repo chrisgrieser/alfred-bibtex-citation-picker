@@ -25,11 +25,11 @@ const rawBibTex = app.doShellScript('cat "' + libraryPath + '"');
 const entryArray = bibtexParse(rawBibTex) // eslint-disable-line no-undef
 	.map(entry => {
 		const emojis = [];
-		let { title } = entry;
-		const { url, citekey, keywords, type, journal, volume, issue, booktitle, author, editor, year } = entry;
+		const { title, url, citekey, keywords, type, journal, volume, issue, booktitle, author, editor, year } = entry;
 
 		// Shorten Title
-		if (title.length > alfredBarLength) title = title.slice(0, alfredBarLength).trim() + "…";
+		let shorterTitle = title;
+		if (title.length > alfredBarLength) shorterTitle = title.slice(0, alfredBarLength).trim() + "…";
 
 		// URL
 		let URLsubtitle = "⛔️ There is no URL or DOI.";
@@ -99,7 +99,7 @@ const entryArray = bibtexParse(rawBibTex) // eslint-disable-line no-undef
 			.replaceAll ("-", " ");
 
 		return {
-			"title": title,
+			"title": shorterTitle,
 			"autocomplete": authoreditor,
 			"subtitle": authoreditor + year + collectionSubtitle + "   " + emojis.join(" "),
 			"match": alfredMatcher,
