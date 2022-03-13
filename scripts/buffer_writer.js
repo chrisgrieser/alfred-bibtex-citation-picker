@@ -25,30 +25,32 @@ const rawBibTex = app.doShellScript('cat "' + libraryPath + '"');
 const entryArray = bibtexParse(rawBibTex) // eslint-disable-line no-undef
 	.map(entry => {
 		const emojis = [];
+		let { title } = entry;
+		const { url, citekey, keywords, type, journal, volume, issue, booktitle, author, editor, year } = entry;
 
 		// Shorten Title
-		if (entry.title.length > alfredBarLength) entry.title = entry.title.slice(0, alfredBarLength).trim() + "…";
+		if (title.length > alfredBarLength) title = title.slice(0, alfredBarLength).trim() + "…";
 
 		// URL
 		let URLsubtitle = "⛔️ There is no URL or DOI.";
-		if (entry.url) {
+		if (url) {
 			emojis.push(urlIcon);
-			URLsubtitle = "⌃: Open " + urlIcon + " URL: " + entry.url;
+			URLsubtitle = "⌃: Open " + urlIcon + " URL: " + url;
 		}
 
 		// Literature Notes
 		let quicklookPath = "";
-		if (literatureNoteArray.includes(entry.citekey.slice(1))) {
+		if (literatureNoteArray.includes(citekey.slice(1))) {
 			emojis.push(literatureNoteIcon);
-			quicklookPath = literatureNoteFolder + "/" + entry.citekey.slice(1) + ".md";
+			quicklookPath = literatureNoteFolder + "/" + citekey.slice(1) + ".md";
 		}
 
 		// Keywords (tags)
-		if (entry.keywords.length) emojis.push(tagIcon + " " + entry.keywords.length.toString());
+		if (keywords.length) emojis.push(tagIcon + " " + keywords.length.toString());
 
 		// Icon selection
 		let typeIcon = "icons/";
-		switch (entry.type) {
+		switch (type) {
 			case "article":
 				typeIcon += "article.png";
 				break;
@@ -77,39 +79,39 @@ const entryArray = bibtexParse(rawBibTex) // eslint-disable-line no-undef
 
 		// Journal/Book Title
 		let collectionSubtitle = "";
-		if (entry.type === "article") {
-			collectionSubtitle += "    In: " + entry.journal + " " + entry.volume;
-			if (entry.issue) collectionSubtitle += "(" + entry.issue + ")";
+		if (type === "article") {
+			collectionSubtitle += "    In: " + journal + " " + volume;
+			if (issue) collectionSubtitle += "(" + issue + ")";
 		}
-		if (entry.type === "incollection") collectionSubtitle += "    In: " + entry.booktitle;
+		if (type === "incollection") collectionSubtitle += "    In: " + booktitle;
 
 		// display editor when no authors
 		let editorAbbrev = "(Ed.)";
 		if (entry.hasMultipleEditors) editorAbbrev = "(Eds.)";
-		let authoreditor = entry.author + " ";
-		if (!entry.author && entry.editor) authoreditor = entry.editor + " " + editorAbbrev + " ";
-		else if (!entry.author && !entry.editor) authoreditor = "";
+		let authoreditor = author + " ";
+		if (!author && editor) authoreditor = editor + " " + editorAbbrev + " ";
+		else if (!author && !editor) authoreditor = "";
 
 		// Matching for Smart Query
-		const keywordMatches = entry.keywords.map(tag => "#" + tag);
-		const alfredMatcher = [entry.citekey, ...keywordMatches, entry.title, entry.author, entry.editor, entry.year, entry.booktitle, entry.journal, entry.type]
+		const keywordMatches = keywords.map(tag => "#" + tag);
+		const alfredMatcher = [citekey, ...keywordMatches, title, author, editor, year, booktitle, journal, type]
 			.join(" ")
 			.replaceAll ("-", " ");
 
 		return {
-			"title": entry.title,
+			"title": title,
 			"autocomplete": authoreditor,
-			"subtitle": authoreditor + entry.year + collectionSubtitle + "   " + emojis.join(" "),
+			"subtitle": authoreditor + year + collectionSubtitle + "   " + emojis.join(" "),
 			"match": alfredMatcher,
-			"arg": entry.citekey,
+			"arg": citekey,
 			"icon": { "path": typeIcon },
-			"uid": entry.citekey,
-			"text": { "copy": entry.url },
+			"uid": citekey,
+			"text": { "copy": url },
 			"quicklookurl": quicklookPath,
 			"mods": {
 				"ctrl": {
-					"valid": (entry.url !== ""),
-					"arg": entry.url,
+					"valid": (url !== ""),
+					"arg": url,
 					"subtitle": URLsubtitle,
 				},
 			}
