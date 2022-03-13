@@ -30,6 +30,7 @@
 
 ## Usage
 Press the hotkey in any text field to launch the citation picker.
+- Alternative you can also use the Alfred keyword `ct` or the [snippet trigger](https://www.alfredapp.com/help/workflows/triggers/snippet/) `###` (when snippet triggers are activated).
 
 ### Search
 - Search for the title, author/editor (last name), year, or, collection/journal-title.
@@ -39,10 +40,9 @@ Press the hotkey in any text field to launch the citation picker.
 
 ### Citation Actions
 - `↵`: Paste the citekey of the selected citation.
-- `⌘ + ↵`: Add page numbers, then paste citekey.
 - `⌥ + ↵`:  Add another citation.
-- `⌘⌥ + ↵`: Used to add page numbers to this citation *and then* add another citation.
-- `tab`: Tab-complete the author name, i.e. filter the search results for the author(s) of the selected entry.
+- `⌘ + ↵`: Add page numbers, then paste citekey. (Confirm the page number with `⌥ + ↵` or `⌘ + ↵` to add another citation)
+- The citation picker includes tab completions of the author name(s).
 
 ### URL Actions
 - *If the entry has an URL, a* `🌐` *will be shown. In case there is no URL, the DOI will be used.*
