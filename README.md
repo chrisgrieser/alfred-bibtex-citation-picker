@@ -1,7 +1,16 @@
 # Supercharged Citation Picker
 ![](https://img.shields.io/github/downloads/chrisgrieser/alfred-bibtex-citation-picker/total?label=Total%20Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/alfred-bibtex-citation-picker?label=Latest%20Release&style=plastic)
 
-[Alfred](https://www.alfredapp.com/) Workflow for selecting citations in [Pandoc Syntax](https://pandoc.org/MANUAL.html#citation-syntax) from a BibTeX File. More Performant than other citation pickers and also offers various utilities for interacting with literature notes and bibliography.
+[Alfred](https://www.alfredapp.com/) Workflow for selecting citations in [Pandoc Syntax](https://pandoc.org/MANUAL.html#citation-syntax) from a BibTeX File. 
+
+## Feature Overview
+- Inserts __Pandoc Citation Syntax__ (`[@citekey]`). Works with page numbers & multiple citations.
+- __works system-wide__, in case you also work in another Markdown app.
+- __smart search__: search for citekeys, authors, title, publication, keywords (tags), include/exclude authors in *et al*, tab-completion, ...
+- __feature-rich__: paste single-entry bibliographies, remove entries from your library *without opening a reference management app*, open URLs, open or create literature notes, search for `.csl` files online, ...
+- __Obsidian integration:__ When located in an Obsidian vault, literature notes will be automatically in Obsidian. (Otherwise, they will be opened in the default app for markdown files.)
+- __very performant:__ considerably quicker than other citation pickers (~200ms to fully reload a library with ~4000 entries on my machine)
+- __easy installation:__ no dependencies, no required plugins, no setup (other then entering the link to your `.bib` file).
 
 <img width=60% alt="promo screenshot" src="assets/promo.png">
 
@@ -53,7 +62,9 @@ Press the hotkey in any text field to launch the citation picker.
 ### Bibliography Actions
 - `⇧ + ↵`: Reveal the entry in [BibDesk](http://bibdesk.sourceforge.net) (if installed).
 - `fn + ↵`: Paste the full bibliographic entry as APA 6th (requires [Pandoc](https://pandoc.org)).
-- `⌘fn + ↵`: Delete the entry from the BibTeX library. (⚠️ Experimental – Feature untested with  BiBTeX files created with apps other than BibDesk. Please make backups.)
+- `⌘fn + ↵`: Delete the entry from the BibTeX library. (__Experimental__)
+	– Feature is untested with BiBTeX files created with apps other than BibDesk. Please make backups.
+	- Note that this feature does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/), since the plugin does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file will be overridden.
 
 ### Literature Note Actions
 - `⌘⇧ + ↵`: Open the literature note.
