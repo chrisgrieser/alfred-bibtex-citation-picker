@@ -63,7 +63,7 @@ Press the hotkey in any text field to launch the citation picker.
 - `⇧ + ↵`: Reveal the entry in [BibDesk](http://bibdesk.sourceforge.net) (if installed).
 - `fn + ↵`: Paste the full bibliographic entry as APA 6th (requires [Pandoc](https://pandoc.org)).
 - `⌘fn + ↵`: Delete the entry from the BibTeX library (__Experimental__).
-	– ⚠️ Feature is untested with BiBTeX files created with apps other than BibDesk. Please make backups.
+	– ⚠️ This feature is untested with BiBTeX files created with apps other than BibDesk. Please make backups, and [create an issue](/issues) for problems with other apps.
 	- Note that this feature does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/), since the plugin does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file will be overridden.
 
 ### Literature Note Actions
