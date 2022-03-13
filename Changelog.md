@@ -1,3 +1,5 @@
+- 2022-03-13	release 7.4.0
+- 2022-03-13	simplified picking (no cmd+alt+enter anymore)
 - 2022-03-13	release 7.3.0
 - 2022-03-13	better icon
 - 2022-03-12	release 7.2.0
