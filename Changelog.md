@@ -1,3 +1,6 @@
+- 2022-03-13	release 7.5.0
+- 2022-03-13	setting for et al matching
+- 2022-03-13	match authors/editors that are in the et al
 - 2022-03-13	release 7.4.0
 - 2022-03-13	simplified picking (no cmd+alt+enter anymore)
 - 2022-03-13	release 7.3.0
