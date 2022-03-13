@@ -42,7 +42,7 @@ Press the hotkey in any text field to launch the citation picker.
 ### Citation Actions
 - `↵`: Paste the citekey of the selected citation.
 - `⌥ + ↵`:  Add another citation.
-- `⌘ + ↵`: Add page numbers before pasting the selected citekey. Confirm the page number with `⌥ + ↵` or `⌘ + ↵` to add another citation.
+- `⌘ + ↵`: Add page numbers before pasting the selected citekey. Confirm the page number with `⌥ + ↵` or `⌘ + ↵` to add another citation afterwards.
 - *Tab-Completion*: Pressing `tab` autocompletes the author/editor name(s).
 
 ### URL Actions
@@ -64,7 +64,7 @@ Press the hotkey in any text field to launch the citation picker.
 - *Both actions look for literature specified in the workflow settings `literature_note_folder`. The files must be named __exactly__ like the citekey (without `@`) and have a `.md` extension.*
 
 ## Auxiliary Features
-Triggered via the Alfred Keyword `scp` (*`S`upercharged `C`itation `P`icker*).
+Triggered via the Alfred Keyword `scp` (for `S`upercharged `C`itation `P`icker).
 - __CSL Search__: Search for a citation style, which will be downloaded to the location `csl_folder` specified in your workflow settings (default: `~/.pandoc/csl/`).
 - __Bibliography Stats__: Brief statistical summary of your bibliography (Currently only total number of citations.)
 - __Cheatsheet: Pandoc Citation Syntax__: Open a cheat sheet for the Pandoc citation syntax.
