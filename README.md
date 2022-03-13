@@ -26,11 +26,11 @@
 ## Setup
 1. [Download the latest release](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/releases/latest).
 2. In the workflow settings, set `bibtex_library_path` to the absolute path of your BibTeX library file (Workflow settings tutorial: [How to set environment variables in Alfred](https://www.alfredapp.com/help/workflows/advanced/variables/#environment)).
-3. Set a hotkey for the citation picker.
+3. Set a hotkey for the citation picker by double-clicking the respective field in the workflow window.
 
 ## Usage
 Press the hotkey in any text field to launch the citation picker.
-- Alternative you can also use the Alfred keyword `ct` or the [snippet trigger](https://www.alfredapp.com/help/workflows/triggers/snippet/) `###` (when snippet triggers are activated).
+- Alternatively, you can use the Alfred keyword `ct` or the [snippet trigger](https://www.alfredapp.com/help/workflows/triggers/snippet/) `###` (when snippet triggers are activated).
 
 ### Search
 - Search for the title, author/editor (last name), year, or, collection/journal-title.
@@ -43,7 +43,7 @@ Press the hotkey in any text field to launch the citation picker.
 - `↵`: Paste the citekey of the selected citation.
 - `⌥ + ↵`:  Add another citation.
 - `⌘ + ↵`: Add page numbers, then paste citekey. Confirm the page number with `⌥ + ↵` or `⌘ + ↵` to add another citation.
-- *Tabcompletion*: `tab` completes of the author/editor name(s).
+- *Tab-Completion*: Pressing `tab` autocompletes the author/editor name(s).
 
 ### URL Actions
 - *If the entry has an URL, a* `🌐` *will be shown. In case there is no URL, the DOI will be used as substitute.*
