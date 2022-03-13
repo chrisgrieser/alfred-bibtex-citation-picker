@@ -29,6 +29,25 @@ function run() {
 		return str;
 	};
 
+	class BibtexEntry {
+		constructor() {
+			this.author = "";
+			this.title = "";
+			this.year = "";
+			this.editor = "";
+			this.url = "";
+			this.booktitle = "";
+			this.journal = "";
+			this.doi = "";
+			this.volume = "";
+			this.issue = "";
+			this.keywords = [];
+			this.numberOfEditors = 0;
+			this.type = "misc";
+			this.citekey = "";
+		}
+	}
+
 	// -------------------------------
 	// MAIN
 	// -------------------------------
@@ -43,102 +62,87 @@ function run() {
 		.split("@")
 		.slice(1) // first element is only BibTeX metadata
 		.map(entry => {
-			let author = "";
-			let title = "";
-			let year = "";
-			let editor = "";
-			let url = "";
-			let booktitle = "";
-			let journal = "";
-			let doi = "";
-			let volume = "";
-			let issue = "";
-			let keywords = "";
-			const emojis = [];
-			let numberOfEditors = 0;
 
-			// extract properties
+			const bEntry = new BibtexEntry();
+			const emojis = [];
+
 			const properties = entry.split("\r");
-			const type = properties[0].split("{")[0];
-			const citekey = "@" + properties[0].split("{")[1]?.slice(0, -1);
+			bEntry.type = properties[0].split("{")[0];
+			bEntry.citekey = "@" + properties[0].split("{")[1]?.slice(0, -1);
 			properties.shift();
 
 			properties.forEach (property => {
 				const field = property.split("=")[0].trim();
-				const value = property.split("=")[1]?.trim().replace (/{|}|,$/g, ""); // remove TeX formatting
+				const value = property.split("=")[1]?.trim().replace(/{|}|,$/g, ""); // remove TeX formatting
 
 				switch (field) {
 					case "author":
-						author = value
+						bEntry.author = value
 							.replace (/(, [A-Z]).+?(?= and|$)/gm, "") // remove first names
 							.replaceAll (" and ", " & ")
 							.replace (/&.*&.*/, "et al."); // insert et al
 						break;
 					case "editor":
-						editor = value
+						bEntry.editor = value
 							.replace (/(, [A-Z]).+?(?= and|$)/gm, "") // remove first names
 							.replaceAll (" and ", " & ");
-						numberOfEditors = editor.split("&").length;
-						editor = editor.replace (/&.*&.*/, "et al."); // insert et al
+						bEntry.numberOfEditors = bEntry.editor.split("&").length;
+						bEntry.editor = bEntry.editor.replace (/&.*&.*/, "et al."); // insert et al
 						break;
 					case "title":
-						title = value;
-						if (title.length > alfredBarLength) title = title.slice(0, alfredBarLength).trim() + "…";
+						bEntry.title = value;
+						if (bEntry.title.length > alfredBarLength) bEntry.title = bEntry.title.slice(0, alfredBarLength).trim() + "…";
 						break;
 					case "date": // some bibtx formats use date instead of year
 					case "year":
-						year = value.match(/\d{4}/)[0];
+						bEntry.year = value.match(/\d{4}/)[0];
 						break;
 					case "doi":
-						doi = value;
+						bEntry.doi = value;
 						break;
 					case "url":
-						url = value;
+						bEntry.url = value;
 						break;
 					case "number":
-						issue = value;
+						bEntry.issue = value;
 						break;
 					case "volume":
-						volume = value;
+						bEntry.volume = value;
 						break;
 					case "journal":
-						journal = value;
+						bEntry.journal = value;
 						break;
 					case "booktitle":
-						booktitle = value;
+						bEntry.booktitle = value;
 						break;
 					case "keywords":
-						keywords = value;
+						bEntry.keywords = value.split(",").map (t => t.trim());
 						break;
 				}
 			});
 
 			// when no URL, try to use DOI
 			let URLsubtitle = "⛔️ There is no URL or DOI.";
-			if (url || doi) emojis.push(urlIcon);
-			if (url) URLsubtitle = "⌃: Open " + urlIcon + " URL: " + url;
-			if (!url && doi) {
-				url = "https://doi.org/" + doi;
-				URLsubtitle = "⌃: Open " + urlIcon + " DOI: " + doi;
+			if (bEntry.url || bEntry.doi) emojis.push(urlIcon);
+			if (bEntry.url) URLsubtitle = "⌃: Open " + urlIcon + " URL: " + bEntry.url;
+			if (!bEntry.url && bEntry.doi) {
+				bEntry.url = "https://doi.org/" + bEntry.doi;
+				URLsubtitle = "⌃: Open " + urlIcon + " DOI: " + bEntry.doi;
 			}
 
 			// Literature Note
 			let quicklookPath = "";
-			if (literatureNoteArray.includes(citekey.slice(1))) {
+			if (literatureNoteArray.includes(bEntry.citekey.slice(1))) {
 				emojis.push(literatureNoteIcon);
-				quicklookPath = literatureNoteFolder + "/" + citekey.slice(1) + ".md";
+				quicklookPath = literatureNoteFolder + "/" + bEntry.citekey.slice(1) + ".md";
 			}
 
 			// Keywords (tags)
-			let keywordArr = [];
-			if (keywords) {
-				keywordArr = keywords.split(",").map(tag => "#" + tag.trim());
-				emojis.push(tagIcon + " " + keywordArr.length.toString());
-			}
+			if (bEntry.keywords.length) emojis.push(tagIcon + " " + bEntry.keywords.length.toString());
 
 			// Icon selection
 			let typeIcon = "icons/";
-			switch (type) {
+			switch (bEntry.type) {
 				case "article":
 					typeIcon += "article.png";
 					break;
@@ -167,38 +171,39 @@ function run() {
 
 			// Journal/Book Title
 			let collectionSubtitle = "";
-			if (type === "article") {
-				collectionSubtitle += "    In: " + journal + " " + volume;
-				if (issue) collectionSubtitle += "(" + issue + ")";
+			if (bEntry.type === "article") {
+				collectionSubtitle += "    In: " + bEntry.journal + " " + bEntry.volume;
+				if (bEntry.issue) collectionSubtitle += "(" + bEntry.issue + ")";
 			}
-			if (type === "incollection") collectionSubtitle += "    In: " + booktitle;
+			if (bEntry.type === "incollection") collectionSubtitle += "    In: " + bEntry.booktitle;
 
 			// display editor when no authors
 			let editorAbbrev = "(Ed.)";
-			if (numberOfEditors > 1) editorAbbrev = "(Eds.)";
-			let authoreditor = author + " ";
-			if (!author && editor) authoreditor = editor + " " + editorAbbrev + " ";
-			else if (!author && !editor) authoreditor = "";
+			if (bEntry.numberOfEditors > 1) editorAbbrev = "(Eds.)";
+			let authoreditor = bEntry.author + " ";
+			if (!bEntry.author && bEntry.editor) authoreditor = bEntry.editor + " " + editorAbbrev + " ";
+			else if (!bEntry.author && !bEntry.editor) authoreditor = "";
 
 			// Matching for Smart Query
-			const alfredMatcher = [citekey, ...keywordArr, title, author, editor, year, booktitle, journal, type]
+			const keywordMatches = bEntry.keywords.map(tag => "#" + tag);
+			const alfredMatcher = [bEntry.citekey, ...keywordMatches, bEntry.title, bEntry.author, bEntry.editor, bEntry.year, bEntry.booktitle, bEntry.journal, bEntry.type]
 				.join(" ")
 				.replaceAll ("-", " ");
 
 			return {
-				"title": title,
+				"title": bEntry.title,
 				"autocomplete": authoreditor,
-				"subtitle": authoreditor + year + collectionSubtitle + "   " + emojis.join(" "),
+				"subtitle": authoreditor + bEntry.year + collectionSubtitle + "   " + emojis.join(" "),
 				"match": alfredMatcher,
-				"arg": citekey,
+				"arg": bEntry.citekey,
 				"icon": { "path": typeIcon },
-				"uid": citekey,
-				"text": { "copy": url },
+				"uid": bEntry.citekey,
+				"text": { "copy": bEntry.url },
 				"quicklookurl": quicklookPath,
 				"mods": {
 					"ctrl": {
-						"valid": (url !== ""),
-						"arg": url,
+						"valid": (bEntry.url !== ""),
+						"arg": bEntry.url,
 						"subtitle": URLsubtitle,
 					},
 				}
