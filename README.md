@@ -64,7 +64,7 @@ Press the hotkey in any text field to launch the citation picker.
 ## Auxiliary Features
 Triggered via the Alfred Keyword `scp` (*`S`upercharged `C`itation `P`icker*).
 - __CSL Search__: Search for a citation style, which will be downloaded to the location `csl_folder` specified in your workflow settings (default: `~/.pandoc/csl/`).
-- __Bibliography Stats__: Brief statistical summary of your bibliography (Currently only total number of citation.)
+- __Bibliography Stats__: Brief statistical summary of your bibliography (Currently only total number of citations.)
 - __Cheatsheet: Pandoc Citation Syntax__: Open a cheat sheet for the Pandoc citation syntax.
 - __Cheatsheet: Citation Picker Actions__: Open a cheat sheet for [various actions](#usage) of the Supercharged Citation Picker.
 - __Buffer Reload__: Force a reload of the citation picker. Mostly for debugging purposes.
