@@ -28,7 +28,7 @@
 - [About the Developer](#about-the-developer)
 	- [Profiles](#profiles)
 	- [Donate](#donate)
-- [Credits](#credits)
+	- [Credits](#credits)
 
 <!-- /MarkdownTOC -->
 
@@ -63,7 +63,7 @@ Press the hotkey in any text field to launch the citation picker.
 - `⇧ + ↵`: Reveal the entry in [BibDesk](http://bibdesk.sourceforge.net) (if installed).
 - `fn + ↵`: Paste the full bibliographic entry as APA 6th (requires [Pandoc](https://pandoc.org)).
 - `⌘fn + ↵`: Delete the entry from the BibTeX library (__Experimental__).
-	– ⚠️ This feature is untested with BiBTeX files created with apps other than BibDesk. Please make backups, and [create an issue](/issues) for problems with other apps.
+	– ⚠️ This feature is untested with BiBTeX files created with apps other than BibDesk. Please make backups, and [create an issue](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues) for problems with other apps.
 	- Note that this feature does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/), since the plugin does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file will be overridden.
 
 ### Literature Note Actions
@@ -101,7 +101,7 @@ In my day job, I am a sociologist studying the social mechanisms underlying the 
 
 <!-- markdown-link-check-enable -->
 
-## Credits
+### Credits
 <a href="https://www.flaticon.com/authors/freepik">Icons created by Freepik - Flaticon</a>
 
 [^1]: [QLmarkdown](https://github.com/sbarex/QLMarkdown) and [Peek](https://apps.apple.com/app/peek-quick-look-extension/id1554235898) both enable previewing of Markdown documents. Peek works with a wide range of other file types than Markdown, but costs around 5€. QLMarkdown is free, but only works for Markdown and requires some minor small setup. To enable the proper display of YAML headers, you need to enable the respective setting in the Advanced Options of QLMarkdown or Peek.
