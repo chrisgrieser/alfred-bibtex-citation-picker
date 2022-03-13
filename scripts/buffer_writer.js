@@ -88,9 +88,9 @@ const entryArray = bibtexParse(rawBibTex) // eslint-disable-line no-undef
 		// display editor when no authors
 		let editorAbbrev = "(Ed.)";
 		if (entry.hasMultipleEditors) editorAbbrev = "(Eds.)";
-		let authoreditor = author + " ";
-		if (!author && editor) authoreditor = editor + " " + editorAbbrev + " ";
-		else if (!author && !editor) authoreditor = "";
+		let authoreditor = "";
+		if (author) authoreditor = entry.authorsEtAl + " ";
+		else if (!author && editor) authoreditor = entry.editorsEtAl + " " + editorAbbrev + " ";
 
 		// Matching for Smart Query
 		const keywordMatches = keywords.map(tag => "#" + tag);

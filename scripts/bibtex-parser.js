@@ -6,12 +6,12 @@ const lineDelimiter = "\r";
 
 class BibtexEntry {
 	constructor() {
+		this.author = "";
+		this.editor = "";
 		this.type = "";
 		this.citekey = "";
-		this.author = "";
 		this.title = "";
 		this.year = "";
-		this.editor = "";
 		this.url = "";
 		this.booktitle = "";
 		this.journal = "";
@@ -21,7 +21,13 @@ class BibtexEntry {
 		this.keywords = [];
 	}
 	get hasMultipleEditors() {
-		return /et al\.|&| and /.test(this.editor);
+		return /&| and /.test(this.editor);
+	}
+	get authorsEtAl() {
+		return this.author.replace (/&.*&.*/, "et al.");
+	}
+	get editorsEtAl() {
+		return this.editor.replace (/&.*&.*/, "et al.");
 	}
 }
 
@@ -77,8 +83,7 @@ function bibtexDecode (encodedStr) {
 function bibtexNameParse(nameString) {
 	return nameString
 		.replace (/(, [A-Z]).+?(?= and|$)/gm, "") // remove first names
-		.replaceAll (" and ", " & ")
-		.replace (/&.*&.*/, "et al."); // insert et al
+		.replaceAll (" and ", " & ");
 }
 
 // input: string
