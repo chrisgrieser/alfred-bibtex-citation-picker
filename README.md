@@ -1,9 +1,9 @@
 # Supercharged Citation Picker
 ![](https://img.shields.io/github/downloads/chrisgrieser/alfred-bibtex-citation-picker/total?label=Total%20Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/alfred-bibtex-citation-picker?label=Latest%20Release&style=plastic)
 
-[Alfred](https://www.alfredapp.com/) Workflow for selecting citations in [Pandoc Syntax](https://pandoc.org/MANUAL.html#citation-syntax) from a BibTeX File. Performs much quicker than other citation pickers and also offers various utilities for interacting with literature notes and bibliography.
+[Alfred](https://www.alfredapp.com/) Workflow for selecting citations in [Pandoc Syntax](https://pandoc.org/MANUAL.html#citation-syntax) from a BibTeX File. More Performant than other citation pickers and also offers various utilities for interacting with literature notes and bibliography.
 
-!()[assets/promo.png]
+<img width=60% alt="promo screenshot" src="assets/promo.png">
 
 ## Table of Contents
 <!-- MarkdownTOC -->
@@ -94,4 +94,3 @@ In my day job, I am a sociologist studying the social mechanisms underlying the 
 <a href="https://www.flaticon.com/authors/freepik">Icons created by Freepik - Flaticon</a>
 
 [^1]: [QLmarkdown](https://github.com/sbarex/QLMarkdown) and [Peek](https://apps.apple.com/app/peek-quick-look-extension/id1554235898) both enable previewing of Markdown documents. Peek works with a wide range of other file types than Markdown, but costs around 5€. QLMarkdown is free, but only works for Markdown and requires some minor small setup. To enable the proper display of YAML headers, you need to enable the respective setting in the Advanced Options of QLMarkdown or Peek.
-[promo.png]: 
