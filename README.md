@@ -56,7 +56,9 @@ Press the hotkey in any text field to launch the citation picker.
 - `⌘fn + ↵`: Delete the entry from the BibTeX library. (⚠️ Experimental – Feature untested with  BiBTeX files created with apps other than BibDesk. Please make backups.)
 
 ### Literature Note Actions
-- `⌘⇧ + ↵`: Open the literature note. If there is no literature note, a new one will be created and then opened.
+- `⌘⇧ + ↵`: Open the literature note.
+	- If the file is in an [Obsidian Vault](https://obsidian.md/), opens the file in Obsidian.
+	- If there is no literature note, a new one will be created and then opened.
 - `⌘ + Y`: Quicklook the literature note, if there is one (requires QLmarkdown or Peek[^1]).
 - *If the entry has a corresponding literature note, a* `📓` *will be shown.*
 - *Both actions look for literature specified in the workflow settings `literature_note_folder`. The files must be named __exactly__ like the citekey (without `@`) and have a `.md` extension.*
