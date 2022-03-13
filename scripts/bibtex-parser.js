@@ -1,6 +1,9 @@
 // Due to use with the JXA import hack, no "export" keyword is necessary.
 // https://github.com/JXA-Cookbook/JXA-Cookbook/wiki/Importing-Scripts
 
+// for Mac using JXA: \r, otherwise use \n
+const lineDelimiter = "\r";
+
 class BibtexEntry {
 	constructor() {
 		this.type = "";
@@ -18,7 +21,7 @@ class BibtexEntry {
 		this.keywords = [];
 	}
 	get hasMultipleEditors() {
-		return /et al\.|&/.test(this.editor);
+		return /et al\.|&| and /.test(this.editor);
 	}
 }
 
@@ -85,7 +88,7 @@ function bibtexParse (str) { // eslint-disable-line no-unused-vars
 		.split("@")
 		.slice(1) // first element is only BibTeX metadata
 		.map(bibEntry => {
-			const lines = bibEntry.split("\r");
+			const lines = bibEntry.split(lineDelimiter);
 			const entry = new BibtexEntry();
 
 			// parse first line (separate since different formatting)

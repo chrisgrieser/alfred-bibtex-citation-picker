@@ -36,7 +36,7 @@ const entryArray = bibtexParse(rawBibTex) // eslint-disable-line no-undef
 			URLsubtitle = "⌃: Open " + urlIcon + " URL: " + entry.url;
 		}
 
-		// Literature Note
+		// Literature Notes
 		let quicklookPath = "";
 		if (literatureNoteArray.includes(entry.citekey.slice(1))) {
 			emojis.push(literatureNoteIcon);

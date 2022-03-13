@@ -1750,7 +1750,7 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>765</integer>
+			<integer>760</integer>
 			<key>ypos</key>
 			<integer>935</integer>
 		</dict>
