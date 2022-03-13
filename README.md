@@ -41,7 +41,7 @@ Press the hotkey in any text field to launch the citation picker.
 ### Citation Actions
 - `↵`: Paste the citekey of the selected citation.
 - `⌥ + ↵`:  Add another citation.
-- `⌘ + ↵`: Add page numbers, then paste citekey. (Confirm the page number with `⌥ + ↵` or `⌘ + ↵` to add another citation)
+- `⌘ + ↵`: Add page numbers, then paste citekey. Confirm the page number with `⌥ + ↵` or `⌘ + ↵` to add another citation.
 - The citation picker includes tab completions of the author name(s).
 
 ### URL Actions
