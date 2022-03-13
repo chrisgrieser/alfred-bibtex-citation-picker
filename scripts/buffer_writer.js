@@ -29,9 +29,6 @@ function run() {
 		return str;
 	};
 
-	// extracts content of a BibTeX-field & removes TeX formatting
-	const extract = str => str.split(" = ")[1].replace (/{|}|,$/g, "");
-
 	// -------------------------------
 	// MAIN
 	// -------------------------------
@@ -40,8 +37,8 @@ function run() {
 		.split("\r")
 		.map (filename => filename.slice(0, -3)); // remove file extension (assuming .md)
 
-	console.log("before");
-	const entryArray = app.doShellScript('grep -vwE "(abstract|annotate|annotation|eprint|Bdsk-Url-1|Bdsk-Url-2|date-modified|date-added|issn|langid|urlyear|entrysubtype|isbn|location|pagetotal|series|eprint) =" "' + libraryPath + '"') // remove unnecessary info to increase speed
+	const startTime = new Date();
+	const entryArray = app.doShellScript('cat "' + libraryPath + '"')
 		.BibtexDecode()
 		.split("@")
 		.slice(1) // first element is only BibTeX metadata
@@ -61,37 +58,59 @@ function run() {
 			let numberOfEditors = 0;
 
 			// extract properties
-			const properties = entry.split ("\r");
-			const citekey = "@" + properties[0].replace (/.*{(.*),/, "$1");
-			const type = properties[0].replace (/(.*){.*/, "$1");
+			const properties = entry.split("\r");
+			const type = properties[0].split("{")[0];
+			const citekey = "@" + properties[0].split("{")[1]?.slice(0, -1);
+			properties.shift();
 
 			properties.forEach (property => {
-				if (property.includes ("author =")) {
-					author = extract(property)
-						.replace (/(, [A-Z]).+?(?= and|$)/gm, "") // remove first names
-						.replaceAll (" and ", " & ")
-						.replace (/&.*&.*/, "et al."); // insert et al
+				const field = property.split("=")[0].trim();
+				const value = property.split("=")[1]?.trim().replace (/{|}|,$/g, ""); // remove TeX formatting
+
+				switch (field) {
+					case "author":
+						author = value
+							.replace (/(, [A-Z]).+?(?= and|$)/gm, "") // remove first names
+							.replaceAll (" and ", " & ")
+							.replace (/&.*&.*/, "et al."); // insert et al
+						break;
+					case "editor":
+						editor = value
+							.replace (/(, [A-Z]).+?(?= and|$)/gm, "") // remove first names
+							.replaceAll (" and ", " & ");
+						numberOfEditors = editor.split("&").length;
+						editor = editor.replace (/&.*&.*/, "et al."); // insert et al
+						break;
+					case "title":
+						title = value;
+						if (title.length > alfredBarLength) title = title.slice(0, alfredBarLength).trim() + "…";
+						break;
+					case "date": // some bibtx formats use date instead of year
+					case "year":
+						year = value.match(/\d{4}/)[0];
+						break;
+					case "doi":
+						doi = value;
+						break;
+					case "url":
+						url = value;
+						break;
+					case "number":
+						issue = value;
+						break;
+					case "volume":
+						volume = value;
+						break;
+					case "journal":
+						journal = value;
+						break;
+					case "booktitle":
+						booktitle = value;
+						break;
+					case "keywords":
+						keywords = value;
+						break;
 				}
-				else if (property.includes ("editor =")) {
-					editor = extract(property)
-						.replace (/(, [A-Z]).+?(?= and|$)/gm, "") // remove first names
-						.replaceAll (" and ", " & ");
-					numberOfEditors = editor.split("&").length;
-					editor = editor.replace (/&.*&.*/, "et al."); // insert et al
-				}
-				else if (/(^|\s)title =/i.test(property)) {
-					title = extract(property);
-					if (title.length > alfredBarLength) title = title.substring(0, alfredBarLength).trim() + "…";
-				}
-				else if (property.includes ("year =")) year = property.replace (/.*=\s*{?(\d{4}).*/, "$1");
-				else if (property.includes ("date =")) year = property.replace (/.*=\s*{?(\d{4}).*/, "$1"); // some bibtx formats use date instead of year
-				else if (property.includes ("doi =")) doi = extract(property);
-				else if (property.includes ("url =")) url = extract(property);
-				else if (property.includes ("volume =")) volume = extract(property);
-				else if (property.includes ("number =")) issue = extract(property);
-				else if (property.includes ("journal =")) journal = extract(property);
-				else if (property.includes ("booktitle =")) booktitle = extract(property);
-				else if (property.includes ("keywords =")) keywords = extract(property);
 			});
 
 			// when no URL, try to use DOI
@@ -114,7 +133,7 @@ function run() {
 			let keywordArr = [];
 			if (keywords) {
 				keywordArr = keywords.split(",").map(tag => "#" + tag.trim());
-				emojis.push(tagIcon + keywordArr.length.toString());
+				emojis.push(tagIcon + " " + keywordArr.length.toString());
 			}
 
 			// Icon selection
@@ -148,7 +167,10 @@ function run() {
 
 			// Journal/Book Title
 			let collectionSubtitle = "";
-			if (type === "article") collectionSubtitle += "    In: " + journal + " " + volume + "(" + issue + ")";
+			if (type === "article") {
+				collectionSubtitle += "    In: " + journal + " " + volume;
+				if (issue) collectionSubtitle += "(" + issue + ")";
+			}
 			if (type === "incollection") collectionSubtitle += "    In: " + booktitle;
 
 			// display editor when no authors
@@ -183,6 +205,7 @@ function run() {
 			};
 		});
 
-	console.log("after");
+	const endTime = new Date();
+	console.log("Buffer Writing Duration: " + (endTime - startTime).toString() + "ms");
 	return JSON.stringify({ "items": entryArray });
 }
