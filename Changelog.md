@@ -1,3 +1,5 @@
+- 2022-03-13	release 7.6.0
+- 2022-03-13	if literature note is in Obsidian vault, will open in Obsidian
 - 2022-03-13	release 7.5.0
 - 2022-03-13	setting for et al matching
 - 2022-03-13	match authors/editors that are in the et al
