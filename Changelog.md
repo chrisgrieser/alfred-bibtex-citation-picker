@@ -1,3 +1,5 @@
+- 2022-03-14	release 7.7.3
+- 2022-03-14	performance improvement for literature note reading during buffer creation
 - 2022-03-14	release 7.7.2
 - 2022-03-14	bugfix: workflow not working without literature note path
 - 2022-03-14	release 7.7.1
