@@ -57,7 +57,7 @@ Press the hotkey in any text field to launch the citation picker.
 
 ### Icon Meanings
 
-| Icon | Entry           |
+| Icon | Entry has       |
 |:-----|:----------------|
 | 🌐   | URL or DOI      |
 | 📓   | Literature Note |
