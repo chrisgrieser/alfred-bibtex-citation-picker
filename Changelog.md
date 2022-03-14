@@ -1,3 +1,5 @@
+- 2022-03-14	release 7.7.4
+- 2022-03-14	catch errors when year field in bibtex file does not have a proper date
 - 2022-03-14	release 7.7.3
 - 2022-03-14	performance improvement for literature note reading during buffer creation
 - 2022-03-14	release 7.7.2
