@@ -6,7 +6,7 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 ## Feature Overview
 - Inserts __Pandoc Citation Syntax__ (`[@citekey]`). Works with page numbers & multiple citations.
 - __works system-wide__, in case you also work in another Markdown app.
-- __smart search__: search for citekeys, authors, title, publication, keywords (tags), include/exclude authors in *et al*, tab-completion, …
+- __smart search__: search for citekeys, authors, title, publication, keywords (tags), include/exclude authors in *et al*, tab-completion, fuzzy-matching, sorting recent entries to the top, …
 - __feature-rich__: paste single-entry bibliographies, remove entries from your library *without opening a reference management app*, open URLs, open or create literature notes, search for `.csl` files online, …
 - __Obsidian integration:__ When located in an Obsidian vault, literature notes will automatically be opened/created in Obsidian. (Otherwise, they will be opened in the default app for markdown files.)
 - __very performant:__ considerably quicker than other citation pickers (~200ms to fully reload a library with ~4000 entries on my machine)
@@ -46,7 +46,7 @@ Press the hotkey in any text field to launch the citation picker.
 - Search for the title, author/editor (last name), year, or, collection/journal-title.
 - Prepend `@` to search for a citekey, e.g. `@Grieser2020`.
 - Prepend `#` to search for keywords (tags), e.g. `#sociology`.
-- *Smart Queries*: You can search for any combination of the above. For example, the query `2020 #cognition Grieser` will filter for entries published in 2020, with the tag "cognition", and with (fuzzy-matched) "Grieser" as author/editor.
+- *Smart Queries*: You can search for any combination of the above. For example, the query `2020 #cognition Grieser` will filter for entries published in 2020, with the tag "cognition", and with "Grieser" as author/editor (fuzzy-matched).
 - The workflow setting `match_authors_in_etal` determines whether authors (or editors) in the *et al.* are still matched when searching for them (default: *true*).
 
 ### Citation Actions
@@ -70,7 +70,7 @@ Press the hotkey in any text field to launch the citation picker.
 
 ### Bibliography Actions
 - `⇧ + ↵`: Reveal the entry in [BibDesk](http://bibdesk.sourceforge.net) (if installed).
-- `fn + ↵`: Paste the full bibliographic entry as APA 6th (requires [Pandoc](https://pandoc.org)).
+- `fn + ↵`: Paste the full bibliographic entry in the APA 6th Style (requires [Pandoc](https://pandoc.org)).
 - `⌘ + L`: Preview the (unabridged) title, abstract, and list of keywords in Large Type.
 - `⌘fn + ↵`: Delete the entry from the BibTeX library (__Experimental__).
 	- ⚠️ This feature is untested with BiBTeX files created with apps other than BibDesk. Please make backups, and [create an issue](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues) for problems with other apps.
@@ -79,7 +79,7 @@ Press the hotkey in any text field to launch the citation picker.
 ### Literature Note Actions
 - `⌘⇧ + ↵`: Open the literature note.
 	- If the file is in an [Obsidian Vault](https://obsidian.md/), opens the file in Obsidian.
-	- If there is no literature note, a new one will be created and then opened.
+	- If there is no literature note, a new one will be created.
 - `⌘ + Y`: Preview the literature note with QuickLook (requires QLmarkdown or Peek[^1]).
 - *Both actions look for literature specified in the workflow settings `literature_note_folder`. The files must be named __exactly__ like the citekey (without `@`) and have a `.md` extension.*
 
