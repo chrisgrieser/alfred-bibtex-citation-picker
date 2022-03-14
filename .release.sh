@@ -3,6 +3,11 @@
 # ALFRED WORKFLOW RELEASE
 # -----------------------
 
+# Requirements
+# - markdownlint
+# - markdown-link-check
+# - eslint
+
 # -----------------------
 # new version number
 # -----------------------
