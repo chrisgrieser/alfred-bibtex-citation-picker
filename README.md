@@ -21,6 +21,7 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 - [Usage](#usage)
 	- [Search](#search)
 	- [Citation Actions](#citation-actions)
+	- [Icon Meanings](#icon-meanings)
 	- [URL Actions](#url-actions)
 	- [Bibliography Actions](#bibliography-actions)
 	- [Literature Note Actions](#literature-note-actions)
@@ -54,8 +55,16 @@ Press the hotkey in any text field to launch the citation picker.
 - `⌘ + ↵`: Add page numbers before pasting the selected citekey. Confirm the page number with `⌥ + ↵` or `⌘ + ↵` to add another citation afterwards.
 - *Tab-Completion*: Pressing `tab` autocompletes the author/editor name(s).
 
+### Icon Meanings
+
+| Icon | Entry           |
+|:-----|:----------------|
+| 🌐   | URL or DOI      |
+| 📓   | Literature Note |
+| 📄   | Abstract        |
+| 🏷 n | n Keywords      |
+
 ### URL Actions
-- *If the entry has an URL, a* `🌐` *will be shown. In case there is no URL, the DOI will be used as substitute.*
 - `⌃ + ↵`: Open the URL in the browser.
 - `⌘ + C`: Copy the URL to the clipboard.
 
@@ -72,7 +81,6 @@ Press the hotkey in any text field to launch the citation picker.
 	- If the file is in an [Obsidian Vault](https://obsidian.md/), opens the file in Obsidian.
 	- If there is no literature note, a new one will be created and then opened.
 - `⌘ + Y`: Quicklook the literature note, if there is one (requires QLmarkdown or Peek[^1]).
-- *If the entry has a corresponding literature note, a* `📓` *will be shown.*
 - *Both actions look for literature specified in the workflow settings `literature_note_folder`. The files must be named __exactly__ like the citekey (without `@`) and have a `.md` extension.*
 
 ## Auxiliary Features
