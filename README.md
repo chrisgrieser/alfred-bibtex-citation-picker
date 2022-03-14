@@ -80,7 +80,7 @@ Press the hotkey in any text field to launch the citation picker.
 - `⌘⇧ + ↵`: Open the literature note.
 	- If the file is in an [Obsidian Vault](https://obsidian.md/), opens the file in Obsidian.
 	- If there is no literature note, a new one will be created and then opened.
-- `⌘ + Y`: Quicklook the literature note, if there is one (requires QLmarkdown or Peek[^1]).
+- `⌘ + Y`: Preview the literature note with QuickLook (requires QLmarkdown or Peek[^1]).
 - *Both actions look for literature specified in the workflow settings `literature_note_folder`. The files must be named __exactly__ like the citekey (without `@`) and have a `.md` extension.*
 
 ## Auxiliary Features
