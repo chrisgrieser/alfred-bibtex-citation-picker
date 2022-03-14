@@ -1586,8 +1586,13 @@ echo "$*"</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>README:
-https://github.com/chrisgrieser/alfred-bibtex-citation-picker</string>
+	<string>README
+======
+https://github.com/chrisgrieser/alfred-bibtex-citation-picker#supercharged-citation-picker
+
+Changelog
+=========
+https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/Changelog.md</string>
 	<key>uidata</key>
 	<dict>
 		<key>04E17547-EDD2-4C44-9F41-F15391DD8775</key>
@@ -1948,7 +1953,7 @@ to set a hotkey for the citaiton picker.</string>
 		<key>auto_update</key>
 		<string>true</string>
 		<key>bibtex_library_path</key>
-		<string>~/Library/Mobile Documents/com~apple~CloudDocs/File Hub/Bibliography (BibTeX).bib</string>
+		<string>/Users/chrisgrieser/Library/Mobile Documents/com~apple~CloudDocs/File Hub/14-25-06.bib</string>
 		<key>csl_folder</key>
 		<string>~/.pandoc/csl</string>
 		<key>literature_note_folder</key>
