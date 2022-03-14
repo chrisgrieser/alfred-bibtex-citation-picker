@@ -1967,7 +1967,7 @@ to set a hotkey for the citaiton picker.</string>
 		<string>literature_note_folder</string>
 	</array>
 	<key>version</key>
-	<string>7.7.6</string>
+	<string>7.7.7</string>
 	<key>webaddress</key>
 	<string>https://github.com/chrisgrieser/alfred-bibtex-citation-picker</string>
 </dict>
