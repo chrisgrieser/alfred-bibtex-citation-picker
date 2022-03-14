@@ -16,7 +16,7 @@
 nextVersion="$*"
 currentVersion=$(plutil -extract version xml1 -o - info.plist | sed -n 4p | cut -d">" -f2 | cut -d"<" -f1)
 echo "current version: $currentVersion"
-echo -n "next version: "
+echo -n "   next version: "
 if [[ -z "$nextVersion" ]]; then
 	read -r nextVersion
 else
