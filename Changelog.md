@@ -1,3 +1,7 @@
+- 2022-03-14	release 7.7.1
+- 2022-03-14	bugfix for first run
+- 2022-03-14	added request for sample bibtex entry
+- 2022-03-14	changed snippet trigger
 - 2022-03-13	release 7.7.0
 - 2022-03-13	bugfix for opening literature notes
 - 2022-03-13	added feature overview
