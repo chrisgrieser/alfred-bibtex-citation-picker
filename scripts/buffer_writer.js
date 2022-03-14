@@ -5,6 +5,7 @@ app.includeStandardAdditions = true;
 const urlIcon = "🌐";
 const litNoteIcon = "📓";
 const tagIcon = "🏷";
+const abstractIcon = "📄";
 
 const matchAuthorsInEtAl = $.getenv("match_authors_in_etal") === "true";
 const alfredBarLength = parseInt ($.getenv("alfred_bar_length"));
@@ -34,7 +35,7 @@ const rawBibtex = app.doShellScript('cat "' + libraryPath + '"');
 const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 	.map(entry => {
 		const emojis = [];
-		const { title, url, citekey, keywords, type, journal, volume, issue, booktitle, author, editor, year } = entry;
+		const { title, url, citekey, keywords, type, journal, volume, issue, booktitle, author, editor, year, abstract } = entry;
 
 		// Shorten Title
 		let shorterTitle = title;
@@ -54,7 +55,8 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 			litNotePath = litNoteFolder + "/" + citekey.slice(1) + ".md";
 		}
 
-		// Keywords (tags)
+		// Emojis for Abstracts and Keywords (tags)
+		if (abstract) emojis.push(abstractIcon);
 		if (keywords.length) emojis.push(tagIcon + " " + keywords.length.toString());
 
 		// Icon selection
@@ -102,12 +104,18 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		else if (!author && editor) authoreditor = entry.editorsEtAl + " " + editorAbbrev + " ";
 
 		// Matching for Smart Query
-		const keywordMatches = keywords.map(tag => "#" + tag);
+		let keywordMatches = [];
+		if (keywords.length) keywordMatches = keywords.map(tag => "#" + tag);
 		let authorMatches = [author, editor];
 		if (!matchAuthorsInEtAl) authorMatches = [entry.authorsEtAl, entry.editorsEtAl];
 		const alfredMatcher = [citekey, ...keywordMatches, title, ...authorMatches, year, booktitle, journal, type]
 			.join(" ")
 			.replaceAll ("-", " ");
+
+		// Large Type
+		let largeTypeInfo = title;
+		if (abstract) largeTypeInfo += "\n\n" + abstract;
+		if (keywords.length) largeTypeInfo += "\n\nkeywords: " + keywords.join(", ");
 
 		return {
 			"title": shorterTitle,
@@ -117,7 +125,10 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 			"arg": citekey,
 			"icon": { "path": typeIcon },
 			"uid": citekey,
-			"text": { "copy": url },
+			"text": {
+				"copy": url,
+				"largetype": largeTypeInfo
+			},
 			"quicklookurl": litNotePath,
 			"mods": {
 				"ctrl": {

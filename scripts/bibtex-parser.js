@@ -18,6 +18,7 @@ class BibtexEntry {
 		this.doi = "";
 		this.volume = "";
 		this.issue = "";
+		this.abstract = "";
 		this.keywords = [];
 	}
 	get hasMultipleEditors() {
@@ -138,6 +139,9 @@ function bibtexParse (str) { // eslint-disable-line no-unused-vars
 					}
 					case "doi":
 						entry.doi = value;
+						break;
+					case "abstract":
+						entry.abstract = value;
 						break;
 					case "url":
 						entry.url = value;
