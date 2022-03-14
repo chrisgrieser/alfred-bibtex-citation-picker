@@ -19,10 +19,17 @@ eval (app.doShellScript('cat "' + toImport + '"'));
 // -------------------------------
 
 const logStartTime = new Date();
+let litNoteArray = [];
 
-const rawBibTex = app.doShellScript('cat "' + libraryPath + '"');
+if (litNoteFolderCorrect) {
+	litNoteArray = app.doShellScript('ls "' + litNoteFolder + '"')
+		.split("\r")
+		.map (filename => filename.slice(0, -3)); // remove file extension (assuming .md)
+}
 
-const entryArray = bibtexParse(rawBibTex) // eslint-disable-line no-undef
+const rawBibtex = app.doShellScript('cat "' + libraryPath + '"');
+
+const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 	.map(entry => {
 		const emojis = [];
 		const { title, url, citekey, keywords, type, journal, volume, issue, booktitle, author, editor, year } = entry;
@@ -40,14 +47,9 @@ const entryArray = bibtexParse(rawBibTex) // eslint-disable-line no-undef
 
 		// Literature Notes
 		let litNotePath = "";
-		if (litNoteFolderCorrect) {
-			const litNoteArray = app.doShellScript('ls "' + litNoteFolder + '"')
-				.split("\r")
-				.map (filename => filename.slice(0, -3)); // remove file extension (assuming .md)
-			if (litNoteArray.includes(citekey.slice(1))) {
-				emojis.push(litNoteIcon);
-				litNotePath = litNoteFolder + "/" + citekey.slice(1) + ".md";
-			}
+		if (litNoteFolderCorrect && litNoteArray.includes(citekey.slice(1))) {
+			emojis.push(litNoteIcon);
+			litNotePath = litNoteFolder + "/" + citekey.slice(1) + ".md";
 		}
 
 		// Keywords (tags)
