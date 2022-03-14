@@ -53,7 +53,7 @@ Press the hotkey in any text field to launch the citation picker.
 - `↵`: Paste the citekey of the selected citation.
 - `⌥ + ↵`:  Add another citation.
 - `⌘ + ↵`: Add page numbers before pasting the selected citekey. Confirm the page number with `⌥ + ↵` or `⌘ + ↵` to add another citation afterwards.
-- *Tab-Completion*: Pressing `tab` autocompletes the author/editor name(s).
+- *Tab-Completion*: Pressing `tab` autocompletes the author/editor name.
 
 ### Icon Meanings
 
