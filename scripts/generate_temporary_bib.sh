@@ -12,4 +12,5 @@ echo -n "$DUMMYDOC" \
 	--read=markdown --write=plain \
 	--csl="assets/$CSL" --bibliography="$LIBRARY" \
 	| tr "\n" " " \
-	| tr -s " "
+	| tr -s " " \
+	| sed "s/^ //p"
