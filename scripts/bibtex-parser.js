@@ -119,10 +119,12 @@ function bibtexParse (str) { // eslint-disable-line no-unused-vars
 					case "title":
 						entry.title = value;
 						break;
-					case "date": // some bibtx formats use date instead of year
-					case "year":
-						entry.year = value.match(/\d{4}/)[0];
+					case "date": // some bibtx formats use 'date' instead of 'year'
+					case "year": {
+						const yearDigits = value.match(/\d{4}/);
+						if (yearDigits) entry.year = yearDigits[0]; // edge case of bibtex files with wrong years
 						break;
+					}
 					case "doi":
 						entry.doi = value;
 						break;
