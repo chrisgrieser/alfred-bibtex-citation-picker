@@ -34,10 +34,18 @@ body:
     validations:
       required: true
   - type: textarea
+    id: sample-bibtex
+    attributes:
+      label: Sample BibTeX Entries
+      description: 'Open your `.bib` file in an editor (e.g. TextEdit) and copy a few sample entries.'
+      render: BibTeX
+    validations:
+      required: true
+  - type: textarea
     id: workflow-configuration
     attributes:
       label: Workflow Configuration
-      description: "Please add a screenshot of all your [workflow variables](https://www.alfredapp.com/help/workflows/advanced/variables/)."
+      description: "Please add a screenshot of all your [workflow settings](https://www.alfredapp.com/help/workflows/advanced/variables/)."
     validations:
       required: true
   - type: checkboxes
