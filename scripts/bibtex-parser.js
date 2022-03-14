@@ -96,7 +96,7 @@ function bibtexParse (str) { // eslint-disable-line no-unused-vars
 		.split("@")
 		.slice(1) // first element is only BibTeX metadata
 		.map(bibEntry => {
-			const lines = bibEntry.split(lineDelimiter);
+			let lines = bibEntry.split(lineDelimiter);
 			const entry = new BibtexEntry();
 
 			// parse first line (separate since different formatting)
@@ -104,10 +104,13 @@ function bibtexParse (str) { // eslint-disable-line no-unused-vars
 			entry.citekey = "@" + lines[0].split("{")[1]?.slice(0, -1);
 			lines.shift();
 
+			// catch erroneous BibTeX formatting
+			lines = lines.filter(line => line.includes("="));
+
 			// parse remaining lines
 			lines.forEach (line => {
 				const field = line.split("=")[0].trim();
-				const value = line.split("=")[1]?.trim().replace(/{|}|,$/g, ""); // remove TeX formatting
+				const value = line.split("=")[1].trim().replace(/{|}|,$/g, ""); // remove TeX escaping
 
 				switch (field) {
 					case "author":
@@ -119,10 +122,10 @@ function bibtexParse (str) { // eslint-disable-line no-unused-vars
 					case "title":
 						entry.title = value;
 						break;
-					case "date": // some bibtx formats use 'date' instead of 'year'
+					case "date": // some BibTeX formats use 'date' instead of 'year'
 					case "year": {
 						const yearDigits = value.match(/\d{4}/);
-						if (yearDigits) entry.year = yearDigits[0]; // edge case of bibtex files with wrong years
+						if (yearDigits) entry.year = yearDigits[0]; // edge case of BibTeX files with wrong years
 						break;
 					}
 					case "doi":
@@ -149,7 +152,6 @@ function bibtexParse (str) { // eslint-disable-line no-unused-vars
 				}
 			});
 
-			// if no URL but DOI, set DOI as URL
 			if (!entry.url && entry.doi) entry.url = "https://doi.org/" + entry.doi;
 
 			return entry;
