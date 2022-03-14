@@ -1,3 +1,5 @@
+- 2022-03-14	release 7.7.2
+- 2022-03-14	bugfix: workflow not working without literature note path
 - 2022-03-14	release 7.7.1
 - 2022-03-14	bugfix for first run
 - 2022-03-14	added request for sample bibtex entry
