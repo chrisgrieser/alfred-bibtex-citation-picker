@@ -81,7 +81,7 @@ Triggered via the Alfred Keyword `scp` (for `S`upercharged `C`itation `P`icker).
 - __Bibliography Stats__: Brief statistical summary of the library. (Currently only total number of citations.)
 - __Cheatsheet: Pandoc Citation Syntax__: Open a cheat sheet for the Pandoc citation syntax.
 - __Cheatsheet: Citation Picker Actions__: Open a cheat sheet of the available actions of the Supercharged Citation Picker.
-- __Buffer Reload__: Force a reload of the citation picker. Mostly for debugging purposes.
+- __Force Buffer Reload__: Force a reload of the citation picker for debugging purposes.
 
 ## About the Developer
 In my day job, I am a sociologist studying the social mechanisms underlying the digital economy. For my PhD project, I investigate the governance of the app economy and how software ecosystems manage the tension between innovation and compatibility. If you are interested in this subject, feel free to get in touch!

@@ -55,3 +55,5 @@ body:
       options:
         - label: I have [updated to the latest version](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest) of this workflow.
           required: true
+        - label: 'I have tried manually reloading the buffer (Alfred keyword `scp`, select `Force Buffer Reload`).'
+          required: true

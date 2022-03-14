@@ -1,3 +1,5 @@
+- 2022-03-14	release 7.7.8
+- 2022-03-14	preview abstract with cmd+L
 - 2022-03-14	release 7.7.7
 - 2022-03-14	fixed entry deletion for other bibtex formatting
 - 2022-03-14	release 7.7.6

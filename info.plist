@@ -1294,7 +1294,7 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 				<key>fixedorder</key>
 				<false/>
 				<key>items</key>
-				<string>[{"title":"Citation Style Download","arg":"csl","subtitle":"from Citation Style Repository"},{"title":"🔁 Force Buffer Reload","arg":"buffer_reload","subtitle":"for debugging purposes"},{"title":"Pandoc Citation Syntax","arg":"pandoc_cheatsheet","subtitle":"Cheatsheet"},{"title":"Citation Picker Actions","arg":"citation_picker_cheatsheet","subtitle":"Cheatsheet"},{"title":"📊 Bibliography Statistics","arg":"statistics"}]</string>
+				<string>[{"title":"Search &amp; Download Citation Styles","arg":"csl","subtitle":".csl files"},{"title":"🔁 Force Buffer Reload","arg":"buffer_reload","subtitle":"for debugging purposes"},{"title":"Pandoc Citation Syntax","arg":"pandoc_cheatsheet","subtitle":"Cheatsheet"},{"title":"Citation Picker Actions","arg":"citation_picker_cheatsheet","subtitle":"Cheatsheet"},{"title":"📊 Bibliography Statistics","arg":"statistics"}]</string>
 				<key>keyword</key>
 				<string>scp</string>
 				<key>runningsubtext</key>
@@ -1967,7 +1967,7 @@ to set a hotkey for the citaiton picker.</string>
 		<string>literature_note_folder</string>
 	</array>
 	<key>version</key>
-	<string>7.7.7</string>
+	<string>7.7.8</string>
 	<key>webaddress</key>
 	<string>https://github.com/chrisgrieser/alfred-bibtex-citation-picker</string>
 </dict>
