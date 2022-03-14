@@ -29,6 +29,9 @@ class BibtexEntry {
 	get editorsEtAl() {
 		return this.editor.replace (/&.*&.*/, "et al.");
 	}
+	get hasURL() {
+		return this.url !== "";
+	}
 }
 
 const germanChars = [

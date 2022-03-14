@@ -1952,7 +1952,7 @@ to set a hotkey for the citaiton picker.</string>
 		<key>csl_folder</key>
 		<string>~/.pandoc/csl</string>
 		<key>literature_note_folder</key>
-		<string>~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Main Vault/Literature Notes</string>
+		<string>~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Main Vault/Literature Notes/</string>
 		<key>match_authors_in_etal</key>
 		<string>true</string>
 	</dict>

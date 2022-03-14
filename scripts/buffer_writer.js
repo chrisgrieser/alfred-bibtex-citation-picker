@@ -3,12 +3,14 @@ const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 
 const urlIcon = "🌐";
-const literatureNoteIcon = "📓";
+const litNoteIcon = "📓";
 const tagIcon = "🏷";
 const matchAuthorsInEtAl = $.getenv("match_authors_in_etal") === "true";
 const alfredBarLength = parseInt ($.getenv("alfred_bar_length"));
 const libraryPath = $.getenv("bibtex_library_path").replace(/^~/, app.pathTo("home folder"));
-const literatureNoteFolder = $.getenv("literature_note_folder").replace(/^~/, app.pathTo("home folder"));
+const litNoteFolder = $.getenv("literature_note_folder").replace(/^~/, app.pathTo("home folder"));
+let litNoteFolderCorrect = false;
+if (litNoteFolder) litNoteFolderCorrect = Application("Finder").exists(Path(litNoteFolder));
 
 // Import Hack, https://github.com/JXA-Cookbook/JXA-Cookbook/wiki/Importing-Scripts
 const toImport = "./scripts/bibtex-parser.js";
@@ -16,10 +18,7 @@ eval (app.doShellScript('cat "' + toImport + '"'));
 
 // -------------------------------
 
-const startTime = new Date();
-const literatureNoteArray = app.doShellScript('ls "' + literatureNoteFolder + '"')
-	.split("\r")
-	.map (filename => filename.slice(0, -3)); // remove file extension (assuming .md)
+const logStartTime = new Date();
 
 const rawBibTex = app.doShellScript('cat "' + libraryPath + '"');
 
@@ -40,10 +39,15 @@ const entryArray = bibtexParse(rawBibTex) // eslint-disable-line no-undef
 		}
 
 		// Literature Notes
-		let quicklookPath = "";
-		if (literatureNoteArray.includes(citekey.slice(1))) {
-			emojis.push(literatureNoteIcon);
-			quicklookPath = literatureNoteFolder + "/" + citekey.slice(1) + ".md";
+		let litNotePath = "";
+		if (litNoteFolderCorrect) {
+			const litNoteArray = app.doShellScript('ls "' + litNoteFolder + '"')
+				.split("\r")
+				.map (filename => filename.slice(0, -3)); // remove file extension (assuming .md)
+			if (litNoteArray.includes(citekey.slice(1))) {
+				emojis.push(litNoteIcon);
+				litNotePath = litNoteFolder + "/" + citekey.slice(1) + ".md";
+			}
 		}
 
 		// Keywords (tags)
@@ -110,10 +114,10 @@ const entryArray = bibtexParse(rawBibTex) // eslint-disable-line no-undef
 			"icon": { "path": typeIcon },
 			"uid": citekey,
 			"text": { "copy": url },
-			"quicklookurl": quicklookPath,
+			"quicklookurl": litNotePath,
 			"mods": {
 				"ctrl": {
-					"valid": (url !== ""),
+					"valid": entry.hasURL,
 					"arg": url,
 					"subtitle": URLsubtitle,
 				},
@@ -121,8 +125,8 @@ const entryArray = bibtexParse(rawBibTex) // eslint-disable-line no-undef
 		};
 	});
 
-const endTime = new Date();
-console.log("Buffer Writing Duration: " + (endTime - startTime).toString() + "ms");
+const logEndTime = new Date();
+console.log("Buffer Writing Duration: " + (logEndTime - logStartTime).toString() + "ms");
 
 // direct return
 JSON.stringify({ "items": entryArray });
