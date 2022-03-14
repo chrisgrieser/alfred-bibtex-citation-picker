@@ -10,7 +10,7 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 - __feature-rich__: paste single-entry bibliographies, remove entries from your library *without opening a reference management app*, open URLs, open or create literature notes, search for `.csl` files online, …
 - __Obsidian integration:__ When located in an Obsidian vault, literature notes will automatically be opened/created in Obsidian. (Otherwise, they will be opened in the default app for markdown files.)
 - __very performant:__ considerably quicker than other citation pickers (~200ms to fully reload a library with ~4000 entries on my machine)
-- __easy installation:__ no dependencies, no required plugins, no setup (other then entering the link to your `.bib` file).
+- __easy installation:__ no dependencies, no required plugins, no setup (other then entering the path to your `.bib` file).
 
 <img width=60% alt="promo screenshot" src="assets/promo.png">
 
@@ -39,7 +39,7 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 
 ## Usage
 Press the hotkey in any text field to launch the citation picker.
-- Alternatively, you can use the Alfred keyword `ct` or the [snippet trigger](https://www.alfredapp.com/help/workflows/triggers/snippet/) `###` (when snippet triggers are activated).
+- Alternatively, you can use the Alfred keyword `ct` or the [snippet trigger](https://www.alfredapp.com/help/workflows/triggers/snippet/) `+++` (when snippet triggers are activated).
 
 ### Search
 - Search for the title, author/editor (last name), year, or, collection/journal-title.

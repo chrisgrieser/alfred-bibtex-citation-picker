@@ -1074,7 +1074,7 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>keyword</key>
-				<string>###</string>
+				<string>+++</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.snippet</string>
