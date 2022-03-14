@@ -1403,7 +1403,7 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>subtext</key>
-				<string>⚠️Experimental. Irreversible.   [↵]: Confirm  [Esc]: Cancel</string>
+				<string>This cannot be undone.   [↵]: Confirm  [Esc]: Cancel</string>
 				<key>text</key>
 				<string>Delete {var:citekey} from BibTeX Library?</string>
 				<key>withspace</key>
