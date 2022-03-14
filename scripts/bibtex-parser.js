@@ -37,7 +37,7 @@ class BibtexEntry {
 const germanChars = [
 	"{\\\"u};ü",
 	"{\\\"a};ä",
-	'{\\"o};ö',
+	"{\\\"o};ö",
 	"{\\\"U};Ü",
 	"{\\\"A};Ä",
 	"{\\\"O};Ö",
@@ -48,7 +48,15 @@ const germanChars = [
 	"\\\"A;Ä",
 	"\\\"O;Ö",
 	"\\ss;ß",
-	"{\\ss};ß"
+	"{\\ss};ß",
+
+	// Bookends
+	"\\''A;Ä",
+	"\\''O;Ö",
+	"\\''U;Ü",
+	"\\''a;ä",
+	"\\''o;ö",
+	"\\''u;ü"
 ];
 const otherChars = [
 	"{\\~n};ñ",
@@ -100,8 +108,8 @@ function bibtexParse (str) { // eslint-disable-line no-unused-vars
 			const entry = new BibtexEntry();
 
 			// parse first line (separate since different formatting)
-			entry.type = lines[0].split("{")[0];
-			entry.citekey = "@" + lines[0].split("{")[1]?.slice(0, -1);
+			entry.type = lines[0].split("{")[0].toLowerCase();
+			entry.citekey = "@" + lines[0].split("{")[1]?.replace(/,$/, "");
 			lines.shift();
 
 			// catch erroneous BibTeX formatting
@@ -109,7 +117,7 @@ function bibtexParse (str) { // eslint-disable-line no-unused-vars
 
 			// parse remaining lines
 			lines.forEach (line => {
-				const field = line.split("=")[0].trim();
+				const field = line.split("=")[0].trim().toLowerCase();
 				const value = line.split("=")[1].trim().replace(/{|}|,$/g, ""); // remove TeX escaping
 
 				switch (field) {

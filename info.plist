@@ -1948,7 +1948,7 @@ to set a hotkey for the citaiton picker.</string>
 		<key>auto_update</key>
 		<string>true</string>
 		<key>bibtex_library_path</key>
-		<string>~/.pandoc/main-bibliography.bib</string>
+		<string>~/Library/Mobile Documents/com~apple~CloudDocs/File Hub/Bibliography (BibTeX).bib</string>
 		<key>csl_folder</key>
 		<string>~/.pandoc/csl</string>
 		<key>literature_note_folder</key>

@@ -5,6 +5,7 @@ app.includeStandardAdditions = true;
 const urlIcon = "🌐";
 const litNoteIcon = "📓";
 const tagIcon = "🏷";
+
 const matchAuthorsInEtAl = $.getenv("match_authors_in_etal") === "true";
 const alfredBarLength = parseInt ($.getenv("alfred_bar_length"));
 const libraryPath = $.getenv("bibtex_library_path").replace(/^~/, app.pathTo("home folder"));
@@ -24,7 +25,8 @@ let litNoteArray = [];
 if (litNoteFolderCorrect) {
 	litNoteArray = app.doShellScript('ls "' + litNoteFolder + '"')
 		.split("\r")
-		.map (filename => filename.slice(0, -3)); // remove file extension (assuming .md)
+		.filter(filename => filename.endsWith(".md"))
+		.map (filename => filename.slice(0, -3)); // remove extension
 }
 
 const rawBibtex = app.doShellScript('cat "' + libraryPath + '"');
@@ -86,11 +88,11 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 
 		// Journal/Book Title
 		let collectionSubtitle = "";
-		if (type === "article") {
+		if (type === "article" && journal) {
 			collectionSubtitle += "    In: " + journal + " " + volume;
 			if (issue) collectionSubtitle += "(" + issue + ")";
 		}
-		if (type === "incollection") collectionSubtitle += "    In: " + booktitle;
+		if (type === "incollection" && booktitle) collectionSubtitle += "    In: " + booktitle;
 
 		// display editor when no authors
 		let editorAbbrev = "(Ed.)";
