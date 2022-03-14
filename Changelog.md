@@ -1,3 +1,5 @@
+- 2022-03-14	release 7.7.6
+- 2022-03-14	more fixes for badly formatted bibtex files (e.g. bookends exports)
 - 2022-03-14	release 7.7.5
 - 2022-03-14	catch another edge case with bad bibtex formatting
 - 2022-03-14	release 7.7.4
