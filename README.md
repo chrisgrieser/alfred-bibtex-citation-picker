@@ -1,7 +1,7 @@
 # Supercharged Citation Picker
 ![](https://img.shields.io/github/downloads/chrisgrieser/alfred-bibtex-citation-picker/total?label=Total%20Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/alfred-bibtex-citation-picker?label=Latest%20Release&style=plastic)
 
-A citation picker for academics that write in markdown. Using [Alfred](https://www.alfredapp.com/), this citation pickers inserts [Pandoc citations](https://pandoc.org/MANUAL.html#citation-syntax) from a BibTeX File.
+A citation picker for academics that write in markdown. Using [Alfred](https://www.alfredapp.com/), this citation picker inserts [Pandoc citations](https://pandoc.org/MANUAL.html#citation-syntax) from a BibTeX File.
 
 ## Feature Overview
 - Inserts __Pandoc Citation Syntax__ (`[@citekey]`). Works with page numbers & multiple citations.
