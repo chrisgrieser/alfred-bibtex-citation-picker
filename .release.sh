@@ -7,11 +7,17 @@
 # new version number
 # -----------------------
 
-# prompt for version
-lastVersion=$(plutil -extract version xml1 -o - info.plist | sed -n 4p | cut -d">" -f2 | cut -d"<" -f1)
-echo "Last Version: $lastVersion"
-echo -n "Next Version: "
-read -r nextVersion
+# Prompt for version number, if not entered
+nextVersion="$*"
+currentVersion=$(plutil -extract version xml1 -o - info.plist | sed -n 4p | cut -d">" -f2 | cut -d"<" -f1)
+echo "current version: $currentVersion"
+echo -n "next version: "
+if [[ -z "$nextVersion" ]]; then
+	read -r nextVersion
+else
+	echo "$nextVersion"
+fi
+echo ""
 
 # Close Alfred Prefs to avoid conflicts
 osascript -e 'tell application "Alfred Preferences" to if it is running then quit'
@@ -20,7 +26,9 @@ osascript -e 'tell application "Alfred Preferences" to if it is running then qui
 plutil -replace version -string "$nextVersion" info.plist
 
 # Lint
-cd "$(dirname "$0")" || exit
+cd "$(dirname "$0")" || exit 1
+eslint --fix ./*/*.js
+eslint --fix ./*.js
 markdownlint --fix ./README.md
 markdown-link-check -q ./README.md
 
@@ -68,7 +76,7 @@ echo ""
 # -----------------------
 
 # update changelog
-echo "- ""$(date +"%Y-%m-%d")""	release $nextVersion" > ./Changelog.md
+echo "- $(date +"%Y-%m-%d")	release $nextVersion" > ./Changelog.md
 git log --pretty=format:"- %ad%x09%s" --date=short | grep -Ev "minor$" | grep -Ev "patch$" | grep -Ev "typos?$" | grep -v "refactoring" | grep -v "Add files via upload" | grep -Ev "\tDelete" | grep -Ev "\tUpdate.*\.md" | sed -E "s/\t\+ /\t/g" >> ./Changelog.md
 
 git add -A

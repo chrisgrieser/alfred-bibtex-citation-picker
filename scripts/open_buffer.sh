@@ -12,7 +12,10 @@ touch "$LAST_VERSION_FILE"
 [[ -e "$LAST_VERSION_FILE" ]] && LAST_RUN_VERSION=$(head -n1 "$LAST_VERSION_FILE")
 THIS_VERSION="$alfred_workflow_version"
 
-# reload buffer if outdated, manually requested reload, or new workflow version
+# reload buffer if
+# - outdated
+# - manually requested reload
+# - new workflow version
 if [[ "$LIBRARY" -nt "$BUFFER" ]] \
 	|| [[ "$buffer_reload" == "true" ]] \
 	|| [[ "$LAST_RUN_VERSION" != "$THIS_VERSION" ]] \
