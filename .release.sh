@@ -62,7 +62,7 @@ echo "Removed $exclusionNo variables flagged as 'no export' removed from 'info.p
 # -----------------------
 
 # remove any potentially existing leftover workflow file
-rm -f ./*.alfredworkflow
+rm -fv ./*.alfredworkflow
 
 # zip
 workflowName=$(plutil -extract name xml1 -o - info.plist | sed -n 4p | cut -d">" -f2 | cut -d"<" -f1)
@@ -71,7 +71,7 @@ zip --quiet -r "$workflowName.alfredworkflow" . -x ".git/*" ".github/*" "documen
 echo "new $workflowName.alfredworkflow file created."
 
 # restore original
-rm -f info.plist
+rm -fv info.plist
 mv -fv info-original.plist info.plist
 echo ""
 
