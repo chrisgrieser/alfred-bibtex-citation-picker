@@ -69,7 +69,7 @@ Press the hotkey in any text field to launch the citation picker.
 - `⌘ + C`: Copy the URL to the clipboard.
 
 ### Bibliography Actions
-- `⇧ + ↵`: Reveal the entry in [BibDesk](http://bibdesk.sourceforge.net) (if installed).
+- `⇧ + ↵`: Reveal the entry in [BibDesk](http://bibdesk.sourceforge.net) or [Sublime](https://www.sublimetext.com/), depending on the setting `open_entries_in`.
 - `fn + ↵`: Paste the full bibliographic entry in the APA 6th Style (requires [Pandoc](https://pandoc.org)).
 - `⌘ + L`: Preview the (unabridged) title, abstract, and list of keywords in Large Type.
 - `⌘fn + ↵`: Delete the entry from the BibTeX library (__Experimental__).
