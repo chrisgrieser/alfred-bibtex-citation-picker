@@ -1,3 +1,5 @@
+- 2022-03-15	release 7.9.0
+- 2022-03-15	new feature: library backups
 - 2022-03-15	release 7.8.0
 - 2022-03-15	added option to open entry in Sublime instead of Bibtex (shift+return)
 - 2022-03-15	entry deletion now creates a backup and informs notifies on problems
