@@ -1386,9 +1386,9 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>@{query}</string>
+				<string>{query}</string>
 				<key>title</key>
-				<string>✅ Entry deleted from BibTeX Library</string>
+				<string>✅ {var:citekey} deleted from BibTeX Library</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
