@@ -1,3 +1,5 @@
+- 2022-03-15	release 7.10.3
+- 2022-03-15	improved parsing
 - 2022-03-15	release 7.10.2
 - 2022-03-15	release 7.10.1
 - 2022-03-15	release 7.10.0
