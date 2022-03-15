@@ -1,3 +1,4 @@
+- 2022-03-15	release 7.10.0
 - 2022-03-15	release 7.9.0
 - 2022-03-15	new feature: library backups
 - 2022-03-15	release 7.8.0
