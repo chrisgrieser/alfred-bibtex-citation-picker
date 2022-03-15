@@ -7,7 +7,7 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 - Inserts __Pandoc Citation Syntax__ (`[@citekey]`). Works with page numbers & multiple citations.
 - __works system-wide__, in case you also work in another Markdown app.
 - __smart search:__ search for citekeys, authors, title, publication, keywords (tags), include/exclude authors in *et al*, tab-completion, fuzzy-matching, sorting recent entries to the top, …
-- __feature-rich:__ paste single-entry bibliographies, remove entries from your library *without opening a reference management app*, open URLs, open or create literature notes, search for `.csl` files online, …
+- __feature-rich:__ paste single-entry bibliographies, remove entries from your library *without opening a reference management app*, open URLs, open or create literature notes, search for `.csl` files online, library backups,…
 - __Obsidian integration:__ When located in an Obsidian vault, literature notes will automatically be opened/created in Obsidian. (Otherwise, they will be opened in the default app for markdown files.)
 - __very performant:__ considerably quicker than other citation pickers (~200ms to fully reload a library with ~4000 entries on my machine)
 - __easy installation:__ no dependencies, no required plugins, no setup (other then entering the path to your `.bib` file).
@@ -90,6 +90,11 @@ Triggered via the Alfred Keyword `scp` (for `S`upercharged `C`itation `P`icker).
 - __Cheatsheet: Pandoc Citation Syntax__: Open a cheat sheet for the Pandoc citation syntax.
 - __Cheatsheet: Citation Picker Actions__: Open a cheat sheet of the available actions of the Supercharged Citation Picker.
 - __Force Buffer Reload__: Force a reload of the citation picker for debugging purposes.
+- __Library Backup[^2]__: Create a Backup of your library in the location `backup_destination`, restricting the maximum number of backups to `max_number_of_bkps` (deleting the oldest backup). You can also use the following AppleScript to to trigger the backups, e.g. for a cron job:
+
+```applescript
+tell application id "com.runningwithcrayons.Alfred" to run trigger "BibTeX Library Backup" in workflow "de.chris-grieser.alfred-bibtex-citation-picker"
+```
 
 ## About the Developer
 In my day job, I am a sociologist studying the social mechanisms underlying the digital economy. For my PhD project, I investigate the governance of the app economy and how software ecosystems manage the tension between innovation and compatibility. If you are interested in this subject, feel free to get in touch!
@@ -114,3 +119,5 @@ In my day job, I am a sociologist studying the social mechanisms underlying the 
 <a href="https://www.flaticon.com/authors/freepik">Icons created by Freepik - Flaticon</a>
 
 [^1]: [QLmarkdown](https://github.com/sbarex/QLMarkdown) and [Peek](https://apps.apple.com/app/peek-quick-look-extension/id1554235898) both enable previewing of Markdown documents. Peek works with a wide range of other file types than Markdown, but costs around 5€. QLMarkdown is free, but only works for Markdown and requires some minor small setup. To enable the proper display of YAML headers, you need to enable the respective setting in the Advanced Options of QLMarkdown or Peek.
+
+[^2]: As per [MIT License](LICENSE), this app comes without any warranty in case of data loss. That being said, I never had any problems with the backups created.
