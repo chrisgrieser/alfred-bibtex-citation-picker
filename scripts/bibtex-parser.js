@@ -3,6 +3,7 @@
 
 class BibtexEntry {
 	constructor() {
+		// TODO: parse authors/editors as array
 		this.author = "";
 		this.editor = "";
 		this.type = "";
@@ -22,10 +23,10 @@ class BibtexEntry {
 		return /&| and /.test(this.editor);
 	}
 	get authorsEtAl() {
-		return this.author.replace (/&.*&.*/, "et al.");
+		return this.author.replace (/&.*?&.*/, "et al.");
 	}
 	get editorsEtAl() {
-		return this.editor.replace (/&.*&.*/, "et al.");
+		return this.editor.replace (/&.*?&.*/, "et al.");
 	}
 	get hasURL() {
 		return this.url !== "";
@@ -89,7 +90,7 @@ function bibtexDecode (encodedStr) {
 	return decodedStr;
 }
 
-function bibtexNameParse(nameString) {
+function ampersAndNoFirstNames(nameString) {
 	return nameString
 		.replace (/(, [A-Z]).+?(?= and|$)/gm, "") // remove first names
 		.replaceAll (" and ", " & ");
@@ -123,10 +124,10 @@ function bibtexParse (str) { // eslint-disable-line no-unused-vars
 
 				switch (field) {
 					case "author":
-						entry.author = bibtexNameParse(value);
+						entry.author = ampersAndNoFirstNames(value);
 						break;
 					case "editor":
-						entry.editor = bibtexNameParse(value);
+						entry.editor = ampersAndNoFirstNames(value);
 						break;
 					case "title":
 						entry.title = value;
