@@ -95,14 +95,19 @@ function bibtexNameParse(nameString) {
 		.replaceAll (" and ", " & ");
 }
 
+const bibtexEntryDelimiter = "@";
+const bibtexPropertyDelimiter = /,(?=\s*[\w-]+\s*=)/g; // last comma of a field, see: https://regex101.com/r/1dvpfC/1
+const bibtexValueListDelimiter = ",";
+
 // input: string
 // output: BibtexEntry object
 function bibtexParse (str) { // eslint-disable-line no-unused-vars
+
 	const bibtexEntryArray = bibtexDecode(str)
-		.split("@") // bitex entries delimited by "@"
-		.slice(1) // first element is only BibTeX metadata
+		.split(bibtexEntryDelimiter)
+		.slice(1) // first element is BibTeX metadata
 		.map(bibEntry => {
-			let lines = bibEntry.split(","); // bibtex properties delimited by ","
+			let lines = bibEntry.split(bibtexPropertyDelimiter);
 			const entry = new BibtexEntry();
 
 			// parse first line (separate since different formatting)
@@ -155,7 +160,7 @@ function bibtexParse (str) { // eslint-disable-line no-unused-vars
 						break;
 					case "keywords":
 						entry.keywords = value
-							.split(",")
+							.split(bibtexValueListDelimiter)
 							.map (t => t.trim());
 						break;
 				}
