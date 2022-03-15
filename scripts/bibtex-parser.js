@@ -99,10 +99,10 @@ function bibtexNameParse(nameString) {
 // output: BibtexEntry object
 function bibtexParse (str) { // eslint-disable-line no-unused-vars
 	const bibtexEntryArray = bibtexDecode(str)
-		.split("@") // entries delimited by "@"
+		.split("@") // bitex entries delimited by "@"
 		.slice(1) // first element is only BibTeX metadata
 		.map(bibEntry => {
-			let lines = bibEntry.split(","); // properties delimited by ","
+			let lines = bibEntry.split(","); // bibtex properties delimited by ","
 			const entry = new BibtexEntry();
 
 			// parse first line (separate since different formatting)
@@ -154,7 +154,9 @@ function bibtexParse (str) { // eslint-disable-line no-unused-vars
 						entry.booktitle = value;
 						break;
 					case "keywords":
-						entry.keywords = value.split(",").map (t => t.trim());
+						entry.keywords = value
+							.split(",")
+							.map (t => t.trim());
 						break;
 				}
 			});
