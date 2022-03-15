@@ -73,7 +73,7 @@ Press the hotkey in any text field to launch the citation picker.
 - `fn + ↵`: Paste the full bibliographic entry in the APA 6th Style (requires [Pandoc](https://pandoc.org)).
 - `⌘ + L`: Preview the (unabridged) title, abstract, and list of keywords in Large Type.
 - `⌘fn + ↵`: Delete the entry from the BibTeX library (__Experimental__).
-	- ⚠️ This feature is untested with BiBTeX files created with apps other than BibDesk and Bookends. Please make backups, and [create an issue](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues) for problems with other apps.
+	- ⚠️ This feature is untested with BiBTeX files created with apps other than BibDesk and Bookends. [Create an issue](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues) for problems with other apps.
 	- Note that this feature does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/), since the plugin does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file will be overridden.
 
 ### Literature Note Actions
