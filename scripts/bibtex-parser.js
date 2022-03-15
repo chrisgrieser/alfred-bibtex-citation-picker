@@ -1,9 +1,6 @@
 // Due to use with the JXA import hack, no "export" keyword is necessary.
 // https://github.com/JXA-Cookbook/JXA-Cookbook/wiki/Importing-Scripts
 
-// for Mac using JXA: \r, otherwise use \n
-const lineDelimiter = "\r";
-
 class BibtexEntry {
 	constructor() {
 		this.author = "";
@@ -102,21 +99,19 @@ function bibtexNameParse(nameString) {
 // output: BibtexEntry object
 function bibtexParse (str) { // eslint-disable-line no-unused-vars
 	const bibtexEntryArray = bibtexDecode(str)
-		.split("@")
+		.split("@") // entries delimited by "@"
 		.slice(1) // first element is only BibTeX metadata
 		.map(bibEntry => {
-			let lines = bibEntry.split(lineDelimiter);
+			let lines = bibEntry.split(","); // properties delimited by ","
 			const entry = new BibtexEntry();
 
 			// parse first line (separate since different formatting)
-			entry.type = lines[0].split("{")[0].toLowerCase();
-			entry.citekey = "@" + lines[0].split("{")[1]?.replace(/,$/, "");
+			entry.type = lines[0].split("{")[0].toLowerCase().trim();
+			entry.citekey = "@" + lines[0].split("{")[1]?.trim();
 			lines.shift();
 
-			// catch erroneous BibTeX formatting
-			lines = lines.filter(line => line.includes("="));
-
 			// parse remaining lines
+			lines = lines.filter(line => line.includes("=")); // catch erroneous BibTeX formatting
 			lines.forEach (line => {
 				const field = line.split("=")[0].trim().toLowerCase();
 				const value = line.split("=")[1].trim().replace(/{|}|,$/g, ""); // remove TeX escaping
