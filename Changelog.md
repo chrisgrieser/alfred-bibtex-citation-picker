@@ -1,3 +1,10 @@
+- 2022-03-15	release 7.8.0
+- 2022-03-15	added option to open entry in Sublime instead of Bibtex (shift+return)
+- 2022-03-15	entry deletion now creates a backup and informs notifies on problems
+- 2022-03-14	improved release workflow
+- 2022-03-14	improved release workflow
+- 2022-03-14	auto-reload buffer when there is a new workflow version
+- 2022-03-14	added table meanings to the readme
 - 2022-03-14	release 7.7.8
 - 2022-03-14	preview abstract with cmd+L
 - 2022-03-14	release 7.7.7
