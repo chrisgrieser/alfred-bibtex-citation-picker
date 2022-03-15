@@ -90,6 +90,7 @@ Triggered via the Alfred Keyword `scp` (for `S`upercharged `C`itation `P`icker).
 - __Cheatsheet: Pandoc Citation Syntax__: Open a cheat sheet for the Pandoc citation syntax.
 - __Cheatsheet: Citation Picker Actions__: Open a cheat sheet of the available actions of the Supercharged Citation Picker.
 - __Force Buffer Reload__: Force a reload of the citation picker for debugging purposes.
+- __Autocompletion List__: Create an autocompletion list formatted for use with the [Various Complements Plugin](https://obsidian.md/plugins?id=various-complements) in Obsidian.
 - __Library Backup[^2]__: Create a Backup of your library in the location `backup_destination`, restricting the maximum number of backups to `max_number_of_bkps` (deleting the oldest backup). You can also use the following AppleScript to to trigger the backups, e.g. for a cron job:
 
 ```applescript

@@ -86,6 +86,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>32375CD9-75B0-4A76-B38D-DC6AC299EEE8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>364BA351-E398-4944-9515-7BB0A03D179E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>32B06A25-A59A-4064-B28E-D284563C05B5</key>
 		<array>
 			<dict>
@@ -1202,7 +1215,7 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 				<key>fixedorder</key>
 				<false/>
 				<key>items</key>
-				<string>[{"title":"✍️ Search &amp; Download Citation Styles","arg":"csl","subtitle":".csl files"},{"title":"🔁 Force Buffer Reload","arg":"buffer_reload","subtitle":"for debugging purposes"},{"title":"🅿️ Pandoc Citation Syntax","arg":"Pandoc Citation Syntax.pdf","subtitle":"Cheatsheet"},{"title":"❓Citation Picker Actions","arg":"Actions Cheatsheet.webloc","subtitle":"Cheatsheet"},{"title":"📊 Bibliography Statistics","arg":"statistics"},{"title":"⬇️ Backup the Library","arg":"backup","subtitle":"max: {var:max_number_of_bkps}, location: {var:backup_destination}"},{"title":"🤖 Create Autocomplete List","arg":"autocomplete_list","subtitle":"for Obsidian Users"}]</string>
+				<string>[{"title":"✍️ Search &amp; Download Citation Styles","arg":"csl","subtitle":".csl files"},{"title":"🔁 Force Buffer Reload","arg":"buffer_reload","subtitle":"for debugging purposes"},{"title":"🅿️ Pandoc Citation Syntax","arg":"Pandoc Citation Syntax.pdf","subtitle":"Cheatsheet"},{"title":"❓Citation Picker Actions","arg":"Actions Cheatsheet.webloc","subtitle":"Cheatsheet"},{"title":"📊 Bibliography Statistics","arg":"statistics"},{"title":"⬇️ Backup the Library","arg":"backup","subtitle":"max: {var:max_number_of_bkps}, location: {var:backup_destination}"},{"title":"🤖 Create Autocomplete List","arg":"autocomplete_list","subtitle":"{var:autocomplete_list_location}"}]</string>
 				<key>keyword</key>
 				<string>scp</string>
 				<key>runningsubtext</key>
@@ -1664,33 +1677,6 @@ echo "$*"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>adduuid</key>
-				<false/>
-				<key>allowemptyfiles</key>
-				<true/>
-				<key>createintermediatefolders</key>
-				<false/>
-				<key>filename</key>
-				<string>~/Library/Mobile Documents/com~apple~CloudDocs/File Hub/citekey-autocomplete.md</string>
-				<key>filetext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>relativepathmode</key>
-				<integer>0</integer>
-				<key>type</key>
-				<integer>1</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.writefile</string>
-			<key>uid</key>
-			<string>32375CD9-75B0-4A76-B38D-DC6AC299EEE8</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -1710,6 +1696,52 @@ echo "$*"</string>
 			<string>32B06A25-A59A-4064-B28E-D284563C05B5</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>obsidian://advanced-uri?commandid=various-complements%253Areload-custom-dictionaries</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>364BA351-E398-4944-9515-7BB0A03D179E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>adduuid</key>
+				<false/>
+				<key>allowemptyfiles</key>
+				<true/>
+				<key>createintermediatefolders</key>
+				<true/>
+				<key>filename</key>
+				<string>{var:autocomplete_list_location}/citekey-autocomplete.md</string>
+				<key>filetext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>relativepathmode</key>
+				<integer>0</integer>
+				<key>type</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.writefile</string>
+			<key>uid</key>
+			<string>32375CD9-75B0-4A76-B38D-DC6AC299EEE8</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1966,6 +1998,17 @@ https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/Changelo
 			<integer>3</integer>
 			<key>xpos</key>
 			<integer>330</integer>
+			<key>ypos</key>
+			<integer>870</integer>
+		</dict>
+		<key>364BA351-E398-4944-9515-7BB0A03D179E</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>note</key>
+			<string>trigger reloading custom dictionaries</string>
+			<key>xpos</key>
+			<integer>655</integer>
 			<key>ypos</key>
 			<integer>870</integer>
 		</dict>
@@ -2279,6 +2322,10 @@ to set a hotkey for the citaiton picker.</string>
 		<string>56</string>
 		<key>auto_update</key>
 		<string>true</string>
+		<key>autocomplete_list_delimiter</key>
+		<string>|</string>
+		<key>autocomplete_list_location</key>
+		<string>~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Main Vault/Meta/Autocomplete Dictionary/</string>
 		<key>backup_destination</key>
 		<string>~/Library/Mobile Documents/com~apple~CloudDocs/Dotfolder/Backups/Library Backups/</string>
 		<key>bibtex_library_path</key>
@@ -2298,6 +2345,7 @@ to set a hotkey for the citaiton picker.</string>
 	<array>
 		<string>bibtex_library_path</string>
 		<string>backup_destination</string>
+		<string>autocomplete_list_location</string>
 		<string>literature_note_folder</string>
 		<string>open_entries_in</string>
 	</array>
