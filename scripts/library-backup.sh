@@ -7,6 +7,9 @@ LIBRARY_NAME="$(basename "$LIBRARY")"
 BACKUP_DESTINATION="${backup_destination/#\~/$HOME}"
 BACKUP_NAME="${TIMESTAMP}_$LIBRARY_NAME"
 
+# default to Desktop, if no location set
+[[ -z "$BACKUP_DESTINATION" ]] && BACKUP_DESTINATION=~/Desktop
+
 # copy
 cd "$BACKUP_DESTINATION" || exit 1
 cp "$LIBRARY" ./"$BACKUP_NAME"
