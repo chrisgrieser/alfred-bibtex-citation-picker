@@ -32,7 +32,7 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 
 		// https://tadashi-aikawa.github.io/docs-obsidian-various-complements-plugin/5.%20Terms/%F0%9F%93%9ACustom%20dictionaries/
 		const line = [
-			"[" + citekey + "]", // text to insert
+			citekey, // text to insert
 			title, // description
 			[...namesToMatch, year].join(" ") // match, using "partial" as matching strategy
 		].join(delimiter);
