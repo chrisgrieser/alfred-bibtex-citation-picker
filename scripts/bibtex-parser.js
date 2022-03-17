@@ -5,8 +5,6 @@ class BibtexEntry {
 	constructor() {
 		this.authors = []; // last names only
 		this.editors = [];
-		this.authorsFull = ""; // original values (first and last names)
-		this.editorsFull = "";
 		this.type = "";
 		this.citekey = "";
 		this.title = "";
@@ -131,11 +129,9 @@ function bibtexParse (str) { // eslint-disable-line no-unused-vars
 
 				switch (field) {
 					case "author":
-						entry.authorsFull = value;
 						entry.authors = toLastNameArray(value);
 						break;
 					case "editor":
-						entry.editorsFull = value;
 						entry.editors = toLastNameArray(value);
 						break;
 					case "title":
