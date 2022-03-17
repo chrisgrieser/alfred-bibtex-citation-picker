@@ -16,17 +16,23 @@ const maxTitleLength = 50;
 const rawBibtex = app.doShellScript('cat "' + libraryPath + '"');
 const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 	.map (entry => {
-		let { citekey, title, author } = entry;
-		const { year } = entry;
-		citekey = "[" + citekey + "]"; // add for Pandoc syntax
-		author = author.replaceAll("& ", "").replaceAll("et al. ", "");
-		if (title.length > maxTitleLength) title = title.slice(0, maxTitleLength); // shorten title for better display
+		let { citekey, title } = entry;
+		const { year, authors, editors } = entry;
+
+		// add for Pandoc syntax
+		citekey = "[" + citekey + "]";
+
+		let namesToMatch = authors;
+		if (!authors.length && editors.length) namesToMatch = editors;
+
+		// shorten title for better display in editor suggester
+		if (title.length > maxTitleLength) title = title.slice(0, maxTitleLength);
 
 		// https://tadashi-aikawa.github.io/docs-obsidian-various-complements-plugin/5.%20Terms/%F0%9F%93%9ACustom%20dictionaries/
 		const line = [
-			citekey, // text to insert
+			"[" + citekey + "]", // text to insert
 			title, // description
-			[author, author.toLowerCase(), year].join(" ") // match, using "partial" as matching strategy
+			[...namesToMatch, ...namesToMatch.toLowerCase(), year].join(" ") // match, using "partial" as matching strategy
 		].join(delimiter);
 
 		return line;
