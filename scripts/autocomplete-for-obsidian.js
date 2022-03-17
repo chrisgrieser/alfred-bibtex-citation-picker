@@ -22,8 +22,10 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		// add for Pandoc syntax
 		citekey = "[" + citekey + "]";
 
+		// match authors/editors, and also their lowercase
 		let namesToMatch = authors;
 		if (!authors.length && editors.length) namesToMatch = editors;
+		namesToMatch = namesToMatch.map (name => name + " " + name.toLowerCase());
 
 		// shorten title for better display in editor suggester
 		if (title.length > maxTitleLength) title = title.slice(0, maxTitleLength);
@@ -32,7 +34,7 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		const line = [
 			"[" + citekey + "]", // text to insert
 			title, // description
-			[...namesToMatch, ...namesToMatch.toLowerCase(), year].join(" ") // match, using "partial" as matching strategy
+			[...namesToMatch, year].join(" ") // match, using "partial" as matching strategy
 		].join(delimiter);
 
 		return line;
