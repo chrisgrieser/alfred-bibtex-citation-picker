@@ -35,7 +35,7 @@ const rawBibtex = app.doShellScript('cat "' + libraryPath + '"');
 const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 	.map(entry => {
 		const emojis = [];
-		const { title, url, citekey, keywords, type, journal, volume, issue, booktitle, author, editor, year, abstract } = entry;
+		const { title, url, citekey, keywords, type, journal, volume, issue, booktitle, authors, editors, year, abstract } = entry;
 
 		// Shorten Title
 		let shorterTitle = title;
@@ -97,17 +97,26 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		if (type === "incollection" && booktitle) collectionSubtitle += "    In: " + booktitle;
 
 		// display editor when no authors
-		let editorAbbrev = "(Ed.)";
-		if (entry.hasMultipleEditors) editorAbbrev = "(Eds.)";
-		let authoreditor = "";
-		if (author) authoreditor = entry.authorsEtAl + " ";
-		else if (!author && editor) authoreditor = entry.editorsEtAl + " " + editorAbbrev + " ";
+		let namesToDisplay = "";
+		let nameToTabComplete = "";
+		if (authors.length) {
+			// slight performance increase to assign them in the conditional,
+			// instead of always (and then editors on top)
+			namesToDisplay = entry.authorsEtAlString + " ";
+			nameToTabComplete = authors[0];
+		}
+		if (!authors.length && editors.length) {
+			namesToDisplay = entry.editorsEtAlString + " ";
+			if (editors.length > 1) namesToDisplay += "(Eds.)";
+			else namesToDisplay += "(Ed.)";
+			nameToTabComplete = editors[0];
+		}
 
 		// Matching for Smart Query
 		let keywordMatches = [];
 		if (keywords.length) keywordMatches = keywords.map(tag => "#" + tag);
-		let authorMatches = [author, editor];
-		if (!matchAuthorsInEtAl) authorMatches = [entry.authorsEtAl, entry.editorsEtAl];
+		let authorMatches = [...authors, ...editors];
+		if (!matchAuthorsInEtAl) authorMatches = [...authors.slice(0, 1), ...editors.slice(0, 1)];
 		const alfredMatcher = [citekey, ...keywordMatches, title, ...authorMatches, year, booktitle, journal, type]
 			.join(" ")
 			.replaceAll ("-", " ");
@@ -119,8 +128,8 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 
 		return {
 			"title": shorterTitle,
-			"autocomplete": authoreditor,
-			"subtitle": authoreditor + year + collectionSubtitle + "   " + emojis.join(" "),
+			"autocomplete": nameToTabComplete,
+			"subtitle": namesToDisplay + year + collectionSubtitle + "   " + emojis.join(" "),
 			"match": alfredMatcher,
 			"arg": citekey,
 			"icon": { "path": typeIcon },
@@ -132,7 +141,7 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 			"quicklookurl": litNotePath,
 			"mods": {
 				"ctrl": {
-					"valid": entry.hasURL,
+					"valid": url !== "",
 					"arg": url,
 					"subtitle": URLsubtitle,
 				},

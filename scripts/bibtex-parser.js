@@ -3,13 +3,14 @@
 
 class BibtexEntry {
 	constructor() {
-		// TODO: parse authors/editors as array
-		this.author = "";
-		this.editor = "";
+		this.authors = []; // last names only
+		this.editors = [];
+		this.authorsFull = ""; // original values (first and last names)
+		this.editorsFull = "";
 		this.type = "";
 		this.citekey = "";
 		this.title = "";
-		this.year = "";
+		this.year = ""; // no need for integer, since no calculations made
 		this.url = "";
 		this.booktitle = "";
 		this.journal = "";
@@ -19,17 +20,21 @@ class BibtexEntry {
 		this.abstract = "";
 		this.keywords = [];
 	}
-	get hasMultipleEditors() {
-		return /&| and /.test(this.editor);
+	get authorsEtAlString() {
+		switch (this.authors.length) {
+			case 0: return "";
+			case 1: return this.authors[0];
+			case 2: return this.authors.join(" & ");
+			default: return this.authors[0] + " et al. ";
+		}
 	}
-	get authorsEtAl() {
-		return this.author.replace (/&.*?&.*/, "et al.");
-	}
-	get editorsEtAl() {
-		return this.editor.replace (/&.*?&.*/, "et al.");
-	}
-	get hasURL() {
-		return this.url !== "";
+	get editorsEtAlString() {
+		switch (this.editors.length) {
+			case 0: return "";
+			case 1: return this.editors[0];
+			case 2: return this.editors.join(" & ");
+			default: return this.editors[0] + " et al. ";
+		}
 	}
 }
 
@@ -90,19 +95,21 @@ function bibtexDecode (encodedStr) {
 	return decodedStr;
 }
 
-function ampersAndNoFirstNames(nameString) {
-	return nameString
-		.replace (/(, [A-Z]).+?(?= and|$)/gm, "") // remove first names
-		.replaceAll (" and ", " & ");
-}
-
-const bibtexEntryDelimiter = "@";
-const bibtexPropertyDelimiter = /,(?=\s*[\w-]+\s*=)/g; // last comma of a field, see: https://regex101.com/r/1dvpfC/1
-const bibtexValueListDelimiter = ",";
 
 // input: string
 // output: BibtexEntry object
 function bibtexParse (str) { // eslint-disable-line no-unused-vars
+
+	const bibtexEntryDelimiter = "@";
+	const bibtexPropertyDelimiter = /,(?=\s*[\w-]+\s*=)/g; // last comma of a field, see: https://regex101.com/r/1dvpfC/1
+
+	function toLastNameArray(nameString) {
+		return nameString
+			.split(" and ") // array-fy
+			.map(name => name.split(",")[0]); // only last name
+	}
+
+	// -----------------------------
 
 	const bibtexEntryArray = bibtexDecode(str)
 		.split(bibtexEntryDelimiter)
@@ -124,10 +131,12 @@ function bibtexParse (str) { // eslint-disable-line no-unused-vars
 
 				switch (field) {
 					case "author":
-						entry.author = ampersAndNoFirstNames(value);
+						entry.authorsFull = value;
+						entry.authors = toLastNameArray(value);
 						break;
 					case "editor":
-						entry.editor = ampersAndNoFirstNames(value);
+						entry.editorsFull = value;
+						entry.editors = toLastNameArray(value);
 						break;
 					case "title":
 						entry.title = value;
@@ -161,7 +170,7 @@ function bibtexParse (str) { // eslint-disable-line no-unused-vars
 						break;
 					case "keywords":
 						entry.keywords = value
-							.split(bibtexValueListDelimiter)
+							.split(",")
 							.map (t => t.trim());
 						break;
 				}
