@@ -1,3 +1,5 @@
+- 2022-03-17	release 7.11.1
+- 2022-03-17	bugfix for Obsidian autocomplete list
 - 2022-03-17	release 7.11.0
 - 2022-03-17	better autocompletion list for Obsidian
 - 2022-03-15	release 7.10.5
