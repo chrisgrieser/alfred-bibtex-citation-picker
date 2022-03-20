@@ -25,7 +25,11 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		// match authors/editors, and also their lowercase
 		let namesToMatch = authors;
 		if (!authors.length && editors.length) namesToMatch = editors;
-		namesToMatch = namesToMatch.map (name => name + " " + name.toLowerCase());
+		const namesArr = [];
+		namesToMatch.forEach (name => {
+			namesArr.push(name);
+			namesArr.push(name.toLowerCase());
+		});
 
 		// shorten title for better display in editor suggester
 		if (title.length > maxTitleLength) title = title.slice(0, maxTitleLength);
@@ -34,7 +38,7 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		const line = [
 			citekey, // text to insert
 			title, // description
-			[...namesToMatch, year].join(" ") // match, using "partial" as matching strategy
+			...namesArr, year // matches, using "prefix" as matching strategy
 		].join(delimiter);
 
 		return line;

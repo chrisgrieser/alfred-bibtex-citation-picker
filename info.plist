@@ -59,6 +59,16 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>5B6D763D-7B64-4EA7-BCE2-0929216BA8D2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 		<key>1C0964D1-AA81-478A-B406-28E96DDD9E82</key>
 		<array>
@@ -561,7 +571,7 @@
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
-				<false/>
+				<true/>
 			</dict>
 		</array>
 		<key>FC604ACD-94BE-4F8B-B73C-8475943837C7</key>
@@ -1221,6 +1231,27 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>✅ {var:citekey} deleted from BibTeX Library</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>1B72EC4E-33E7-4144-B43B-3037510ADA3A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -1244,27 +1275,6 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 			<string>alfred.workflow.input.listfilter</string>
 			<key>uid</key>
 			<string>04E17547-EDD2-4C44-9F41-F15391DD8775</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>✅ {var:citekey} deleted from BibTeX Library</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>1B72EC4E-33E7-4144-B43B-3037510ADA3A</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1334,6 +1344,25 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>3FA32575-5519-475C-AFED-6182B53063A6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>citation-picker-loop</string>
+				<key>passinputasargument</key>
+				<false/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>5B6D763D-7B64-4EA7-BCE2-0929216BA8D2</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1975,18 +2004,18 @@ https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/Changelo
 			<key>note</key>
 			<string>Delete Entry</string>
 			<key>xpos</key>
-			<integer>1115</integer>
+			<integer>1050</integer>
 			<key>ypos</key>
-			<integer>375</integer>
+			<integer>370</integer>
 		</dict>
 		<key>1B72EC4E-33E7-4144-B43B-3037510ADA3A</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>1275</integer>
+			<integer>1230</integer>
 			<key>ypos</key>
-			<integer>375</integer>
+			<integer>320</integer>
 		</dict>
 		<key>1C0964D1-AA81-478A-B406-28E96DDD9E82</key>
 		<dict>
@@ -2064,9 +2093,9 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>885</integer>
+			<integer>835</integer>
 			<key>ypos</key>
-			<integer>405</integer>
+			<integer>400</integer>
 		</dict>
 		<key>406E52C6-C22D-4A6F-9C4D-3FEEFA513B34</key>
 		<dict>
@@ -2154,6 +2183,15 @@ to set a hotkey for the citaiton picker.</string>
 			<integer>860</integer>
 			<key>ypos</key>
 			<integer>620</integer>
+		</dict>
+		<key>5B6D763D-7B64-4EA7-BCE2-0929216BA8D2</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>xpos</key>
+			<integer>1230</integer>
+			<key>ypos</key>
+			<integer>440</integer>
 		</dict>
 		<key>5F683C78-5D0B-4A39-B3FF-37ABA8DA0D73</key>
 		<dict>
@@ -2336,9 +2374,9 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>940</integer>
+			<integer>890</integer>
 			<key>ypos</key>
-			<integer>375</integer>
+			<integer>370</integer>
 		</dict>
 		<key>FC604ACD-94BE-4F8B-B73C-8475943837C7</key>
 		<dict>
