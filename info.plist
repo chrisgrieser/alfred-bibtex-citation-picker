@@ -2006,7 +2006,7 @@ https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/Changelo
 			<key>xpos</key>
 			<integer>1050</integer>
 			<key>ypos</key>
-			<integer>370</integer>
+			<integer>365</integer>
 		</dict>
 		<key>1B72EC4E-33E7-4144-B43B-3037510ADA3A</key>
 		<dict>
@@ -2095,7 +2095,7 @@ to set a hotkey for the citaiton picker.</string>
 			<key>xpos</key>
 			<integer>835</integer>
 			<key>ypos</key>
-			<integer>400</integer>
+			<integer>395</integer>
 		</dict>
 		<key>406E52C6-C22D-4A6F-9C4D-3FEEFA513B34</key>
 		<dict>
@@ -2376,7 +2376,7 @@ to set a hotkey for the citaiton picker.</string>
 			<key>xpos</key>
 			<integer>890</integer>
 			<key>ypos</key>
-			<integer>370</integer>
+			<integer>365</integer>
 		</dict>
 		<key>FC604ACD-94BE-4F8B-B73C-8475943837C7</key>
 		<dict>
