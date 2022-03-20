@@ -3,13 +3,15 @@ ObjC.import("stdlib");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 
+const libraryPath = $.getenv("bibtex_library_path").replace(/^~/, app.pathTo("home folder"));
+
 // Import Hack, https://github.com/JXA-Cookbook/JXA-Cookbook/wiki/Importing-Scripts
 const toImport = "./scripts/bibtex-parser.js";
 eval (app.doShellScript('cat "' + toImport + '"'));
 
-const libraryPath = $.getenv("bibtex_library_path").replace(/^~/, app.pathTo("home folder"));
-const delimiter = "|"; // https://tadashi-aikawa.github.io/docs-obsidian-various-complements-plugin/4.%20Options/4.6.%20Custom%20dictionary%20complement/%E2%9A%99%EF%B8%8FColumn%20delimiter/
 const maxTitleLength = 50;
+const delimiter = "|"; // https://tadashi-aikawa.github.io/docs-obsidian-various-complements-plugin/4.%20Options/4.6.%20Custom%20dictionary%20complement/%E2%9A%99%EF%B8%8FColumn%20delimiter/
+const insertDisplayDelimiter = ">>>";
 
 // ----------
 
@@ -43,7 +45,7 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 
 		// https://tadashi-aikawa.github.io/docs-obsidian-various-complements-plugin/5.%20Terms/%F0%9F%93%9ACustom%20dictionaries/
 		const line = [
-			toDisplay + ">>>" + toInsert, // text to display -- to insert
+			toDisplay + insertDisplayDelimiter + toInsert,
 			title, // description
 			...namesArr, year // matches, using "prefix" as matching strategy
 		].join(delimiter);
