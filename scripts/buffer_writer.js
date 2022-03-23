@@ -35,7 +35,7 @@ const rawBibtex = app.doShellScript('cat "' + libraryPath + '"');
 const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 	.map(entry => {
 		const emojis = [];
-		const { title, url, citekey, keywords, type, journal, volume, issue, booktitle, authors, editors, year, abstract } = entry;
+		const { title, url, citekey, keywords, type, journal, volume, issue, booktitle, authors, editors, year, abstract, primaryNamesEtAlString, primaryNames } = entry;
 
 		// Shorten Title
 		let shorterTitle = title;
@@ -96,20 +96,11 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		}
 		if (type === "incollection" && booktitle) collectionSubtitle += "    In: " + booktitle;
 
-		// display editor when no authors
-		let namesToDisplay = "";
-		let nameToTabComplete = "";
-		if (authors.length) {
-			// slight performance increase to assign them in the conditional,
-			// instead of always (and then editors on top)
-			namesToDisplay = entry.authorsEtAlString + " ";
-			nameToTabComplete = authors[0];
-		}
+		// display editor and add "Ed." when no authors
+		let namesToDisplay = primaryNamesEtAlString + " ";
 		if (!authors.length && editors.length) {
-			namesToDisplay = entry.editorsEtAlString + " ";
 			if (editors.length > 1) namesToDisplay += "(Eds.)";
 			else namesToDisplay += "(Ed.)";
-			nameToTabComplete = editors[0];
 		}
 
 		// Matching for Smart Query
@@ -128,7 +119,7 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 
 		return {
 			"title": shorterTitle,
-			"autocomplete": nameToTabComplete,
+			"autocomplete": primaryNames[0],
 			"subtitle": namesToDisplay + year + collectionSubtitle + "   " + emojis.join(" "),
 			"match": alfredMatcher,
 			"arg": citekey,

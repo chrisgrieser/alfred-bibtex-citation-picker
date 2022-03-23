@@ -18,22 +18,25 @@ class BibtexEntry {
 		this.abstract = "";
 		this.keywords = [];
 	}
-	get authorsEtAlString() {
-		switch (this.authors.length) {
+
+	primaryNamesArr () {
+		if (this.authors.length) return this.authors;
+		return this.editors; // if both are empty, will also return empty array
+	}
+	etAlStringify (nameType) {
+		const names = nameType;
+		switch (names.length) {
 			case 0: return "";
-			case 1: return this.authors[0];
-			case 2: return this.authors.join(" & ");
-			default: return this.authors[0] + " et al. ";
+			case 1: return names[0];
+			case 2: return names.join(" & ");
+			default: return names[0] + " et al.";
 		}
 	}
-	get editorsEtAlString() {
-		switch (this.editors.length) {
-			case 0: return "";
-			case 1: return this.editors[0];
-			case 2: return this.editors.join(" & ");
-			default: return this.editors[0] + " et al. ";
-		}
-	}
+
+	get primaryNames () { return this.primaryNamesArr() }
+	get primaryNamesEtAlString () { return this.etAlStringify (this.primaryNamesArr()) }
+	get authorsEtAlString() { return this.etAlStringify (this.authors) }
+	get editorsEtAlString() { return this.etAlStringify (this.editors) }
 }
 
 const germanChars = [
@@ -68,7 +71,7 @@ const otherChars = [
 	"\\c{c};ç",
 	"\\o{};ø",
 	"\\^{i};î",
-	"\\\"{i};î",
+	"\\'\\i;í",
 	"\\\"{i};ï",
 	"{\\'c};ć",
 	"\\\"e;ë",

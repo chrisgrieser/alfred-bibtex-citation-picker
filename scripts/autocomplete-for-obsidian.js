@@ -18,36 +18,26 @@ const insertDisplayDelimiter = ">>>";
 const rawBibtex = app.doShellScript('cat "' + libraryPath + '"');
 const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 	.map (entry => {
-		let { title } = entry;
-		const { citekey, year, authors, editors } = entry;
+		const { title, citekey, year, primaryNamesEtAlString, primaryNames } = entry;
 
-		// add Pandoc syntax
-		const toInsert = "[" + citekey + "]";
+		const toInsert = "[" + citekey + "]"; // add Pandoc syntax
+		const toDisplay = primaryNamesEtAlString + " " + year;
 
-		// match authors/editors, and also their lowercase
-		let namesToMatch;
-		let toDisplay;
-		if (!authors.length && editors.length) {
-			namesToMatch = editors;
-			toDisplay = entry.editorsEtAlString + " " + year;
-		} else {
-			namesToMatch = authors;
-			toDisplay = entry.authorsEtAlString + " " + year;
-		}
-		const namesArr = [];
-		namesToMatch.forEach (name => {
-			namesArr.push(name);
-			namesArr.push(name.toLowerCase());
+		let desc = title; // shorten title for better display in editor suggester
+		if (title.length > maxTitleLength) desc = title.slice(0, maxTitleLength);
+
+		// match authors/editors, and also their lowercase, and the year
+		const toMatch = [year];
+		primaryNames.forEach (name => {
+			toMatch.push(name);
+			toMatch.push(name.toLowerCase());
 		});
-
-		// shorten title for better display in editor suggester
-		if (title.length > maxTitleLength) title = title.slice(0, maxTitleLength);
 
 		// https://tadashi-aikawa.github.io/docs-obsidian-various-complements-plugin/5.%20Terms/%F0%9F%93%9ACustom%20dictionaries/
 		const line = [
 			toDisplay + insertDisplayDelimiter + toInsert,
-			title, // description
-			...namesArr, year // matches, using "prefix" as matching strategy
+			desc,
+			toMatch
 		].join(delimiter);
 
 		return line;
