@@ -1,3 +1,7 @@
+- 2022-03-24	release 7.11.3
+- 2022-03-24	changes for debugging
+- 2022-03-20	autocompletelist distinguishes insert & displaytext
+- 2022-03-20	removing items does not close citation picker
 - 2022-03-17	release 7.11.2
 - 2022-03-17	release 7.11.1
 - 2022-03-17	bugfix for Obsidian autocomplete list
