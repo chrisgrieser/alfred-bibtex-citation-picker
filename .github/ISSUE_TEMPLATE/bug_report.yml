@@ -42,6 +42,13 @@ body:
     validations:
       required: true
   - type: textarea
+    id: buffer-files
+    attributes:
+      label: Buffer Files
+      description: 'Go to the folder `~/Library/Application Support/Alfred/Workflow Data/de.chris-grieser.alfred-bibtex-citation-picker/` and attach the two files that are located in that folder.'
+    validations:
+      required: true
+  - type: textarea
     id: workflow-configuration
     attributes:
       label: Workflow Configuration
