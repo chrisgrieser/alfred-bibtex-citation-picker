@@ -40,13 +40,12 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 
 ## Usage
 Press the hotkey in any text field to launch the citation picker.
-- Alternatively, you can use the Alfred keyword `ct` or the [snippet trigger](https://www.alfredapp.com/help/workflows/triggers/snippet/) `+++` (when snippet triggers are activated).
 
 ### Search
 - Search for the title, author/editor (last name), year, or, collection/journal-title.
 - Prepend `@` to search for a citekey, e.g. `@Grieser2020`.
 - Prepend `#` to search for keywords (tags), e.g. `#sociology`.
-- *Smart Queries*: You can search for any combination of the above. For example, the query `2020 #cognition Grieser` will filter for entries published in 2020, with the tag "cognition", and with "Grieser" as author/editor (fuzzy-matched).
+- *Smart Queries*: You can search for any combination of the above. For example, the query `2020 #cognition Grieser` will fuzzy-filter for entries published in 2020, with the tag "cognition", and with "Grieser" as author/editor.
 - The workflow setting `match_authors_in_etal` determines whether authors (or editors) in the *et al.* are still matched when searching for them (default: *true*).
 
 ### Citation Actions
