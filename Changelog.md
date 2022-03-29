@@ -1,3 +1,5 @@
+- 2022-03-29	release 7.12.0
+- 2022-03-29	'*' filters for entries with literature notes
 - 2022-03-24	release 7.11.3
 - 2022-03-24	changes for debugging
 - 2022-03-20	autocompletelist distinguishes insert & displaytext
