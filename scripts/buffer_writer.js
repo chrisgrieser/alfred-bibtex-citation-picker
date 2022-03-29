@@ -6,6 +6,7 @@ const urlIcon = "🌐";
 const litNoteIcon = "📓";
 const tagIcon = "🏷";
 const abstractIcon = "📄";
+const litNoteFilterStr = "*";
 
 const matchAuthorsInEtAl = $.getenv("match_authors_in_etal") === "true";
 const alfredBarLength = parseInt ($.getenv("alfred_bar_length"));
@@ -50,9 +51,12 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 
 		// Literature Notes
 		let litNotePath = "";
-		if (litNoteFolderCorrect && litNoteArray.includes(citekey.slice(1))) {
+		let litNoteMatcher = [];
+		const hasLitNote = litNoteFolderCorrect && litNoteArray.includes(citekey.slice(1));
+		if (hasLitNote) {
 			emojis.push(litNoteIcon);
 			litNotePath = litNoteFolder + "/" + citekey.slice(1) + ".md";
+			litNoteMatcher = [litNoteFilterStr];
 		}
 
 		// Emojis for Abstracts and Keywords (tags)
@@ -99,8 +103,8 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		// display editor and add "Ed." when no authors
 		let namesToDisplay = primaryNamesEtAlString + " ";
 		if (!authors.length && editors.length) {
-			if (editors.length > 1) namesToDisplay += "(Eds.)";
-			else namesToDisplay += "(Ed.)";
+			if (editors.length > 1) namesToDisplay += "(Eds.) ";
+			else namesToDisplay += "(Ed.) ";
 		}
 
 		// Matching for Smart Query
@@ -108,7 +112,7 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		if (keywords.length) keywordMatches = keywords.map(tag => "#" + tag);
 		let authorMatches = [...authors, ...editors];
 		if (!matchAuthorsInEtAl) authorMatches = [...authors.slice(0, 1), ...editors.slice(0, 1)];
-		const alfredMatcher = [citekey, ...keywordMatches, title, ...authorMatches, year, booktitle, journal, type]
+		const alfredMatcher = [citekey, ...keywordMatches, title, ...authorMatches, year, booktitle, journal, type, ...litNoteMatcher]
 			.join(" ")
 			.replaceAll ("-", " ");
 

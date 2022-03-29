@@ -43,9 +43,9 @@ Press the hotkey in any text field to launch the citation picker.
 
 ### Search
 - Search for the title, author/editor (last name), year, or, collection/journal-title.
-- Prepend `@` to search for a citekey, e.g. `@Grieser2020`.
+- Prepend `@` to a word to search for a citekey, e.g. `@Grieser2020`.
 - Prepend `#` to search for keywords (tags), e.g. `#sociology`.
-- *Smart Queries*: You can search for any combination of the above. For example, the query `2020 #cognition Grieser` will fuzzy-filter for entries published in 2020, with the tag "cognition", and with "Grieser" as author/editor.
+- *Smart Queries*: You can search for any combination of the above. For example, the query `2020 #cognition Grieser *` will fuzzy-filter for entries published in 2020, with the tag "cognition", and with "Grieser" as author/editor.
 - The workflow setting `match_authors_in_etal` determines whether authors (or editors) in the *et al.* are still matched when searching for them (default: *true*).
 
 ### Citation Actions
@@ -76,6 +76,7 @@ Press the hotkey in any text field to launch the citation picker.
 	- Note that this feature does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/), since the plugin does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file will be overridden.
 
 ### Literature Note Actions
+- Add `*` to any __search__ query to filter only for entries with literature notes, e.g. `* grieser` will search for entries from "Grieser" with literature notes. Can be combined with other queries (see: [smart queries](#search)).
 - `⌘⇧ + ↵`: Open the literature note.
 	- If the file is in an [Obsidian Vault](https://obsidian.md/), opens the file in Obsidian.
 	- If there is no literature note, a new one will be created.
