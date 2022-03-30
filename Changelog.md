@@ -1,3 +1,6 @@
+- 2022-03-30	release 7.13.1
+- 2022-03-30	add empty new entries manually
+- 2022-03-30	strip diacritics for citekey generation
 - 2022-03-30	release 7.13.0
 - 2022-03-30	added ebooks as source for fetching isbn data
 - 2022-03-30	adding entries supports isbn as well

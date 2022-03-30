@@ -2599,7 +2599,7 @@ to set a hotkey for the citaiton picker.</string>
 		<string>open_entries_in</string>
 	</array>
 	<key>version</key>
-	<string>7.13.0</string>
+	<string>7.13.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/chrisgrieser/alfred-bibtex-citation-picker</string>
 </dict>
