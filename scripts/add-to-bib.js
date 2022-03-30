@@ -4,7 +4,7 @@ function run (argv) {
 
 	const doiRegex = /^.*\/?(10\.\S+)\/?$/;
 	const isbnRegex = /^[\d-]{9,}$/;
-	const isEmptyRegex = /^$/;
+	const isEmptyRegex = /^ *$/;
 
 	const bibtexEntryTemplate = `@misc{NEW_ENTRY,
 	author = {Doe, Jane},
