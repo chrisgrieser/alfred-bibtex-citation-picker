@@ -72,8 +72,8 @@ Press the hotkey in any text field to launch the citation picker.
 - `⇧ + ↵`: Reveal the entry in [BibDesk](http://bibdesk.sourceforge.net), [VSCode](https://code.visualstudio.com), or [Sublime](https://www.sublimetext.com/), depending on the setting `open_entries_in`.
 - `fn + ↵`: Paste the full bibliographic entry in the APA 6th Style (requires [Pandoc](https://pandoc.org)).
 - `⌘ + L`: Preview the (unabridged) title, abstract, and list of keywords in Large Type.
-- `⌘fn + ↵`: Delete the entry from the BibTeX library (__Experimental__).
-	- ⚠️ This feature is untested with BiBTeX files created with apps other than BibDesk and Bookends. [Create an issue](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues) for problems with other apps.
+- `⌘fn + ↵`: Delete the entry from the BibTeX library.
+	- ⚠️ This feature is untested with BiBTeX files created with apps other than BibDesk and Bookends (or formatted with `bibtex-tidy`) [Create an issue](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues) for problems with other apps.
 - __add entries to the BibTex library__: use the Alfred Keyword `+`, followed by a DOI or ISBN
 	- the respective entry will be added to your library, with a properly formatted citekey (avoiding duplicates with existing library, etc.)
 	- Leave the input after the `+` empty to create a new, empty BibTeX entry.
