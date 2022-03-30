@@ -94,9 +94,15 @@ function run (argv) {
 
 	if (isISBN) {
 		const isbn = input;
-		// INFO: implement alternative fetching via amazon.lead or ebooks.de API? https://github.com/jkitchin/org-ref/blob/master/org-ref-isbn.el#L131
-		bibtexEntry = app.doShellScript (`curl -sHL "https://www.ottobib.com/isbn/${isbn}/bibtex"`);
-		if (bibtexEntry.includes('id="flash-notice">No Results for')) return "ERROR";
+		// try ebooks.de
+		bibtexEntry = app.doShellScript (`curl -sHL "https://www.ebook.de/de/tools/isbn2bibtex?isbn=${isbn}"`);
+
+		// try ottobib
+		if (bibtexEntry === "Not found")	{
+			bibtexEntry = app.doShellScript (`curl -sHL "https://www.ottobib.com/isbn/${isbn}/bibtex"`);
+			if (bibtexEntry.includes('id="flash-notice">No Results for')) return "ERROR";
+		}
+
 		bibtexEntry = bibtexEntry
 			.split(/<textarea.*?>/)[1].split("</textarea>")[0] // slice out only bibtex entry
 			.replace(/^ /gm, "\t") // add proper indention
