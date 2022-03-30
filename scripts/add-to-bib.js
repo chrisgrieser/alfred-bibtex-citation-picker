@@ -2,6 +2,17 @@
 
 function run (argv) {
 
+	const doiRegex = /^.*\/?(10\.\S+)\/?$/;
+	const isbnRegex = /^[\d-]{9,}$/;
+	const isEmptyRegex = /^$/;
+
+	const bibtexEntryTemplate = `@misc{NEW_ENTRY,
+	author = {Doe, Jane},
+	title = {NEW_ENTRY},
+	pages = {1--1},
+	year =
+}`;
+
 	// ----------------------
 	// JXA & Alfred specific
 	// ----------------------
@@ -26,9 +37,6 @@ function run (argv) {
 	const input = argv.join("");
 	const libraryPath = $.getenv("bibtex_library_path").replace(/^~/, app.pathTo("home folder"));
 	// ------------------
-
-	const doiRegex = /^.*\/?(10\.\S+)\/?$/;
-	const isbnRegex = /^[\d-]{9,}$/;
 
 	function generateCitekey (bibtexPropertyArr) {
 		function parseBibtexProperty (arr, property) {
@@ -66,8 +74,8 @@ function run (argv) {
 			.replace(/Ü|Ú|Û|Ù/g, "U")
 			.replace(/é|ê|è/g, "e")
 			.replace(/É|Ê|È/g, "E")
-			.replace(/í|î|ì|/g, "i")
-			.replace(/Í|Î|Ì|/g, "I")
+			.replace(/í|î|ì/g, "i")
+			.replace(/Í|Î|Ì/g, "I")
 			.replace(/ç/g, "c")
 			.replace(/Ç/g, "Ç");
 
@@ -97,7 +105,10 @@ function run (argv) {
 	let bibtexEntry;
 	const isDOI = doiRegex.test(input);
 	const isISBN = isbnRegex.test(input);
-	if (!isDOI && !isISBN) return "ERROR";
+	const isEmpty = isEmptyRegex.test(input);
+	if (!isDOI && !isISBN && !isEmpty) return "ERROR";
+
+	if (isEmpty) bibtexEntry = bibtexEntryTemplate;
 
 	if (isDOI) {
 		// transform input into doiURL, since that's what doi.org requires

@@ -21,19 +21,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>05FC4DA6-5B9D-403D-94E8-2240D8843850</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>0A29A16B-426C-4F0D-84E6-2CB0B361B0F3</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>0F739BDB-D7EC-482F-9798-A9B04AF57CA9</key>
 		<array>
 			<dict>
@@ -187,11 +174,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>4AFB2D24-E3AC-42C3-85FC-0C7F0D381876</key>
+		<key>4AE87B47-81EE-4552-A172-685A3F61D708</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>592A7342-45EE-47C2-B6E3-B577D191B9FF</string>
+				<string>2DC90122-FC40-44CA-8F59-E3C16AC99651</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -326,19 +313,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>5BCD679B-6AB5-450D-A207-5C6D9D4FC1AF</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>FF5D5F01-2101-4174-931A-2A55DF11F0DB</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>8B51C1A0-EAD2-457B-A532-6CC16C7F015E</key>
 		<array>
 			<dict>
@@ -402,7 +376,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>4AFB2D24-E3AC-42C3-85FC-0C7F0D381876</string>
+				<string>592A7342-45EE-47C2-B6E3-B577D191B9FF</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -533,18 +507,7 @@
 			</dict>
 		</array>
 		<key>C23E28E8-B257-4FF1-AAAE-BE855C749722</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>05FC4DA6-5B9D-403D-94E8-2240D8843850</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
+		<array/>
 		<key>C64ACAF0-66C8-48A8-A3C4-B55C7E282697</key>
 		<array>
 			<dict>
@@ -590,7 +553,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>FF5D5F01-2101-4174-931A-2A55DF11F0DB</string>
+				<string>2DC90122-FC40-44CA-8F59-E3C16AC99651</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -682,29 +645,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>E1D3B211-1CE6-4A09-B45E-7C55A61CDC06</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>FF5D5F01-2101-4174-931A-2A55DF11F0DB</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>2DC90122-FC40-44CA-8F59-E3C16AC99651</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>8D4C0AC3-F97B-4BBB-859C-E03E7AF64A87</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1956,21 +1896,6 @@ echo "$*"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>soundname</key>
-				<string>Blow</string>
-				<key>systemsound</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.playsound</string>
-			<key>uid</key>
-			<string>0A29A16B-426C-4F0D-84E6-2CB0B361B0F3</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -2014,62 +1939,12 @@ echo -n $file_name</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:mode}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>no sound</string>
-						<key>outputlabel</key>
-						<string>no</string>
-						<key>uid</key>
-						<string>FEA7E4E2-00DD-487A-B6A4-1A72E14035C4</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>yes</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
-			<key>uid</key>
-			<string>05FC4DA6-5B9D-403D-94E8-2240D8843850</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict>
-					<key>mode</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>4AFB2D24-E3AC-42C3-85FC-0C7F0D381876</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>keyword</key>
 				<string>+</string>
 				<key>subtext</key>
-				<string>Enter DOI or ISBN</string>
+				<string>Enter DOI or ISBN. Leave empty to insert empty Bibtex Entry.</string>
 				<key>text</key>
 				<string>Add to Bibliography</string>
 				<key>withspace</key>
@@ -2078,7 +1953,7 @@ echo -n $file_name</string>
 			<key>type</key>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>5BCD679B-6AB5-450D-A207-5C6D9D4FC1AF</string>
+			<string>4AE87B47-81EE-4552-A172-685A3F61D708</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -2138,6 +2013,27 @@ echo -n $file_name</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string>\n$</string>
+				<key>regexcaseinsensitive</key>
+				<false/>
+				<key>regexmultiline</key>
+				<false/>
+				<key>replacestring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.replace</string>
+			<key>uid</key>
+			<string>EAB97E20-9E68-486A-86C2-A4ABD8F1A50D</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -2174,56 +2070,6 @@ echo -n $file_name</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>matchmode</key>
-				<integer>1</integer>
-				<key>matchstring</key>
-				<string>\n$</string>
-				<key>regexcaseinsensitive</key>
-				<false/>
-				<key>regexmultiline</key>
-				<false/>
-				<key>replacestring</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.replace</string>
-			<key>uid</key>
-			<string>EAB97E20-9E68-486A-86C2-A4ABD8F1A50D</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.junction</string>
-			<key>uid</key>
-			<string>FF5D5F01-2101-4174-931A-2A55DF11F0DB</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string></string>
-				<key>title</key>
-				<string>⏳ Fetching Bibliography...</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>8D4C0AC3-F97B-4BBB-859C-E03E7AF64A87</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>triggerid</key>
 				<string>add-doi-to-library</string>
 			</dict>
@@ -2253,26 +2099,6 @@ https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/Changelo
 			<integer>15</integer>
 			<key>ypos</key>
 			<integer>330</integer>
-		</dict>
-		<key>05FC4DA6-5B9D-403D-94E8-2240D8843850</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>3</integer>
-			<key>note</key>
-			<string>sound</string>
-			<key>xpos</key>
-			<integer>605</integer>
-			<key>ypos</key>
-			<integer>1060</integer>
-		</dict>
-		<key>0A29A16B-426C-4F0D-84E6-2CB0B361B0F3</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>3</integer>
-			<key>xpos</key>
-			<integer>705</integer>
-			<key>ypos</key>
-			<integer>1040</integer>
 		</dict>
 		<key>0F739BDB-D7EC-482F-9798-A9B04AF57CA9</key>
 		<dict>
@@ -2326,9 +2152,9 @@ https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/Changelo
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>280</integer>
+			<integer>240</integer>
 			<key>ypos</key>
-			<integer>1220</integer>
+			<integer>1255</integer>
 		</dict>
 		<key>30006A6B-EAF9-4531-8694-5E878A0FB80E</key>
 		<dict>
@@ -2412,14 +2238,16 @@ to set a hotkey for the citaiton picker.</string>
 			<key>ypos</key>
 			<integer>15</integer>
 		</dict>
-		<key>4AFB2D24-E3AC-42C3-85FC-0C7F0D381876</key>
+		<key>4AE87B47-81EE-4552-A172-685A3F61D708</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>9</integer>
+			<key>note</key>
+			<string>add doi/isbn</string>
 			<key>xpos</key>
-			<integer>200</integer>
+			<integer>45</integer>
 			<key>ypos</key>
-			<integer>1070</integer>
+			<integer>1190</integer>
 		</dict>
 		<key>52086B7A-EF1C-4884-AEDC-66649A98E4BE</key>
 		<dict>
@@ -2464,7 +2292,7 @@ to set a hotkey for the citaiton picker.</string>
 			<key>note</key>
 			<string>backup</string>
 			<key>xpos</key>
-			<integer>275</integer>
+			<integer>285</integer>
 			<key>ypos</key>
 			<integer>1040</integer>
 		</dict>
@@ -2487,15 +2315,6 @@ to set a hotkey for the citaiton picker.</string>
 			<integer>1230</integer>
 			<key>ypos</key>
 			<integer>440</integer>
-		</dict>
-		<key>5BCD679B-6AB5-450D-A207-5C6D9D4FC1AF</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<integer>45</integer>
-			<key>ypos</key>
-			<integer>1220</integer>
 		</dict>
 		<key>5F683C78-5D0B-4A39-B3FF-37ABA8DA0D73</key>
 		<dict>
@@ -2546,15 +2365,6 @@ to set a hotkey for the citaiton picker.</string>
 			<key>ypos</key>
 			<integer>25</integer>
 		</dict>
-		<key>8D4C0AC3-F97B-4BBB-859C-E03E7AF64A87</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<integer>280</integer>
-			<key>ypos</key>
-			<integer>1355</integer>
-		</dict>
 		<key>96FCE9BC-5201-4357-9B63-588F73AEF5F3</key>
 		<dict>
 			<key>colorindex</key>
@@ -2600,9 +2410,9 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>1</integer>
 			<key>xpos</key>
-			<integer>885</integer>
+			<integer>620</integer>
 			<key>ypos</key>
-			<integer>1250</integer>
+			<integer>1320</integer>
 		</dict>
 		<key>B8AEF220-7CBC-4D07-BA5F-D28094B3D4B4</key>
 		<dict>
@@ -2620,18 +2430,18 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>770</integer>
+			<integer>540</integer>
 			<key>ypos</key>
-			<integer>1240</integer>
+			<integer>1275</integer>
 		</dict>
 		<key>BC96745A-7E6E-40E4-AAF2-71E1CACC9C4F</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>1</integer>
 			<key>xpos</key>
-			<integer>1040</integer>
+			<integer>770</integer>
 			<key>ypos</key>
-			<integer>1250</integer>
+			<integer>1320</integer>
 		</dict>
 		<key>C23E28E8-B257-4FF1-AAAE-BE855C749722</key>
 		<dict>
@@ -2682,7 +2492,7 @@ to set a hotkey for the citaiton picker.</string>
 			<key>xpos</key>
 			<integer>45</integer>
 			<key>ypos</key>
-			<integer>1355</integer>
+			<integer>1325</integer>
 		</dict>
 		<key>DD59F90F-8FD2-486D-A8A8-2FFA47DE45F6</key>
 		<dict>
@@ -2716,9 +2526,9 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>445</integer>
+			<integer>385</integer>
 			<key>ypos</key>
-			<integer>1250</integer>
+			<integer>1285</integer>
 		</dict>
 		<key>F3277ACA-347A-4332-8D43-956E55757ED9</key>
 		<dict>
@@ -2755,15 +2565,6 @@ to set a hotkey for the citaiton picker.</string>
 			<integer>845</integer>
 			<key>ypos</key>
 			<integer>15</integer>
-		</dict>
-		<key>FF5D5F01-2101-4174-931A-2A55DF11F0DB</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<integer>200</integer>
-			<key>ypos</key>
-			<integer>1315</integer>
 		</dict>
 	</dict>
 	<key>variables</key>
