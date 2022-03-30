@@ -1,3 +1,4 @@
+- 2022-03-30	release 7.13.2
 - 2022-03-30	release 7.13.1
 - 2022-03-30	add empty new entries manually
 - 2022-03-30	strip diacritics for citekey generation

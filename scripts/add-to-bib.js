@@ -110,7 +110,7 @@ function run (argv) {
 		// get bibtex entry & filter it & generate new citekey
 		bibtexEntry = app.doShellScript (`curl -sLH "Accept: application/x-bibtex" "${doiURL}"`); // https://citation.crosscite.org/docs.html
 		if (bibtexEntry.includes("<title>Error: DOI Not Found</title>")) return "ERROR";
-		bibtexEntry = bibtexEntry.replace(/\t(month|issn) = .*\r/,""); // clean up
+		bibtexEntry = bibtexEntry.replace(/\t(month|issn) = .*\r/, ""); // clean up
 	}
 
 	if (isISBN) {
