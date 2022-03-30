@@ -1,3 +1,11 @@
+- 2022-03-30	release 7.13.0
+- 2022-03-30	added ebooks as source for fetching isbn data
+- 2022-03-30	adding entries supports isbn as well
+- 2022-03-30	'open_entries_with' now also supports vscode
+- 2022-03-30	added failsafe for invalid DOIs
+- 2022-03-30	avoids duplicate citekeys
+- 2022-03-30	basic citekey generation + included popclip companion extension
+- 2022-03-30	add to library function
 - 2022-03-29	release 7.12.0
 - 2022-03-29	'*' filters for entries with literature notes
 - 2022-03-24	release 7.11.3
