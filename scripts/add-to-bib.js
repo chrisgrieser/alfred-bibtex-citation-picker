@@ -98,7 +98,6 @@ function run (argv) {
 	// --------------------
 
 	let bibtexEntry;
-	let newCitekey;
 	const isDOI = doiRegex.test(input);
 	const isISBN = isbnRegex.test(input);
 	const isEmpty = isEmptyRegex.test(input);
@@ -134,6 +133,7 @@ function run (argv) {
 
 
 	let newEntry;
+	let newCitekey;
 	if (isEmpty) {
 		newEntry = bibtexEntryTemplate;
 		newCitekey = "NEW_ENTRY";
@@ -144,7 +144,6 @@ function run (argv) {
 		newEntry = newEntryProperties.join("\n") + "\n";
 	}
 
-	// result
 	appendToFile(newEntry, libraryPath);
 	return newCitekey; // pass for opening
 }

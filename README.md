@@ -95,6 +95,7 @@ Triggered via the Alfred Keyword `scp` (for `S`upercharged `C`itation `P`icker).
 - __Cheatsheet: Pandoc Citation Syntax__: Open a cheat sheet for the Pandoc citation syntax.
 - __Cheatsheet: Citation Picker Actions__: Open a cheat sheet of the available actions of the Supercharged Citation Picker.
 - __Force Buffer Reload__: Force a reload of the citation picker for debugging purposes.
+- __Run BibTeX-Tidy__: Runs [`bibtex-tidy`](https://github.com/FlamingTempura/bibtex-tidy) with the options set in `bibtex_tidy_options` in the terminal.[^4]  
 - __Autocompletion List__: Create an autocompletion list formatted for use with the [Various Complements Plugin](https://obsidian.md/plugins?id=various-complements) in Obsidian.[^3]
 - __Library Backup[^2]__: Create a Backup of your library in the location `backup_destination`, restricting the maximum number of backups to `max_number_of_bkps` (deleting the oldest backup). You can also use the following AppleScript to to trigger the backups, e.g. for a cron job:
 
@@ -129,3 +130,5 @@ In my day job, I am a sociologist studying the social mechanisms underlying the 
 [^2]: As per [MIT License](LICENSE), this app comes without any warranty in case of data loss. That being said, I never had any problems with the backups created.
 
 [^3]: Set the workflow setting `autocomplete_list_location` to the *absolute* path where the file should be created and use a `.md` extension. In the Various Complements settings, use "Prefix" as Matching Strategy, Pipe (`|`) as Delimiter, enable Custom Dictionaries, add the previously created file to the custom dictionary list, and set `Delimiter to divide suggestions for display from ones for insertion` to `>>>`. Afterwards, reload custom dictionaries via the command palette. (If the [Advanced URI Plugin](https://obsidian.md/plugins?id=obsidian-advanced-uri) is installed, the reloading of the custom dictionaries will be triggered automatically, if the file is already in the custom dictionary list!)
+
+[^4]: Uses the app [set as default terminal in the Alfred preferences](https://www.alfredapp.com/help/features/terminal/).
