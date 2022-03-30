@@ -4,12 +4,15 @@ export PATH=/usr/local/bin/:/opt/homebrew/bin/:$PATH
 
 LIBRARY="${bibtex_library_path/#\~/$HOME}"
 CITEKEY="$*"
-LINE_NO=$(grep -n "{$CITEKEY," "$LIBRARY" | head -n1 | cut -d' ' -f1)
+CITEKEY="${CITEKEY/@/}"
+LINE_NO=$(grep -n "{$CITEKEY," "$LIBRARY" | head -n1 | cut -d':' -f1)
+echo "$LINE_NO"
 
 if [[ "$open_entries_in:l" =~ "bibdesk" ]]; then
 	open "x-bdsk://$CITEKEY"
 elif [[ "$open_entries_in:l" =~ "sublime" ]]; then
-	subl "$LIBRARY:$LINE_NO"
+	# using full path makes this work even if `subl` hasn't been added to PATH
+	"/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" "$LIBRARY:$LINE_NO"
 elif [[ "$open_entries_in:l" =~ "vscode" ]]; then
 	code "$LIBRARY:$LINE_NO"
 elif [[ "$open_entries_in:l" =~ "vs code" ]]; then

@@ -13,7 +13,6 @@ DIFFERENCE=$((ENTRIES_BEFORE - ENTRIES_AFTER))
 
 # pass for notication in Alfred
 if [[ $DIFFERENCE == 1 ]]; then
-	echo "Library now has $ENTRIES_AFTER entries."
 	mv -f "$LIBRARY.bak" ~./Trash
 else
 	echo "Error, deleted $DIFFERENCE citations. Check Backup file (ending with .bak) in library location."
