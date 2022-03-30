@@ -1,3 +1,5 @@
+- 2022-03-30	release 8.0.0
+- 2022-03-30	auto-filing avoids overwriting existing pdf
 - 2022-03-30	release 7.15.0
 - 2022-03-30	✨ autofile & autorename PDFs
 - 2022-03-30	release 7.14.0
