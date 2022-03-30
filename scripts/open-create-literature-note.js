@@ -5,7 +5,7 @@ function run (argv) {
 	const app = Application.currentApplication();
 	app.includeStandardAdditions = true;
 
-	const citekey = argv.join("").replace(/^@/, "");
+	const citekey = argv.join("");
 	const literatureNotePath = $.getenv("literature_note_folder")
 		.replace(/^~/, app.pathTo("home folder"))
 		+ "/" + citekey + ".md";

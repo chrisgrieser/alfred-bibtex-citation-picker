@@ -6,7 +6,7 @@ class BibtexEntry {
 		this.authors = []; // last names only
 		this.editors = [];
 		this.type = "";
-		this.citekey = "";
+		this.citekey = ""; // without "@"
 		this.title = "";
 		this.year = ""; // no need for integer, since no calculations made
 		this.url = "";
@@ -124,7 +124,7 @@ function bibtexParse (str) { // eslint-disable-line no-unused-vars
 
 			// parse first line (separate since different formatting)
 			entry.type = lines[0].split("{")[0].toLowerCase().trim();
-			entry.citekey = "@" + lines[0].split("{")[1]?.trim();
+			entry.citekey = lines[0].split("{")[1]?.trim();
 			lines.shift();
 
 			// parse remaining lines

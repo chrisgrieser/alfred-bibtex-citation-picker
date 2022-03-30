@@ -13,4 +13,5 @@ echo -n "$DUMMYDOC" \
 	--csl="assets/$CSL" --bibliography="$LIBRARY" \
 	| tr "\n" " " \
 	| tr -s " " \
-	| sed "s/^ //p"
+	| sed "s/^ //p" \
+	| sed "s/ $//p" \

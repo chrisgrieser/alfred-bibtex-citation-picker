@@ -122,6 +122,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>346A58DA-B1B4-4F03-8F05-20B42A4EF996</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FCCA3147-A52B-4254-938A-C8EFA2FF7933</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>364BA351-E398-4944-9515-7BB0A03D179E</key>
 		<array>
 			<dict>
@@ -338,6 +351,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>7E602D21-0A78-4DC6-A807-28A5602897C8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>346A58DA-B1B4-4F03-8F05-20B42A4EF996</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>8B51C1A0-EAD2-457B-A532-6CC16C7F015E</key>
 		<array>
 			<dict>
@@ -411,7 +437,18 @@
 			</dict>
 		</array>
 		<key>AF128420-2209-43A6-B83B-C8F548CAD6A1</key>
-		<array/>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>254C2241-0AE4-4F52-A073-16E3DEFC9384</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>B8AEF220-7CBC-4D07-BA5F-D28094B3D4B4</key>
 		<array>
 			<dict>
@@ -448,21 +485,21 @@
 				<key>destinationuid</key>
 				<string>96FCE9BC-5201-4357-9B63-588F73AEF5F3</string>
 				<key>modifiers</key>
-				<integer>8388608</integer>
+				<integer>1572864</integer>
 				<key>modifiersubtext</key>
-				<string>fn: Paste Bibliography</string>
+				<string>⌘⌥: Paste Bibliography</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>3FA32575-5519-475C-AFED-6182B53063A6</string>
+				<string>AF09AE5D-C351-4190-8AA6-B1924D88B22F</string>
 				<key>modifiers</key>
-				<integer>9437184</integer>
+				<integer>131072</integer>
 				<key>modifiersubtext</key>
-				<string>⌘+fn: Delete BibTeX Entry (⚠️ Experimental)</string>
+				<string>⇧: Open in {var:open_entries_in}</string>
 				<key>vitoclose</key>
-				<true/>
+				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -486,27 +523,27 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>AF09AE5D-C351-4190-8AA6-B1924D88B22F</string>
+				<string>7E602D21-0A78-4DC6-A807-28A5602897C8</string>
 				<key>modifiers</key>
-				<integer>131072</integer>
+				<integer>8388608</integer>
 				<key>modifiersubtext</key>
-				<string>⇧: Open in {var:open_entries_in}</string>
+				<string>fn: Auto-File PDF</string>
 				<key>vitoclose</key>
 				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>3FA32575-5519-475C-AFED-6182B53063A6</string>
+				<key>modifiers</key>
+				<integer>9437184</integer>
+				<key>modifiersubtext</key>
+				<string>⌘+fn: Delete BibTeX Entry (⚠️ Experimental)</string>
+				<key>vitoclose</key>
+				<true/>
 			</dict>
 		</array>
 		<key>BC0E1F77-0045-40D3-845C-946E6BCFC90D</key>
 		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>AF128420-2209-43A6-B83B-C8F548CAD6A1</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
 			<dict>
 				<key>destinationuid</key>
 				<string>AF09AE5D-C351-4190-8AA6-B1924D88B22F</string>
@@ -516,6 +553,16 @@
 				<string></string>
 				<key>sourceoutputuid</key>
 				<string>14FB4C6A-E89A-4DBE-8F36-87C64E7B4314</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>AF128420-2209-43A6-B83B-C8F548CAD6A1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -679,14 +726,6 @@
 	<key>objects</key>
 	<array>
 		<dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.junction</string>
-			<key>uid</key>
-			<string>FE122FB8-705A-4169-9391-1F91038FDFB6</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
 			<key>config</key>
 			<dict>
 				<key>action</key>
@@ -718,6 +757,14 @@
 			<integer>2</integer>
 		</dict>
 		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>FE122FB8-705A-4169-9391-1F91038FDFB6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
 			<key>config</key>
 			<dict>
 				<key>triggerid</key>
@@ -727,25 +774,6 @@
 			<string>alfred.workflow.trigger.external</string>
 			<key>uid</key>
 			<string>4771A40C-E741-46C5-93EF-82CEB4BD23D8</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>subtext</key>
-				<string>⌘ or ⌥: add another citation afterwards</string>
-				<key>text</key>
-				<string>Enter Page Number(s)</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>8B51C1A0-EAD2-457B-A532-6CC16C7F015E</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -771,17 +799,19 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string>{var:pageless_citation}, p. {query}</string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>subtext</key>
+				<string>⌘ or ⌥: add another citation afterwards</string>
+				<key>text</key>
+				<string>Enter Page Number(s)</string>
+				<key>withspace</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
+			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>E1D3B211-1CE6-4A09-B45E-7C55A61CDC06</string>
+			<string>8B51C1A0-EAD2-457B-A532-6CC16C7F015E</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -802,6 +832,23 @@
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>DD59F90F-8FD2-486D-A8A8-2FFA47DE45F6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{var:pageless_citation}, p. {query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>E1D3B211-1CE6-4A09-B45E-7C55A61CDC06</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -841,6 +888,116 @@
 			<string>1C0964D1-AA81-478A-B406-28E96DDD9E82</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string># THESE VARIABLES MUST BE SET. SEE THE ONEUPDATER README FOR AN EXPLANATION OF EACH.
+readonly remote_info_plist='https://raw.githubusercontent.com/chrisgrieser/alfred-bibtex-citation-picker/main/info.plist'
+readonly workflow_url='chrisgrieser/alfred-bibtex-citation-picker'
+readonly download_type='github_release'
+readonly frequency_check='1'
+
+# FROM HERE ON, CODE SHOULD BE LEFT UNTOUCHED!
+function abort {
+  echo "${1}" &gt;&amp;2
+  exit 1
+}
+
+function url_exists {
+  curl --silent --location --output /dev/null --fail --range 0-0 "${1}"
+}
+
+function notification {
+  local -r notificator="$(find . -type d -name 'Notificator.app')"
+  if [[ -n "${notificator}" ]]; then
+    "${notificator}/Contents/Resources/Scripts/notificator" --message "${1}" --title "${alfred_workflow_name}" --subtitle 'A new version is available'
+    return
+  fi
+
+  local -r terminal_notifier="$(find . -type f -name 'terminal-notifier')"
+  if [[ -n "${terminal_notifier}" ]]; then
+    "${terminal_notifier}" -title "${alfred_workflow_name}" -subtitle 'A new version is available' -message "${1}"
+    return
+  fi
+
+  osascript -e "display notification \"${1}\" with title \"${alfred_workflow_name}\" subtitle \"A new version is available\""
+}
+
+# Local sanity checks
+readonly local_info_plist='info.plist'
+readonly local_version="$(/usr/libexec/PlistBuddy -c 'print version' "${local_info_plist}")"
+
+[[ -n "${local_version}" ]] || abort 'You need to set a workflow version in the configuration sheet.'
+[[ "${download_type}" =~ ^(direct|page|github_release)$ ]] || abort "'download_type' (${download_type}) needs to be one of 'direct', 'page', or 'github_release'."
+[[ "${frequency_check}" =~ ^[0-9]+$ ]] || abort "'frequency_check' (${frequency_check}) needs to be a number."
+
+# Check for updates
+if [[ $(find "${local_info_plist}" -mtime +"${frequency_check}"d) ]]; then
+  if ! url_exists "${remote_info_plist}"; then abort "'remote_info_plist' (${remote_info_plist}) appears to not be reachable."; fi # Remote sanity check
+
+  readonly tmp_file="$(mktemp)"
+  curl --silent --location --output "${tmp_file}" "${remote_info_plist}"
+  readonly remote_version="$(/usr/libexec/PlistBuddy -c 'print version' "${tmp_file}")"
+
+  if [[ "${local_version}" == "${remote_version}" ]]; then
+    touch "${local_info_plist}" # Reset timer by touching local file
+    exit 0
+  fi
+
+  if [[ "${download_type}" == 'page' ]]; then
+    notification 'Opening download page…'
+    open "${workflow_url}"
+    exit 0
+  fi
+
+  download_url="$([[ "${download_type}" == 'github_release' ]] &amp;&amp; curl --silent "https://api.github.com/repos/${workflow_url}/releases/latest" | grep 'browser_download_url' | head -1 | sed -E 's/.*browser_download_url": "(.*)"/\1/' || echo "${workflow_url}")"
+
+  if url_exists "${download_url}"; then
+    notification 'Downloading and installing…'
+    curl --silent --location --output "${HOME}/Downloads/${alfred_workflow_name}.alfredworkflow" "${download_url}"
+    open "${HOME}/Downloads/${alfred_workflow_name}.alfredworkflow"
+  else
+    abort "'workflow_url' (${download_url}) appears to not be reachable."
+  fi
+fi</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>65CA24BA-2DA6-4DC0-A2BE-3E4E4D5FDD72</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>[{query}]</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>CB4D33E2-A031-4542-A640-3B73D66EE39E</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1055,116 +1212,6 @@ JSON.stringify({ 'items': entry_array });
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<true/>
-				<key>clipboardtext</key>
-				<string>[{query}]</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>CB4D33E2-A031-4542-A640-3B73D66EE39E</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string># THESE VARIABLES MUST BE SET. SEE THE ONEUPDATER README FOR AN EXPLANATION OF EACH.
-readonly remote_info_plist='https://raw.githubusercontent.com/chrisgrieser/alfred-bibtex-citation-picker/main/info.plist'
-readonly workflow_url='chrisgrieser/alfred-bibtex-citation-picker'
-readonly download_type='github_release'
-readonly frequency_check='1'
-
-# FROM HERE ON, CODE SHOULD BE LEFT UNTOUCHED!
-function abort {
-  echo "${1}" &gt;&amp;2
-  exit 1
-}
-
-function url_exists {
-  curl --silent --location --output /dev/null --fail --range 0-0 "${1}"
-}
-
-function notification {
-  local -r notificator="$(find . -type d -name 'Notificator.app')"
-  if [[ -n "${notificator}" ]]; then
-    "${notificator}/Contents/Resources/Scripts/notificator" --message "${1}" --title "${alfred_workflow_name}" --subtitle 'A new version is available'
-    return
-  fi
-
-  local -r terminal_notifier="$(find . -type f -name 'terminal-notifier')"
-  if [[ -n "${terminal_notifier}" ]]; then
-    "${terminal_notifier}" -title "${alfred_workflow_name}" -subtitle 'A new version is available' -message "${1}"
-    return
-  fi
-
-  osascript -e "display notification \"${1}\" with title \"${alfred_workflow_name}\" subtitle \"A new version is available\""
-}
-
-# Local sanity checks
-readonly local_info_plist='info.plist'
-readonly local_version="$(/usr/libexec/PlistBuddy -c 'print version' "${local_info_plist}")"
-
-[[ -n "${local_version}" ]] || abort 'You need to set a workflow version in the configuration sheet.'
-[[ "${download_type}" =~ ^(direct|page|github_release)$ ]] || abort "'download_type' (${download_type}) needs to be one of 'direct', 'page', or 'github_release'."
-[[ "${frequency_check}" =~ ^[0-9]+$ ]] || abort "'frequency_check' (${frequency_check}) needs to be a number."
-
-# Check for updates
-if [[ $(find "${local_info_plist}" -mtime +"${frequency_check}"d) ]]; then
-  if ! url_exists "${remote_info_plist}"; then abort "'remote_info_plist' (${remote_info_plist}) appears to not be reachable."; fi # Remote sanity check
-
-  readonly tmp_file="$(mktemp)"
-  curl --silent --location --output "${tmp_file}" "${remote_info_plist}"
-  readonly remote_version="$(/usr/libexec/PlistBuddy -c 'print version' "${tmp_file}")"
-
-  if [[ "${local_version}" == "${remote_version}" ]]; then
-    touch "${local_info_plist}" # Reset timer by touching local file
-    exit 0
-  fi
-
-  if [[ "${download_type}" == 'page' ]]; then
-    notification 'Opening download page…'
-    open "${workflow_url}"
-    exit 0
-  fi
-
-  download_url="$([[ "${download_type}" == 'github_release' ]] &amp;&amp; curl --silent "https://api.github.com/repos/${workflow_url}/releases/latest" | grep 'browser_download_url' | head -1 | sed -E 's/.*browser_download_url": "(.*)"/\1/' || echo "${workflow_url}")"
-
-  if url_exists "${download_url}"; then
-    notification 'Downloading and installing…'
-    curl --silent --location --output "${HOME}/Downloads/${alfred_workflow_name}.alfredworkflow" "${download_url}"
-    open "${HOME}/Downloads/${alfred_workflow_name}.alfredworkflow"
-  else
-    abort "'workflow_url' (${download_url}) appears to not be reachable."
-  fi
-fi</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>65CA24BA-2DA6-4DC0-A2BE-3E4E4D5FDD72</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>conditions</key>
 				<array>
 					<dict>
@@ -1278,27 +1325,6 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>keyword</key>
-				<string>+</string>
-				<key>subtext</key>
-				<string>Enter DOI or ISBN. Leave empty to insert empty Bibtex Entry.</string>
-				<key>text</key>
-				<string>Add to Bibliography</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>4AE87B47-81EE-4552-A172-685A3F61D708</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -1322,21 +1348,21 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>removeextension</key>
-				<false/>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
+				<string>+</string>
+				<key>subtext</key>
+				<string>Enter DOI or ISBN. Leave empty to insert empty Bibtex Entry.</string>
 				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>✅ {var:citekey} deleted from BibTeX Library</string>
+				<string>Add to Bibliography</string>
+				<key>withspace</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
+			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>1B72EC4E-33E7-4144-B43B-3037510ADA3A</string>
+			<string>4AE87B47-81EE-4552-A172-685A3F61D708</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1390,6 +1416,312 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 			<string>EAB97E20-9E68-486A-86C2-A4ABD8F1A50D</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/open-entry.sh</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>AF09AE5D-C351-4190-8AA6-B1924D88B22F</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+				<key>title</key>
+				<string>⚠️ DOI or ISBN invalid</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>AF128420-2209-43A6-B83B-C8F548CAD6A1</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>soundname</key>
+				<string>Basso</string>
+				<key>systemsound</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.playsound</string>
+			<key>uid</key>
+			<string>254C2241-0AE4-4F52-A073-16E3DEFC9384</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>triggerid</key>
+				<string>add-doi-to-library</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>D5D1BDDD-6370-4027-809B-84F7F784DE27</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>fixedorder</key>
+				<false/>
+				<key>items</key>
+				<string>[{"title":"✍️ Search &amp; Download Citation Styles","arg":"csl","subtitle":".csl files"},{"title":"🔁 Force Buffer Reload","arg":"buffer_reload","subtitle":"for debugging"},{"title":"🅿️ Pandoc Citation Syntax","arg":"Pandoc Citation Syntax.pdf","subtitle":"Cheatsheet"},{"title":"❓Citation Picker Actions","arg":"Actions Cheatsheet.webloc","subtitle":"Cheatsheet"},{"title":"📊 Bibliography Statistics","arg":"statistics"},{"title":"⬇️ Backup the Library","arg":"backup","subtitle":"max: {var:max_number_of_bkps}, location: {var:backup_destination}"},{"title":"🤖 Create Autocomplete List","arg":"autocomplete_list","subtitle":"{var:autocomplete_list_location}"},{"title":"🧹 Run BibTeX tidy","arg":"bibtex-tidy","subtitle":"{var:bibtex_tidy_options}"}]</string>
+				<key>keyword</key>
+				<string>scp</string>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Supercharged Citation Picker</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.listfilter</string>
+			<key>uid</key>
+			<string>04E17547-EDD2-4C44-9F41-F15391DD8775</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string></string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>30006A6B-EAF9-4531-8694-5E878A0FB80E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/open-create-literature-note.js</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>5A83CD14-6282-49D4-9482-F89DC21A185F</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>citation-picker-loop</string>
+				<key>passinputasargument</key>
+				<false/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>7416BB08-7009-4A47-B833-524B2C3BDB55</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>buffer_reload</key>
+					<string>true</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>0F739BDB-D7EC-482F-9798-A9B04AF57CA9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>soundname</key>
+				<string>Basso</string>
+				<key>systemsound</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.playsound</string>
+			<key>uid</key>
+			<string>FCCA3147-A52B-4254-938A-C8EFA2FF7933</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+				<key>title</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>346A58DA-B1B4-4F03-8F05-20B42A4EF996</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/autofile-pdf.sh</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>7E602D21-0A78-4DC6-A807-28A5602897C8</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}(more statistics to come)</string>
+				<key>title</key>
+				<string>✅ Total Number of Entries</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>674A1A86-76B0-454D-861C-F22A21EC548F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>qlmanage -p "assets/Actions Cheatsheet.webloc"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/bibtex-statistics.sh</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>E4C0C185-FAC1-4265-A030-58F013887CD3</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>✅ {var:citekey} deleted from BibTeX Library</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>1B72EC4E-33E7-4144-B43B-3037510ADA3A</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1459,236 +1791,6 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 			<string>3FA32575-5519-475C-AFED-6182B53063A6</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>triggerid</key>
-				<string>add-doi-to-library</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
-			<key>uid</key>
-			<string>D5D1BDDD-6370-4027-809B-84F7F784DE27</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>externaltriggerid</key>
-				<string>citation-picker-loop</string>
-				<key>passinputasargument</key>
-				<false/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>5B6D763D-7B64-4EA7-BCE2-0929216BA8D2</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>fixedorder</key>
-				<false/>
-				<key>items</key>
-				<string>[{"title":"✍️ Search &amp; Download Citation Styles","arg":"csl","subtitle":".csl files"},{"title":"🔁 Force Buffer Reload","arg":"buffer_reload","subtitle":"for debugging"},{"title":"🅿️ Pandoc Citation Syntax","arg":"Pandoc Citation Syntax.pdf","subtitle":"Cheatsheet"},{"title":"❓Citation Picker Actions","arg":"Actions Cheatsheet.webloc","subtitle":"Cheatsheet"},{"title":"📊 Bibliography Statistics","arg":"statistics"},{"title":"⬇️ Backup the Library","arg":"backup","subtitle":"max: {var:max_number_of_bkps}, location: {var:backup_destination}"},{"title":"🤖 Create Autocomplete List","arg":"autocomplete_list","subtitle":"{var:autocomplete_list_location}"},{"title":"🧹 Run BibTeX tidy","arg":"bibtex-tidy","subtitle":"{var:bibtex_tidy_options}"}]</string>
-				<key>keyword</key>
-				<string>scp</string>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Supercharged Citation Picker</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.listfilter</string>
-			<key>uid</key>
-			<string>04E17547-EDD2-4C44-9F41-F15391DD8775</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string></string>
-				<key>title</key>
-				<string>⚠️ DOI or ISBN invalid</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>AF128420-2209-43A6-B83B-C8F548CAD6A1</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string></string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>30006A6B-EAF9-4531-8694-5E878A0FB80E</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>externaltriggerid</key>
-				<string>citation-picker-loop</string>
-				<key>passinputasargument</key>
-				<false/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>7416BB08-7009-4A47-B833-524B2C3BDB55</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>scripts/open-create-literature-note.js</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>5A83CD14-6282-49D4-9482-F89DC21A185F</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict>
-					<key>buffer_reload</key>
-					<string>true</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>0F739BDB-D7EC-482F-9798-A9B04AF57CA9</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>qlmanage -p "assets/Actions Cheatsheet.webloc"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>scripts/bibtex-statistics.sh</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>E4C0C185-FAC1-4265-A030-58F013887CD3</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{query}(more statistics to come)</string>
-				<key>title</key>
-				<string>✅ Total Number of Entries</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>674A1A86-76B0-454D-861C-F22A21EC548F</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>scripts/open-entry.sh</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>AF09AE5D-C351-4190-8AA6-B1924D88B22F</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1830,21 +1932,19 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<true/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>removeextension</key>
+				<key>externaltriggerid</key>
+				<string>citation-picker-loop</string>
+				<key>passinputasargument</key>
 				<false/>
-				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>✅ Downloaded</string>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
+			<string>alfred.workflow.output.callexternaltrigger</string>
 			<key>uid</key>
-			<string>52B9C3DF-F265-4201-9508-55BA584F851F</string>
+			<string>5B6D763D-7B64-4EA7-BCE2-0929216BA8D2</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1878,6 +1978,27 @@ echo "$*"</string>
 			<string>FC604ACD-94BE-4F8B-B73C-8475943837C7</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<true/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>✅ Downloaded</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>52B9C3DF-F265-4201-9508-55BA584F851F</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1948,6 +2069,25 @@ echo "$*"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>obsidian://advanced-uri?commandid=various-complements%253Areload-custom-dictionaries</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>364BA351-E398-4944-9515-7BB0A03D179E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -1992,25 +2132,6 @@ echo "$*"</string>
 			<string>alfred.workflow.output.writefile</string>
 			<key>uid</key>
 			<string>32375CD9-75B0-4A76-B38D-DC6AC299EEE8</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>obsidian://advanced-uri?commandid=various-complements%253Areload-custom-dictionaries</string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>364BA351-E398-4944-9515-7BB0A03D179E</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -2091,6 +2212,19 @@ echo "$*"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>triggerid</key>
+				<string>BibTeX Library Backup</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>9D904019-C6C8-4A76-A04F-706839EEB325</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -2131,19 +2265,6 @@ echo -n $file_name</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>triggerid</key>
-				<string>BibTeX Library Backup</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
-			<key>uid</key>
-			<string>9D904019-C6C8-4A76-A04F-706839EEB325</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
 	</array>
 	<key>readme</key>
 	<string>README
@@ -2171,9 +2292,9 @@ https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/Changelo
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>435</integer>
+			<integer>395</integer>
 			<key>ypos</key>
-			<integer>685</integer>
+			<integer>760</integer>
 		</dict>
 		<key>10ACA015-64F3-4D2E-A659-213C5A665FDE</key>
 		<dict>
@@ -2182,18 +2303,18 @@ https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/Changelo
 			<key>note</key>
 			<string>Delete Entry</string>
 			<key>xpos</key>
-			<integer>1100</integer>
+			<integer>1065</integer>
 			<key>ypos</key>
-			<integer>385</integer>
+			<integer>945</integer>
 		</dict>
 		<key>1B72EC4E-33E7-4144-B43B-3037510ADA3A</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>1280</integer>
+			<integer>1245</integer>
 			<key>ypos</key>
-			<integer>330</integer>
+			<integer>945</integer>
 		</dict>
 		<key>1C0964D1-AA81-478A-B406-28E96DDD9E82</key>
 		<dict>
@@ -2204,14 +2325,23 @@ https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/Changelo
 			<key>ypos</key>
 			<integer>150</integer>
 		</dict>
+		<key>254C2241-0AE4-4F52-A073-16E3DEFC9384</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<integer>555</integer>
+			<key>ypos</key>
+			<integer>450</integer>
+		</dict>
 		<key>2D72874E-4A27-4A0C-98B3-15EFBEBE1031</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>500</integer>
+			<integer>460</integer>
 			<key>ypos</key>
-			<integer>1035</integer>
+			<integer>1110</integer>
 		</dict>
 		<key>2DC90122-FC40-44CA-8F59-E3C16AC99651</key>
 		<dict>
@@ -2229,27 +2359,36 @@ https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/Changelo
 			<key>note</key>
 			<string>open URL/DOI</string>
 			<key>xpos</key>
-			<integer>920</integer>
+			<integer>860</integer>
 			<key>ypos</key>
-			<integer>525</integer>
+			<integer>530</integer>
 		</dict>
 		<key>32375CD9-75B0-4A76-B38D-DC6AC299EEE8</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>580</integer>
+			<integer>540</integer>
 			<key>ypos</key>
-			<integer>1160</integer>
+			<integer>1235</integer>
 		</dict>
 		<key>32B06A25-A59A-4064-B28E-D284563C05B5</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>435</integer>
+			<integer>395</integer>
 			<key>ypos</key>
-			<integer>1160</integer>
+			<integer>1235</integer>
+		</dict>
+		<key>346A58DA-B1B4-4F03-8F05-20B42A4EF996</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>xpos</key>
+			<integer>1025</integer>
+			<key>ypos</key>
+			<integer>815</integer>
 		</dict>
 		<key>364BA351-E398-4944-9515-7BB0A03D179E</key>
 		<dict>
@@ -2258,9 +2397,9 @@ https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/Changelo
 			<key>note</key>
 			<string>trigger reloading custom dictionaries</string>
 			<key>xpos</key>
-			<integer>715</integer>
+			<integer>675</integer>
 			<key>ypos</key>
-			<integer>1160</integer>
+			<integer>1235</integer>
 		</dict>
 		<key>3E233EB1-E0B2-48CC-9E6F-A5CAFDFD26AD</key>
 		<dict>
@@ -2280,9 +2419,9 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>895</integer>
+			<integer>845</integer>
 			<key>ypos</key>
-			<integer>415</integer>
+			<integer>975</integer>
 		</dict>
 		<key>406E52C6-C22D-4A6F-9C4D-3FEEFA513B34</key>
 		<dict>
@@ -2291,18 +2430,18 @@ to set a hotkey for the citaiton picker.</string>
 			<key>note</key>
 			<string>quicklook cheatsheets</string>
 			<key>xpos</key>
-			<integer>430</integer>
+			<integer>390</integer>
 			<key>ypos</key>
-			<integer>900</integer>
+			<integer>975</integer>
 		</dict>
 		<key>4515D5D2-4F21-46FB-9ACF-F538D9BBC280</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>425</integer>
+			<integer>385</integer>
 			<key>ypos</key>
-			<integer>1315</integer>
+			<integer>1390</integer>
 		</dict>
 		<key>4771A40C-E741-46C5-93EF-82CEB4BD23D8</key>
 		<dict>
@@ -2338,27 +2477,27 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>780</integer>
+			<integer>740</integer>
 			<key>ypos</key>
-			<integer>1035</integer>
+			<integer>1110</integer>
 		</dict>
 		<key>55B921A5-4319-4B5C-A06B-66427377E219</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>205</integer>
+			<integer>165</integer>
 			<key>ypos</key>
-			<integer>965</integer>
+			<integer>1040</integer>
 		</dict>
 		<key>57D40C47-4A2C-47A2-9E7A-A3CC8C3FB671</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>445</integer>
+			<integer>405</integer>
 			<key>ypos</key>
-			<integer>1065</integer>
+			<integer>1140</integer>
 		</dict>
 		<key>592A7342-45EE-47C2-B6E3-B577D191B9FF</key>
 		<dict>
@@ -2367,9 +2506,9 @@ to set a hotkey for the citaiton picker.</string>
 			<key>note</key>
 			<string>backup</string>
 			<key>xpos</key>
-			<integer>445</integer>
+			<integer>405</integer>
 			<key>ypos</key>
-			<integer>1420</integer>
+			<integer>1495</integer>
 		</dict>
 		<key>5A83CD14-6282-49D4-9482-F89DC21A185F</key>
 		<dict>
@@ -2378,18 +2517,18 @@ to set a hotkey for the citaiton picker.</string>
 			<key>note</key>
 			<string>open/create Literature Note</string>
 			<key>xpos</key>
-			<integer>920</integer>
+			<integer>860</integer>
 			<key>ypos</key>
-			<integer>660</integer>
+			<integer>665</integer>
 		</dict>
 		<key>5B6D763D-7B64-4EA7-BCE2-0929216BA8D2</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>1280</integer>
+			<integer>1245</integer>
 			<key>ypos</key>
-			<integer>450</integer>
+			<integer>1065</integer>
 		</dict>
 		<key>5F683C78-5D0B-4A39-B3FF-37ABA8DA0D73</key>
 		<dict>
@@ -2416,18 +2555,18 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>570</integer>
+			<integer>530</integer>
 			<key>ypos</key>
-			<integer>775</integer>
+			<integer>850</integer>
 		</dict>
 		<key>7416BB08-7009-4A47-B833-524B2C3BDB55</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>505</integer>
+			<integer>465</integer>
 			<key>ypos</key>
-			<integer>655</integer>
+			<integer>730</integer>
 		</dict>
 		<key>74F55929-395A-4A89-BCD9-E2BB9E297A1E</key>
 		<dict>
@@ -2439,6 +2578,17 @@ to set a hotkey for the citaiton picker.</string>
 			<integer>1005</integer>
 			<key>ypos</key>
 			<integer>230</integer>
+		</dict>
+		<key>7E602D21-0A78-4DC6-A807-28A5602897C8</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>note</key>
+			<string>autofile</string>
+			<key>xpos</key>
+			<integer>860</integer>
+			<key>ypos</key>
+			<integer>815</integer>
 		</dict>
 		<key>8B51C1A0-EAD2-457B-A532-6CC16C7F015E</key>
 		<dict>
@@ -2476,9 +2626,9 @@ to set a hotkey for the citaiton picker.</string>
 			<key>note</key>
 			<string>for scripting (e.g. cronjob)</string>
 			<key>xpos</key>
-			<integer>195</integer>
+			<integer>155</integer>
 			<key>ypos</key>
-			<integer>1420</integer>
+			<integer>1495</integer>
 		</dict>
 		<key>AF09AE5D-C351-4190-8AA6-B1924D88B22F</key>
 		<dict>
@@ -2487,18 +2637,18 @@ to set a hotkey for the citaiton picker.</string>
 			<key>note</key>
 			<string>Open in BibDesk/Sublime</string>
 			<key>xpos</key>
-			<integer>920</integer>
+			<integer>860</integer>
 			<key>ypos</key>
-			<integer>810</integer>
+			<integer>380</integer>
 		</dict>
 		<key>AF128420-2209-43A6-B83B-C8F548CAD6A1</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>500</integer>
+			<integer>420</integer>
 			<key>ypos</key>
-			<integer>455</integer>
+			<integer>450</integer>
 		</dict>
 		<key>B8AEF220-7CBC-4D07-BA5F-D28094B3D4B4</key>
 		<dict>
@@ -2525,18 +2675,18 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>495</integer>
+			<integer>455</integer>
 			<key>ypos</key>
-			<integer>1285</integer>
+			<integer>1360</integer>
 		</dict>
 		<key>C23E28E8-B257-4FF1-AAAE-BE855C749722</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>590</integer>
+			<integer>550</integer>
 			<key>ypos</key>
-			<integer>1420</integer>
+			<integer>1495</integer>
 		</dict>
 		<key>C64ACAF0-66C8-48A8-A3C4-B55C7E282697</key>
 		<dict>
@@ -2603,9 +2753,9 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>430</integer>
+			<integer>390</integer>
 			<key>ypos</key>
-			<integer>775</integer>
+			<integer>850</integer>
 		</dict>
 		<key>EAB97E20-9E68-486A-86C2-A4ABD8F1A50D</key>
 		<dict>
@@ -2621,27 +2771,36 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>865</integer>
+			<integer>825</integer>
 			<key>ypos</key>
-			<integer>1160</integer>
+			<integer>1235</integer>
 		</dict>
 		<key>F4AE9C32-4A15-421F-A8FE-C71500135BA3</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>955</integer>
+			<integer>920</integer>
 			<key>ypos</key>
-			<integer>385</integer>
+			<integer>945</integer>
 		</dict>
 		<key>FC604ACD-94BE-4F8B-B73C-8475943837C7</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>640</integer>
+			<integer>600</integer>
 			<key>ypos</key>
-			<integer>1035</integer>
+			<integer>1110</integer>
+		</dict>
+		<key>FCCA3147-A52B-4254-938A-C8EFA2FF7933</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>xpos</key>
+			<integer>1180</integer>
+			<key>ypos</key>
+			<integer>815</integer>
 		</dict>
 		<key>FE122FB8-705A-4169-9391-1F91038FDFB6</key>
 		<dict>
@@ -2677,10 +2836,13 @@ to set a hotkey for the citaiton picker.</string>
 		<string>20</string>
 		<key>open_entries_in</key>
 		<string>Sublime</string>
+		<key>pdf_folder</key>
+		<string>~/Library/Mobile Documents/com~apple~CloudDocs/PDFs/</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
 		<string>open_entries_in</string>
+		<string>pdf_folder</string>
 		<string>bibtex_library_path</string>
 		<string>backup_destination</string>
 		<string>autocomplete_list_location</string>

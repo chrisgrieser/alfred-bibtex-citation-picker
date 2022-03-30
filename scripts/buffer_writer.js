@@ -8,8 +8,10 @@ const tagIcon = "🏷";
 const abstractIcon = "📄";
 const litNoteFilterStr = "*";
 
-const matchAuthorsInEtAl = $.getenv("match_authors_in_etal") === "true";
+const maxTitleFileNameLength = 50;
 const alfredBarLength = parseInt ($.getenv("alfred_bar_length"));
+
+const matchAuthorsInEtAl = $.getenv("match_authors_in_etal") === "true";
 const libraryPath = $.getenv("bibtex_library_path").replace(/^~/, app.pathTo("home folder"));
 const litNoteFolder = $.getenv("literature_note_folder").replace(/^~/, app.pathTo("home folder"));
 let litNoteFolderCorrect = false;
@@ -31,16 +33,23 @@ if (litNoteFolderCorrect) {
 		.map (filename => filename.slice(0, -3)); // remove extension
 }
 
-const rawBibtex = app.doShellScript('cat "' + libraryPath + '"');
+const rawBibtex = app.doShellScript(`cat "${libraryPath}"`);
 
 const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 	.map(entry => {
 		const emojis = [];
 		const { title, url, citekey, keywords, type, journal, volume, issue, booktitle, authors, editors, year, abstract, primaryNamesEtAlString, primaryNames } = entry;
 
-		// Shorten Title
+		// Shorten Title (for display in Alfred)
 		let shorterTitle = title;
 		if (title.length > alfredBarLength) shorterTitle = title.slice(0, alfredBarLength).trim() + "…";
+
+		// autofile
+		const safeTitle = title
+			.slice(0, maxTitleFileNameLength)
+			.replace(/[:/\\]/g, "-")
+			.replace(/["'´]/g, "");
+		const autoFileName = `${citekey}_${safeTitle}`;
 
 		// URL
 		let URLsubtitle = "⛔️ There is no URL or DOI.";
@@ -52,10 +61,10 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		// Literature Notes
 		let litNotePath = "";
 		let litNoteMatcher = [];
-		const hasLitNote = litNoteFolderCorrect && litNoteArray.includes(citekey.slice(1));
+		const hasLitNote = litNoteFolderCorrect && litNoteArray.includes(citekey);
 		if (hasLitNote) {
 			emojis.push(litNoteIcon);
-			litNotePath = litNoteFolder + "/" + citekey.slice(1) + ".md";
+			litNotePath = litNoteFolder + "/" + citekey + ".md";
 			litNoteMatcher = [litNoteFilterStr];
 		}
 
@@ -111,8 +120,8 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		let keywordMatches = [];
 		if (keywords.length) keywordMatches = keywords.map(tag => "#" + tag);
 		let authorMatches = [...authors, ...editors];
-		if (!matchAuthorsInEtAl) authorMatches = [...authors.slice(0, 1), ...editors.slice(0, 1)];
-		const alfredMatcher = [citekey, ...keywordMatches, title, ...authorMatches, year, booktitle, journal, type, ...litNoteMatcher]
+		if (!matchAuthorsInEtAl) authorMatches = [...authors.slice(0, 1), ...editors.slice(0, 1)]; // only match first two names
+		const alfredMatcher = ["@" + citekey, ...keywordMatches, title, ...authorMatches, year, booktitle, journal, type, ...litNoteMatcher]
 			.join(" ")
 			.replaceAll ("-", " ");
 
@@ -126,7 +135,7 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 			"autocomplete": primaryNames[0],
 			"subtitle": namesToDisplay + year + collectionSubtitle + "   " + emojis.join(" "),
 			"match": alfredMatcher,
-			"arg": citekey,
+			"arg": "@" + citekey,
 			"icon": { "path": typeIcon },
 			"uid": citekey,
 			"text": {
@@ -135,6 +144,7 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 			},
 			"quicklookurl": litNotePath,
 			"mods": {
+				"fn": { "arg": autoFileName },
 				"ctrl": {
 					"valid": url !== "",
 					"arg": url,

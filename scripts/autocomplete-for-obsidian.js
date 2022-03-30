@@ -20,7 +20,7 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 	.map (entry => {
 		const { title, citekey, year, primaryNamesEtAlString, primaryNames } = entry;
 
-		const toInsert = "[" + citekey + "]"; // add Pandoc syntax
+		const toInsert = "[@" + citekey + "]"; // add Pandoc syntax
 		const toDisplay = primaryNamesEtAlString + " " + year;
 
 		let desc = title; // shorten title for better display in editor suggester

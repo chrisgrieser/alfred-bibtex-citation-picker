@@ -8,7 +8,7 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 - __works system-wide__, in case you also work in another Markdown app.
 - __smart search:__ search for citekeys, authors, title, publication, keywords (tags), include/exclude authors in *et al*, tab-completion, fuzzy-matching, sorting recently used entries to the top, …
 - __feature-rich:__ paste single-entry bibliographies, open URLs, open or create literature notes, search for `.csl` files online, backup the library, …
-- __minimal reference manager__: add or remove entries without from the BibTeX library without the need for another reference manager.
+- __minimalistic reference manager__: add or remove entries without from the BibTeX library, automatically file PDF, …
 - __Obsidian integration:__ When located in an Obsidian vault, literature notes will automatically be opened/created in Obsidian. (Otherwise, they will be opened in the default app for markdown files.)
 - __very performant:__ considerably quicker than other citation pickers (~200ms to fully reload a library with ~4000 entries on my machine)
 - __easy installation:__ no dependencies, no required plugins, no setup (other than entering the path to your `.bib` file).
@@ -70,7 +70,7 @@ Press the hotkey in any text field to launch the citation picker.
 
 ### Bibliography Actions
 - `⇧ + ↵`: Reveal the entry in [BibDesk](http://bibdesk.sourceforge.net), [VSCode](https://code.visualstudio.com), or [Sublime](https://www.sublimetext.com/), depending on the setting `open_entries_in`.
-- `fn + ↵`: Paste the full bibliographic entry in the APA 6th Style (requires [Pandoc](https://pandoc.org)).
+- `⌘⌥ + ↵`: Paste the full bibliographic entry in the APA 6th Style (requires [Pandoc](https://pandoc.org)).
 - `⌘ + L`: Preview the (unabridged) title, abstract, and list of keywords in Large Type.
 - `⌘fn + ↵`: Delete the entry from the BibTeX library.
 	- ⚠️ This feature is untested with BiBTeX files created with apps other than BibDesk and Bookends (or formatted with `bibtex-tidy`) [Create an issue](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues) for problems with other apps.
@@ -79,6 +79,7 @@ Press the hotkey in any text field to launch the citation picker.
 	- Leave the input after the `+` empty to create a new, empty BibTeX entry.
 	- Opens the entry afterwards in the app specified in `open_entries_in`.
 - Note that adding & removing entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/), since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file will be overridden.
+- `fn + ↵`: Auto-file and auto-rename the *currently selected PDF in Finder* in a the folder specified in `pdf_folder`.
 
 ### Literature Note Actions
 - Add `*` to any search query to filter only for entries with literature notes, e.g. `* grieser` will search for entries from "Grieser" with literature notes. Can be combined with other queries (see: [smart queries](#search)).
