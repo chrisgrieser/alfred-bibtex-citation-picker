@@ -330,7 +330,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>2DC90122-FC40-44CA-8F59-E3C16AC99651</string>
+				<string>FF5D5F01-2101-4174-931A-2A55DF11F0DB</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -548,6 +548,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>D5D1BDDD-6370-4027-809B-84F7F784DE27</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FF5D5F01-2101-4174-931A-2A55DF11F0DB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>DD59F90F-8FD2-486D-A8A8-2FFA47DE45F6</key>
 		<array>
 			<dict>
@@ -618,6 +631,29 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>E1D3B211-1CE6-4A09-B45E-7C55A61CDC06</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>FF5D5F01-2101-4174-931A-2A55DF11F0DB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2DC90122-FC40-44CA-8F59-E3C16AC99651</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>8D4C0AC3-F97B-4BBB-859C-E03E7AF64A87</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2039,6 +2075,48 @@ echo -n $file_name</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>FF5D5F01-2101-4174-931A-2A55DF11F0DB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+				<key>title</key>
+				<string>⏳ Fetching Bibliography...</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>8D4C0AC3-F97B-4BBB-859C-E03E7AF64A87</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>triggerid</key>
+				<string>add-doi-to-library</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>D5D1BDDD-6370-4027-809B-84F7F784DE27</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>README
@@ -2131,7 +2209,7 @@ https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/Changelo
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>215</integer>
+			<integer>280</integer>
 			<key>ypos</key>
 			<integer>1220</integer>
 		</dict>
@@ -2351,6 +2429,15 @@ to set a hotkey for the citaiton picker.</string>
 			<key>ypos</key>
 			<integer>25</integer>
 		</dict>
+		<key>8D4C0AC3-F97B-4BBB-859C-E03E7AF64A87</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<integer>280</integer>
+			<key>ypos</key>
+			<integer>1350</integer>
+		</dict>
 		<key>96FCE9BC-5201-4357-9B63-588F73AEF5F3</key>
 		<dict>
 			<key>colorindex</key>
@@ -2385,7 +2472,7 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<integer>400</integer>
+			<integer>465</integer>
 			<key>ypos</key>
 			<integer>1220</integer>
 		</dict>
@@ -2451,6 +2538,17 @@ to set a hotkey for the citaiton picker.</string>
 			<key>ypos</key>
 			<integer>175</integer>
 		</dict>
+		<key>D5D1BDDD-6370-4027-809B-84F7F784DE27</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>note</key>
+			<string>for popclip</string>
+			<key>xpos</key>
+			<integer>45</integer>
+			<key>ypos</key>
+			<integer>1355</integer>
+		</dict>
 		<key>DD59F90F-8FD2-486D-A8A8-2FFA47DE45F6</key>
 		<dict>
 			<key>colorindex</key>
@@ -2513,6 +2611,15 @@ to set a hotkey for the citaiton picker.</string>
 			<integer>845</integer>
 			<key>ypos</key>
 			<integer>15</integer>
+		</dict>
+		<key>FF5D5F01-2101-4174-931A-2A55DF11F0DB</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<integer>195</integer>
+			<key>ypos</key>
+			<integer>1320</integer>
 		</dict>
 	</dict>
 	<key>variables</key>

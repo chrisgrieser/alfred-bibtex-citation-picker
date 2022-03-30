@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Extension Name</key>
+		<string>DOI 2 BibTeX</string>
+	<key>Extension Identifier</key>
+		<string>de.chris-grieser.doi-2-bibtex</string>
+	<key>Extension Description</key>
+		<string>Resolves the selected DOI and adds the reference to BibDesk.</string>
+	<key>Actions</key>
+	<array>
+		<dict>
+			<key>AppleScript File</key>
+			<string>Alfred-add-to-bibdesk.applescript</string>
+			<key>Long Running</key>
+			<true/>
+			<key>Image File</key>
+			<string>doi.png</string>
+			<key>Title</key>
+			<string>DOI 2 BibTeX</string>
+			<key>Regular Expression</key>
+			<string>^.*\/?(10\.\S+)\/?$</string>
+		</dict>
+	</array>
+</dict>
+</plist>

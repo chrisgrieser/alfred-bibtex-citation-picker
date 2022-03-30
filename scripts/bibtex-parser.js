@@ -107,7 +107,10 @@ function bibtexParse (str) { // eslint-disable-line no-unused-vars
 	function toLastNameArray(nameString) {
 		return nameString
 			.split(" and ") // array-fy
-			.map(name => name.split(",")[0]); // only last name
+			.map(name => { // only last name
+				if (name.includes(",")) return name.split(",")[0]; // when last name — first name
+				return name.split(" ").pop(); // when first name — last name
+			});
 	}
 
 	// -----------------------------
