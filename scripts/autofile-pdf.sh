@@ -27,6 +27,13 @@ PDF_FOLDER="${pdf_folder/#\~/$HOME}"
 AUTOFILE_FOLDER="$PDF_FOLDER/$FIRST_CHARACTER/$AUTHOR"
 AUTOFILE_PATH="$AUTOFILE_FOLDER/$NEW_NAME"
 
+if [[ -e "$AUTOFILE_FOLDER/$NEW_NAME" ]]; then
+	echo "⛔️ There already is a pdf file."
+	echo "Delete it and run auto-file again."
+	open -R "$AUTOFILE_PATH"
+	exit 1
+fi
+
 mkdir -p "$AUTOFILE_FOLDER"
 mv "$SELECTED_FILE"  "$AUTOFILE_PATH"
 open -R "$AUTOFILE_PATH"
