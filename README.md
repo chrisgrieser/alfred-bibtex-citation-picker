@@ -81,7 +81,7 @@ Press the hotkey in any text field to launch the citation picker.
 - Note that adding & removing entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/), since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file will be overridden.
 
 ### Literature Note Actions
-- Add `*` to any __search__ query to filter only for entries with literature notes, e.g. `* grieser` will search for entries from "Grieser" with literature notes. Can be combined with other queries (see: [smart queries](#search)).
+- Add `*` to any search query to filter only for entries with literature notes, e.g. `* grieser` will search for entries from "Grieser" with literature notes. Can be combined with other queries (see: [smart queries](#search)).
 - `⌘⇧ + ↵`: Open the literature note.
 	- If the file is in an [Obsidian Vault](https://obsidian.md/), opens the file in Obsidian.
 	- If there is no literature note, a new one will be created.
