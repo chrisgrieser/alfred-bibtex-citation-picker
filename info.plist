@@ -411,6 +411,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>AF128420-2209-43A6-B83B-C8F548CAD6A1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>BC96745A-7E6E-40E4-AAF2-71E1CACC9C4F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>B8AEF220-7CBC-4D07-BA5F-D28094B3D4B4</key>
 		<array>
 			<dict>
@@ -2146,6 +2159,21 @@ echo -n $file_name</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>soundname</key>
+				<string>Basso</string>
+				<key>systemsound</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.playsound</string>
+			<key>uid</key>
+			<string>BC96745A-7E6E-40E4-AAF2-71E1CACC9C4F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>matchmode</key>
 				<integer>1</integer>
 				<key>matchstring</key>
@@ -2525,7 +2553,7 @@ to set a hotkey for the citaiton picker.</string>
 			<key>xpos</key>
 			<integer>280</integer>
 			<key>ypos</key>
-			<integer>1350</integer>
+			<integer>1355</integer>
 		</dict>
 		<key>96FCE9BC-5201-4357-9B63-588F73AEF5F3</key>
 		<dict>
@@ -2570,9 +2598,9 @@ to set a hotkey for the citaiton picker.</string>
 		<key>AF128420-2209-43A6-B83B-C8F548CAD6A1</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>3</integer>
+			<integer>1</integer>
 			<key>xpos</key>
-			<integer>965</integer>
+			<integer>885</integer>
 			<key>ypos</key>
 			<integer>1250</integer>
 		</dict>
@@ -2595,6 +2623,15 @@ to set a hotkey for the citaiton picker.</string>
 			<integer>770</integer>
 			<key>ypos</key>
 			<integer>1240</integer>
+		</dict>
+		<key>BC96745A-7E6E-40E4-AAF2-71E1CACC9C4F</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>1</integer>
+			<key>xpos</key>
+			<integer>1040</integer>
+			<key>ypos</key>
+			<integer>1250</integer>
 		</dict>
 		<key>C23E28E8-B257-4FF1-AAAE-BE855C749722</key>
 		<dict>

@@ -69,13 +69,14 @@ Press the hotkey in any text field to launch the citation picker.
 - `⌘ + C`: Copy the URL to the clipboard.
 
 ### Bibliography Actions
-- `⇧ + ↵`: Reveal the entry in [BibDesk](http://bibdesk.sourceforge.net) or [Sublime](https://www.sublimetext.com/), depending on the setting `open_entries_in`.
+- `⇧ + ↵`: Reveal the entry in [BibDesk](http://bibdesk.sourceforge.net), [VSCode](https://code.visualstudio.com), or [Sublime](https://www.sublimetext.com/), depending on the setting `open_entries_in`.
 - `fn + ↵`: Paste the full bibliographic entry in the APA 6th Style (requires [Pandoc](https://pandoc.org)).
 - `⌘ + L`: Preview the (unabridged) title, abstract, and list of keywords in Large Type.
 - `⌘fn + ↵`: Delete the entry from the BibTeX library (__Experimental__).
 	- ⚠️ This feature is untested with BiBTeX files created with apps other than BibDesk and Bookends. [Create an issue](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues) for problems with other apps.
 - __add entries to the BibTex library__: use the Alfred Keyword `+`, followed by a space and a DOI
 	- the DOI will be added to your library, with a properly formatted citekey (avoiding duplicates with existing library, etc.)
+	- opens the entry afterwards in the app specified in `open_entries_in`.
 - Note that adding & removing entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/), since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file will be overridden.
 
 ### Literature Note Actions
