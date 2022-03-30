@@ -3,7 +3,7 @@
 function run (argv) {
 
 	// ----------------------
-	// JXA specific
+	// JXA & Alfred specific
 	// ----------------------
 	ObjC.import("stdlib");
 	ObjC.import("Foundation");
@@ -104,7 +104,7 @@ function run (argv) {
 	}
 
 	const newEntryProperties = bibtexEntry
-		.split("\r") // can safely be used as delimiter since this is what doi.org returns, but must be /r instead of /n because JXA
+		.split("\r") // must be /r instead of /n because JXA
 		.filter (p => !p.startsWith("issn") && !p.startsWith("month") ); // remove unwanted properties
 	const newCitekey = generateCitekey(newEntryProperties);
 	newEntryProperties[0] = newEntryProperties[0].split("{")[0] + "{" + newCitekey + ",";
