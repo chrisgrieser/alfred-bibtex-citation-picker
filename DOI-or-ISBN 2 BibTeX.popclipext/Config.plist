@@ -3,16 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>Extension Name</key>
-		<string>DOI 2 BibTeX</string>
+		<string>DOI/ISBN 2 BibTeX</string>
 	<key>Extension Identifier</key>
 		<string>de.chris-grieser.doi-2-bibtex</string>
-	<key>Extension Description</key>
-		<string>Resolves the selected DOI and adds the reference to BibDesk.</string>
 	<key>Actions</key>
 	<array>
 		<dict>
 			<key>AppleScript File</key>
-			<string>Alfred-add-to-bibdesk.applescript</string>
+			<string>Alfred-add-to-bibtex.applescript</string>
 			<key>Long Running</key>
 			<true/>
 			<key>Image File</key>
@@ -21,6 +19,18 @@
 			<string>DOI 2 BibTeX</string>
 			<key>Regular Expression</key>
 			<string>^.*\/?(10\.\S+)\/?$</string>
+		</dict>
+		<dict>
+			<key>AppleScript File</key>
+			<string>Alfred-add-to-bibtex.applescript</string>
+			<key>Long Running</key>
+			<true/>
+			<key>Image File</key>
+			<string>book.png</string>
+			<key>Title</key>
+			<string>ISBN 2 BibTeX</string>
+			<key>Regular Expression</key>
+			<string>[\d-]{9,}</string>
 		</dict>
 	</array>
 </dict>

@@ -2069,7 +2069,7 @@ echo -n $file_name</string>
 				<key>keyword</key>
 				<string>+</string>
 				<key>subtext</key>
-				<string>Enter DOI</string>
+				<string>Enter DOI or ISBN</string>
 				<key>text</key>
 				<string>Add to Bibliography</string>
 				<key>withspace</key>
@@ -2147,7 +2147,7 @@ echo -n $file_name</string>
 				<key>text</key>
 				<string></string>
 				<key>title</key>
-				<string>⚠️ DOI invalid</string>
+				<string>⚠️ DOI or ISBN invalid</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
