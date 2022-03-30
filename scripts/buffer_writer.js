@@ -147,5 +147,4 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 const logEndTime = new Date();
 console.log("Buffer Writing Duration: " + (logEndTime - logStartTime).toString() + "ms");
 
-// direct return
-JSON.stringify({ "items": entryArray });
+JSON.stringify({ "items": entryArray }); // JXA direct return

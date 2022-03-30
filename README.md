@@ -6,11 +6,12 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 ## Feature Overview
 - Inserts __Pandoc Citation Syntax__ (`[@citekey]`). Works with page numbers & multiple citations.
 - __works system-wide__, in case you also work in another Markdown app.
-- __smart search:__ search for citekeys, authors, title, publication, keywords (tags), include/exclude authors in *et al*, tab-completion, fuzzy-matching, sorting recent entries to the top, …
-- __feature-rich:__ paste single-entry bibliographies, remove entries from your library *without opening a reference management app*, open URLs, open or create literature notes, search for `.csl` files online, library backups,…
+- __smart search:__ search for citekeys, authors, title, publication, keywords (tags), include/exclude authors in *et al*, tab-completion, fuzzy-matching, sorting recently used entries to the top, …
+- __feature-rich:__ paste single-entry bibliographies, open URLs, open or create literature notes, search for `.csl` files online, backup the library, …
+- __minimal reference manager__: add or remove entries without from the BibTeX library without the need for another reference manager.
 - __Obsidian integration:__ When located in an Obsidian vault, literature notes will automatically be opened/created in Obsidian. (Otherwise, they will be opened in the default app for markdown files.)
 - __very performant:__ considerably quicker than other citation pickers (~200ms to fully reload a library with ~4000 entries on my machine)
-- __easy installation:__ no dependencies, no required plugins, no setup (other then entering the path to your `.bib` file).
+- __easy installation:__ no dependencies, no required plugins, no setup (other than entering the path to your `.bib` file).
 
 <img width=60% alt="promo screenshot" src="assets/promo.png">
 
@@ -73,7 +74,9 @@ Press the hotkey in any text field to launch the citation picker.
 - `⌘ + L`: Preview the (unabridged) title, abstract, and list of keywords in Large Type.
 - `⌘fn + ↵`: Delete the entry from the BibTeX library (__Experimental__).
 	- ⚠️ This feature is untested with BiBTeX files created with apps other than BibDesk and Bookends. [Create an issue](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues) for problems with other apps.
-	- Note that this feature does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/), since the plugin does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file will be overridden.
+- __add entries to the BibTex library__: use the Alfred Keyword `+`, followed by a space and a DOI
+	- the DOI will be added to your library, with a properly formatted citekey (avoiding duplicates with existing library, etc.)
+- Note that adding & removing entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/), since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file will be overridden.
 
 ### Literature Note Actions
 - Add `*` to any __search__ query to filter only for entries with literature notes, e.g. `* grieser` will search for entries from "Grieser" with literature notes. Can be combined with other queries (see: [smart queries](#search)).
