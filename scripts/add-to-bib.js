@@ -75,7 +75,10 @@ function run (argv) {
 	const doiURL = input.replace(doiRegex, "https://doi.org/$1");
 
 	// get bibtex entry & filter it & generate new citekey
-	const newEntryProperties = app.doShellScript (`curl -sLH "Accept: application/x-bibtex" "${doiURL}"`) // https://citation.crosscite.org/docs.html
+	const bibtexEntry = app.doShellScript (`curl -sLH "Accept: application/x-bibtex" "${doiURL}"`); // https://citation.crosscite.org/docs.html
+	if (bibtexEntry.includes("<title>Error: DOI Not Found</title>")) return "ERROR"
+
+	const newEntryProperties = bibtexEntry
 		.split("\r") // can safely be used as delimiter since this is what doi.org returns, but must be /r instead of /n because JXA
 		.filter (p => !p.startsWith("issn") && !p.startsWith("month") ); // remove unwanted properties
 	const newCitekey = generateCitekey(newEntryProperties);
