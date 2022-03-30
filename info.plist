@@ -96,6 +96,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>2DC90122-FC40-44CA-8F59-E3C16AC99651</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A0FC7858-52B2-4FB8-9A9E-B6373DAF62F3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>32375CD9-75B0-4A76-B38D-DC6AC299EEE8</key>
 		<array>
 			<dict>
@@ -305,6 +318,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>C23E28E8-B257-4FF1-AAAE-BE855C749722</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>5BCD679B-6AB5-450D-A207-5C6D9D4FC1AF</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2DC90122-FC40-44CA-8F59-E3C16AC99651</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1948,6 +1974,71 @@ echo -n $file_name</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>@{query}</string>
+				<key>title</key>
+				<string>✅ Added to Library</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>A0FC7858-52B2-4FB8-9A9E-B6373DAF62F3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/add-to-bib.js</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>2DC90122-FC40-44CA-8F59-E3C16AC99651</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>+</string>
+				<key>subtext</key>
+				<string>adds to .bib</string>
+				<key>text</key>
+				<string>Add to Bibliography</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>5BCD679B-6AB5-450D-A207-5C6D9D4FC1AF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>README
@@ -2034,6 +2125,15 @@ https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/Changelo
 			<integer>375</integer>
 			<key>ypos</key>
 			<integer>755</integer>
+		</dict>
+		<key>2DC90122-FC40-44CA-8F59-E3C16AC99651</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<integer>215</integer>
+			<key>ypos</key>
+			<integer>1220</integer>
 		</dict>
 		<key>30006A6B-EAF9-4531-8694-5E878A0FB80E</key>
 		<dict>
@@ -2193,6 +2293,15 @@ to set a hotkey for the citaiton picker.</string>
 			<key>ypos</key>
 			<integer>440</integer>
 		</dict>
+		<key>5BCD679B-6AB5-450D-A207-5C6D9D4FC1AF</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<integer>45</integer>
+			<key>ypos</key>
+			<integer>1220</integer>
+		</dict>
 		<key>5F683C78-5D0B-4A39-B3FF-37ABA8DA0D73</key>
 		<dict>
 			<key>colorindex</key>
@@ -2270,6 +2379,15 @@ to set a hotkey for the citaiton picker.</string>
 			<integer>45</integer>
 			<key>ypos</key>
 			<integer>1040</integer>
+		</dict>
+		<key>A0FC7858-52B2-4FB8-9A9E-B6373DAF62F3</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<integer>400</integer>
+			<key>ypos</key>
+			<integer>1220</integer>
 		</dict>
 		<key>AF09AE5D-C351-4190-8AA6-B1924D88B22F</key>
 		<dict>
