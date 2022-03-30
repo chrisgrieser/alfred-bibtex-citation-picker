@@ -11,7 +11,7 @@ function run (argv) {
 	app.includeStandardAdditions = true;
 
 	function appendToFile(text, absPath) {
-		// ⚠️ use single quotes to prevent running of input "$(rm -rf /)"
+		// ⚠️ use single quotes to prevent running of input such as "$(rm -rf /)"
 		app.doShellScript (`echo '${text}' >> '${absPath}'`);
 	}
 
@@ -55,6 +55,21 @@ function run (argv) {
 		let authorStr = "";
 		if (lastNameArr.length < 3) authorStr = lastNameArr.join("");
 		else authorStr = lastNameArr[0] + "EtAl";
+
+		// strip diacritics from authorStr
+		authorStr = authorStr
+			.replace(/ä|á|â|à|ã/g, "a")
+			.replace(/Ä|Á|Â|À|Ã/g, "A")
+			.replace(/ö|ó|ô|õ|ò/g, "o")
+			.replace(/Ö|Ó|Ô|Õ|Ò/g, "O")
+			.replace(/ü|ú|û|ù/g, "u")
+			.replace(/Ü|Ú|Û|Ù/g, "U")
+			.replace(/é|ê|è/g, "e")
+			.replace(/É|Ê|È/g, "E")
+			.replace(/í|î|ì|/g, "i")
+			.replace(/Í|Î|Ì|/g, "I")
+			.replace(/ç/g, "c")
+			.replace(/Ç/g, "Ç");
 
 		const citekey = authorStr + year;
 
