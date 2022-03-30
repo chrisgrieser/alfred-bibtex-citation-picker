@@ -17,5 +17,3 @@ elif [[ "$open_entries_in:l" =~ "vs code" ]]; then
 else
 	echo "$open_entries_in not a valid value for 'open_entries_in'."
 fi
-
-
