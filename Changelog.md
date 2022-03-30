@@ -1,3 +1,5 @@
+- 2022-03-30	release 7.15.0
+- 2022-03-30	✨ autofile & autorename PDFs
 - 2022-03-30	release 7.14.0
 - 2022-03-30	add scp-option for running bibtex-tidy
 - 2022-03-30	release 7.13.2
