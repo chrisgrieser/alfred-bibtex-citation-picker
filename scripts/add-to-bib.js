@@ -6,12 +6,7 @@ function run (argv) {
 	const isbnRegex = /^[\d-]{9,}$/;
 	const isEmptyRegex = /^ *$/;
 
-	const bibtexEntryTemplate = `@misc{NEW_ENTRY,
-	author = {Doe, Jane},
-	title = {NEW_ENTRY},
-	pages = {1--1},
-	year =
-}`;
+	const bibtexEntryTemplate = "@misc{NEW_ENTRY,\n\tauthor = {Doe, Jane},\n\ttitle = {NEW_ENTRY},\n\tpages = {1--1},\n\tyear = 0000\n}\n";
 
 	// ----------------------
 	// JXA & Alfred specific
@@ -103,12 +98,11 @@ function run (argv) {
 	// --------------------
 
 	let bibtexEntry;
+	let newCitekey;
 	const isDOI = doiRegex.test(input);
 	const isISBN = isbnRegex.test(input);
 	const isEmpty = isEmptyRegex.test(input);
 	if (!isDOI && !isISBN && !isEmpty) return "ERROR";
-
-	if (isEmpty) bibtexEntry = bibtexEntryTemplate;
 
 	if (isDOI) {
 		// transform input into doiURL, since that's what doi.org requires
@@ -116,33 +110,41 @@ function run (argv) {
 		// get bibtex entry & filter it & generate new citekey
 		bibtexEntry = app.doShellScript (`curl -sLH "Accept: application/x-bibtex" "${doiURL}"`); // https://citation.crosscite.org/docs.html
 		if (bibtexEntry.includes("<title>Error: DOI Not Found</title>")) return "ERROR";
+		bibtexEntry = bibtexEntry.replace(/\t(month|issn) = .*\r/,""); // clean up
 	}
 
 	if (isISBN) {
 		const isbn = input;
-		// try ebooks.de
-		bibtexEntry = app.doShellScript (`curl -sHL "https://www.ebook.de/de/tools/isbn2bibtex?isbn=${isbn}"`);
 
 		// try ottobib
-		if (bibtexEntry === "Not found")	{
-			bibtexEntry = app.doShellScript (`curl -sHL "https://www.ottobib.com/isbn/${isbn}/bibtex"`);
-			if (bibtexEntry.includes('id="flash-notice">No Results for')) return "ERROR";
-		}
-
+		bibtexEntry = app.doShellScript (`curl -sHL "https://www.ottobib.com/isbn/${isbn}/bibtex"`);
+		if (bibtexEntry.includes('id="flash-notice">No Results for')) return "ERROR";
 		bibtexEntry = bibtexEntry
 			.split(/<textarea.*?>/)[1].split("</textarea>")[0] // slice out only bibtex entry
 			.replace(/^ /gm, "\t") // add proper indention
-			.replace(/^\s}$/m, "}"); // don't indent closing brace
+			.replace(/^\s}$/m, "}") // don't indent closing brace
+			.replaceAll("address = ", "location = ") // consistent keys
+			.replaceAll("@Book{", "@book{");
+
+		// TODO: try ebooks.de
+		// needs a bunch of cleanup (lowercasing fields, removing entries)
+		// bibtexEntry = app.doShellScript (`curl -sHL "https://www.ebook.de/de/tools/isbn2bibtex?isbn=${isbn}"`);
+		// if (bibtexEntry === "Not found") return "ERROR";
 	}
 
-	const newEntryProperties = bibtexEntry
-		.split("\r") // must be /r instead of /n because JXA
-		.filter (p => !p.startsWith("issn") && !p.startsWith("month") ); // remove unwanted properties
-	const newCitekey = generateCitekey(newEntryProperties);
-	newEntryProperties[0] = newEntryProperties[0].split("{")[0] + "{" + newCitekey + ",";
+
+	let newEntry;
+	if (isEmpty) {
+		newEntry = bibtexEntryTemplate;
+		newCitekey = "NEW_ENTRY";
+	} else {
+		const newEntryProperties = bibtexEntry.split("\r"); // must be /r instead of /n because JXA
+		newCitekey = generateCitekey(newEntryProperties);
+		newEntryProperties[0] = newEntryProperties[0].split("{")[0] + "{" + newCitekey + ",";
+		newEntry = newEntryProperties.join("\n") + "\n";
+	}
 
 	// result
-	const newEntry = newEntryProperties.join("\n") + "\n";
 	appendToFile(newEntry, libraryPath);
 	return newCitekey; // pass for opening
 }

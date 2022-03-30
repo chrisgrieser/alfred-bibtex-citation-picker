@@ -46,7 +46,7 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		let URLsubtitle = "⛔️ There is no URL or DOI.";
 		if (url) {
 			emojis.push(urlIcon);
-			URLsubtitle = "⌃: Open " + urlIcon + " URL: " + url;
+			URLsubtitle = "⌃: Open URL – " + url;
 		}
 
 		// Literature Notes
