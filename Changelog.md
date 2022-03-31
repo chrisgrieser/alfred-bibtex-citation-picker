@@ -1,3 +1,5 @@
+- 2022-03-31	release 8.0.3
+- 2022-03-31	fix parser for when properties include an @ symbol
 - 2022-03-31	release 8.0.2
 - 2022-03-31	release 8.0.1
 - 2022-03-31	safer file names when auto-filing
