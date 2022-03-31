@@ -6,7 +6,6 @@ LIBRARY="${bibtex_library_path/#\~/$HOME}"
 CITEKEY="$*"
 CITEKEY="${CITEKEY/@/}"
 LINE_NO=$(grep -n "{$CITEKEY," "$LIBRARY" | head -n1 | cut -d':' -f1)
-echo "$LINE_NO"
 
 if [[ "$open_entries_in:l" =~ "bibdesk" ]]; then
 	open "x-bdsk://$CITEKEY"
