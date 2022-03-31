@@ -103,10 +103,12 @@ function bibtexParse (str) { // eslint-disable-line no-unused-vars
 
 	const bibtexEntryDelimiter = /^@/m; // regex to avoid an "@" in a property value to break parsing
 	const bibtexPropertyDelimiter = /,(?=\s*[\w-]+\s*=)/; // last comma of a field, see: https://regex101.com/r/1dvpfC/1
+	const bibtexNameValueDelimiter = " and ";
+	const bibtexKeywordValueDelimiter = ",";
 
 	function toLastNameArray(nameString) {
 		return nameString
-			.split(" and ") // array-fy
+			.split(bibtexNameValueDelimiter) // array-fy
 			.map(name => { // only last name
 				if (name.includes(",")) return name.split(",")[0]; // when last name — first name
 				return name.split(" ").pop(); // when first name — last name
@@ -172,7 +174,7 @@ function bibtexParse (str) { // eslint-disable-line no-unused-vars
 						break;
 					case "keywords":
 						entry.keywords = value
-							.split(",")
+							.split(bibtexKeywordValueDelimiter)
 							.map (t => t.trim());
 						break;
 				}
