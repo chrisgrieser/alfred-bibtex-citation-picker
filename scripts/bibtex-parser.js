@@ -101,8 +101,8 @@ function bibtexDecode (encodedStr) {
 // output: BibtexEntry object
 function bibtexParse (str) { // eslint-disable-line no-unused-vars
 
-	const bibtexEntryDelimiter = "@";
-	const bibtexPropertyDelimiter = /,(?=\s*[\w-]+\s*=)/g; // last comma of a field, see: https://regex101.com/r/1dvpfC/1
+	const bibtexEntryDelimiter = /^@/m; // regex to avoid an "@" in a property value to break parsing
+	const bibtexPropertyDelimiter = /,(?=\s*[\w-]+\s*=)/; // last comma of a field, see: https://regex101.com/r/1dvpfC/1
 
 	function toLastNameArray(nameString) {
 		return nameString
