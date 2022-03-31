@@ -2412,7 +2412,7 @@ https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/Changelo
 			<key>note</key>
 			<string>trigger reloading custom dictionaries</string>
 			<key>xpos</key>
-			<integer>675</integer>
+			<integer>750</integer>
 			<key>ypos</key>
 			<integer>1235</integer>
 		</dict>
@@ -2786,7 +2786,7 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>825</integer>
+			<integer>900</integer>
 			<key>ypos</key>
 			<integer>1235</integer>
 		</dict>
