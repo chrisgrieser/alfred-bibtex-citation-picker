@@ -121,9 +121,19 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		if (keywords.length) keywordMatches = keywords.map(tag => "#" + tag);
 		let authorMatches = [...authors, ...editors];
 		if (!matchAuthorsInEtAl) authorMatches = [...authors.slice(0, 1), ...editors.slice(0, 1)]; // only match first two names
-		const alfredMatcher = ["@" + citekey, ...keywordMatches, title, ...authorMatches, year, booktitle, journal, type, ...litNoteMatcher]
-			.join(" ")
-			.replaceAll ("-", " ");
+		const shortYear = year.slice(-2); // last two digits
+
+		const alfredMatcher = ["@" + citekey,
+			...keywordMatches,
+			title,
+			...authorMatches,
+			year,
+			shortYear,
+			booktitle,
+			journal,
+			type,
+			...litNoteMatcher
+		].join(" ").replaceAll ("-", " ");
 
 		// Large Type
 		let largeTypeInfo = title;

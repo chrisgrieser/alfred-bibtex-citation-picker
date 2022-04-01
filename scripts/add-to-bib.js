@@ -147,5 +147,5 @@ function run (argv) {
 	}
 
 	appendToFile(newEntry, libraryPath);
-	return newCitekey; // pass for opening
+	return newCitekey; // pass for opening function
 }
