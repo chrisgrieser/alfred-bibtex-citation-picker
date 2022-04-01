@@ -15,6 +15,7 @@ function run (argv) {
 	ObjC.import("Foundation");
 	const app = Application.currentApplication();
 	app.includeStandardAdditions = true;
+	const newLineDelimiter = "\r"; // must be /r instead of /n because JXA
 
 	function appendToFile(text, absPath) {
 		// ⚠️ use single quotes to prevent running of input such as "$(rm -rf /)"
@@ -63,16 +64,17 @@ function run (argv) {
 		authorStr = authorStr
 			.replace(/ä|á|â|à|ã/g, "a")
 			.replace(/Ä|Á|Â|À|Ã/g, "A")
-			.replace(/ö|ó|ô|õ|ò/g, "o")
-			.replace(/Ö|Ó|Ô|Õ|Ò/g, "O")
+			.replace(/ö|ó|ô|õ|ò|ø/g, "o")
+			.replace(/Ö|Ó|Ô|Õ|Ò|Ø/g, "O")
 			.replace(/ü|ú|û|ù/g, "u")
 			.replace(/Ü|Ú|Û|Ù/g, "U")
-			.replace(/é|ê|è/g, "e")
-			.replace(/É|Ê|È/g, "E")
-			.replace(/í|î|ì/g, "i")
-			.replace(/Í|Î|Ì/g, "I")
-			.replace(/ç/g, "c")
-			.replace(/Ç/g, "Ç");
+			.replace(/é|ê|è|ë/g, "e")
+			.replace(/É|Ê|È|Ë/g, "E")
+			.replace(/í|î|ì|ï/g, "i")
+			.replace(/Í|Î|Ì|Ï/g, "I")
+			.replace(/ç|ć|č/g, "c")
+			.replace(/Ç|Ć|Č/g, "C")
+			.replace(/ñ/g, "n");
 
 		const citekey = authorStr + year;
 
@@ -138,7 +140,7 @@ function run (argv) {
 		newEntry = bibtexEntryTemplate;
 		newCitekey = "NEW_ENTRY";
 	} else {
-		const newEntryProperties = bibtexEntry.split("\r"); // must be /r instead of /n because JXA
+		const newEntryProperties = bibtexEntry.split(newLineDelimiter);
 		newCitekey = generateCitekey(newEntryProperties);
 		newEntryProperties[0] = newEntryProperties[0].split("{")[0] + "{" + newCitekey + ",";
 		newEntry = newEntryProperties.join("\n") + "\n";
