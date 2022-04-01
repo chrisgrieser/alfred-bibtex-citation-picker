@@ -80,6 +80,7 @@ const otherChars = [
 const specialChars = [
 	"\\&;&",
 	"``;\"",
+	",,;\"",
 	"`;'",
 	"\\textendash{};—",
 	"---;—",

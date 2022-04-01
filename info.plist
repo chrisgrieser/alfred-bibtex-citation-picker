@@ -2748,7 +2748,7 @@ to set a hotkey for the citaiton picker.</string>
 		<key>bibtex_library_path</key>
 		<string>~/Library/Mobile Documents/com~apple~CloudDocs/Dotfolder/Configs/pandoc/main-bibliography.bib</string>
 		<key>bibtex_tidy_options</key>
-		<string>--numeric --tab --no-align --duplicates=key --strip-enclosing-braces --remove-empty-fields --drop-all-caps --remove-dupe-fields --omit=month,issn,pagetotal</string>
+		<string>--numeric --tab --no-align --tidy-comments --duplicates=key --strip-enclosing-braces --remove-empty-fields --drop-all-caps --remove-dupe-fields --omit=month,issn,pagetotal</string>
 		<key>csl_folder</key>
 		<string>~/.pandoc/csl</string>
 		<key>literature_note_folder</key>
