@@ -66,7 +66,9 @@ const germanChars = [
 const otherChars = [
 	"{\\~n};ñ",
 	"{\\'a};á",
+	"{\\'o};ó",
 	"{\\'e};é",
+	"{\\`e};é",
 	"{\\v c};č",
 	"\\c{c};ç",
 	"\\o{};ø",
