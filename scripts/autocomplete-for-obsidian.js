@@ -3,7 +3,13 @@ ObjC.import("stdlib");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 
+function writeToFile(text, file) {
+	const str = $.NSString.alloc.initWithUTF8String(text);
+	str.writeToFileAtomicallyEncodingError(file, true, $.NSUTF8StringEncoding, null);
+}
+
 const libraryPath = $.getenv("bibtex_library_path").replace(/^~/, app.pathTo("home folder"));
+const autocompleteListLocation = $.getenv("autocomplete_list_location").replace(/^~/, app.pathTo("home folder"));
 
 // Import Hack, https://github.com/JXA-Cookbook/JXA-Cookbook/wiki/Importing-Scripts
 const toImport = "./scripts/bibtex-parser.js";
@@ -12,6 +18,9 @@ eval (app.doShellScript('cat "' + toImport + '"'));
 const maxTitleLength = 50;
 const delimiter = "|"; // https://tadashi-aikawa.github.io/docs-obsidian-various-complements-plugin/4.%20Options/4.6.%20Custom%20dictionary%20complement/%E2%9A%99%EF%B8%8FColumn%20delimiter/
 const insertDisplayDelimiter = ">>>";
+
+
+
 
 // ----------
 
@@ -26,7 +35,7 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		let desc = title; // shorten title for better display in editor suggester
 		if (title.length > maxTitleLength) desc = title.slice(0, maxTitleLength);
 
-		// match authors/editors, and also their lowercase, and the year
+		// match authors/editors,  their lowercase, and the year
 		const toMatch = [year];
 		primaryNames.forEach (name => {
 			toMatch.push(name);
@@ -43,5 +52,7 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		return line;
 	});
 
-// direct return
-entryArray.join("\n");
+const output = entryArray.join("\n");
+
+writeToFile (output, autocompleteListLocation);
+app.openLocation ("obsidian://advanced-uri?commandid=various-complements%253Areload-custom-dictionaries");
