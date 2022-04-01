@@ -46,7 +46,7 @@ Press the hotkey in any text field to launch the citation picker.
 - Search for the title, author/editor (last name), year, or, collection/journal-title.
 - Prepend `@` to a word to search for a citekey, e.g. `@Grieser2020`.
 - Prepend `#` to search for keywords (tags), e.g. `#sociology`.
-- *Smart Queries*: You can search for any combination of the above. For example, the query `2020 #cognition Grieser *` will for entries published in 2020, with the tag "cognition", and with "Grieser" as author/editor. 
+- *Smart Queries*: You can search for any combination of the above. For example, the query `2020 #cognition Grieser *` will for entries published in 2020, with the tag "cognition", and with "Grieser" as author/editor.
 - *Quick Search*: The search is fuzzy *and* for years also matches the last two digits. For example, you can search for `Fouc 77` to find `Foucault 1977`.
 - The workflow setting `match_authors_in_etal` determines whether authors (or editors) in the *et al.* are still matched when searching for them (default: *true*).
 

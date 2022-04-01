@@ -20,8 +20,6 @@ const delimiter = "|"; // https://tadashi-aikawa.github.io/docs-obsidian-various
 const insertDisplayDelimiter = ">>>";
 
 
-
-
 // ----------
 
 const rawBibtex = app.doShellScript('cat "' + libraryPath + '"');

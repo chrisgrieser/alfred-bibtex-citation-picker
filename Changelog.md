@@ -1,3 +1,5 @@
+- 2022-04-01	release 8.1.0
+- 2022-04-01	quick search (e.g. search 'fou 77' for 'foucault 1977')
 - 2022-03-31	release 8.0.3
 - 2022-03-31	fix parser for when properties include an @ symbol
 - 2022-03-31	release 8.0.2
