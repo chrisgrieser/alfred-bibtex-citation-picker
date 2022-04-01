@@ -46,7 +46,7 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		const line = [
 			toDisplay + insertDisplayDelimiter + toInsert,
 			desc,
-			toMatch
+			toMatch.join(delimiter)
 		].join(delimiter);
 
 		return line;
