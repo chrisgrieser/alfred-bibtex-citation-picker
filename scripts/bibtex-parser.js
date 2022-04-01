@@ -63,21 +63,25 @@ const germanChars = [
 	"\\''o;ö",
 	"\\''u;ü"
 ];
-const otherChars = [
-	"{\\~n};ñ",
+
+const frenchChars = [
 	"{\\'a};á",
 	"{\\'o};ó",
 	"{\\'e};é",
 	"{\\`e};é",
-	"{\\v c};č",
+	"\\'E;É",
 	"\\c{c};ç",
+	"\\\"{i};ï"
+];
+const otherChars = [
+	"{\\~n};ñ",
+	"{\\v c};č",
 	"\\o{};ø",
+	"{\\O};Ø",
 	"\\^{i};î",
 	"\\'\\i;í",
-	"\\\"{i};ï",
 	"{\\'c};ć",
-	"\\\"e;ë",
-	"\\'E;É"
+	"\\\"e;ë"
 ];
 const specialChars = [
 	"\\&;&",
@@ -88,7 +92,7 @@ const specialChars = [
 	"---;—",
 	"--;—"
 ];
-const decodePair = [...germanChars, ...otherChars, ...specialChars];
+const decodePair = [...germanChars, ...frenchChars, ...otherChars, ...specialChars];
 
 function bibtexDecode (encodedStr) {
 	let decodedStr = encodedStr;
