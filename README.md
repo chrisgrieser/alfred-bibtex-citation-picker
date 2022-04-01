@@ -19,14 +19,15 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 <!-- MarkdownTOC -->
 
 - [Setup](#setup)
-- [Usage](#usage)
+- [Basic Usage](#basic-usage)
 	- [Search](#search)
 	- [Citation Actions](#citation-actions)
 	- [Icon Meanings](#icon-meanings)
 	- [URL Actions](#url-actions)
+- [Advanced Usage](#advanced-usage)
 	- [Bibliography Actions](#bibliography-actions)
 	- [Literature Note Actions](#literature-note-actions)
-- [Auxiliary Features](#auxiliary-features)
+	- [Auxiliary Features](#auxiliary-features)
 - [About the Developer](#about-the-developer)
 	- [Profiles](#profiles)
 	- [Donate](#donate)
@@ -39,7 +40,7 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 2. In the workflow settings, set `bibtex_library_path` to the absolute path of your BibTeX library file (Workflow settings tutorial: [How to set environment variables in Alfred](https://www.alfredapp.com/help/workflows/advanced/variables/#environment)).
 3. Set a hotkey for the citation picker by double-clicking the respective field in the workflow window.
 
-## Usage
+## Basic Usage
 Press the hotkey in any text field to launch the citation picker.
 
 ### Search
@@ -47,7 +48,7 @@ Press the hotkey in any text field to launch the citation picker.
 - Prepend `@` to a word to search for a citekey, e.g. `@Grieser2020`.
 - Prepend `#` to search for keywords (tags), e.g. `#sociology`.
 - *Smart Queries*: You can search for any combination of the above. For example, the query `2020 #cognition Grieser *` will for entries published in 2020, with the tag "cognition", and with "Grieser" as author/editor.
-- *Quick Queries*: The search is fuzzy and case-insensitive. For year dates, it also matches the last two digits. For example, you can search for `fouc 77` to find `Foucault 1977`.
+- *Quick Queries*: The search is fuzzy and case-insensitive. For year dates, it also matches the last two digits. For example, you can search for `fouc 77` to find `Foucault 1977`. In addition, recently selected entries are placed further at the top of the search results.
 - The workflow setting `match_authors_in_etal` determines whether authors (or editors) in the *et al.* are still matched when searching for them (default: *true*).
 - *Tab-Completion*: Pressing `tab` autocompletes the first author/editor name.
 
@@ -68,6 +69,8 @@ Press the hotkey in any text field to launch the citation picker.
 ### URL Actions
 - `⌃ + ↵`: Open the URL in the browser.
 - `⌘ + C`: Copy the URL to the clipboard.
+
+## Advanced Usage
 
 ### Bibliography Actions
 - `⇧ + ↵`: Reveal the entry in [BibDesk](http://bibdesk.sourceforge.net), [VSCode](https://code.visualstudio.com), or [Sublime](https://www.sublimetext.com/), depending on the setting `open_entries_in`.
@@ -90,7 +93,7 @@ Press the hotkey in any text field to launch the citation picker.
 - `⌘ + Y`: Preview the literature note with QuickLook (requires QLmarkdown or Peek[^1]).
 - *Both actions look for literature specified in the workflow settings `literature_note_folder`. The files must be named __exactly__ like the citekey (without `@`) and have a `.md` extension.*
 
-## Auxiliary Features
+### Auxiliary Features
 Triggered via the Alfred Keyword `scp` (for `S`upercharged `C`itation `P`icker).
 - __CSL Search__: Search for a citation style, which will be downloaded to the location `csl_folder` specified in your workflow settings (default: `~/.pandoc/csl/`).
 - __Bibliography Stats__: Brief statistical summary of the library. (Currently only total number of citations.)

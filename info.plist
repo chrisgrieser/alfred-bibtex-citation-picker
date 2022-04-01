@@ -1344,7 +1344,7 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 				<key>text</key>
 				<string>Add to Bibliography</string>
 				<key>withspace</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.keyword</string>
@@ -2558,7 +2558,7 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>note</key>
-			<string>Open in BibDesk/Sublime</string>
+			<string>Open in BibDesk/Sublime/VS Code</string>
 			<key>xpos</key>
 			<integer>860</integer>
 			<key>ypos</key>
