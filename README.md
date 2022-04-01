@@ -49,12 +49,12 @@ Press the hotkey in any text field to launch the citation picker.
 - *Smart Queries*: You can search for any combination of the above. For example, the query `2020 #cognition Grieser *` will for entries published in 2020, with the tag "cognition", and with "Grieser" as author/editor.
 - *Quick Queries*: The search is fuzzy and case-insensitive. For year dates, it also matches the last two digits. For example, you can search for `fouc 77` to find `Foucault 1977`.
 - The workflow setting `match_authors_in_etal` determines whether authors (or editors) in the *et al.* are still matched when searching for them (default: *true*).
+- *Tab-Completion*: Pressing `tab` autocompletes the first author/editor name.
 
 ### Citation Actions
 - `↵`: Paste the citekey of the selected citation.
 - `⌥ + ↵`:  Add another citation.
 - `⌘ + ↵`: Add page numbers before pasting the selected citekey. Confirm the page number with `⌥ + ↵` or `⌘ + ↵` to add another citation afterwards.
-- *Tab-Completion*: Pressing `tab` autocompletes the first author/editor name.
 
 ### Icon Meanings
 
@@ -75,11 +75,11 @@ Press the hotkey in any text field to launch the citation picker.
 - `⌘ + L`: Preview the (unabridged) title, abstract, and list of keywords in Large Type.
 - `⌘fn + ↵`: Delete the entry from the BibTeX library.
 	- ⚠️ This feature is untested with BiBTeX files created with apps other than BibDesk and Bookends (or formatted with `bibtex-tidy`) [Create an issue](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues) for problems with other apps.
-- __add entries to the BibTex library__: use the Alfred Keyword `+`, followed by a DOI or ISBN
+- __Add entries to the BibTex library__: use the Alfred Keyword `+`, followed by a DOI or ISBN
 	- the respective entry will be added to your library, with a properly formatted citekey (avoiding duplicates with existing library, etc.)
 	- Leave the input after the `+` empty to create a new, empty BibTeX entry.
 	- Opens the entry afterwards in the app specified in `open_entries_in`.
-- Note that adding & removing entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/), since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file will be overridden.
+- Note that adding & removing entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/) since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file will be overridden.
 - `fn + ↵`: Auto-file and auto-rename the *currently selected PDF in Finder* in a the folder specified in `pdf_folder`.
 
 ### Literature Note Actions
@@ -131,6 +131,6 @@ In my day job, I am a sociologist studying the social mechanisms underlying the 
 
 [^2]: As per [MIT License](LICENSE), this app comes without any warranty in case of data loss. That being said, I never had any problems with the backups created.
 
-[^3]: Set the workflow setting `autocomplete_list_location` to the *absolute* path where the file should be created and use a `.txt` extension. In the Various Complements settings, use "Prefix" as Matching Strategy, Pipe (`|`) as Delimiter, enable Custom Dictionaries, add the previously created file to the custom dictionary list, and set `Delimiter to divide suggestions for display from ones for insertion` to `>>>`. Afterwards, reload custom dictionaries via the command palette. (If the [Advanced URI Plugin](https://obsidian.md/plugins?id=obsidian-advanced-uri) is installed, the reloading of the custom dictionaries will be triggered automatically, if the file is already in the custom dictionary list!)
+[^3]: Set the workflow setting `autocomplete_list_location` to the *absolute* path where the file should be created and use a `.txt` extension. In the *Various Complements* settings, use "Prefix" as Matching Strategy, the pipe character (`|`) as delimiter, enable *Custom Dictionaries*, add the previously created file to the custom dictionary list, and set `Delimiter to divide suggestions for display from ones for insertion` to `>>>`. Afterwards, reload custom dictionaries via the command palette. (If the [Advanced URI Plugin](https://obsidian.md/plugins?id=obsidian-advanced-uri) is installed, the reloading of the custom dictionaries will be triggered automatically, if the file is already in the custom dictionary list.)
 
 [^4]: Uses the app [set as default terminal in the Alfred preferences](https://www.alfredapp.com/help/features/terminal/).
