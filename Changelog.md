@@ -1,3 +1,7 @@
+- 2022-04-03	release 8.2.0
+- 2022-04-03	option to match *only* short years
+- 2022-04-01	minor decoder improvements
+- 2022-04-01	minor parser fixes
 - 2022-04-01	release 8.1.0
 - 2022-04-01	quick search (e.g. search 'fou 77' for 'foucault 1977')
 - 2022-03-31	release 8.0.3
