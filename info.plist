@@ -2742,7 +2742,7 @@ to set a hotkey for the citaiton picker.</string>
 		<key>auto_update</key>
 		<string>true</string>
 		<key>autocomplete_list_location</key>
-		<string>~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Main Vault/Meta/Autocomplete Dictionary/citekey-autocomplete.txt</string>
+		<string>~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Main Vault/Meta/Autocomplete Dictionary/+ citekey-autocomplete.txt</string>
 		<key>backup_destination</key>
 		<string>~/Library/Mobile Documents/com~apple~CloudDocs/Dotfolder/Backups/Library Backups/</string>
 		<key>bibtex_library_path</key>
@@ -2755,6 +2755,8 @@ to set a hotkey for the citaiton picker.</string>
 		<string>~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Main Vault/Literature Notes/</string>
 		<key>match_authors_in_etal</key>
 		<string>true</string>
+		<key>match_only_short_years</key>
+		<string>true</string>
 		<key>max_number_of_bkps</key>
 		<string>20</string>
 		<key>open_entries_in</key>
@@ -2764,13 +2766,14 @@ to set a hotkey for the citaiton picker.</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
-		<string>open_entries_in</string>
-		<string>pdf_folder</string>
-		<string>bibtex_library_path</string>
 		<string>backup_destination</string>
 		<string>autocomplete_list_location</string>
+		<string>pdf_folder</string>
 		<string>bibtex_tidy_options</string>
 		<string>literature_note_folder</string>
+		<string>open_entries_in</string>
+		<string>match_only_short_years</string>
+		<string>bibtex_library_path</string>
 	</array>
 	<key>version</key>
 	<string>8.1.0</string>

@@ -12,6 +12,7 @@ const maxTitleFileNameLength = 50;
 const alfredBarLength = parseInt ($.getenv("alfred_bar_length"));
 
 const matchAuthorsInEtAl = $.getenv("match_authors_in_etal") === "true";
+const matchOnlyShortYears = $.getenv("match_only_short_years") === "true";
 const libraryPath = $.getenv("bibtex_library_path").replace(/^~/, app.pathTo("home folder"));
 const litNoteFolder = $.getenv("literature_note_folder").replace(/^~/, app.pathTo("home folder"));
 let litNoteFolderCorrect = false;
@@ -121,14 +122,15 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		if (keywords.length) keywordMatches = keywords.map(tag => "#" + tag);
 		let authorMatches = [...authors, ...editors];
 		if (!matchAuthorsInEtAl) authorMatches = [...authors.slice(0, 1), ...editors.slice(0, 1)]; // only match first two names
-		const shortYear = year.slice(-2); // last two digits
+		const yearMatches = [year.slice(-2)]; // last two digits
+		if (!matchOnlyShortYears) yearMatches.push(year);
+
 
 		const alfredMatcher = ["@" + citekey,
 			...keywordMatches,
 			title,
 			...authorMatches,
-			year,
-			shortYear,
+			...yearMatches,
 			booktitle,
 			journal,
 			type,
