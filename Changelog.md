@@ -1,3 +1,6 @@
+- 2022-04-06	release 8.2.1
+- 2022-04-06	fix #4
+- 2022-04-06	adding entries now also adds empty keywords field
 - 2022-04-03	release 8.2.0
 - 2022-04-03	option to match *only* short years
 - 2022-04-01	minor decoder improvements
