@@ -15,4 +15,5 @@ echo -n "$DUMMYDOC" \
 	| sed -E "s/ $//" \
 	| pbcopy
 
+# paste
 osascript -e 'tell application "System Events" to keystroke "v" using {command down}'
