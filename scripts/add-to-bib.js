@@ -141,8 +141,14 @@ function run (argv) {
 		newCitekey = "NEW_ENTRY";
 	} else {
 		const newEntryProperties = bibtexEntry.split(newLineDelimiter);
+
+		// generate citekey
 		newCitekey = generateCitekey(newEntryProperties);
 		newEntryProperties[0] = newEntryProperties[0].split("{")[0] + "{" + newCitekey + ",";
+
+		// Create keywords field
+		newEntryProperties.splice(newEntryProperties.length-2, 0, "\tkeywords = {},");
+
 		newEntry = newEntryProperties.join("\n") + "\n";
 	}
 
