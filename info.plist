@@ -372,18 +372,7 @@
 			</dict>
 		</array>
 		<key>96FCE9BC-5201-4357-9B63-588F73AEF5F3</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>74F55929-395A-4A89-BCD9-E2BB9E297A1E</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
+		<array/>
 		<key>986EF1F7-54A1-4C67-A490-4DFCC60FA328</key>
 		<array>
 			<dict>
@@ -1289,25 +1278,6 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 			<string>96FCE9BC-5201-4357-9B63-588F73AEF5F3</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<true/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>74F55929-395A-4A89-BCD9-E2BB9E297A1E</string>
-			<key>version</key>
-			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2490,17 +2460,6 @@ to set a hotkey for the citaiton picker.</string>
 			<integer>465</integer>
 			<key>ypos</key>
 			<integer>730</integer>
-		</dict>
-		<key>74F55929-395A-4A89-BCD9-E2BB9E297A1E</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>2</integer>
-			<key>note</key>
-			<string>Paste</string>
-			<key>xpos</key>
-			<integer>1005</integer>
-			<key>ypos</key>
-			<integer>230</integer>
 		</dict>
 		<key>7E602D21-0A78-4DC6-A807-28A5602897C8</key>
 		<dict>
