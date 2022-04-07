@@ -84,7 +84,7 @@ Press the hotkey in any text field to launch the citation picker.
 	- Leave the input after the `+` empty to create a new, empty BibTeX entry.
 	- Opens the entry afterwards in the app specified in `open_entries_in`.
 - Note that adding & removing entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/) since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file will be overridden.
-- `fn + ↵`: __Auto-file and auto-rename__ the *currently selected PDF in Finder* in a the folder specified in `pdf_folder`. 
+- `fn + ↵`: __Auto-file and auto-rename__ the *currently selected PDF in Finder* in a the folder specified in `pdf_folder`.
 	- The template path used is: `{first_letter_of_citekey}/{citekey-author-part}/{citekey}_{shortened_title}.pdf`
 	- If there is a PDF present already, it will be indicated by a `📕`.
 

@@ -1,3 +1,5 @@
+- 2022-04-07	release 8.3.0
+- 2022-04-07	icon to indicate the presence of pdfs added via autofile
 - 2022-04-06	release 8.2.1
 - 2022-04-06	fix #4
 - 2022-04-06	adding entries now also adds empty keywords field
