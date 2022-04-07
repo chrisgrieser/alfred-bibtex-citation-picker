@@ -1,3 +1,5 @@
+- 2022-04-07	release 8.3.1
+- 2022-04-07	query filter for PDFs
 - 2022-04-07	release 8.3.0
 - 2022-04-07	icon to indicate the presence of pdfs added via autofile
 - 2022-04-06	release 8.2.1

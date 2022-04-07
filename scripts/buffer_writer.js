@@ -81,7 +81,7 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 
 		// Literature Notes
 		let litNotePath = "";
-		let litNoteMatcher = [];
+		const litNoteMatcher = [];
 		const hasLitNote = litNoteFolderCorrect && litNoteArray.includes(citekey);
 		if (hasLitNote) {
 			emojis.push(litNoteIcon);
@@ -90,7 +90,7 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		}
 		// PDFs
 		const hasPdf = pdfFolderCorrect && pdfArray.includes(citekey);
-		let pdfMatcher = [];
+		const pdfMatcher = [];
 		if (hasPdf) {
 			emojis.push(pdfIcon);
 			pdfMatcher.push(pdfFilterStr);
