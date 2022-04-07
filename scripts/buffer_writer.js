@@ -8,6 +8,7 @@ const tagIcon = "🏷";
 const abstractIcon = "📄";
 const pdfIcon = "📕";
 const litNoteFilterStr = "*";
+const pdfFilterStr = "pdf";
 
 const maxTitleFileNameLength = 50;
 const alfredBarLength = parseInt ($.getenv("alfred_bar_length"));
@@ -85,11 +86,15 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		if (hasLitNote) {
 			emojis.push(litNoteIcon);
 			litNotePath = litNoteFolder + "/" + citekey + ".md";
-			litNoteMatcher = [litNoteFilterStr];
+			litNoteMatcher.push(litNoteFilterStr);
 		}
 		// PDFs
 		const hasPdf = pdfFolderCorrect && pdfArray.includes(citekey);
-		if (hasPdf) emojis.push(pdfIcon);
+		let pdfMatcher = [];
+		if (hasPdf) {
+			emojis.push(pdfIcon);
+			pdfMatcher.push(pdfFilterStr);
+		}
 
 		// Emojis for Abstracts and Keywords (tags)
 		if (abstract) emojis.push(abstractIcon);
@@ -156,7 +161,8 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 			booktitle,
 			journal,
 			type,
-			...litNoteMatcher
+			...litNoteMatcher,
+			...pdfMatcher
 		].join(" ").replaceAll ("-", " ");
 
 		// Large Type

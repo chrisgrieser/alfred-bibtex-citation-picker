@@ -27,6 +27,7 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 - [Advanced Usage](#advanced-usage)
 	- [Bibliography Actions](#bibliography-actions)
 	- [Literature Note Actions](#literature-note-actions)
+	- [PDF: Auto-file & auto-rename](#pdf-auto-file--auto-rename)
 	- [Auxiliary Features](#auxiliary-features)
 - [About the Developer](#about-the-developer)
 	- [Profiles](#profiles)
@@ -47,7 +48,7 @@ Press the hotkey in any text field to launch the citation picker.
 - Search for the title, author/editor (last name), year, or, collection/journal-title.
 - Prepend `@` to a word to search for a citekey, e.g. `@Grieser2020`.
 - Prepend `#` to search for keywords (tags), e.g. `#sociology`.
-- *Smart Queries*: You can search for any combination of the above. For example, the query `2020 #cognition Grieser *` will for entries published in 2020, with the tag "cognition", and with "Grieser" as author/editor.
+- *Smart Queries*: You can search for any combination of the above. For example, the query `2020 #cognition Grieser` will for entries published in 2020, with the tag "cognition", and with "Grieser" as author/editor.
 - *Quick Queries*: The search is fuzzy and case-insensitive. For year dates, it also matches the last two digits. For example, you can search for `fouc 77` to find `Foucault 1977`. In addition, recently selected entries are placed further at the top of the search results.
 - The workflow setting `match_authors_in_etal` determines whether authors (or editors) in the *et al.* are still matched when searching for them (default: *true*).
 - *Tab-Completion*: Pressing `tab` autocompletes the first author/editor name.
@@ -59,13 +60,13 @@ Press the hotkey in any text field to launch the citation picker.
 
 ### Icon Meanings
 
-| Icon | Entry has       |
+| Icon | Entry has...    |
 |:-----|:----------------|
 | 🌐   | URL or DOI      |
-| 📓   | Literature Note |
-| 📕   | PDF             |
 | 📄   | Abstract        |
 | 🏷 n | n Keywords      |
+| 📓   | Literature Note |
+| 📕   | PDF             |
 
 ### URL Actions
 - `⌃ + ↵`: Open the URL in the browser.
@@ -84,9 +85,6 @@ Press the hotkey in any text field to launch the citation picker.
 	- Leave the input after the `+` empty to create a new, empty BibTeX entry.
 	- Opens the entry afterwards in the app specified in `open_entries_in`.
 - Note that adding & removing entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/) since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file will be overridden.
-- `fn + ↵`: __Auto-file and auto-rename__ the *currently selected PDF in Finder* in a the folder specified in `pdf_folder`.
-	- The template path used is: `{first_letter_of_citekey}/{citekey-author-part}/{citekey}_{shortened_title}.pdf`
-	- If there is a PDF present already, it will be indicated by a `📕`.
 
 ### Literature Note Actions
 - Looks in the folder specified in the workflow settings `literature_note_folder` for files that are *exactly* named like the citekey (without `@`, but with `.md` extension). Entries that have a literature note like this will be indicated by a `📓`.
@@ -95,6 +93,12 @@ Press the hotkey in any text field to launch the citation picker.
 	- If the file is in an [Obsidian Vault](https://obsidian.md/), opens the file in Obsidian.
 	- If there is no literature note, a new one will be created.
 - `⌘ + Y`: Preview the literature note with QuickLook (requires QLmarkdown or Peek[^1]).
+
+### PDF: Auto-file & auto-rename
+- `fn + ↵`: Auto-file and auto-rename the *currently selected PDF in Finder* in a the folder specified in `pdf_folder`.
+- Inside `pdf_folder`, uses the template path used is: `{first_letter_of_citekey}/{citekey-author-part}/{citekey}_{shortened_title}.pdf`
+- If there is a PDF already present at that location, it will be indicated by a `📕`.
+- Add `pdf` to any search query to filter only for entries with PDFs that have been added by the auto-file feature.. , e.g. `pdf grieser` will search for entries from the author "Grieser" with PDFs. Can be combined with other queries (see: [smart queries](#search)).
 
 ### Auxiliary Features
 Triggered via the Alfred Keyword `scp` (for `S`upercharged `C`itation `P`icker).
