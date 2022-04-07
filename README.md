@@ -129,7 +129,7 @@ In my day job, I am a sociologist studying the social mechanisms underlying the 
 - [LinkedIn](https://www.linkedin.com/in/christopher-grieser-ba693b17a/)
 
 ### Donate
-<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy me a Coffee', '#29abe0', 'Y8Y86SQ91');kofiwidget2.draw();</script> 
+<a href='https://ko-fi.com/Y8Y86SQ91' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
 <!-- markdown-link-check-enable -->
 
