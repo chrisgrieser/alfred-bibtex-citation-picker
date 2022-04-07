@@ -63,6 +63,7 @@ Press the hotkey in any text field to launch the citation picker.
 |:-----|:----------------|
 | 🌐   | URL or DOI      |
 | 📓   | Literature Note |
+| 📕   | PDF             |
 | 📄   | Abstract        |
 | 🏷 n | n Keywords      |
 
@@ -83,15 +84,17 @@ Press the hotkey in any text field to launch the citation picker.
 	- Leave the input after the `+` empty to create a new, empty BibTeX entry.
 	- Opens the entry afterwards in the app specified in `open_entries_in`.
 - Note that adding & removing entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/) since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file will be overridden.
-- `fn + ↵`: Auto-file and auto-rename the *currently selected PDF in Finder* in a the folder specified in `pdf_folder`.
+- `fn + ↵`: __Auto-file and auto-rename__ the *currently selected PDF in Finder* in a the folder specified in `pdf_folder`. 
+	- The template path used is: `{first_letter_of_citekey}/{citekey-author-part}/{citekey}_{shortened_title}.pdf`
+	- If there is a PDF present already, it will be indicated by a `📕`.
 
 ### Literature Note Actions
+- Looks in the folder specified in the workflow settings `literature_note_folder` for files that are *exactly* named like the citekey (without `@`, but with `.md` extension). Entries that have a literature note like this will be indicated by a `📓`.
 - Add `*` to any search query to filter only for entries with literature notes, e.g. `* grieser` will search for entries from "Grieser" with literature notes. Can be combined with other queries (see: [smart queries](#search)).
 - `⌘⇧ + ↵`: Open the literature note.
 	- If the file is in an [Obsidian Vault](https://obsidian.md/), opens the file in Obsidian.
 	- If there is no literature note, a new one will be created.
 - `⌘ + Y`: Preview the literature note with QuickLook (requires QLmarkdown or Peek[^1]).
-- *Both actions look for literature specified in the workflow settings `literature_note_folder`. The files must be named __exactly__ like the citekey (without `@`) and have a `.md` extension.*
 
 ### Auxiliary Features
 Triggered via the Alfred Keyword `scp` (for `S`upercharged `C`itation `P`icker).
