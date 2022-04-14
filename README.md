@@ -76,7 +76,7 @@ Press the hotkey in any text field to launch the citation picker.
 
 ### Bibliography Actions
 - `⇧ + ↵`: Reveal the entry in [BibDesk](http://bibdesk.sourceforge.net), [VSCode](https://code.visualstudio.com), or [Sublime](https://www.sublimetext.com/), depending on the setting `open_entries_in`.
-- `⌘⌥ + ↵`: Paste the full bibliographic entry in the APA 6th Style (requires [Pandoc](https://pandoc.org)).
+- `⌘⌥ + ↵`: Paste the full bibliographic entry in the APA 6th Style (requires [Pandoc](https://pandoc.org/installing.html)).
 - `⌘ + L`: Preview the (unabridged) title, abstract, and list of keywords in Large Type.
 - `⌘fn + ↵`: Delete the entry from the BibTeX library.
 	- ⚠️ This feature is untested with BiBTeX files created with apps other than BibDesk and Bookends (or formatted with `bibtex-tidy`) [Create an issue](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues) for problems with other apps.
