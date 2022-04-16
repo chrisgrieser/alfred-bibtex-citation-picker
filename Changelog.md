@@ -1,3 +1,5 @@
+- 2022-04-16	release 8.3.2
+- 2022-04-16	parser improvements + parser ignores comments
 - 2022-04-07	release 8.3.1
 - 2022-04-07	query filter for PDFs
 - 2022-04-07	release 8.3.0
