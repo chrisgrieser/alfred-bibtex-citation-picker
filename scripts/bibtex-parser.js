@@ -112,7 +112,7 @@ function bibtexParse (str) { // eslint-disable-line no-unused-vars
 	const bibtexPropertyDelimiter = /,(?=\s*[\w-]+\s*=)/; // last comma of a field, see: https://regex101.com/r/1dvpfC/1
 	const bibtexNameValueDelimiter = " and ";
 	const bibtexKeywordValueDelimiter = ",";
-	const bibtexCommentRegex = /^%%.*$/gm;
+	const bibtexCommentRegex = /^%.*$/gm;
 
 	function toLastNameArray(nameString) {
 		return nameString
