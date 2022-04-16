@@ -73,10 +73,10 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		const autoFileName = `${citekey}_${safeTitle}`;
 
 		// URL
-		let URLsubtitle = "⛔️ There is no URL or DOI.";
+		let urlSubtitle = "⛔️ There is no URL or DOI.";
 		if (url) {
 			emojis.push(urlIcon);
-			URLsubtitle = "⌃: Open URL – " + url;
+			urlSubtitle = "⌃: Open URL – " + url;
 		}
 
 		// Literature Notes
@@ -132,7 +132,8 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		// Journal/Book Title
 		let collectionSubtitle = "";
 		if (type === "article" && journal) {
-			collectionSubtitle += "    In: " + journal + " " + volume;
+			collectionSubtitle += "    In: " + journal;
+			if (volume) collectionSubtitle += " " + volume;
 			if (issue) collectionSubtitle += "(" + issue + ")";
 		}
 		if (type === "incollection" && booktitle) collectionSubtitle += "    In: " + booktitle;
@@ -151,8 +152,6 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		if (!matchAuthorsInEtAl) authorMatches = [...authors.slice(0, 1), ...editors.slice(0, 1)]; // only match first two names
 		const yearMatches = [year.slice(-2)]; // last two digits
 		if (!matchOnlyShortYears) yearMatches.push(year);
-
-
 		const alfredMatcher = ["@" + citekey,
 			...keywordMatches,
 			title,
@@ -188,7 +187,7 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 				"ctrl": {
 					"valid": url !== "",
 					"arg": url,
-					"subtitle": URLsubtitle,
+					"subtitle": urlSubtitle,
 				},
 			}
 		};

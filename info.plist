@@ -2697,7 +2697,7 @@ to set a hotkey for the citaiton picker.</string>
 	<key>variables</key>
 	<dict>
 		<key>alfred_bar_length</key>
-		<string>56</string>
+		<string>60</string>
 		<key>auto_update</key>
 		<string>true</string>
 		<key>autocomplete_list_location</key>

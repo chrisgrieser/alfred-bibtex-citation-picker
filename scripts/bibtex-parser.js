@@ -112,6 +112,7 @@ function bibtexParse (str) { // eslint-disable-line no-unused-vars
 	const bibtexPropertyDelimiter = /,(?=\s*[\w-]+\s*=)/; // last comma of a field, see: https://regex101.com/r/1dvpfC/1
 	const bibtexNameValueDelimiter = " and ";
 	const bibtexKeywordValueDelimiter = ",";
+	const bibtexCommentRegex = /^%%.*$/gm;
 
 	function toLastNameArray(nameString) {
 		return nameString
@@ -125,6 +126,7 @@ function bibtexParse (str) { // eslint-disable-line no-unused-vars
 	// -----------------------------
 
 	const bibtexEntryArray = bibtexDecode(str)
+		.replace(bibtexCommentRegex, "") // remove comments
 		.split(bibtexEntryDelimiter)
 		.slice(1) // first element is BibTeX metadata
 		.map(bibEntry => {
@@ -139,8 +141,14 @@ function bibtexParse (str) { // eslint-disable-line no-unused-vars
 			// parse remaining lines
 			lines = lines.filter(line => line.includes("=")); // catch erroneous BibTeX formatting
 			lines.forEach (line => {
-				const field = line.split("=")[0].trim().toLowerCase();
-				const value = line.split("=")[1].trim().replace(/{|}|,$/g, ""); // remove TeX escaping
+				const field = line
+					.split("=")[0]
+					.trim()
+					.toLowerCase();
+				const value = line.split("=")[1]
+					.trim()
+					.replace(/{|}|,$/g, "") // remove TeX escaping
+					.trim(); // needs second trim to account for removed TeX
 
 				switch (field) {
 					case "author":
