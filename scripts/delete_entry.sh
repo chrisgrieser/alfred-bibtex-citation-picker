@@ -14,6 +14,7 @@ DIFFERENCE=$((ENTRIES_BEFORE - ENTRIES_AFTER))
 # pass for notication in Alfred
 if [[ $DIFFERENCE == 1 ]]; then
 	mv -f "$LIBRARY.bak" ~./Trash
+	echo "✅ @$CITEKEY deleted."
 else
-	echo "Error, deleted $DIFFERENCE citations. Check Backup file (ending with .bak) in library location."
+	echo "⚠️ Error, deleted $DIFFERENCE citations. Check Backup file (ending with .bak) in library location."
 fi

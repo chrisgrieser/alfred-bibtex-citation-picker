@@ -1665,13 +1665,13 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
-				<true/>
+				<false/>
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>{query}</string>
+				<string></string>
 				<key>title</key>
-				<string>✅ {var:citekey} deleted from BibTeX Library</string>
+				<string>{query}</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
