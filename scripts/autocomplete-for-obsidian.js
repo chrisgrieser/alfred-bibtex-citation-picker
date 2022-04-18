@@ -10,6 +10,8 @@ function writeToFile(text, file) {
 
 const libraryPath = $.getenv("bibtex_library_path").replace(/^~/, app.pathTo("home folder"));
 const autocompleteListLocation = $.getenv("autocomplete_list_location").replace(/^~/, app.pathTo("home folder"));
+app.doShellScript(`mkdir -p $(dirname '${autocompleteListLocation}')`);
+
 
 // Import Hack, https://github.com/JXA-Cookbook/JXA-Cookbook/wiki/Importing-Scripts
 const toImport = "./scripts/bibtex-parser.js";

@@ -2065,7 +2065,7 @@ echo "$*"</string>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
-				<true/>
+				<false/>
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
@@ -2690,7 +2690,7 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>535</integer>
+			<integer>550</integer>
 			<key>ypos</key>
 			<integer>1235</integer>
 		</dict>
@@ -2738,7 +2738,7 @@ to set a hotkey for the citaiton picker.</string>
 		<key>auto_update</key>
 		<string>true</string>
 		<key>autocomplete_list_location</key>
-		<string>~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Main Vault/Meta/Autocomplete Dictionary/+ citekey-autocomplete.txt</string>
+		<string>~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Main Vault/Meta/Autocomplete Dictionaries/+ citekey-autocomplete.txt</string>
 		<key>backup_destination</key>
 		<string>~/Library/Mobile Documents/com~apple~CloudDocs/Dotfolder/Backups/Library Backups/</string>
 		<key>bibtex_library_path</key>
