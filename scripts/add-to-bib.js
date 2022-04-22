@@ -46,19 +46,30 @@ function run (argv) {
 				.trim();
 			return value;
 		}
-		const year = parseBibtexProperty(bibtexPropertyArr, "year");
+
+		let year = parseBibtexProperty(bibtexPropertyArr, "year");
+		if (!year) year = "ND";
+
+		let authEds;
 		const authors = parseBibtexProperty(bibtexPropertyArr, "author");
+		const editors = parseBibtexProperty(bibtexPropertyArr, "editor");
+		if (authors) authEds = authors;
+		else if (editors) authEds = editors;
+		else authEds = "NoAuthor";
 
-		const lastNameArr = authors
-			.split(" and ") // "and" used as delimiter in bibtex for names
-			.map(name => {
-				if (name.includes(",")) return name.split(",")[0].trim(); // ottobib returns "last name - first name"
-				return name.split(" ").pop(); // doi.org returns "first name - last name"
-			});
+		let authorStr;
+		if (authEds === "NoAuthor") authorStr = authEds;
+		else {
+			const lastNameArr = authEds
+				.split(" and ") // "and" used as delimiter in bibtex for names
+				.map(name => {
+					if (name.includes(",")) return name.split(",")[0].trim(); // ottobib returns "last name - first name"
+					return name.split(" ").pop(); // doi.org returns "first name - last name"
+				});
 
-		let authorStr = "";
-		if (lastNameArr.length < 3) authorStr = lastNameArr.join("");
-		else authorStr = lastNameArr[0] + "EtAl";
+			if (lastNameArr.length < 3) authorStr = lastNameArr.join("");
+			else authorStr = lastNameArr[0] + "EtAl";
+		}
 
 		// strip diacritics from authorStr
 		authorStr = authorStr
