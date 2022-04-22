@@ -1,3 +1,6 @@
+- 2022-04-23	release 8.3.3
+- 2022-04-23	citekey generation when adding items considers cases with missing author or year
+- 2022-04-18	bugfixes for autocomplete dictionary creation
 - 2022-04-16	release 8.3.2
 - 2022-04-16	parser improvements + parser ignores comments
 - 2022-04-07	release 8.3.1
