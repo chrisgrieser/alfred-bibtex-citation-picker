@@ -144,7 +144,6 @@ function run (argv) {
 		// if (bibtexEntry === "Not found") return "ERROR";
 	}
 
-
 	let newEntry;
 	let newCitekey;
 	if (isEmpty) {
