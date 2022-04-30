@@ -22,10 +22,11 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 - [Basic Usage](#basic-usage)
 	- [Search](#search)
 	- [Citation Actions](#citation-actions)
-	- [Icon Meanings](#icon-meanings)
 	- [URL Actions](#url-actions)
+	- [Icon Meanings](#icon-meanings)
 - [Advanced Usage](#advanced-usage)
 	- [Bibliography Actions](#bibliography-actions)
+	- [Advanced Search Features](#advanced-search-features)
 	- [Literature Note Actions](#literature-note-actions)
 	- [PDF: Auto-file & auto-rename](#pdf-auto-file--auto-rename)
 	- [Auxiliary Features](#auxiliary-features)
@@ -50,13 +51,15 @@ Press the hotkey in any text field to launch the citation picker.
 - Prepend `#` to search for keywords (tags), e.g. `#sociology`.
 - *Smart Queries*: You can search for any combination of the above. For example, the query `2020 #cognition Grieser` will for entries published in 2020, with the tag "cognition", and with "Grieser" as author/editor.
 - *Quick Queries*: The search is fuzzy and case-insensitive. For year dates, it also matches the last two digits. For example, you can search for `fouc 77` to find `Foucault 1977`. In addition, recently selected entries are placed further at the top of the search results.
-- The workflow setting `match_authors_in_etal` determines whether authors (or editors) in the *et al.* are still matched when searching for them (default: *true*).
-- *Tab-Completion*: Pressing `tab` autocompletes the first author/editor name.
 
 ### Citation Actions
 - `↵`: Paste the citekey of the selected citation.
 - `⌥ + ↵`:  Add another citation.
 - `⌘ + ↵`: Add page numbers before pasting the selected citekey. Confirm the page number with `⌥ + ↵` or `⌘ + ↵` to add another citation afterwards.
+
+### URL Actions
+- `⌃ + ↵`: Open the URL in the browser.
+- `⌘ + C`: Copy the URL to the clipboard.
 
 ### Icon Meanings
 
@@ -68,10 +71,6 @@ Press the hotkey in any text field to launch the citation picker.
 | 📓   | Literature Note |
 | 📕   | PDF             |
 
-### URL Actions
-- `⌃ + ↵`: Open the URL in the browser.
-- `⌘ + C`: Copy the URL to the clipboard.
-
 ## Advanced Usage
 
 ### Bibliography Actions
@@ -79,15 +78,21 @@ Press the hotkey in any text field to launch the citation picker.
 - `⌘⌥ + ↵`: Paste the full bibliographic entry in the APA 6th Style (requires [Pandoc](https://pandoc.org/installing.html)).
 - `⌘ + L`: Preview the (unabridged) title, abstract, and list of keywords in Large Type.
 - `⌘fn + ↵`: Delete the entry from the BibTeX library.
-	- ⚠️ This feature is untested with BiBTeX files created with apps other than BibDesk and Bookends (or formatted with `bibtex-tidy`) [Create an issue](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues) for problems with other apps.
+	- ⚠️ This feature is untested with BiBTeX files created with apps other than BibDesk and Bookends (or have been formatted with `bibtex-tidy`). [Create an issue](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues) for problems with other apps.
 - __Add entries to the BibTex library__: use the Alfred Keyword `+`, followed by a DOI or ISBN
 	- the respective entry will be added to your library, with a properly formatted citekey (avoiding duplicates with existing library, etc.)
 	- Leave the input after the `+` empty to create a new, empty BibTeX entry.
 	- Opens the entry afterwards in the app specified in `open_entries_in`.
 - Note that adding & removing entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/) since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file will be overridden.
 
+### Advanced Search Features
+- The workflow setting `match_authors_in_etal` determines whether authors (or editors) in the *et al.* are still matched when searching for them (default: *true*).
+- The workflow setting `match_only_short_years` ensures that searching for "19" only matches publications written in the year 2019 (or 1919), and not all publications written between 1900 and 1999 (default: *false*).
+- *Tab-Completion*: Pressing `tab` autocompletes the first author/editor name.
+
 ### Literature Note Actions
-- Looks in the folder specified in the workflow settings `literature_note_folder` for files that are *exactly* named like the citekey (without `@`, but with `.md` extension). Entries that have a literature note like this will be indicated by a `📓`.
+- Looks in the folder specified in the workflow settings `literature_note_folder` for files that are *exactly* named like the citekey (without `@`, but with `.md` extension). 
+- Entries that have a literature note like this will be indicated by a `📓`.
 - Add `*` to any search query to filter only for entries with literature notes, e.g. `* grieser` will search for entries from "Grieser" with literature notes. Can be combined with other queries (see: [smart queries](#search)).
 - `⌘⇧ + ↵`: Open the literature note.
 	- If the file is in an [Obsidian Vault](https://obsidian.md/), opens the file in Obsidian.
@@ -95,10 +100,10 @@ Press the hotkey in any text field to launch the citation picker.
 - `⌘ + Y`: Preview the literature note with QuickLook (requires QLmarkdown or Peek[^1]).
 
 ### PDF: Auto-file & auto-rename
-- `fn + ↵`: Auto-file and auto-rename the *currently selected PDF in Finder* in a the folder specified in `pdf_folder`.
+- `fn + ↵`: Auto-file and auto-rename the *currently selected PDF in Finder* to a the folder specified in `pdf_folder`.
 - Inside `pdf_folder`, uses the template path used is: `{first_letter_of_citekey}/{citekey-author-part}/{citekey}_{shortened_title}.pdf`
 - If there is a PDF already present at that location, it will be indicated by a `📕`.
-- Add `pdf` to any search query to filter only for entries with PDFs that have been added by the auto-file feature.. , e.g. `pdf grieser` will search for entries from the author "Grieser" with PDFs. Can be combined with other queries (see: [smart queries](#search)).
+- Add `pdf` to any search query to filter only for entries with PDFs that have been added by the auto-file feature. `pdf grieser` for example will search for entries from the author "Grieser" with PDFs. Can be combined with other queries (see: [smart queries](#search)).
 
 ### Auxiliary Features
 Triggered via the Alfred Keyword `scp` (for `S`upercharged `C`itation `P`icker).
@@ -107,9 +112,9 @@ Triggered via the Alfred Keyword `scp` (for `S`upercharged `C`itation `P`icker).
 - __Cheatsheet: Pandoc Citation Syntax__: Open a cheat sheet for the Pandoc citation syntax.
 - __Cheatsheet: Citation Picker Actions__: Open a cheat sheet of the available actions of the Supercharged Citation Picker.
 - __Force Buffer Reload__: Force a reload of the citation picker for debugging purposes.
-- __Run BibTeX-Tidy__: Runs [`bibtex-tidy`](https://github.com/FlamingTempura/bibtex-tidy) with the options set in `bibtex_tidy_options` in the terminal.[^4]  
+- __Run BibTeX-Tidy__: Runs [`bibtex-tidy`](https://github.com/FlamingTempura/bibtex-tidy) with the options set in `bibtex_tidy_options` in the terminal.[^4] 
 - __Autocompletion List__: Create an autocompletion list formatted for use with the [Various Complements Plugin](https://obsidian.md/plugins?id=various-complements) in Obsidian.[^3]
-- __Library Backup[^2]__: Create a Backup of your library in the location `backup_destination`, restricting the maximum number of backups to `max_number_of_bkps` (deleting the oldest backup). You can also use the following AppleScript to to trigger the backups, e.g. for a cron job:
+- __Library Backup[^2]__: Create a Backup of your library in the location `backup_destination`, restricting the maximum number of backups to `max_number_of_bkps` (deleting the oldest backup). You can also use the following AppleScript to trigger the backups, e.g. for a cron job:
 
 ```applescript
 tell application id "com.runningwithcrayons.Alfred" to run trigger "BibTeX Library Backup" in workflow "de.chris-grieser.alfred-bibtex-citation-picker"
