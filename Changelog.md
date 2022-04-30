@@ -1,3 +1,6 @@
+- 2022-04-30	release 8.3.4
+- 2022-04-30	fix csl download
+- 2022-04-24	fix notification for entry deletion
 - 2022-04-23	release 8.3.3
 - 2022-04-23	citekey generation when adding items considers cases with missing author or year
 - 2022-04-18	bugfixes for autocomplete dictionary creation
