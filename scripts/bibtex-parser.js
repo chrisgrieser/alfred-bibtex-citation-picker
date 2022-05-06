@@ -75,6 +75,7 @@ const frenchChars = [
 ];
 const otherChars = [
 	"{\\~n};ñ",
+	"\\~a;ã",
 	"{\\v c};č",
 	"\\o{};ø",
 	"{\\o};ø",
