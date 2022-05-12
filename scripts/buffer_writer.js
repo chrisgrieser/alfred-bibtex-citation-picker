@@ -25,7 +25,7 @@ if (pdfFolder) pdfFolderCorrect = Application("Finder").exists(Path(litNoteFolde
 
 // Import Hack, https://github.com/JXA-Cookbook/JXA-Cookbook/wiki/Importing-Scripts
 const toImport = "./scripts/bibtex-parser.js";
-eval (app.doShellScript('cat "' + toImport + '"'));
+eval (app.doShellScript(`cat "${toImport}"`));
 
 // -------------------------------
 

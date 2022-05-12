@@ -5,7 +5,6 @@
 
 # Requirements
 # - markdownlint
-# - markdown-link-check
 # - eslint
 
 # -----------------------
@@ -34,10 +33,7 @@ plutil -replace version -string "$nextVersion" info.plist
 cd "$(dirname "$0")" || exit 1
 eslint . --fix --config ~"/Library/Mobile Documents/com~apple~CloudDocs/Dotfolder/Configs/.eslintrc.json"
 markdownlint --fix ./README.md
-markdown-link-check -q ./README.md
 
-# markdownlint --fix docs/*.md
-# find docs -name \*.md -print0 | xargs -0 -n1 markdown-link-check -q
 echo ""
 
 # -----------------------
