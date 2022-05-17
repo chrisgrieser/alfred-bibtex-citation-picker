@@ -1390,9 +1390,9 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 				<key>acceptstext</key>
 				<true/>
 				<key>acceptsurls</key>
-				<true/>
+				<false/>
 				<key>name</key>
-				<string>Add to BibTeX Library</string>
+				<string>Add DOI/ISBN to BibTeX Library</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.universalaction</string>
@@ -2360,7 +2360,7 @@ to set a hotkey for the citaiton picker.</string>
 			<key>note</key>
 			<string>add doi/isbn</string>
 			<key>xpos</key>
-			<integer>15</integer>
+			<integer>20</integer>
 			<key>ypos</key>
 			<integer>310</integer>
 		</dict>
