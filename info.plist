@@ -386,6 +386,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>99F0E01D-AD42-4C0B-98A1-B3419694C87C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2DC90122-FC40-44CA-8F59-E3C16AC99651</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>9D904019-C6C8-4A76-A04F-706839EEB325</key>
 		<array>
 			<dict>
@@ -582,19 +595,6 @@
 				<string></string>
 				<key>sourceoutputuid</key>
 				<string>F5B1DB5E-4F1B-419B-B8A1-E5161A5EC73C</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>D5D1BDDD-6370-4027-809B-84F7F784DE27</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>2DC90122-FC40-44CA-8F59-E3C16AC99651</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -1383,6 +1383,27 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>acceptsfiles</key>
+				<false/>
+				<key>acceptsmulti</key>
+				<integer>0</integer>
+				<key>acceptstext</key>
+				<true/>
+				<key>acceptsurls</key>
+				<true/>
+				<key>name</key>
+				<string>Add to BibTeX Library</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.universalaction</string>
+			<key>uid</key>
+			<string>99F0E01D-AD42-4C0B-98A1-B3419694C87C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>soundname</key>
 				<string>Basso</string>
 				<key>systemsound</key>
@@ -1392,19 +1413,6 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 			<string>alfred.workflow.output.playsound</string>
 			<key>uid</key>
 			<string>254C2241-0AE4-4F52-A073-16E3DEFC9384</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>triggerid</key>
-				<string>add-doi-to-library</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
-			<key>uid</key>
-			<string>D5D1BDDD-6370-4027-809B-84F7F784DE27</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1426,6 +1434,25 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
 			<string>AF128420-2209-43A6-B83B-C8F548CAD6A1</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string></string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>30006A6B-EAF9-4531-8694-5E878A0FB80E</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1455,25 +1482,6 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 			<string>alfred.workflow.input.listfilter</string>
 			<key>uid</key>
 			<string>04E17547-EDD2-4C44-9F41-F15391DD8775</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string></string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>30006A6B-EAF9-4531-8694-5E878A0FB80E</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -2196,7 +2204,7 @@ https://ko-fi.com/pseudometa</string>
 			<key>xpos</key>
 			<integer>15</integer>
 			<key>ypos</key>
-			<integer>450</integer>
+			<integer>570</integer>
 		</dict>
 		<key>0F739BDB-D7EC-482F-9798-A9B04AF57CA9</key>
 		<dict>
@@ -2503,6 +2511,15 @@ to set a hotkey for the citaiton picker.</string>
 			<key>ypos</key>
 			<integer>185</integer>
 		</dict>
+		<key>99F0E01D-AD42-4C0B-98A1-B3419694C87C</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>5</integer>
+			<key>xpos</key>
+			<integer>20</integer>
+			<key>ypos</key>
+			<integer>445</integer>
+		</dict>
 		<key>9D904019-C6C8-4A76-A04F-706839EEB325</key>
 		<dict>
 			<key>colorindex</key>
@@ -2602,17 +2619,6 @@ to set a hotkey for the citaiton picker.</string>
 			<integer>1335</integer>
 			<key>ypos</key>
 			<integer>175</integer>
-		</dict>
-		<key>D5D1BDDD-6370-4027-809B-84F7F784DE27</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>note</key>
-			<string>for popclip</string>
-			<key>xpos</key>
-			<integer>210</integer>
-			<key>ypos</key>
-			<integer>450</integer>
 		</dict>
 		<key>DD59F90F-8FD2-486D-A8A8-2FFA47DE45F6</key>
 		<dict>

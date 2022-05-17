@@ -2,7 +2,7 @@
 
 function run (argv) {
 
-	const doiRegex = /^.*\/?(10\.\S+)\/?$/;
+	const doiRegex = /^10.\d{4,9}\/[-._;()/:A-Z0-9]+$/i; // https://www.crossref.org/blog/dois-and-matching-regular-expressions/
 	const isbnRegex = /^[\d-]{9,}$/;
 	const isEmptyRegex = /^ *$/;
 

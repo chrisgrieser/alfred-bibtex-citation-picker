@@ -165,7 +165,7 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		].join(" ").replaceAll ("-", " ");
 
 		// Large Type
-		let largeTypeInfo = title;
+		let largeTypeInfo = `${title} (@${citekey})`;
 		if (abstract) largeTypeInfo += "\n\n" + abstract;
 		if (keywords.length) largeTypeInfo += "\n\nkeywords: " + keywords.join(", ");
 
