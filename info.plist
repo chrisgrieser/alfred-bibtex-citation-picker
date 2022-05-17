@@ -2743,7 +2743,7 @@ to set a hotkey for the citaiton picker.</string>
 		<string>bibtex_library_path</string>
 	</array>
 	<key>version</key>
-	<string>8.3.4</string>
+	<string>8.3.5</string>
 	<key>webaddress</key>
 	<string>https://github.com/chrisgrieser/alfred-bibtex-citation-picker</string>
 </dict>

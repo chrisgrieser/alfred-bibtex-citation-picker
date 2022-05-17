@@ -1,3 +1,6 @@
+- 2022-05-17	release 8.3.5
+- 2022-05-05	added donation info
+- 2022-04-30	readme updates
 - 2022-04-30	release 8.3.4
 - 2022-04-30	fix csl download
 - 2022-04-24	fix notification for entry deletion
