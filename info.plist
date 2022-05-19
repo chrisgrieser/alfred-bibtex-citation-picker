@@ -795,7 +795,7 @@
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string>{var:pageless_citation}, p. {query}</string>
+				<string>{var:pageless_citation}{var:_format_page_no_prefix}{query}</string>
 				<key>passthroughargument</key>
 				<false/>
 				<key>variables</key>
@@ -838,7 +838,7 @@
 				<key>variables</key>
 				<dict>
 					<key>previous_citation</key>
-					<string>{var:previous_citation}{query}; </string>
+					<string>{var:previous_citation}{query}{var:_format_citekey_delimiter}</string>
 				</dict>
 			</dict>
 			<key>type</key>
@@ -1172,7 +1172,7 @@ fi</string>
 				<key>autopaste</key>
 				<true/>
 				<key>clipboardtext</key>
-				<string>[{query}]</string>
+				<string>{var:_format_citation_start}{query}{var:_format_citation_end}</string>
 				<key>ignoredynamicplaceholders</key>
 				<false/>
 				<key>transient</key>
@@ -2704,6 +2704,16 @@ to set a hotkey for the citaiton picker.</string>
 	</dict>
 	<key>variables</key>
 	<dict>
+		<key>_format_citation_end</key>
+		<string>]</string>
+		<key>_format_citation_start</key>
+		<string>[</string>
+		<key>_format_citekey_delimiter</key>
+		<string>; </string>
+		<key>_format_citekey_prefix</key>
+		<string>@</string>
+		<key>_format_page_no_prefix</key>
+		<string>, p. </string>
 		<key>alfred_bar_length</key>
 		<string>60</string>
 		<key>auto_update</key>
