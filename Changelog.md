@@ -1,3 +1,5 @@
+- 2022-05-20	release 9.2.0
+- 2022-05-20	change citation format via `scp`
 - 2022-05-20	release 9.1.2
 - 2022-05-20	formatting can now be changed without the need for a buffer reload
 - 2022-05-20	release 9.1.1
