@@ -1,21 +1,24 @@
 #!/bin/zsh
-# shellcheck disable=SC2154,SC2086
+# shellcheck disable=SC2154
 export PATH=/usr/local/bin:/opt/homebrew/bin/:$PATH
+
 CSL=apa-6th-edition.csl
-
-# citekey with @ prefix for pandoc
-CITEKEY="@$*"
-
+CITEKEY="@$*" # citekey with @ prefix for pandoc
 LIBRARY="${bibtex_library_path/#\~/$HOME}"
 DUMMYDOC="---\nnocite: |\n  $CITEKEY\n---\n::: {#refs}\n:::"
 
-echo -n "$DUMMYDOC" \
-	| pandoc --citeproc --read=markdown --write=plain --csl="assets/$CSL" --bibliography="$LIBRARY" \
-	| tr "\n" " " \
-	| tr -s " " \
-	| sed -E "s/^ //" \
-	| sed -E "s/ $//" \
-	| pbcopy
+if ! which pandoc; then
+	echo -n "You need to install pandoc for this feature." | pbcopy
+else
+	echo -n "$DUMMYDOC" \
+		| pandoc --citeproc --read=markdown --write=plain --csl="assets/$CSL" --bibliography="$LIBRARY" \
+		| tr "\n" " " \
+		| tr -s " " \
+		| sed -E "s/^ //" \
+		| sed -E "s/ $//" \
+		| pbcopy
+fi
 
 # paste
+sleep 0.2
 osascript -e 'tell application "System Events" to keystroke "v" using {command down}'
