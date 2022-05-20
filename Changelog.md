@@ -1,3 +1,4 @@
+- 2022-05-20	release 9.2.3
 - 2022-05-20	release 9.2.2
 - 2022-05-20	fix multiple citations
 - 2022-05-20	release 9.2.2
