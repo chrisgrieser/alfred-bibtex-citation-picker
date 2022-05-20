@@ -93,6 +93,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>1D828BA0-497E-4524-9E2E-06552154CAA0</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C64ACAF0-66C8-48A8-A3C4-B55C7E282697</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>1F16F33C-2898-41E8-8C0A-8F1336BB738B</key>
 		<array>
 			<dict>
@@ -562,7 +575,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>C64ACAF0-66C8-48A8-A3C4-B55C7E282697</string>
+				<string>1D828BA0-497E-4524-9E2E-06552154CAA0</string>
 				<key>modifiers</key>
 				<integer>524288</integer>
 				<key>modifiersubtext</key>
@@ -960,26 +973,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict>
-					<key>previous_citation</key>
-					<string>{var:previous_citation}{query}{var:_format_citekey_delimiter}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>C64ACAF0-66C8-48A8-A3C4-B55C7E282697</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -1186,6 +1179,43 @@ JSON.stringify({ 'items': entry_array });
 			<string>B8AEF220-7CBC-4D07-BA5F-D28094B3D4B4</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{var:_format_citekey_prefix}{query}{var:_format_citekey_suffix}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>1D828BA0-497E-4524-9E2E-06552154CAA0</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>previous_citation</key>
+					<string>{var:previous_citation}{query}{var:_format_citekey_delimiter}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>C64ACAF0-66C8-48A8-A3C4-B55C7E282697</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2537,7 +2567,18 @@ https://ko-fi.com/pseudometa</string>
 			<key>xpos</key>
 			<integer>1005</integer>
 			<key>ypos</key>
-			<integer>180</integer>
+			<integer>185</integer>
+		</dict>
+		<key>1D828BA0-497E-4524-9E2E-06552154CAA0</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
+			<key>note</key>
+			<string>add prefix &amp; suffix</string>
+			<key>xpos</key>
+			<integer>850</integer>
+			<key>ypos</key>
+			<integer>150</integer>
 		</dict>
 		<key>1F16F33C-2898-41E8-8C0A-8F1336BB738B</key>
 		<dict>
@@ -2733,7 +2774,7 @@ to set a hotkey for the citaiton picker.</string>
 			<key>xpos</key>
 			<integer>1280</integer>
 			<key>ypos</key>
-			<integer>110</integer>
+			<integer>120</integer>
 		</dict>
 		<key>65CA24BA-2DA6-4DC0-A2BE-3E4E4D5FDD72</key>
 		<dict>
@@ -2891,9 +2932,9 @@ to set a hotkey for the citaiton picker.</string>
 			<key>note</key>
 			<string>Citation Picker</string>
 			<key>xpos</key>
-			<integer>480</integer>
+			<integer>475</integer>
 			<key>ypos</key>
-			<integer>155</integer>
+			<integer>120</integer>
 		</dict>
 		<key>BC0E1F77-0045-40D3-845C-946E6BCFC90D</key>
 		<dict>
@@ -2931,7 +2972,7 @@ to set a hotkey for the citaiton picker.</string>
 			<key>xpos</key>
 			<integer>1195</integer>
 			<key>ypos</key>
-			<integer>140</integer>
+			<integer>150</integer>
 		</dict>
 		<key>CB4D33E2-A031-4542-A640-3B73D66EE39E</key>
 		<dict>
