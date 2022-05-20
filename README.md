@@ -11,7 +11,7 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 - __Minimalistic reference manager__: add or remove entries without from the BibTeX library or automatically file PDF.
 - __Performant:__ considerably quicker than other citation pickers (~200ms to fully reload a library with ~4000 entries on my machine).
 - __Easy Installation:__ no dependencies, no required plugins, no setup. other than entering the path to your `.bib` file.
-- __Obsidian integration:__ When located in an [Obsidian](https://obsidian.md/) vault, literature notes will automatically be opened/created in Obsidian, instead of the default markdown app. 
+- __Obsidian integration:__ When located in an [Obsidian](https://obsidian.md/) vault, literature notes will automatically be opened/created in Obsidian, instead of the default markdown app.
 
 <img width=60% alt="promo screenshot" src="assets/promo.png">
 

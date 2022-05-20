@@ -1,3 +1,4 @@
+- 2022-05-20	release 9.1.1
 - 2022-05-20	release 9.1.0
 - 2022-05-20	add option to switch order of citekey and pageno
 - 2022-05-19	release 9.0.0
