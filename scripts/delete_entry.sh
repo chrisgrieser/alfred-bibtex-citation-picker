@@ -1,6 +1,5 @@
 #!/bin/zsh
 # shellcheck disable=SC2154
-CITEKEY="${citekey/@/}"
 LIBRARY="${bibtex_library_path/#\~/$HOME}"
 ENTRIES_BEFORE=$(grep -c -E "^@.*{" "$LIBRARY")
 
@@ -14,9 +13,9 @@ DIFFERENCE=$((ENTRIES_BEFORE - ENTRIES_AFTER))
 # pass for notication in Alfred
 if [[ $DIFFERENCE == 1 ]]; then
 	mv -f "$LIBRARY.bak" ~/.Trash
-	echo "✅ @$CITEKEY "
+	echo "✅ $CITEKEY "
 	echo "deleted."
 else
 	echo "⚠️ Error"
-	echo "deleted $DIFFERENCE citations. Check Backup file (ending with .bak) in library location."
+	echo "Deleted $DIFFERENCE citations. Check Backup file (ending with .bak) in library location."
 fi

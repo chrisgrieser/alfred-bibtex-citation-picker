@@ -4,9 +4,8 @@ function run (argv) {
 	ObjC.import("stdlib");
 	const app = Application.currentApplication();
 	app.includeStandardAdditions = true;
-	const citekeyPrefix = $.getenv("_format_citekey_prefix");
 
-	const citekey = argv.join("").slice(citekeyPrefix.length); // remove citekey
+	const citekey = argv.join("");
 	const literatureNotePath = $.getenv("literature_note_folder")
 		.replace(/^~/, app.pathTo("home folder"))
 		+ "/" + citekey + ".md";

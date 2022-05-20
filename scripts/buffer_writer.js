@@ -13,8 +13,6 @@ const pdfFilterStr = "pdf";
 const maxTitleFileNameLength = 50;
 const alfredBarLength = parseInt ($.getenv("alfred_bar_length"));
 
-const citekeyPrefix = $.getenv("_format_citekey_prefix"); // e.g. "@" for pandoc
-
 const matchAuthorsInEtAl = $.getenv("match_authors_in_etal") === "true";
 const matchOnlyShortYears = $.getenv("match_only_short_years") === "true";
 const libraryPath = $.getenv("bibtex_library_path").replace(/^~/, app.pathTo("home folder"));
@@ -154,7 +152,7 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		if (!matchAuthorsInEtAl) authorMatches = [...authors.slice(0, 1), ...editors.slice(0, 1)]; // only match first two names
 		const yearMatches = [year.slice(-2)]; // last two digits
 		if (!matchOnlyShortYears) yearMatches.push(year);
-		const alfredMatcher = [citekeyPrefix + citekey,
+		const alfredMatcher = ["@" + citekey,
 			...keywordMatches,
 			title,
 			...authorMatches,
@@ -167,7 +165,7 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		].join(" ").replaceAll ("-", " ");
 
 		// Large Type
-		let largeTypeInfo = `${title} (${citekeyPrefix}${citekey})`;
+		let largeTypeInfo = `${title} \n(citekey: ${citekey})`;
 		if (abstract) largeTypeInfo += "\n\n" + abstract;
 		if (keywords.length) largeTypeInfo += "\n\nkeywords: " + keywords.join(", ");
 
@@ -176,7 +174,7 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 			"autocomplete": primaryNames[0],
 			"subtitle": namesToDisplay + year + collectionSubtitle + "   " + emojis.join(" "),
 			"match": alfredMatcher,
-			"arg": citekeyPrefix + citekey,
+			"arg": citekey,
 			"icon": { "path": typeIcon },
 			"uid": citekey,
 			"text": {
@@ -186,7 +184,6 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 			"quicklookurl": litNotePath,
 			"mods": {
 				"fn": { "arg": autoFileName },
-				"shift": { "arg": citekey },
 				"ctrl": {
 					"valid": url !== "",
 					"arg": url,
