@@ -1,17 +1,17 @@
 # Supercharged Citation Picker
 ![](https://img.shields.io/github/downloads/chrisgrieser/alfred-bibtex-citation-picker/total?label=Total%20Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/alfred-bibtex-citation-picker?label=Latest%20Release&style=plastic) [![](https://img.shields.io/badge/changelog-click%20here-FFE800?style=plastic)](Changelog.md)
 
-A citation picker for academics that write in markdown. Using [Alfred](https://www.alfredapp.com/), this citation picker inserts [Pandoc citations](https://pandoc.org/MANUAL.html#citation-syntax) from a BibTeX File.
+A citation picker for academics that write in markdown. Using [Alfred](https://www.alfredapp.com/), this citation picker inserts [Pandoc](https://pandoc.org/MANUAL.html#citation-syntax), [Multi-Markdown](https://fletcher.github.io/MultiMarkdown-6/syntax/citation.html), or [Latex](https://www.overleaf.com/learn/latex/Biblatex_citation_styles) citations from a BibTeX File.
 
 ## Feature Overview
-- Inserts __Pandoc Citation Syntax__ (`[@citekey]`). Works with page numbers & multiple citations.
-- __works system-wide__, in case you also work in another Markdown app.
-- __smart search:__ search for citekeys, authors, title, publication, keywords (tags), include/exclude authors in *et al*, tab-completion, fuzzy-matching, sorting recently used entries to the top, …
-- __feature-rich:__ paste single-entry bibliographies, open URLs, open or create literature notes, search for `.csl` files online, backup the library, …
-- __minimalistic reference manager__: add or remove entries without from the BibTeX library, automatically file PDF, …
-- __Obsidian integration:__ When located in an Obsidian vault, literature notes will automatically be opened/created in Obsidian. (Otherwise, they will be opened in the default app for markdown files.)
-- __very performant:__ considerably quicker than other citation pickers (~200ms to fully reload a library with ~4000 entries on my machine)
-- __easy installation:__ no dependencies, no required plugins, no setup (other than entering the path to your `.bib` file).
+- Inserts __Pandoc Citation Syntax__ (`[@citekey]`), supporting page numbers & multiple citations (`[@citekey, p. 23; @citekey, p. 42]`). There are also customization options to support other citation styles, e.g. Multi-Markdown or Latex.
+- __App-independent:__ works system-wide, in every text field of every app.
+- __Smart Search:__ search for citekeys, authors, title, publication, keywords (tags), include/exclude authors in *et al*, tab-completion, fuzzy-matching, sorting recently used entries to the top, …
+- __Feature-rich:__ paste single-entry bibliographies, open URLs, open or create literature notes, search for `.csl` files online, backup the library, …
+- __Minimalistic reference manager__: add or remove entries without from the BibTeX library or automatically file PDF.
+- __Performant:__ considerably quicker than other citation pickers (~200ms to fully reload a library with ~4000 entries on my machine).
+- __Easy Installation:__ no dependencies, no required plugins, no setup. other than entering the path to your `.bib` file.
+- __Obsidian integration:__ When located in an [Obsidian](https://obsidian.md/) vault, literature notes will automatically be opened/created in Obsidian, instead of the default markdown app. 
 
 <img width=60% alt="promo screenshot" src="assets/promo.png">
 
@@ -24,6 +24,7 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 	- [Citation Actions](#citation-actions)
 	- [URL Actions](#url-actions)
 	- [Icon Meanings](#icon-meanings)
+- [Using MMD, Latex, or other citation formats](#using-mmd-latex-or-other-citation-formats)
 - [Advanced Usage](#advanced-usage)
 	- [Bibliography Actions](#bibliography-actions)
 	- [Advanced Search Features](#advanced-search-features)
@@ -70,6 +71,11 @@ Press the hotkey in any text field to launch the citation picker.
 | 🏷 n | n Keywords      |
 | 📓   | Literature Note |
 | 📕   | PDF             |
+
+## Using MMD, Latex, or other citation formats
+By customizing the environment variables starting with `_format`, you can change the output format of the citations to Multi-Markdown (MMD), Latex, or any other format, e.g. Markdown wikilinks.
+
+(Tutorial: [How to set environment variables in Alfred](https://www.alfredapp.com/help/workflows/advanced/variables/#environment)).
 
 ## Advanced Usage
 
