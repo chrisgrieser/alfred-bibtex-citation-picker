@@ -18,7 +18,7 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 ## Table of Contents
 <!-- MarkdownTOC -->
 
-- [Setup](#setup)
+- [Getting Started](#getting-started)
 - [Basic Usage](#basic-usage)
 	- [Search](#search)
 	- [Citation Actions](#citation-actions)
@@ -40,9 +40,9 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 
 <!-- /MarkdownTOC -->
 
-## Setup
+## Getting Started
 1. [Download the latest release](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/releases/latest).
-2. In the workflow settings, set `bibtex_library_path` to the absolute path of your BibTeX library file (Workflow settings tutorial: [How to set environment variables in Alfred](https://www.alfredapp.com/help/workflows/advanced/variables/#environment)).
+2. In the workflow settings, set `bibtex_library_path` to the absolute path of your BibTeX library file (Tutorial: [How to set environment variables in Alfred](https://www.alfredapp.com/help/workflows/advanced/variables/#environment)).
 3. Set a hotkey for the citation picker by double-clicking the respective field in the workflow window.
 
 ## Basic Usage
