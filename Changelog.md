@@ -1,3 +1,5 @@
+- 2022-05-20	release 9.1.2
+- 2022-05-20	formatting can now be changed without the need for a buffer reload
 - 2022-05-20	release 9.1.1
 - 2022-05-20	release 9.1.0
 - 2022-05-20	add option to switch order of citekey and pageno
