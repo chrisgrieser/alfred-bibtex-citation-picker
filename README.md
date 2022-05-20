@@ -24,7 +24,7 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 	- [Citation Actions](#citation-actions)
 	- [URL Actions](#url-actions)
 	- [Icon Meanings](#icon-meanings)
-- [Using MMD, Latex, or other citation formats](#using-mmd-latex-or-other-citation-formats)
+- [Using Multi-Markdown, Latex \(or other\) citation format](#using-multi-markdown-latex-or-other-citation-format)
 - [Advanced Usage](#advanced-usage)
 	- [Bibliography Actions](#bibliography-actions)
 	- [Advanced Search Features](#advanced-search-features)
@@ -72,7 +72,7 @@ Press the hotkey in any text field to launch the citation picker.
 | 📓   | Literature Note |
 | 📕   | PDF             |
 
-## Using MMD, Latex, or other citation formats
+## Using Multi-Markdown, Latex (or other) citation format
 By customizing the environment variables starting with `_format`, you can change the output format of the citations to Multi-Markdown (MMD), Latex, or any other format, e.g. Markdown wikilinks.
 
 (Tutorial: [How to set environment variables in Alfred](https://www.alfredapp.com/help/workflows/advanced/variables/#environment)).
