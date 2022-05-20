@@ -24,7 +24,8 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 	- [Citation Actions](#citation-actions)
 	- [URL Actions](#url-actions)
 	- [Icon Meanings](#icon-meanings)
-- [Using Multi-Markdown, Latex \(or any other\) citation format](#using-multi-markdown-latex-or-any-other-citation-format)
+- [Changing the Citation Format](#changing-the-citation-format)
+	- [Available Formats](#available-formats)
 	- [Further Format Customization](#further-format-customization)
 - [Advanced Usage](#advanced-usage)
 	- [Bibliography Actions](#bibliography-actions)
@@ -73,7 +74,9 @@ Press the hotkey in any text field to launch the citation picker.
 | 📓   | Literature Note |
 | 📕   | PDF             |
 
-## Using Multi-Markdown, Latex (or any other) citation format
+## Changing the Citation Format
+
+### Available Formats
 You can use the `scp` and select __Change Citation Format__ to change the format of the citations:
 - Pandoc (default)
 - Multi-Markdown
