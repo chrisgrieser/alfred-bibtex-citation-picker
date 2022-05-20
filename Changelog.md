@@ -1,3 +1,5 @@
+- 2022-05-20	release 9.2.1
+- 2022-05-20	info on custom citation formats
 - 2022-05-20	release 9.2.0
 - 2022-05-20	change citation format via `scp`
 - 2022-05-20	release 9.1.2
