@@ -1,4 +1,6 @@
 - 2022-05-20	release 9.2.2
+- 2022-05-20	fix multiple citations
+- 2022-05-20	release 9.2.2
 - 2022-05-20	added better error messaging for bibliography pasting
 - 2022-05-20	release 9.2.1
 - 2022-05-20	info on custom citation formats
