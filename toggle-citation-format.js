@@ -66,6 +66,9 @@ function run(argv) {
 			setEnvVar("_format_page_prefix", ", p. ");
 			setEnvVar("_format_page_suffix", "");
 			break;
+		case "custom":
+			app.openLocation("https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/README.md#further-format-customization");
+			break;
 	}
 
 }

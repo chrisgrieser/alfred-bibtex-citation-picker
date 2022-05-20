@@ -24,7 +24,8 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 	- [Citation Actions](#citation-actions)
 	- [URL Actions](#url-actions)
 	- [Icon Meanings](#icon-meanings)
-- [Using Multi-Markdown, Latex \(or other\) citation format](#using-multi-markdown-latex-or-other-citation-format)
+- [Using Multi-Markdown, Latex \(or any other\) citation format](#using-multi-markdown-latex-or-any-other-citation-format)
+	- [Further Format Customization](#further-format-customization)
 - [Advanced Usage](#advanced-usage)
 	- [Bibliography Actions](#bibliography-actions)
 	- [Advanced Search Features](#advanced-search-features)
@@ -72,10 +73,18 @@ Press the hotkey in any text field to launch the citation picker.
 | 📓   | Literature Note |
 | 📕   | PDF             |
 
-## Using Multi-Markdown, Latex (or other) citation format
-By customizing the environment variables starting with `_format`, you can change the output format of the citations to Multi-Markdown (MMD), Latex, or any other format, e.g. Markdown wikilinks.
+## Using Multi-Markdown, Latex (or any other) citation format
+You can use the `scp` and select __Change Citation Format__ to change the format of the citations:
+- Pandoc (default)
+- Multi-Markdown
+- Latex
+- Wikilink
+- Tag
 
-(Tutorial: [How to set environment variables in Alfred](https://www.alfredapp.com/help/workflows/advanced/variables/#environment)).
+### Further Format Customization
+If you want to use a format that isn't available, you can customize the format yourself by changing the workflow environment variables starting with `_format` (Tutorial: [How to set environment variables in Alfred](https://www.alfredapp.com/help/workflows/advanced/variables/#environment)).
+
+If there is a citation syntax that more people, feel free to make a PR to [this file which generates the formats](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/toggle-citation-format.js).
 
 ## Advanced Usage
 

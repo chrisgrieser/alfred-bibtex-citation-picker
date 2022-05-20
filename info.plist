@@ -12,7 +12,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>9B9F7F22-DB77-4520-AD8F-BA445595D94B</string>
+				<string>1F16F33C-2898-41E8-8C0A-8F1336BB738B</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -89,6 +89,21 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>1F16F33C-2898-41E8-8C0A-8F1336BB738B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9B9F7F22-DB77-4520-AD8F-BA445595D94B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>86C649F7-F03D-4BAE-804E-303512F9950C</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -1459,29 +1474,6 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>127</integer>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>6381408D-65D7-4559-AB2A-AAA2DCFF8A28</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
 				<string># THESE VARIABLES MUST BE SET. SEE THE ONEUPDATER README FOR AN EXPLANATION OF EACH.
@@ -2301,6 +2293,36 @@ echo "$*"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>1</integer>
+						<key>matchstring</key>
+						<string>custom</string>
+						<key>outputlabel</key>
+						<string>not custom</string>
+						<key>uid</key>
+						<string>86C649F7-F03D-4BAE-804E-303512F9950C</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>1F16F33C-2898-41E8-8C0A-8F1336BB738B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -2308,7 +2330,7 @@ echo "$*"</string>
 				<key>fixedorder</key>
 				<false/>
 				<key>items</key>
-				<string>[{"title":"Pandoc","arg":"pandoc","subtitle":"[@citekey, p. 42]"},{"title":"Multi-Markdown (MMD)","arg":"multi-markdown","subtitle":"[42][#citekey]"},{"title":"Latex","arg":"latex","subtitle":"\\cite{citekey}    ℹ️ page numbers not working yet"},{"title":"Wikilink","arg":"wikilink","subtitle":"[[citekey]]         ℹ️ page number will become alias"},{"title":"Tag","arg":"tag","subtitle":"#citekey"}]</string>
+				<string>[{"title":"Pandoc","arg":"pandoc","subtitle":"[@citekey, p. 42]"},{"title":"Multi-Markdown (MMD)","arg":"multi-markdown","subtitle":"[42][#citekey]"},{"title":"Latex","arg":"latex","subtitle":"\\cite{citekey}    ℹ️ page numbers not working yet"},{"title":"Wikilink","arg":"wikilink","subtitle":"[[citekey]]         ℹ️ page number will become alias"},{"title":"Tag","arg":"tag","subtitle":"#citekey"},{"title":"Custom","arg":"custom","subtitle":"Opens Browser Window with information"}]</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>subtext</key>
@@ -2517,6 +2539,15 @@ https://ko-fi.com/pseudometa</string>
 			<key>ypos</key>
 			<integer>180</integer>
 		</dict>
+		<key>1F16F33C-2898-41E8-8C0A-8F1336BB738B</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>705</integer>
+			<key>ypos</key>
+			<integer>1485</integer>
+		</dict>
 		<key>254C2241-0AE4-4F52-A073-16E3DEFC9384</key>
 		<dict>
 			<key>colorindex</key>
@@ -2704,13 +2735,6 @@ to set a hotkey for the citaiton picker.</string>
 			<key>ypos</key>
 			<integer>110</integer>
 		</dict>
-		<key>6381408D-65D7-4559-AB2A-AAA2DCFF8A28</key>
-		<dict>
-			<key>xpos</key>
-			<integer>580</integer>
-			<key>ypos</key>
-			<integer>545</integer>
-		</dict>
 		<key>65CA24BA-2DA6-4DC0-A2BE-3E4E4D5FDD72</key>
 		<dict>
 			<key>colorindex</key>
@@ -2825,9 +2849,9 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>685</integer>
+			<integer>825</integer>
 			<key>ypos</key>
-			<integer>1455</integer>
+			<integer>1450</integer>
 		</dict>
 		<key>9D904019-C6C8-4A76-A04F-706839EEB325</key>
 		<dict>
@@ -3031,19 +3055,19 @@ to set a hotkey for the citaiton picker.</string>
 	<key>variables</key>
 	<dict>
 		<key>_format_citation_end</key>
-		<string></string>
+		<string>]</string>
 		<key>_format_citation_start</key>
-		<string></string>
+		<string>[</string>
 		<key>_format_citekey_delimiter</key>
-		<string>, </string>
+		<string>; </string>
 		<key>_format_citekey_prefix</key>
-		<string>[[</string>
+		<string>@</string>
 		<key>_format_citekey_suffix</key>
-		<string>]]</string>
+		<string></string>
 		<key>_format_page_before_citekey</key>
 		<string>false</string>
 		<key>_format_page_prefix</key>
-		<string>| </string>
+		<string>, p. </string>
 		<key>_format_page_suffix</key>
 		<string></string>
 		<key>alfred_bar_length</key>
