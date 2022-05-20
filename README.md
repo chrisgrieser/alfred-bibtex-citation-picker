@@ -31,7 +31,7 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 	- [Bibliography Actions](#bibliography-actions)
 	- [Advanced Search Features](#advanced-search-features)
 	- [Literature Note Actions](#literature-note-actions)
-	- [PDF: Auto-file & auto-rename](#pdf-auto-file--auto-rename)
+	- [PDFs: Auto-filing & Auto-renaming](#pdfs-auto-filing--auto-renaming)
 	- [Auxiliary Features](#auxiliary-features)
 - [About the Developer](#about-the-developer)
 	- [Profiles](#profiles)
@@ -117,8 +117,8 @@ If there is a citation syntax that more people, feel free to make a PR to [this 
 	- If there is no literature note, a new one will be created.
 - `⌘ + Y`: Preview the literature note with QuickLook (requires QLmarkdown or Peek[^1]).
 
-### PDF: Auto-file & auto-rename
-- `fn + ↵`: Auto-file and auto-rename the *currently selected PDF in Finder* to a the folder specified in `pdf_folder`.
+### PDFs: Auto-filing & Auto-renaming
+- `fn + ↵`: Auto-file and auto-rename the *currently selected PDF in Finder* to the folder specified in `pdf_folder`.
 - Inside `pdf_folder`, uses the template path used is: `{first_letter_of_citekey}/{citekey-author-part}/{citekey}_{shortened_title}.pdf`
 - If there is a PDF already present at that location, it will be indicated by a `📕`.
 - Add `pdf` to any search query to filter only for entries with PDFs that have been added by the auto-file feature. `pdf grieser` for example will search for entries from the author "Grieser" with PDFs. Can be combined with other queries (see: [smart queries](#search)).
