@@ -8,6 +8,29 @@
 	<string>Academic</string>
 	<key>connections</key>
 	<dict>
+		<key>00BFDB01-AD99-47DB-9BB8-5A6EA2E3016C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9B9F7F22-DB77-4520-AD8F-BA445595D94B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>824D0711-2DC5-46B0-8EA1-BD0A74DF5AAA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>04E17547-EDD2-4C44-9F41-F15391DD8775</key>
 		<array>
 			<dict>
@@ -290,6 +313,18 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
+				<string>68FC61FC-44E7-43F2-856B-B1B89E83B099</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>72F55103-E397-487D-A309-BAAF3867F2E5</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>592A7342-45EE-47C2-B6E3-B577D191B9FF</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -330,6 +365,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>D18A94E8-3A1C-4D8D-9DDD-43F22F8181A1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>68FC61FC-44E7-43F2-856B-B1B89E83B099</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>00BFDB01-AD99-47DB-9BB8-5A6EA2E3016C</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -865,7 +913,7 @@
 				<key>variables</key>
 				<dict>
 					<key>pageless_citation</key>
-					<string>{var:_format_citekey_prefix}{query}</string>
+					<string>{var:_format_citekey_prefix}{query}{var:_format_citekey_suffix}</string>
 				</dict>
 			</dict>
 			<key>type</key>
@@ -1261,7 +1309,7 @@ JSON.stringify({ 'items': entry_array });
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string>{var:_format_citekey_prefix}{query}</string>
+				<string>{var:_format_citekey_prefix}{query}{var:_format_citekey_suffix}</string>
 				<key>passthroughargument</key>
 				<false/>
 				<key>variables</key>
@@ -1411,6 +1459,29 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
+				<integer>127</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>6381408D-65D7-4559-AB2A-AAA2DCFF8A28</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
 				<string># THESE VARIABLES MUST BE SET. SEE THE ONEUPDATER README FOR AN EXPLANATION OF EACH.
@@ -1506,7 +1577,7 @@ fi</string>
 				<key>fixedorder</key>
 				<false/>
 				<key>items</key>
-				<string>[{"title":"✍️ Search &amp; Download Citation Styles","arg":"csl","subtitle":".csl files"},{"title":"🔁 Force Buffer Reload","arg":"buffer_reload","subtitle":"for debugging"},{"title":"🅿️ Pandoc Citation Syntax","arg":"Pandoc Citation Syntax.pdf","subtitle":"Cheatsheet"},{"title":"❓Citation Picker Actions","arg":"Actions Cheatsheet.webloc","subtitle":"Cheatsheet"},{"title":"📊 Bibliography Statistics","arg":"statistics"},{"title":"⬇️ Backup the Library","arg":"backup","subtitle":"max: {var:max_number_of_bkps}, location: {var:backup_destination}"},{"title":"🤖 Create Autocomplete List","arg":"autocomplete_list","subtitle":"{var:autocomplete_list_location}"},{"title":"🧹 Run BibTeX tidy","arg":"bibtex-tidy","subtitle":"{var:bibtex_tidy_options}"}]</string>
+				<string>[{"title":"✍️ Search &amp; Download Citation Styles","arg":"csl","subtitle":".csl files"},{"title":"💬 Change Citation Format","arg":"change_format","subtitle":"Pandoc, MMD, Latex, Wikilinks, Tags"},{"title":"🔁 Force Buffer Reload","arg":"buffer_reload","subtitle":"for debugging"},{"title":"🅿️ Pandoc Citation Syntax","arg":"Pandoc Citation Syntax.pdf","subtitle":"Cheatsheet"},{"title":"❓Citation Picker Actions","arg":"Actions Cheatsheet.webloc","subtitle":"Cheatsheet"},{"title":"📊 Bibliography Statistics","arg":"statistics"},{"title":"⬇️ Backup the Library","arg":"backup","subtitle":"max: {var:max_number_of_bkps}, location: {var:backup_destination}"},{"title":"🤖 Create Autocomplete List","arg":"autocomplete_list","subtitle":"{var:autocomplete_list_location}"},{"title":"🧹 Run BibTeX tidy","arg":"bibtex-tidy","subtitle":"{var:bibtex_tidy_options}"}]</string>
 				<key>keyword</key>
 				<string>scp</string>
 				<key>runningsubtext</key>
@@ -1865,6 +1936,20 @@ fi</string>
 						<key>uid</key>
 						<string>B0B802A2-CDB7-4432-BFF9-452606A18551</string>
 					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>change_format</string>
+						<key>outputlabel</key>
+						<string>change_format</string>
+						<key>uid</key>
+						<string>72F55103-E397-487D-A309-BAAF3867F2E5</string>
+					</dict>
 				</array>
 				<key>elselabel</key>
 				<string>backup</string>
@@ -2200,6 +2285,94 @@ echo "$*"</string>
 				<key>onlyshowifquerypopulated</key>
 				<true/>
 				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>✅ Format changed</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>9B9F7F22-DB77-4520-AD8F-BA445595D94B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>fixedorder</key>
+				<false/>
+				<key>items</key>
+				<string>[{"title":"Pandoc","arg":"pandoc","subtitle":"[@citekey, p. 42]"},{"title":"Multi-Markdown (MMD)","arg":"multi-markdown","subtitle":"[42][#citekey]"},{"title":"Latex","arg":"latex","subtitle":"\\cite{citekey}    ℹ️ page numbers not working yet"},{"title":"Wikilink","arg":"wikilink","subtitle":"[[citekey]]         ℹ️ page number will become alias"},{"title":"Tag","arg":"tag","subtitle":"#citekey"}]</string>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>subtext</key>
+				<string>loading...</string>
+				<key>title</key>
+				<string>💬 Change Citation Format</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.listfilter</string>
+			<key>uid</key>
+			<string>00BFDB01-AD99-47DB-9BB8-5A6EA2E3016C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string> </string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>68FC61FC-44E7-43F2-856B-B1B89E83B099</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>toggle-citation-format.js</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>824D0711-2DC5-46B0-8EA1-BD0A74DF5AAA</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
 				<true/>
 				<key>text</key>
 				<string>'{query}'</string>
@@ -2284,6 +2457,15 @@ Donations
 https://ko-fi.com/pseudometa</string>
 	<key>uidata</key>
 	<dict>
+		<key>00BFDB01-AD99-47DB-9BB8-5A6EA2E3016C</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>530</integer>
+			<key>ypos</key>
+			<integer>1510</integer>
+		</dict>
 		<key>04E17547-EDD2-4C44-9F41-F15391DD8775</key>
 		<dict>
 			<key>colorindex</key>
@@ -2329,7 +2511,7 @@ https://ko-fi.com/pseudometa</string>
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>note</key>
-			<string>add page no</string>
+			<string>add page number</string>
 			<key>xpos</key>
 			<integer>1005</integer>
 			<key>ypos</key>
@@ -2378,9 +2560,9 @@ https://ko-fi.com/pseudometa</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>395</integer>
+			<integer>620</integer>
 			<key>ypos</key>
-			<integer>1235</integer>
+			<integer>1230</integer>
 		</dict>
 		<key>346A58DA-B1B4-4F03-8F05-20B42A4EF996</key>
 		<dict>
@@ -2433,7 +2615,7 @@ to set a hotkey for the citaiton picker.</string>
 			<key>xpos</key>
 			<integer>390</integer>
 			<key>ypos</key>
-			<integer>1480</integer>
+			<integer>1425</integer>
 		</dict>
 		<key>4771A40C-E741-46C5-93EF-82CEB4BD23D8</key>
 		<dict>
@@ -2489,9 +2671,9 @@ to set a hotkey for the citaiton picker.</string>
 			<key>note</key>
 			<string>backup</string>
 			<key>xpos</key>
-			<integer>410</integer>
+			<integer>390</integer>
 			<key>ypos</key>
-			<integer>1585</integer>
+			<integer>1635</integer>
 		</dict>
 		<key>5A83CD14-6282-49D4-9482-F89DC21A185F</key>
 		<dict>
@@ -2522,6 +2704,13 @@ to set a hotkey for the citaiton picker.</string>
 			<key>ypos</key>
 			<integer>110</integer>
 		</dict>
+		<key>6381408D-65D7-4559-AB2A-AAA2DCFF8A28</key>
+		<dict>
+			<key>xpos</key>
+			<integer>580</integer>
+			<key>ypos</key>
+			<integer>545</integer>
+		</dict>
 		<key>65CA24BA-2DA6-4DC0-A2BE-3E4E4D5FDD72</key>
 		<dict>
 			<key>colorindex</key>
@@ -2541,6 +2730,15 @@ to set a hotkey for the citaiton picker.</string>
 			<integer>530</integer>
 			<key>ypos</key>
 			<integer>850</integer>
+		</dict>
+		<key>68FC61FC-44E7-43F2-856B-B1B89E83B099</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>390</integer>
+			<key>ypos</key>
+			<integer>1540</integer>
 		</dict>
 		<key>7416BB08-7009-4A47-B833-524B2C3BDB55</key>
 		<dict>
@@ -2562,6 +2760,15 @@ to set a hotkey for the citaiton picker.</string>
 			<key>ypos</key>
 			<integer>690</integer>
 		</dict>
+		<key>824D0711-2DC5-46B0-8EA1-BD0A74DF5AAA</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>685</integer>
+			<key>ypos</key>
+			<integer>1570</integer>
+		</dict>
 		<key>867D8000-5451-4837-B3D7-C7F2B54E1EC6</key>
 		<dict>
 			<key>colorindex</key>
@@ -2569,9 +2776,9 @@ to set a hotkey for the citaiton picker.</string>
 			<key>note</key>
 			<string>for scripting (e.g. cronjob)</string>
 			<key>xpos</key>
-			<integer>165</integer>
+			<integer>355</integer>
 			<key>ypos</key>
-			<integer>1345</integer>
+			<integer>1265</integer>
 		</dict>
 		<key>8B51C1A0-EAD2-457B-A532-6CC16C7F015E</key>
 		<dict>
@@ -2613,6 +2820,15 @@ to set a hotkey for the citaiton picker.</string>
 			<key>ypos</key>
 			<integer>445</integer>
 		</dict>
+		<key>9B9F7F22-DB77-4520-AD8F-BA445595D94B</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<integer>685</integer>
+			<key>ypos</key>
+			<integer>1455</integer>
+		</dict>
 		<key>9D904019-C6C8-4A76-A04F-706839EEB325</key>
 		<dict>
 			<key>colorindex</key>
@@ -2620,9 +2836,9 @@ to set a hotkey for the citaiton picker.</string>
 			<key>note</key>
 			<string>for scripting (e.g. cronjob)</string>
 			<key>xpos</key>
-			<integer>160</integer>
+			<integer>140</integer>
 			<key>ypos</key>
-			<integer>1585</integer>
+			<integer>1635</integer>
 		</dict>
 		<key>AF09AE5D-C351-4190-8AA6-B1924D88B22F</key>
 		<dict>
@@ -2671,16 +2887,16 @@ to set a hotkey for the citaiton picker.</string>
 			<key>xpos</key>
 			<integer>460</integer>
 			<key>ypos</key>
-			<integer>1450</integer>
+			<integer>1395</integer>
 		</dict>
 		<key>C23E28E8-B257-4FF1-AAAE-BE855C749722</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>555</integer>
+			<integer>535</integer>
 			<key>ypos</key>
-			<integer>1585</integer>
+			<integer>1635</integer>
 		</dict>
 		<key>C64ACAF0-66C8-48A8-A3C4-B55C7E282697</key>
 		<dict>
@@ -2719,6 +2935,8 @@ to set a hotkey for the citaiton picker.</string>
 		<dict>
 			<key>colorindex</key>
 			<integer>7</integer>
+			<key>note</key>
+			<string>add prefix &amp; suffix, then save</string>
 			<key>xpos</key>
 			<integer>675</integer>
 			<key>ypos</key>
@@ -2729,7 +2947,7 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>note</key>
-			<string>add page no</string>
+			<string>add page number</string>
 			<key>xpos</key>
 			<integer>1005</integer>
 			<key>ypos</key>
@@ -2740,7 +2958,7 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>note</key>
-			<string>add prefix</string>
+			<string>add prefix &amp; suffix</string>
 			<key>xpos</key>
 			<integer>1090</integer>
 			<key>ypos</key>
@@ -2769,9 +2987,9 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>550</integer>
+			<integer>775</integer>
 			<key>ypos</key>
-			<integer>1235</integer>
+			<integer>1230</integer>
 		</dict>
 		<key>F4AE9C32-4A15-421F-A8FE-C71500135BA3</key>
 		<dict>
@@ -2813,18 +3031,20 @@ to set a hotkey for the citaiton picker.</string>
 	<key>variables</key>
 	<dict>
 		<key>_format_citation_end</key>
-		<string>]</string>
+		<string></string>
 		<key>_format_citation_start</key>
-		<string>[</string>
+		<string></string>
 		<key>_format_citekey_delimiter</key>
-		<string>; </string>
+		<string>, </string>
 		<key>_format_citekey_prefix</key>
-		<string>@</string>
+		<string>[[</string>
+		<key>_format_citekey_suffix</key>
+		<string>]]</string>
 		<key>_format_page_before_citekey</key>
 		<string>false</string>
-		<key>_format_page_no_prefix</key>
-		<string>, p. </string>
-		<key>_format_page_no_suffix</key>
+		<key>_format_page_prefix</key>
+		<string>| </string>
+		<key>_format_page_suffix</key>
 		<string></string>
 		<key>alfred_bar_length</key>
 		<string>60</string>
