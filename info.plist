@@ -2586,6 +2586,8 @@ https://ko-fi.com/pseudometa</string>
 		<dict>
 			<key>colorindex</key>
 			<integer>2</integer>
+			<key>note</key>
+			<string>fuzzy open PDF</string>
 			<key>xpos</key>
 			<integer>970</integer>
 			<key>ypos</key>
