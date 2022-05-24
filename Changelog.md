@@ -1,3 +1,5 @@
+- 2022-05-24	release 9.4.0
+- 2022-05-24	new: use Hyper key to open associated pdf
 - 2022-05-20	release 9.3.0
 - 2022-05-20	added bare citekey formatting option
 - 2022-05-20	release 9.2.3
