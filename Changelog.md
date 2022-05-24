@@ -1,3 +1,4 @@
+- 2022-05-24	release 9.5.0
 - 2022-05-24	release 9.4.0
 - 2022-05-24	switch provider of isbns, since ottobib shut down
 - 2022-05-24	release 9.4.0
