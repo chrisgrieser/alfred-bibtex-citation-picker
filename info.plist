@@ -653,6 +653,16 @@
 				<key>vitoclose</key>
 				<true/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>113F2026-78AB-41BA-8836-6145DE94CBEF</string>
+				<key>modifiers</key>
+				<integer>1966080</integer>
+				<key>modifiersubtext</key>
+				<string>⇪: Open PDF</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 		<key>BC0E1F77-0045-40D3-845C-946E6BCFC90D</key>
 		<array>
@@ -2257,6 +2267,29 @@ echo "$*"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>fuzzy-open-pdf.sh</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>113F2026-78AB-41BA-8836-6145DE94CBEF</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>triggerid</key>
 				<string>autocomplete-dictionary-creation</string>
 			</dict>
@@ -2548,6 +2581,15 @@ https://ko-fi.com/pseudometa</string>
 			<integer>1145</integer>
 			<key>ypos</key>
 			<integer>1105</integer>
+		</dict>
+		<key>113F2026-78AB-41BA-8836-6145DE94CBEF</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>xpos</key>
+			<integer>970</integer>
+			<key>ypos</key>
+			<integer>1245</integer>
 		</dict>
 		<key>1B72EC4E-33E7-4144-B43B-3037510ADA3A</key>
 		<dict>

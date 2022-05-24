@@ -31,7 +31,7 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 	- [Bibliography Actions](#bibliography-actions)
 	- [Advanced Search Features](#advanced-search-features)
 	- [Literature Note Actions](#literature-note-actions)
-	- [PDFs: Auto-filing & Auto-renaming](#pdfs-auto-filing--auto-renaming)
+	- [PDFs Management Actions](#pdfs-management-actions)
 	- [Auxiliary Features](#auxiliary-features)
 - [About the Developer](#about-the-developer)
 	- [Profiles](#profiles)
@@ -117,10 +117,10 @@ If there is a citation syntax that more people, feel free to make a PR to [this 
 	- If there is no literature note, a new one will be created.
 - `⌘ + Y`: Preview the literature note with QuickLook (requires QLmarkdown or Peek[^1]).
 
-### PDFs: Auto-filing & Auto-renaming
-- `fn + ↵`: Auto-file and auto-rename the *currently selected PDF in Finder* to the folder specified in `pdf_folder`.
-- Inside `pdf_folder`, uses the template path: `{first_letter_of_citekey}/{citekey-author-part}/{citekey}_{shortened_title}.pdf`
+### PDFs Management Actions
+- `fn + ↵`: __Auto-file and auto-rename__ the *currently selected PDF in Finder* to the folder specified in `pdf_folder`. Inside `pdf_folder`, uses the template path: `{first_letter_of_citekey}/{citekey-author-part}/{citekey}_{shortened_title}.pdf`
 - If there is a PDF already present at that location, it will be indicated by a `📕`.
+- `Hyper + ↵`: Opens the associated PDF in the default PDF reader.[^5]
 - Add `pdf` to any search query to filter only for entries with PDFs that have been added by the auto-file feature. `pdf grieser` for example will search for entries from the author "Grieser" with PDFs. Can be combined with other queries (see: [smart queries](#search)).
 
 ### Auxiliary Features
@@ -170,3 +170,5 @@ If you feel very generous, you may also buy me something from my Amazon wish lis
 [^3]: Set the workflow setting `autocomplete_list_location` to the *absolute* path where the file should be created and use a `.txt` extension. In the *Various Complements* settings, use "Prefix" as Matching Strategy, the pipe character (`|`) as delimiter, enable *Custom Dictionaries*, add the previously created file to the custom dictionary list, and set `Delimiter to divide suggestions for display from ones for insertion` to `>>>`. Afterwards, reload custom dictionaries via the command palette. (If the [Advanced URI Plugin](https://obsidian.md/plugins?id=obsidian-advanced-uri) is installed, the reloading of the custom dictionaries will be triggered automatically, if the file is already in the custom dictionary list.)
 
 [^4]: Uses the app [set as default terminal in the Alfred preferences](https://www.alfredapp.com/help/features/terminal/).
+
+[^5]: `Hyper` is an artificial "fifth" modifier key equivalent to `⌘⌥⌃⇧`, and can be created using apps like [Karabiner Elements](https://karabiner-elements.pqrs.org/), [BetterTouchTool](https://www.macupdate.com/app/mac/32953/bettertouchtool), or [Hyperkey](https://hyperkey.app/).

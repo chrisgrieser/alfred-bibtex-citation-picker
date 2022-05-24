@@ -47,7 +47,7 @@ if (pdfFolderCorrect) {
 			return filename
 				.slice(0, -4) // remove extension
 				.replace (/.*\/(.*)_.*/, "$1") // only citekey part
-				.replaceAll ("_", ""); // remove underscroes from citekey additional stuff (personal naming convention from older library)
+				.replaceAll ("_", ""); // remove underscores from citekey additional stuff (personal naming convention from older library)
 		});
 }
 
