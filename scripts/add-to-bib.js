@@ -30,7 +30,7 @@ function run (argv) {
 		return ObjC.unwrap(str);
 	}
 
-	const input = argv.join("");
+	const input = argv.join("").trim();
 	const libraryPath = $.getenv("bibtex_library_path").replace(/^~/, app.pathTo("home folder"));
 	// ------------------
 
@@ -124,33 +124,28 @@ function run (argv) {
 		if (bibtexEntry.includes("<title>Error: DOI Not Found</title>")) return "ERROR";
 		bibtexEntry = bibtexEntry.replace(/\t(month|issn) = .*\r/, ""); // clean up
 	}
-
 	if (isISBN) {
 		const isbn = input;
 
-		// try ottobib
-		bibtexEntry = app.doShellScript (`curl -sHL "https://www.ottobib.com/isbn/${isbn}/bibtex"`);
-		if (bibtexEntry.includes('id="flash-notice">No Results for')) return "ERROR";
+		bibtexEntry = app.doShellScript (`curl -sHL "https://www.ebook.de/de/tools/isbn2bibtex?isbn=${isbn}"`);
+		if (bibtexEntry === "Not found") return "ERROR";
 		bibtexEntry = bibtexEntry
-			.split(/<textarea.*?>/)[1].split("</textarea>")[0] // slice out only bibtex entry
-			.replace(/^ /gm, "\t") // add proper indention
-			.replace(/^\s}$/m, "}") // don't indent closing brace
-			.replaceAll("address = ", "location = ") // consistent keys
-			.replaceAll("@Book{", "@book{");
-
-		// TODO: try ebooks.de
-		// needs a bunch of cleanup (lowercasing fields, removing entries)
-		// bibtexEntry = app.doShellScript (`curl -sHL "https://www.ebook.de/de/tools/isbn2bibtex?isbn=${isbn}"`);
-		// if (bibtexEntry === "Not found") return "ERROR";
+			.replaceAll("  ", "\t") // add proper indention
+			.replace(/^\t\w+ =/gm, (field) => field.toLowerCase())
+			.replace(/^(\tpagetotal = {\d+) Seiten/m, "$1"); // remove German page word
 	}
 
+	// insert to append
 	let newEntry;
 	let newCitekey;
 	if (isEmpty) {
 		newEntry = bibtexEntryTemplate;
 		newCitekey = "NEW_ENTRY";
-	} else {
-		const newEntryProperties = bibtexEntry.split(newLineDelimiter);
+	}
+	if (isDOI || isISBN) {
+		const newEntryProperties = bibtexEntry
+			.split(newLineDelimiter)
+			.filter(field => !field.includes("\tean =")); // remove garbage fields
 
 		// generate citekey
 		newCitekey = generateCitekey(newEntryProperties);
