@@ -131,7 +131,7 @@ function run (argv) {
 		if (bibtexEntry === "Not found") return "ERROR";
 		bibtexEntry = bibtexEntry
 			.replaceAll("  ", "\t") // add proper indention
-			.replace(/^\t\w+ =/gm, (field) => field.toLowerCase())
+			.replace(/^\t\w+ =/gm, (field) => field.toLowerCase()) // lwoercase fields
 			.replace(/^(\tpagetotal = {\d+) Seiten/m, "$1"); // remove German page word
 	}
 
@@ -145,7 +145,7 @@ function run (argv) {
 	if (isDOI || isISBN) {
 		const newEntryProperties = bibtexEntry
 			.split(newLineDelimiter)
-			.filter(field => !field.includes("\tean =")); // remove garbage fields
+			.filter(field => !(field.includes("\tean =") || field.includes("\tdate ="))) // remove garbage fields
 
 		// generate citekey
 		newCitekey = generateCitekey(newEntryProperties);
