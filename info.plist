@@ -932,7 +932,7 @@
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>page-number-inserter.sh</string>
+				<string>scripts/page-number-inserter.sh</string>
 				<key>type</key>
 				<integer>8</integer>
 			</dict>
@@ -1241,7 +1241,7 @@ JSON.stringify({ 'items': entry_array });
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>page-number-inserter.sh</string>
+				<string>scripts/page-number-inserter.sh</string>
 				<key>type</key>
 				<integer>8</integer>
 			</dict>
@@ -2278,7 +2278,7 @@ echo "$*"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>fuzzy-open-pdf.sh</string>
+				<string>scripts/fuzzy-open-pdf.sh</string>
 				<key>type</key>
 				<integer>8</integer>
 			</dict>
@@ -2441,7 +2441,7 @@ echo "$*"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>toggle-citation-format.js</string>
+				<string>scripts/toggle-citation-format.js</string>
 				<key>type</key>
 				<integer>8</integer>
 			</dict>
