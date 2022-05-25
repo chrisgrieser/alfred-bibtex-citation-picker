@@ -1,3 +1,5 @@
+- 2022-05-25	release 9.5.1
+- 2022-05-25	fix fuzzy pdf opener
 - 2022-05-24	release 9.5.0
 - 2022-05-24	release 9.4.0
 - 2022-05-24	switch provider of isbns, since ottobib shut down

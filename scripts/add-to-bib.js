@@ -145,7 +145,7 @@ function run (argv) {
 	if (isDOI || isISBN) {
 		const newEntryProperties = bibtexEntry
 			.split(newLineDelimiter)
-			.filter(field => !(field.includes("\tean =") || field.includes("\tdate ="))) // remove garbage fields
+			.filter(field => !(field.includes("\tean =") || field.includes("\tdate ="))); // remove garbage fields
 
 		// generate citekey
 		newCitekey = generateCitekey(newEntryProperties);
