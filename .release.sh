@@ -31,7 +31,7 @@ plutil -replace version -string "$nextVersion" info.plist
 
 # Lint
 cd "$(dirname "$0")" || exit 1
-eslint . --fix --config ~"/Library/Mobile Documents/com~apple~CloudDocs/Dotfolder/Configs/.eslintrc.json"
+eslint . --fix --config ~/.eslintrc.json
 markdownlint --fix ./README.md
 
 echo ""
