@@ -24,8 +24,11 @@ function run (argv) {
 	const isFileInObsidianVault = Object.values(vaults).some(v => literatureNotePath.startsWith(v.path));
 
 	if (isFileInObsidianVault) {
+		Application("Obsidian").activate();
+		// eslint-disable-next-line no-magic-numbers, no-undef
+		delay(0.3); // needed so Obsidian can pick up newly created file
 		const URI = "obsidian://open?path=" + encodeURIComponent(literatureNotePath);
-		app.openLocation (URI);
+		app.openLocation(URI);
 		return;
 	}
 

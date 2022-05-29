@@ -3166,7 +3166,7 @@ to set a hotkey for the citaiton picker.</string>
 		<key>backup_destination</key>
 		<string>~/Library/Mobile Documents/com~apple~CloudDocs/Dotfolder/Backups/Library Backups/</string>
 		<key>bibtex_library_path</key>
-		<string>~/Library/Mobile Documents/com~apple~CloudDocs/Dotfolder/Dotfiles/pandoc/main-bibliography.bib</string>
+		<string>~/.pandoc/main-bibliography.bib</string>
 		<key>bibtex_tidy_options</key>
 		<string>--numeric --tab --no-align --tidy-comments --duplicates=key --strip-enclosing-braces --remove-empty-fields --drop-all-caps --remove-dupe-fields --omit=month,issn,pagetotal --backup</string>
 		<key>csl_folder</key>
