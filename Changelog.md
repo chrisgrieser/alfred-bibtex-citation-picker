@@ -1,3 +1,5 @@
+- 2022-05-29	release 9.5.3
+- 2022-05-29	fix adding DOIs
 - 2022-05-25	release 9.5.2
 - 2022-05-25	release 9.5.1
 - 2022-05-25	fix fuzzy pdf opener
