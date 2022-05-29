@@ -117,21 +117,20 @@ function run (argv) {
 	if (!isDOI && !isISBN && !isEmpty) return "ERROR";
 
 	if (isDOI) {
-		console.log ("doi");
-		// transform input into doiURL, since that's what doi.org requires
 		const doiURL = "https://doi.org/" + input;
-		// get bibtex entry & filter it & generate new citekey
+
+		// get bibtex entry & filter it
 		bibtexEntry = app.doShellScript (`curl -sLH "Accept: application/x-bibtex" "${doiURL}"`); // https://citation.crosscite.org/docs.html
-		if (bibtexEntry.includes("<title>Error: DOI Not Found</title>")) return "ERROR";
+		if (bibtexEntry.includes("<title>Error: DOI Not Found</title>") || !bibtexEntry.includes("@")) return "ERROR";
 		bibtexEntry = bibtexEntry.replace(/\t(month|issn) = .*\r/, ""); // clean up
 	}
 
 	if (isISBN) {
-		console.log ("isbn");
 		const isbn = input;
-
 		bibtexEntry = app.doShellScript (`curl -sHL "https://www.ebook.de/de/tools/isbn2bibtex?isbn=${isbn}"`);
-		if (bibtexEntry === "Not found") return "ERROR";
+		if (bibtexEntry === "Not found" || !bibtexEntry.includes("@")) return "ERROR";
+
+		// clean up
 		bibtexEntry = bibtexEntry
 			.replaceAll("  ", "\t") // add proper indention
 			.replace(/^\t\w+ =/gm, (field) => field.toLowerCase()) // lwoercase fields
@@ -145,12 +144,13 @@ function run (argv) {
 		newEntry = bibtexEntryTemplate;
 		newCitekey = "NEW_ENTRY";
 	}
+
 	if (isDOI || isISBN) {
 		const newEntryProperties = bibtexEntry
 			.split(newLineDelimiter)
 			.filter(field => !(field.includes("\tean =") || field.includes("\tdate ="))); // remove garbage fields
 
-		// generate citekey
+		// Generate citekey
 		newCitekey = generateCitekey(newEntryProperties);
 		newEntryProperties[0] = newEntryProperties[0].split("{")[0] + "{" + newCitekey + ",";
 
