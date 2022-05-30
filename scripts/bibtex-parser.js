@@ -61,7 +61,15 @@ const germanChars = [
 	"\\''U;Ü",
 	"\\''a;ä",
 	"\\''o;ö",
-	"\\''u;ü"
+	"\\''u;ü",
+
+	// bibtex-tidy
+	"\\\"{O};Ö",
+	"\\\"{o};ö",
+	"\\\"{A};Ä",
+	"\\\"{a};ä",
+	"\\\"{u};ü",
+	"\\\"{U};Ü"
 ];
 
 const frenchChars = [
@@ -104,7 +112,6 @@ function bibtexDecode (encodedStr) {
 	});
 	return decodedStr;
 }
-
 
 // input: string
 // output: BibtexEntry object

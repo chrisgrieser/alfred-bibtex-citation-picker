@@ -3168,7 +3168,7 @@ to set a hotkey for the citaiton picker.</string>
 		<key>bibtex_library_path</key>
 		<string>~/.pandoc/main-bibliography.bib</string>
 		<key>bibtex_tidy_options</key>
-		<string>--numeric --tab --no-align --tidy-comments --duplicates=key --strip-enclosing-braces --remove-empty-fields --drop-all-caps --remove-dupe-fields --omit=month,issn,pagetotal --backup</string>
+		<string>--duplicates=key,doi --numeric --tab --no-align --tidy-comments  --strip-enclosing-braces --remove-empty-fields --drop-all-caps --remove-dupe-fields --omit=month,issn,pagetotal --backup --quiet --sort-fields --escape</string>
 		<key>csl_folder</key>
 		<string>~/.pandoc/csl</string>
 		<key>literature_note_folder</key>
