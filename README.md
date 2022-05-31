@@ -105,7 +105,8 @@ If there is a citation syntax that commonly using, feel free to make a PR to [th
 
 ### Advanced Search Features
 - The workflow setting `match_authors_in_etal` determines whether authors (or editors) in the *et al.* are still matched when searching for them (default: *true*).
-- The workflow setting `match_only_short_years` ensures that searching for "19" only matches publications written in the year 2019 (or 1919), and not all publications written between 1900 and 1999 (default: *false*).
+- The workflow setting `match_only_short_years` ensures that searching for years only considers the last two digits of the year (default: *false*).
+	- *Example:* When set to *true*, searching for "19" will only match publications published in 2019, and not all publications published between 1900 and 1999.
 - *Tab-Completion*: Pressing `tab` autocompletes the first author/editor name.
 
 ### Literature Note Actions
@@ -120,9 +121,9 @@ If there is a citation syntax that commonly using, feel free to make a PR to [th
 ### PDFs Management Actions
 The following features require that all your PDFs are located in the folder specified in `pdf_folder`.
 - `fn + ↵`: __Auto-file and auto-rename__ the *currently selected PDF in Finder*. Inside `pdf_folder`, uses the template path: `{first_letter_of_citekey}/{citekey-author-part}/{citekey}_{shortened_title}.pdf`
-- If there is a PDF already present at that location, it will be indicated by a `📕`.
-- `Hyper + ↵`[^5]: Opens the associated PDF in the default PDF reader.
-- Add `pdf` to any search query to filter only for entries with PDFs that have been added by the auto-file feature. `pdf grieser`, for example, will display only entries from the author "Grieser" with PDFs. Can be combined with other queries (see: [smart queries](#search)).
+- The `📕` indicates that a PDF is already present at that location for that entry.
+- `Hyper + ↵`[^5]: If the entry an associated PDF file, opens it with the default PDF reader.
+- ℹ️ Add `pdf` to any search query to filter only for entries with PDFs that have been added by the auto-file feature. `pdf grieser`, for example, will display only entries from the author "Grieser" with PDFs. Can be combined with other queries (see: [smart queries](#search)).
 
 ### Auxiliary Features
 Triggered via the Alfred Keyword `scp` (for `S`upercharged `C`itation `P`icker).
