@@ -80,14 +80,14 @@ Press the hotkey in any text field to launch the citation picker.
 You can use the `scp` and select __Change Citation Format__ to change the format of the citations:
 - Pandoc (default)
 - Multi-Markdown
-- Latex
+- Latex[^6]
 - Wikilink
 - Tag
 
 ### Further Format Customization
 If you want to use a format that isn't available, you can customize the format yourself by changing the workflow environment variables starting with `_format` (Tutorial: [How to set environment variables in Alfred](https://www.alfredapp.com/help/workflows/advanced/variables/#environment)).
 
-If there is a citation syntax that more people, feel free to make a PR to [this file which generates the formats](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/toggle-citation-format.js).
+If there is a citation syntax that commonly using, feel free to make a PR to [this file which generates the formats](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/toggle-citation-format.js) or open a [Feature Request](https://www.ieee.org/).
 
 ## Advanced Usage
 
@@ -118,10 +118,11 @@ If there is a citation syntax that more people, feel free to make a PR to [this 
 - `⌘ + Y`: Preview the literature note with QuickLook (requires QLmarkdown or Peek[^1]).
 
 ### PDFs Management Actions
-- `fn + ↵`: __Auto-file and auto-rename__ the *currently selected PDF in Finder* to the folder specified in `pdf_folder`. Inside `pdf_folder`, uses the template path: `{first_letter_of_citekey}/{citekey-author-part}/{citekey}_{shortened_title}.pdf`
+The following features require that all your PDFs are located in the folder specified in `pdf_folder`.
+- `fn + ↵`: __Auto-file and auto-rename__ the *currently selected PDF in Finder*. Inside `pdf_folder`, uses the template path: `{first_letter_of_citekey}/{citekey-author-part}/{citekey}_{shortened_title}.pdf`
 - If there is a PDF already present at that location, it will be indicated by a `📕`.
-- `Hyper + ↵`: Opens the associated PDF in the default PDF reader.[^5]
-- Add `pdf` to any search query to filter only for entries with PDFs that have been added by the auto-file feature. `pdf grieser` for example will search for entries from the author "Grieser" with PDFs. Can be combined with other queries (see: [smart queries](#search)).
+- `Hyper + ↵`[^5]: Opens the associated PDF in the default PDF reader.
+- Add `pdf` to any search query to filter only for entries with PDFs that have been added by the auto-file feature. `pdf grieser`, for example, will display only entries from the author "Grieser" with PDFs. Can be combined with other queries (see: [smart queries](#search)).
 
 ### Auxiliary Features
 Triggered via the Alfred Keyword `scp` (for `S`upercharged `C`itation `P`icker).
@@ -172,3 +173,5 @@ If you feel very generous, you may also buy me something from my Amazon wish lis
 [^4]: Uses the app [set as default terminal in the Alfred preferences](https://www.alfredapp.com/help/features/terminal/).
 
 [^5]: `Hyper` is an artificial "fifth" modifier key equivalent to `⌘⌥⌃⇧`, and can be created using apps like [Karabiner Elements](https://karabiner-elements.pqrs.org/), [BetterTouchTool](https://www.macupdate.com/app/mac/32953/bettertouchtool), or [Hyperkey](https://hyperkey.app/).
+
+[^6]: Latex right now does not support page numbers. If you can code, feel free to help out and implement citations with page numbers.
