@@ -1,3 +1,8 @@
+- 2022-06-03	release 9.5.4
+- 2022-06-03	added logging + fix #9
+- 2022-06-03	make last version indicator uploadable to github
+- 2022-05-30	added some decoding for chars created by bibtex-tidy
+- 2022-05-29	opening literature notes in Obsidian more stable now
 - 2022-05-29	release 9.5.3
 - 2022-05-29	fix adding DOIs
 - 2022-05-25	release 9.5.2
