@@ -2,7 +2,7 @@
 # shellcheck disable=SC2154
 LIBRARY="${bibtex_library_path/#\~/$HOME}"
 BUFFER="$alfred_workflow_data/buffer.json"
-LAST_VERSION_FILE="$alfred_workflow_data"/last_version
+LAST_VERSION_FILE="$alfred_workflow_data/last_version.txt"
 
 # create folder and last version file, if not existing yet (e.g. first run)
 [[ -d "$alfred_workflow_data" ]] || mkdir -p "$alfred_workflow_data"
