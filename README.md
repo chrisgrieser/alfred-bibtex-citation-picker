@@ -5,13 +5,13 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 
 ## Feature Overview
 - Inserts __Pandoc Citation Syntax__ (`[@citekey]`), supporting page numbers & multiple citations (`[@citekey, p. 23; @citekey, p. 42]`). There are also customization options to support other citation styles, e.g. Multi-Markdown or Latex.
-- __App-independent:__ works system-wide, in every text field of every app.
+- __app-independent:__ works system-wide, in every text field of every app.
 - __Smart Search:__ search for citekeys, authors, title, publication, keywords (tags), include/exclude authors in *et al*, tab-completion, fuzzy-matching, sorting recently used entries to the top, …
-- __Feature-rich:__ paste single-entry bibliographies, open URLs, open or create literature notes, search for `.csl` files online, backup the library, …
+- __Feature-rich:__ paste single-entry bibliographies, open URLs, open or create literature notes, attach PDFs, search for `.csl` files online, backup the library, …
 - __Minimalistic reference manager__: add or remove entries without from the BibTeX library or automatically file PDF.
-- __Performant:__ considerably quicker than other citation pickers (~200ms to fully reload a library with ~4000 entries on my machine).
-- __Easy Installation:__ no dependencies, no required plugins, no setup. other than entering the path to your `.bib` file.
-- __Obsidian integration:__ When located in an [Obsidian](https://obsidian.md/) vault, literature notes will automatically be opened/created in Obsidian, instead of the default markdown app.
+- __Performant:__ considerably quicker than any other citation pickers I know of (~200ms to fully reload a library with ~4000 entries on my machine).
+- __Easy Installation:__ no dependencies, no required plugins, no setup. Just need to enter the path to your `.bib` file.
+- __Obsidian integration:__ When located in an [Obsidian](https://obsidian.md/) vault, literature notes will automatically be opened/created in Obsidian instead of the default markdown app.
 
 <img width=60% alt="promo screenshot" src="assets/promo.png">
 
@@ -49,7 +49,7 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 Press the hotkey in any text field to launch the citation picker.
 
 ### Search
-- Search for the title, author/editor (last name), year, or, collection/journal-title.
+- Search for the title, author/editor (last name), year, or collection/journal-title.
 - Prepend `@` to a word to search for a citekey, e.g. `@Grieser2020`.
 - Prepend `#` to search for keywords (tags), e.g. `#sociology`.
 - *Smart Queries*: You can search for any combination of the above. For example, the query `2020 #cognition Grieser` will for entries published in 2020, with the tag "cognition", and with "Grieser" as author/editor.
@@ -70,7 +70,7 @@ Press the hotkey in any text field to launch the citation picker.
 |:-----|:----------------|
 | 🌐   | URL or DOI      |
 | 📄   | Abstract        |
-| 🏷 n | n Keywords      |
+| 🏷   | n Keywords      |
 | 📓   | Literature Note |
 | 📕   | PDF             |
 
