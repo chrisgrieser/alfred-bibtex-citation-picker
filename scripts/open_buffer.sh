@@ -1,5 +1,4 @@
 #!/bin/zsh
-# shellcheck disable=SC2154
 LIBRARY="${bibtex_library_path/#\~/$HOME}"
 BUFFER="$alfred_workflow_data/buffer.json"
 LAST_VERSION_FILE="$alfred_workflow_data/last_version.txt"

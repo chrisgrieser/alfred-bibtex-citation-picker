@@ -1,6 +1,7 @@
 ObjC.import("stdlib");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
+const homePath = app.pathTo("home folder");
 
 const urlIcon = "🌐";
 const litNoteIcon = "📓";
@@ -15,17 +16,19 @@ const alfredBarLength = parseInt ($.getenv("alfred_bar_length"));
 
 const matchAuthorsInEtAl = $.getenv("match_authors_in_etal") === "true";
 const matchOnlyShortYears = $.getenv("match_only_short_years") === "true";
-const libraryPath = $.getenv("bibtex_library_path").replace(/^~/, app.pathTo("home folder"));
-const litNoteFolder = $.getenv("literature_note_folder").replace(/^~/, app.pathTo("home folder"));
-const pdfFolder = $.getenv("pdf_folder").replace(/^~/, app.pathTo("home folder"));
+const libraryPath = $.getenv("bibtex_library_path").replace(/^~/, homePath);
+const litNoteFolder = $.getenv("literature_note_folder").replace(/^~/, homePath);
+const pdfFolder = $.getenv("pdf_folder").replace(/^~/, homePath);
 let litNoteFolderCorrect = false;
 if (litNoteFolder) litNoteFolderCorrect = Application("Finder").exists(Path(litNoteFolder));
 let pdfFolderCorrect = false;
-if (pdfFolder) pdfFolderCorrect = Application("Finder").exists(Path(litNoteFolder));
+if (pdfFolder) pdfFolderCorrect = Application("Finder").exists(Path(pdfFolder));
 
 // Import Hack, https://github.com/JXA-Cookbook/JXA-Cookbook/wiki/Importing-Scripts
 const toImport = "./scripts/bibtex-parser.js";
+console.log ("Starting Buffer Writing");
 eval (app.doShellScript(`cat "${toImport}"`));
+console.log ("Parser Import successfull.");
 
 // -------------------------------
 
@@ -38,6 +41,7 @@ if (litNoteFolderCorrect) {
 		.split("\r")
 		.filter(filename => filename.endsWith(".md"))
 		.map (filename => filename.slice(0, -3)); // remove extension
+	console.log ("Literature Note Reading successfull.");
 }
 
 if (pdfFolderCorrect) {
@@ -49,12 +53,14 @@ if (pdfFolderCorrect) {
 				.replace (/.*\/(.*)_.*/, "$1") // only citekey part
 				.replaceAll ("_", ""); // remove underscores from citekey additional stuff (personal naming convention from older library)
 		});
+	console.log ("PDF Folder reading successfull.");
 }
 
 // -------------------------------
 
 
 const rawBibtex = app.doShellScript(`cat "${libraryPath}"`);
+console.log ("Bibtex Library Reading successfull.");
 
 const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 	.map(entry => {
@@ -194,6 +200,7 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 	});
 
 // -------------------------------
+console.log ("Buffer Creation successfull.");
 
 const logEndTime = new Date();
 console.log("Buffer Writing Duration: " + (logEndTime - logStartTime).toString() + "ms");
