@@ -1,3 +1,5 @@
+- 2022-06-07	release 9.5.5
+- 2022-06-07	addings now also works with URLs containing DOIs
 - 2022-06-03	release 9.5.4
 - 2022-06-03	added logging + fix #9
 - 2022-06-03	make last version indicator uploadable to github

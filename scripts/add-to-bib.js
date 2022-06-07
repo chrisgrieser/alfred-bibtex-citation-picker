@@ -2,8 +2,8 @@
 
 function run (argv) {
 
-	const doiRegex = /\b10.\d{4,9}\/[-._;()/:A-Z0-9]+\b/i; // https://www.crossref.org/blog/dois-and-matching-regular-expressions/
-	const isbnRegex = /^ *[\d-]{9,} *$/;
+	const doiRegex = /\b10.\d{4,9}\/[-._;()/:A-Z0-9]+(?=$|[?/ ])/i; // https://www.crossref.org/blog/dois-and-matching-regular-expressions/
+	const isbnRegex = /^[\d-]{9,}$/;
 	const isEmptyRegex = /^\s*$/;
 
 	const bibtexEntryTemplate = "@misc{NEW_ENTRY,\n\tauthor = {Doe, Jane},\n\ttitle = {NEW_ENTRY},\n\tpages = {1--1},\n\tyear = 0000\n}\n";
@@ -128,7 +128,7 @@ function run (argv) {
 	}
 
 	if (isISBN) {
-		const isbn = input.trim();
+		const isbn = input;
 		bibtexEntry = app.doShellScript (`curl -sHL "https://www.ebook.de/de/tools/isbn2bibtex?isbn=${isbn}"`);
 		if (bibtexEntry === "Not found" || !bibtexEntry.includes("@")) return "ERROR";
 

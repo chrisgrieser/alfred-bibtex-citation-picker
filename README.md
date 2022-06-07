@@ -98,6 +98,7 @@ If there is a citation syntax that commonly using, feel free to make a PR to [th
 - `⌘fn + ↵`: Delete the entry from the BibTeX library.
 	- ⚠️ This feature is untested with BiBTeX files created with apps other than BibDesk and Bookends (or have been formatted with `bibtex-tidy`). [Create an issue](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues) for problems with other apps.
 - __Add entries to the BibTex library__: use the Alfred Keyword `+`, followed by a DOI or ISBN
+	- This also works with URLs that contain a DOI.
 	- the respective entry will be added to your library, with a properly formatted citekey (avoiding duplicates with existing library, etc.)
 	- Leave the input after the `+` empty to create a new, empty BibTeX entry.
 	- Opens the entry afterwards in the app specified in `open_entries_in`.
