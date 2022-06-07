@@ -2,9 +2,9 @@
 
 function run (argv) {
 
-	const doiRegex = /^10.\d{4,9}\/[-._;()/:A-Z0-9]+$/i; // https://www.crossref.org/blog/dois-and-matching-regular-expressions/
-	const isbnRegex = /^[\d-]{9,}$/;
-	const isEmptyRegex = /^ *$/;
+	const doiRegex = /\b10.\d{4,9}\/[-._;()/:A-Z0-9]+\b/i; // https://www.crossref.org/blog/dois-and-matching-regular-expressions/
+	const isbnRegex = /^ *[\d-]{9,} *$/;
+	const isEmptyRegex = /^\s*$/;
 
 	const bibtexEntryTemplate = "@misc{NEW_ENTRY,\n\tauthor = {Doe, Jane},\n\ttitle = {NEW_ENTRY},\n\tpages = {1--1},\n\tyear = 0000\n}\n";
 
@@ -111,13 +111,15 @@ function run (argv) {
 	// --------------------
 
 	let bibtexEntry;
+
 	const isDOI = doiRegex.test(input);
 	const isISBN = isbnRegex.test(input);
 	const isEmpty = isEmptyRegex.test(input);
+
 	if (!isDOI && !isISBN && !isEmpty) return "ERROR";
 
 	if (isDOI) {
-		const doiURL = "https://doi.org/" + input;
+		const doiURL = "https://doi.org/" + input.match(doiRegex)[0];
 
 		// get bibtex entry & filter it
 		bibtexEntry = app.doShellScript (`curl -sLH "Accept: application/x-bibtex" "${doiURL}"`); // https://citation.crosscite.org/docs.html
@@ -126,7 +128,7 @@ function run (argv) {
 	}
 
 	if (isISBN) {
-		const isbn = input;
+		const isbn = input.trim();
 		bibtexEntry = app.doShellScript (`curl -sHL "https://www.ebook.de/de/tools/isbn2bibtex?isbn=${isbn}"`);
 		if (bibtexEntry === "Not found" || !bibtexEntry.includes("@")) return "ERROR";
 
