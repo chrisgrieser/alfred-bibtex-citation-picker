@@ -31,7 +31,7 @@ plutil -replace version -string "$nextVersion" info.plist
 
 # Lint
 cd "$(dirname "$0")" || exit 1
-eslint . --fix --config ~/.eslintrc.json
+eslint . --fix
 markdownlint --fix ./README.md
 
 echo ""
