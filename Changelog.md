@@ -1,3 +1,4 @@
+- 2022-06-12	release 9.5.7
 - 2022-06-12	release 9.5.6
 - 2022-06-09	also reload buffer on PDF & litnote change
 - 2022-06-07	release 9.5.5
