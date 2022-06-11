@@ -1,3 +1,5 @@
+- 2022-06-12	release 9.5.6
+- 2022-06-09	also reload buffer on PDF & litnote change
 - 2022-06-07	release 9.5.5
 - 2022-06-07	addings now also works with URLs containing DOIs
 - 2022-06-03	release 9.5.4
