@@ -35,12 +35,9 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		let desc = title; // shorten title for better display in editor suggester
 		if (title.length > maxTitleLength) desc = title.slice(0, maxTitleLength);
 
-		// match authors/editors,  their lowercase, and the year
-		const toMatch = [year];
-		primaryNames.forEach (name => {
-			toMatch.push(name);
-			toMatch.push(name.toLowerCase());
-		});
+		// match authors/editors & citekey
+		const toMatch = [citekey];
+		primaryNames.forEach (name => toMatch.push(name));
 
 		// https://tadashi-aikawa.github.io/docs-obsidian-various-complements-plugin/5.%20Terms/%F0%9F%93%9ACustom%20dictionaries/
 		const line = [
