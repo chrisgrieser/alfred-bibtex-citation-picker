@@ -71,7 +71,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>5B6D763D-7B64-4EA7-BCE2-0929216BA8D2</string>
+				<string>9608AE94-464B-4B17-A1CA-71855DDB207D</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -467,6 +467,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>1C0964D1-AA81-478A-B406-28E96DDD9E82</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>9608AE94-464B-4B17-A1CA-71855DDB207D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5B6D763D-7B64-4EA7-BCE2-0929216BA8D2</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2225,6 +2238,26 @@ echo "$*"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>buffer_reload</key>
+					<string>true</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>9608AE94-464B-4B17-A1CA-71855DDB207D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -2600,9 +2633,9 @@ https://ko-fi.com/pseudometa</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>1325</integer>
+			<integer>1355</integer>
 			<key>ypos</key>
-			<integer>1105</integer>
+			<integer>1060</integer>
 		</dict>
 		<key>1C0964D1-AA81-478A-B406-28E96DDD9E82</key>
 		<dict>
@@ -2809,9 +2842,9 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<integer>1325</integer>
+			<integer>1350</integer>
 			<key>ypos</key>
-			<integer>1225</integer>
+			<integer>1175</integer>
 		</dict>
 		<key>5F683C78-5D0B-4A39-B3FF-37ABA8DA0D73</key>
 		<dict>
@@ -2899,6 +2932,15 @@ to set a hotkey for the citaiton picker.</string>
 			<integer>740</integer>
 			<key>ypos</key>
 			<integer>25</integer>
+		</dict>
+		<key>9608AE94-464B-4B17-A1CA-71855DDB207D</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>xpos</key>
+			<integer>1285</integer>
+			<key>ypos</key>
+			<integer>1205</integer>
 		</dict>
 		<key>96FCE9BC-5201-4357-9B63-588F73AEF5F3</key>
 		<dict>
@@ -3176,7 +3218,7 @@ to set a hotkey for the citaiton picker.</string>
 		<key>match_authors_in_etal</key>
 		<string>true</string>
 		<key>match_only_short_years</key>
-		<string>true</string>
+		<string>false</string>
 		<key>max_number_of_bkps</key>
 		<string>20</string>
 		<key>open_entries_in</key>
