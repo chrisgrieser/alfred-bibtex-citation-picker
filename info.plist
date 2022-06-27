@@ -652,9 +652,9 @@
 				<key>destinationuid</key>
 				<string>5A83CD14-6282-49D4-9482-F89DC21A185F</string>
 				<key>modifiers</key>
-				<integer>1179648</integer>
+				<integer>917504</integer>
 				<key>modifiersubtext</key>
-				<string>⌘⇧: Open Literature Note</string>
+				<string>☉: Open Literature Note</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
