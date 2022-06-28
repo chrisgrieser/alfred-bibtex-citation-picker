@@ -1,3 +1,7 @@
+- 2022-06-28	release 9.6.0
+- 2022-06-28	readme update for Alfred 5
+- 2022-06-27	switch 'open literature note' to meh (⌥⇧⌃)
+- 2022-06-13	buffer reload after deletion of an entry
 - 2022-06-12	release 9.5.7
 - 2022-06-12	release 9.5.6
 - 2022-06-09	also reload buffer on PDF & litnote change
