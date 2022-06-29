@@ -2580,19 +2580,8 @@ echo -n $file_name</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string># README
-
-
-Changelog
-=========
-
-
-Donations
-=========
-https://ko-fi.com/pseudometa
-
-# Supercharged Citation Picker
-*BibTeX Citation Picker for Pandoc Citation Syntax*
+	<string># Supercharged Citation Picker
+_BibTeX Citation Picker for Pandoc Citation Syntax_
 
 ## Info
 - [README](https://github.com/chrisgrieser/alfred-bibtex-citation-picker#supercharged-citation-picker)
@@ -2601,7 +2590,10 @@ https://ko-fi.com/pseudometa
 
 ## Workflow Setup
 1. Add the path to your `.bib` to the workflow environment variables and you are good to go.
-2. Refer to the README for all the features this workflow has to offer.</string>
+2. Refer to the README for all the features this workflow has to offer.
+
+## Created by
+[Chris Grieser](https://chris-grieser.de/) aka [pseudometa (Twitter)](https://twitter.com/pseudo_meta)</string>
 	<key>uidata</key>
 	<dict>
 		<key>00BFDB01-AD99-47DB-9BB8-5A6EA2E3016C</key>
@@ -3209,7 +3201,27 @@ to set a hotkey for the citaiton picker.</string>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
-	<array/>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>~/.pandoc/main-bibliography.bib</string>
+				<key>filtermode</key>
+				<integer>2</integer>
+				<key>required</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Absolute path to your BibTeX library. (Accepts "~" for your home folder.)</string>
+			<key>label</key>
+			<string>BibTeX Library Path</string>
+			<key>type</key>
+			<string>filepicker</string>
+			<key>variable</key>
+			<string>bibtex_library_path</string>
+		</dict>
+	</array>
 	<key>variables</key>
 	<dict>
 		<key>_format_citation_end</key>
