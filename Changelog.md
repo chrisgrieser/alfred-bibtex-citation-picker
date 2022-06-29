@@ -1,3 +1,5 @@
+- 2022-06-29	release 9.6.1
+- 2022-06-29	configrations for Alfred 5
 - 2022-06-28	release 9.6.0
 - 2022-06-28	readme update for Alfred 5
 - 2022-06-27	switch 'open literature note' to meh (⌥⇧⌃)
