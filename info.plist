@@ -2581,7 +2581,7 @@ echo -n $file_name</string>
 	</array>
 	<key>readme</key>
 	<string># Supercharged Citation Picker
-_BibTeX Citation Picker for Pandoc Citation Syntax_
+BibTeX Citation Picker for Pandoc Citation Syntax
 
 ## Info
 - [README](https://github.com/chrisgrieser/alfred-bibtex-citation-picker#supercharged-citation-picker)
