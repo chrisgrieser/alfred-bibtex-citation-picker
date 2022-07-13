@@ -130,16 +130,10 @@ The following features require that all your PDFs are located in the folder spec
 Triggered via the Alfred Keyword `scp` (for `S`upercharged `C`itation `P`icker).
 - __CSL Search__: Search for a citation style, which will be downloaded to the location `csl_folder` specified in your workflow settings (default: `~/.pandoc/csl/`).
 - __Bibliography Stats__: Brief statistical summary of the library. (Currently only total number of citations.)
-- __Cheatsheet: Pandoc Citation Syntax__: Open a cheat sheet for the Pandoc citation syntax.
 - __Cheatsheet: Citation Picker Actions__: Open a cheat sheet of the available actions of the Supercharged Citation Picker.
 - __Force Buffer Reload__: Force a reload of the citation picker for debugging purposes.
-- __Run BibTeX-Tidy__: Runs [`bibtex-tidy`](https://github.com/FlamingTempura/bibtex-tidy) with the options set in `bibtex_tidy_options` in the terminal.[^4]
 - __Autocompletion List__: Create an autocompletion list formatted for use with the [Various Complements Plugin](https://obsidian.md/plugins?id=various-complements) in Obsidian.[^3]
-- __Library Backup[^2]__: Create a Backup of your library in the location `backup_destination`, restricting the maximum number of backups to `max_number_of_bkps` (deleting the oldest backup). You can also use the following AppleScript to trigger the backups, e.g. for a cron job:
-
-```applescript
-tell application id "com.runningwithcrayons.Alfred" to run trigger "BibTeX Library Backup" in workflow "de.chris-grieser.alfred-bibtex-citation-picker"
-```
+- __Library Backup[^2]__: Create a Backup of your library in the location `backup_destination`, restricting the maximum number of backups to `max_number_of_bkps` (deleting the oldest backup). 
 
 ## About the Developer
 In my day job, I am a sociologist studying the social mechanisms underlying the digital economy. For my PhD project, I investigate the governance of the app economy and how software ecosystems manage the tension between innovation and compatibility. If you are interested in this subject, feel free to get in touch!

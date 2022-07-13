@@ -162,19 +162,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>32B06A25-A59A-4064-B28E-D284563C05B5</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>F3277ACA-347A-4332-8D43-956E55757ED9</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>346A58DA-B1B4-4F03-8F05-20B42A4EF996</key>
 		<array>
 			<dict>
@@ -206,19 +193,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>F4AE9C32-4A15-421F-A8FE-C71500135BA3</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>4515D5D2-4F21-46FB-9ACF-F538D9BBC280</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>BF69DB64-D7CA-4B2C-B35C-439844C6BAD4</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -295,18 +269,6 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>406E52C6-C22D-4A6F-9C4D-3FEEFA513B34</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>sourceoutputuid</key>
-				<string>B0A94173-4BDC-48AA-B190-3E612F96AE28</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
 				<string>57D40C47-4A2C-47A2-9E7A-A3CC8C3FB671</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -314,30 +276,6 @@
 				<string></string>
 				<key>sourceoutputuid</key>
 				<string>B5B1DF68-C89E-465C-9FBC-DFF06B673ABD</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>32B06A25-A59A-4064-B28E-D284563C05B5</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>sourceoutputuid</key>
-				<string>7C883759-E9B3-4D27-B6BB-CF654939A757</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>4515D5D2-4F21-46FB-9ACF-F538D9BBC280</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>sourceoutputuid</key>
-				<string>B0B802A2-CDB7-4432-BFF9-452606A18551</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -429,19 +367,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>867D8000-5451-4837-B3D7-C7F2B54E1EC6</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>32B06A25-A59A-4064-B28E-D284563C05B5</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>8B51C1A0-EAD2-457B-A532-6CC16C7F015E</key>
 		<array>
 			<dict>
@@ -519,19 +444,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>2DC90122-FC40-44CA-8F59-E3C16AC99651</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>9D904019-C6C8-4A76-A04F-706839EEB325</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>592A7342-45EE-47C2-B6E3-B577D191B9FF</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1628,7 +1540,7 @@ fi</string>
 				<key>fixedorder</key>
 				<false/>
 				<key>items</key>
-				<string>[{"title":"✍️ Search &amp; Download Citation Styles","arg":"csl","subtitle":".csl files"},{"title":"💬 Change Citation Format","arg":"change_format","subtitle":"Pandoc, MMD, Latex, Wikilinks, Tags"},{"title":"🔁 Force Buffer Reload","arg":"buffer_reload","subtitle":"for debugging"},{"title":"🅿️ Pandoc Citation Syntax","arg":"Pandoc Citation Syntax.pdf","subtitle":"Cheatsheet"},{"title":"❓Citation Picker Actions","arg":"Actions Cheatsheet.webloc","subtitle":"Cheatsheet"},{"title":"📊 Bibliography Statistics","arg":"statistics"},{"title":"⬇️ Backup the Library","arg":"backup","subtitle":"max: {var:max_number_of_bkps}, location: {var:backup_destination}"},{"title":"🤖 Create Autocomplete List","arg":"autocomplete_list","subtitle":"destination: {var:autocomplete_list_location}"},{"title":"🧹 Run BibTeX tidy","arg":"bibtex-tidy","subtitle":"selected options: {var:bibtex_tidy_options}"}]</string>
+				<string>[{"title":"✍️ Search &amp; Download Citation Styles","arg":"csl","subtitle":".csl files"},{"title":"💬 Change Citation Format","arg":"change_format","subtitle":"Pandoc, MMD, Latex, Wikilinks, Tags"},{"title":"🔁 Force Buffer Reload","arg":"buffer_reload","subtitle":"for debugging"},{"title":"❓Citation Picker Actions","arg":"Actions Cheatsheet.webloc","subtitle":"Cheatsheet"},{"title":"📊 Bibliography Statistics","arg":"statistics"},{"title":"⬇️ Backup the Library","arg":"backup","subtitle":"max: {var:max_number_of_bkps}, location: {var:backup_destination}"}]</string>
 				<key>keyword</key>
 				<string>scp</string>
 				<key>matchmode</key>
@@ -1945,53 +1857,11 @@ fi</string>
 						<key>matchmode</key>
 						<integer>0</integer>
 						<key>matchstring</key>
-						<string>Pandoc Citation Syntax.pdf</string>
-						<key>outputlabel</key>
-						<string>pandoc cheat</string>
-						<key>uid</key>
-						<string>B0A94173-4BDC-48AA-B190-3E612F96AE28</string>
-					</dict>
-					<dict>
-						<key>inputstring</key>
-						<string></string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
 						<string>csl</string>
 						<key>outputlabel</key>
 						<string>csl</string>
 						<key>uid</key>
 						<string>B5B1DF68-C89E-465C-9FBC-DFF06B673ABD</string>
-					</dict>
-					<dict>
-						<key>inputstring</key>
-						<string></string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>autocomplete_list</string>
-						<key>outputlabel</key>
-						<string>autocomplete_list</string>
-						<key>uid</key>
-						<string>7C883759-E9B3-4D27-B6BB-CF654939A757</string>
-					</dict>
-					<dict>
-						<key>inputstring</key>
-						<string></string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>bibtex-tidy</string>
-						<key>outputlabel</key>
-						<string>bibtex-tidy</string>
-						<key>uid</key>
-						<string>B0B802A2-CDB7-4432-BFF9-452606A18551</string>
 					</dict>
 					<dict>
 						<key>inputstring</key>
@@ -2273,50 +2143,6 @@ echo "$*"</string>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>qlmanage -p "assets/Pandoc Citation Syntax.pdf"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>scripts/autocomplete-for-obsidian.js</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>32B06A25-A59A-4064-B28E-D284563C05B5</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string></string>
-				<key>title</key>
-				<string>✅ Autocomplete List created</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>F3277ACA-347A-4332-8D43-956E55757ED9</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
 				<string></string>
@@ -2333,53 +2159,6 @@ echo "$*"</string>
 			<string>113F2026-78AB-41BA-8836-6145DE94CBEF</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>availableviaurlhandler</key>
-				<false/>
-				<key>triggerid</key>
-				<string>autocomplete-dictionary-creation</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
-			<key>uid</key>
-			<string>867D8000-5451-4837-B3D7-C7F2B54E1EC6</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>escaping</key>
-				<integer>1</integer>
-				<key>script</key>
-				<string>bibtex-tidy {var:bibtex_tidy_options} {query}</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.terminalcommand</string>
-			<key>uid</key>
-			<string>BF69DB64-D7CA-4B2C-B35C-439844C6BAD4</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>{var:bibtex_library_path}</string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>4515D5D2-4F21-46FB-9ACF-F538D9BBC280</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2527,21 +2306,6 @@ echo "$*"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>availableviaurlhandler</key>
-				<false/>
-				<key>triggerid</key>
-				<string>BibTeX Library Backup</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
-			<key>uid</key>
-			<string>9D904019-C6C8-4A76-A04F-706839EEB325</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -2605,9 +2369,9 @@ BibTeX Citation Picker for Pandoc Citation Syntax
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>530</real>
+			<real>485</real>
 			<key>ypos</key>
-			<real>1510</real>
+			<real>1305</real>
 		</dict>
 		<key>04E17547-EDD2-4C44-9F41-F15391DD8775</key>
 		<dict>
@@ -2687,9 +2451,9 @@ BibTeX Citation Picker for Pandoc Citation Syntax
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>705</real>
+			<real>660</real>
 			<key>ypos</key>
-			<real>1485</real>
+			<real>1280</real>
 		</dict>
 		<key>254C2241-0AE4-4F52-A073-16E3DEFC9384</key>
 		<dict>
@@ -2728,15 +2492,6 @@ BibTeX Citation Picker for Pandoc Citation Syntax
 			<real>940</real>
 			<key>ypos</key>
 			<real>825</real>
-		</dict>
-		<key>32B06A25-A59A-4064-B28E-D284563C05B5</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>3</integer>
-			<key>xpos</key>
-			<real>620</real>
-			<key>ypos</key>
-			<real>1230</real>
 		</dict>
 		<key>346A58DA-B1B4-4F03-8F05-20B42A4EF996</key>
 		<dict>
@@ -2781,15 +2536,6 @@ to set a hotkey for the citaiton picker.</string>
 			<real>390</real>
 			<key>ypos</key>
 			<real>975</real>
-		</dict>
-		<key>4515D5D2-4F21-46FB-9ACF-F538D9BBC280</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>3</integer>
-			<key>xpos</key>
-			<real>390</real>
-			<key>ypos</key>
-			<real>1425</real>
 		</dict>
 		<key>4771A40C-E741-46C5-93EF-82CEB4BD23D8</key>
 		<dict>
@@ -2845,9 +2591,9 @@ to set a hotkey for the citaiton picker.</string>
 			<key>note</key>
 			<string>backup</string>
 			<key>xpos</key>
-			<real>390</real>
+			<real>360</real>
 			<key>ypos</key>
-			<real>1635</real>
+			<real>1445</real>
 		</dict>
 		<key>5A83CD14-6282-49D4-9482-F89DC21A185F</key>
 		<dict>
@@ -2903,9 +2649,9 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>390</real>
+			<real>345</real>
 			<key>ypos</key>
-			<real>1540</real>
+			<real>1335</real>
 		</dict>
 		<key>7416BB08-7009-4A47-B833-524B2C3BDB55</key>
 		<dict>
@@ -2932,20 +2678,9 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>685</real>
+			<real>640</real>
 			<key>ypos</key>
-			<real>1570</real>
-		</dict>
-		<key>867D8000-5451-4837-B3D7-C7F2B54E1EC6</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>3</integer>
-			<key>note</key>
-			<string>for scripting (e.g. cronjob)</string>
-			<key>xpos</key>
-			<real>355</real>
-			<key>ypos</key>
-			<real>1265</real>
+			<real>1365</real>
 		</dict>
 		<key>8B51C1A0-EAD2-457B-A532-6CC16C7F015E</key>
 		<dict>
@@ -3001,20 +2736,9 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>825</real>
+			<real>780</real>
 			<key>ypos</key>
-			<real>1450</real>
-		</dict>
-		<key>9D904019-C6C8-4A76-A04F-706839EEB325</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>3</integer>
-			<key>note</key>
-			<string>for scripting (e.g. cronjob)</string>
-			<key>xpos</key>
-			<real>140</real>
-			<key>ypos</key>
-			<real>1635</real>
+			<real>1245</real>
 		</dict>
 		<key>AF09AE5D-C351-4190-8AA6-B1924D88B22F</key>
 		<dict>
@@ -3056,23 +2780,14 @@ to set a hotkey for the citaiton picker.</string>
 			<key>ypos</key>
 			<real>330</real>
 		</dict>
-		<key>BF69DB64-D7CA-4B2C-B35C-439844C6BAD4</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>3</integer>
-			<key>xpos</key>
-			<real>460</real>
-			<key>ypos</key>
-			<real>1395</real>
-		</dict>
 		<key>C23E28E8-B257-4FF1-AAAE-BE855C749722</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>535</real>
+			<real>505</real>
 			<key>ypos</key>
-			<real>1635</real>
+			<real>1445</real>
 		</dict>
 		<key>C64ACAF0-66C8-48A8-A3C4-B55C7E282697</key>
 		<dict>
@@ -3157,15 +2872,6 @@ to set a hotkey for the citaiton picker.</string>
 			<real>355</real>
 			<key>ypos</key>
 			<real>340</real>
-		</dict>
-		<key>F3277ACA-347A-4332-8D43-956E55757ED9</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>3</integer>
-			<key>xpos</key>
-			<real>775</real>
-			<key>ypos</key>
-			<real>1230</real>
 		</dict>
 		<key>F4AE9C32-4A15-421F-A8FE-C71500135BA3</key>
 		<dict>
@@ -3252,8 +2958,6 @@ to set a hotkey for the citaiton picker.</string>
 		<string>~/Library/Mobile Documents/com~apple~CloudDocs/Dotfolder/Backups/Library Backups/</string>
 		<key>bibtex_library_path</key>
 		<string>~/.pandoc/main-bibliography.bib</string>
-		<key>bibtex_tidy_options</key>
-		<string>--duplicates=key,doi --numeric --tab --no-align --tidy-comments  --strip-enclosing-braces --remove-empty-fields --drop-all-caps --remove-dupe-fields --omit=month,issn,pagetotal --backup --quiet --sort-fields --escape</string>
 		<key>csl_folder</key>
 		<string>~/.pandoc/csl</string>
 		<key>literature_note_folder</key>
@@ -3271,13 +2975,12 @@ to set a hotkey for the citaiton picker.</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
-		<string>open_entries_in</string>
 		<string>pdf_folder</string>
 		<string>bibtex_library_path</string>
 		<string>backup_destination</string>
-		<string>bibtex_tidy_options</string>
 		<string>literature_note_folder</string>
 		<string>match_only_short_years</string>
+		<string>open_entries_in</string>
 	</array>
 	<key>version</key>
 	<string>9.6.1</string>
