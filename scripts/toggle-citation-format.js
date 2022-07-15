@@ -76,6 +76,16 @@ function run(argv) {
 			setEnvVar("_format_page_prefix", ", ");
 			setEnvVar("_format_page_suffix", "");
 			break;
+		case "eta":
+			setEnvVar("_format_citation_start", "{% cite ");
+			setEnvVar("_format_citation_end", " --prefix %}");
+			setEnvVar("_format_citekey_delimiter", "; ");
+			setEnvVar("_format_citekey_prefix", "");
+			setEnvVar("_format_citekey_suffix", "");
+			setEnvVar("_format_page_before_citekey", "false");
+			setEnvVar("_format_page_prefix", ", p. ");
+			setEnvVar("_format_page_suffix", "");
+			break;
 		case "custom":
 			app.openLocation("https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/README.md#further-format-customization");
 			break;
