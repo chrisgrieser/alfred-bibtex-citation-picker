@@ -2911,27 +2911,7 @@ to set a hotkey for the citaiton picker.</string>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
-	<array>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>default</key>
-				<string>~/.pandoc/main-bibliography.bib</string>
-				<key>filtermode</key>
-				<integer>2</integer>
-				<key>required</key>
-				<true/>
-			</dict>
-			<key>description</key>
-			<string>Absolute path to your BibTeX library. (Accepts "~" for your home folder.)</string>
-			<key>label</key>
-			<string>BibTeX Library Path</string>
-			<key>type</key>
-			<string>filepicker</string>
-			<key>variable</key>
-			<string>bibtex_library_path</string>
-		</dict>
-	</array>
+	<array/>
 	<key>variables</key>
 	<dict>
 		<key>_format_citation_end</key>
