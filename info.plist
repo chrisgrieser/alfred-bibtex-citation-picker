@@ -1540,7 +1540,7 @@ fi</string>
 				<key>fixedorder</key>
 				<false/>
 				<key>items</key>
-				<string>[{"title":"✍️ Search &amp; Download Citation Styles","arg":"csl","subtitle":".csl files"},{"title":"💬 Change Citation Format","arg":"change_format","subtitle":"Pandoc, MMD, Latex, Wikilinks, Tags"},{"title":"🔁 Force Buffer Reload","arg":"buffer_reload","subtitle":"for debugging"},{"title":"❓Citation Picker Actions","arg":"Actions Cheatsheet.webloc","subtitle":"Cheatsheet"},{"title":"📊 Bibliography Statistics","arg":"statistics"},{"title":"⬇️ Backup the Library","arg":"backup","subtitle":"max: {var:max_number_of_bkps}, location: {var:backup_destination}"}]</string>
+				<string>[{"title":"✍️ Search &amp; Download Citation Styles","arg":"csl","subtitle":".csl files"},{"title":"💬 Change Citation Format","arg":"change_format","subtitle":"Pandoc, MMD, Latex, Wikilinks, Tags, Eta template"},{"title":"🔁 Force Buffer Reload","arg":"buffer_reload","subtitle":"for debugging"},{"title":"❓Citation Picker Actions","arg":"cheatsheet","subtitle":"Cheatsheet"},{"title":"📊 Bibliography Statistics","arg":"statistics"},{"title":"⬇️ Backup the Library","arg":"backup","subtitle":"max: {var:max_number_of_bkps}, location: {var:backup_destination}"}]</string>
 				<key>keyword</key>
 				<string>scp</string>
 				<key>matchmode</key>
@@ -1787,7 +1787,7 @@ fi</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>qlmanage -p "assets/$*"</string>
+				<string>qlmanage -p "assets/Actions Cheatsheet.webloc"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1843,9 +1843,9 @@ fi</string>
 						<key>matchmode</key>
 						<integer>0</integer>
 						<key>matchstring</key>
-						<string>Actions Cheatsheet.webloc</string>
+						<string>cheatsheet</string>
 						<key>outputlabel</key>
-						<string>actions cheat</string>
+						<string>cheatsheet</string>
 						<key>uid</key>
 						<string>1A3BB97E-CB5F-4FFD-BECD-DA020C033CAD</string>
 					</dict>
@@ -2219,11 +2219,11 @@ echo "$*"</string>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>fixedorder</key>
 				<false/>
 				<key>items</key>
-				<string>[{"title":"Pandoc","arg":"pandoc","subtitle":"[@citekey, p. 42]"},{"title":"Multi-Markdown (MMD)","arg":"multi-markdown","subtitle":"[42][#citekey]"},{"title":"Latex","arg":"latex","subtitle":"\\cite{citekey}    ℹ️ page numbers not working yet"},{"title":"Wikilink","arg":"wikilink","subtitle":"[[citekey]]         ℹ️ page number will become alias"},{"title":"Tag","arg":"tag","subtitle":"#citekey"},{"title":"Bare Citekey","arg":"bare citekey","subtitle":"citekey"},{"title":"Eta template","arg":"eta","subtitle":"{% cite citekey %}"},{"title":"Custom","arg":"custom","subtitle":"🌐 Opens Browser Window with information"}]</string>
+				<string>[{"title":"Pandoc","arg":"pandoc","subtitle":"[@citekey, p. 42]"},{"title":"Multi-Markdown (MMD)","arg":"multi-markdown","subtitle":"[42][#citekey]"},{"title":"Latex","arg":"latex","subtitle":"\\cite{citekey}    ℹ️ page numbers not supported"},{"title":"Wikilink","arg":"wikilink","subtitle":"[[citekey]]         ℹ️ page number will become alias"},{"title":"Tag","arg":"tag","subtitle":"#citekey"},{"title":"Bare Citekey","arg":"bare citekey","subtitle":"citekey"},{"title":"Eta template","arg":"eta","subtitle":"{% cite citekey %}"},{"title":"Custom","arg":"custom","subtitle":"🌐 Opens Browser Window with information"}]</string>
 				<key>matchmode</key>
 				<integer>0</integer>
 				<key>runningsubtext</key>
@@ -2246,7 +2246,7 @@ echo "$*"</string>
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string> </string>
+				<string></string>
 				<key>passthroughargument</key>
 				<false/>
 				<key>variables</key>
