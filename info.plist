@@ -564,9 +564,9 @@
 				<key>destinationuid</key>
 				<string>5A83CD14-6282-49D4-9482-F89DC21A185F</string>
 				<key>modifiers</key>
-				<integer>917504</integer>
+				<integer>786432</integer>
 				<key>modifiersubtext</key>
-				<string>☉: Open Literature Note</string>
+				<string>⌃⌥: Open Literature Note</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -2411,9 +2411,9 @@ BibTeX Citation Picker for Pandoc Citation Syntax
 			<key>note</key>
 			<string>fuzzy open PDF</string>
 			<key>xpos</key>
-			<real>970</real>
+			<real>955</real>
 			<key>ypos</key>
-			<real>1245</real>
+			<real>1230</real>
 		</dict>
 		<key>1B72EC4E-33E7-4144-B43B-3037510ADA3A</key>
 		<dict>

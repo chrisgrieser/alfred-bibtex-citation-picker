@@ -80,9 +80,10 @@ Press the hotkey in any text field to launch the citation picker.
 You can use the `scp` and select __Change Citation Format__ to change the format of the citations:
 - Pandoc (default)
 - Multi-Markdown
-- Latex[^6]
+- Latex[^5]
 - Wikilink
 - Tag
+- Eta template
 
 ### Further Format Customization
 If you want to use a format that isn't available, you can customize the format yourself by changing the workflow environment variables starting with `_format` (Tutorial: [How to set environment variables in Alfred](https://www.alfredapp.com/help/workflows/advanced/variables/#environment)).
@@ -114,7 +115,7 @@ If there is a citation syntax that commonly using, feel free to make a PR to [th
 - Looks in the folder specified in the workflow settings `literature_note_folder` for files that are *exactly* named like the citekey (without `@`, but with `.md` extension).
 - Entries that have a literature note like this will be indicated by a `📓`.
 - Add `*` to any search query to filter only for entries with literature notes, e.g. `* grieser` will search for entries from "Grieser" with literature notes. Can be combined with other queries (see: [smart queries](#search)).
-- `Meh + ↵`[^5]: Open the literature note.
+- `⌃⌥ + ↵`[^4]: Open the literature note.
 	- If the file is in an [Obsidian Vault](https://obsidian.md/), opens the file in Obsidian.
 	- If there is no literature note, a new one will be created.
 - `⌘ + Y`: Preview the literature note with QuickLook (requires QLmarkdown or Peek[^1]).
@@ -123,7 +124,7 @@ If there is a citation syntax that commonly using, feel free to make a PR to [th
 The following features require that all your PDFs are located in the folder specified in `pdf_folder`.
 - `fn + ↵`: __Auto-file and auto-rename__ the *currently selected PDF in Finder*. Inside `pdf_folder`, uses the template path: `{first_letter_of_citekey}/{citekey-author-part}/{citekey}_{shortened_title}.pdf`
 - The `📕` indicates that the entry already has an associated PDF at that location.
-- `Hyper + ↵`[^5]: If the entry has an associated PDF file, open it with the default PDF reader.
+- `Hyper + ↵`[^4]: If the entry has an associated PDF file, open it with the default PDF reader.
 - ℹ️ Add `pdf` to any search query to filter only for entries with PDFs that have been added by the auto-file feature. `pdf grieser`, for example, will display only entries from the author "Grieser" with PDFs. Can be combined with other queries (see: [smart queries](#search)).
 
 ### Auxiliary Features
@@ -132,7 +133,6 @@ Triggered via the Alfred Keyword `scp` (for `S`upercharged `C`itation `P`icker).
 - __Bibliography Stats__: Brief statistical summary of the library. (Currently only total number of citations.)
 - __Cheatsheet: Citation Picker Actions__: Open a cheat sheet of the available actions of the Supercharged Citation Picker.
 - __Force Buffer Reload__: Force a reload of the citation picker for debugging purposes.
-- __Autocompletion List__: Create an autocompletion list formatted for use with the [Various Complements Plugin](https://obsidian.md/plugins?id=various-complements) in Obsidian.[^3]
 - __Library Backup[^2]__: Create a Backup of your library in the location `backup_destination`, restricting the maximum number of backups to `max_number_of_bkps` (deleting the oldest backup).
 
 ## About the Developer
@@ -164,10 +164,6 @@ If you feel very generous, you may also buy me something from my Amazon wish lis
 
 [^2]: As per [MIT License](LICENSE), this app comes without any warranty in case of data loss. That being said, I never had any problems with the backups created.
 
-[^3]: Set the workflow setting `autocomplete_list_location` to the *absolute* path where the file should be created and use a `.txt` extension. In the *Various Complements* settings, use "Prefix" as Matching Strategy, the pipe character (`|`) as delimiter, enable *Custom Dictionaries*, add the previously created file to the custom dictionary list, and set `Delimiter to divide suggestions for display from ones for insertion` to `>>>`. Afterwards, reload custom dictionaries via the command palette. (If the [Advanced URI Plugin](https://obsidian.md/plugins?id=obsidian-advanced-uri) is installed, the reloading of the custom dictionaries will be triggered automatically, if the file is already in the custom dictionary list.)
+[^4]: `Hyper` is an artificial "fifth" modifier key equivalent to `⌘⌥⌃⇧`, and can be created using apps like [Karabiner Elements](https://karabiner-elements.pqrs.org/), [BetterTouchTool](https://www.macupdate.com/app/mac/32953/bettertouchtool), or [Hyperkey](https://hyperkey.app/). 
 
-[^4]: Uses the app [set as default terminal in the Alfred preferences](https://www.alfredapp.com/help/features/terminal/).
-
-[^5]: `Hyper` is an artificial "fifth" modifier key equivalent to `⌘⌥⌃⇧`, and can be created using apps like [Karabiner Elements](https://karabiner-elements.pqrs.org/), [BetterTouchTool](https://www.macupdate.com/app/mac/32953/bettertouchtool), or [Hyperkey](https://hyperkey.app/). `Meh` is an artificial "sixth" modifier key and corresponds to `⌥⌃⇧` (all except `⌘`).
-
-[^6]: Latex right now does not support page numbers. If you can code, feel free to help out and implement citations with page numbers.
+[^5]: Latex right now does not support page numbers. If you can code, feel free to help out and implement citations with page numbers.
