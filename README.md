@@ -115,7 +115,7 @@ If there is a citation syntax that commonly using, feel free to make a PR to [th
 - Looks in the folder specified in the workflow settings `literature_note_folder` for files that are *exactly* named like the citekey (without `@`, but with `.md` extension).
 - Entries that have a literature note like this will be indicated by a `📓`.
 - Add `*` to any search query to filter only for entries with literature notes, e.g. `* grieser` will search for entries from "Grieser" with literature notes. Can be combined with other queries (see: [smart queries](#search)).
-- `⌃⌥ + ↵`[^4]: Open the literature note.
+- `Meh + ↵`[^4]: Open the literature note.
 	- If the file is in an [Obsidian Vault](https://obsidian.md/), opens the file in Obsidian.
 	- If there is no literature note, a new one will be created.
 - `⌘ + Y`: Preview the literature note with QuickLook (requires QLmarkdown or Peek[^1]).
@@ -164,6 +164,6 @@ If you feel very generous, you may also buy me something from my Amazon wish lis
 
 [^2]: As per [MIT License](LICENSE), this app comes without any warranty in case of data loss. That being said, I never had any problems with the backups created.
 
-[^4]: `Hyper` is an artificial "fifth" modifier key equivalent to `⌘⌥⌃⇧`, and can be created using apps like [Karabiner Elements](https://karabiner-elements.pqrs.org/), [BetterTouchTool](https://www.macupdate.com/app/mac/32953/bettertouchtool), or [Hyperkey](https://hyperkey.app/). 
+[^4]: `Hyper` is an artificial "fifth" modifier key equivalent to `⌘⌥⌃⇧`, and can be created using apps like [Karabiner Elements](https://karabiner-elements.pqrs.org/), [BetterTouchTool](https://www.macupdate.com/app/mac/32953/bettertouchtool), or [Hyperkey](https://hyperkey.app/). `Meh` is an artificial "fifth" modifier key equivalent to `⌥⌃⇧`.
 
 [^5]: Latex right now does not support page numbers. If you can code, feel free to help out and implement citations with page numbers.
