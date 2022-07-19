@@ -90,6 +90,7 @@ If you want to use a format that isn't available, you can customize the format y
 
 If there is a citation syntax that commonly using, feel free to make a PR to [this file which generates the formats](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/toggle-citation-format.js) or open a [Feature Request](https://www.ieee.org/).
 
+
 ## Advanced Usage
 
 ### Bibliography Actions
