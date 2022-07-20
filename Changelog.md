@@ -1,3 +1,9 @@
+- 2022-07-20	release 9.7.0
+- 2022-07-20	parse & add bibliographies with anystyle
+- 2022-07-19	scratch last change
+- 2022-07-19	open literature not via ctrl+opt+return
+- 2022-07-16	Merge pull request #10 from jpeng98/main
+- 2022-07-15	Add eta template for citation format
 - 2022-07-15	release 9.6.2
 - 2022-07-15	rm user configration since conflict with env vars
 - 2022-07-13	rm fringe features(bibtex-tidy, autocomplete)

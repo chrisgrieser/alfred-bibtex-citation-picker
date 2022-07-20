@@ -100,7 +100,7 @@ If there is a citation syntax that commonly using, feel free to make a PR to [th
 - `⌘fn + ↵`: Delete the entry from the BibTeX library.
 	- ⚠️ This feature is untested with BiBTeX files created with apps other than BibDesk and Bookends (or have been formatted with `bibtex-tidy`). [Create an issue](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues) for problems with other apps.
 - Note that removing entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/) since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file will be overridden.
-	
+
 ### Adding entries to the BibTeX library
 - Use the Alfred Keyword `+`, followed by a __DOI__, __ISBN__, or __URL that contains a DOI__.
 - You can __parse & add a bibliographic entry__ by selecting the text and pressing the respective hotkey (requires [anystyle](https://github.com/inukshuk/anystyle), installed via `sudo gem install anystyle-cli`).
