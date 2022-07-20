@@ -164,10 +164,11 @@ function run (argv) {
 		newEntry = bibtexEntryTemplate;
 		newCitekey = "NEW_ENTRY";
 	} else {
+		let newEntryProperties = bibtexEntry.split(newLineDelimiter);
 
+		// clean up fields
 		const fieldsToDelete = ["date", "ean", "month", "issn"];
-		const newEntryProperties = bibtexEntry
-			.split(newLineDelimiter)
+		newEntryProperties = newEntryProperties
 			.filter(field => {
 				let keepField = true;
 				fieldsToDelete.forEach(fieldName => {
