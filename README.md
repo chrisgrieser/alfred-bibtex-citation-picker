@@ -1,14 +1,14 @@
 # Supercharged Citation Picker
 ![](https://img.shields.io/github/downloads/chrisgrieser/alfred-bibtex-citation-picker/total?label=Total%20Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/alfred-bibtex-citation-picker?label=Latest%20Release&style=plastic) [![](https://img.shields.io/badge/changelog-click%20here-FFE800?style=plastic)](Changelog.md)
 
-A citation picker for academics that write in markdown. Using [Alfred](https://www.alfredapp.com/), this citation picker inserts [Pandoc](https://pandoc.org/MANUAL.html#citation-syntax), [Multi-Markdown](https://fletcher.github.io/MultiMarkdown-6/syntax/citation.html), or [Latex](https://www.overleaf.com/learn/latex/Biblatex_citation_styles) citations from a BibTeX File.
+A citation picker for academics that write in markdown. Using [Alfred](https://www.alfredapp.com/), it inserts citations from a BibTeX File in various formats, e.g. [Pandoc](https://pandoc.org/MANUAL.html#citation-syntax), [Multi-Markdown](https://fletcher.github.io/MultiMarkdown-6/syntax/citation.html) or [Latex](https://www.overleaf.com/learn/latex/Biblatex_citation_styles).
 
 ## Feature Overview
 - Inserts __Pandoc Citation Syntax__ (`[@citekey]`), supporting page numbers & multiple citations (`[@citekey, p. 23; @citekey, p. 42]`). There are also customization options to support other citation styles, e.g. Multi-Markdown or Latex.
 - __app-independent:__ works system-wide, in every text field of every app.
 - __Smart Search:__ search for citekeys, authors, title, publication, keywords (tags), include/exclude authors in *et al*, tab-completion, fuzzy-matching, sorting recently used entries to the top, …
 - __Feature-rich:__ paste single-entry bibliographies, open URLs, open or create literature notes, attach PDFs, search for `.csl` files online, backup the library, …
-- __Minimalistic reference manager__: add or remove entries without from the BibTeX library or automatically file PDF.
+- __Minimalistic reference manager__: add or remove entries the BibTeX library, automatically rename and file PDFs, parse single entries, …
 - __Performant:__ considerably quicker than any other citation pickers I know of (~200ms to fully reload a library with ~4000 entries on my machine).
 - __Easy Installation:__ no dependencies, no required plugins, no setup. Just need to enter the path to your `.bib` file.
 - __Obsidian integration:__ When located in an [Obsidian](https://obsidian.md/) vault, literature notes will automatically be opened/created in Obsidian instead of the default markdown app.
@@ -29,6 +29,7 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 	- [Further Format Customization](#further-format-customization)
 - [Advanced Usage](#advanced-usage)
 	- [Bibliography Actions](#bibliography-actions)
+	- [Adding entries to the BibTeX library](#adding-entries-to-the-bibtex-library)
 	- [Advanced Search Features](#advanced-search-features)
 	- [Literature Note Actions](#literature-note-actions)
 	- [PDFs Management Actions](#pdfs-management-actions)
@@ -90,7 +91,6 @@ If you want to use a format that isn't available, you can customize the format y
 
 If there is a citation syntax that commonly using, feel free to make a PR to [this file which generates the formats](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/toggle-citation-format.js) or open a [Feature Request](https://www.ieee.org/).
 
-
 ## Advanced Usage
 
 ### Bibliography Actions
@@ -99,12 +99,14 @@ If there is a citation syntax that commonly using, feel free to make a PR to [th
 - `⌘ + L`: Preview the (unabridged) title, abstract, and list of keywords in Large Type.
 - `⌘fn + ↵`: Delete the entry from the BibTeX library.
 	- ⚠️ This feature is untested with BiBTeX files created with apps other than BibDesk and Bookends (or have been formatted with `bibtex-tidy`). [Create an issue](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues) for problems with other apps.
-- __Add entries to the BibTex library__: use the Alfred Keyword `+`, followed by a DOI or ISBN
-	- This also works with URLs that contain a DOI.
-	- the respective entry will be added to your library, with a properly formatted citekey (avoiding duplicates with existing library, etc.)
-	- Leave the input after the `+` empty to create a new, empty BibTeX entry.
-	- Opens the entry afterwards in the app specified in `open_entries_in`.
-- Note that adding & removing entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/) since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file will be overridden.
+- Note that removing entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/) since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file will be overridden.
+	
+### Adding entries to the BibTeX library
+- Use the Alfred Keyword `+`, followed by a __DOI__, __ISBN__, or __URL that contains a DOI__.
+- You can __parse & add a bibliographic entry__ by selecting the text and pressing the respective hotkey (requires [anystyle](https://github.com/inukshuk/anystyle), installed via `sudo gem install anystyle-cli`).
+- Leave the input after the `+` empty to create a __new, empty BibTeX entry__.
+- The new entry will be added to your library, with a properly formatted, unique citekey. Afterwards the entry will be opened in the app specified in `open_entries_in`.
+- Note that adding entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/) since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file will be overridden.
 
 ### Advanced Search Features
 - The workflow setting `match_authors_in_etal` determines whether authors (or editors) in the *et al.* are still matched when searching for them (default: *true*).
@@ -114,7 +116,7 @@ If there is a citation syntax that commonly using, feel free to make a PR to [th
 
 ### Literature Note Actions
 - Looks in the folder specified in the workflow settings `literature_note_folder` for files that are *exactly* named like the citekey (without `@`, but with `.md` extension).
-- Entries that have a literature note like this will be indicated by a `📓`.
+- Entries that have such a literature note will be indicated by a `📓`.
 - Add `*` to any search query to filter only for entries with literature notes, e.g. `* grieser` will search for entries from "Grieser" with literature notes. Can be combined with other queries (see: [smart queries](#search)).
 - `Meh + ↵`[^4]: Open the literature note.
 	- If the file is in an [Obsidian Vault](https://obsidian.md/), opens the file in Obsidian.

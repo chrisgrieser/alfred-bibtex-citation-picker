@@ -5,7 +5,6 @@ function run (argv) {
 	const doiRegex = /\b10.\d{4,9}\/[-._;()/:A-Z0-9]+(?=$|[?/ ])/i; // https://www.crossref.org/blog/dois-and-matching-regular-expressions/
 	const isbnRegex = /^[\d-]{9,}$/;
 	const isEmptyRegex = /^\s*$/;
-
 	const bibtexEntryTemplate = "@misc{NEW_ENTRY,\n\tauthor = {Doe, Jane},\n\ttitle = {NEW_ENTRY},\n\tpages = {1--1},\n\tyear = 0000\n}\n";
 
 	// ----------------------
@@ -30,9 +29,15 @@ function run (argv) {
 		return ObjC.unwrap(str);
 	}
 
+	function writeToFile(text, file) {
+		const str = $.NSString.alloc.initWithUTF8String(text);
+		str.writeToFileAtomicallyEncodingError(file, true, $.NSUTF8StringEncoding, null);
+	}
+
 	const input = argv.join("").trim();
 	const libraryPath = $.getenv("bibtex_library_path").replace(/^~/, app.pathTo("home folder"));
-	// ------------------
+	//---------------------------------------------------------------------------
+
 
 	function generateCitekey (bibtexPropertyArr) {
 		function parseBibtexProperty (arr, property) {
@@ -88,7 +93,10 @@ function run (argv) {
 			.replace(/ñ/g, "n");
 
 		const citekey = authorStr + year;
+		return citekey;
+	}
 
+	function ensureUniqueCitekey (citekey) {
 		// check if citekey already exists
 		const citekeyArray = readFile(libraryPath)
 			.split("\n")
@@ -108,52 +116,69 @@ function run (argv) {
 		return nextCitekey;
 	}
 
-	// --------------------
+	//---------------------------------------------------------------------------
 
 	let bibtexEntry;
+	let newEntry;
+	let newCitekey;
 
+	// type of reading to perform
+	let parseSelection;
+	try {
+		parseSelection = $.getenv("selection") === "true";
+	} catch (error) {
+		parseSelection = false;
+	}
 	const isDOI = doiRegex.test(input);
 	const isISBN = isbnRegex.test(input);
 	const isEmpty = isEmptyRegex.test(input);
+	if (!isDOI && !isISBN && !isEmpty && !parseSelection) return "ERROR";
 
-	if (!isDOI && !isISBN && !isEmpty) return "ERROR";
+	if (parseSelection) {
+		// anystyle can't read STDIN, so this has to be written to a file
+		// https://github.com/inukshuk/anystyle-cli#anystyle-help-parse
+		const tempPath = $.getenv("alfred_workflow_cache") + "/temp.txt";
+		writeToFile(input, tempPath);
+		bibtexEntry = app.doShellScript(`anystyle --stdout -f bib parse "${tempPath}"`)
+			.replaceAll("  ", "\t") // spaces to tabs
+			.replaceAll("\tdate =", "\tyear =");
 
-	if (isDOI) {
+	} else if (isDOI) {
 		const doiURL = "https://doi.org/" + input.match(doiRegex)[0];
-
 		// get bibtex entry & filter it
 		bibtexEntry = app.doShellScript (`curl -sLH "Accept: application/x-bibtex" "${doiURL}"`); // https://citation.crosscite.org/docs.html
 		if (bibtexEntry.includes("<title>Error: DOI Not Found</title>") || !bibtexEntry.includes("@")) return "ERROR";
-		bibtexEntry = bibtexEntry.replace(/\t(month|issn) = .*\r/, ""); // clean up
-	}
 
-	if (isISBN) {
+	} else if (isISBN) {
 		const isbn = input;
 		bibtexEntry = app.doShellScript (`curl -sHL "https://www.ebook.de/de/tools/isbn2bibtex?isbn=${isbn}"`);
 		if (bibtexEntry === "Not found" || !bibtexEntry.includes("@")) return "ERROR";
-
-		// clean up
 		bibtexEntry = bibtexEntry
 			.replaceAll("  ", "\t") // add proper indention
-			.replace(/^\t\w+ =/gm, (field) => field.toLowerCase()) // lwoercase fields
+			.replace(/^\t\w+ =/gm, (field) => field.toLowerCase()) // lowercase fields
 			.replace(/^(\tpagetotal = {\d+) Seiten/m, "$1"); // remove German page word
 	}
 
 	// insert to append
-	let newEntry;
-	let newCitekey;
 	if (isEmpty) {
 		newEntry = bibtexEntryTemplate;
 		newCitekey = "NEW_ENTRY";
-	}
+	} else {
 
-	if (isDOI || isISBN) {
+		const fieldsToDelete = ["date", "ean", "month", "issn"];
 		const newEntryProperties = bibtexEntry
 			.split(newLineDelimiter)
-			.filter(field => !(field.includes("\tean =") || field.includes("\tdate ="))); // remove garbage fields
+			.filter(field => {
+				let keepField = true;
+				fieldsToDelete.forEach(fieldName => {
+					if (field.includes(`\t${fieldName} =`)) keepField = false;
+				});
+				return keepField;
+			});
 
 		// Generate citekey
 		newCitekey = generateCitekey(newEntryProperties);
+		newCitekey = ensureUniqueCitekey(newCitekey);
 		newEntryProperties[0] = newEntryProperties[0].split("{")[0] + "{" + newCitekey + ",";
 
 		// Create keywords field
