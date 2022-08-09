@@ -561,7 +561,7 @@
 				<key>modifiers</key>
 				<integer>8388608</integer>
 				<key>modifiersubtext</key>
-				<string>fn: Auto-File PDF</string>
+				<string>fn: Auto-File PDF ({var:file_manager})</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -3040,6 +3040,8 @@ to set hotkey for Bibliography parsing</string>
 		<string>~/.pandoc/main-bibliography.bib</string>
 		<key>csl_folder</key>
 		<string>~/.pandoc/csl</string>
+		<key>file_manager</key>
+		<string>Marta</string>
 		<key>literature_note_folder</key>
 		<string>~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Main Vault/Literature Notes/</string>
 		<key>match_authors_in_etal</key>
@@ -3056,6 +3058,7 @@ to set hotkey for Bibliography parsing</string>
 	<key>variablesdontexport</key>
 	<array>
 		<string>pdf_folder</string>
+		<string>file_manager</string>
 		<string>bibtex_library_path</string>
 		<string>backup_destination</string>
 		<string>literature_note_folder</string>

@@ -1,18 +1,44 @@
 #!/bin/zsh
 
-# cancellation conditions
-SELECTIONS_IN_FINDER=$(osascript -l JavaScript -e 'Application("Finder").selection().length')
-SELECTED_FILE=$(osascript -l JavaScript -e 'decodeURI(Application("Finder").selection()[0]?.url()).slice(7)')
-EXT="${SELECTED_FILE##*.}"
-
-if [[ $SELECTIONS_IN_FINDER == 0 ]]; then
-	echo "⛔️ No file selected."
+# get selected file
+if [[ "$file_manager" == "Finder" ]] || [[ -z "$file_manager" ]] ; then
+	NO_OF_SELECTIONS=$(osascript -l JavaScript -e 'Application("Finder").selection().length')
+	SELECTED_FILE=$(osascript -l JavaScript -e 'decodeURI(Application("Finder").selection()[0]?.url()).slice(7)')
+elif [[ "$file_manager" == "Marta" ]] ; then
+	NO_OF_SELECTIONS=1 # number of selection checked via "SELECTED FILES"
+	SELECTED_FILE=$(osascript -e '
+		tell application "Marta" to activate
+		delay 0.1
+		tell application "System Events"
+			keystroke "c" using {command down}
+			delay 0.1
+			set file_name to (the clipboard)
+			if (file_name contains "\r") then return "multiple files"
+			tell process "Marta" to set window_name to name of front window
+		end tell
+		set window_name to (characters 12 thru -2 of window_name as string)
+		return window_name & "/" & file_name
+	')
+	if [[ ! -e "$SELECTED_FILE" ]]; then
+		echo "⛔️ Wrong folder is in the the window title. Reload Marta Window and try again."
+		exit 1
+	fi
+else
+	echo "⛔️ Invalid File Manager set."
 	exit 1
 fi
-if [[ $SELECTIONS_IN_FINDER > 1 ]]; then
+
+# cancellation conditions
+if [[ $NO_OF_SELECTIONS -eq 0 ]] ; then
+	echo "⛔️ No file selected."
+	echo "$NO_OF_SELECTIONS"
+	exit 1
+fi
+if [[ $NO_OF_SELECTIONS -gt 1 ]] || [[ "$SELECTED_FILE" == "multiple files" ]] ; then
 	echo "⛔️ More than one file selected."
 	exit 1
 fi
+EXT="${SELECTED_FILE##*.}"
 if [[ "$EXT" != "pdf" ]]; then
 	echo "⛔️ Selected file not a PDF."
 	exit 1

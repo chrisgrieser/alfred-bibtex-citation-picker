@@ -125,7 +125,8 @@ If there is a citation syntax that commonly using, feel free to make a PR to [th
 
 ### PDFs Management Actions
 The following features require that all your PDFs are located in the folder specified in `pdf_folder`.
-- `fn + ↵`: __Auto-file and auto-rename__ the *currently selected PDF in Finder*. Inside `pdf_folder`, uses the template path: `{first_letter_of_citekey}/{citekey-author-part}/{citekey}_{shortened_title}.pdf`
+- `fn + ↵`: __Auto-file and auto-rename__ the *currently selected PDF*. Inside `pdf_folder`, uses the template path: `{first_letter_of_citekey}/{citekey-author-part}/{citekey}_{shortened_title}.pdf`
+	- The workflow configuration `file_manager` can be used to change the file manger used. Currently, only Finder and [Marta](https://marta.sh/) are supported (using Finder if left empty).
 - The `📕` indicates that the entry already has an associated PDF at that location.
 - `Hyper + ↵`[^4]: If the entry has an associated PDF file, open it with the default PDF reader.
 - ℹ️ Add `pdf` to any search query to filter only for entries with PDFs that have been added by the auto-file feature. `pdf grieser`, for example, will display only entries from the author "Grieser" with PDFs. Can be combined with other queries (see: [smart queries](#search)).
