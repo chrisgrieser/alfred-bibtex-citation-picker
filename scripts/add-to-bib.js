@@ -134,16 +134,8 @@ function run (argv) {
 	const isEmpty = isEmptyRegex.test(input);
 	if (!isDOI && !isISBN && !isEmpty && !parseSelection) return "ERROR";
 
-	if (parseSelection) {
-		// anystyle can't read STDIN, so this has to be written to a file
-		// https://github.com/inukshuk/anystyle-cli#anystyle-help-parse
-		const tempPath = $.getenv("alfred_workflow_cache") + "/temp.txt";
-		writeToFile(input, tempPath);
-		bibtexEntry = app.doShellScript(`anystyle --stdout -f bib parse "${tempPath}"`)
-			.replaceAll("  ", "\t") // spaces to tabs
-			.replaceAll("\tdate =", "\tyear =");
 
-	} else if (isDOI) {
+	if (isDOI) {
 		const doiURL = "https://doi.org/" + input.match(doiRegex)[0];
 		// get bibtex entry & filter it
 		bibtexEntry = app.doShellScript (`curl -sLH "Accept: application/x-bibtex" "${doiURL}"`); // https://citation.crosscite.org/docs.html
@@ -157,9 +149,18 @@ function run (argv) {
 			.replaceAll("  ", "\t") // add proper indention
 			.replace(/^\t\w+ =/gm, (field) => field.toLowerCase()) // lowercase fields
 			.replace(/^(\tpagetotal = {\d+) Seiten/m, "$1"); // remove German page word
+
+	} else if (parseSelection) {
+		// anystyle can't read STDIN, so this has to be written to a file
+		// https://github.com/inukshuk/anystyle-cli#anystyle-help-parse
+		const tempPath = $.getenv("alfred_workflow_cache") + "/temp.txt";
+		writeToFile(input, tempPath);
+		bibtexEntry = app.doShellScript(`anystyle --stdout -f bib parse "${tempPath}"`)
+			.replaceAll("  ", "\t") // spaces to tabs
+			.replaceAll("\tdate =", "\tyear =");
 	}
 
-	// insert to append
+	// insert content to append
 	if (isEmpty) {
 		newEntry = bibtexEntryTemplate;
 		newCitekey = "NEW_ENTRY";
@@ -191,3 +192,4 @@ function run (argv) {
 	appendToFile(newEntry, libraryPath);
 	return newCitekey; // pass for opening function
 }
+
