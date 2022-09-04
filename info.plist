@@ -2538,7 +2538,7 @@ BibTeX Citation Picker for Pandoc Citation Syntax
 			<key>colorindex</key>
 			<integer>1</integer>
 			<key>xpos</key>
-			<real>570</real>
+			<real>575</real>
 			<key>ypos</key>
 			<real>375</real>
 		</dict>
@@ -3035,7 +3035,7 @@ to set hotkey for Bibliography parsing</string>
 		<key>auto_update</key>
 		<string>true</string>
 		<key>backup_destination</key>
-		<string>~/Library/Mobile Documents/com~apple~CloudDocs/Dotfolder/Backups/Library Backups/</string>
+		<string></string>
 		<key>bibtex_library_path</key>
 		<string>~/.pandoc/main-bibliography.bib</string>
 		<key>csl_folder</key>
@@ -3043,7 +3043,7 @@ to set hotkey for Bibliography parsing</string>
 		<key>file_manager</key>
 		<string>Marta</string>
 		<key>literature_note_folder</key>
-		<string>~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Main Vault/Literature Notes/</string>
+		<string>~/Main Vault/Literature Notes/</string>
 		<key>match_authors_in_etal</key>
 		<string>true</string>
 		<key>match_only_short_years</key>
@@ -3057,13 +3057,12 @@ to set hotkey for Bibliography parsing</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
-		<string>pdf_folder</string>
 		<string>file_manager</string>
 		<string>bibtex_library_path</string>
-		<string>backup_destination</string>
 		<string>literature_note_folder</string>
 		<string>match_only_short_years</string>
 		<string>open_entries_in</string>
+		<string>pdf_folder</string>
 	</array>
 	<key>version</key>
 	<string>9.7.0</string>
