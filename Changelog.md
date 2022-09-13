@@ -1,3 +1,5 @@
+- 2022-09-13	release 10.0.3
+- 2022-09-13	improved configuration desc
 - 2022-09-13	release 10.0.2
 - 2022-09-13	release 10.0.1
 - 2022-09-13	update release automation for Alfred 5
