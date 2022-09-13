@@ -8,5 +8,9 @@
 	<string>~/dotfiles/pandoc/csl</string>
 	<key>literature_note_folder</key>
 	<string>~/Main Vault/Literature Notes</string>
+	<key>open_entries_in</key>
+	<string>sublime</string>
+	<key>pdf_folder</key>
+	<string>~/Library/Mobile Documents/com~apple~CloudDocs/PDFs</string>
 </dict>
 </plist>

@@ -2394,7 +2394,7 @@ echo "$*"</string>
 ## Workflow Setup
 1. Add the path to your `.bib` to the right and you are good to go.
 2. For all the features this workflow has to offer, refer to the [README](https://github.com/chrisgrieser/alfred-bibtex-citation-picker#supercharged-citation-picker).
-3. Note that citation style is by default *Pandoc Citation*. To switch it to a different format like LaTeX or MMD, use the keyword `scp`.
+3. Note that citation style is by default *Pandoc Citation*. To switch it to LaTeX, MMD, eta, [[wikilinks]], or #tags, use the keyword `scp` in Alfred and select `Change Citation Format`.
 
 ℹ️ Version 10 of this workflow uses the new Alfred 5 User Configuration. If you first updated to version 10+, your configuration might have been reset.
 
@@ -2982,7 +2982,7 @@ to set hotkey for Bibliography parsing</string>
 				<true/>
 			</dict>
 			<key>description</key>
-			<string>path to your .bib file</string>
+			<string>Required. The .bib file containing your library.</string>
 			<key>label</key>
 			<string>BibTeX Library Path</string>
 			<key>type</key>
@@ -3001,7 +3001,7 @@ to set hotkey for Bibliography parsing</string>
 				<false/>
 			</dict>
 			<key>description</key>
-			<string>Folder containing your PDFs. Optional, only required for Indicating, opening, and auto-filing PDFs.</string>
+			<string>Optional. Folder containing your PDFs. Only required for Indicating PDFs, opening them via Hyper↵, and auto-filing PDFs via  with fn↵.</string>
 			<key>label</key>
 			<string>PDF Folder</string>
 			<key>type</key>
@@ -3020,7 +3020,7 @@ to set hotkey for Bibliography parsing</string>
 				<false/>
 			</dict>
 			<key>description</key>
-			<string>Folder containing your literature notes (as markdown files). Optional, only required for creating and opening literature notes.</string>
+			<string>Optional. Folder containing your literature notes (as markdown files). Only required for indicating literature notes, and for creating/opening literature notes with ⇧⌥⌃↵.</string>
 			<key>label</key>
 			<string>Literature Note Folder</string>
 			<key>type</key>
@@ -3039,7 +3039,7 @@ to set hotkey for Bibliography parsing</string>
 				<false/>
 			</dict>
 			<key>description</key>
-			<string>Folder where downloaded citation styles will be saved. Optional, only required for downloading citation styles via `scp` → `Citation Styles` or via `csl`.</string>
+			<string>Ooptional. Folder where downloaded citation styles will be saved. Only required for downloading citation styles via `scp` → `Citation Styles` or via `csl`.</string>
 			<key>label</key>
 			<string>Citation Styles Folder</string>
 			<key>type</key>
@@ -3075,9 +3075,9 @@ to set hotkey for Bibliography parsing</string>
 				</array>
 			</dict>
 			<key>description</key>
-			<string>App for opening your entries.</string>
+			<string>App to open entries in when using ⇧↵</string>
 			<key>label</key>
-			<string>Open Entries in...</string>
+			<string>Open entries in</string>
 			<key>type</key>
 			<string>popupbutton</string>
 			<key>variable</key>
@@ -3096,7 +3096,7 @@ to set hotkey for Bibliography parsing</string>
 			<key>description</key>
 			<string>Whther to match only the last two digits of the year. Example: When enabled, "19" will only match "2019" (and "1919"), not "1901", "1920", etc.</string>
 			<key>label</key>
-			<string></string>
+			<string>Match Behavior</string>
 			<key>type</key>
 			<string>checkbox</string>
 			<key>variable</key>
@@ -3110,10 +3110,10 @@ to set hotkey for Bibliography parsing</string>
 				<key>required</key>
 				<false/>
 				<key>text</key>
-				<string>match authors in the et al</string>
+				<string>Match authors in the et al</string>
 			</dict>
 			<key>description</key>
-			<string>Whether the citation picker should match authors names that are in the et al.</string>
+			<string>Whether the citation picker should match authors names that are in the et al. (It is recommended to disable this if you have papers with hundreds of co-authors.)</string>
 			<key>label</key>
 			<string></string>
 			<key>type</key>
@@ -3134,7 +3134,7 @@ to set hotkey for Bibliography parsing</string>
 			<key>description</key>
 			<string>If disabled, you will have to manually download new versions by visiting the GitHub Page of this workflow.</string>
 			<key>label</key>
-			<string></string>
+			<string>Auto Update</string>
 			<key>type</key>
 			<string>checkbox</string>
 			<key>variable</key>

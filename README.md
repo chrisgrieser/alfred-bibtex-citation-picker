@@ -7,6 +7,8 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 > **Note**  
 > Version 9.7.1 is the last version compatible with Alfred 4. All future versions of this workflow will require [Alfred 5](https://www.alfredapp.com/). 
 
+<img width=60% alt="promo screenshot" src="assets/promo.png">
+
 ## Feature Overview
 - Inserts __Pandoc Citation Syntax__ (`[@citekey]`), supporting page numbers & multiple citations (`[@citekey, p. 23; @citekey, p. 42]`). There are also customization options to support other citation styles, e.g. Multi-Markdown or Latex.
 - __app-independent:__ works system-wide, in every text field of every app.
@@ -16,8 +18,6 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 - __Performant:__ considerably quicker than any other citation pickers I know of (~200ms to fully reload a library with ~4000 entries on my machine).
 - __Easy Installation:__ no dependencies, no required plugins, no setup. Just need to enter the path to your `.bib` file.
 - __Obsidian integration:__ When located in an [Obsidian](https://obsidian.md/) vault, literature notes will automatically be opened/created in Obsidian instead of the default markdown app.
-
-<img width=60% alt="promo screenshot" src="assets/promo.png">
 
 ## Table of Contents
 <!--toc:start-->
