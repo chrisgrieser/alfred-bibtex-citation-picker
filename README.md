@@ -3,6 +3,9 @@
 
 A citation picker for academics that write in markdown. Using [Alfred](https://www.alfredapp.com/), it inserts citations from a BibTeX File in various formats, e.g. [Pandoc](https://pandoc.org/MANUAL.html#citation-syntax), [Multi-Markdown](https://fletcher.github.io/MultiMarkdown-6/syntax/citation.html) or [Latex](https://www.overleaf.com/learn/latex/Biblatex_citation_styles).
 
+> *Info*
+> Version 9.7.1 is the last version compatible with Alfred 4. All future versions of this workflow will require [Alfred 5](https://www.alfredapp.com/). 
+
 ## Feature Overview
 - Inserts __Pandoc Citation Syntax__ (`[@citekey]`), supporting page numbers & multiple citations (`[@citekey, p. 23; @citekey, p. 42]`). There are also customization options to support other citation styles, e.g. Multi-Markdown or Latex.
 - __app-independent:__ works system-wide, in every text field of every app.

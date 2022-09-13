@@ -645,6 +645,21 @@
 		</array>
 		<key>C23E28E8-B257-4FF1-AAAE-BE855C749722</key>
 		<array/>
+		<key>C40836B7-DDAC-4B46-9BE9-865728523B9D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>65CA24BA-2DA6-4DC0-A2BE-3E4E4D5FDD72</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>0FE84C8E-C444-4461-AC9F-30CD4B47058C</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>C64ACAF0-66C8-48A8-A3C4-B55C7E282697</key>
 		<array>
 			<dict>
@@ -675,7 +690,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>65CA24BA-2DA6-4DC0-A2BE-3E4E4D5FDD72</string>
+				<string>C40836B7-DDAC-4B46-9BE9-865728523B9D</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1616,6 +1631,38 @@ fi</string>
 			<string>alfred.workflow.utility.conditional</string>
 			<key>uid</key>
 			<string>D18A94E8-3A1C-4D8D-9DDD-43F22F8181A1</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{const:alfred_version}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>4</integer>
+						<key>matchstring</key>
+						<string>^5\.</string>
+						<key>outputlabel</key>
+						<string>version &gt;= 5</string>
+						<key>uid</key>
+						<string>0FE84C8E-C444-4461-AC9F-30CD4B47058C</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>version &lt;= 4</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>C40836B7-DDAC-4B46-9BE9-865728523B9D</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -2731,9 +2778,9 @@ to set hotkey for Bibliography parsing</string>
 			<key>note</key>
 			<string>OneUpdater (automatic update function)</string>
 			<key>xpos</key>
-			<real>1740</real>
+			<real>1860</real>
 			<key>ypos</key>
-			<real>560</real>
+			<real>570</real>
 		</dict>
 		<key>674A1A86-76B0-454D-861C-F22A21EC548F</key>
 		<dict>
@@ -2888,6 +2935,15 @@ to set hotkey for Bibliography parsing</string>
 			<real>505</real>
 			<key>ypos</key>
 			<real>1445</real>
+		</dict>
+		<key>C40836B7-DDAC-4B46-9BE9-865728523B9D</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>11</integer>
+			<key>xpos</key>
+			<real>1740</real>
+			<key>ypos</key>
+			<real>590</real>
 		</dict>
 		<key>C64ACAF0-66C8-48A8-A3C4-B55C7E282697</key>
 		<dict>
