@@ -10,12 +10,12 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 <img width=60% alt="promo screenshot" src="assets/promo.png">
 
 ## Feature Overview
-- Inserts __Pandoc Citation Syntax__ (`[@citekey]`), supporting page numbers & multiple citations (`[@citekey, p. 23; @citekey, p. 42]`). There are also customization options to support other citation styles, e.g. Multi-Markdown or Latex.
+- Inserts __Pandoc Citation Syntax__ (`[@citekey]`), supporting page numbers & multiple citations (`[@citekey, p. 23; @citekey, p. 42]`). Can also be configured to use LaTeX, Multi-Markdown, eta templates, [[wikilinks]], or #tags as citation format.
 - __app-independent:__ works system-wide, in every text field of every app.
 - __Smart Search:__ search for citekeys, authors, title, publication, keywords (tags), include/exclude authors in *et al*, tab-completion, fuzzy-matching, sorting recently used entries to the top, …
 - __Feature-rich:__ paste single-entry bibliographies, open URLs, open or create literature notes, attach PDFs, search for `.csl` files online, backup the library, …
 - __Minimalistic reference manager__: add or remove entries the BibTeX library, automatically rename and file PDFs, parse single entries, …
-- __Performant:__ considerably quicker than any other citation pickers I know of (~200ms to fully reload a library with ~4000 entries on my machine).
+- __Blazingly Fast:__ considerably quicker than any other citation pickers I know of (~200ms to fully reload a library with ~4000 entries on my machine).
 - __Easy Installation:__ no dependencies, no required plugins, no setup. Just need to enter the path to your `.bib` file.
 - __Obsidian integration:__ When located in an [Obsidian](https://obsidian.md/) vault, literature notes will automatically be opened/created in Obsidian instead of the default markdown app.
 
