@@ -50,6 +50,12 @@ AUTHOR=$(echo -n "$*" | cut -d"_" -f1 | sed 's/[[:digit:]]//g') # assumes citeke
 FIRST_CHARACTER=${NEW_NAME:0:1}
 # shellcheck disable=SC2154
 PDF_FOLDER="${pdf_folder/#\~/$HOME}"
+
+if [[ ! -e "$PDF_FOLDER" ]] || [[ -z "$PDF_FOLDER" ]]; then
+	echo "PDF folder not set or folder non-existent."
+	exit 1
+fi
+
 AUTOFILE_FOLDER="$PDF_FOLDER/$FIRST_CHARACTER/$AUTHOR"
 AUTOFILE_PATH="$AUTOFILE_FOLDER/$NEW_NAME"
 

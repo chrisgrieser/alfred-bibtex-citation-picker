@@ -1,4 +1,5 @@
 # Supercharged Citation Picker
+
 ![](https://img.shields.io/github/downloads/chrisgrieser/alfred-bibtex-citation-picker/total?label=Total%20Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/alfred-bibtex-citation-picker?label=Latest%20Release&style=plastic) [![](https://img.shields.io/badge/changelog-click%20here-FFE800?style=plastic)](Changelog.md)
 
 A citation picker for academics that write in markdown. Using [Alfred](https://www.alfredapp.com/), it inserts citations from a BibTeX File in various formats, e.g. [Pandoc](https://pandoc.org/MANUAL.html#citation-syntax), [Multi-Markdown](https://fletcher.github.io/MultiMarkdown-6/syntax/citation.html) or [Latex](https://www.overleaf.com/learn/latex/Biblatex_citation_styles).
@@ -19,30 +20,30 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 <img width=60% alt="promo screenshot" src="assets/promo.png">
 
 ## Table of Contents
-<!-- MarkdownTOC -->
-
-- [Getting Started](#getting-started)
-- [Basic Usage](#basic-usage)
-	- [Search](#search)
-	- [Citation Actions](#citation-actions)
-	- [URL Actions](#url-actions)
-	- [Icon Meanings](#icon-meanings)
-- [Changing the Citation Format](#changing-the-citation-format)
-	- [Available Formats](#available-formats)
-	- [Further Format Customization](#further-format-customization)
-- [Advanced Usage](#advanced-usage)
-	- [Bibliography Actions](#bibliography-actions)
-	- [Adding entries to the BibTeX library](#adding-entries-to-the-bibtex-library)
-	- [Advanced Search Features](#advanced-search-features)
-	- [Literature Note Actions](#literature-note-actions)
-	- [PDFs Management Actions](#pdfs-management-actions)
-	- [Auxiliary Features](#auxiliary-features)
-- [About the Developer](#about-the-developer)
-	- [Profiles](#profiles)
-	- [Donate](#donate)
-	- [Credits](#credits)
-
-<!-- /MarkdownTOC -->
+<!--toc:start-->
+- [Supercharged Citation Picker](#supercharged-citation-picker)
+  - [Feature Overview](#feature-overview)
+  - [Table of Contents](#table-of-contents)
+  - [Getting Started](#getting-started)
+  - [Basic Usage](#basic-usage)
+    - [Search](#search)
+    - [Citation Actions](#citation-actions)
+    - [URL Actions](#url-actions)
+    - [Icon Meanings](#icon-meanings)
+  - [Changing the Citation Format](#changing-the-citation-format)
+    - [Available Formats](#available-formats)
+    - [Further Format Customization](#further-format-customization)
+  - [Advanced Usage](#advanced-usage)
+    - [Bibliography Actions](#bibliography-actions)
+    - [Adding entries to the BibTeX library](#adding-entries-to-the-bibtex-library)
+    - [Literature Note Actions](#literature-note-actions)
+    - [PDFs Management Actions](#pdfs-management-actions)
+    - [Auxiliary Features](#auxiliary-features)
+  - [About the Developer](#about-the-developer)
+    - [Profiles](#profiles)
+    - [Donate](#donate)
+    - [Credits](#credits)
+<!--toc:end-->
 
 ## Getting Started
 1. [Download the latest release](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/releases/latest).
@@ -69,7 +70,6 @@ Press the hotkey in any text field to launch the citation picker.
 - `⌘ + C`: Copy the URL to the clipboard.
 
 ### Icon Meanings
-
 | Icon | Entry has...    |
 |:-----|:----------------|
 | 🌐   | URL or DOI      |
@@ -92,7 +92,7 @@ You can use the `scp` and select __Change Citation Format__ to change the format
 ### Further Format Customization
 If you want to use a format that isn't available, you can customize the format yourself by changing the workflow environment variables starting with `_format` (Tutorial: [How to set environment variables in Alfred](https://www.alfredapp.com/help/workflows/advanced/variables/#environment)).
 
-If there is a citation syntax that commonly using, feel free to make a PR to [this file which generates the formats](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/toggle-citation-format.js) or open a [Feature Request](https://www.ieee.org/).
+If there is a citation syntax that is commonly used, feel free to make a PR to [this file which generates the formats](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/toggle-citation-format.js) or open a [Feature Request](https://www.ieee.org/).
 
 ## Advanced Usage
 
@@ -111,14 +111,8 @@ If there is a citation syntax that commonly using, feel free to make a PR to [th
 - The new entry will be added to your library, with a properly formatted, unique citekey. Afterwards the entry will be opened in the app specified in `open_entries_in`.
 - Note that adding entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/) since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file will be overridden.
 
-### Advanced Search Features
-- The workflow setting `match_authors_in_etal` determines whether authors (or editors) in the *et al.* are still matched when searching for them (default: *true*).
-- The workflow setting `match_only_short_years` ensures that searching for years only considers the last two digits of the year (default: *false*).
-	- *Example:* When set to *true*, searching for "19" will only match publications published in 2019, and not all publications published between 1900 and 1999.
-- *Tab-Completion*: Pressing `tab` autocompletes the first author/editor name.
-
 ### Literature Note Actions
-- Looks in the folder specified in the workflow settings `literature_note_folder` for files that are *exactly* named like the citekey (without `@`, but with `.md` extension).
+- Looks in the folder specified in the workflow settings for files that are *exactly* named like the citekey (without `@`, but with `.md` extension).
 - Entries that have such a literature note will be indicated by a `📓`.
 - Add `*` to any search query to filter only for entries with literature notes, e.g. `* grieser` will search for entries from "Grieser" with literature notes. Can be combined with other queries (see: [smart queries](#search)).
 - `Meh + ↵`[^4]: Open the literature note.
@@ -127,20 +121,18 @@ If there is a citation syntax that commonly using, feel free to make a PR to [th
 - `⌘ + Y`: Preview the literature note with QuickLook (requires QLmarkdown or Peek[^1]).
 
 ### PDFs Management Actions
-The following features require that all your PDFs are located in the folder specified in `pdf_folder`.
-- `fn + ↵`: __Auto-file and auto-rename__ the *currently selected PDF*. Inside `pdf_folder`, uses the template path: `{first_letter_of_citekey}/{citekey-author-part}/{citekey}_{shortened_title}.pdf`
-	- The workflow configuration `file_manager` can be used to change the file manger used. Currently, only Finder and [Marta](https://marta.sh/) are supported (using Finder if left empty).
+The following features require that all your PDFs are located in the folder specified in your workflow settings.
+- `fn + ↵`: __Auto-file and auto-rename__ the *currently selected PDF*. Inside your selected pdf folder, uses the template path: `{first_letter_of_citekey}/{citekey-author-part}/{citekey}_{shortened_title}.pdf`
 - The `📕` indicates that the entry already has an associated PDF at that location.
 - `Hyper + ↵`[^4]: If the entry has an associated PDF file, open it with the default PDF reader.
 - ℹ️ Add `pdf` to any search query to filter only for entries with PDFs that have been added by the auto-file feature. `pdf grieser`, for example, will display only entries from the author "Grieser" with PDFs. Can be combined with other queries (see: [smart queries](#search)).
 
 ### Auxiliary Features
 Triggered via the Alfred Keyword `scp` (for `S`upercharged `C`itation `P`icker).
-- __CSL Search__: Search for a citation style, which will be downloaded to the location `csl_folder` specified in your workflow settings (default: `~/.pandoc/csl/`).
+- __CSL Search__: Search for a citation style, which will be downloaded to the location specified in your workflow settings (default: `~/.pandoc/csl/`).
 - __Bibliography Stats__: Brief statistical summary of the library. (Currently only total number of citations.)
 - __Cheatsheet: Citation Picker Actions__: Open a cheat sheet of the available actions of the Supercharged Citation Picker.
 - __Force Buffer Reload__: Force a reload of the citation picker for debugging purposes.
-- __Library Backup[^2]__: Create a Backup of your library in the location `backup_destination`, restricting the maximum number of backups to `max_number_of_bkps` (deleting the oldest backup).
 
 ## About the Developer
 In my day job, I am a sociologist studying the social mechanisms underlying the digital economy. For my PhD project, I investigate the governance of the app economy and how software ecosystems manage the tension between innovation and compatibility. If you are interested in this subject, feel free to get in touch!
@@ -158,10 +150,6 @@ In my day job, I am a sociologist studying the social mechanisms underlying the 
 ### Donate
 <a href='https://ko-fi.com/Y8Y86SQ91' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
-If you feel very generous, you may also buy me something from my Amazon wish list. But please donate something to developers who still go to college, before you consider buying me an item from my wish list! 😊
-
-[Amazon wish list](https://www.amazon.de/hz/wishlist/ls/2C7RIOJPN3K5F?ref_=wl_share)
-
 <!-- markdown-link-check-enable -->
 
 ### Credits
@@ -169,8 +157,6 @@ If you feel very generous, you may also buy me something from my Amazon wish lis
 
 [^1]: [QLmarkdown](https://github.com/sbarex/QLMarkdown) and [Peek](https://apps.apple.com/app/peek-quick-look-extension/id1554235898) both enable previewing of Markdown documents. Peek works with a wide range of other file types than Markdown, but costs around 5€. QLMarkdown is free, but only works for Markdown and requires some minor small setup. To enable the proper display of YAML headers, you need to enable the respective setting in the Advanced Options of QLMarkdown or Peek.
 
-[^2]: As per [MIT License](LICENSE), this app comes without any warranty in case of data loss. That being said, I never had any problems with the backups created.
-
 [^4]: `Hyper` is an artificial "fifth" modifier key equivalent to `⌘⌥⌃⇧`, and can be created using apps like [Karabiner Elements](https://karabiner-elements.pqrs.org/), [BetterTouchTool](https://www.macupdate.com/app/mac/32953/bettertouchtool), or [Hyperkey](https://hyperkey.app/). `Meh` is an artificial "fifth" modifier key equivalent to `⌥⌃⇧`.
 
-[^5]: Latex right now does not support page numbers. If you can code, feel free to help out and implement citations with page numbers.
+[^5]: Latex right now does not support page numbers. If you can code, feel free to make a PR implementing LaTeX citations with page numbers.

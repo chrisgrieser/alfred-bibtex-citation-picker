@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict/>
+<dict>
+	<key>bibtex_library_path</key>
+	<string>~/dotfiles/pandoc/main-bibliography.bib</string>
+	<key>csl_folder</key>
+	<string>~/dotfiles/pandoc/csl</string>
+	<key>literature_note_folder</key>
+	<string>~/Main Vault/Literature Notes</string>
+</dict>
 </plist>

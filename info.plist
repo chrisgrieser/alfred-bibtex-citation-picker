@@ -304,16 +304,6 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>592A7342-45EE-47C2-B6E3-B577D191B9FF</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
 		</array>
 		<key>57A40612-04AF-4EB4-B147-54088D9DD874</key>
 		<array>
@@ -333,19 +323,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>2D72874E-4A27-4A0C-98B3-15EFBEBE1031</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>592A7342-45EE-47C2-B6E3-B577D191B9FF</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>C23E28E8-B257-4FF1-AAAE-BE855C749722</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -643,8 +620,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>C23E28E8-B257-4FF1-AAAE-BE855C749722</key>
-		<array/>
 		<key>C40836B7-DDAC-4B46-9BE9-865728523B9D</key>
 		<array>
 			<dict>
@@ -1795,7 +1770,7 @@ fi</string>
 				<key>fixedorder</key>
 				<false/>
 				<key>items</key>
-				<string>[{"title":"✍️ Search &amp; Download Citation Styles","arg":"csl","subtitle":".csl files"},{"title":"💬 Change Citation Format","arg":"change_format","subtitle":"Pandoc, MMD, Latex, Wikilinks, Tags, Eta template"},{"title":"🔁 Force Buffer Reload","arg":"buffer_reload","subtitle":"for debugging"},{"title":"❓Citation Picker Actions","arg":"cheatsheet","subtitle":"Cheatsheet"},{"title":"📊 Bibliography Statistics","arg":"statistics"},{"title":"⬇️ Backup the Library","arg":"backup","subtitle":"max: {var:max_number_of_bkps}, location: {var:backup_destination}"}]</string>
+				<string>[{"title":"✍️ Search &amp; Download Citation Styles","arg":"csl","subtitle":".csl files"},{"title":"💬 Change Citation Format","arg":"change_format","subtitle":"Pandoc, MMD, Latex, Wikilinks, Tags, Eta template"},{"title":"🔁 Force Buffer Reload","arg":"buffer_reload","subtitle":"for debugging"},{"title":"❓Citation Picker Actions","arg":"cheatsheet","subtitle":"Cheatsheet"},{"title":"📊 Bibliography Statistics","arg":"statistics"}]</string>
 				<key>keyword</key>
 				<string>scp</string>
 				<key>matchmode</key>
@@ -2006,7 +1981,7 @@ fi</string>
 				<key>elselabel</key>
 				<string>backup</string>
 				<key>hideelse</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.conditional</string>
@@ -2265,6 +2240,27 @@ echo "$*"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>✅ Format changed</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>9B9F7F22-DB77-4520-AD8F-BA445595D94B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -2284,27 +2280,6 @@ echo "$*"</string>
 			<string>113F2026-78AB-41BA-8836-6145DE94CBEF</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>✅ Format changed</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>9B9F7F22-DB77-4520-AD8F-BA445595D94B</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2407,86 +2382,34 @@ echo "$*"</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>removeextension</key>
-				<true/>
-				<key>text</key>
-				<string>'{query}'</string>
-				<key>title</key>
-				<string>✅ Library Backup finished</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>C23E28E8-B257-4FF1-AAAE-BE855C749722</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string># resolve "~"
-library_path="~/Google Drive/BibDesk/My Library.bib"
-
-# determine locations
-resolved_library_path=~`echo -n $library_path | sed -e "s/~//"`
-file_name="${resolved_library_path##*/}"
-parent_folder="${resolved_library_path%/*.*}"
-timestamp=`date '+%Y-%m-%d_%H.%M'`
-bkp_file="$parent_folder/Library Backups/${timestamp}_$file_name"
-
-# create backups
-mkdir $parent_folder"/Library Backups/"
-cp $resolved_library_path $bkp_file
-
-# delete when there are too many backups
-actual_number=$((number_of_bkps_to_save + 1))
-cd $parent_folder"/Library Backups/"
-ls -t | tail -n +$actual_number | tr '\n' '\0' | xargs -0 rm
-
-# echos for the notification
-echo -n $file_name</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>scripts/library-backup.sh</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>592A7342-45EE-47C2-B6E3-B577D191B9FF</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
 	</array>
 	<key>readme</key>
 	<string># Supercharged Citation Picker
-BibTeX Citation Picker for Pandoc Citation Syntax
 
-## Info
 - [README](https://github.com/chrisgrieser/alfred-bibtex-citation-picker#supercharged-citation-picker)
 - [Changelog](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/Changelog.md)
-- [Donate](https://ko-fi.com/pseudometa)
+- [Bug Reports](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues)
+
 
 ## Workflow Setup
-1. Add the path to your `.bib` to the workflow environment variables and you are good to go.
-2. Refer to the README for all the features this workflow has to offer.
+1. Add the path to your `.bib` to the right and you are good to go.
+2. For all the features this workflow has to offer, refer to the [README](https://github.com/chrisgrieser/alfred-bibtex-citation-picker#supercharged-citation-picker).
+3. Note that citation style is by default *Pandoc Citation*. To switch it to a different format like LaTeX or MMD, use the keyword `scp`.
+
+ℹ️ Version 10 of this workflow uses the new Alfred 5 User Configuration. If you first updated to version 10+, your configuration will have been reset.
 
 ## Created by
-[Chris Grieser](https://chris-grieser.de/) aka [pseudometa (Twitter)](https://twitter.com/pseudo_meta)</string>
+[Chris Grieser](https://chris-grieser.de/)
+
+#### Profiles
+- [ResearchGate](https://www.researchgate.net/profile/Christopher-Grieser)
+- [Discord](https://discordapp.com/users/462774483044794368/)
+- [GitHub](https://github.com/chrisgrieser/)
+- [Twitter](https://twitter.com/pseudo_meta)
+- [LinkedIn](https://www.linkedin.com/in/christopher-grieser-ba693b17a/)
+
+#### Buy me a Coffee
+[Ko-Fi](https://ko-fi.com/pseudometa)</string>
 	<key>uidata</key>
 	<dict>
 		<key>00BFDB01-AD99-47DB-9BB8-5A6EA2E3016C</key>
@@ -2494,9 +2417,9 @@ BibTeX Citation Picker for Pandoc Citation Syntax
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>485</real>
+			<real>480</real>
 			<key>ypos</key>
-			<real>1305</real>
+			<real>1280</real>
 		</dict>
 		<key>04E17547-EDD2-4C44-9F41-F15391DD8775</key>
 		<dict>
@@ -2576,9 +2499,9 @@ BibTeX Citation Picker for Pandoc Citation Syntax
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>660</real>
+			<real>655</real>
 			<key>ypos</key>
-			<real>1280</real>
+			<real>1255</real>
 		</dict>
 		<key>254C2241-0AE4-4F52-A073-16E3DEFC9384</key>
 		<dict>
@@ -2731,17 +2654,6 @@ to set hotkey for Bibliography parsing</string>
 			<key>ypos</key>
 			<real>1140</real>
 		</dict>
-		<key>592A7342-45EE-47C2-B6E3-B577D191B9FF</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>3</integer>
-			<key>note</key>
-			<string>backup</string>
-			<key>xpos</key>
-			<real>360</real>
-			<key>ypos</key>
-			<real>1445</real>
-		</dict>
 		<key>5A83CD14-6282-49D4-9482-F89DC21A185F</key>
 		<dict>
 			<key>colorindex</key>
@@ -2796,9 +2708,9 @@ to set hotkey for Bibliography parsing</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>345</real>
+			<real>340</real>
 			<key>ypos</key>
-			<real>1335</real>
+			<real>1310</real>
 		</dict>
 		<key>7416BB08-7009-4A47-B833-524B2C3BDB55</key>
 		<dict>
@@ -2825,9 +2737,9 @@ to set hotkey for Bibliography parsing</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>640</real>
+			<real>635</real>
 			<key>ypos</key>
-			<real>1365</real>
+			<real>1340</real>
 		</dict>
 		<key>8B51C1A0-EAD2-457B-A532-6CC16C7F015E</key>
 		<dict>
@@ -2883,9 +2795,9 @@ to set hotkey for Bibliography parsing</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>780</real>
+			<real>775</real>
 			<key>ypos</key>
-			<real>1245</real>
+			<real>1220</real>
 		</dict>
 		<key>AF09AE5D-C351-4190-8AA6-B1924D88B22F</key>
 		<dict>
@@ -2926,15 +2838,6 @@ to set hotkey for Bibliography parsing</string>
 			<real>470</real>
 			<key>ypos</key>
 			<real>575</real>
-		</dict>
-		<key>C23E28E8-B257-4FF1-AAAE-BE855C749722</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>3</integer>
-			<key>xpos</key>
-			<real>505</real>
-			<key>ypos</key>
-			<real>1445</real>
 		</dict>
 		<key>C40836B7-DDAC-4B46-9BE9-865728523B9D</key>
 		<dict>
@@ -3067,7 +2970,177 @@ to set hotkey for Bibliography parsing</string>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
-	<array/>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>filtermode</key>
+				<integer>2</integer>
+				<key>required</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>path to your .bib file</string>
+			<key>label</key>
+			<string>BibTeX Library Path</string>
+			<key>type</key>
+			<string>filepicker</string>
+			<key>variable</key>
+			<string>bibtex_library_path</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>filtermode</key>
+				<integer>1</integer>
+				<key>required</key>
+				<false/>
+			</dict>
+			<key>description</key>
+			<string>Folder containing your PDFs. Optional, only required for Indicating, opening, and auto-filing PDFs.</string>
+			<key>label</key>
+			<string>PDF Folder</string>
+			<key>type</key>
+			<string>filepicker</string>
+			<key>variable</key>
+			<string>pdf_folder</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>filtermode</key>
+				<integer>1</integer>
+				<key>required</key>
+				<false/>
+			</dict>
+			<key>description</key>
+			<string>Folder containing your literature notes (as markdown files). Optional, only required for creating and opening literature notes.</string>
+			<key>label</key>
+			<string>Literature Note Folder</string>
+			<key>type</key>
+			<string>filepicker</string>
+			<key>variable</key>
+			<string>literature_note_folder</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>~/.pandoc/csl</string>
+				<key>filtermode</key>
+				<integer>1</integer>
+				<key>required</key>
+				<false/>
+			</dict>
+			<key>description</key>
+			<string>Folder where downloaded citation styles will be saved. Optional, only required for downloading citation styles via `scp` → `Citation Styles` or via `csl`.</string>
+			<key>label</key>
+			<string>Citation Styles Folder</string>
+			<key>type</key>
+			<string>filepicker</string>
+			<key>variable</key>
+			<string>csl_folder</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>pairs</key>
+				<array>
+					<array>
+						<string>BibDesk</string>
+						<string>bibdesk</string>
+					</array>
+					<array>
+						<string>Sublime Text</string>
+						<string>sublime</string>
+					</array>
+					<array>
+						<string>VS Code</string>
+						<string>vscode</string>
+					</array>
+					<array>
+						<string>Vim</string>
+						<string>vim</string>
+					</array>
+					<array>
+						<string>NeoVim</string>
+						<string>neovim</string>
+					</array>
+				</array>
+			</dict>
+			<key>description</key>
+			<string>App for opening your entries.</string>
+			<key>label</key>
+			<string>Open Entries in...</string>
+			<key>type</key>
+			<string>popupbutton</string>
+			<key>variable</key>
+			<string>open_entries_in</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<false/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>Match only short years</string>
+			</dict>
+			<key>description</key>
+			<string>Whther to match only the last two digits of the year. Example: When enabled, "19" will only match "2019" (and "1919"), not "1901", "1920", etc.</string>
+			<key>label</key>
+			<string></string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>match_only_short_years</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<true/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>match authors in the et al</string>
+			</dict>
+			<key>description</key>
+			<string>Whether the citation picker should match authors names that are in the et al.</string>
+			<key>label</key>
+			<string></string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>match_authors_in_etal</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<true/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>Automatically keep this workflow up to date</string>
+			</dict>
+			<key>description</key>
+			<string>If disabled, you will have to manually download new versions by visiting the GitHub Page of this workflow.</string>
+			<key>label</key>
+			<string></string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>auto_update</string>
+		</dict>
+	</array>
 	<key>variables</key>
 	<dict>
 		<key>_format_citation_end</key>
@@ -3088,37 +3161,12 @@ to set hotkey for Bibliography parsing</string>
 		<string></string>
 		<key>alfred_bar_length</key>
 		<string>60</string>
-		<key>auto_update</key>
-		<string>true</string>
-		<key>backup_destination</key>
-		<string></string>
-		<key>bibtex_library_path</key>
-		<string>~/.pandoc/main-bibliography.bib</string>
-		<key>csl_folder</key>
-		<string>~/.pandoc/csl</string>
 		<key>file_manager</key>
 		<string>Marta</string>
-		<key>literature_note_folder</key>
-		<string>~/Main Vault/Literature Notes/</string>
-		<key>match_authors_in_etal</key>
-		<string>true</string>
-		<key>match_only_short_years</key>
-		<string>false</string>
-		<key>max_number_of_bkps</key>
-		<string>20</string>
-		<key>open_entries_in</key>
-		<string>Sublime</string>
-		<key>pdf_folder</key>
-		<string>~/Library/Mobile Documents/com~apple~CloudDocs/PDFs/</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
 		<string>file_manager</string>
-		<string>bibtex_library_path</string>
-		<string>literature_note_folder</string>
-		<string>match_only_short_years</string>
-		<string>open_entries_in</string>
-		<string>pdf_folder</string>
 	</array>
 	<key>version</key>
 	<string>9.7.1</string>
