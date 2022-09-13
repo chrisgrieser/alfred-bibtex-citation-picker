@@ -2982,7 +2982,7 @@ to set hotkey for Bibliography parsing</string>
 				<true/>
 			</dict>
 			<key>description</key>
-			<string>Required. The .bib file containing your library.</string>
+			<string>The .bib file containing your library.</string>
 			<key>label</key>
 			<string>BibTeX Library Path</string>
 			<key>type</key>
@@ -3001,7 +3001,7 @@ to set hotkey for Bibliography parsing</string>
 				<false/>
 			</dict>
 			<key>description</key>
-			<string>Optional. Folder containing your PDFs. Only required for Indicating PDFs, opening them via Hyper↵, and auto-filing PDFs via  with fn↵.</string>
+			<string>Folder containing your PDFs. Only required for Indicating PDFs, opening them via Hyper↵, and auto-filing PDFs via  with fn↵.</string>
 			<key>label</key>
 			<string>PDF Folder</string>
 			<key>type</key>
@@ -3020,7 +3020,7 @@ to set hotkey for Bibliography parsing</string>
 				<false/>
 			</dict>
 			<key>description</key>
-			<string>Optional. Folder containing your literature notes (as markdown files). Only required for indicating literature notes, and for creating/opening literature notes with ⇧⌥⌃↵.</string>
+			<string>Folder containing your literature notes (as markdown files). Only required for indicating literature notes, and for creating/opening literature notes with ⇧⌥⌃↵.</string>
 			<key>label</key>
 			<string>Literature Note Folder</string>
 			<key>type</key>
@@ -3039,7 +3039,7 @@ to set hotkey for Bibliography parsing</string>
 				<false/>
 			</dict>
 			<key>description</key>
-			<string>Ooptional. Folder where downloaded citation styles will be saved. Only required for downloading citation styles via `scp` → `Citation Styles` or via `csl`.</string>
+			<string>Folder where downloaded citation styles will be saved. Only required for downloading citation styles via `scp` → `Citation Styles` or via `csl`.</string>
 			<key>label</key>
 			<string>Citation Styles Folder</string>
 			<key>type</key>
@@ -3094,7 +3094,7 @@ to set hotkey for Bibliography parsing</string>
 				<string>Match only short years</string>
 			</dict>
 			<key>description</key>
-			<string>Whther to match only the last two digits of the year. Example: When enabled, "19" will only match "2019" (and "1919"), not "1901", "1920", etc.</string>
+			<string>Whether to match only the last two digits of the year. Example: When enabled, "19" will only match "2019" (and "1919"), not "1901", "1920", etc.</string>
 			<key>label</key>
 			<string>Match Behavior</string>
 			<key>type</key>
