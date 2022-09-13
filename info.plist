@@ -3121,7 +3121,7 @@ to set hotkey for Bibliography parsing</string>
 		<string>pdf_folder</string>
 	</array>
 	<key>version</key>
-	<string>9.7.0</string>
+	<string>9.7.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/chrisgrieser/alfred-bibtex-citation-picker</string>
 </dict>

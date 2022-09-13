@@ -1,3 +1,18 @@
+- 2022-09-13	release 9.7.1
+- 2022-09-13	branching, last version compatible with Alfred 5
+- 2022-09-12	remove markdownlint from release script
+- 2022-08-22	Update submodule-test
+- 2022-08-22	tst7
+- 2022-08-22	test six
+- 2022-08-22	Update submodule-test
+- 2022-08-22	test four
+- 2022-08-22	Update submodule-test
+- 2022-08-22	Update submodule-test
+- 2022-08-22	Update submodule-test
+- 2022-08-22	testfile to check submodules working
+- 2022-08-22	test
+- 2022-08-09	support for Marta when auto-filing PDFs
+- 2022-08-09	parsing improvement with adding via hotkey
 - 2022-07-20	release 9.7.0
 - 2022-07-20	parse & add bibliographies with anystyle
 - 2022-07-19	scratch last change
