@@ -1,3 +1,5 @@
+- 2022-09-13	release 10.0.1
+- 2022-09-13	update release automation for Alfred 5
 - 2022-09-13	release 10.0.0
 - 2022-09-13	use Alfred 5 workflow settings
 - 2022-09-13	release 9.7.1
