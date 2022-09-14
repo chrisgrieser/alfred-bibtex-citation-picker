@@ -4,6 +4,7 @@ LIT_NOTES_FOLDER="${literature_note_folder/#\~/$HOME}"
 PDF_FOLDER="${pdf_folder/#\~/$HOME}"
 
 BUFFER="$alfred_workflow_data/buffer.json"
+PREFS="./prefs.plist"
 LAST_VERSION_FILE="$alfred_workflow_data/last_version.txt"
 
 # create folder and last version file, if not existing yet (e.g. first run)
@@ -13,15 +14,17 @@ LAST_VERSION_FILE="$alfred_workflow_data/last_version.txt"
 LAST_RUN_VERSION=$(head -n1 "$LAST_VERSION_FILE")
 THIS_VERSION="$alfred_workflow_version"
 
-# reload buffer if
-# - buffer is outdated (compared to library file)
-# - buffer is outdated (compared to literature notes)
-# - buffer is outdated (compared to PDFs)
+# reload buffer if buffer is outdated compared to
+# - library file
+# - literature notes
+# - PDFs
+# - workflow preferences (potentially changing matching behavior etc)
 # - manually requested reload
 # - new workflow version (to ensure new features/bug fixes take effect)
 if [[ "$LIBRARY" -nt "$BUFFER" ]] \
 	|| [[ "$LIT_NOTES_FOLDER" -nt "$BUFFER" ]] \
 	|| [[ "$PDF_FOLDER" -nt "$BUFFER" ]] \
+	|| [[ "$PREFS" -nt "$BUFFER" ]] \
 	|| [[ "$buffer_reload" == "true" ]] \
 	|| [[ "$LAST_RUN_VERSION" != "$THIS_VERSION" ]] \
 	; then
