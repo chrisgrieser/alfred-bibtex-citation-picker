@@ -45,7 +45,7 @@ if (litNoteFolderCorrect) {
 }
 
 if (pdfFolderCorrect) {
-	pdfArray = app.doShellScript(`find "${pdfFolder}" -maxdepth 3 -type f -name "*.pdf"`)
+	pdfArray = app.doShellScript(`find "${pdfFolder}" -type f -name "*.pdf"`)
 		.split("\r")
 		.map (filename => {
 			return filename
