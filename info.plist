@@ -41,7 +41,7 @@
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
-				<false/>
+				<true/>
 			</dict>
 		</array>
 		<key>0F739BDB-D7EC-482F-9798-A9B04AF57CA9</key>
@@ -214,6 +214,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>406E52C6-C22D-4A6F-9C4D-3FEEFA513B34</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2A483E3B-2BAB-408A-9759-4C0F65D760CF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>4771A40C-E741-46C5-93EF-82CEB4BD23D8</key>
 		<array>
 			<dict>
@@ -241,7 +254,18 @@
 			</dict>
 		</array>
 		<key>52B9C3DF-F265-4201-9508-55BA584F851F</key>
-		<array/>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2A483E3B-2BAB-408A-9759-4C0F65D760CF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>55B921A5-4319-4B5C-A06B-66427377E219</key>
 		<array>
 			<dict>
@@ -336,6 +360,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>D18A94E8-3A1C-4D8D-9DDD-43F22F8181A1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>674A1A86-76B0-454D-861C-F22A21EC548F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2A483E3B-2BAB-408A-9759-4C0F65D760CF</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -447,6 +484,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>2DC90122-FC40-44CA-8F59-E3C16AC99651</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>9B9F7F22-DB77-4520-AD8F-BA445595D94B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2A483E3B-2BAB-408A-9759-4C0F65D760CF</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1903,6 +1953,35 @@ fi</string>
 			<integer>2</integer>
 		</dict>
 		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.hidealfred</string>
+			<key>uid</key>
+			<string>2A483E3B-2BAB-408A-9759-4C0F65D760CF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+				<key>title</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>1B72EC4E-33E7-4144-B43B-3037510ADA3A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
 			<key>config</key>
 			<dict>
 				<key>conditions</key>
@@ -1993,27 +2072,6 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string></string>
-				<key>title</key>
-				<string>{query}</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>1B72EC4E-33E7-4144-B43B-3037510ADA3A</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>subtext</key>
@@ -2059,6 +2117,26 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 			<string>10ACA015-64F3-4D2E-A659-213C5A665FDE</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string> </string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>citekey</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>3FA32575-5519-475C-AFED-6182B53063A6</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2169,26 +2247,6 @@ echo "$*"</string>
 				<key>passthroughargument</key>
 				<false/>
 				<key>variables</key>
-				<dict>
-					<key>citekey</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>3FA32575-5519-475C-AFED-6182B53063A6</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string> </string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
 				<dict/>
 			</dict>
 			<key>type</key>
@@ -2240,27 +2298,6 @@ echo "$*"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>✅ Format changed</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>9B9F7F22-DB77-4520-AD8F-BA445595D94B</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -2280,6 +2317,27 @@ echo "$*"</string>
 			<string>113F2026-78AB-41BA-8836-6145DE94CBEF</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>✅ Format changed</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>9B9F7F22-DB77-4520-AD8F-BA445595D94B</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2418,9 +2476,9 @@ Version 10 of this workflow uses the new Alfred 5 User Configuration. If you fir
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>480</real>
+			<real>445</real>
 			<key>ypos</key>
-			<real>1280</real>
+			<real>1310</real>
 		</dict>
 		<key>04E17547-EDD2-4C44-9F41-F15391DD8775</key>
 		<dict>
@@ -2438,9 +2496,9 @@ Version 10 of this workflow uses the new Alfred 5 User Configuration. If you fir
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>395</real>
+			<real>360</real>
 			<key>ypos</key>
-			<real>760</real>
+			<real>790</real>
 		</dict>
 		<key>10ACA015-64F3-4D2E-A659-213C5A665FDE</key>
 		<dict>
@@ -2500,9 +2558,9 @@ Version 10 of this workflow uses the new Alfred 5 User Configuration. If you fir
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>655</real>
+			<real>620</real>
 			<key>ypos</key>
-			<real>1255</real>
+			<real>1285</real>
 		</dict>
 		<key>254C2241-0AE4-4F52-A073-16E3DEFC9384</key>
 		<dict>
@@ -2513,14 +2571,23 @@ Version 10 of this workflow uses the new Alfred 5 User Configuration. If you fir
 			<key>ypos</key>
 			<real>375</real>
 		</dict>
+		<key>2A483E3B-2BAB-408A-9759-4C0F65D760CF</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<real>765</real>
+			<key>ypos</key>
+			<real>1035</real>
+		</dict>
 		<key>2D72874E-4A27-4A0C-98B3-15EFBEBE1031</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>420</real>
+			<real>385</real>
 			<key>ypos</key>
-			<real>1110</real>
+			<real>1140</real>
 		</dict>
 		<key>2DC90122-FC40-44CA-8F59-E3C16AC99651</key>
 		<dict>
@@ -2591,9 +2658,9 @@ to set a hotkey for the citaiton picker.</string>
 			<key>note</key>
 			<string>quicklook cheatsheets</string>
 			<key>xpos</key>
-			<real>390</real>
+			<real>355</real>
 			<key>ypos</key>
-			<real>975</real>
+			<real>1005</real>
 		</dict>
 		<key>4771A40C-E741-46C5-93EF-82CEB4BD23D8</key>
 		<dict>
@@ -2620,18 +2687,18 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>700</real>
+			<real>665</real>
 			<key>ypos</key>
-			<real>1110</real>
+			<real>1140</real>
 		</dict>
 		<key>55B921A5-4319-4B5C-A06B-66427377E219</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>165</real>
+			<real>130</real>
 			<key>ypos</key>
-			<real>1040</real>
+			<real>1070</real>
 		</dict>
 		<key>57A40612-04AF-4EB4-B147-54088D9DD874</key>
 		<dict>
@@ -2651,9 +2718,9 @@ to set hotkey for Bibliography parsing</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>365</real>
+			<real>330</real>
 			<key>ypos</key>
-			<real>1140</real>
+			<real>1170</real>
 		</dict>
 		<key>5A83CD14-6282-49D4-9482-F89DC21A185F</key>
 		<dict>
@@ -2700,27 +2767,27 @@ to set hotkey for Bibliography parsing</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>530</real>
+			<real>495</real>
 			<key>ypos</key>
-			<real>850</real>
+			<real>880</real>
 		</dict>
 		<key>68FC61FC-44E7-43F2-856B-B1B89E83B099</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>340</real>
+			<real>305</real>
 			<key>ypos</key>
-			<real>1310</real>
+			<real>1340</real>
 		</dict>
 		<key>7416BB08-7009-4A47-B833-524B2C3BDB55</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>465</real>
+			<real>430</real>
 			<key>ypos</key>
-			<real>730</real>
+			<real>760</real>
 		</dict>
 		<key>7E602D21-0A78-4DC6-A807-28A5602897C8</key>
 		<dict>
@@ -2738,9 +2805,9 @@ to set hotkey for Bibliography parsing</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>635</real>
+			<real>600</real>
 			<key>ypos</key>
-			<real>1340</real>
+			<real>1370</real>
 		</dict>
 		<key>8B51C1A0-EAD2-457B-A532-6CC16C7F015E</key>
 		<dict>
@@ -2796,9 +2863,9 @@ to set hotkey for Bibliography parsing</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>775</real>
+			<real>740</real>
 			<key>ypos</key>
-			<real>1220</real>
+			<real>1250</real>
 		</dict>
 		<key>AF09AE5D-C351-4190-8AA6-B1924D88B22F</key>
 		<dict>
@@ -2920,9 +2987,9 @@ to set hotkey for Bibliography parsing</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>390</real>
+			<real>355</real>
 			<key>ypos</key>
-			<real>850</real>
+			<real>880</real>
 		</dict>
 		<key>EAB97E20-9E68-486A-86C2-A4ABD8F1A50D</key>
 		<dict>
@@ -2947,9 +3014,9 @@ to set hotkey for Bibliography parsing</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>560</real>
+			<real>525</real>
 			<key>ypos</key>
-			<real>1110</real>
+			<real>1140</real>
 		</dict>
 		<key>FCCA3147-A52B-4254-938A-C8EFA2FF7933</key>
 		<dict>

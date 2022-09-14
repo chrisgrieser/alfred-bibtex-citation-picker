@@ -47,11 +47,11 @@ if (litNoteFolderCorrect) {
 if (pdfFolderCorrect) {
 	pdfArray = app.doShellScript(`find "${pdfFolder}" -type f -name "*.pdf"`)
 		.split("\r")
-		.map (filename => {
-			return filename
-				.slice(0, -4) // remove extension
-				.replace (/.*\/(.*)_?.*?/, "$1") // only citekey part
-				.replaceAll ("_", ""); // remove underscores from citekey additional stuff (personal naming convention from older library)
+		.map (filepath => {
+			return filepath
+				.replace (/.*\/(.*)\.pdf/, "$1") // only filename
+				.replace (/(.*)_.*/, "$1") // only part before the first _ (= cut appended title)
+				.replaceAll ("_", ""); // remove remaining underscores in case there were multiple ones
 		});
 	console.log ("PDF Folder reading successfull.");
 }
