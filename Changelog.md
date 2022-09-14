@@ -1,3 +1,4 @@
+- 2022-09-14	release 10.0.10
 - 2022-09-14	release 10.0.9
 - 2022-09-14	fix pdf icon display
 - 2022-09-14	open entries in Zotero (#14)
