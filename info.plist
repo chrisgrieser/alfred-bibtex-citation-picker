@@ -2392,7 +2392,7 @@ echo "$*"</string>
 ## ⚠️ First Upgrade to Version 10 ⚠️
 Version 10 of this workflow uses the new Alfred 5 User Configuration. If you first update to version 10+ from an older version, you have to **DISABLE the checkbox "Migrate my workflow customizations"** and configure your workflow again with the settings to the left. This is due to Alfred 5 using a different form of configuration in the background.
 
-*If you missed to disable the checkbox, you can simply download the latest release from GitHub again install the `.alfredworkflow` and disable the checkbox this time.*
+*If you missed to disable the checkbox, you can simply re-download the latest release from GitHub, install the `.alfredworkflow` file and disable the checkbox this time.*
 
 ## Workflow Setup
 1. Add the path to your `.bib` to the right and you are good to go.
