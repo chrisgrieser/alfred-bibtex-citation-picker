@@ -68,6 +68,7 @@ Press the hotkey in any text field to launch the citation picker.
 ### URL Actions
 - `⌃ + ↵`: Open the URL in the browser.
 - `⌘ + C`: Copy the URL to the clipboard.
+- If the entry has a DOI but not URL, the citation picker will use the DOI-URL (`https://doi.org/...`) instead.
 
 ### Icon Meanings
 | Icon | Entry has...    |
@@ -113,11 +114,11 @@ If there is a citation syntax that is commonly used, feel free to make a PR to [
 
 ### Literature Note Actions
 - The citation picker looks in the folder specified in the workflow settings for files that are *exactly* named like the citekey (without `@`, but with `.md` extension). Entries that have such a literature note will be indicated by a `📓`.
-- Add `*` to any search query to filter only for entries with literature notes, e.g. `* grieser` will search for entries matching "grieser" which also have a literature notes. Can be combined with other queries (see: [smart queries](#search)).
 - `Meh + ↵`[^4]: Open the literature note.
 	- If the file is in an [Obsidian Vault](https://obsidian.md/), it will be opened directly in Obsidian instead of the default text editor.
 	- If there is no literature note, a new one will be created.
 - `⌘ + Y`: Preview the literature note with QuickLook (requires QLmarkdown or Peek[^1]).
+- Add `*` to any search query to filter only for entries with literature notes, e.g. `* grieser` will search for entries matching "grieser" which also have a literature notes. Can be combined with other queries (see: [smart queries](#search)).
 
 ### PDFs Management Actions
 The following features require that all your PDFs are located in the folder specified in your workflow settings.
@@ -129,9 +130,9 @@ The following features require that all your PDFs are located in the folder spec
 ### Auxiliary Features
 Triggered via the Alfred Keyword `scp` (for `S`upercharged `C`itation `P`icker).
 - __CSL Search__: Search for a citation style, which will be downloaded to the location specified in your workflow settings (default: `~/.pandoc/csl/`).
-- __Bibliography Stats__: Brief statistical summary of the library. (Currently only total number of citations.)
+- __Bibliography Stats__: Brief statistical summary of the library. (Currently only total number of references. If you have useful suggestion, feel free to open a Feature Request.)
 - __Cheatsheet: Citation Picker Actions__: Open a cheat sheet of the available actions of the Supercharged Citation Picker.
-- __Force Buffer Reload__: Force a reload of the citation picker for debugging purposes.
+- __Force Buffer Reload__: Force a reload of the citation picker. Mostly for debugging purposes.
 
 ## About the Developer
 In my day job, I am a sociologist studying the social mechanisms underlying the digital economy. For my PhD project, I investigate the governance of the app economy and how software ecosystems manage the tension between innovation and compatibility. If you are interested in this subject, feel free to get in touch!
