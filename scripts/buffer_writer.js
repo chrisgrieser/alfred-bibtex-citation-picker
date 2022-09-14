@@ -201,7 +201,7 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 	});
 
 // -------------------------------
-console.log ("Buffer Creation successfull.");
+console.log ("Buffer Creation successful.");
 
 const logEndTime = new Date();
 console.log("Buffer Writing Duration: " + (logEndTime - logStartTime).toString() + "ms");
