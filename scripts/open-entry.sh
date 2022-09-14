@@ -20,6 +20,4 @@ elif [[ "$open_entries_in" == "neovim" ]]; then
 	nvim +$LINE_NO "$LIBRARY"
 elif [[ "$open_entries_in" == "zotero" ]]; then
 	open "zotero://select/items/@$CITEKEY"
-else
-	echo "$open_entries_in not a valid value for 'open_entries_in'."
 fi
