@@ -1,3 +1,7 @@
+- 2022-09-14	release 10.0.9
+- 2022-09-14	fix pdf icon display
+- 2022-09-14	open entries in Zotero (#14)
+- 2022-09-14	remove pdf search restriction
 - 2022-09-14	release 10.0.8
 - 2022-09-14	release 10.0.7
 - 2022-09-14	release 10.0.6
