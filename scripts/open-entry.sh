@@ -1,5 +1,5 @@
 #!/bin/zsh
-# shellcheck disable=SC2154
+# shellcheck disable=SC2154,SC2086
 export PATH=/usr/local/bin/:/opt/homebrew/bin/:$PATH
 
 LIBRARY="${bibtex_library_path/#\~/$HOME}"
@@ -15,11 +15,11 @@ elif [[ "$open_entries_in" == "sublime" ]]; then
 elif [[ "$open_entries_in" == "vscode" ]]; then
 	code "$LIBRARY:$LINE_NO"
 elif [[ "$open_entries_in" == "vim" ]]; then
-	# shellcheck disable=SC2086
 	vim +$LINE_NO "$LIBRARY"
 elif [[ "$open_entries_in" == "neovim" ]]; then
-	# shellcheck disable=SC2086
 	nvim +$LINE_NO "$LIBRARY"
+elif [[ "$open_entries_in" == "zotero" ]]; then
+	open "zotero://select/items/@$CITEKEY"
 else
 	echo "$open_entries_in not a valid value for 'open_entries_in'."
 fi

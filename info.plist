@@ -3058,6 +3058,10 @@ to set hotkey for Bibliography parsing</string>
 						<string>bibdesk</string>
 					</array>
 					<array>
+						<string>Zotero</string>
+						<string>zotero</string>
+					</array>
+					<array>
 						<string>Sublime Text</string>
 						<string>sublime</string>
 					</array>
