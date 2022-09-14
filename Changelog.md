@@ -1,3 +1,6 @@
+- 2022-09-14	release 10.0.5
+- 2022-09-14	add info to _not_ migrate Alfred 4 settings
+- 2022-09-14	auto-reload buffer when user changes prefs
 - 2022-09-13	release 10.0.4
 - 2022-09-13	release 10.0.3
 - 2022-09-13	improved configuration desc
