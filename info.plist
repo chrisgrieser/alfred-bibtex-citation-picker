@@ -3058,7 +3058,7 @@ to set hotkey for Bibliography parsing</string>
 						<string>bibdesk</string>
 					</array>
 					<array>
-						<string>Zotero</string>
+						<string>Zotero (with BetterBibTeX Plugin)</string>
 						<string>zotero</string>
 					</array>
 					<array>
@@ -3080,7 +3080,7 @@ to set hotkey for Bibliography parsing</string>
 				</array>
 			</dict>
 			<key>description</key>
-			<string>App to open entries in when using ⇧↵</string>
+			<string>App to open entries in when using ⇧↵.</string>
 			<key>label</key>
 			<string>Open entries in</string>
 			<key>type</key>
