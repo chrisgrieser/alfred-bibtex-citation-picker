@@ -7,17 +7,17 @@ CITEKEY="$*"
 open_entries_in=${open_entries_in:l} # to make the comparison case insensitive
 LINE_NO=$(grep -n "{$CITEKEY," "$LIBRARY" | head -n1 | cut -d':' -f1)
 
-if [[ "$open_entries_in" == "bibdesk" ]]; then
+if [[ "$open_entries_in" == "BibDesk" ]]; then
 	open "x-bdsk://$CITEKEY"
-elif [[ "$open_entries_in" == "sublime" ]]; then
+elif [[ "$open_entries_in" == "Sublime" ]]; then
 	# using full path makes this work even if `subl` hasn't been added to PATH
 	"/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" "$LIBRARY:$LINE_NO"
-elif [[ "$open_entries_in" == "vscode" ]]; then
+elif [[ "$open_entries_in" == "VS Code" ]]; then
 	code "$LIBRARY:$LINE_NO"
-elif [[ "$open_entries_in" == "vim" ]]; then
+elif [[ "$open_entries_in" == "Vim" ]]; then
 	vim +$LINE_NO "$LIBRARY"
-elif [[ "$open_entries_in" == "neovim" ]]; then
+elif [[ "$open_entries_in" == "NeoVim" ]]; then
 	nvim +$LINE_NO "$LIBRARY"
-elif [[ "$open_entries_in" == "zotero" ]]; then
+elif [[ "$open_entries_in" == "Zotero" ]]; then
 	open "zotero://select/items/@$CITEKEY"
 fi

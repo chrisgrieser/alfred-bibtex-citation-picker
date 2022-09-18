@@ -2872,7 +2872,7 @@ to set hotkey for Bibliography parsing</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>note</key>
-			<string>Open in BibDesk/Sublime/VS Code</string>
+			<string>Open Entry</string>
 			<key>xpos</key>
 			<real>940</real>
 			<key>ypos</key>
@@ -3122,27 +3122,27 @@ to set hotkey for Bibliography parsing</string>
 				<array>
 					<array>
 						<string>BibDesk</string>
-						<string>bibdesk</string>
+						<string>BibDesk</string>
 					</array>
 					<array>
 						<string>Zotero (with BetterBibTeX Plugin)</string>
-						<string>zotero</string>
+						<string>Zotero</string>
 					</array>
 					<array>
 						<string>Sublime Text</string>
-						<string>sublime</string>
+						<string>Sublime</string>
 					</array>
 					<array>
 						<string>VS Code</string>
-						<string>vscode</string>
+						<string>VS Code</string>
 					</array>
 					<array>
 						<string>Vim</string>
-						<string>vim</string>
+						<string>Vim</string>
 					</array>
 					<array>
 						<string>NeoVim</string>
-						<string>neovim</string>
+						<string>NeoVim</string>
 					</array>
 				</array>
 			</dict>
