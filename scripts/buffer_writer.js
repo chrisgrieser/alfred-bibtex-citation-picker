@@ -14,8 +14,9 @@ const pdfFilterStr = "pdf";
 const maxTitleFileNameLength = 50;
 const alfredBarLength = parseInt ($.getenv("alfred_bar_length"));
 
-const matchAuthorsInEtAl = $.getenv("match_authors_in_etal") === "true";
-const matchOnlyShortYears = $.getenv("match_only_short_years") === "true";
+const matchAuthorsInEtAl = $.getenv("match_authors_in_etal") === "1";
+const matchOnlyShortYears = $.getenv("match_only_short_years") === "1";
+
 const libraryPath = $.getenv("bibtex_library_path").replace(/^~/, homePath);
 const litNoteFolder = $.getenv("literature_note_folder").replace(/^~/, homePath);
 const pdfFolder = $.getenv("pdf_folder").replace(/^~/, homePath);
@@ -28,7 +29,7 @@ if (pdfFolder) pdfFolderCorrect = Application("Finder").exists(Path(pdfFolder));
 const toImport = "./scripts/bibtex-parser.js";
 console.log ("Starting Buffer Writing");
 eval (app.doShellScript(`cat "${toImport}"`));
-console.log ("Parser Import successfull.");
+console.log ("Parser Import successful.");
 
 // -------------------------------
 
@@ -41,7 +42,7 @@ if (litNoteFolderCorrect) {
 		.split("\r")
 		.filter(filename => filename.endsWith(".md"))
 		.map (filename => filename.slice(0, -3)); // remove extension
-	console.log ("Literature Note Reading successfull.");
+	console.log ("Literature Note Reading successful.");
 }
 
 if (pdfFolderCorrect) {
@@ -53,14 +54,14 @@ if (pdfFolderCorrect) {
 				.replace (/(.*)_.*/, "$1") // only part before the first _ (= cut appended title)
 				.replaceAll ("_", ""); // remove remaining underscores in case there were multiple ones
 		});
-	console.log ("PDF Folder reading successfull.");
+	console.log ("PDF Folder reading successful.");
 }
 
 // -------------------------------
 
 
 const rawBibtex = app.doShellScript(`cat "${libraryPath}"`);
-console.log ("Bibtex Library Reading successfull.");
+console.log ("Bibtex Library Reading successful.");
 
 const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 	.map(entry => {

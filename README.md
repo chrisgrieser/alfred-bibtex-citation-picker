@@ -7,6 +7,9 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 > **Note**  
 > Version 9.7.1 is the last version compatible with Alfred 4. All future versions of this workflow will require [Alfred 5](https://www.alfredapp.com/). 
 
+> **Warning**  
+> The initial version 10 had a bug preventing auto-updating. Please [manually download 10.0.11 or newer](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/releases) to receive auto-updates.
+
 <img width=60% alt="promo screenshot" src="assets/promo.png">
 
 ## Feature Overview

@@ -1640,7 +1640,7 @@ fi</string>
 						<key>matchmode</key>
 						<integer>0</integer>
 						<key>matchstring</key>
-						<string>true</string>
+						<string>1</string>
 						<key>outputlabel</key>
 						<string>true</string>
 						<key>uid</key>
