@@ -157,8 +157,9 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		if (keywords.length) keywordMatches = keywords.map(tag => "#" + tag);
 		let authorMatches = [...authors, ...editors];
 		if (!matchAuthorsInEtAl) authorMatches = [...authors.slice(0, 1), ...editors.slice(0, 1)]; // only match first two names
-		const yearMatches = [year];
-		if (matchOnlyShortYears) yearMatches.push(year.slice(-2)); // also match last two digits
+		const yearMatches = [];
+		if (matchOnlyShortYears) yearMatches.push(year.slice(-2));
+		else yearMatches.push(year);
 
 		const alfredMatcher = ["@" + citekey,
 			...keywordMatches,
