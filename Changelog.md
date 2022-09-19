@@ -1,3 +1,5 @@
+- 2022-09-19	release 10.0.12
+- 2022-09-19	fix matching only short years
 - 2022-09-19	release 10.0.11
 - 2022-09-19	fix checkbox variables
 - 2022-09-14	release 10.0.10
