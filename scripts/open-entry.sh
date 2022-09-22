@@ -4,7 +4,6 @@ export PATH=/usr/local/bin/:/opt/homebrew/bin/:$PATH
 
 LIBRARY="${bibtex_library_path/#\~/$HOME}"
 CITEKEY="$*"
-open_entries_in=${open_entries_in:l} # to make the comparison case insensitive
 LINE_NO=$(grep -n "{$CITEKEY," "$LIBRARY" | head -n1 | cut -d':' -f1)
 
 if [[ "$open_entries_in" == "BibDesk" ]]; then
