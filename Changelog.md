@@ -1,3 +1,5 @@
+- 2022-09-22	release 10.0.13
+- 2022-09-22	fix for opening entries
 - 2022-09-19	release 10.0.12
 - 2022-09-19	fix matching only short years
 - 2022-09-19	release 10.0.11
