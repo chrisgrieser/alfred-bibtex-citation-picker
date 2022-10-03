@@ -3144,6 +3144,10 @@ to set hotkey for Bibliography parsing</string>
 						<string>NeoVim</string>
 						<string>NeoVim</string>
 					</array>
+					<array>
+						<string>GoNeoVim</string>
+						<string>GoNeoVim</string>
+					</array>
 				</array>
 			</dict>
 			<key>description</key>
