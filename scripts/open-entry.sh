@@ -17,8 +17,6 @@ elif [[ "$open_entries_in" == "Vim" ]]; then
 	vim +$LINE_NO "$LIBRARY"
 elif [[ "$open_entries_in" == "NeoVim" ]]; then
 	nvim +$LINE_NO "$LIBRARY"
-elif [[ "$open_entries_in" == "Neovide" ]]; then
-	neovide +$LINE_NO "$LIBRARY"
 elif [[ "$open_entries_in" == "Zotero" ]]; then
 	open "zotero://select/items/@$CITEKEY"
 fi
