@@ -3137,16 +3137,8 @@ to set hotkey for Bibliography parsing</string>
 						<string>VS Code</string>
 					</array>
 					<array>
-						<string>Vim</string>
-						<string>Vim</string>
-					</array>
-					<array>
-						<string>NeoVim</string>
-						<string>NeoVim</string>
-					</array>
-					<array>
-						<string>Neovide</string>
-						<string>Neovide</string>
+						<string>neovim &amp; alacritty</string>
+						<string>neovim</string>
 					</array>
 				</array>
 			</dict>
