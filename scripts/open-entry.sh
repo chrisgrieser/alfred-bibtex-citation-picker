@@ -21,3 +21,4 @@ elif [[ "$open_entries_in" == "Zotero" ]]; then
 	open "zotero://select/items/@$CITEKEY"
 fi
 
+
