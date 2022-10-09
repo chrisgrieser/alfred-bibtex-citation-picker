@@ -4,10 +4,10 @@
 
 A citation picker for academics that write in markdown. Using [Alfred](https://www.alfredapp.com/), it inserts citations from a BibTeX File in various formats, e.g. [Pandoc](https://pandoc.org/MANUAL.html#citation-syntax), [Multi-Markdown](https://fletcher.github.io/MultiMarkdown-6/syntax/citation.html) or [Latex](https://www.overleaf.com/learn/latex/Biblatex_citation_styles).
 
-> **Note**  
-> Version 9.7.1 is the last version compatible with Alfred 4. All future versions of this workflow will require [Alfred 5](https://www.alfredapp.com/). 
+> **Note**
+> Version 9.7.1 is the last version compatible with Alfred 4. All future versions of this workflow will require [Alfred 5](https://www.alfredapp.com/).
 
-> **Warning**  
+> **Warning**
 > The initial version 10 had a bug preventing auto-updating. Please [manually download 10.0.11 or newer](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/releases) to receive auto-updates.
 
 <img width=60% alt="promo screenshot" src="assets/promo.png">
@@ -24,9 +24,6 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 
 ## Table of Contents
 <!--toc:start-->
-- [Supercharged Citation Picker](#supercharged-citation-picker)
-  - [Feature Overview](#feature-overview)
-  - [Table of Contents](#table-of-contents)
   - [Getting Started](#getting-started)
   - [Basic Usage](#basic-usage)
     - [Search](#search)
