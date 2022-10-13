@@ -1470,7 +1470,7 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 				<key>keyword</key>
 				<string>+</string>
 				<key>subtext</key>
-				<string>Enter DOI or ISBN. Leave empty to insert empty Bibtex Entry.</string>
+				<string>DOI, SBN or URL with DOI. Leave empty to insert empty Entry.</string>
 				<key>text</key>
 				<string>Add to Bibliography</string>
 				<key>withspace</key>
@@ -2593,6 +2593,8 @@ Version 10 of this workflow uses the new Alfred 5 User Configuration. If you fir
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
+			<key>note</key>
+			<string>create new entry</string>
 			<key>xpos</key>
 			<real>210</real>
 			<key>ypos</key>

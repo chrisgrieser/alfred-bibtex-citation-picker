@@ -186,7 +186,7 @@ function run (argv) {
 		// Create keywords field
 		newEntryProperties.splice(newEntryProperties.length-2, 0, "\tkeywords = {},");
 
-		newEntry = newEntryProperties.join("\n") + "\n";
+		newEntry = newEntryProperties.join("\n");
 	}
 
 	appendToFile(newEntry, libraryPath);
