@@ -11,7 +11,7 @@
 	<key>match_only_short_years</key>
 	<true/>
 	<key>open_entries_in</key>
-	<string>neovim</string>
+	<string>neovim &amp; alacritty</string>
 	<key>pdf_folder</key>
 	<string>~/Library/Mobile Documents/com~apple~CloudDocs/PDFs</string>
 </dict>
