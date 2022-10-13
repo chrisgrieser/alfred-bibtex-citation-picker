@@ -13,7 +13,7 @@ elif [[ "$open_entries_in" == "Sublime" ]]; then
 	"/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" "$LIBRARY:$LINE_NO"
 elif [[ "$open_entries_in" == "VS Code" ]]; then
 	code "$LIBRARY:$LINE_NO"
-elif [[ "$open_entries_in" == "neovim" ]]; then
+elif [[ "$open_entries_in" == "neovim $ alacritty" ]]; then
 	alacritty --command nvim +$LINE_NO "$LIBRARY"
 elif [[ "$open_entries_in" == "Zotero" ]]; then
 	open "zotero://select/items/@$CITEKEY"

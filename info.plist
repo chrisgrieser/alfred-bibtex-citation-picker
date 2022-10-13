@@ -3048,6 +3048,8 @@ to set hotkey for Bibliography parsing</string>
 				<string></string>
 				<key>filtermode</key>
 				<integer>2</integer>
+				<key>placeholder</key>
+				<string></string>
 				<key>required</key>
 				<true/>
 			</dict>
@@ -3067,6 +3069,8 @@ to set hotkey for Bibliography parsing</string>
 				<string></string>
 				<key>filtermode</key>
 				<integer>1</integer>
+				<key>placeholder</key>
+				<string></string>
 				<key>required</key>
 				<false/>
 			</dict>
@@ -3086,6 +3090,8 @@ to set hotkey for Bibliography parsing</string>
 				<string></string>
 				<key>filtermode</key>
 				<integer>1</integer>
+				<key>placeholder</key>
+				<string></string>
 				<key>required</key>
 				<false/>
 			</dict>
@@ -3105,6 +3111,8 @@ to set hotkey for Bibliography parsing</string>
 				<string>~/.pandoc/csl</string>
 				<key>filtermode</key>
 				<integer>1</integer>
+				<key>placeholder</key>
+				<string></string>
 				<key>required</key>
 				<false/>
 			</dict>
@@ -3120,6 +3128,8 @@ to set hotkey for Bibliography parsing</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>default</key>
+				<string>BibDesk</string>
 				<key>pairs</key>
 				<array>
 					<array>
@@ -3140,7 +3150,7 @@ to set hotkey for Bibliography parsing</string>
 					</array>
 					<array>
 						<string>neovim &amp; alacritty</string>
-						<string>neovim</string>
+						<string>neovim &amp; alacritty</string>
 					</array>
 				</array>
 			</dict>
