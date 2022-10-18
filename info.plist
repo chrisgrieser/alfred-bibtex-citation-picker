@@ -3243,13 +3243,10 @@ to set hotkey for Bibliography parsing</string>
 		<string>60</string>
 		<key>file_manager</key>
 		<string>Marta</string>
-		<key>neovide_experimental</key>
-		<string>true</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
 		<string>file_manager</string>
-		<string>neovide_experimental</string>
 	</array>
 	<key>version</key>
 	<string>10.0.13</string>
