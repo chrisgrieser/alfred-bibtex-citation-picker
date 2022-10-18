@@ -6,7 +6,9 @@ LIBRARY="${bibtex_library_path/#\~/$HOME}"
 CITEKEY="$*"
 LINE_NO=$(grep -n "{$CITEKEY," "$LIBRARY" | head -n1 | cut -d':' -f1)
 
-if [[ "$open_entries_in" == "BibDesk" ]]; then
+if [[ "$neovide_experimental" == "true" ]] ; then
+	open "$LIBRARY" --env=LINE=$LINE_NO # can't use `neovide` directly due to https://github.com/neovide/neovide/issues/1604
+elif [[ "$open_entries_in" == "BibDesk" ]]; then
 	open "x-bdsk://$CITEKEY"
 elif [[ "$open_entries_in" == "Sublime" ]]; then
 	# using full path makes this work even if `subl` hasn't been added to PATH
