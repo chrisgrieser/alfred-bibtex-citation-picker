@@ -2455,7 +2455,7 @@ Version 10 of this workflow uses the new Alfred 5 User Configuration. If you fir
 ## Workflow Setup
 1. Add the path to your `.bib` to the right and you are good to go.
 2. For all the features this workflow has to offer, refer to the [README](https://github.com/chrisgrieser/alfred-bibtex-citation-picker#supercharged-citation-picker).
-3. Note that citation style is by default *Pandoc Citation*. To switch it to LaTeX, MMD, eta, [[wikilinks]], or #tags, use the keyword `scp` in Alfred and select `Change Citation Format`.
+3. The default citation style is *Pandoc Citations*. To switch it to LaTeX, MMD, eta, [[wikilinks]], or #tags, use the keyword `scp` in Alfred and select `Change Citation Format`.
 
 ## Created by
 [Chris Grieser](https://chris-grieser.de/)
