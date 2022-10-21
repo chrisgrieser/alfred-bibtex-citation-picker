@@ -4,10 +4,10 @@
 
 A citation picker for academics that write in markdown. Using [Alfred](https://www.alfredapp.com/), it inserts citations from a BibTeX File in various formats, e.g. [Pandoc](https://pandoc.org/MANUAL.html#citation-syntax), [Multi-Markdown](https://fletcher.github.io/MultiMarkdown-6/syntax/citation.html) or [Latex](https://www.overleaf.com/learn/latex/Biblatex_citation_styles).
 
-> **Note**
+> __Note__
 > Version 9.7.1 is the last version compatible with Alfred 4. All future versions of this workflow will require [Alfred 5](https://www.alfredapp.com/).
 
-> **Warning**
+> __Warning__
 > The initial version 10 had a bug preventing auto-updating. Please [manually download 10.0.11 or newer](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/releases) to receive auto-updates.
 
 <img width=60% alt="promo screenshot" src="assets/promo.png">
@@ -157,6 +157,6 @@ In my day job, I am a sociologist studying the social mechanisms underlying the 
 
 [^1]: [QLmarkdown](https://github.com/sbarex/QLMarkdown) and [Peek](https://apps.apple.com/app/peek-quick-look-extension/id1554235898) both enable previewing of Markdown documents. Peek works with a wide range of other file types than Markdown, but costs around 5€. QLMarkdown is free, but only works for Markdown and requires some minor small setup. To enable the proper display of YAML headers, you need to enable the respective setting in the Advanced Options of QLMarkdown or Peek.
 
-[^4]: `Hyper` is an artificial "fifth" modifier key equivalent to `⌘⌥⌃⇧`, and can be created using apps like [Karabiner Elements](https://karabiner-elements.pqrs.org/), [BetterTouchTool](https://www.macupdate.com/app/mac/32953/bettertouchtool), or [Hyperkey](https://hyperkey.app/). `Meh` is an artificial "fifth" modifier key equivalent to `⌥⌃⇧`.
+[^4]: `Hyper` is an artificial "fifth" modifier key equivalent to `⌘⌥⌃⇧`, and can be created using apps like [Karabiner Elements](https://karabiner-elements.pqrs.org/), [BetterTouchTool](https://www.macupdate.com/app/mac/32953/bettertouchtool), or [Hyperkey](https://hyperkey.app/). `Meh` is an artificial "sixth" modifier key equivalent to `⌥⌃⇧`.
 
 [^5]: Latex right now does not support page numbers. If you can code, feel free to make a PR implementing LaTeX citations with page numbers.
