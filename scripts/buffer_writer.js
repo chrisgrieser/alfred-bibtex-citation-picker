@@ -31,7 +31,7 @@ console.log ("Starting Buffer Writing");
 eval (app.doShellScript(`cat "${toImport}"`));
 console.log ("Parser Import successful.");
 
-// -------------------------------
+//──────────────────────────────────────────────────────────────────────────────
 
 const logStartTime = new Date();
 let litNoteArray = [];
@@ -161,7 +161,8 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		if (matchOnlyShortYears) yearMatches.push(year.slice(-2));
 		else yearMatches.push(year);
 
-		const alfredMatcher = ["@" + citekey,
+		const alfredMatcher = [
+			"@" + citekey,
 			...keywordMatches,
 			title,
 			...authorMatches,
@@ -171,7 +172,13 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 			type,
 			...litNoteMatcher,
 			...pdfMatcher
-		].join(" ").replaceAll ("-", " ");
+		]
+			.map(item => {
+				// match item with and without dash
+				if (item.includes("-")) item = item.replaceAll("-", " ") + " " + item;
+				return item;
+			})
+			.join(" ");
 
 		// Large Type
 		let largeTypeInfo = `${title} \n(citekey: ${citekey})`;

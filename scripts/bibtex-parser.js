@@ -132,7 +132,7 @@ function bibtexParse (str) { // eslint-disable-line no-unused-vars
 			});
 	}
 
-	// -----------------------------
+	//───────────────────────────────────────────────────────────────────────────
 
 	const bibtexEntryArray = bibtexDecode(str)
 		.replace(bibtexCommentRegex, "") // remove comments

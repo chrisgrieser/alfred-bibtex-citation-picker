@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bibtex_library_path</key>
-	<string>~/dotfiles/pandoc/main-bibliography.bib</string>
+	<string>~/Library/Mobile Documents/com~apple~CloudDocs/File Hub/test.bib</string>
 	<key>csl_folder</key>
 	<string>~/dotfiles/pandoc/csl</string>
 	<key>literature_note_folder</key>
