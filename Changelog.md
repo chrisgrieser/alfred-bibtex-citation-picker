@@ -1,3 +1,9 @@
+- 2022-10-21	release 10.0.14
+- 2022-10-21	fix #17
+- 2022-10-04	fixed opening in neovim
+- 2022-10-04	removed neovide option again
+- 2022-10-04	replaced goneovim with neovide option
+- 2022-10-03	option to open entry in GoNeovim
 - 2022-09-22	release 10.0.13
 - 2022-09-22	fix for opening entries
 - 2022-09-19	release 10.0.12
