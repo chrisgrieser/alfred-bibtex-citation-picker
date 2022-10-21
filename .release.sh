@@ -25,7 +25,7 @@ plutil -replace version -string "$nextVersion" info.plist
 
 # Lint
 cd "$(dirname "$0")" || exit 1
-eslint . --fix
+eslint . --fix || eslint_d . --fix
 
 echo ""
 
