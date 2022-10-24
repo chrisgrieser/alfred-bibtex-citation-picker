@@ -13,13 +13,13 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 <img width=60% alt="promo screenshot" src="assets/promo.png">
 
 ## Feature Overview
-- Inserts __Pandoc Citation Syntax__ (`[@citekey]`), supporting page numbers & multiple citations (`[@citekey, p. 23; @citekey, p. 42]`). Can also be configured to use LaTeX, Multi-Markdown, eta templates, `[[wikilinks]]`, or #tags as citation format.
+- Inserts __Pandoc Citation Syntax__ (`[@citekey]`), supporting page numbers & multiple citations (`[@citekey, p. 23; @citekey, p. 42]`). Can also be configured to use LaTeX, Multi-Markdown, eta templates, `[[wikilinks]]`, or `#tags` as citation format.
 - __app-independent:__ works system-wide, in every text field of every app.
 - __Smart Search:__ search for citekeys, authors, title, publication, keywords (tags), include/exclude authors in *et al*, tab-completion, fuzzy-matching, sorting recently used entries to the top, …
 - __Feature-rich:__ paste single-entry bibliographies, open URLs, open or create literature notes, attach PDFs, search for `.csl` files online, backup the library, …
-- __Minimalistic reference manager__: add or remove entries the BibTeX library, automatically rename and file PDFs, parse single entries, …
 - __Blazingly Fast:__ considerably quicker than any other citation pickers I know of (~200ms to fully reload a library with ~4000 entries on my machine).
-- __Easy Installation:__ no dependencies, no required plugins, no setup. Just need to enter the path to your `.bib` file.
+- __Easy Installation:__ no dependencies, no required plugins, no setup. Just enter the path to your `.bib` file.
+- __Minimalistic reference manager__: add or remove entries the BibTeX library, automatically rename and file PDFs, parse single entries, …
 - __Obsidian integration:__ When located in an [Obsidian](https://obsidian.md/) vault, literature notes will automatically be opened/created in Obsidian instead of the default markdown app.
 
 ## Table of Contents
@@ -37,7 +37,7 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
     - [Bibliography Actions](#bibliography-actions)
     - [Adding entries to the BibTeX library](#adding-entries-to-the-bibtex-library)
     - [Literature Note Actions](#literature-note-actions)
-    - [PDFs Management Actions](#pdfs-management-actions)
+    - [PDF Management Actions](#pdf-management-actions)
     - [Auxiliary Features](#auxiliary-features)
   - [About the Developer](#about-the-developer)
     - [Profiles](#profiles)
@@ -47,7 +47,7 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 
 ## Getting Started
 1. [Download the latest release](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/releases/latest).
-2. In the workflow settings, set `bibtex_library_path` to the absolute path of your BibTeX library file (Tutorial: [How to set environment variables in Alfred](https://www.alfredapp.com/help/workflows/advanced/variables/#environment)).
+2. Enter the BibTeX Library path.
 3. Set a hotkey for the citation picker by double-clicking the respective field in the workflow window.
 
 ## Basic Usage
@@ -75,7 +75,7 @@ Press the hotkey in any text field to launch the citation picker.
 |:-----|:----------------|
 | 🌐   | URL or DOI      |
 | 📄   | Abstract        |
-| 🏷   | n Keywords      |
+| n 🏷 | n Keywords      |
 | 📓   | Literature Note |
 | 📕   | PDF             |
 
@@ -120,7 +120,7 @@ If there is a citation syntax that is commonly used, feel free to make a PR to [
 - `⌘ + Y`: Preview the literature note with QuickLook (requires QLmarkdown or Peek[^1]).
 - Add `*` to any search query to filter only for entries with literature notes, e.g. `* grieser` will search for entries matching "grieser" which also have a literature notes. Can be combined with other queries (see: [smart queries](#search)).
 
-### PDFs Management Actions
+### PDF Management Actions
 The following features require that all your PDFs are located in the folder specified in your workflow settings.
 - `fn + ↵`: __Auto-file and auto-rename__ the *currently selected PDF*. Inside your selected pdf folder, uses the template path: `{first_letter_of_citekey}/{citekey-author-part}/{citekey}_{shortened_title}.pdf`
 - The `📕` indicates that the entry already has an associated PDF at that location.
