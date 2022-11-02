@@ -76,7 +76,8 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		const safeTitle = title
 			.slice(0, maxTitleFileNameLength)
 			.replace(/[;:/\\]/g, "-")
-			.replace(/[„"'´,#]/g, "");
+			.replace(/[„"'´,#]/g, "")
+			.replace(/[ -–]$/g, "");
 		const autoFileName = `${citekey}_${safeTitle}`;
 
 		// URL
