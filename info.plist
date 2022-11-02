@@ -1470,7 +1470,7 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 				<key>keyword</key>
 				<string>+</string>
 				<key>subtext</key>
-				<string>DOI, SBN or URL with DOI. Leave empty to insert empty Entry.</string>
+				<string>DOI, ISBN or URL with DOI. Leave empty to insert empty Entry.</string>
 				<key>text</key>
 				<string>Add to Bibliography</string>
 				<key>withspace</key>

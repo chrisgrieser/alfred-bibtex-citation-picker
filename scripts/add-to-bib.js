@@ -1,6 +1,6 @@
 #!/usr/bin/env osascript -l JavaScript
 
-function run (argv) {
+function run(argv) {
 
 	const doiRegex = /\b10.\d{4,9}\/[-._;()/:A-Z0-9]+(?=$|[?/ ])/i; // https://www.crossref.org/blog/dois-and-matching-regular-expressions/
 	const isbnRegex = /^[\d-]{9,}$/;
@@ -17,11 +17,11 @@ function run (argv) {
 	const newLineDelimiter = "\r"; // must be /r instead of /n because JXA
 
 	function appendToFile(text, absPath) {
-		// ⚠️ use single quotes to prevent running of input such as "$(rm -rf /)"
-		app.doShellScript (`echo '${text}' >> '${absPath}'`);
+		text = text.replaceAll("'", "`"); // ' in text string breaks echo writing method
+		app.doShellScript(`echo '${text}' >> '${absPath}'`); // use single quotes to prevent running of input such as "$(rm -rf /)"
 	}
 
-	function readFile (path, encoding) {
+	function readFile(path, encoding) {
 		if (!encoding) encoding = $.NSUTF8StringEncoding;
 		const fm = $.NSFileManager.defaultManager;
 		const data = fm.contentsAtPath(path);
@@ -39,8 +39,8 @@ function run (argv) {
 	//---------------------------------------------------------------------------
 
 
-	function generateCitekey (bibtexPropertyArr) {
-		function parseBibtexProperty (arr, property) {
+	function generateCitekey(bibtexPropertyArr) {
+		function parseBibtexProperty(arr, property) {
 			arr = arr
 				.map(line => line.trim())
 				.filter(p => p.startsWith(property + " "));
@@ -96,12 +96,12 @@ function run (argv) {
 		return citekey;
 	}
 
-	function ensureUniqueCitekey (citekey) {
+	function ensureUniqueCitekey(citekey) {
 		// check if citekey already exists
 		const citekeyArray = readFile(libraryPath)
 			.split("\n")
 			.filter(line => line.startsWith("@"))
-			.map(line => line.split("{")[1].replaceAll(",", "") );
+			.map(line => line.split("{")[1].replaceAll(",", ""));
 
 		const alphabet = "abcdefghijklmnopqrstuvwxyz";
 		let i = -1;
@@ -137,14 +137,14 @@ function run (argv) {
 
 	if (isDOI) {
 		const doiURL = "https://doi.org/" + input.match(doiRegex)[0];
-		// get bibtex entry & filter it
-		bibtexEntry = app.doShellScript (`curl -sLH "Accept: application/x-bibtex" "${doiURL}"`); // https://citation.crosscite.org/docs.html
-		if (bibtexEntry.includes("<title>Error: DOI Not Found</title>") || !bibtexEntry.includes("@")) return "ERROR";
+		console.log(`doi: ${doiURL}`);
+		bibtexEntry = app.doShellScript(`curl -sLH "Accept: application/x-bibtex" "${doiURL}"`); // https://citation.crosscite.org/docs.html
+		if (!bibtexEntry.includes("@")) return "ERROR";
 
 	} else if (isISBN) {
 		const isbn = input;
-		bibtexEntry = app.doShellScript (`curl -sHL "https://www.ebook.de/de/tools/isbn2bibtex?isbn=${isbn}"`);
-		if (bibtexEntry === "Not found" || !bibtexEntry.includes("@")) return "ERROR";
+		bibtexEntry = app.doShellScript(`curl -sHL "https://www.ebook.de/de/tools/isbn2bibtex?isbn=${isbn}"`);
+		if (!bibtexEntry.includes("@")) return "ERROR";
 		bibtexEntry = bibtexEntry
 			.replaceAll("  ", "\t") // add proper indention
 			.replace(/^\t\w+ =/gm, (field) => field.toLowerCase()) // lowercase fields
@@ -184,7 +184,7 @@ function run (argv) {
 		newEntryProperties[0] = newEntryProperties[0].split("{")[0] + "{" + newCitekey + ",";
 
 		// Create keywords field
-		newEntryProperties.splice(newEntryProperties.length-2, 0, "\tkeywords = {},");
+		newEntryProperties.splice(newEntryProperties.length - 2, 0, "\tkeywords = {},");
 
 		newEntry = newEntryProperties.join("\n");
 	}
@@ -192,4 +192,3 @@ function run (argv) {
 	appendToFile(newEntry, libraryPath);
 	return newCitekey; // pass for opening function
 }
-
