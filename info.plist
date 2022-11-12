@@ -637,6 +637,30 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
+				<string>AF128420-2209-43A6-B83B-C8F548CAD6A1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>14FB4C6A-E89A-4DBE-8F36-87C64E7B4314</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>9C01A8C9-CBF3-4261-A0F2-CD6DC0E55515</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>9253E5A5-EDA5-4E55-A597-94D266A07D4F</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>254C2241-0AE4-4F52-A073-16E3DEFC9384</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -649,13 +673,13 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>AF128420-2209-43A6-B83B-C8F548CAD6A1</string>
+				<string>254C2241-0AE4-4F52-A073-16E3DEFC9384</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>sourceoutputuid</key>
-				<string>14FB4C6A-E89A-4DBE-8F36-87C64E7B4314</string>
+				<string>9253E5A5-EDA5-4E55-A597-94D266A07D4F</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -1333,15 +1357,42 @@ JSON.stringify({ 'items': entry_array });
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>soundname</key>
-				<string>Basso</string>
-				<key>systemsound</key>
-				<true/>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+				<key>title</key>
+				<string>⚠️ DOI or ISBN invalid</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.playsound</string>
+			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>254C2241-0AE4-4F52-A073-16E3DEFC9384</string>
+			<string>AF128420-2209-43A6-B83B-C8F548CAD6A1</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+				<key>title</key>
+				<string>⚠️ Not found</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>9C01A8C9-CBF3-4261-A0F2-CD6DC0E55515</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1398,21 +1449,15 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string></string>
-				<key>title</key>
-				<string>⚠️ DOI or ISBN invalid</string>
+				<key>soundname</key>
+				<string>Basso</string>
+				<key>systemsound</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
+			<string>alfred.workflow.output.playsound</string>
 			<key>uid</key>
-			<string>AF128420-2209-43A6-B83B-C8F548CAD6A1</string>
+			<string>254C2241-0AE4-4F52-A073-16E3DEFC9384</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1592,6 +1637,20 @@ fi</string>
 						<string>error</string>
 						<key>uid</key>
 						<string>14FB4C6A-E89A-4DBE-8F36-87C64E7B4314</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>not found</string>
+						<key>outputlabel</key>
+						<string>not found</string>
+						<key>uid</key>
+						<string>9253E5A5-EDA5-4E55-A597-94D266A07D4F</string>
 					</dict>
 				</array>
 				<key>elselabel</key>
@@ -2567,9 +2626,9 @@ Version 10 of this workflow uses the new Alfred 5 User Configuration. If you fir
 			<key>colorindex</key>
 			<integer>1</integer>
 			<key>xpos</key>
-			<real>575</real>
+			<real>600</real>
 			<key>ypos</key>
-			<real>375</real>
+			<real>500</real>
 		</dict>
 		<key>2A483E3B-2BAB-408A-9759-4C0F65D760CF</key>
 		<dict>
@@ -2869,6 +2928,15 @@ to set hotkey for Bibliography parsing</string>
 			<key>ypos</key>
 			<real>1250</real>
 		</dict>
+		<key>9C01A8C9-CBF3-4261-A0F2-CD6DC0E55515</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>1</integer>
+			<key>xpos</key>
+			<real>570</real>
+			<key>ypos</key>
+			<real>370</real>
+		</dict>
 		<key>AF09AE5D-C351-4190-8AA6-B1924D88B22F</key>
 		<dict>
 			<key>colorindex</key>
@@ -2885,9 +2953,9 @@ to set hotkey for Bibliography parsing</string>
 			<key>colorindex</key>
 			<integer>1</integer>
 			<key>xpos</key>
-			<real>575</real>
+			<real>400</real>
 			<key>ypos</key>
-			<real>490</real>
+			<real>370</real>
 		</dict>
 		<key>B8AEF220-7CBC-4D07-BA5F-D28094B3D4B4</key>
 		<dict>

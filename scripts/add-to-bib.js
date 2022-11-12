@@ -137,13 +137,13 @@ function run(argv) {
 
 	if (isDOI) {
 		const doiURL = "https://doi.org/" + input.match(doiRegex)[0];
-		console.log(`doi: ${doiURL}`);
 		bibtexEntry = app.doShellScript(`curl -sLH "Accept: application/x-bibtex" "${doiURL}"`); // https://citation.crosscite.org/docs.html
 		if (!bibtexEntry.includes("@")) return "ERROR";
 
 	} else if (isISBN) {
 		const isbn = input;
 		bibtexEntry = app.doShellScript(`curl -sHL "https://www.ebook.de/de/tools/isbn2bibtex?isbn=${isbn}"`);
+		if (bibtexEntry.includes("Not found")) return "not found";
 		if (!bibtexEntry.includes("@")) return "ERROR";
 		bibtexEntry = bibtexEntry
 			.replaceAll("  ", "\t") // add proper indention
