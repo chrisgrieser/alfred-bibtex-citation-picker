@@ -14,8 +14,8 @@ function run (argv) {
 	const literatureNoteExists = Application("Finder").exists(Path(literatureNotePath));
 	if (!literatureNoteExists) {
 		// TODO: template functionality
-		const template = "---\ntags: \naliases:\n---\n\n# " + citekey;
-		app.doShellScript("echo '" + template + "' > '" + literatureNotePath + "'");
+		const template = "---\ntags: \naliases:\n---\n\n";
+		app.doShellScript(`echo '${template}' > '${literatureNotePath}'`);
 	}
 
 	// open with Obsidian, if in Vault
@@ -25,7 +25,7 @@ function run (argv) {
 
 	if (isFileInObsidianVault) {
 		Application("Obsidian").activate();
-		// eslint-disable-next-line no-magic-numbers, no-undef
+		// eslint-disable-next-line no-magic-numbers
 		delay(0.3); // needed so Obsidian can pick up newly created file
 		const URI = "obsidian://open?path=" + encodeURIComponent(literatureNotePath);
 		app.openLocation(URI);
@@ -33,6 +33,6 @@ function run (argv) {
 	}
 
 	// open with default app, if not in vault
-	app.doShellScript("open '" + literatureNotePath + "'");
+	app.doShellScript(`open '${literatureNotePath}'`);
 
 }
