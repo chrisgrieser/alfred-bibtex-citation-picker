@@ -1,6 +1,6 @@
 #!/bin/zsh
-# shellcheck disable=2154
-LIBRARY="${bibtex_library_path/#\~/$HOME}"
+# # shellcheck disable=2154
+# LIBRARY="${bibtex_library_path/#\~/$HOME}"
 LIT_NOTES_FOLDER="${literature_note_folder/#\~/$HOME}"
 PDF_FOLDER="${pdf_folder/#\~/$HOME}"
 
