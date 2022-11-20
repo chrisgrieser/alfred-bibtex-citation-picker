@@ -3,7 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>bibtex_library_path</key>
-	<string>~/.pandoc/main-bibliography.bib</string>
+	<string>~/.config/pandoc/main-bibliography.bib</string>
+	<key>csl_folder</key>
+	<string>~/.config/pandoc/csl</string>
 	<key>literature_note_folder</key>
 	<string>~/Main Vault/Literature Notes</string>
 	<key>open_entries_in</key>

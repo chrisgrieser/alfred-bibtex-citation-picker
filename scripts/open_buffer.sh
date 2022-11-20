@@ -31,7 +31,6 @@ if [[ "$LIBRARY" -nt "$BUFFER" ]] \
 	; then
 		osascript -l JavaScript "./scripts/buffer_writer.js" > "$BUFFER"
 		echo -n "$THIS_VERSION" > "$LAST_VERSION_FILE"
-	# osascript -e "beep" # for debugging
 fi
 
 # pass json to Alfred
