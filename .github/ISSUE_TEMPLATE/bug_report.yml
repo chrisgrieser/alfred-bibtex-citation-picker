@@ -52,7 +52,7 @@ body:
     id: workflow-configuration
     attributes:
       label: Workflow Configuration
-      description: "Please add a screenshot of all your [workflow configuration](https://www.alfredapp.com/help/workflows/workflow-configuration/)."
+      description: "Please add a screenshot of all your [workflow configuration](https://www.alfredapp.com/help/workflows/user-configuration/)."
     validations:
       required: true
   - type: checkboxes
