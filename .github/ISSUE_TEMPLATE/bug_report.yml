@@ -52,7 +52,7 @@ body:
     id: workflow-configuration
     attributes:
       label: Workflow Configuration
-      description: "Please add a screenshot of all your [workflow settings](https://www.alfredapp.com/help/workflows/advanced/variables/)."
+      description: "Please add a screenshot of all your [workflow configuration](https://www.alfredapp.com/help/workflows/workflow-configuration/)."
     validations:
       required: true
   - type: checkboxes
@@ -60,7 +60,7 @@ body:
     attributes:
       label: Checklist
       options:
-        - label: I have [updated to the latest version](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest) of this workflow.
+        - label: I have [updated to the latest version](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/releases/latest) of this workflow.
           required: true
         - label: 'I have tried manually reloading the buffer (Alfred keyword `scp`, select `Force Buffer Reload`).'
           required: true
