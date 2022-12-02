@@ -3310,7 +3310,7 @@ to set hotkey for Bibliography parsing</string>
 		<key>alfred_bar_length</key>
 		<string>60</string>
 		<key>file_manager</key>
-		<string>Marta</string>
+		<string>Finder</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
