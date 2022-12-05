@@ -125,7 +125,7 @@ function run(argv) {
 	// type of reading to perform
 	let parseSelection;
 	try {
-		parseSelection = $.getenv("selection") === "true";
+		parseSelection = $.getenv("parsing") === "true";
 	} catch (error) {
 		parseSelection = false;
 	}
@@ -157,7 +157,7 @@ function run(argv) {
 		writeToFile(input, tempPath);
 		bibtexEntry = app.doShellScript(`anystyle --stdout -f bib parse "${tempPath}"`)
 			.replaceAll("  ", "\t") // spaces to tabs
-			.replaceAll("\tdate =", "\tyear =");
+			.replaceAll("\tdate =", "\tyear ="); // consistently "year"
 	}
 
 	// insert content to append

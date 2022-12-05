@@ -1435,7 +1435,7 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 				<true/>
 				<key>variables</key>
 				<dict>
-					<key>selection</key>
+					<key>parsing</key>
 					<string>true</string>
 				</dict>
 			</dict>
@@ -2768,7 +2768,7 @@ to set a hotkey for the citaiton picker.</string>
 			<key>note</key>
 			<string>DOUBLE CLICK THIS
 
-to set hotkey for Bibliography parsing</string>
+Hotkey for Bibliography Parsing (anystyle)</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
