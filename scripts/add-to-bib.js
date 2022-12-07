@@ -2,11 +2,6 @@
 
 function run(argv) {
 
-	const doiRegex = /\b10.\d{4,9}\/[-._;()/:A-Z0-9]+(?=$|[?/ ])/i; // https://www.crossref.org/blog/dois-and-matching-regular-expressions/
-	const isbnRegex = /^[\d-]{9,}$/;
-	const isEmptyRegex = /^\s*$/;
-	const bibtexEntryTemplate = "@misc{NEW_ENTRY,\n\tauthor = {Doe, Jane},\n\ttitle = {NEW_ENTRY},\n\tpages = {1--1},\n\tyear = 0000\n}\n";
-
 	// ----------------------
 	// JXA & Alfred specific
 	// ----------------------
@@ -116,6 +111,16 @@ function run(argv) {
 		return nextCitekey;
 	}
 
+	const doiRegex = /\b10.\d{4,9}\/[-._;()/:A-Z0-9]+(?=$|[?/ ])/i; // https://www.crossref.org/blog/dois-and-matching-regular-expressions/
+
+	//───────────────────────────────────────────────────────────────────────────
+
+	const isbnRegex = /^[\d-]{9,}$/;
+	const isEmptyRegex = /^\s*$/;
+
+	const bibtexEntryTemplate = "@misc{NEW_ENTRY,\n\tauthor = {Doe, Jane},\n\ttitle = {NEW_ENTRY},\n\tpages = {1--1},\n\tyear = 0000\n}\n";
+	const fieldsToDelete = ["date", "ean", "month", "issn", "language", "copyright"];
+
 	//---------------------------------------------------------------------------
 
 	let bibtexEntry;
@@ -134,7 +139,6 @@ function run(argv) {
 	const isEmpty = isEmptyRegex.test(input);
 	if (!isDOI && !isISBN && !isEmpty && !parseSelection) return "ERROR";
 
-
 	if (isDOI) {
 		const doiURL = "https://doi.org/" + input.match(doiRegex)[0];
 		bibtexEntry = app.doShellScript(`curl -sLH "Accept: application/x-bibtex" "${doiURL}"`); // https://citation.crosscite.org/docs.html
@@ -146,8 +150,7 @@ function run(argv) {
 		if (bibtexEntry.includes("Not found")) return "not found";
 		if (!bibtexEntry.includes("@")) return "ERROR";
 		bibtexEntry = bibtexEntry
-			.replaceAll("  ", "\t") // add proper indention
-			.replace(/^\t\w+ =/gm, (field) => field.toLowerCase()) // lowercase fields
+			.replace(/^\s+\w+ =/m, (field) => field.toLowerCase()) // lowercase fields
 			.replace(/^(\tpagetotal = {\d+) Seiten/m, "$1"); // remove German page word
 
 	} else if (parseSelection) {
@@ -156,38 +159,36 @@ function run(argv) {
 		const tempPath = $.getenv("alfred_workflow_cache") + "/temp.txt";
 		writeToFile(input, tempPath);
 		bibtexEntry = app.doShellScript(`anystyle --stdout -f bib parse "${tempPath}"`)
-			.replaceAll("  ", "\t") // spaces to tabs
 			.replaceAll("\tdate =", "\tyear ="); // consistently "year"
+
+	} else if (isEmpty) {
+		newEntry = bibtexEntryTemplate;
+		newCitekey = "NEW_ENTRY";
+		appendToFile(newEntry, libraryPath);
+		return newCitekey; // pass for opening function
 	}
 
 	// insert content to append
-	if (isEmpty) {
-		newEntry = bibtexEntryTemplate;
-		newCitekey = "NEW_ENTRY";
-	} else {
-		let newEntryProperties = bibtexEntry.split(newLineDelimiter);
+	bibtexEntry = bibtexEntry.replaceAll("  ", "\t"); // add proper indention
+	let newEntryProperties = bibtexEntry.split(newLineDelimiter);
 
-		// clean up fields
-		const fieldsToDelete = ["date", "ean", "month", "issn"];
-		newEntryProperties = newEntryProperties
-			.filter(field => {
-				let keepField = true;
-				fieldsToDelete.forEach(fieldName => {
-					if (field.includes(`\t${fieldName} =`)) keepField = false;
-				});
-				return keepField;
-			});
+	// clean up fields
+	newEntryProperties = newEntryProperties
+		.filter(property => {
+			const field = property.replace(/^\s*(\w+) ?=.*/, "$1");
+			console.log("field: " + field);
+			return !fieldsToDelete.includes(field);
+		});
 
-		// Generate citekey
-		newCitekey = generateCitekey(newEntryProperties);
-		newCitekey = ensureUniqueCitekey(newCitekey);
-		newEntryProperties[0] = newEntryProperties[0].split("{")[0] + "{" + newCitekey + ",";
+	// Generate citekey
+	newCitekey = generateCitekey(newEntryProperties);
+	newCitekey = ensureUniqueCitekey(newCitekey);
+	newEntryProperties[0] = newEntryProperties[0].split("{")[0] + "{" + newCitekey + ",";
 
-		// Create keywords field
-		newEntryProperties.splice(newEntryProperties.length - 2, 0, "\tkeywords = {},");
+	// Create keywords field
+	newEntryProperties.splice(1, 0, "\tkeywords = {},");
 
-		newEntry = newEntryProperties.join("\n");
-	}
+	newEntry = newEntryProperties.join("\n");
 
 	appendToFile(newEntry, libraryPath);
 	return newCitekey; // pass for opening function
