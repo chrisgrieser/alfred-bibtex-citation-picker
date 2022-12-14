@@ -7,7 +7,7 @@
 	<key>csl_folder</key>
 	<string>~/.config/pandoc/csl</string>
 	<key>literature_note_folder</key>
-	<string>~/Main Vault/Literature Notes</string>
+	<string>~/main-vault/Literature Notes</string>
 	<key>open_entries_in</key>
 	<string>neovim &amp; alacritty</string>
 	<key>pdf_folder</key>
