@@ -127,7 +127,8 @@ function run(argv) {
 	const isDOI = doiRegex.test(input);
 	const isISBN = isbnRegex.test(input);
 	const isEmpty = isEmptyRegex.test(input);
-	if (!isDOI && !isISBN && !isEmpty) return "ERROR";
+	const parseText = $.getenv("parseText") === "true";
+	if (!isDOI && !isISBN && !isEmpty && !parseText) return "input invalid";
 
 	if (isDOI) {
 		console.log("isDOI: " + isDOI);
@@ -138,11 +139,19 @@ function run(argv) {
 	} else if (isISBN) {
 		const isbn = input;
 		bibtexEntry = app.doShellScript(`curl -sHL "https://www.ebook.de/de/tools/isbn2bibtex?isbn=${isbn}"`);
-		if (bibtexEntry.includes("Not found")) return "not found";
+		if (bibtexEntry.includes("Not found")) return "ISBN not registered.";
 		if (!bibtexEntry.includes("@")) return "ISBN invalid";
 		bibtexEntry = bibtexEntry
 			.replace(/^\s+\w+ =/m, (field) => field.toLowerCase()) // lowercase fields
-			.replace(/^(\tpagetotal = {\d+) Seiten/m, "$1"); // remove German page word
+			.replace(/^(\tpagetotal = \{\d+) Seiten/m, "$1"); // remove German page word
+
+	} else if (parseText) {
+		// anystyle can't read STDIN, so this has to be written to a file
+		// https://github.com/inukshuk/anystyle-cli#anystyle-help-parse
+		const tempPath = $.getenv("alfred_workflow_cache") + "/temp.txt";
+		writeToFile(input, tempPath);
+		bibtexEntry = app.doShellScript(`anystyle --stdout --format=bib parse "${tempPath}"`)
+			.replaceAll(" date =", " year ="); // consistently "year"
 
 	} else if (isEmpty) {
 		newEntry = bibtexEntryTemplate;

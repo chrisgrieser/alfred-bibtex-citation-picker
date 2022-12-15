@@ -29,6 +29,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>03FDB341-D261-4E25-B0A4-53ECD86664EC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2DC90122-FC40-44CA-8F59-E3C16AC99651</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>04E17547-EDD2-4C44-9F41-F15391DD8775</key>
 		<array>
 			<dict>
@@ -40,6 +53,19 @@
 				<string></string>
 				<key>vitoclose</key>
 				<true/>
+			</dict>
+		</array>
+		<key>09C552E1-E9BA-418A-931E-D134C3FA1A7F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2DC90122-FC40-44CA-8F59-E3C16AC99651</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>0F739BDB-D7EC-482F-9798-A9B04AF57CA9</key>
@@ -229,11 +255,21 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>2DC90122-FC40-44CA-8F59-E3C16AC99651</string>
+				<string>09C552E1-E9BA-418A-931E-D134C3FA1A7F</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>03FDB341-D261-4E25-B0A4-53ECD86664EC</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>⌘: Parse Text instead (anystyle)</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -418,19 +454,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>CB4D33E2-A031-4542-A640-3B73D66EE39E</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>99F0E01D-AD42-4C0B-98A1-B3419694C87C</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>2DC90122-FC40-44CA-8F59-E3C16AC99651</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1166,27 +1189,6 @@ JSON.stringify({ 'items': entry_array });
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>keyword</key>
-				<string>+</string>
-				<key>subtext</key>
-				<string>DOI, ISBN or URL with DOI. Leave empty to insert empty Entry.</string>
-				<key>text</key>
-				<string>Add to Bibliography</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>4AE87B47-81EE-4552-A172-685A3F61D708</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>autopaste</key>
 				<true/>
 				<key>clipboardtext</key>
@@ -1240,27 +1242,6 @@ JSON.stringify({ 'items': entry_array });
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>acceptsfiles</key>
-				<false/>
-				<key>acceptsmulti</key>
-				<integer>0</integer>
-				<key>acceptstext</key>
-				<true/>
-				<key>acceptsurls</key>
-				<true/>
-				<key>name</key>
-				<string>Add DOI/ISBN to BibTeX Library</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.universalaction</string>
-			<key>uid</key>
-			<string>99F0E01D-AD42-4C0B-98A1-B3419694C87C</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -1287,6 +1268,47 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 			<string>96FCE9BC-5201-4357-9B63-588F73AEF5F3</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>parseText</key>
+					<string>false</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>09C552E1-E9BA-418A-931E-D134C3FA1A7F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
+				<string>+</string>
+				<key>subtext</key>
+				<string>DOI, ISBN or URL with DOI. Leave empty to insert empty Entry.</string>
+				<key>text</key>
+				<string>Add to Bibliography</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>4AE87B47-81EE-4552-A172-685A3F61D708</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1477,6 +1499,26 @@ fi</string>
 			<string>65CA24BA-2DA6-4DC0-A2BE-3E4E4D5FDD72</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>parseText</key>
+					<string>true</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>03FDB341-D261-4E25-B0A4-53ECD86664EC</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2256,6 +2298,15 @@ Version 10 of this workflow uses the new Alfred 5 User Configuration. If you fir
 			<key>ypos</key>
 			<real>1310</real>
 		</dict>
+		<key>03FDB341-D261-4E25-B0A4-53ECD86664EC</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>5</integer>
+			<key>xpos</key>
+			<real>225</real>
+			<key>ypos</key>
+			<real>570</real>
+		</dict>
 		<key>04E17547-EDD2-4C44-9F41-F15391DD8775</key>
 		<dict>
 			<key>colorindex</key>
@@ -2266,6 +2317,15 @@ Version 10 of this workflow uses the new Alfred 5 User Configuration. If you fir
 			<real>30</real>
 			<key>ypos</key>
 			<real>785</real>
+		</dict>
+		<key>09C552E1-E9BA-418A-931E-D134C3FA1A7F</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>5</integer>
+			<key>xpos</key>
+			<real>225</real>
+			<key>ypos</key>
+			<real>505</real>
 		</dict>
 		<key>0F739BDB-D7EC-482F-9798-A9B04AF57CA9</key>
 		<dict>
@@ -2343,9 +2403,9 @@ Version 10 of this workflow uses the new Alfred 5 User Configuration. If you fir
 			<key>colorindex</key>
 			<integer>1</integer>
 			<key>xpos</key>
-			<real>580</real>
+			<real>605</real>
 			<key>ypos</key>
-			<real>730</real>
+			<real>770</real>
 		</dict>
 		<key>2A483E3B-2BAB-408A-9759-4C0F65D760CF</key>
 		<dict>
@@ -2372,7 +2432,7 @@ Version 10 of this workflow uses the new Alfred 5 User Configuration. If you fir
 			<key>note</key>
 			<string>create new entry</string>
 			<key>xpos</key>
-			<real>240</real>
+			<real>310</real>
 			<key>ypos</key>
 			<real>515</real>
 		</dict>
@@ -2445,11 +2505,13 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>5</integer>
 			<key>note</key>
-			<string>add doi/isbn</string>
+			<string>add doi/isbn
+
+OR parse text</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>210</real>
+			<real>505</real>
 		</dict>
 		<key>52B9C3DF-F265-4201-9508-55BA584F851F</key>
 		<dict>
@@ -2596,15 +2658,6 @@ to set a hotkey for the citaiton picker.</string>
 			<key>ypos</key>
 			<real>340</real>
 		</dict>
-		<key>99F0E01D-AD42-4C0B-98A1-B3419694C87C</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>5</integer>
-			<key>xpos</key>
-			<real>30</real>
-			<key>ypos</key>
-			<real>345</real>
-		</dict>
 		<key>9B9F7F22-DB77-4520-AD8F-BA445595D94B</key>
 		<dict>
 			<key>colorindex</key>
@@ -2619,9 +2672,9 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>1</integer>
 			<key>xpos</key>
-			<real>580</real>
+			<real>605</real>
 			<key>ypos</key>
-			<real>620</real>
+			<real>660</real>
 		</dict>
 		<key>AF09AE5D-C351-4190-8AA6-B1924D88B22F</key>
 		<dict>
@@ -2650,7 +2703,7 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>460</real>
+			<real>530</real>
 			<key>ypos</key>
 			<real>535</real>
 		</dict>
@@ -2725,7 +2778,7 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>385</real>
+			<real>455</real>
 			<key>ypos</key>
 			<real>545</real>
 		</dict>
