@@ -160,19 +160,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>3398EB79-03C0-4AA6-91E6-A1B2520ABB87</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>2DC90122-FC40-44CA-8F59-E3C16AC99651</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>346A58DA-B1B4-4F03-8F05-20B42A4EF996</key>
 		<array>
 			<dict>
@@ -323,19 +310,6 @@
 				<string></string>
 				<key>sourceoutputuid</key>
 				<string>72F55103-E397-487D-A309-BAAF3867F2E5</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>57A40612-04AF-4EB4-B147-54088D9DD874</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>3398EB79-03C0-4AA6-91E6-A1B2520ABB87</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -1271,37 +1245,6 @@ JSON.stringify({ 'items': entry_array });
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>1</integer>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string></string>
-				<key>hotkey</key>
-				<integer>30</integer>
-				<key>hotmod</key>
-				<integer>1966080</integer>
-				<key>hotstring</key>
-				<string>+</string>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>2</integer>
-				<key>relatedAppsMode</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>57A40612-04AF-4EB4-B147-54088D9DD874</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>autopaste</key>
 				<true/>
 				<key>clipboardtext</key>
@@ -1423,26 +1366,6 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 			<string>96FCE9BC-5201-4357-9B63-588F73AEF5F3</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<true/>
-				<key>variables</key>
-				<dict>
-					<key>parsing</key>
-					<string>true</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>3398EB79-03C0-4AA6-91E6-A1B2520ABB87</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2668,15 +2591,6 @@ Version 10 of this workflow uses the new Alfred 5 User Configuration. If you fir
 			<key>ypos</key>
 			<real>825</real>
 		</dict>
-		<key>3398EB79-03C0-4AA6-91E6-A1B2520ABB87</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>xpos</key>
-			<real>195</real>
-			<key>ypos</key>
-			<real>440</real>
-		</dict>
 		<key>346A58DA-B1B4-4F03-8F05-20B42A4EF996</key>
 		<dict>
 			<key>colorindex</key>
@@ -2758,19 +2672,6 @@ to set a hotkey for the citaiton picker.</string>
 			<real>130</real>
 			<key>ypos</key>
 			<real>1070</real>
-		</dict>
-		<key>57A40612-04AF-4EB4-B147-54088D9DD874</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>5</integer>
-			<key>note</key>
-			<string>DOUBLE CLICK THIS
-
-Hotkey for Bibliography Parsing (anystyle)</string>
-			<key>xpos</key>
-			<real>30</real>
-			<key>ypos</key>
-			<real>220</real>
 		</dict>
 		<key>57D40C47-4A2C-47A2-9E7A-A3CC8C3FB671</key>
 		<dict>
