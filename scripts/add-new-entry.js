@@ -26,6 +26,9 @@ function writeToFile(text, file) {
 	const str = $.NSString.alloc.initWithUTF8String(text);
 	str.writeToFileAtomicallyEncodingError(file, true, $.NSUTF8StringEncoding, null);
 }
+
+//──────────────────────────────────────────────────────────────────────────────
+
 function parseBibtexProperty(arr, property) {
 	arr = arr
 		.map(line => line.trim())
@@ -37,6 +40,27 @@ function parseBibtexProperty(arr, property) {
 		.trim();
 	return value;
 }
+
+function ensureUniqueCitekey(citekey, libraryPath) {
+	// check if citekey already exists
+	const citekeyArray = readFile(libraryPath)
+		.split("\n")
+		.filter(line => line.startsWith("@"))
+		.map(line => line.split("{")[1].replaceAll(",", ""));
+
+	const alphabet = "abcdefghijklmnopqrstuvwxyz";
+	let i = -1;
+	let nextCitekey = citekey;
+	while (citekeyArray.includes(nextCitekey)) {
+		let nextLetter = alphabet[i];
+		if (i === -1) nextLetter = ""; // first loop
+		nextCitekey = citekey + nextLetter;
+		i++;
+		if (i > alphabet.length - 1) break; // in case the citekey is already used 27 times (lol)
+	}
+	return nextCitekey;
+}
+
 function generateCitekey(bibtexPropertyArr) {
 	let year = parseBibtexProperty(bibtexPropertyArr, "year");
 	if (!year) year = "ND";
@@ -81,29 +105,11 @@ function generateCitekey(bibtexPropertyArr) {
 	const citekey = authorStr + year;
 	return citekey;
 }
-function ensureUniqueCitekey(citekey, libraryPath) {
-	// check if citekey already exists
-	const citekeyArray = readFile(libraryPath)
-		.split("\n")
-		.filter(line => line.startsWith("@"))
-		.map(line => line.split("{")[1].replaceAll(",", ""));
 
-	const alphabet = "abcdefghijklmnopqrstuvwxyz";
-	let i = -1;
-	let nextCitekey = citekey;
-	while (citekeyArray.includes(nextCitekey)) {
-		let nextLetter = alphabet[i];
-		if (i === -1) nextLetter = ""; // first loop
-		nextCitekey = citekey + nextLetter;
-		i++;
-		if (i > alphabet.length - 1) break; // in case the citekey is already used 27 times (lol)
-	}
-	return nextCitekey;
-}
 //---------------------------------------------------------------------------
+
 function run(argv) {
-	console.log("beep");
-	const doiRegex = /10.\d{4,9}\/[-._;()/:A-Z0-9]+(?=$|[?/ ])/i; // https://www.crossref.org/blog/dois-and-matching-regular-expressions/
+	const doiRegex = /\b10.\d{4,9}\/[-._;()/:A-Z0-9]+(?=$|[?/ ])/i; // https://www.crossref.org/blog/dois-and-matching-regular-expressions/
 	const isbnRegex = /^[\d-]{9,}$/;
 	const isEmptyRegex = /^\s*$/;
 
@@ -127,13 +133,13 @@ function run(argv) {
 		console.log("isDOI: " + isDOI);
 		const doiURL = "https://doi.org/" + input.match(doiRegex)[0];
 		bibtexEntry = app.doShellScript(`curl -sLH "Accept: application/x-bibtex" "${doiURL}"`); // https://citation.crosscite.org/docs.html
-		if (!bibtexEntry.includes("@")) return "ERROR";
+		if (!bibtexEntry.includes("@")) return "DOI invalid";
 
 	} else if (isISBN) {
 		const isbn = input;
 		bibtexEntry = app.doShellScript(`curl -sHL "https://www.ebook.de/de/tools/isbn2bibtex?isbn=${isbn}"`);
 		if (bibtexEntry.includes("Not found")) return "not found";
-		if (!bibtexEntry.includes("@")) return "ERROR";
+		if (!bibtexEntry.includes("@")) return "ISBN invalid";
 		bibtexEntry = bibtexEntry
 			.replace(/^\s+\w+ =/m, (field) => field.toLowerCase()) // lowercase fields
 			.replace(/^(\tpagetotal = {\d+) Seiten/m, "$1"); // remove German page word

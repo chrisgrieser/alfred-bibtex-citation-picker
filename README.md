@@ -107,7 +107,6 @@ If there is a citation syntax that is commonly used, feel free to make a PR to [
 
 ### Adding entries to the BibTeX library
 - Use the Alfred Keyword `+`, followed by a __DOI__, __ISBN__, or __URL that contains a DOI__.
-- You can __parse & add a bibliographic entry__ by selecting the text and pressing the respective hotkey (requires [anystyle](https://github.com/inukshuk/anystyle), installed via `sudo gem install anystyle-cli`).
 - Leave the input after the `+` empty to create a __new, empty BibTeX entry__.
 - The new entry will be added to your library, with a properly formatted, unique citekey. Afterwards the entry will be opened in the app specified in `open_entries_in`.
 - Note that adding entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/) since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file will be overridden.
