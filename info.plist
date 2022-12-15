@@ -4,8 +4,6 @@
 <dict>
 	<key>bundleid</key>
 	<string>de.chris-grieser.alfred-bibtex-citation-picker</string>
-	<key>category</key>
-	<string>Academic</string>
 	<key>connections</key>
 	<dict>
 		<key>00BFDB01-AD99-47DB-9BB8-5A6EA2E3016C</key>
