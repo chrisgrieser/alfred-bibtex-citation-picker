@@ -29,8 +29,6 @@ function run(argv) {
 		str.writeToFileAtomicallyEncodingError(file, true, $.NSUTF8StringEncoding, null);
 	}
 
-	const input = argv.join("").trim();
-	const libraryPath = $.getenv("bibtex_library_path").replace(/^~/, app.pathTo("home folder"));
 	//---------------------------------------------------------------------------
 
 
@@ -111,16 +109,19 @@ function run(argv) {
 		return nextCitekey;
 	}
 
-	const doiRegex = /\b10.\d{4,9}\/[-._;()/:A-Z0-9]+(?=$|[?/ ])/i; // https://www.crossref.org/blog/dois-and-matching-regular-expressions/
 
 	//───────────────────────────────────────────────────────────────────────────
 
+	console.log("beep");
+	const doiRegex = /10.\d{4,9}\/[-._;()/:A-Z0-9]+(?=$|[?/ ])/i; // https://www.crossref.org/blog/dois-and-matching-regular-expressions/
 	const isbnRegex = /^[\d-]{9,}$/;
 	const isEmptyRegex = /^\s*$/;
 
 	const bibtexEntryTemplate = "@misc{NEW_ENTRY,\n\tauthor = {Doe, Jane},\n\ttitle = {NEW_ENTRY},\n\tpages = {1--1},\n\tyear = 0000\n}\n";
 	const fieldsToDelete = ["date", "ean", "month", "issn", "language", "copyright"];
 
+	const input = argv.join("").trim();
+	const libraryPath = $.getenv("bibtex_library_path").replace(/^~/, app.pathTo("home folder"));
 	//---------------------------------------------------------------------------
 
 	let bibtexEntry;
@@ -128,6 +129,7 @@ function run(argv) {
 	let newCitekey;
 
 	// type of reading to perform
+	console.log("beep");
 	let parseSelection;
 	try {
 		parseSelection = $.getenv("parsing") === "true";
@@ -140,6 +142,7 @@ function run(argv) {
 	if (!isDOI && !isISBN && !isEmpty && !parseSelection) return "ERROR";
 
 	if (isDOI) {
+		console.log("isDOI: " + isDOI);
 		const doiURL = "https://doi.org/" + input.match(doiRegex)[0];
 		bibtexEntry = app.doShellScript(`curl -sLH "Accept: application/x-bibtex" "${doiURL}"`); // https://citation.crosscite.org/docs.html
 		if (!bibtexEntry.includes("@")) return "ERROR";
@@ -169,7 +172,7 @@ function run(argv) {
 	}
 
 	// insert content to append
-	bibtexEntry = bibtexEntry.replaceAll("  ", "\t"); // add proper indention
+	bibtexEntry = bibtexEntry.replaceAll("  ", "\t"); // add proper indentation
 	let newEntryProperties = bibtexEntry.split(newLineDelimiter);
 
 	// clean up fields
