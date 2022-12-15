@@ -160,7 +160,7 @@ function run(argv) {
 		.filter(property => {
 			const field = property.replace(/^\s*(\w+) ?=.*/, "$1");
 			console.log("field: " + field);
-			return !fieldsToDelete.includes(field);
+			return !fieldsToDelete.includes(field.toLowerCase());
 		});
 
 	// Generate citekey
