@@ -138,7 +138,6 @@ function run(argv) {
 
 	// DOI
 	if (isDOI) {
-		console.log("isDOI: " + isDOI);
 		const doiURL = "https://doi.org/" + input.match(doiRegex)[0];
 		bibtexEntry = app.doShellScript(`curl -sLH "Accept: application/x-bibtex" "${doiURL}"`); // https://citation.crosscite.org/docs.html
 		if (!bibtexEntry.includes("@")) return "DOI invalid";
