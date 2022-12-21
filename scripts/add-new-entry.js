@@ -30,9 +30,7 @@ function writeToFile(text, file) {
 //──────────────────────────────────────────────────────────────────────────────
 
 function parseBibtexProperty(arr, property) {
-	arr = arr
-		.map(line => line.trim())
-		.filter(p => p.startsWith(property + " "));
+	arr = arr.map(line => line.trim()).filter(p => p.startsWith(property + " "));
 	if (!arr.length) return "";
 	const value = arr[0]
 		.split("=")[1]
@@ -113,8 +111,9 @@ function run(argv) {
 	const isbnRegex = /^[\d-]{9,}$/;
 	const isEmptyRegex = /^\s*$/;
 
-	const bibtexEntryTemplate = "@misc{NEW_ENTRY,\n\tauthor = {Doe, Jane},\n\ttitle = {NEW_ENTRY},\n\tpages = {1--1},\n\tyear = 0000\n}\n";
-	const fieldsToDelete = ["date", "ean", "month", "issn", "language", "copyright"];
+	const bibtexEntryTemplate =
+		"@misc{NEW_ENTRY,\n\tauthor = {Doe, Jane},\n\ttitle = {NEW_ENTRY},\n\tpages = {1--1},\n\tyear = 0000\n}\n";
+	const keysToDelete = ["date", "ean", "month", "issn", "language", "copyright", "pagetotal"];
 
 	const input = argv.join("").trim();
 	const libraryPath = $.getenv("bibtex_library_path").replace(/^~/, app.pathTo("home folder"));
@@ -130,29 +129,29 @@ function run(argv) {
 	const parseText = $.getenv("parseText") === "true";
 	if (!isDOI && !isISBN && !isEmpty && !parseText) return "input invalid";
 
+	// DOI
 	if (isDOI) {
 		console.log("isDOI: " + isDOI);
 		const doiURL = "https://doi.org/" + input.match(doiRegex)[0];
 		bibtexEntry = app.doShellScript(`curl -sLH "Accept: application/x-bibtex" "${doiURL}"`); // https://citation.crosscite.org/docs.html
 		if (!bibtexEntry.includes("@")) return "DOI invalid";
 
+		// ISBN
 	} else if (isISBN) {
 		const isbn = input;
 		bibtexEntry = app.doShellScript(`curl -sHL "https://www.ebook.de/de/tools/isbn2bibtex?isbn=${isbn}"`);
 		if (bibtexEntry.includes("Not found")) return "ISBN not registered.";
 		if (!bibtexEntry.includes("@")) return "ISBN invalid";
-		bibtexEntry = bibtexEntry
-			.replace(/^\s+\w+ =/m, (field) => field.toLowerCase()) // lowercase fields
-			.replace(/^(\tpagetotal = \{\d+) Seiten/m, "$1"); // remove German page word
 
+		// parse
 	} else if (parseText) {
-		// anystyle can't read STDIN, so this has to be written to a file
+		// INFO anystyle can't read STDIN, so this has to be written to a file
 		// https://github.com/inukshuk/anystyle-cli#anystyle-help-parse
 		const tempPath = $.getenv("alfred_workflow_cache") + "/temp.txt";
 		writeToFile(input, tempPath);
-		bibtexEntry = app.doShellScript(`anystyle --stdout --format=bib parse "${tempPath}"`)
-			.replaceAll(" date =", " year ="); // consistently "year"
+		bibtexEntry = app.doShellScript(`anystyle --stdout --format=bib parse "${tempPath}"`);
 
+		// empty / new
 	} else if (isEmpty) {
 		newEntry = bibtexEntryTemplate;
 		newCitekey = "NEW_ENTRY";
@@ -160,17 +159,20 @@ function run(argv) {
 		return newCitekey; // pass for opening function
 	}
 
-	// insert content to append
-	bibtexEntry = bibtexEntry.replaceAll("  ", "\t"); // add proper indentation
-	let newEntryProperties = bibtexEntry.split(newLineDelimiter);
+	// INSERT CONTENT TO APPEND
 
-	// clean up fields
-	newEntryProperties = newEntryProperties
-		.filter(property => {
-			const field = property.replace(/^\s*(\w+) ?=.*/, "$1");
-			console.log("field: " + field);
-			return !fieldsToDelete.includes(field.toLowerCase());
-		});
+	// cleaning
+	bibtexEntry = bibtexEntry
+		.replaceAll("  ", "\t") // indentation
+		.replace(/ ?gmbh/gi, "") // publisher
+		.replace(/^\s*\w+ =/gm, field => field.toLowerCase()) // consistently lowercase
+		.replaceAll(" date =", " year ="); // consistently "year"
+
+	// filter out fields to ignore
+	const newEntryProperties = bibtexEntry.split(newLineDelimiter).filter(property => {
+		const key = property.replace(/^\s*(\w+) ?=.*/, "$1");
+		return !keysToDelete.includes(key.toLowerCase());
+	});
 
 	// Generate citekey
 	newCitekey = generateCitekey(newEntryProperties);
