@@ -86,12 +86,18 @@ function generateCitekey(bibtexPropertyArr) {
 
 	// strip diacritics from authorStr
 	authorStr = authorStr
-		.replace(/ä|á|â|à|ã/g, "a")
-		.replace(/Ä|Á|Â|À|Ã/g, "A")
-		.replace(/ö|ó|ô|õ|ò|ø/g, "o")
-		.replace(/Ö|Ó|Ô|Õ|Ò|Ø/g, "O")
-		.replace(/ü|ú|û|ù/g, "u")
-		.replace(/Ü|Ú|Û|Ù/g, "U")
+		.replaceAll("ü", "ue")
+		.replaceAll("Ü", "Ue")
+		.replaceAll("ä", "ae")
+		.replaceAll("Ä", "Ae")
+		.replaceAll("ö", "oe")
+		.replaceAll("Ö", "Oe")
+		.replace(/á|â|à|ã/g, "a")
+		.replace(/Á|Â|À|Ã/g, "A")
+		.replace(/ó|ô|õ|ò|ø/g, "o")
+		.replace(/Ó|Ô|Õ|Ò|Ø/g, "O")
+		.replace(/ú|û|ù/g, "u")
+		.replace(/Ú|Û|Ù/g, "U")
 		.replace(/é|ê|è|ë/g, "e")
 		.replace(/É|Ê|È|Ë/g, "E")
 		.replace(/í|î|ì|ï/g, "i")
@@ -104,7 +110,7 @@ function generateCitekey(bibtexPropertyArr) {
 	return citekey;
 }
 
-//---------------------------------------------------------------------------
+//──────────────────────────────────────────────────────────────────────────────
 
 function run(argv) {
 	const doiRegex = /\b10.\d{4,9}\/[-._;()/:A-Z0-9]+(?=$|[?/ ])/i; // https://www.crossref.org/blog/dois-and-matching-regular-expressions/
@@ -117,7 +123,8 @@ function run(argv) {
 
 	const input = argv.join("").trim();
 	const libraryPath = $.getenv("bibtex_library_path").replace(/^~/, app.pathTo("home folder"));
-	//---------------------------------------------------------------------------
+	//───────────────────────────────────────────────────────────────────────────
+
 
 	let bibtexEntry;
 	let newEntry;
@@ -159,8 +166,9 @@ function run(argv) {
 		return newCitekey; // pass for opening function
 	}
 
-	// INSERT CONTENT TO APPEND
+	//───────────────────────────────────────────────────────────────────────────
 
+	// INSERT CONTENT TO APPEND
 	// cleaning
 	bibtexEntry = bibtexEntry
 		.replaceAll("  ", "\t") // indentation
