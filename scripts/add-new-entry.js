@@ -188,7 +188,7 @@ function run(argv) {
 		.replace(/^\s*\w+ =/gm, field => field.toLowerCase()) // lowercase all keys
 		.replaceAll("\tdate =", "\tyear =") // consistently "year"
 		.replaceAll("%2F", "/") // fix for URL key in some DOIs
-		.replace(/\tyear = \{?(\d{4})\b.*\}?/g, "year = $1,"); // clean year key
+		.replace(/\tyear = \{?(\d{4})\b.*\}?/g, "\tyear = $1,"); // clean year key
 
 	// filter out fields to ignore
 	let newEntryProperties = bibtexEntry.split(newLineDelimiter).filter(property => {
