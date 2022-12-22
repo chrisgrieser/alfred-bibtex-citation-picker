@@ -1346,7 +1346,7 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 						<key>matchmode</key>
 						<integer>4</integer>
 						<key>matchstring</key>
-						<string>invalid|not found</string>
+						<string>invalid|not found|not registered</string>
 						<key>outputlabel</key>
 						<string>error</string>
 						<key>uid</key>
