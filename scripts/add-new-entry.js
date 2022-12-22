@@ -176,13 +176,14 @@ function run(argv) {
 
 	bibtexEntry = bibtexEntry
 		.replace(/^ {2}/g, "\t") // indentation
-		.replace(/^\t(publisher.* ) ?(?:gmbh|ltd|publications)(.*)$/mi, "$1$2") // publisher garbage
+		.replace(keysToDeleteRegex, "")
 		.replace(/^\s*\w+ =/gm, field => field.toLowerCase()) // lowercase all keys
+		.replace(/^\t(publisher.* ) ?(?:gmbh|ltd|publications)(.*)$/mi, "$1$2") // publisher garbage
 		.replace("\tdate =", "\tyear =") // consistently "year"
 		.replace("%2F", "/") // fix for URL key in some DOIs
 		.replace(/\tyear = \{?(\d{4})\b.*\}?/, "\tyear = $1,") // clean year key
 		.replace(/^\turl.*(ebooks|doi).*[\n\r]/m, "") // doi url redundant, ebooks url ie.e. ads
-		.replace(keysToDeleteRegex, "");
+		.replace(/amp\$\\mathsemicolon\$/, ""); // invalid bibtex
 
 	let newEntryProperties = bibtexEntry.split(/[\n\r]/);
 	newEntryProperties = [...newEntryProperties]; // remove duplicate keys (e.g., occurring through date and year keys)
