@@ -7,7 +7,6 @@ ObjC.import("stdlib");
 ObjC.import("Foundation");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
-const newLineDelimiter = "\r"; // must be /r instead of /n because JXA
 
 function appendToFile(text, absPath) {
 	text = text.replaceAll("'", "`"); // ' in text string breaks echo writing method
@@ -124,16 +123,6 @@ function run(argv) {
 
 	const bibtexEntryTemplate =
 		"@misc{NEW_ENTRY,\n\tauthor = {Doe, Jane},\n\ttitle = {NEW_ENTRY},\n\tpages = {1--1},\n\tyear = 0000\n}\n";
-	const keysToDelete = [
-		"date",
-		"ean",
-		"month",
-		"issn",
-		"language",
-		"copyright",
-		"pagetotal",
-		"url", // either redundant with DOI, or adlink to ebooks.de
-	];
 
 	const input = argv.join("").trim();
 	const libraryPath = $.getenv("bibtex_library_path").replace(/^~/, app.pathTo("home folder"));
@@ -182,22 +171,21 @@ function run(argv) {
 
 	// INSERT CONTENT TO APPEND
 	// cleaning
+	const keysToDelete = ["ean", "month", "issn", "language", "copyright", "pagetotal", "address", "abstract", "series"];
+	const keysToDeleteRegex = new RegExp("^\t(" + keysToDelete.join("|") + ").*[\n\r]", "gm");
+
 	bibtexEntry = bibtexEntry
-		.replaceAll("  ", "\t") // indentation
-		.replace(/ ?(gmbh|ltd)/gi, "") // publisher
+		.replace(/^ {2}/g, "\t") // indentation
+		.replace(/^\t(publisher.* ) ?(?:gmbh|ltd|publications)(.*)$/mi, "$1$2") // publisher garbage
 		.replace(/^\s*\w+ =/gm, field => field.toLowerCase()) // lowercase all keys
-		.replaceAll("\tdate =", "\tyear =") // consistently "year"
-		.replaceAll("%2F", "/") // fix for URL key in some DOIs
-		.replace(/\tyear = \{?(\d{4})\b.*\}?/g, "\tyear = $1,"); // clean year key
+		.replace("\tdate =", "\tyear =") // consistently "year"
+		.replace("%2F", "/") // fix for URL key in some DOIs
+		.replace(/\tyear = \{?(\d{4})\b.*\}?/, "\tyear = $1,") // clean year key
+		.replace(/^\turl.*(ebooks|doi).*[\n\r]/m, "") // doi url redundant, ebooks url ie.e. ads
+		.replace(keysToDeleteRegex, "");
 
-	// filter out fields to ignore
-	let newEntryProperties = bibtexEntry.split(newLineDelimiter).filter(property => {
-		const key = property.replace(/^\s*(\w+) ?=.*/, "$1");
-		return !keysToDelete.includes(key.toLowerCase());
-	});
-
-	// remove duplicate keys (e.g., occurring through date and year keys)
-	newEntryProperties = [...newEntryProperties];
+	let newEntryProperties = bibtexEntry.split(/[\n\r]/);
+	newEntryProperties = [...newEntryProperties]; // remove duplicate keys (e.g., occurring through date and year keys)
 
 	// Generate citekey
 	newCitekey = generateCitekey(newEntryProperties);
