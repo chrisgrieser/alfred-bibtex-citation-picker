@@ -173,7 +173,8 @@ function run(argv) {
 		.replaceAll("  ", "\t") // indentation
 		.replace(/ ?gmbh/gi, "") // publisher
 		.replace(/^\s*\w+ =/gm, field => field.toLowerCase()) // consistently lowercase
-		.replaceAll(" date =", " year ="); // consistently "year"
+		.replaceAll("\tdate =", "\tyear =") // consistently "year"
+		.replaceAll("%2F", "/"); // fix for URL key
 
 	// filter out fields to ignore
 	const newEntryProperties = bibtexEntry.split(newLineDelimiter).filter(property => {
