@@ -251,6 +251,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>4A969BD2-B35E-426A-A692-429F0901DF1C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>AF09AE5D-C351-4190-8AA6-B1924D88B22F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>4AE87B47-81EE-4552-A172-685A3F61D708</key>
 		<array>
 			<dict>
@@ -605,16 +618,6 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>AF09AE5D-C351-4190-8AA6-B1924D88B22F</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
 				<string>9C01A8C9-CBF3-4261-A0F2-CD6DC0E55515</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -622,6 +625,16 @@
 				<string></string>
 				<key>sourceoutputuid</key>
 				<string>14FB4C6A-E89A-4DBE-8F36-87C64E7B4314</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>4A969BD2-B35E-426A-A692-429F0901DF1C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -1307,7 +1320,7 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 				<key>keyword</key>
 				<string>+</string>
 				<key>subtext</key>
-				<string>DOI, ISBN or URL with DOI. Leave empty to insert empty Entry.</string>
+				<string>DOI or ISBN. Leave empty to insert empty entry.</string>
 				<key>text</key>
 				<string>Add to Bibliography</string>
 				<key>withspace</key>
@@ -1504,6 +1517,27 @@ fi</string>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>65CA24BA-2DA6-4DC0-A2BE-3E4E4D5FDD72</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string>\n$</string>
+				<key>regexcaseinsensitive</key>
+				<false/>
+				<key>regexmultiline</key>
+				<false/>
+				<key>replacestring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.replace</string>
+			<key>uid</key>
+			<string>4A969BD2-B35E-426A-A692-429F0901DF1C</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -2465,6 +2499,17 @@ to set a hotkey for the citaiton picker.</string>
 			<real>310</real>
 			<key>ypos</key>
 			<real>15</real>
+		</dict>
+		<key>4A969BD2-B35E-426A-A692-429F0901DF1C</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>note</key>
+			<string>remove \n</string>
+			<key>xpos</key>
+			<real>835</real>
+			<key>ypos</key>
+			<real>570</real>
 		</dict>
 		<key>4AE87B47-81EE-4552-A172-685A3F61D708</key>
 		<dict>

@@ -71,18 +71,23 @@ function generateCitekey(bibtexPropertyArr) {
 	else authEds = "NoAuthor";
 
 	let authorStr;
-	if (authEds === "NoAuthor") authorStr = authEds;
-	else {
-		const lastNameArr = authEds
-			.split(" and ") // "and" used as delimiter in bibtex for names
-			.map(name => {
-				if (name.includes(",")) return name.split(",")[0].trim(); // ottobib returns "last name - first name"
-				return name.split(" ").pop(); // doi.org returns "first name - last name"
-			});
+	const lastNameArr = [];
+	const invalidLastName = authEds.match(/,.*,/) && !authEds.includes("and"); // not complying naming standard with and as delimiter
 
-		if (lastNameArr.length < 3) authorStr = lastNameArr.join("");
-		else authorStr = lastNameArr[0] + "EtAl";
+	if (authEds === "NoAuthor") lastNameArr[0] = "NoAuthor";
+	else if (invalidLastName) lastNameArr[0] = "Invalid";
+	else {
+		authEds
+			.split(" and ") // "and" used as delimiter in bibtex for names
+			.forEach(name => {
+				// doi.org returns "first last", isbn mostly "last, first"
+				const isLastFirst = name.includes(",");
+				const lastName = isLastFirst ? name.split(",")[0].trim() : name.split(" ").pop();
+				lastNameArr.push(lastName);
+			});
 	}
+	if (lastNameArr.length < 3) authorStr = lastNameArr.join("");
+	else authorStr = lastNameArr[0] + "EtAl";
 
 	// strip diacritics from authorStr
 	authorStr = authorStr
@@ -119,12 +124,20 @@ function run(argv) {
 
 	const bibtexEntryTemplate =
 		"@misc{NEW_ENTRY,\n\tauthor = {Doe, Jane},\n\ttitle = {NEW_ENTRY},\n\tpages = {1--1},\n\tyear = 0000\n}\n";
-	const keysToDelete = ["date", "ean", "month", "issn", "language", "copyright", "pagetotal"];
+	const keysToDelete = [
+		"date",
+		"ean",
+		"month",
+		"issn",
+		"language",
+		"copyright",
+		"pagetotal",
+		"url", // either redundant with DOI, or adlink to ebooks.de
+	];
 
 	const input = argv.join("").trim();
 	const libraryPath = $.getenv("bibtex_library_path").replace(/^~/, app.pathTo("home folder"));
 	//───────────────────────────────────────────────────────────────────────────
-
 
 	let bibtexEntry;
 	let newEntry;
@@ -172,15 +185,19 @@ function run(argv) {
 	bibtexEntry = bibtexEntry
 		.replaceAll("  ", "\t") // indentation
 		.replace(/ ?gmbh/gi, "") // publisher
-		.replace(/^\s*\w+ =/gm, field => field.toLowerCase()) // consistently lowercase
+		.replace(/^\s*\w+ =/gm, field => field.toLowerCase()) // lowercase all keys
 		.replaceAll("\tdate =", "\tyear =") // consistently "year"
-		.replaceAll("%2F", "/"); // fix for URL key
+		.replaceAll("%2F", "/") // fix for URL key
+		.replace(/\tyear = \{?(\d{4})\b.*\}?/g, "year = $1,"); // clean year key
 
 	// filter out fields to ignore
-	const newEntryProperties = bibtexEntry.split(newLineDelimiter).filter(property => {
+	let newEntryProperties = bibtexEntry.split(newLineDelimiter).filter(property => {
 		const key = property.replace(/^\s*(\w+) ?=.*/, "$1");
 		return !keysToDelete.includes(key.toLowerCase());
 	});
+
+	// remove duplicate keys (e.g., occurring through date and year keys)
+	newEntryProperties = [...newEntryProperties];
 
 	// Generate citekey
 	newCitekey = generateCitekey(newEntryProperties);
@@ -191,7 +208,6 @@ function run(argv) {
 	newEntryProperties.splice(1, 0, "\tkeywords = {},");
 
 	newEntry = newEntryProperties.join("\n");
-
 	appendToFile(newEntry, libraryPath);
 	return newCitekey; // pass for opening function
 }
