@@ -184,10 +184,10 @@ function run(argv) {
 	// cleaning
 	bibtexEntry = bibtexEntry
 		.replaceAll("  ", "\t") // indentation
-		.replace(/ ?gmbh/gi, "") // publisher
+		.replace(/ ?(gmbh|ltd)/gi, "") // publisher
 		.replace(/^\s*\w+ =/gm, field => field.toLowerCase()) // lowercase all keys
 		.replaceAll("\tdate =", "\tyear =") // consistently "year"
-		.replaceAll("%2F", "/") // fix for URL key
+		.replaceAll("%2F", "/") // fix for URL key in some DOIs
 		.replace(/\tyear = \{?(\d{4})\b.*\}?/g, "year = $1,"); // clean year key
 
 	// filter out fields to ignore
