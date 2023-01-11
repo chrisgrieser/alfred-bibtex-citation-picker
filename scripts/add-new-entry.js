@@ -178,11 +178,11 @@ function run(argv) {
 		.replace(/^ {2}/gm, "\t") // indentation
 		.replace(/^\s*\w+ =/gm, field => field.toLowerCase()) // lowercase all keys
 		.replace(keysToDeleteRegex, "")
-		.replace(/^\t(publisher.* ) ?(?:gmbh|ltd|publications)(.*)$/mi, "$1$2") // publisher garbage
+		.replace(/^\t(publisher.*?)\{?(?: ?\{?gmbh|ltd|publications|llc)\}?(.*)$/mi, "$1$2") // publisher garbage
 		.replace("\tdate =", "\tyear =") // consistently "year"
 		.replace("%2F", "/") // fix for URL key in some DOIs
 		.replace(/\tyear = \{?(\d{4}).*\}?/g, "\tyear = $1,") // clean year key
-		.replace(/^\turl.*(ebook|doi).*[\n\r]/m, "") // doi url redundant, ebooks url ie.e. ads
+		.replace(/^\turl.*(ebook|doi).*[\n\r]/m, "") // doi url redundant, ebook url are basically ads
 		.replace(/amp\$\\mathsemicolon\$/, ""); // invalid bibtex
 
 	let newEntryProperties = bibtexEntry.split(/[\n\r]/);
