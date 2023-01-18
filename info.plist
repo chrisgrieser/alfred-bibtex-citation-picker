@@ -2265,11 +2265,6 @@ echo "$*"</string>
 - [Changelog](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/Changelog.md)
 - [Bug Reports](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues)
 
-## ⚠️ First Upgrade to Version 10 ⚠️
-Version 10 of this workflow uses the new Alfred 5 User Configuration. If you first update to version 10+ from an older version, you have to **DISABLE the checkbox "Migrate my workflow customizations"** and configure your workflow again with the settings to the left. This is due to Alfred 5 using a different form of configuration in the background.
-
-*If you missed to disable the checkbox, you can simply re-download the latest release from GitHub, install the `.alfredworkflow` file and disable the checkbox this time.*
-
 ## Workflow Setup
 1. Add the path to your `.bib` to the right and you are good to go.
 2. For all the features this workflow has to offer, refer to the [README](https://github.com/chrisgrieser/alfred-bibtex-citation-picker#supercharged-citation-picker).
@@ -2278,14 +2273,14 @@ Version 10 of this workflow uses the new Alfred 5 User Configuration. If you fir
 ## Created by
 [Chris Grieser](https://chris-grieser.de/)
 
-#### Profiles
+**Profiles**
 - [ResearchGate](https://www.researchgate.net/profile/Christopher-Grieser)
 - [Discord](https://discordapp.com/users/462774483044794368/)
 - [GitHub](https://github.com/chrisgrieser/)
 - [Twitter](https://twitter.com/pseudo_meta)
 - [LinkedIn](https://www.linkedin.com/in/christopher-grieser-ba693b17a/)
 
-#### Buy me a Coffee
+**Buy me a Coffee**
 [Ko-Fi](https://ko-fi.com/pseudometa)</string>
 	<key>uidata</key>
 	<dict>
@@ -3023,13 +3018,7 @@ OR parse text (with cmd)</string>
 		<string></string>
 		<key>alfred_bar_length</key>
 		<string>60</string>
-		<key>file_manager</key>
-		<string>Finder</string>
 	</dict>
-	<key>variablesdontexport</key>
-	<array>
-		<string>file_manager</string>
-	</array>
 	<key>version</key>
 	<string>10.0.14</string>
 	<key>webaddress</key>
