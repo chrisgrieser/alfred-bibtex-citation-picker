@@ -4,12 +4,6 @@
 
 A citation picker for academics that write in markdown. Using [Alfred](https://www.alfredapp.com/), it inserts citations from a BibTeX File in various formats, e.g. [Pandoc](https://pandoc.org/MANUAL.html#citation-syntax), [Multi-Markdown](https://fletcher.github.io/MultiMarkdown-6/syntax/citation.html) or [Latex](https://www.overleaf.com/learn/latex/Biblatex_citation_styles).
 
-> __Note__
-> Version 9.7.1 is the last version compatible with Alfred 4. All future versions of this workflow will require [Alfred 5](https://www.alfredapp.com/).
-
-> __Warning__
-> The initial version 10 had a bug preventing auto-updating. Please [manually download 10.0.11 or newer](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/releases) to receive auto-updates.
-
 <img width=60% alt="promo screenshot" src="assets/promo.png">
 
 ## Feature Overview
@@ -20,7 +14,7 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 - __Blazingly Fast:__ considerably quicker than any other citation pickers I know of (~200ms to fully reload a library with ~4000 entries on my machine).
 - __Easy Installation:__ no dependencies, no required plugins, no setup. Just enter the path to your `.bib` file.
 - __Minimalistic reference manager__: add or remove entries the BibTeX library, automatically rename and file PDFs, parse single entries, …
-- __Obsidian integration:__ When located in an [Obsidian](https://obsidian.md/) vault, literature notes will automatically be opened/created in Obsidian instead of the default markdown app.
+- __Obsidian integration:__ When located in an [Obsidian](https://obsidian.md/) vault, literature notes is automatically opened/created in Obsidian instead of the default markdown app.
 
 ## Table of Contents
 <!--toc:start-->
@@ -62,7 +56,7 @@ Press the hotkey in any text field to launch the citation picker.
 
 ### Citation Actions
 - `↵`: Paste the citekey of the selected citation.
-- `⌥ + ↵`:  Add another citation.
+- `⌥ + ↵`: Add another citation.
 - `⌘ + ↵`: Add page numbers before pasting the selected citekey. Confirm the page number with `⌥ + ↵` or `⌘ + ↵` to add another citation afterwards.
 
 ### URL Actions
@@ -93,7 +87,7 @@ You can use the `scp` and select __Change Citation Format__ to change the format
 ### Further Format Customization
 If you want to use a format that isn't available, you can customize the format yourself by changing the workflow environment variables starting with `_format` (Tutorial: [How to set environment variables in Alfred](https://www.alfredapp.com/help/workflows/advanced/variables/#environment)).
 
-If there is a citation syntax that is commonly used, feel free to make a PR to [this file which generates the formats](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/toggle-citation-format.js) or open a [Feature Request](https://www.ieee.org/).
+If there is a citation syntax that is commonly used, feel free to make a PR to [this file which generates the formats](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/toggle-citation-format.js) or open a [Feature Request](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues/new?assignees=&labels=enhancement&template=feature_request.yml&title=Feature+Request%3A+).
 
 ## Advanced Usage
 
