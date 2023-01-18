@@ -3020,7 +3020,7 @@ OR parse text (with cmd)</string>
 		<string>60</string>
 	</dict>
 	<key>version</key>
-	<string>10.0.14</string>
+	<string>10.0.15</string>
 	<key>webaddress</key>
 	<string>https://github.com/chrisgrieser/alfred-bibtex-citation-picker</string>
 </dict>

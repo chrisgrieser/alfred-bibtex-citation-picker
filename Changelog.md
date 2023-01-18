@@ -1,3 +1,17 @@
+- 2023-01-18	release 10.0.15
+- 2023-01-18	chore
+- 2023-01-11	chore
+- 2023-01-11	fix: bibtex entry cleanups
+- 2023-01-05	chore
+- 2022-12-22	more cleanup stuff
+- 2022-12-22	more cleaning of new entries
+- 2022-12-21	improved diacritic-to-citekey
+- 2022-12-21	some improvements to new entry cleaning
+- 2022-12-15	re-add anystyle in working form 🙈
+- 2022-12-15	remove unused stuff
+- 2022-12-15	removed anystyle integration since unstable
+- 2022-12-07	improved bibliography adding
+- 2022-12-05	fix buffer not reloading
 - 2022-10-21	release 10.0.14
 - 2022-10-21	fix #17
 - 2022-10-04	fixed opening in neovim
