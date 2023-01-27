@@ -1,3 +1,5 @@
+- 2023-01-27	release 11.0.0
+- 2023-01-27	chore: prepare for Alfred Gallery
 - 2023-01-27	release 10.1.0
 - 2023-01-27	chore
 - 2023-01-27	chore
