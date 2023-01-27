@@ -1,8 +1,8 @@
 #!/usr/bin/env osascript -l JavaScript
 
-// ----------------------
+//──────────────────────────────────────────────────────────────────────────────
+
 // JXA & Alfred specific
-// ----------------------
 ObjC.import("stdlib");
 ObjC.import("Foundation");
 const app = Application.currentApplication();
@@ -119,24 +119,18 @@ function generateCitekey(bibtexPropertyArr) {
 function run(argv) {
 	const doiRegex = /\b10.\d{4,9}\/[-._;()/:A-Z0-9]+(?=$|[?/ ])/i; // https://www.crossref.org/blog/dois-and-matching-regular-expressions/
 	const isbnRegex = /^[\d-]{9,}$/;
-	const isEmptyRegex = /^\s*$/;
-
-	const bibtexEntryTemplate =
-		"@misc{NEW_ENTRY,\n\tauthor = {Doe, Jane},\n\ttitle = {NEW_ENTRY},\n\tpages = {1--1},\n\tyear = 0000\n}\n";
 
 	const input = argv.join("").trim();
 	const libraryPath = $.getenv("bibtex_library_path").replace(/^~/, app.pathTo("home folder"));
 	//───────────────────────────────────────────────────────────────────────────
 
 	let bibtexEntry;
-	let newEntry;
 	let newCitekey;
 
 	const isDOI = doiRegex.test(input);
 	const isISBN = isbnRegex.test(input);
-	const isEmpty = isEmptyRegex.test(input);
 	const parseText = $.getenv("parseText") === "true";
-	if (!isDOI && !isISBN && !isEmpty && !parseText) return "input invalid";
+	if (!isDOI && !isISBN && !parseText) return "input invalid";
 
 	// DOI
 	if (isDOI) {
@@ -158,13 +152,6 @@ function run(argv) {
 		const tempPath = $.getenv("alfred_workflow_cache") + "/temp.txt";
 		writeToFile(input, tempPath);
 		bibtexEntry = app.doShellScript(`anystyle --stdout --format=bib parse "${tempPath}"`);
-
-		// empty / new
-	} else if (isEmpty) {
-		newEntry = bibtexEntryTemplate;
-		newCitekey = "NEW_ENTRY";
-		appendToFile(newEntry, libraryPath);
-		return newCitekey; // pass for opening function
 	}
 
 	//───────────────────────────────────────────────────────────────────────────
@@ -196,7 +183,7 @@ function run(argv) {
 	// Create keywords field
 	newEntryProperties.splice(1, 0, "\tkeywords = {},");
 
-	newEntry = newEntryProperties.join("\n");
+	const newEntry = newEntryProperties.join("\n");
 	appendToFile(newEntry, libraryPath);
 	return newCitekey; // pass for opening function
 }

@@ -100,7 +100,7 @@ If there is a citation syntax that is commonly used, feel free to make a PR to [
 - Note that removing entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/) since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file will be overridden.
 
 ### Adding entries to the BibTeX library
-- Use the Alfred Keyword `+`, followed by a __DOI__, __ISBN__, or __URL that contains a DOI__.
+- There are is a universal actions that can be triggered on a __DOI__, __ISBN__, or __URL that contains a DOI__ to those entries to the `.bib` library.
 - You can __parse & add a bibliographic entry__ by using the Alfred keyword `+`, but confirming with `⌘↵` instead (requires [anystyle](https://github.com/inukshuk/anystyle)).
 - Leave the input after the `+` empty to create a __new, empty BibTeX entry__.
 - The new entry will be added to your library, with a properly formatted, unique citekey. Afterwards the entry will be opened in the app specified in `open_entries_in`.
