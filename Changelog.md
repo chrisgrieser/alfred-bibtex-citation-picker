@@ -1,3 +1,9 @@
+- 2023-01-27	release 10.1.0
+- 2023-01-27	chore
+- 2023-01-27	chore
+- 2023-01-27	feat! remove + keyword, as using unversal actions
+- 2023-01-27	feat: add file actions for adding new entries
+- 2023-01-18	chore
 - 2023-01-18	release 10.0.15
 - 2023-01-18	chore
 - 2023-01-11	chore
