@@ -56,7 +56,10 @@ Press the hotkey in any text field to start the citation picker.
 ### Citation Actions
 - `↵`: Paste the citekey of the selected citation.
 - `⌥ + ↵`: Add another citation.
-- `⌘ + ↵`: Add page numbers before pasting the selected citekey. Confirm the page number with `⌥ + ↵` or `⌘ + ↵` to add another citation afterwards.
+- `⌘⇧ + ↵`: Paste an inline-citation (citation without surrounding formatting, e.g. `@Grieser2022` instead of `[@Grieser2022])
+- ⌘ + ↵`: Add page numbers before pasting the selected citekey. 
+	- Confirm the page number with `⌥ + ↵` to add another citation afterwards.
+	- Confirm the page number with `⌘⇧ + ↵` for an inline-citation with page number (`@Grieser2022 [p. 42]`).
 
 ### URL Actions
 - `⌃ + ↵`: Open the URL in the browser.
