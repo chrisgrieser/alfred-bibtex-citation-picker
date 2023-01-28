@@ -1,8 +1,8 @@
 # Supercharged Citation Picker
 
-![](https://img.shields.io/github/downloads/chrisgrieser/alfred-bibtex-citation-picker/total?label=Total%20Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/alfred-bibtex-citation-picker?label=Latest%20Release&style=plastic) [![](https://img.shields.io/badge/changelog-click%20here-FFE800?style=plastic)](Changelog.md)
+![](https://img.shields.io/github/downloads/chrisgrieser/alfred-bibtex-citation-picker/total?label=Total%20Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/alfred-bibtex-citation-picker?label=Latest%20Release&style=plastic) [![](https://img.shields.io/badge/changelog-click%20here-FFE800?style=plastic)](./Changelog.md)
 
-A citation picker for academics that write in markdown. Using [Alfred](https://www.alfredapp.com/), it inserts citations from a BibTeX File in various formats, e.g. [Pandoc](https://pandoc.org/MANUAL.html#citation-syntax), [Multi-Markdown](https://fletcher.github.io/MultiMarkdown-6/syntax/citation.html) or [Latex](https://www.overleaf.com/learn/latex/Biblatex_citation_styles).
+A citation picker for academics that write in markdown. Using [Alfred](https://www.alfredapp.com/), it inserts citations from a BibTeX File in various formats, for example [Pandoc](https://pandoc.org/MANUAL.html#citation-syntax), [Multi-Markdown](https://fletcher.github.io/MultiMarkdown-6/syntax/citation.html) or [Latex](https://www.overleaf.com/learn/latex/Biblatex_citation_styles).
 
 <img width=60% alt="promo screenshot" src="assets/promo.png">
 
@@ -10,9 +10,9 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 - Inserts __Pandoc Citation Syntax__ (`[@citekey]`), supporting page numbers & multiple citations (`[@citekey, p. 23; @citekey, p. 42]`). Can also be configured to use LaTeX, Multi-Markdown, eta templates, `[[wikilinks]]`, or `#tags` as citation format.
 - __app-independent:__ works system-wide, in every text field of every app.
 - __Smart Search:__ search for citekeys, authors, title, publication, keywords (tags), include/exclude authors in *et al*, tab-completion, fuzzy-matching, sorting recently used entries to the top, …
-- __Feature-rich:__ paste single-entry bibliographies, open URLs, open or create literature notes, attach PDFs, search for `.csl` files online, backup the library, …
+- __Feature-rich:__ paste single-entry bibliographies, open URLs, open or create literature notes, attach PDFs, search for `.csl` files online, …
 - __Blazingly Fast:__ considerably quicker than any other citation pickers (~200ms to fully reload a library with ~4000 entries).
-- __Easy Installation:__ no dependencies, no required plugins, no setup. Just enter the path to your `.bib` file.
+- __Simple Installation:__ no dependencies, no required plugins, no setup. Just enter the path to your `.bib` file.
 - __Minimalistic reference manager__: add or remove entries the BibTeX library, automatically rename and file PDFs, parse single entries, …
 - __Obsidian integration:__ When located in an [Obsidian](https://obsidian.md/) vault, literature notes are automatically opened/created in Obsidian instead of the default markdown app.
 
@@ -99,7 +99,7 @@ If there is a citation syntax that is commonly used, feel free to make a PR to [
 - Note that removing entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/) since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file will not be reflected in Zotero.
 
 ### Adding entries to the BibTeX library
-- There are is a universal actions that can be triggered on a __DOI__, __ISBN__, or __URL that contains a DOI__ to those entries to the `.bib` library.
+- There are is a universal actions that can be triggered on a __DOI__, __ISBN__, or __URL containing a DOI__ to add to the `.bib` library.
 - *Experimental:* A second universal action can be used to parse & add a bibliographic entry. Requires [anystyle](https://github.com/inukshuk/anystyle).
 - The new entry is added to your library, with a properly formatted and unique citekey. Afterwards, the entry is opened in the app specified in `open_entries_in`.
 - Note that adding entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/) since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file will not be reflected in Zotero.
