@@ -834,25 +834,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>externaltriggerid</key>
-				<string>citation-picker-loop</string>
-				<key>passinputasargument</key>
-				<false/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>5F683C78-5D0B-4A39-B3FF-37ABA8DA0D73</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -1063,6 +1044,25 @@ JSON.stringify({ 'items': entry_array });
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>externaltriggerid</key>
+				<string>citation-picker-loop</string>
+				<key>passinputasargument</key>
+				<false/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>5F683C78-5D0B-4A39-B3FF-37ABA8DA0D73</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string>{var:_format_citekey_prefix}{query}{var:_format_citekey_suffix}</string>
 				<key>passthroughargument</key>
@@ -1143,23 +1143,6 @@ JSON.stringify({ 'items': entry_array });
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string>{var:previous_citation}{query}</string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>986EF1F7-54A1-4C67-A490-4DFCC60FA328</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
 				<string>{var:_format_citekey_prefix}{query}{var:_format_citekey_suffix}</string>
 				<key>passthroughargument</key>
 				<false/>
@@ -1170,6 +1153,23 @@ JSON.stringify({ 'items': entry_array });
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>E451F6F1-8CE4-44B5-90E2-8B457B48C81C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{var:previous_citation}{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>986EF1F7-54A1-4C67-A490-4DFCC60FA328</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1191,6 +1191,26 @@ JSON.stringify({ 'items': entry_array });
 			<string>alfred.workflow.trigger.universalaction</string>
 			<key>uid</key>
 			<string>387C2AA0-E567-46B7-96C2-46E4BD95733B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<true/>
+				<key>variables</key>
+				<dict>
+					<key>parseText</key>
+					<string>false</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>09C552E1-E9BA-418A-931E-D134C3FA1A7F</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1223,26 +1243,6 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 			<string>96FCE9BC-5201-4357-9B63-588F73AEF5F3</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>{query}</string>
-				<key>passthroughargument</key>
-				<true/>
-				<key>variables</key>
-				<dict>
-					<key>parseText</key>
-					<string>false</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>09C552E1-E9BA-418A-931E-D134C3FA1A7F</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1408,21 +1408,6 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>soundname</key>
-				<string>Basso</string>
-				<key>systemsound</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.playsound</string>
-			<key>uid</key>
-			<string>FCCA3147-A52B-4254-938A-C8EFA2FF7933</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -1438,6 +1423,21 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
 			<string>346A58DA-B1B4-4F03-8F05-20B42A4EF996</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>soundname</key>
+				<string>Basso</string>
+				<key>systemsound</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.playsound</string>
+			<key>uid</key>
+			<string>FCCA3147-A52B-4254-938A-C8EFA2FF7933</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1791,6 +1791,27 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<true/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>✅ Downloaded</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>52B9C3DF-F265-4201-9508-55BA584F851F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -1818,27 +1839,6 @@ echo "$*"</string>
 			<string>FC604ACD-94BE-4F8B-B73C-8475943837C7</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<true/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>✅ Downloaded</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>52B9C3DF-F265-4201-9508-55BA584F851F</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2132,9 +2132,9 @@ echo "$*"</string>
 			<key>colorindex</key>
 			<integer>5</integer>
 			<key>xpos</key>
-			<real>225</real>
+			<real>190</real>
 			<key>ypos</key>
-			<real>470</real>
+			<real>495</real>
 		</dict>
 		<key>04E17547-EDD2-4C44-9F41-F15391DD8775</key>
 		<dict>
@@ -2152,9 +2152,9 @@ echo "$*"</string>
 			<key>colorindex</key>
 			<integer>5</integer>
 			<key>xpos</key>
-			<real>225</real>
+			<real>185</real>
 			<key>ypos</key>
-			<real>405</real>
+			<real>380</real>
 		</dict>
 		<key>0F739BDB-D7EC-482F-9798-A9B04AF57CA9</key>
 		<dict>
@@ -2232,9 +2232,9 @@ echo "$*"</string>
 			<key>colorindex</key>
 			<integer>1</integer>
 			<key>xpos</key>
-			<real>575</real>
+			<real>530</real>
 			<key>ypos</key>
-			<real>660</real>
+			<real>665</real>
 		</dict>
 		<key>2A483E3B-2BAB-408A-9759-4C0F65D760CF</key>
 		<dict>
@@ -2261,9 +2261,9 @@ echo "$*"</string>
 			<key>note</key>
 			<string>create new entry</string>
 			<key>xpos</key>
-			<real>310</real>
+			<real>275</real>
 			<key>ypos</key>
-			<real>415</real>
+			<real>410</real>
 		</dict>
 		<key>30006A6B-EAF9-4531-8694-5E878A0FB80E</key>
 		<dict>
@@ -2506,9 +2506,9 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>1</integer>
 			<key>xpos</key>
-			<real>575</real>
+			<real>530</real>
 			<key>ypos</key>
-			<real>550</real>
+			<real>555</real>
 		</dict>
 		<key>AF09AE5D-C351-4190-8AA6-B1924D88B22F</key>
 		<dict>
@@ -2537,9 +2537,9 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>515</real>
+			<real>430</real>
 			<key>ypos</key>
-			<real>435</real>
+			<real>430</real>
 		</dict>
 		<key>C64ACAF0-66C8-48A8-A3C4-B55C7E282697</key>
 		<dict>
