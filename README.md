@@ -51,8 +51,7 @@ Press the hotkey in any text field to start the citation picker.
 - Search for the title, author/editor (last name), year, or collection/journal-title.
 - Prepend `@` to a word to search for a citekey, e.g. `@Grieser2020`.
 - Prepend `#` to search for keywords (tags), e.g. `#sociology`.
-- *Smart Queries*: You can search for any combination of the above. For example, the query `2020 #cognition Grieser` will for entries published in 2020, with the tag "cognition", and with "Grieser" as author/editor.
-- *Quick Queries*: The search is fuzzy and case-insensitive. For year dates, it also matches the last two digits. For example, you can search for `fouc 77` to find `Foucault 1977`. In addition, recently selected entries are placed further at the top of the search results.
+- *Smart Queries*: You can search for any combination of the above. For example, the query `2020 #cognition Grieser` searches for entries published in 2020, with the tag "cognition," and with "Grieser" as author/editor.
 
 ### Citation Actions
 - `↵`: Paste the citekey of the selected citation.
@@ -114,15 +113,14 @@ If there is a citation syntax that is commonly used, feel free to make a PR to [
 
 ### PDF Management Actions
 The following features require that all your PDFs are located in the folder specified in your workflow settings.
-- `fn + ↵`: __Auto-file and auto-rename__ the *currently selected PDF*. Inside your selected pdf folder, uses the template path: `{first_letter_of_citekey}/{citekey-author-part}/{citekey}_{shortened_title}.pdf`
+- `fn + ↵`: __Auto-file and auto-rename__ the *currently selected PDF*. Inside your selected PDF folder, uses the template path: `{first_letter_of_citekey}/{citekey-author-part}/{citekey}_{shortened_title}.pdf`
 - The `📕` indicates that the entry already has an associated PDF at that location.
 - `Hyper + ↵`[^4]: If the entry has an associated PDF file, open it with the default PDF reader.
 - ℹ️ Add `pdf` to any search query to filter only for entries with PDFs that have been added by the auto-file feature. `pdf grieser`, for example, will display only entries from the author "Grieser" with PDFs. Can be combined with other queries (see: [smart queries](#search)).
 
 ### Auxiliary Features
 Triggered via the Alfred Keyword `scp` (for `S`upercharged `C`itation `P`icker).
-- __CSL Search__: Search for a citation style, which will be downloaded to the location specified in your workflow settings (default: `~/.pandoc/csl/`).
-- __Bibliography Stats__: Brief statistical summary of the library. (Currently only total number of references. If you have useful suggestion, feel free to open a Feature Request.)
+- __CSL Search__: Search for a citation style, which is downloaded to the location specified in your workflow settings (default: `~/.pandoc/csl/`).
 - __Cheat sheet: Citation Picker Actions__: Open a cheat sheet of the available actions of the Supercharged Citation Picker.
 - __Force Buffer Reload__: Force a reload of the citation picker. Mostly for debugging purposes.
 
