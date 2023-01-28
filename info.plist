@@ -10,16 +10,6 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>1F16F33C-2898-41E8-8C0A-8F1336BB738B</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
 				<string>824D0711-2DC5-46B0-8EA1-BD0A74DF5AAA</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -128,21 +118,6 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>1F16F33C-2898-41E8-8C0A-8F1336BB738B</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>9B9F7F22-DB77-4520-AD8F-BA445595D94B</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>sourceoutputuid</key>
-				<string>86C649F7-F03D-4BAE-804E-303512F9950C</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -376,6 +351,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>346A58DA-B1B4-4F03-8F05-20B42A4EF996</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>824D0711-2DC5-46B0-8EA1-BD0A74DF5AAA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9B9F7F22-DB77-4520-AD8F-BA445595D94B</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1992,34 +1980,25 @@ echo "$*"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string></string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>1</integer>
-						<key>matchstring</key>
-						<string>custom</string>
-						<key>outputlabel</key>
-						<string>not custom</string>
-						<key>uid</key>
-						<string>86C649F7-F03D-4BAE-804E-303512F9950C</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>--</string>
-				<key>hideelse</key>
+				<key>concurrently</key>
 				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/toggle-citation-format.js</string>
+				<key>type</key>
+				<integer>8</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>1F16F33C-2898-41E8-8C0A-8F1336BB738B</string>
+			<string>824D0711-2DC5-46B0-8EA1-BD0A74DF5AAA</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2066,29 +2045,6 @@ echo "$*"</string>
 			<string>68FC61FC-44E7-43F2-856B-B1B89E83B099</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>scripts/toggle-citation-format.js</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>824D0711-2DC5-46B0-8EA1-BD0A74DF5AAA</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -2218,15 +2174,6 @@ echo "$*"</string>
 			<key>ypos</key>
 			<real>150</real>
 		</dict>
-		<key>1F16F33C-2898-41E8-8C0A-8F1336BB738B</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>3</integer>
-			<key>xpos</key>
-			<real>620</real>
-			<key>ypos</key>
-			<real>1285</real>
-		</dict>
 		<key>254C2241-0AE4-4F52-A073-16E3DEFC9384</key>
 		<dict>
 			<key>colorindex</key>
@@ -2241,7 +2188,7 @@ echo "$*"</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>765</real>
+			<real>785</real>
 			<key>ypos</key>
 			<real>1035</real>
 		</dict>
@@ -2250,7 +2197,7 @@ echo "$*"</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>385</real>
+			<real>345</real>
 			<key>ypos</key>
 			<real>1140</real>
 		</dict>
@@ -2354,7 +2301,7 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>665</real>
+			<real>625</real>
 			<key>ypos</key>
 			<real>1140</real>
 		</dict>
@@ -2372,7 +2319,7 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>330</real>
+			<real>290</real>
 			<key>ypos</key>
 			<real>1170</real>
 		</dict>
@@ -2450,7 +2397,7 @@ to set a hotkey for the citaiton picker.</string>
 			<key>xpos</key>
 			<real>600</real>
 			<key>ypos</key>
-			<real>1370</real>
+			<real>1310</real>
 		</dict>
 		<key>8B51C1A0-EAD2-457B-A532-6CC16C7F015E</key>
 		<dict>
@@ -2497,9 +2444,9 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>740</real>
+			<real>745</real>
 			<key>ypos</key>
-			<real>1250</real>
+			<real>1310</real>
 		</dict>
 		<key>9C01A8C9-CBF3-4261-A0F2-CD6DC0E55515</key>
 		<dict>
@@ -2610,7 +2557,7 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>525</real>
+			<real>485</real>
 			<key>ypos</key>
 			<real>1140</real>
 		</dict>

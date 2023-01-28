@@ -61,7 +61,7 @@ Press the hotkey in any text field to start the citation picker.
 ### URL Actions
 - `⌃ + ↵`: Open the URL in the browser.
 - `⌘ + C`: Copy the URL to the clipboard.
-- If the entry has a DOI but not URL, the citation picker will use the DOI-URL (`https://doi.org/...`) instead.
+- If the entry has a DOI but not a URL, the citation picker will use the DOI-URL (`https://doi.org/…`) instead.
 
 ### Icon Meanings
 | Icon | Entry has…      |
@@ -84,30 +84,30 @@ You can use the `scp` and select __Change Citation Format__ to change the format
 - Eta template
 
 ### Further Format Customization
-If you want to use a format that isn't available, you can customize the format yourself by changing the workflow environment variables starting with `_format` (Tutorial: [how to set environment variables in Alfred](https://www.alfredapp.com/help/workflows/advanced/variables/#environment)).
+If you want to use a format that is not available, you can customize the format yourself by changing the workflow environment variables starting with `_format` (Tutorial: [how to set environment variables in Alfred](https://www.alfredapp.com/help/workflows/advanced/variables/#environment)).
 
 If there is a citation syntax that is commonly used, feel free to make a PR to [this file which generates the formats](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/toggle-citation-format.js) or open a [Feature Request](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues/new?assignees=&labels=enhancement&template=feature_request.yml&title=Feature+Request%3A+).
 
 ## Advanced Usage
 
 ### Bibliography Actions
-- `⇧ + ↵`: Reveal the entry in Zotero, neovim, [BibDesk](http://bibdesk.sourceforge.net), [VS Code](https://code.visualstudio.com), or [Sublime](https://www.sublimetext.com/), depending on the setting `open_entries_in`.
+- `⇧ + ↵`: Reveal the entry in Zotero, neovim, BibDesk, VS Code, or Sublime, depending on the setting in the workflow configuration.
 - `⌘⌥ + ↵`: Paste the full bibliographic entry in the APA 6th Style (requires [Pandoc](https://pandoc.org/installing.html)).
 - `⌘ + L`: Preview the (unabridged) title, abstract, and list of keywords in Large Type.
-- `⌘fn + ↵`: Delete the entry from the BibTeX library. (⚠️ This feature is untested with BibTeX files created with apps other than BibDesk and Bookends (or have been formatted with `bibtex-tidy`). [Create an issue](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues) for problems with other apps.)
+- `⌘fn + ↵`: Delete the entry from the BibTeX library. (⚠️ This feature is untested with BibTeX files created with apps other than BibDesk and Bookends. [Create an issue](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues) for problems with other apps.)
 - Note that removing entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/) since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file will not be reflected in Zotero.
 
 ### Adding entries to the BibTeX library
-- There are is a universal actions that can be triggered on a __DOI__, __ISBN__, or __URL containing a DOI__ to add to the `.bib` library.
+- There is a universal actions that can be triggered on a __DOI__, __ISBN__, or __URL containing a DOI__ to add to the `.bib` library.
 - *Experimental:* A second universal action can be used to parse & add a bibliographic entry. Requires [anystyle](https://github.com/inukshuk/anystyle).
-- The new entry is added to your library, with a properly formatted and unique citekey. Afterwards, the entry is opened in the app specified in `open_entries_in`.
+- The new entry is added to your library, with a properly formatted and unique citekey. Afterward, the entry is opened in the app specified in `open_entries_in`.
 - Note that adding entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/) since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file will not be reflected in Zotero.
 
 ### Literature Note Actions
 - The citation picker looks in the folder specified in the workflow settings for files that are *exactly* named like the citekey (without `@`, but with `.md` extension). Entries that have such a literature note is indicated by a `📓`.
 - `Meh + ↵`[^4]: Open the literature note.
-	- If the file is in an [Obsidian Vault](https://obsidian.md/), it will be opened directly in Obsidian instead of the default text editor.
-	- If there is no literature note, a new one will be created.
+	- If the file is in an [Obsidian Vault](https://obsidian.md/), it is opened directly in Obsidian instead of the default text editor.
+	- If there is no literature note, a new one is created.
 - `⌘ + Y`: Preview the literature note with QuickLook (requires QLmarkdown or Peek[^1]).
 - Add `*` to any search query to filter only for entries with literature notes, for example `* grieser` searches for entries matching "grieser" which also have a literature notes. Can be combined with other queries (see: [smart queries](#search)).
 
