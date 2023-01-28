@@ -1,3 +1,10 @@
+- 2023-01-28	release 11.1.0
+- 2023-01-28	feat: inline citations via cmd+shift (#18 and #24)
+- 2023-01-28	chore
+- 2023-01-28	chore
+- 2023-01-28	chore
+- 2023-01-28	chore
+- 2023-01-28	chore
 - 2023-01-28	release 11.0.1
 - 2023-01-28	fix: zotero entries opened in shared library (#20)
 - 2023-01-27	release 11.0.0
