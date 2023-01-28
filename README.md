@@ -81,15 +81,18 @@ Press the hotkey in any text field to start the citation picker.
 You can use the `scp` and select __Change Citation Format__ to change the format of the citations:
 - Pandoc (default)
 - Multi-Markdown
-- Latex[^5]
+- Latex
+- Eta template
 - Wikilink
 - Tag
-- Eta template
+
+> __Note__  
+> Not all formats support all citation-related features. Adding Page numbers as well as inline-citations are not supported for Latex, Wikilinks, and Tags. 
 
 ### Further Format Customization
 If you want to use a format that is not available, you can customize the format yourself by changing the workflow environment variables starting with `_format` (Tutorial: [how to set environment variables in Alfred](https://www.alfredapp.com/help/workflows/advanced/variables/#environment)).
 
-If there is a citation syntax that is commonly used, feel free to make a PR to [this file which generates the formats](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/toggle-citation-format.js) or open a [Feature Request](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues/new?assignees=&labels=enhancement&template=feature_request.yml&title=Feature+Request%3A+).
+If there is a citation syntax that is commonly used, or if you want to improve support for an existing format, feel free to make a PR to [this file which generates the formats](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/toggle-citation-format.js) or open a [Feature Request](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues/new?assignees=&labels=enhancement&template=feature_request.yml&title=Feature+Request%3A+).
 
 ## Advanced Usage
 
@@ -153,4 +156,3 @@ In my day job, I am a sociologist studying the social mechanisms underlying the 
 
 [^4]: `Hyper` is an artificial "fifth" modifier key equivalent to `⌘⌥⌃⇧`, and can be created using apps like [Karabiner Elements](https://karabiner-elements.pqrs.org/), [BetterTouchTool](https://www.macupdate.com/app/mac/32953/bettertouchtool), or [Hyperkey](https://hyperkey.app/). `Meh` is an artificial "sixth" modifier key equivalent to `⌥⌃⇧`.
 
-[^5]: Latex right now does not support page numbers. If you can code, feel free to make a PR implementing LaTeX citations with page numbers.
