@@ -29,7 +29,6 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
     - [Further Format Customization](#further-format-customization)
   - [Advanced Usage](#advanced-usage)
     - [Bibliography Actions](#bibliography-actions)
-    - [Adding entries to the BibTeX library](#adding-entries-to-the-bibtex-library)
     - [Literature Note Actions](#literature-note-actions)
     - [PDF Management Actions](#pdf-management-actions)
     - [Auxiliary Features](#auxiliary-features)
@@ -101,17 +100,12 @@ If there is a citation syntax that is commonly used, or if you want to improve s
 - `⌘⌥ + ↵`: Paste the full bibliographic entry in the APA 6th Style (requires [Pandoc](https://pandoc.org/installing.html)).
 - `⌘ + L`: Preview the (unabridged) title, abstract, and list of keywords in Large Type.
 - `⌘fn + ↵`: Delete the entry from the BibTeX library. (⚠️ This feature is untested with BibTeX files created with apps other than BibDesk and Bookends. [Create an issue](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues) for problems with other apps.)
+- `universal action` or `hotkey`: Uses the selected __DOI__, __ISBN__, or __URL containing a DOI__ to add a new entry to the library.
+	- *Experimental:* A second universal action can be used to parse & add a bibliographic entry. Requires [anystyle](https://github.com/inukshuk/anystyle).
+	- The new entry is added to your library, with a correctly formatted and unique citekey. Afterward, the entry is opened in the app specified in `open_entries_in`.
 
 > __Note__  
-> Removing entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/) since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file are not reflected in Zotero.
-
-### Adding entries to the BibTeX library
-- There is a universal actions that can be triggered on a __DOI__, __ISBN__, or __URL containing a DOI__ to add to the `.bib` library.
-- *Experimental:* A second universal action can be used to parse & add a bibliographic entry. Requires [anystyle](https://github.com/inukshuk/anystyle).
-- The new entry is added to your library, with a correctly formatted and unique citekey. Afterward, the entry is opened in the app specified in `open_entries_in`.
-
-> __Note__  
-> Adding entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/) since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file are not reflected in Zotero.
+> Adding or removing entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/) since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file are not reflected in Zotero.
 
 ### Literature Note Actions
 - The citation picker looks in the folder specified in the workflow settings for files that are *exactly* named like the citekey (without `@`, but with `.md` extension). Entries that have such a literature note is indicated by a `📓`.
