@@ -7,14 +7,14 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 <img width=60% alt="promo screenshot" src="assets/promo.png">
 
 ## Feature Overview
-- Inserts __Pandoc Citation Syntax__ (`[@citekey]`), supporting page numbers & multiple citations (`[@citekey, p. 23; @citekey, p. 42]`). Can also be configured to use LaTeX, Multi-Markdown, eta templates, `[[wikilinks]]`, or `#tags` as citation format.
+- Inserts __Pandoc Citation Syntax__ (`[@citekey]`), supporting page numbers & multiple citations (`[@citekey, p. 23; @citekey, p. 42]`). Can also be configured to use __LaTeX__, __Multi-Markdown__, __eta templates__, `[[wikilinks]]`, or `#tags` as citation format.
 - __app-independent:__ works system-wide, in every text field of every app.
-- __Smart Search:__ search for citekeys, authors, title, publication, keywords (tags), include/exclude authors in *et al*, tab-completion, fuzzy-matching, sorting recently used entries to the top, …
+- __Smart Search:__ search for citekeys, authors, title, publication, keywords (tags), include or exclude authors in *et al*, tab-completion, fuzzy-matching, sorting recently used entries to the top, …
 - __Feature-rich:__ paste single-entry bibliographies, open URLs, open or create literature notes, attach PDFs, search for `.csl` files online, …
-- __Blazingly Fast:__ considerably quicker than any other citation pickers (~200ms to fully reload a library with ~4000 entries).
+- __Blazingly Fast:__ considerably quicker than any other citation pickers (;~200&nbspms to fully reload a library with ~4000 entries).
 - __Simple Installation:__ no dependencies, no required plugins, no setup. Just enter the path to your `.bib` file.
 - __Minimalistic reference manager__: add or remove entries the BibTeX library, automatically rename and file PDFs, parse single entries, …
-- __Obsidian integration:__ When located in an [Obsidian](https://obsidian.md/) vault, literature notes are automatically opened/created in Obsidian instead of the default markdown app.
+- __Obsidian integration:__ When located in an [Obsidian](https://obsidian.md/) vault, literature notes are automatically opened or created in Obsidian instead of the default markdown app.
 
 ## Table of Contents
 <!--toc:start-->
