@@ -12,7 +12,7 @@ const litNoteFilterStr = "*";
 const pdfFilterStr = "pdf";
 
 const maxTitleFileNameLength = 50;
-const alfredBarLength = parseInt ($.getenv("alfred_bar_length"));
+const alfredBarLength = parseInt($.getenv("alfred_bar_length"));
 
 const matchAuthorsInEtAl = $.getenv("match_authors_in_etal") === "1";
 const matchOnlyShortYears = $.getenv("match_only_short_years") === "1";
@@ -27,9 +27,9 @@ if (pdfFolder) pdfFolderCorrect = Application("Finder").exists(Path(pdfFolder));
 
 // Import Hack, https://github.com/JXA-Cookbook/JXA-Cookbook/wiki/Importing-Scripts
 const toImport = "./scripts/bibtex-parser.js";
-console.log ("Starting Buffer Writing");
-eval (app.doShellScript(`cat "${toImport}"`));
-console.log ("Parser Import successful.");
+console.log("Starting Buffer Writing");
+eval(app.doShellScript(`cat "${toImport}"`));
+console.log("Parser Import successful.");
 
 //──────────────────────────────────────────────────────────────────────────────
 
@@ -38,35 +38,53 @@ let litNoteArray = [];
 let pdfArray = [];
 
 if (litNoteFolderCorrect) {
-	litNoteArray = app.doShellScript(`ls "${litNoteFolder}"`)
+	litNoteArray = app
+		.doShellScript(`ls "${litNoteFolder}"`)
 		.split("\r")
 		.filter(filename => filename.endsWith(".md"))
-		.map (filename => filename.slice(0, -3)); // remove extension
-	console.log ("Literature Note Reading successful.");
+		.map(filename => filename.slice(0, -3)); // remove extension
+	console.log("Literature Note Reading successful.");
 }
 
 if (pdfFolderCorrect) {
-	pdfArray = app.doShellScript(`find "${pdfFolder}" -type f -name "*.pdf"`)
+	pdfArray = app
+		.doShellScript(`find "${pdfFolder}" -type f -name "*.pdf"`)
 		.split("\r")
-		.map (filepath => {
+		.map(filepath => {
 			return filepath
-				.replace (/.*\/(.*)\.pdf/, "$1") // only filename
-				.replace (/(.*)_.*/, "$1") // only part before the first _ (= cut appended title)
-				.replaceAll ("_", ""); // remove remaining underscores in case there were multiple ones
+				.replace(/.*\/(.*)\.pdf/, "$1") // only filename
+				.replace(/(.*)_.*/, "$1") // only part before the first _ (= cut appended title)
+				.replaceAll("_", ""); // remove remaining underscores in case there were multiple ones
 		});
-	console.log ("PDF Folder reading successful.");
+	console.log("PDF Folder reading successful.");
 }
 
 // -------------------------------
 
-
 const rawBibtex = app.doShellScript(`cat "${libraryPath}"`);
-console.log ("Bibtex Library Reading successful.");
+console.log("Bibtex Library Reading successful.");
 
 const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
+	/* eslint-disable-next-line complexity */
 	.map(entry => {
 		const emojis = [];
-		const { title, url, citekey, keywords, type, journal, volume, issue, booktitle, authors, editors, year, abstract, primaryNamesEtAlString, primaryNames } = entry;
+		const {
+			title,
+			url,
+			citekey,
+			keywords,
+			type,
+			journal,
+			volume,
+			issue,
+			booktitle,
+			authors,
+			editors,
+			year,
+			abstract,
+			primaryNamesEtAlString,
+			primaryNames,
+		} = entry;
 
 		// Shorten Title (for display in Alfred)
 		let shorterTitle = title;
@@ -172,7 +190,7 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 			journal,
 			type,
 			...litNoteMatcher,
-			...pdfMatcher
+			...pdfMatcher,
 		]
 			.map(item => {
 				// match item with and without dash
@@ -185,35 +203,36 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		let largeTypeInfo = `${title} \n(citekey: ${citekey})`;
 		if (abstract) largeTypeInfo += "\n\n" + abstract;
 		if (keywords.length) largeTypeInfo += "\n\nkeywords: " + keywords.join(", ");
+		console.log("largeTypeInfo: " + largeTypeInfo);
 
 		return {
-			"title": shorterTitle,
-			"autocomplete": primaryNames[0],
-			"subtitle": namesToDisplay + year + collectionSubtitle + "   " + emojis.join(" "),
-			"match": alfredMatcher,
-			"arg": citekey,
-			"icon": { "path": typeIcon },
-			"uid": citekey,
-			"text": {
-				"copy": url,
-				"largetype": largeTypeInfo
+			title: shorterTitle,
+			autocomplete: primaryNames[0],
+			subtitle: namesToDisplay + year + collectionSubtitle + "   " + emojis.join(" "),
+			match: alfredMatcher,
+			arg: citekey,
+			icon: { path: typeIcon },
+			uid: citekey,
+			text: {
+				copy: url,
+				largetype: largeTypeInfo,
 			},
-			"quicklookurl": litNotePath,
-			"mods": {
-				"fn": { "arg": autoFileName },
-				"ctrl": {
-					"valid": url !== "",
-					"arg": url,
-					"subtitle": urlSubtitle,
+			quicklookurl: litNotePath,
+			mods: {
+				fn: { arg: autoFileName },
+				ctrl: {
+					valid: url !== "",
+					arg: url,
+					subtitle: urlSubtitle,
 				},
-			}
+			},
 		};
 	});
 
 // -------------------------------
-console.log ("Buffer Creation successful.");
+console.log("Buffer Creation successful.");
 
 const logEndTime = new Date();
 console.log("Buffer Writing Duration: " + (logEndTime - logStartTime).toString() + "ms");
 
-JSON.stringify({ "items": entryArray }); // JXA direct return
+JSON.stringify({ items: entryArray }); // JXA direct return
