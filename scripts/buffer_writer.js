@@ -203,7 +203,6 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		let largeTypeInfo = `${title} \n(citekey: ${citekey})`;
 		if (abstract) largeTypeInfo += "\n\n" + abstract;
 		if (keywords.length) largeTypeInfo += "\n\nkeywords: " + keywords.join(", ");
-		console.log("largeTypeInfo: " + largeTypeInfo);
 
 		return {
 			title: shorterTitle,
