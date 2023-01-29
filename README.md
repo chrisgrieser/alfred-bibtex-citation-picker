@@ -9,11 +9,11 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 ## Feature Overview
 - Inserts __Pandoc Citation Syntax__ (`[@citekey]`), supporting page numbers & multiple citations (`[@citekey, p. 23; @citekey, p. 42]`). Can also be configured to use __LaTeX__, __Multi-Markdown__, __eta templates__, `[[wikilinks]]`, or `#tags` as citation format.
 - __app-independent:__ works system-wide, in every text field of every app.
-- __Smart Search:__ search for citekeys, authors, title, publication, keywords (tags), include or exclude authors in *et al*, tab-completion, fuzzy-matching, sorting recently used entries to the top, …
-- __Feature-rich:__ paste single-entry bibliographies, open URLs, open or create literature notes, attach PDFs, search for `.csl` files online, …
+- __Smart Search:__ search for citekeys, authors, title, publication, keywords (tags), include or exclude authors in *et al*, tab-completion, fuzzy-matching, sorting recently used entries to the top.
+- __Feature-rich:__ paste single-entry bibliographies, open URLs, open or create literature notes, attach PDFs, search for `.csl` files online, and more.
 - __Blazingly Fast:__ considerably quicker than any other citation pickers (;~200&nbspms to fully reload a library with ~4000 entries).
 - __Simple Installation:__ no dependencies, no required plugins, no setup. Just enter the path to your `.bib` file.
-- __Minimalistic reference manager__: add or remove entries the BibTeX library, automatically rename and file PDFs, parse single entries, …
+- __Minimalistic reference manager__: add or remove entries the BibTeX library, automatically rename and file PDFs, parse single entries, and more.
 - __Obsidian integration:__ When located in an [Obsidian](https://obsidian.md/) vault, literature notes are automatically opened or created in Obsidian instead of the default markdown app.
 
 ## Table of Contents
@@ -48,26 +48,26 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 Press the hotkey in any text field to start the citation picker.
 
 ### Search
-- Search for the title, author/editor (last name), year, or collection/journal-title.
-- Prepend `@` to a word to search for a citekey, e.g. `@Grieser2020`.
-- Prepend `#` to search for keywords (tags), e.g. `#sociology`.
+- Search for the title, author/editor (last name), year, or collection or journal-title.
+- Prepend `@` to a word to search for a citekey, for example `@Grieser2020`.
+- Prepend `#` to search for keywords (tags), for example `#sociology`.
 - *Smart Queries*: You can search for any combination of the above. For example, the query `2020 #cognition Grieser` searches for entries published in 2020, with the tag "cognition," and with "Grieser" as author/editor.
 
 ### Citation Actions
 - `↵`: Paste the citekey of the selected citation.
 - `⌥ + ↵`: Add another citation.
-- `⌘⇧ + ↵`: Paste an inline-citation (citation without surrounding formatting, e.g. `@Grieser2022` instead of `[@Grieser2022])
-- ⌘ + ↵`: Add page numbers before pasting the selected citekey. 
+- `⌘⇧ + ↵`: Paste an inline-citation (citation without surrounding formatting, for example `@Grieser2022` instead of `[@Grieser2022]`)
+- `⌘ + ↵`: Add page numbers before pasting the selected citekey. 
 	- Confirm the page number with `⌥ + ↵` to add another citation afterwards.
-	- Confirm the page number with `⌘⇧ + ↵` for an inline-citation with page number (`@Grieser2022 [p. 42]`).
+	- Confirm with `⌘⇧ + ↵` for an inline-citation with page number (`@Grieser2022 [p. 42]`).
 
 ### URL Actions
 - `⌃ + ↵`: Open the URL in the browser.
 - `⌘ + C`: Copy the URL to the clipboard.
-- If the entry has a DOI but not a URL, the citation picker will use the DOI-URL (`https://doi.org/…`) instead.
+- In both cases, if the entry has a DOI but not a URL, the citation picker uses the DOI-URL (`https://doi.org/…`) instead.
 
 ### Icon Meanings
-| Icon | Entry has…      |
+| Icon | Entry has       |
 |:-----|:----------------|
 | 🌐   | URL or DOI      |
 | 📄   | Abstract        |
@@ -87,10 +87,10 @@ You can use the `scp` and select __Change Citation Format__ to change the format
 - Tag
 
 > __Note__  
-> Not all formats support all citation-related features. Adding Page numbers as well as inline-citations are not supported for Latex, Wikilinks, and Tags. 
+> Not all formats support all citation-related features, for example, adding Page numbers as well as inline-citations are not supported for Latex, Wikilinks, and Tags. 
 
 ### Further Format Customization
-If you want to use a format that is not available, you can customize the format yourself by changing the workflow environment variables starting with `_format` (Tutorial: [how to set environment variables in Alfred](https://www.alfredapp.com/help/workflows/advanced/variables/#environment)).
+If you want to use a format that is not available, you can customize the format yourself by changing the workflow environment variables starting with `_format`. (Tutorial: [how to set environment variables in Alfred](https://www.alfredapp.com/help/workflows/advanced/variables/#environment))
 
 If there is a citation syntax that is commonly used, or if you want to improve support for an existing format, feel free to make a PR to [this file which generates the formats](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/toggle-citation-format.js) or open a [Feature Request](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues/new?assignees=&labels=enhancement&template=feature_request.yml&title=Feature+Request%3A+).
 
@@ -101,17 +101,21 @@ If there is a citation syntax that is commonly used, or if you want to improve s
 - `⌘⌥ + ↵`: Paste the full bibliographic entry in the APA 6th Style (requires [Pandoc](https://pandoc.org/installing.html)).
 - `⌘ + L`: Preview the (unabridged) title, abstract, and list of keywords in Large Type.
 - `⌘fn + ↵`: Delete the entry from the BibTeX library. (⚠️ This feature is untested with BibTeX files created with apps other than BibDesk and Bookends. [Create an issue](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues) for problems with other apps.)
-- Note that removing entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/) since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file will not be reflected in Zotero.
+
+> __Note__  
+> Removing entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/) since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file are not reflected in Zotero.
 
 ### Adding entries to the BibTeX library
 - There is a universal actions that can be triggered on a __DOI__, __ISBN__, or __URL containing a DOI__ to add to the `.bib` library.
 - *Experimental:* A second universal action can be used to parse & add a bibliographic entry. Requires [anystyle](https://github.com/inukshuk/anystyle).
-- The new entry is added to your library, with a properly formatted and unique citekey. Afterward, the entry is opened in the app specified in `open_entries_in`.
-- Note that adding entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/) since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file will not be reflected in Zotero.
+- The new entry is added to your library, with a correctly formatted and unique citekey. Afterward, the entry is opened in the app specified in `open_entries_in`.
+
+> __Note__  
+> Adding entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/) since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file are not reflected in Zotero.
 
 ### Literature Note Actions
 - The citation picker looks in the folder specified in the workflow settings for files that are *exactly* named like the citekey (without `@`, but with `.md` extension). Entries that have such a literature note is indicated by a `📓`.
-- `Meh + ↵`[^4]: Open the literature note.
+- `Meh + ↵`[^2]: Open the literature note.
 	- If the file is in an [Obsidian Vault](https://obsidian.md/), it is opened directly in Obsidian instead of the default text editor.
 	- If there is no literature note, a new one is created.
 - `⌘ + Y`: Preview the literature note with QuickLook (requires QLmarkdown or Peek[^1]).
@@ -121,18 +125,18 @@ If there is a citation syntax that is commonly used, or if you want to improve s
 The following features require that all your PDFs are located in the folder specified in your workflow settings.
 - `fn + ↵`: __Auto-file and auto-rename__ the *currently selected PDF*. Inside your selected PDF folder, uses the template path: `{first_letter_of_citekey}/{citekey-author-part}/{citekey}_{shortened_title}.pdf`
 - The `📕` indicates that the entry already has an associated PDF at that location.
-- `Hyper + ↵`[^4]: If the entry has an associated PDF file, open it with the default PDF reader.
-- ℹ️ Add `pdf` to any search query to filter only for entries with PDFs that have been added by the auto-file feature. `pdf grieser`, for example, will display only entries from the author "Grieser" with PDFs. Can be combined with other queries (see: [smart queries](#search)).
+- `Hyper + ↵`[^2]: If the entry has an associated PDF file, open it with the default PDF reader.
+- ℹ️ Add `pdf` to any search query to filter only for entries with PDFs that have been added by the auto-file feature. `pdf grieser`, for example, displays only entries from the author "Grieser" with PDFs. Can be combined with other queries (see: [smart queries](#search)).
 
 ### Auxiliary Features
 Triggered via the Alfred Keyword `scp` (for `S`upercharged `C`itation `P`icker).
-- __CSL Search__: Search for a citation style, which is downloaded to the location specified in your workflow settings (default: `~/.pandoc/csl/`).
 - __Cheat sheet: Citation Picker Actions__: Open a cheat sheet of the available actions of the Supercharged Citation Picker.
+- __Citation Style Search__: Search for a citation style (`.csl` file), which is downloaded to the location specified in your workflow settings (default: `~/.pandoc/csl/`).
 - __Force Buffer Reload__: Force a reload of the citation picker. Mostly for debugging purposes.
 
 <!-- vale Google.FirstPerson = NO -->
 ## About the Developer
-In my day job, I am a sociologist studying the social mechanisms underlying the digital economy. For my PhD project, I investigate the governance of the app economy and how software ecosystems manage the tension between innovation and compatibility. If you are interested in this subject, feel free to get in touch!
+In my day job, I am a sociologist studying the social mechanisms underlying the digital economy. For my PhD project, I investigate the governance of the app economy and how software ecosystems manage the tension between innovation and compatibility. If you are interested in this subject, feel free to get in touch.
 
 <!-- markdown-link-check-disable -->
 
@@ -150,9 +154,11 @@ In my day job, I am a sociologist studying the social mechanisms underlying the 
 <!-- markdown-link-check-enable -->
 
 ### Credits
-<a href="https://www.flaticon.com/authors/freepik">Icons created by Freepik - Flaticon</a>
+<a href="https://www.flaticon.com/authors/freepik">Icons created by Freepik (Flaticon)</a>
+
+<!-- vale Google.FirstPerson = YES -->
 
 [^1]: [QLmarkdown](https://github.com/sbarex/QLMarkdown) and [Peek](https://apps.apple.com/app/peek-quick-look-extension/id1554235898) both enable previewing of Markdown documents. Peek works with a wide range of other file types than Markdown, but costs around 5€. QLMarkdown is free, but only works for Markdown and requires some minor setup. To enable the proper display of YAML headers, you need to enable the respective setting in the Advanced Options of QLMarkdown or Peek.
 
-[^4]: `Hyper` is an artificial "fifth" modifier key equivalent to `⌘⌥⌃⇧`, and can be created using apps like [Karabiner Elements](https://karabiner-elements.pqrs.org/), [BetterTouchTool](https://www.macupdate.com/app/mac/32953/bettertouchtool), or [Hyperkey](https://hyperkey.app/). `Meh` is an artificial "sixth" modifier key equivalent to `⌥⌃⇧`.
+[^2]: `Hyper` is an artificial "fifth" modifier key equal to `⌘⌥⌃⇧`, and can be created using apps like [Karabiner Elements](https://karabiner-elements.pqrs.org/), [BetterTouchTool](https://www.macupdate.com/app/mac/32953/bettertouchtool), or [Hyperkey](https://hyperkey.app/). `Meh` is an artificial "sixth" modifier key equal to `⌥⌃⇧`.
 
