@@ -2345,7 +2345,7 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>note</key>
-			<string>fuzzy open PDF</string>
+			<string>open PDF</string>
 			<key>xpos</key>
 			<real>950</real>
 			<key>ypos</key>
@@ -3023,7 +3023,7 @@ to set a hotkey for adding an Doi/ISBN</string>
 		<string>60</string>
 	</dict>
 	<key>version</key>
-	<string>11.1.0</string>
+	<string>11.1.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/chrisgrieser/alfred-bibtex-citation-picker</string>
 </dict>

@@ -1,3 +1,10 @@
+- 2023-01-29	release 11.1.1
+- 2023-01-29	fix: improve pdf fuzzy opening (#15)
+- 2023-01-29	chore
+- 2023-01-29	chore
+- 2023-01-29	chore
+- 2023-01-29	chore
+- 2023-01-28	chore
 - 2023-01-28	release 11.1.0
 - 2023-01-28	feat: inline citations via cmd+shift (#18 and #24)
 - 2023-01-28	chore

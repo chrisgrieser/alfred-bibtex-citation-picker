@@ -9,6 +9,8 @@ else
 	return 1
 fi
 
+# opening only requires pdf named with citekey, soPDFs field with a method other
+# than this workflow can also be opened.
 FILE_PATH=$(find . -maxdepth 3 -type f -name "*.pdf" | grep -i $CITEKEY | head -n1)
 
 if [[ -f "$FILE_PATH" ]]; then 
