@@ -2989,10 +2989,10 @@ to set a hotkey for adding an Doi/ISBN</string>
 				<key>required</key>
 				<false/>
 				<key>text</key>
-				<string>Match authors in the et al</string>
+				<string>Match authors in the "et al"</string>
 			</dict>
 			<key>description</key>
-			<string>Whether the citation picker should match authors names that are in the et al. (If you have papaers with hundreds of co-authors, you can disable this to improve matching.)</string>
+			<string>Whether the citation picker should match authors names that are in the et al. (If you have papers with hundreds of co-authors, you can disable this to improve matching.)</string>
 			<key>label</key>
 			<string></string>
 			<key>type</key>
