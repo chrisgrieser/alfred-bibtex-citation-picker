@@ -9,7 +9,7 @@
 	<key>literature_note_folder</key>
 	<string>~/main-vault/Literature Notes</string>
 	<key>open_entries_in</key>
-	<string>neovim &amp; alacritty</string>
+	<string>neovide</string>
 	<key>pdf_folder</key>
 	<string>~/Library/Mobile Documents/com~apple~CloudDocs/PDFs</string>
 </dict>
