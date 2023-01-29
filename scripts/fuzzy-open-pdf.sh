@@ -1,16 +1,20 @@
 #!/bin/zsh
 PDF_FOLDER="${pdf_folder/#\~/$HOME}"
 CITEKEY="$*"
-# shellcheck disable=SC2001
-CITEKEY_ALT=$(echo "$CITEKEY" | sed 's/\([[:digit:]]...\)/_\1/') # try old naming pattern of PDFs
 
-cd "$PDF_FOLDER" || return 1
-
-PDF_LIST=$(find . -maxdepth 3 -type f -name "*.pdf")
-if (echo "$PDF_LIST" | grep -qi "$CITEKEY") ; then
-	FILE_PATH=$(echo "$PDF_LIST" | grep -i "$CITEKEY" | head -n1)
+if [[ -d "$PDF_FOLDER" ]]; then
+	cd "$PDF_FOLDER"
 else
-	FILE_PATH=$(echo "$PDF_LIST" | grep -i "$CITEKEY_ALT" | head -n1)
+	echo "$PDF_FOLDER does not exist"
+	return 1
 fi
 
-open "$FILE_PATH"
+FILE_PATH=$(find . -maxdepth 3 -type f -name "*.pdf" | grep -i $CITEKEY | head -n1)
+
+if [[ -f "$FILE_PATH" ]]; then 
+	open "$FILE_PATH"
+else
+	echo "No PDF for \"$CITEKEY\" found."
+	echo
+	echo "Make sure you have entered the correct pdf folder in the settings and named the PDF file correctly."
+fi

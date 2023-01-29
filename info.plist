@@ -108,7 +108,18 @@
 			</dict>
 		</array>
 		<key>113F2026-78AB-41BA-8836-6145DE94CBEF</key>
-		<array/>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7FED238F-6F1B-440B-9FB3-5D9B520D67BF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>1C0964D1-AA81-478A-B406-28E96DDD9E82</key>
 		<array>
 			<dict>
@@ -2183,6 +2194,35 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alignment</key>
+				<integer>0</integer>
+				<key>backgroundcolor</key>
+				<string></string>
+				<key>fadespeed</key>
+				<integer>0</integer>
+				<key>fillmode</key>
+				<integer>0</integer>
+				<key>font</key>
+				<string></string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>largetypetext</key>
+				<string>{query}</string>
+				<key>textcolor</key>
+				<string></string>
+				<key>wrapat</key>
+				<integer>50</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.largetype</string>
+			<key>uid</key>
+			<string>7FED238F-6F1B-440B-9FB3-5D9B520D67BF</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -2307,9 +2347,9 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 			<key>note</key>
 			<string>fuzzy open PDF</string>
 			<key>xpos</key>
-			<real>955</real>
+			<real>950</real>
 			<key>ypos</key>
-			<real>1525</real>
+			<real>1535</real>
 		</dict>
 		<key>1B72EC4E-33E7-4144-B43B-3037510ADA3A</key>
 		<dict>
@@ -2568,6 +2608,15 @@ to set a hotkey for the citaiton picker.</string>
 			<real>940</real>
 			<key>ypos</key>
 			<real>985</real>
+		</dict>
+		<key>7FED238F-6F1B-440B-9FB3-5D9B520D67BF</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>1</integer>
+			<key>xpos</key>
+			<real>1105</real>
+			<key>ypos</key>
+			<real>1535</real>
 		</dict>
 		<key>824D0711-2DC5-46B0-8EA1-BD0A74DF5AAA</key>
 		<dict>
@@ -2900,7 +2949,7 @@ to set a hotkey for adding an Doi/ISBN</string>
 					</array>
 					<array>
 						<string>default app for .bib files</string>
-						<string>default</string>
+						<string>default app for .bib files</string>
 					</array>
 				</array>
 			</dict>

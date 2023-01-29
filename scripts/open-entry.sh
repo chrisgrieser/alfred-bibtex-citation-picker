@@ -18,7 +18,7 @@ elif [[ "$open_entries_in" == "neovim & alacritty" ]]; then
 elif [[ "$open_entries_in" == "Zotero" ]]; then
 	# INFO "bbt:" ensures that the item is opened in the personal library https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues/20#issuecomment-1406495450
 	open "zotero://select/items/bbt:@$CITEKEY"
-elif [[ "$open_entries_in" == "default" ]]; then
+elif [[ "$open_entries_in" == "default app for .bib files" ]]; then
 	# passing line arguments for the few apps that could parse it
 	open "$LIBRARY" --env=LINE=$LINE_NO
 fi
