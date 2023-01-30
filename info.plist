@@ -2276,9 +2276,9 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>305</real>
+			<real>290</real>
 			<key>ypos</key>
-			<real>1270</real>
+			<real>1275</real>
 		</dict>
 		<key>03FDB341-D261-4E25-B0A4-53ECD86664EC</key>
 		<dict>
@@ -2325,9 +2325,9 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>340</real>
+			<real>325</real>
 			<key>ypos</key>
-			<real>915</real>
+			<real>920</real>
 		</dict>
 		<key>10ACA015-64F3-4D2E-A659-213C5A665FDE</key>
 		<dict>
@@ -2347,7 +2347,7 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 			<key>note</key>
 			<string>open PDF</string>
 			<key>xpos</key>
-			<real>950</real>
+			<real>940</real>
 			<key>ypos</key>
 			<real>1535</real>
 		</dict>
@@ -2396,18 +2396,18 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>745</real>
+			<real>715</real>
 			<key>ypos</key>
-			<real>1040</real>
+			<real>1045</real>
 		</dict>
 		<key>2D72874E-4A27-4A0C-98B3-15EFBEBE1031</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>305</real>
+			<real>290</real>
 			<key>ypos</key>
-			<real>1145</real>
+			<real>1150</real>
 		</dict>
 		<key>2DC90122-FC40-44CA-8F59-E3C16AC99651</key>
 		<dict>
@@ -2480,9 +2480,9 @@ to set a hotkey for the citaiton picker.</string>
 			<key>note</key>
 			<string>quicklook cheatsheets</string>
 			<key>xpos</key>
-			<real>315</real>
+			<real>300</real>
 			<key>ypos</key>
-			<real>1010</real>
+			<real>1015</real>
 		</dict>
 		<key>4771A40C-E741-46C5-93EF-82CEB4BD23D8</key>
 		<dict>
@@ -2509,27 +2509,27 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>590</real>
+			<real>575</real>
 			<key>ypos</key>
-			<real>1145</real>
+			<real>1150</real>
 		</dict>
 		<key>55B921A5-4319-4B5C-A06B-66427377E219</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>100</real>
+			<real>85</real>
 			<key>ypos</key>
-			<real>1075</real>
+			<real>1080</real>
 		</dict>
 		<key>57D40C47-4A2C-47A2-9E7A-A3CC8C3FB671</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>250</real>
+			<real>235</real>
 			<key>ypos</key>
-			<real>1175</real>
+			<real>1180</real>
 		</dict>
 		<key>5A83CD14-6282-49D4-9482-F89DC21A185F</key>
 		<dict>
@@ -2566,6 +2566,8 @@ to set a hotkey for the citaiton picker.</string>
 		<dict>
 			<key>colorindex</key>
 			<integer>5</integer>
+			<key>note</key>
+			<string>anystyle</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
@@ -2585,18 +2587,18 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>250</real>
+			<real>235</real>
 			<key>ypos</key>
-			<real>1300</real>
+			<real>1305</real>
 		</dict>
 		<key>7416BB08-7009-4A47-B833-524B2C3BDB55</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>410</real>
+			<real>395</real>
 			<key>ypos</key>
-			<real>885</real>
+			<real>890</real>
 		</dict>
 		<key>7E602D21-0A78-4DC6-A807-28A5602897C8</key>
 		<dict>
@@ -2623,9 +2625,9 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>455</real>
+			<real>440</real>
 			<key>ypos</key>
-			<real>1270</real>
+			<real>1275</real>
 		</dict>
 		<key>83A9C045-9885-4C76-B88D-DAC01E9528C0</key>
 		<dict>
@@ -2683,9 +2685,9 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>595</real>
+			<real>580</real>
 			<key>ypos</key>
-			<real>1270</real>
+			<real>1275</real>
 		</dict>
 		<key>9C01A8C9-CBF3-4261-A0F2-CD6DC0E55515</key>
 		<dict>
@@ -2745,7 +2747,7 @@ to set a hotkey for the citaiton picker.</string>
 			<key>note</key>
 			<string>DOUBLE CLICK THIS
 
-to set a hotkey for adding an Doi/ISBN</string>
+to set a hotkey for adding a DOI or ISBN</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
@@ -2820,9 +2822,9 @@ to set a hotkey for adding an Doi/ISBN</string>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>455</real>
+			<real>440</real>
 			<key>ypos</key>
-			<real>1145</real>
+			<real>1150</real>
 		</dict>
 		<key>FCCA3147-A52B-4254-938A-C8EFA2FF7933</key>
 		<dict>
