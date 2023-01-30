@@ -3025,7 +3025,7 @@ to set a hotkey for adding a DOI or ISBN</string>
 		<string>60</string>
 	</dict>
 	<key>version</key>
-	<string>11.1.1</string>
+	<string>11.1.2</string>
 	<key>webaddress</key>
 	<string>https://github.com/chrisgrieser/alfred-bibtex-citation-picker</string>
 </dict>

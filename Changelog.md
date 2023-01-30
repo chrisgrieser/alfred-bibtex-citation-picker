@@ -1,3 +1,16 @@
+- 2023-01-30	release 11.1.2
+- 2023-01-30	chore
+- 2023-01-30	Merge pull request #25 from tim-hilde/main
+- 2023-01-30	Fix error regarding opening entry in Zotero
+- 2023-01-30	fix: pdf icon recognition
+- 2023-01-29	chore
+- 2023-01-29	chore
+- 2023-01-29	chore
+- 2023-01-29	chore
+- 2023-01-29	style
+- 2023-01-29	chore
+- 2023-01-29	chore
+- 2023-01-29	chore
 - 2023-01-29	release 11.1.1
 - 2023-01-29	fix: improve pdf fuzzy opening (#15)
 - 2023-01-29	chore
