@@ -108,7 +108,8 @@ If there is a citation syntax that is commonly used, or if you want to improve s
 > Adding or removing entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/) since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file are not reflected in Zotero.
 
 ### Literature Note Actions
-- The citation picker looks in the folder specified in the workflow settings for files that are *exactly* named like the citekey (without `@`, but with `.md` extension). Entries that have such a literature note is indicated by a `📓`.
+- The citation picker looks in the folder specified in the workflow settings for files that are *exactly* named like the citekey, optionally followed by an underscore and some text like `{citekey}_{title}.md`. The citekey must not contain underscores (`_`), the filename should not include the `@`.
+- Entries that have such a literature note is indicated by a `📓`.
 - `Meh + ↵`[^2]: Open the literature note.
 	- If the file is in an [Obsidian Vault](https://obsidian.md/), it is opened directly in Obsidian instead of the default text editor.
 	- If there is no literature note, a new one is created.
@@ -119,7 +120,7 @@ If there is a citation syntax that is commonly used, or if you want to improve s
 The following features require that all your PDFs are located in the folder specified in your workflow settings.
 - `fn + ↵`: __Auto-file and auto-rename__ the *currently selected PDF*. Inside your selected PDF folder, uses the template path: `{first_letter_of_citekey}/{citekey-author-part}/{citekey}_{shortened_title}.pdf`
 - The `📕` indicates that the entry already has an associated PDF at that location.
-- `Hyper + ↵`[^2]: If the entry has an associated PDF file, open it with the default PDF reader.
+- `Hyper + ↵`[^2]: If the entry has an associated PDF file, open it with the default PDF reader. The filename must not contain `@`, and the citekey must not contains an underscore (`_`).
 - ℹ️ Add `pdf` to any search query to filter only for entries with PDFs that have been added by the auto-file feature. `pdf grieser`, for example, displays only entries from the author "Grieser" with PDFs. Can be combined with other queries (see: [smart queries](#search)).
 
 ### Auxiliary Features

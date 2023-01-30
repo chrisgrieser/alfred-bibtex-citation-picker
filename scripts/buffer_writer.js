@@ -42,7 +42,11 @@ if (litNoteFolderCorrect) {
 		.doShellScript(`ls "${litNoteFolder}"`)
 		.split("\r")
 		.filter(filename => filename.endsWith(".md"))
-		.map(filename => filename.slice(0, -3)); // remove extension
+		.map(filepath => {
+			return filepath
+				.replace(/.*\/(.*)\.md/, "$1") // only basename w/o ext
+				.replace(/(_[^_]*$)/, ""); // INFO part before underscore, this method does not work for citkeys which contain an underscore though...
+		});
 	console.log("Literature Note Reading successful.");
 }
 
