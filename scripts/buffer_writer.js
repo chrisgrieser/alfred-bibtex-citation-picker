@@ -52,14 +52,13 @@ if (pdfFolderCorrect) {
 		.split("\r")
 		.map(filepath => {
 			return filepath
-				.replace(/.*\/(.*)\.pdf/, "$1") // only filename
-				.replace(/(.*)_.*/, "$1") // only part before the first _ (= cut appended title)
-				.replaceAll("_", ""); // remove remaining underscores in case there were multiple ones
+				.replace(/.*\/(.*)\.pdf/, "$1") // only basename w/o ext
+				.replace(/(_[^_]*$)/, ""); // INFO part before underscore, this method does not work for citkeys which contain an underscore though...
 		});
 	console.log("PDF Folder reading successful.");
 }
 
-// -------------------------------
+//──────────────────────────────────────────────────────────────────────────────
 
 const rawBibtex = app.doShellScript(`cat "${libraryPath}"`);
 console.log("Bibtex Library Reading successful.");
@@ -210,7 +209,7 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 			subtitle: namesToDisplay + year + collectionSubtitle + "   " + emojis.join(" "),
 			match: alfredMatcher,
 			arg: citekey,
-			icon: { path: typeIcon },
+			icon: {path: typeIcon},
 			uid: citekey,
 			text: {
 				copy: url,
@@ -218,7 +217,7 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 			},
 			quicklookurl: litNotePath,
 			mods: {
-				fn: { arg: autoFileName },
+				fn: {arg: autoFileName},
 				ctrl: {
 					valid: url !== "",
 					arg: url,
@@ -228,10 +227,9 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		};
 	});
 
-// -------------------------------
-console.log("Buffer Creation successful.");
+//──────────────────────────────────────────────────────────────────────────────
 
 const logEndTime = new Date();
 console.log("Buffer Writing Duration: " + (logEndTime - logStartTime).toString() + "ms");
 
-JSON.stringify({ items: entryArray }); // JXA direct return
+JSON.stringify({items: entryArray}); // JXA direct return
