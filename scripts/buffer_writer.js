@@ -209,7 +209,7 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 			subtitle: namesToDisplay + year + collectionSubtitle + "   " + emojis.join(" "),
 			match: alfredMatcher,
 			arg: citekey,
-			icon: {path: typeIcon},
+			icon: { path: typeIcon },
 			uid: citekey,
 			text: {
 				copy: url,
@@ -217,7 +217,7 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 			},
 			quicklookurl: litNotePath,
 			mods: {
-				fn: {arg: autoFileName},
+				fn: { arg: autoFileName },
 				ctrl: {
 					valid: url !== "",
 					arg: url,
@@ -232,4 +232,4 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 const logEndTime = new Date();
 console.log("Buffer Writing Duration: " + (logEndTime - logStartTime).toString() + "ms");
 
-JSON.stringify({items: entryArray}); // JXA direct return
+JSON.stringify({ items: entryArray }); // JXA direct return
