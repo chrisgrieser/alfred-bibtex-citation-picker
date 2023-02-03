@@ -1,3 +1,11 @@
+- 2023-02-03	release 11.1.3
+- 2023-02-03	Merge pull request #26 from zeitlings/patch-1
+- 2023-02-03	added the goto flag to vscode case
+- 2023-01-31	chore
+- 2023-01-31	chore
+- 2023-01-31	chore
+- 2023-01-30	chore
+- 2023-01-30	chore
 - 2023-01-30	release 11.1.2
 - 2023-01-30	chore
 - 2023-01-30	Merge pull request #25 from tim-hilde/main
