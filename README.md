@@ -1,7 +1,7 @@
 # Supercharged Citation Picker
 ![](https://img.shields.io/github/downloads/chrisgrieser/alfred-bibtex-citation-picker/total?label=Total%20Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/alfred-bibtex-citation-picker?label=Latest%20Release&style=plastic) [![](https://img.shields.io/badge/changelog-click%20here-FFE800?style=plastic)](./Changelog.md)
 
-A citation picker for academics that write in markdown. Using [Alfred](https://www.alfredapp.com/), it inserts citations from a BibTeX File in various formats, for example [Pandoc](https://pandoc.org/MANUAL.html#citation-syntax), [Multi-Markdown](https://fletcher.github.io/MultiMarkdown-6/syntax/citation.html) or [Latex](https://www.overleaf.com/learn/latex/Biblatex_citation_styles).
+A citation picker and minimalistic reference manager for [Alfred](https://www.alfredapp.com/). Uses a BibTeX File and supports various formats like [Pandoc Markdown](https://pandoc.org/MANUAL.html#citation-syntax), [Multi-Markdown](https://fletcher.github.io/MultiMarkdown-6/syntax/citation.html) or [LaTeX](https://www.overleaf.com/learn/latex/Biblatex_citation_styles).
 
 <img width=60% alt="promo screenshot" src="assets/promo.png">
 
@@ -12,7 +12,7 @@ A citation picker for academics that write in markdown. Using [Alfred](https://w
 - __Feature-rich:__ paste single-entry bibliographies, open URLs, open or create literature notes, attach PDFs, search for `.csl` files online, and more.
 - __Blazingly Fast:__ considerably quicker than any other citation pickers (~200 ms to fully reload a library with ~4000 entries).
 - __Simple Installation:__ no dependencies, no required plugins, no setup. Just enter the path to your `.bib` file.
-- __Minimalistic reference manager__: add or remove entries the BibTeX library, automatically rename and file PDFs, parse single entries, and more.
+- __Minimalistic reference manager__: add or remove entries the BibTeX library, automatically rename and file PDFs, and more.
 - __Obsidian integration:__ When located in an [Obsidian](https://obsidian.md/) vault, literature notes are automatically opened or created in Obsidian instead of the default markdown app.
 
 ## Table of Contents
@@ -97,11 +97,12 @@ If there is a citation syntax that is commonly used, or if you want to improve s
 ### Bibliography Actions
 - `⇧ + ↵`: Reveal the entry in Zotero, neovim, BibDesk, VS Code, or Sublime, depending on the setting in the workflow configuration.
 - `⌘⌥ + ↵`: Paste the full bibliographic entry in the APA 6th Style (requires [Pandoc](https://pandoc.org/installing.html)).
-- `⌘ + L`: Preview the (unabridged) title, abstract, and list of keywords in Large Type.
+- `⌘ + L`: Preview the (unabridged) title, abstract, and list of keywords in Large type.
 - `⌘fn + ↵`: Delete the entry from the BibTeX library. (⚠️ This feature is untested with BibTeX files created with apps other than BibDesk and Bookends. [Create an issue](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues) for problems with other apps.)
 - `universal action` or `hotkey`: Uses the selected __DOI__, __ISBN__, or __URL containing a DOI__ to add a new entry to the library.
 	- *Experimental:* A second universal action can be used to parse & add a bibliographic entry. Requires [anystyle](https://github.com/inukshuk/anystyle).
-	- The new entry is added to your library, with a correctly formatted and unique citekey. Afterward, the entry is opened in the app specified in `open_entries_in`.
+	- The new entry is added to your library, with a correctly formatted and unique citekey. Afterward, the entry is opened.
+- `file action`: Use the "Add Entry and Auto-file" action on a PDF file that includes a DOI. The DOI is automatically retrieved from the PDF, the entry added to the library, and the PDF auto-filed (see [PDF Management Actions](#pdf-management-actions)). Requires [pdfgrep](https://pdfgrep.org/).
 
 > __Note__  
 > Adding or removing entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/) since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file are not reflected in Zotero.

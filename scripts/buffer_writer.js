@@ -11,7 +11,6 @@ const pdfIcon = "📕";
 const litNoteFilterStr = "*";
 const pdfFilterStr = "pdf";
 
-const maxTitleFileNameLength = 50;
 const alfredBarLength = parseInt($.getenv("alfred_bar_length"));
 
 const matchAuthorsInEtAl = $.getenv("match_authors_in_etal") === "1";
@@ -92,14 +91,6 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 		// Shorten Title (for display in Alfred)
 		let shorterTitle = title;
 		if (title.length > alfredBarLength) shorterTitle = title.slice(0, alfredBarLength).trim() + "…";
-
-		// autofile
-		const safeTitle = title
-			.slice(0, maxTitleFileNameLength)
-			.replace(/[;:/\\]/g, "-")
-			.replace(/[„"'´,#]/g, "")
-			.replace(/[ -–]$/g, "");
-		const autoFileName = `${citekey}_${safeTitle}`;
 
 		// URL
 		let urlSubtitle = "⛔️ There is no URL or DOI.";
@@ -221,7 +212,6 @@ const entryArray = bibtexParse(rawBibtex) // eslint-disable-line no-undef
 			},
 			quicklookurl: litNotePath,
 			mods: {
-				fn: { arg: autoFileName },
 				ctrl: {
 					valid: url !== "",
 					arg: url,

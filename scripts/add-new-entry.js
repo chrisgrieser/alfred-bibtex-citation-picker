@@ -129,8 +129,8 @@ function run(argv) {
 
 	const isDOI = doiRegex.test(input);
 	const isISBN = isbnRegex.test(input);
-	const parseText = $.getenv("parseText") === "true";
-	if (!isDOI && !isISBN && !parseText) return "input invalid";
+	const mode = $.getenv("mode");
+	if (!isDOI && !isISBN && mode !== "parse") return "input invalid";
 
 	// DOI
 	if (isDOI) {
@@ -146,7 +146,7 @@ function run(argv) {
 		if (!bibtexEntry.includes("@")) return "ISBN invalid";
 
 		// parse
-	} else if (parseText) {
+	} else if (mode === "parse") {
 		// INFO anystyle can't read STDIN, so this has to be written to a file
 		// https://github.com/inukshuk/anystyle-cli#anystyle-help-parse
 		const tempPath = $.getenv("alfred_workflow_cache") + "/temp.txt";
@@ -165,7 +165,7 @@ function run(argv) {
 		.replace(/^ {2}/gm, "\t") // indentation
 		.replace(/^\s*\w+ =/gm, field => field.toLowerCase()) // lowercase all keys
 		.replace(keysToDeleteRegex, "")
-		.replace(/^(\tpublisher.*?)\{?(?: ?\{?gmbh|ltd|publications|llc)\}?(.*)$/mi, "$1$2") // publisher garbage
+		.replace(/^(\tpublisher.*?)\{?(?: ?\{?gmbh|ltd|publications|llc ?)\}?(.*)$/im, "$1$2") // publisher garbage
 		.replace("\tdate =", "\tyear =") // consistently "year"
 		.replace("%2F", "/") // fix for URL key in some DOIs
 		.replace(/\tyear = \{?(\d{4}).*\}?/g, "\tyear = $1,") // clean year key
@@ -183,7 +183,15 @@ function run(argv) {
 	// Create keywords field
 	newEntryProperties.splice(1, 0, "\tkeywords = {},");
 
+	// Write result
 	const newEntry = newEntryProperties.join("\n");
 	appendToFile(newEntry, libraryPath);
+
+	// save title for auto-filing
+	if (mode === "id+autofile") {
+		const title = newEntry.match(/\btitle ? = .*/)[0];
+		writeToFile(title, $.getenv("alfred_workflow_cache") + "/title.txt");
+	}
+
 	return newCitekey; // pass for opening function
 }
