@@ -1,3 +1,7 @@
+- 2023-02-04	release 11.2.0
+- 2023-02-04	feat: add entry and autofile PDF (using pdfgrep)
+- 2023-02-04	chore
+- 2023-02-04	chore
 - 2023-02-03	release 11.1.3
 - 2023-02-03	Merge pull request #26 from zeitlings/patch-1
 - 2023-02-03	added the goto flag to vscode case
