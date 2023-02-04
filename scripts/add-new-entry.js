@@ -165,7 +165,7 @@ function run(argv) {
 		.replace(/^ {2}/gm, "\t") // indentation
 		.replace(/^\s*\w+ =/gm, field => field.toLowerCase()) // lowercase all keys
 		.replace(keysToDeleteRegex, "")
-		.replace(/^\t(publisher.*?)\{?(?: ?\{?gmbh|ltd|publications|llc)\}?(.*)$/mi, "\t$1$2") // publisher garbage
+		.replace(/^(\tpublisher.*?)\{?(?: ?\{?gmbh|ltd|publications|llc)\}?(.*)$/mi, "$1$2") // publisher garbage
 		.replace("\tdate =", "\tyear =") // consistently "year"
 		.replace("%2F", "/") // fix for URL key in some DOIs
 		.replace(/\tyear = \{?(\d{4}).*\}?/g, "\tyear = $1,") // clean year key

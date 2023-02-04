@@ -577,7 +577,7 @@
 				<key>modifiers</key>
 				<integer>8388608</integer>
 				<key>modifiersubtext</key>
-				<string>fn: Auto-File PDF ({var:file_manager})</string>
+				<string>fn: Auto-File PDF selected in Finder</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
