@@ -3,6 +3,8 @@
 
 A citation picker and minimalistic reference manager for [Alfred](https://www.alfredapp.com/). Uses a BibTeX File and supports various formats like [Pandoc Markdown](https://pandoc.org/MANUAL.html#citation-syntax), [Multi-Markdown](https://fletcher.github.io/MultiMarkdown-6/syntax/citation.html) or [LaTeX](https://www.overleaf.com/learn/latex/Biblatex_citation_styles).
 
+
+
 <img width=60% alt="promo screenshot" src="assets/promo.png">
 
 ## Feature Overview
