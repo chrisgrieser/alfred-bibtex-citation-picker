@@ -3,7 +3,8 @@
 
 A citation picker and minimalistic reference manager for [Alfred](https://www.alfredapp.com/). Uses a BibTeX File and supports various formats like [Pandoc Markdown](https://pandoc.org/MANUAL.html#citation-syntax), [Multi-Markdown](https://fletcher.github.io/MultiMarkdown-6/syntax/citation.html) or [LaTeX](https://www.overleaf.com/learn/latex/Biblatex_citation_styles).
 
-
+> __Note__  
+> For inclusion in the upcoming Alfred Gallery, this workflow's auto-update feature had to be removed. However, the submission process for the upcoming Alfred Gallery takes longer than expected, and until admitted in the Gallery, you have to update the workflow manually by downloading the [latest release at GitHub](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest). 
 
 <img width=60% alt="promo screenshot" src="assets/promo.png">
 
