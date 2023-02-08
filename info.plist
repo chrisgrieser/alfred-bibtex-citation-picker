@@ -1607,7 +1607,7 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>get-doi-from-pdf.sh</string>
+				<string>scripts/get-doi-from-pdf.sh</string>
 				<key>type</key>
 				<integer>8</integer>
 			</dict>

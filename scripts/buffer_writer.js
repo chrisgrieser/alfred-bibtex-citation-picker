@@ -38,9 +38,8 @@ let pdfArray = [];
 
 if (litNoteFolderCorrect) {
 	litNoteArray = app
-		.doShellScript(`ls "${litNoteFolder}"`)
+		.doShellScript(`find "${litNoteFolder}" -type f -name "*.md"`)
 		.split("\r")
-		.filter(filename => filename.endsWith(".md"))
 		.map(filepath => {
 			return filepath
 				.replace(/.*\/(.*)\.md/, "$1") // only basename w/o ext
