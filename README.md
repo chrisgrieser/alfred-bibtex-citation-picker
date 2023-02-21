@@ -102,7 +102,7 @@ If there is a citation syntax that is commonly used, or if you want to improve s
 - `⌘⌥ + ↵`: Paste the full bibliographic entry in the APA 6th Style (requires [Pandoc](https://pandoc.org/installing.html)).
 - `⌘ + L`: Preview the (unabridged) title, abstract, and list of keywords in Large type.
 - `⌘fn + ↵`: Delete the entry from the BibTeX library. (⚠️ This feature is untested with BibTeX files created with apps other than BibDesk and Bookends. [Create an issue](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues) for problems with other apps.)
-- `universal action` or `hotkey`: Uses the selected __DOI__, __ISBN__, or __URL containing a DOI__ to add a new entry to the library.
+- `universal action`: Uses the selected __DOI__, __ISBN__, or __URL containing a DOI__ to add a new entry to the library.
 	- *Experimental:* A second universal action can be used to parse & add a bibliographic entry. Requires [anystyle](https://github.com/inukshuk/anystyle).
 	- The new entry is added to your library, with a correctly formatted and unique citekey. Afterward, the entry is opened.
 - `file action`: Use the "Add Entry and Auto-file" action on a PDF file that includes a DOI. The DOI is automatically retrieved from the PDF, the entry added to the library, and the PDF auto-filed (see [PDF Management Actions](#pdf-management-actions)). Requires [pdfgrep](https://pdfgrep.org/).

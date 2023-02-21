@@ -193,5 +193,6 @@ function run(argv) {
 		writeToFile(title, $.getenv("alfred_workflow_cache") + "/title.txt");
 	}
 
+	delay(0.1); // delay to ensure the file is written
 	return newCitekey; // pass for opening function
 }
