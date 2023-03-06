@@ -86,7 +86,7 @@ function run(argv) {
 			setEnvVar("_format_page_prefix", ", p. ");
 			setEnvVar("_format_page_suffix", "");
 			break;
-		case "iA":
+		case "iA Writer":
 			setEnvVar("_format_citation_start", "[");
 			setEnvVar("_format_citation_end", "]");
 			setEnvVar("_format_citekey_delimiter", "; ");
