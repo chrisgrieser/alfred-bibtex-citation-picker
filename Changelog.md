@@ -1,3 +1,14 @@
+- 2023-03-06	release 11.3.0
+- 2023-03-06	docs: formatting
+- 2023-03-06	Merge pull request #29 from PBHDK/ia-writer-citation-style
+- 2023-03-06	Merge pull request #28 from PBHDK/fix-link-to-citation-format-file
+- 2023-03-06	README: Fix link to toggle-citation-format.js
+- 2023-03-06	Add iA-style citation format
+- 2023-02-21	chore
+- 2023-02-21	chore
+- 2023-02-08	fix: literature note icon
+- 2023-02-07	chore
+- 2023-02-07	docs: info on temporary manual update
 - 2023-02-04	release 11.2.0
 - 2023-02-04	feat: add entry and autofile PDF (using pdfgrep)
 - 2023-02-04	chore

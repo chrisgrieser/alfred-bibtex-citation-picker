@@ -1,5 +1,4 @@
 # Supercharged Citation Picker
-
 ![](https://img.shields.io/github/downloads/chrisgrieser/alfred-bibtex-citation-picker/total?label=Total%20Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/alfred-bibtex-citation-picker?label=Latest%20Release&style=plastic) [![](https://img.shields.io/badge/changelog-click%20here-FFE800?style=plastic)](./Changelog.md)
 
 A citation picker and minimalistic reference manager for [Alfred](https://www.alfredapp.com/). Uses a BibTeX File and supports various formats like [Pandoc Markdown](https://pandoc.org/MANUAL.html#citation-syntax), [Multi-Markdown](https://fletcher.github.io/MultiMarkdown-6/syntax/citation.html) or [LaTeX](https://www.overleaf.com/learn/latex/Biblatex_citation_styles).
@@ -10,7 +9,6 @@ A citation picker and minimalistic reference manager for [Alfred](https://www.al
 <img width=60% alt="promo screenshot" src="assets/promo.png">
 
 ## Feature Overview
-
 - Inserts __Pandoc Citation Syntax__ (`[@citekey]`), supporting page numbers & multiple citations (`[@citekey, p. 23; @citekey, p. 42]`). Can also be configured to use __LaTeX__, __Multi-Markdown__, __eta templates__, `[[wikilinks]]`, or `#tags` as citation format.
 - __app-independent:__ works system-wide, in every text field of every app.
 - __Smart Search:__ search for citekeys, authors, title, publication, keywords (tags), include or exclude authors in *et al*, tab-completion, fuzzy-matching, sorting recently used entries to the top.
@@ -22,9 +20,6 @@ A citation picker and minimalistic reference manager for [Alfred](https://www.al
 
 ## Table of Contents
 <!--toc:start-->
-- [Supercharged Citation Picker](#supercharged-citation-picker)
-  - [Feature Overview](#feature-overview)
-  - [Table of Contents](#table-of-contents)
   - [Getting Started](#getting-started)
   - [Basic Usage](#basic-usage)
     - [Search](#search)
@@ -46,17 +41,14 @@ A citation picker and minimalistic reference manager for [Alfred](https://www.al
 <!--toc:end-->
 
 ## Getting Started
-
 1. [Download the latest release](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/releases/latest).
 2. Enter the BibTeX Library path.
 3. Set a hotkey for the citation picker by double-clicking the respective field in the workflow window.
 
 ## Basic Usage
-
 Press the hotkey in any text field to start the citation picker.
 
 ### Search
-
 - Search for the title, author/editor (last name), year, or collection or journal-title.
 - Prepend `@` to a word to search for a citekey, for example `@Grieser2020`.
 - Prepend `#` to search for keywords (tags), for example `#sociology`.
@@ -109,7 +101,6 @@ If there is a citation syntax that is commonly used, or if you want to improve s
 ## Advanced Usage
 
 ### Bibliography Actions
-
 - `⇧ + ↵`: Reveal the entry in Zotero, neovim, BibDesk, VS Code, or Sublime, depending on the setting in the workflow configuration.
 - `⌘⌥ + ↵`: Paste the full bibliographic entry in the APA 6th Style (requires [Pandoc](https://pandoc.org/installing.html)).
 - `⌘ + L`: Preview the (unabridged) title, abstract, and list of keywords in Large type.
@@ -123,7 +114,6 @@ If there is a citation syntax that is commonly used, or if you want to improve s
 > Adding or removing entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/) since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file are not reflected in Zotero.
 
 ### Literature Note Actions
-
 - The citation picker looks in the folder specified in the workflow settings for files that are *exactly* named like the citekey, optionally followed by an underscore and some text like `{citekey}_{title}.md`. The citekey must not contain underscores (`_`), the filename should not include the `@`.
 - Entries that have such a literature note is indicated by a `📓`.
 - `Meh + ↵`[^2]: Open the literature note.
@@ -133,7 +123,6 @@ If there is a citation syntax that is commonly used, or if you want to improve s
 - Add `*` to any search query to filter only for entries with literature notes, for example `* grieser` searches for entries matching "grieser" which also have a literature notes. Can be combined with other queries (see: [smart queries](#search)).
 
 ### PDF Management Actions
-
 The following features require that all your PDFs are located in the folder specified in your workflow settings.
 
 - `fn + ↵`: __Auto-file and auto-rename__ the *currently selected PDF*. Inside your selected PDF folder, uses the template path: `{first_letter_of_citekey}/{citekey-author-part}/{citekey}_{shortened_title}.pdf`
@@ -142,7 +131,6 @@ The following features require that all your PDFs are located in the folder spec
 - ℹ️ Add `pdf` to any search query to filter only for entries with PDFs that have been added by the auto-file feature. `pdf grieser`, for example, displays only entries from the author "Grieser" with PDFs. Can be combined with other queries (see: [smart queries](#search)).
 
 ### Auxiliary Features
-
 Triggered via the Alfred Keyword `scp` (for `S`upercharged `C`itation `P`icker).
 
 - __Cheat sheet: Citation Picker Actions__: Open a cheat sheet of the available actions of the Supercharged Citation Picker.
@@ -151,13 +139,9 @@ Triggered via the Alfred Keyword `scp` (for `S`upercharged `C`itation `P`icker).
 
 <!-- vale Google.FirstPerson = NO -->
 ## About the Developer
-
 In my day job, I am a sociologist studying the social mechanisms underlying the digital economy. For my PhD project, I investigate the governance of the app economy and how software ecosystems manage the tension between innovation and compatibility. If you are interested in this subject, feel free to get in touch.
 
-<!-- markdown-link-check-disable -->
-
 ### Profiles
-
 - [Academic Website](https://chris-grieser.de/)
 - [ResearchGate](https://www.researchgate.net/profile/Christopher-Grieser)
 - [Discord](https://discordapp.com/users/462774483044794368/)
@@ -166,13 +150,11 @@ In my day job, I am a sociologist studying the social mechanisms underlying the 
 - [LinkedIn](https://www.linkedin.com/in/christopher-grieser-ba693b17a/)
 
 ### Donate
-
 <a href='https://ko-fi.com/Y8Y86SQ91' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
 <!-- markdown-link-check-enable -->
 
 ### Credits
-
 <a href="https://www.flaticon.com/authors/freepik">Icons created by Freepik (Flaticon)</a>
 
 <!-- vale Google.FirstPerson = YES -->
