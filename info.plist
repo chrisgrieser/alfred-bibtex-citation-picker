@@ -2204,26 +2204,6 @@ echo "$*"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string> </string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict>
-					<key>citekey</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>3FA32575-5519-475C-AFED-6182B53063A6</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>subtext</key>
@@ -2353,6 +2333,26 @@ In some cases, you may need to restart Alfred for this change to take effect.
 			<string>9B9F7F22-DB77-4520-AD8F-BA445595D94B</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string> </string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>citekey</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>3FA32575-5519-475C-AFED-6182B53063A6</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2697,9 +2697,9 @@ to set a hotkey for the citaiton picker.</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<real>1005</real>
+			<real>1015</real>
 			<key>ypos</key>
-			<real>1430</real>
+			<real>1485</real>
 		</dict>
 		<key>406E52C6-C22D-4A6F-9C4D-3FEEFA513B34</key>
 		<dict>
