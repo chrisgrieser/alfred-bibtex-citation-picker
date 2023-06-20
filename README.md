@@ -1,10 +1,10 @@
 # Supercharged Citation Picker
 ![](https://img.shields.io/github/downloads/chrisgrieser/alfred-bibtex-citation-picker/total?label=Total%20Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/alfred-bibtex-citation-picker?label=Latest%20Release&style=plastic) [![](https://img.shields.io/badge/changelog-click%20here-FFE800?style=plastic)](./Changelog.md)
 
-A citation picker and minimalistic reference manager for [Alfred](https://www.alfredapp.com/). Uses a BibTeX File and supports various formats like [Pandoc Markdown](https://pandoc.org/MANUAL.html#citation-syntax), [Multi-Markdown](https://fletcher.github.io/MultiMarkdown-6/syntax/citation.html) or [LaTeX](https://www.overleaf.com/learn/latex/Biblatex_citation_styles).
+A citation picker and minimalistic reference manager for [Alfred](https://www.alfredapp.com/). Uses a BibTeX File and supports various formats like [Pandoc Markdown](https://pandoc.org/MANUAL.html#citation-syntax), [Multi-Markdown](https://fletcher.github.io/MultiMarkdown-6/syntax/citation.html), or [LaTeX](https://www.overleaf.com/learn/latex/Biblatex_citation_styles).
 
 > __Note__
-> For inclusion in the upcoming Alfred Gallery, this workflow's auto-update feature had to be removed. However, the submission process for the upcoming Alfred Gallery takes longer than expected, and until admitted in the Gallery, you have to update the workflow manually by downloading the [latest release at GitHub](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest).
+> For inclusion in the upcoming Alfred Gallery, this workflow's auto-update feature had to be removed. However, the submission process for the Alfred Gallery takes longer than expected, and until admitted in the Gallery, you have to update the workflow manually by downloading the [latest release at GitHub](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest).
 
 <img width=60% alt="promo screenshot" src="assets/promo.png">
 
@@ -83,12 +83,15 @@ Press the hotkey in any text field to start the citation picker.
 You can use the `scp` and select __Change Citation Format__ to change the format of the citations:
 
 - Pandoc (default)
-- Multi-Markdown
+- Org Mode
+- Multi-Markdown (MMD)
 - Latex
 - Eta template
 - iA Writer
 - Wikilink
 - Tag
+- Bare Citekey
+- Bracketed Citekey
 
 > __Note__
 > Not all formats support all citation-related features. For example, adding Page numbers as well as inline-citations are not supported for Latex, Wikilinks, and Tags, and iA Writer does not support multiple citations.
@@ -107,7 +110,7 @@ If there is a citation syntax that is commonly used, or if you want to improve s
 - `⌘fn + ↵`: Delete the entry from the BibTeX library. (⚠️ This feature is untested with BibTeX files created with apps other than BibDesk and Bookends. [Create an issue](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues) for problems with other apps.)
 - `universal action`: Uses the selected __DOI__, __ISBN__, or __URL containing a DOI__ to add a new entry to the library.
   - *Experimental:* A second universal action can be used to parse & add a bibliographic entry. Requires [anystyle](https://github.com/inukshuk/anystyle).
-  - The new entry is added to your library, with a correctly formatted and unique citekey. Afterward, the entry is opened.
+  - The new entry is added to your library, with a correctly formatted and unique citekey. Afterwards, the entry is opened.
 - `file action`: Use the "Add Entry and Auto-file" action on a PDF file that includes a DOI. The DOI is automatically retrieved from the PDF, the entry added to the library, and the PDF auto-filed (see [PDF Management Actions](#pdf-management-actions)). Requires [pdfgrep](https://pdfgrep.org/).
 
 > __Note__
