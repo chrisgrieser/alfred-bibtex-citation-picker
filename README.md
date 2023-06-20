@@ -9,13 +9,13 @@ A citation picker and minimalistic reference manager for [Alfred](https://www.al
 <img width=60% alt="promo screenshot" src="assets/promo.png">
 
 ## Feature Overview
-- Inserts __Pandoc Citation Syntax__ (`[@citekey]`), supporting page numbers & multiple citations (`[@citekey, p. 23; @citekey, p. 42]`). Can also be configured to use __LaTeX__, __Multi-Markdown__, __eta templates__, `[[wikilinks]]`, or `#tags` as citation format.
+- Inserts __Pandoc Citation Syntax__ (`[@citekey]`), supporting page numbers & multiple citations (`[@citekey, p. 23; @citekey, p. 42]`). Can also be configured to use __LaTeX__, __Multi-Markdown__, __eta templates__, __Org Mode__, `[[wikilinks]]`, or `#tags` or `bare citkeys` as citation format.
 - __app-independent:__ works system-wide, in every text field of every app.
 - __Smart Search:__ search for citekeys, authors, title, publication, keywords (tags), include or exclude authors in *et al*, tab-completion, fuzzy-matching, sorting recently used entries to the top.
 - __Feature-rich:__ paste single-entry bibliographies, open URLs, open or create literature notes, attach PDFs, search for `.csl` files online, and more.
 - __Blazingly Fast:__ considerably quicker than any other citation pickers (~200 ms to fully reload a library with ~4000 entries).
-- __Simple Installation:__ no dependencies, no required plugins, no setup. Just enter the path to your `.bib` file.
-- __Minimalistic reference manager__: add or remove entries the BibTeX library, automatically rename and file PDFs, and more.
+- __Simple Installation:__ No required plugins, no setup. Just enter the path to your `.bib` file.
+- __Minimalistic reference manager__: add or remove entries to the BibTeX library, automatically rename and file PDFs, and more.
 - __Obsidian integration:__ When located in an [Obsidian](https://obsidian.md/) vault, literature notes are automatically opened or created in Obsidian instead of the default markdown app.
 
 ## Table of Contents
