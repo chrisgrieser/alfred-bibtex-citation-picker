@@ -1,5 +1,5 @@
 # Mac
 .DS_Store
 
-# Sublime Markdown Preview Plugin
-*.html
+# Alfred Preferences
+prefs.plist
