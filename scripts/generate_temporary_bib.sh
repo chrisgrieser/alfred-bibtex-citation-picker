@@ -5,12 +5,20 @@ export PATH=/usr/local/bin:/opt/homebrew/bin/:$PATH
 CSL=apa-6th-edition.csl
 CITEKEY="@$*" # citekey with @ prefix for pandoc
 LIBRARY="${bibtex_library_path/#\~/$HOME}"
-DUMMYDOC="---\nnocite: |\n  $CITEKEY\n---\n::: {#refs}\n:::"
+DUMMYDOC=$(cat <<EOF
+---
+nocite: |
+  $CITEKEY
+---
+::: {#refs}
+:::
+EOF
+)
 
-if ! which pandoc; then
+if ! command -v pandoc &>/dev/null; then
 	echo -n "You need to install pandoc for this feature." | pbcopy
 else
-	echo -n "$DUMMYDOC" \
+	echo "$DUMMYDOC" \
 		| pandoc --citeproc --read=markdown --write=plain --csl="assets/$CSL" --bibliography="$LIBRARY" \
 		| tr "\n" " " \
 		| tr -s " " \

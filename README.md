@@ -116,7 +116,7 @@ If there is a citation syntax that is commonly used, or if you want to improve s
 ### Literature Note Actions
 - The citation picker looks in the folder specified in the workflow settings for files that are *exactly* named like the citekey, optionally followed by an underscore and some text like `{citekey}_{title}.md`. The citekey must not contain underscores (`_`), the filename should not include the `@`.
 - Entries that have such a literature note is indicated by a `📓`.
-- `Meh + ↵`[^2]: Open the literature note.
+- `⌃⌥ + ↵`[^2]: Open the literature note.
   - If the file is in an [Obsidian Vault](https://obsidian.md/), it is opened directly in Obsidian instead of the default text editor.
   - If there is no literature note, a new one is created.
 - `⌘ + Y`: Preview the literature note with QuickLook (requires QLmarkdown or Peek[^1]).
@@ -161,4 +161,4 @@ In my day job, I am a sociologist studying the social mechanisms underlying the 
 
 [^1]: [QLmarkdown](https://github.com/sbarex/QLMarkdown) and [Peek](https://apps.apple.com/app/peek-quick-look-extension/id1554235898) both enable previewing of Markdown documents. Peek works with a wide range of other file types than Markdown, but costs around 5€. QLMarkdown is free, but only works for Markdown and requires some minor setup. To enable the proper display of YAML headers, you need to enable the respective setting in the Advanced Options of QLMarkdown or Peek.
 
-[^2]: `Hyper` is an artificial "fifth" modifier key equal to `⌘⌥⌃⇧`, and can be created using apps like [Karabiner Elements](https://karabiner-elements.pqrs.org/), [BetterTouchTool](https://www.macupdate.com/app/mac/32953/bettertouchtool), or [Hyperkey](https://hyperkey.app/). `Meh` is an artificial "sixth" modifier key equal to `⌥⌃⇧`.
+[^2]: `Hyper` is an artificial "fifth" modifier key equal to `⌘⌥⌃⇧`, and can be created using apps like [Karabiner Elements](https://karabiner-elements.pqrs.org/), [BetterTouchTool](https://www.macupdate.com/app/mac/32953/bettertouchtool), or [Hyperkey](https://hyperkey.app/).
