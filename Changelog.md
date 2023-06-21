@@ -1,4 +1,3 @@
-- 2023-06-20	release 11.4.0
-- 2023-06-20	feat: org mode & bracketed citekey (#34, #31)
-- 2023-06-20	refactor
-- 2023-04-27	Delete .shellcheckrc
+- 2023-06-21	release 11.4.1
+- 2023-06-21	fix: autofiling from PDF with DOI
+- 2023-06-20	docs: more fixes
