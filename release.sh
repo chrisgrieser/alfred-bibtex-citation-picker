@@ -15,6 +15,7 @@ if [[ -z "$nextVersion" ]]; then
 else
 	echo "$nextVersion"
 fi
+echo
 plutil -replace version -string "$nextVersion" info.plist
 
 # backup info.plist
