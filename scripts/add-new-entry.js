@@ -27,11 +27,12 @@ function readFile(path) {
 
 /**
  * @param {string} text
- * @param {string} file
+ * @param {string} filepath
  */
-function writeToFile(text, file) {
+function writeToFile(text, filepath) {
+	app.doShellScript(`mkdir -p "$(dirname "${filepath}")"`);
 	const str = $.NSString.alloc.initWithUTF8String(text);
-	str.writeToFileAtomicallyEncodingError(file, true, $.NSUTF8StringEncoding, null);
+	str.writeToFileAtomicallyEncodingError(filepath, true, $.NSUTF8StringEncoding, null);
 }
 
 //──────────────────────────────────────────────────────────────────────────────
@@ -192,12 +193,6 @@ function run(argv) {
 	// Write result
 	const newEntry = newEntryProperties.join("\n");
 	appendToFile(newEntry, libraryPath);
-
-	// save title for auto-filing
-	if (mode === "id+autofile") {
-		const title = newEntry.match(/\btitle ? = .*/)[0];
-		writeToFile(title, $.getenv("alfred_workflow_cache") + "/title.txt");
-	}
 
 	delay(0.1); // delay to ensure the file is written
 	return newCitekey; // pass for opening function
