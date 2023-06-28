@@ -4,6 +4,14 @@ const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 ObjC.import("stdlib");
 
+/** @param {string} url */
+function httpRequest(url) {
+	const queryURL = $.NSURL.URLWithString(url);
+	const requestData = $.NSData.dataWithContentsOfURL(queryURL);
+	const requestString = $.NSString.alloc.initWithDataEncoding(requestData, $.NSUTF8StringEncoding).js;
+	return requestString;
+}
+
 //──────────────────────────────────────────────────────────────────────────────
 
 /** @param {string} str */
@@ -36,9 +44,7 @@ function fixCasing(str) {
 const localCSLs = app.doShellScript('ls -t "$csl_folder"').split("\r");
 
 const onlineCSLs = JSON.parse(
-	app.doShellScript(
-		'curl -s "https://api.github.com/repos/citation-style-language/styles/git/trees/master?recursive=1"',
-	),
+	httpRequest("https://api.github.com/repos/citation-style-language/styles/git/trees/master?recursive=1"),
 )
 	.tree.map((/** @type {{ path: string; }} */ item) => item.path)
 	.filter((/** @type {string} */ item) => item.endsWith(".csl"))

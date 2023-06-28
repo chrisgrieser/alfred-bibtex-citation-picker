@@ -154,7 +154,7 @@ function run(argv) {
 		// INFO anystyle can't read STDIN, so this has to be written to a file
 		// https://github.com/inukshuk/anystyle-cli#anystyle-help-parse
 		const tempPath = $.getenv("alfred_workflow_cache") + "/temp.txt";
-		writeToFile(input, tempPath);
+		writeToFile($.getenv("raw_entry"), tempPath);
 		bibtexEntry = app.doShellScript(`anystyle --stdout --format=bib parse "${tempPath}"`);
 	}
 
@@ -185,7 +185,7 @@ function run(argv) {
 	newEntryProperties[0] = newEntryProperties[0].split("{")[0] + "{" + newCitekey + ",";
 
 	// Create keywords field
-	// (only if there is no keyword property already – some doi providers do add
+	// (only if there is no keyword property already – some DOI providers do add
 	// keyword fields of their own)
 	if (!newEntryProperties.some((/** @type {string} */ prop) => prop.includes("keywords =")))
 		newEntryProperties.splice(1, 0, "\tkeywords = {},");

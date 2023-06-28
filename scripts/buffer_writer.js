@@ -189,7 +189,7 @@ function bibtexParse(rawBibtexStr) {
 			// standardize types (only used for icons later)
 			if (entry.category === "online") entry.category = "webpage";
 			else if (entry.category === "inbook") entry.category = "incollection";
-			else if (entry.category === "thesis" || entry.category === "report") entry.category = "unpublished";
+			else if (["thesis", "report", "misc"].includes(entry.category)) entry.category = "unpublished";
 
 			// parse remaining lines
 			lines.forEach((line) => {

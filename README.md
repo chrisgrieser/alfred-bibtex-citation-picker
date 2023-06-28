@@ -3,6 +3,9 @@
 
 A citation picker and minimalistic reference manager for [Alfred](https://www.alfredapp.com/). Uses a BibTeX File and supports various formats like [Pandoc Markdown](https://pandoc.org/MANUAL.html#citation-syntax), [Multi-Markdown](https://fletcher.github.io/MultiMarkdown-6/syntax/citation.html), or [LaTeX](https://www.overleaf.com/learn/latex/Biblatex_citation_styles).
 
+> __Note__
+> For inclusion in the upcoming Alfred Gallery, this workflow's auto-update feature had to be removed. However, the submission process for the Alfred Gallery takes longer than expected, and until admitted in the Gallery, you have to update the workflow manually by downloading the [latest release at GitHub](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest).
+
 <img width=60% alt="promo screenshot" src="assets/promo.png">
 
 ## Feature Overview
@@ -24,7 +27,7 @@ A citation picker and minimalistic reference manager for [Alfred](https://www.al
     - [URL Actions](#url-actions)
     - [Icon Meanings](#icon-meanings)
   - [Changing the Citation Format](#changing-the-citation-format)
-    - [Supported Formats](#supported-formats)
+    - [Available Formats](#available-formats)
     - [Other Format Customization](#other-format-customizations)
   - [Advanced Usage](#advanced-usage)
     - [Bibliography Actions](#bibliography-actions)
@@ -41,9 +44,6 @@ A citation picker and minimalistic reference manager for [Alfred](https://www.al
 1. [Download the latest release](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/releases/latest).
 2. Enter the BibTeX Library path.
 3. Set a hotkey for the citation picker by double-clicking the respective field in the workflow window.
-
-> __Note__
-> For inclusion in the upcoming [Alfred Gallery](https://alfred.app/), this workflow's auto-update feature had to be removed. However, the submission process for the Alfred Gallery takes longer than expected, and until admitted in the Gallery, you have to update the workflow manually by downloading the [latest release at GitHub](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest).
 
 ## Basic Usage
 Press the hotkey in any text field to start the citation picker.
@@ -79,7 +79,7 @@ Press the hotkey in any text field to start the citation picker.
 
 ## Changing the Citation Format
 
-### Supported Formats
+### Available Formats
 You can use the `scp` and select __Change Citation Format__ to change the format of the citations:
 
 - pandoc (default)
