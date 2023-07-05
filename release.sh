@@ -5,7 +5,7 @@
 # goto git root
 cd "$(git rev-parse --show-toplevel)" || return 1
 
-# Prompt for version number, if not entered, and insert it
+# Prompt for next version number
 nextVersion="$*"
 currentVersion=$(plutil -extract version xml1 -o - info.plist | sed -n 4p | cut -d">" -f2 | cut -d"<" -f1)
 echo "current version: $currentVersion"
@@ -33,10 +33,6 @@ zip --quiet --recurse-paths "$workflowName.alfredworkflow" . \
 
 # restore original
 rm -fv info.plist && mv -fv info-original.plist info.plist
-
-# update changelog
-echo "- $(date +"%Y-%m-%d")	release $nextVersion" >./Changelog.md
-git log --pretty=format:"- %ad%x09%s" --date=short | grep -v "chore" | sed -E "s/\t\+ /\t/g" >>./Changelog.md
 
 # GIT OPERATIONS
 git add -A
