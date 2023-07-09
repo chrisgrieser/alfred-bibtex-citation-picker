@@ -1,3 +1,0 @@
-- 2023-06-28	release 11.5.0
-- 2023-06-28	build: add makefile
-- 2023-06-26	Update README.md
