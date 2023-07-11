@@ -11,9 +11,9 @@ A citation picker and lightweight reference manager for [Alfred](https://www.alf
 - __Smart Search:__ Search for citekeys, authors, title, publication, keywords (tags), include or exclude authors in *et al.*, tab-completion, fuzzy-matching, sorting recently used entries to the top.
 - __Feature-rich:__ Paste single-entry bibliographies, open URLs, open or create literature notes, attach PDFs, search for `.csl` files online, and more.
 - __Blazingly Fast:__ Considerably quicker than any other citation picker (~200 ms to fully reload a library with ~4000 entries).
-- __Simple Installation:__ No required plugins, no setup. Only the path to your `.bib` file is required.
+- __Simple Installation:__ Just enter the path to your `.bib` file and you are ready to go.
 - __Lightweight Reference Manager:__ Automatically rename and file PDFs, remove, entries, and more.
-- __Quickyly Add New Entries:__ Select a DOI or ISBN to add them directly to your BibTeX library.
+- __Quickyly Add New Entries:__ Select a DOI or ISBN and add them directly to your BibTeX library via hotkey.
 - __Obsidian Integration:__ When located in your [Obsidian Vault](https://obsidian.md/), literature notes are automatically opened or created in Obsidian instead of the default markdown app.
 
 ## Table of Contents
