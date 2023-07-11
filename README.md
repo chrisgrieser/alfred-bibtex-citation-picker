@@ -1,7 +1,7 @@
 # Supercharged Citation Picker
 ![](https://img.shields.io/github/downloads/chrisgrieser/alfred-bibtex-citation-picker/total?label=Total%20Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/alfred-bibtex-citation-picker?label=Latest%20Release&style=plastic) 
 
-A citation picker and lightweight reference manager for [Alfred](https://www.alfredapp.com/). Uses a BibTeX File and supports various formats like [Pandoc Markdown](https://pandoc.org/MANUAL.html#citation-syntax), [Multi-Markdown](https://fletcher.github.io/MultiMarkdown-6/syntax/citation.html), or [LaTeX](https://www.overleaf.com/learn/latex/Biblatex_citation_styles).
+A citation picker and lightweight reference manager for [Alfred](https://www.alfredapp.com/). Uses a BibTeX File and supports various formats like [Pandoc Markdown](https://pandoc.org/MANUAL.html#citation-syntax), [Multi-Markdown](https://fletcher.github.io/MultiMarkdown-6/syntax/citation.html), [LaTeX](https://www.overleaf.com/learn/latex/Biblatex_citation_styles), or [Org Mode](https://orgmode.org/manual/Citations.html).
 
 <img width=60% alt="promo screenshot" src="assets/promo.png">
 
@@ -95,7 +95,7 @@ You can use the `scp` and select __Change Citation Format__ to change the format
 - bare citekey
 - bracketed citekey
 
-> __Note__
+> __Note__  
 > Not all formats support all citation-related features. For example, adding Page numbers as well as inline-citations are not supported for Latex, Wikilinks, and Tags, and iA Writer does not support multiple citations.
 
 ### Other Format Customizations
