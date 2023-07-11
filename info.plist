@@ -980,7 +980,7 @@
 				<key>escaping</key>
 				<integer>68</integer>
 				<key>keyword</key>
-				<string>ct</string>
+				<string>{var:citation_picker_keyword}</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -3354,6 +3354,27 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>config</key>
 			<dict>
 				<key>default</key>
+				<string>ct</string>
+				<key>placeholder</key>
+				<string>ct</string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Keyword for the Citation Picker. Alternatively, the Citation Picker can also be triggered via hotkey.</string>
+			<key>label</key>
+			<string>Keyword</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>citation_picker_keyword</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
 				<string></string>
 				<key>filtermode</key>
 				<integer>1</integer>
@@ -3503,6 +3524,25 @@ to set a hotkey for adding DOI/ISBN</string>
 			<string>checkbox</string>
 			<key>variable</key>
 			<string>match_authors_in_etal</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<false/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>Copy Citation</string>
+			</dict>
+			<key>description</key>
+			<string>Copy the Pandoc citation to the clipboard.</string>
+			<key>label</key>
+			<string>On adding new entries</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>copy_citation_on_adding_entry</string>
 		</dict>
 	</array>
 	<key>variables</key>

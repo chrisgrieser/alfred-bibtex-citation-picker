@@ -207,8 +207,7 @@ function bibtexParse(rawBibtexStr) {
 			// standardize entry icons
 			if (entry.icon === "online") entry.icon = "webpage";
 			else if (entry.icon === "inbook") entry.icon = "incollection";
-			else if (entry.icon === "report" || entry.icon === "misc" || entry.icon.includes("thesis"))
-				entry.icon = "unpublished";
+			else entry.icon = "unpublished"; // default: unpublished
 
 			// parse remaining lines
 			lines.forEach((line) => {
@@ -281,7 +280,9 @@ if (pdfFolderCorrect) {
 const rawBibtex = readFile(libraryPath);
 console.log("Bibtex Library Reading successful.");
 
-const entryArray = bibtexParse(rawBibtex).map((entry) => {
+const entryArray = bibtexParse(rawBibtex)
+	.reverse() // reverse, so recent entries come first
+	.map((entry) => {
 	const emojis = [];
 	// rome-ignore format: too long
 	const { title, url, citekey, keywords, icon, journal, volume, issue, booktitle, author, editor, year, abstract, primaryNamesEtAlString, primaryNames } = entry;

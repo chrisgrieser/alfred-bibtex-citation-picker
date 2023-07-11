@@ -211,6 +211,13 @@ function run(argv) {
 	const newEntry = newProps.join("\n");
 	appendToFile(newEntry, libraryPath);
 
+	// Copy Citation
+	const copyCitation = $.getenv("copy_citation_on_adding_entry") === "1"
+	if (copyCitation) {
+		const pandocCitation = `[@${newCitekey}]`
+		app.setTheClipboardTo(pandocCitation);
+	}
+
 	delay(0.1); // delay to ensure the file is written
 	return newCitekey; // pass for opening function
 }
