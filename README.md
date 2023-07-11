@@ -44,7 +44,7 @@ A citation picker and lightweight reference manager for [Alfred](https://www.alf
 2. Enter the BibTeX Library path.
 3. Set a hotkey for the citation picker by double-clicking the respective field in the workflow window.
 
- > __Note__
+> __Note__
 > [As soon as the workflow is admitted into the Alfred Gallery](https://www.alfredforum.com/topic/19356-supercharged-citation-picker/), it will automatically download updates. Until then, you have to update the workflow manually by downloading the [latest release here at GitHub](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/releases/latest).
 
 ## Basic Usage
