@@ -1,10 +1,7 @@
 # Supercharged Citation Picker
 ![](https://img.shields.io/github/downloads/chrisgrieser/alfred-bibtex-citation-picker/total?label=Total%20Downloads&style=plastic) ![](https://img.shields.io/github/v/release/chrisgrieser/alfred-bibtex-citation-picker?label=Latest%20Release&style=plastic) 
 
-A citation picker and minimalistic reference manager for [Alfred](https://www.alfredapp.com/). Uses a BibTeX File and supports various formats like [Pandoc Markdown](https://pandoc.org/MANUAL.html#citation-syntax), [Multi-Markdown](https://fletcher.github.io/MultiMarkdown-6/syntax/citation.html), or [LaTeX](https://www.overleaf.com/learn/latex/Biblatex_citation_styles).
-
-> __Note__
-> For inclusion in the upcoming Alfred Gallery, this workflow's auto-update feature had to be removed. However, the submission process for the Alfred Gallery takes longer than expected, and until admitted in the Gallery, you have to update the workflow manually by downloading the [latest release at GitHub](https://github.com/chrisgrieser/shimmering-obsidian/releases/latest).
+A citation picker and lightweight reference manager for [Alfred](https://www.alfredapp.com/). Uses a BibTeX File and supports various formats like [Pandoc Markdown](https://pandoc.org/MANUAL.html#citation-syntax), [Multi-Markdown](https://fletcher.github.io/MultiMarkdown-6/syntax/citation.html), or [LaTeX](https://www.overleaf.com/learn/latex/Biblatex_citation_styles).
 
 <img width=60% alt="promo screenshot" src="assets/promo.png">
 
@@ -14,13 +11,14 @@ A citation picker and minimalistic reference manager for [Alfred](https://www.al
 - __Smart Search:__ search for citekeys, authors, title, publication, keywords (tags), include or exclude authors in *et al.*, tab-completion, fuzzy-matching, sorting recently used entries to the top.
 - __Feature-rich:__ paste single-entry bibliographies, open URLs, open or create literature notes, attach PDFs, search for `.csl` files online, and more.
 - __Blazingly Fast:__ considerably quicker than any other citation pickers (~200 ms to fully reload a library with ~4000 entries).
-- __Simple Installation:__ No required plugins, no setup. Just enter the path to your `.bib` file.
-- __Minimalistic reference manager__: add or remove entries to the BibTeX library, automatically rename and file PDFs, and more.
+- __Simple Installation:__ No required plugins, no setup. Only the path to your `.bib` file is required.
+- __Lightweight reference manager:__ Automatically rename and file PDFs, remove, entries, and more.
+- __Quickyly add new entries:__ Select a DOI or ISBN to add them directly to your BibTeX library.
 - __Obsidian integration:__ When located in your [Obsidian Vault](https://obsidian.md/), literature notes are automatically opened or created in Obsidian instead of the default markdown app.
 
 ## Table of Contents
 <!--toc:start-->
-  - [Getting Started](#getting-started)
+  - [Installation](#installation)
   - [Basic Usage](#basic-usage)
     - [Search](#search)
     - [Citation Actions](#citation-actions)
@@ -34,16 +32,20 @@ A citation picker and minimalistic reference manager for [Alfred](https://www.al
     - [Literature Note Actions](#literature-note-actions)
     - [PDF Management Actions](#pdf-management-actions)
     - [Auxiliary Features](#auxiliary-features)
+  - [Spread the Word](#spread-the-word)
   - [About the Developer](#about-the-developer)
     - [Profiles](#profiles)
     - [Donate](#donate)
     - [Credits](#credits)
 <!--toc:end-->
 
-## Getting Started
+## Installation
 1. [Download the latest release](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/releases/latest).
 2. Enter the BibTeX Library path.
 3. Set a hotkey for the citation picker by double-clicking the respective field in the workflow window.
+
+ > __Note__
+> [As soon as the workflow is admitted into the Alfred Gallery](https://www.alfredforum.com/topic/19356-supercharged-citation-picker/), it will automatically download updates. Until then, you have to update the workflow manually by downloading the [latest release here at GitHub](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/releases/latest).
 
 ## Basic Usage
 Press the hotkey in any text field to start the citation picker.
@@ -86,10 +88,10 @@ You can use the `scp` and select __Change Citation Format__ to change the format
 - Org Mode
 - Multi-Markdown (MMD)
 - LaTeX
-- eta
+- eta template
 - iA Writer
-- wikilink
-- Tag
+- `[[wikilink]]`
+- `#tag`
 - bare citekey
 - bracketed citekey
 
@@ -99,7 +101,7 @@ You can use the `scp` and select __Change Citation Format__ to change the format
 ### Other Format Customizations
 If you want to use a format that is not available, you can customize the format yourself by changing the workflow environment variables starting with `_format`. (Tutorial: [how to set environment variables in Alfred](https://www.alfredapp.com/help/workflows/advanced/variables/#environment))
 
-If there is a citation syntax that is commonly used, or if you want to improve support for an existing format, feel free to open a [Feature Request](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues/new?assignees=&labels=enhancement&template=feature_request.yml&title=Feature+Request%3A+).
+If there is a citation syntax that is commonly used, or if you want to improve support for an existing format, feel free to open a [Feature Request](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues/new?assignees=&labels=enhancement&template=feature_request.yml&title=Feature+Request%3A+).  
 You can also make a PR to [this file which defines the citation formats](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/scripts/toggle-citation-format.js).
 
 ## Advanced Usage
@@ -142,6 +144,9 @@ Triggered via the Alfred Keyword `scp` (for `S`upercharged `C`itation `P`icker).
 - __Citation Style Search__: Search for a citation style (`.csl` file), which is downloaded to the location specified in your workflow settings (default: `~/.pandoc/csl/`).
 - __Force Buffer Reload__: Force a reload of the citation picker. Mostly for debugging purposes.
 
+## Spread the Word
+As this is probably the most feature-rich and most performant citation picker on macOS, it is kind of a bummer that not many people know about this. However, I do not really know where to "advertise" this, since I am not aware of any forum or website for academics that work with markdown and BibTeX. So if you know a good place, feel free to contact me or spread the word yourself. 😊
+
 ## About the Developer
 <!-- vale Google.FirstPerson = NO -->
 In my day job, I am a sociologist studying the social mechanisms underlying the digital economy. For my PhD project, I investigate the governance of the app economy and how software ecosystems manage the tension between innovation and compatibility. If you are interested in this subject, feel free to get in touch.
@@ -152,12 +157,11 @@ In my day job, I am a sociologist studying the social mechanisms underlying the 
 - [Discord](https://discordapp.com/users/462774483044794368/)
 - [GitHub](https://github.com/chrisgrieser/)
 - [Twitter](https://twitter.com/pseudo_meta)
+- [Mastodon](https://pkm.social/@pseudometa)
 - [LinkedIn](https://www.linkedin.com/in/christopher-grieser-ba693b17a/)
 
 ### Donate
 <a href='https://ko-fi.com/Y8Y86SQ91' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
-
-<!-- markdown-link-check-enable -->
 
 ### Credits
 <a href="https://www.flaticon.com/authors/freepik">Icons created by Freepik (Flaticon)</a>
