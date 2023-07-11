@@ -13,11 +13,11 @@ function readFile(path) {
 
 //──────────────────────────────────────────────────────────────────────────────
 
-const urlIcon = "🌐";
-const litNoteIcon = "📓";
-const tagIcon = "🏷";
-const abstractIcon = "📄";
-const pdfIcon = "📕";
+const urlEmoji = "🌐";
+const litNoteEmoji = "📓";
+const tagEmoji = "🏷";
+const abstractEmoji = "📄";
+const pdfEmoji = "📕";
 const litNoteFilterStr = "*";
 const pdfFilterStr = "pdf";
 const alfredBarLength = parseInt($.getenv("alfred_bar_length"));
@@ -40,7 +40,7 @@ class BibtexEntry {
 	constructor() {
 		this.author = []; // last names only
 		this.editor = [];
-		this.category = "";
+		this.icon = "";
 		this.citekey = ""; // without "@"
 		this.title = "";
 		this.year = ""; // as string since no calculations are made
@@ -120,7 +120,16 @@ const germanChars = [
 	'\\"{u};ü',
 	'\\"{U};Ü',
 ];
-const frenchChars = ["{\\'a};á", "{\\'o};ó", "{\\'e};é", "{\\`{e}};é", "{\\`e};é", "\\'E;É", "\\c{c};ç", '\\"{i};ï'];
+const frenchChars = [
+	"{\\'a};á",
+	"{\\'o};ó",
+	"{\\'e};é",
+	"{\\`{e}};é",
+	"{\\`e};é",
+	"\\'E;É",
+	"\\c{c};ç",
+	'\\"{i};ï',
+];
 const otherChars = [
 	"{\\~n};ñ",
 	"\\~a;ã",
@@ -133,7 +142,16 @@ const otherChars = [
 	"{\\'c};ć",
 	'\\"e;ë',
 ];
-const specialChars = ["\\&;&", '``;"', ',,;"', "`;'", "\\textendash{};—", "---;—", "--;—", "{	extquotesingle};'"];
+const specialChars = [
+	"\\&;&",
+	'``;"',
+	',,;"',
+	"`;'",
+	"\\textendash{};—",
+	"---;—",
+	"--;—",
+	"{	extquotesingle};'",
+];
 const decodePair = [...germanChars, ...frenchChars, ...otherChars, ...specialChars];
 
 /**
@@ -182,14 +200,15 @@ function bibtexParse(rawBibtexStr) {
 			const entry = new BibtexEntry();
 
 			// parse first line (separate since different formatting)
-			entry.category = lines[0].split("{")[0].toLowerCase().trim();
+			entry.icon = lines[0].split("{")[0].toLowerCase().trim();
 			entry.citekey = lines[0].split("{")[1]?.trim();
 			lines.shift();
 
-			// standardize types (only used for icons later)
-			if (entry.category === "online") entry.category = "webpage";
-			else if (entry.category === "inbook") entry.category = "incollection";
-			else if (["thesis", "report", "misc"].includes(entry.category)) entry.category = "unpublished";
+			// standardize entry icons
+			if (entry.icon === "online") entry.icon = "webpage";
+			else if (entry.icon === "inbook") entry.icon = "incollection";
+			else if (entry.icon === "report" || entry.icon === "misc" || entry.icon.includes("thesis"))
+				entry.icon = "unpublished";
 
 			// parse remaining lines
 			lines.forEach((line) => {
@@ -265,7 +284,7 @@ console.log("Bibtex Library Reading successful.");
 const entryArray = bibtexParse(rawBibtex).map((entry) => {
 	const emojis = [];
 	// rome-ignore format: too long
-	const { title, url, citekey, keywords, category, journal, volume, issue, booktitle, author, editor, year, abstract, primaryNamesEtAlString, primaryNames } = entry;
+	const { title, url, citekey, keywords, icon, journal, volume, issue, booktitle, author, editor, year, abstract, primaryNamesEtAlString, primaryNames } = entry;
 
 	// Shorten Title (for display in Alfred)
 	let shorterTitle = title;
@@ -274,7 +293,7 @@ const entryArray = bibtexParse(rawBibtex).map((entry) => {
 	// URL
 	let urlSubtitle = "⛔️ There is no URL or DOI.";
 	if (url) {
-		emojis.push(urlIcon);
+		emojis.push(urlEmoji);
 		urlSubtitle = "⌃: Open URL – " + url;
 	}
 
@@ -283,7 +302,7 @@ const entryArray = bibtexParse(rawBibtex).map((entry) => {
 	const litNoteMatcher = [];
 	const hasLitNote = litNoteFolderCorrect && litNoteArray.includes(citekey);
 	if (hasLitNote) {
-		emojis.push(litNoteIcon);
+		emojis.push(litNoteEmoji);
 		litNotePath = litNoteFolder + "/" + citekey + ".md";
 		litNoteMatcher.push(litNoteFilterStr);
 	}
@@ -291,25 +310,26 @@ const entryArray = bibtexParse(rawBibtex).map((entry) => {
 	const hasPdf = pdfFolderCorrect && pdfArray.includes(citekey);
 	const pdfMatcher = [];
 	if (hasPdf) {
-		emojis.push(pdfIcon);
+		emojis.push(pdfEmoji);
 		pdfMatcher.push(pdfFilterStr);
 	}
 
 	// Emojis for Abstracts and Keywords (tags)
-	if (abstract) emojis.push(abstractIcon);
-	if (keywords.length) emojis.push(tagIcon + " " + keywords.length.toString());
+	if (abstract) emojis.push(abstractEmoji);
+	if (keywords.length) emojis.push(tagEmoji + " " + keywords.length.toString());
 
 	// Icon selection
-	const typeIcon = `icons/${category}.png`;
+	const iconPath = `icons/${icon}.png`;
 
 	// Journal/Book Title
 	let collectionSubtitle = "";
-	if (category === "article" && journal) {
+	if (icon === "article" && journal) {
 		collectionSubtitle += "    In: " + journal;
 		if (volume) collectionSubtitle += " " + volume;
 		if (issue) collectionSubtitle += "(" + issue + ")";
 	}
-	if ((category === "incollection" || category === "inbook") && booktitle) collectionSubtitle += "    In: " + booktitle;
+	if ((icon === "incollection" || icon === "inbook") && booktitle)
+		collectionSubtitle += "    In: " + booktitle;
 
 	// display editor and add "Ed." when no authors
 	let namesToDisplay = primaryNamesEtAlString + " ";
@@ -335,7 +355,6 @@ const entryArray = bibtexParse(rawBibtex).map((entry) => {
 		...yearMatches,
 		booktitle,
 		journal,
-		category,
 		...litNoteMatcher,
 		...pdfMatcher,
 	]
@@ -353,7 +372,7 @@ const entryArray = bibtexParse(rawBibtex).map((entry) => {
 		subtitle: namesToDisplay + year + collectionSubtitle + "   " + emojis.join(" "),
 		match: alfredMatcher,
 		arg: citekey,
-		icon: { path: typeIcon },
+		icon: { path: iconPath },
 		uid: citekey,
 		text: {
 			copy: url,

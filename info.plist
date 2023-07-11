@@ -2655,7 +2655,7 @@ In some cases, you may need to restart Alfred for this change to take effect.
 ## Workflow Setup
 1. Add the path to your `.bib` to the right and you are good to go.
 2. For all the features this workflow has to offer, refer to the [README](https://github.com/chrisgrieser/alfred-bibtex-citation-picker#supercharged-citation-picker).
-3. The default citation style is *Pandoc Citations*. To switch it to LaTeX, MMD, eta, [[wikilinks]], or #tags, use the keyword `scp` in Alfred and select `Change Citation Format`.
+3. The default citation style is *Pandoc Citations*. To switch it to LaTeX, Multi-Markdown, Org Mode, eta, [[wikilinks]], #tags, or bare citkeys use the keyword `scp` in Alfred and select `Change Citation Format`.
 
 ## Created by
 [Chris Grieser](https://chris-grieser.de/)
@@ -2785,7 +2785,7 @@ In some cases, you may need to restart Alfred for this change to take effect.
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<real>1620</real>
+			<real>1615</real>
 			<key>ypos</key>
 			<real>1335</real>
 		</dict>
@@ -2825,7 +2825,7 @@ In some cases, you may need to restart Alfred for this change to take effect.
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>965</real>
+			<real>800</real>
 			<key>ypos</key>
 			<real>1240</real>
 		</dict>
@@ -3102,7 +3102,7 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>xpos</key>
 			<real>915</real>
 			<key>ypos</key>
-			<real>25</real>
+			<real>20</real>
 		</dict>
 		<key>9503EA26-7397-4C25-9DB0-EA2ED9821861</key>
 		<dict>
@@ -3262,9 +3262,9 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>note</key>
 			<string>add prefix &amp; suffix, then save</string>
 			<key>xpos</key>
-			<real>850</real>
+			<real>855</real>
 			<key>ypos</key>
-			<real>55</real>
+			<real>50</real>
 		</dict>
 		<key>E1D3B211-1CE6-4A09-B45E-7C55A61CDC06</key>
 		<dict>
@@ -3275,7 +3275,7 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>xpos</key>
 			<real>1180</real>
 			<key>ypos</key>
-			<real>25</real>
+			<real>20</real>
 		</dict>
 		<key>E451F6F1-8CE4-44B5-90E2-8B457B48C81C</key>
 		<dict>
@@ -3363,7 +3363,7 @@ to set a hotkey for adding DOI/ISBN</string>
 				<false/>
 			</dict>
 			<key>description</key>
-			<string>Folder containing your PDFs. Only required for Indicating PDFs, opening them via `Hyper↵`, or auto-filing PDFs via  with `fn↵`.</string>
+			<string>Folder containing your PDFs. Only required for indicating PDFs via icons, opening them via `Hyper↵`, or auto-filing PDFs via  with `fn↵`.</string>
 			<key>label</key>
 			<string>PDF Folder</string>
 			<key>type</key>
@@ -3384,7 +3384,7 @@ to set a hotkey for adding DOI/ISBN</string>
 				<false/>
 			</dict>
 			<key>description</key>
-			<string>Folder containing your literature notes (as markdown files). Only required for indicating literature notes, and for creating/opening literature notes with `⇧⌥⌃↵`.</string>
+			<string>Folder containing your literature notes (as markdown files). Only required for indicating literature notes via icon, and for creating/opening literature notes with `⌥⌃↵`.</string>
 			<key>label</key>
 			<string>Literature Note Folder</string>
 			<key>type</key>
@@ -3447,7 +3447,7 @@ to set a hotkey for adding DOI/ISBN</string>
 				</array>
 			</dict>
 			<key>description</key>
-			<string>App to open entries in when using `⇧↵`. Reference Managers will reveal the entry, while Text Editors will open the .bib file at the line containing the entry. ("default app" does not support opening at the correct location.)</string>
+			<string>App to open entries in when using `⇧↵`. Reference Managers will reveal the entry, while Text Editors will open the .bib file at the line containing the entry. ("default app" does not support opening at a specific line.)</string>
 			<key>label</key>
 			<string>Open entries in…</string>
 			<key>type</key>
