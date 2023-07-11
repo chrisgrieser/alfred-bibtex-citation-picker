@@ -200,14 +200,15 @@ function bibtexParse(rawBibtexStr) {
 			const entry = new BibtexEntry();
 
 			// parse first line (separate since different formatting)
-			const entryCategory = lines[0].split("{")[0].toLowerCase().trim(); // icon = category name
+			const entryCategory = lines[0].split("{")[0].toLowerCase().trim(); 
 			entry.citekey = lines[0].split("{")[1]?.trim();
 			lines.shift();
 
 			// standardize entry icons
-			if (entry.icon === "online") entry.icon = "webpage";
-			else if (entry.icon === "inbook") entry.icon = "incollection";
-			else if (entry.icon === "report" || entry.icon === "misc" || entry.icon.includes("thesis")) entry.icon = "unpublished";
+			if (entryCategory === "online") entry.icon = "webpage";
+			else if (entryCategory === "report") entry.icon = "techreport";
+			else if (entryCategory === "inbook") entry.icon = "incollection";
+			else if (entryCategory === "misc" || entry.icon.includes("thesis")) entry.icon = "unpublished";
 			else entry.icon = entryCategory;
 
 			// parse remaining lines
