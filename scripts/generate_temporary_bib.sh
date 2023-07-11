@@ -19,7 +19,7 @@ if ! command -v pandoc &>/dev/null; then
 	echo -n "You need to install pandoc for this feature." | pbcopy
 else
 	echo "$DUMMYDOC" \
-		| pandoc --citeproc --read=markdown --write=plain --csl="assets/$CSL" --bibliography="$LIBRARY" \
+		| pandoc --citeproc --read=markdown --write=plain --csl="$CSL" --bibliography="$LIBRARY" \
 		| tr "\n" " " \
 		| tr -s " " \
 		| sed -E "s/^ //" \

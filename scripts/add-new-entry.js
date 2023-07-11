@@ -107,8 +107,10 @@ function generateCitekey(bibtexPropertyArr) {
 
 	// clean up name
 	authorStr = authorStr
-		.normalize("NFD") // strip diacritics from authorStr https://stackoverflow.com/a/37511463
+		// strip diacritics https://stackoverflow.com/a/37511463
+		.normalize("NFD")
 		.replace(/[\u0300-\u036f]/g, "")
+		// no hyphens
 		.replaceAll("-", "");
 
 	const citekey = authorStr + year;
@@ -141,13 +143,15 @@ function run(argv) {
 		if (!doi) return "DOI invalid";
 		const doiURL = "https://doi.org/" + doi[0];
 		bibtexEntry = app.doShellScript(`curl -sLH "Accept: application/x-bibtex" "${doiURL}"`); // https://citation.crosscite.org/docs.html
-		if (!bibtexEntry.includes("@") || bibtexEntry.toLowerCase().includes("doi not found")) return "DOI not found";
+		if (!bibtexEntry.includes("@") || bibtexEntry.toLowerCase().includes("doi not found"))
+			return "DOI not found";
 
 		// ISBN
 	} else if (isISBN) {
 		const isbn = input;
-		bibtexEntry = app.doShellScript(`curl -sHL "https://www.ebook.de/de/tools/isbn2bibtex?isbn=${isbn}"`);
-		if (!bibtexEntry.includes("@") || bibtexEntry.toLowerCase().includes("Not found")) return "ISBN not found";
+		bibtexEntry = app.doShellScript(`curl -sL "https://www.ebook.de/de/tools/isbn2bibtex?isbn=${isbn}"`);
+		if (!bibtexEntry.includes("@") || bibtexEntry.toLowerCase().includes("Not found"))
+			return "ISBN not found";
 
 		// parse via anystyle
 	} else if (mode === "parse") {
@@ -159,39 +163,52 @@ function run(argv) {
 	}
 
 	//───────────────────────────────────────────────────────────────────────────
-
 	// INSERT CONTENT TO APPEND
+
 	// cleaning
-	const keysToDelete = ["ean", "month", "issn", "language", "copyright", "pagetotal", "address", "abstract", "series"];
-	const keysToDeleteRegex = new RegExp("\t(" + keysToDelete.join("|") + ").*[\n\r]", "g");
-
 	bibtexEntry = bibtexEntry
-		.replace(/^ {2}/gm, "\t") // indentation
+		.replace(/^ {2}/gm, "\t") // tab indentation
 		.replace(/^\s*\w+ =/gm, (/** @type {string} */ field) => field.toLowerCase()) // lowercase all keys
-		.replace(keysToDeleteRegex, "")
-		.replace(/(\tpublisher.*?) ?{?(?:gmbh|ltd|publications|llc)}? ?(.*)/im, "$1$2") // publisher garbage
+		.replace(/(\tpublisher.*?) ?(?:gmbh|ltd|publications|llc)(}*,)/im, "$1$2") // publisher garbage
+		.replace(/ ?{}/g, "") // leftover from publisher cleanup
 		.replace("\tdate =", "\tyear =") // consistently "year"
-		.replace("%2F", "/") // fix for URL key in some DOIs
 		.replace(/\tyear = \{?(\d{4}).*\}?/g, "\tyear = $1,") // clean year key
-		.replace(/^\turl.*(ebook|doi).*[\n\r]/m, "") // doi url redundant, ebook url are basically ads
-		.replace(/amp\$\\mathsemicolon\$/, ""); // invalid bibtex
+		.replaceAll("%2F", "/") // fix for URL key in some DOIs
+		.replace(/amp\$\\mathsemicolon\$/g, "") // invalid bibtex
+		.replace(/(?!^)\}$/gm, "},"); // add trailing comma to all properties
 
-	let newEntryProperties = bibtexEntry.split(/[\n\r]/);
-	newEntryProperties = [...new Set(newEntryProperties)]; // remove duplicate keys (e.g., occurring through date and year keys)
+	// convert to array + remove first/last line (for correct key sorting)
+	let newProps = bibtexEntry.split(/[\n\r]/);
+	const firstLine = newProps.shift();
+	newProps.pop();
 
-	// Generate citekey
-	newCitekey = generateCitekey(newEntryProperties);
+	// remove trash keys & sort keys alphabethically
+	// rome-ignore format: more compact
+	const keysToDelete = [ "ean", "month", "issn", "language", "copyright", "pagetotal", "address", "abstract", "series" ];
+	newProps = [...new Set(newProps)]
+		.filter((prop) => {
+			const key = prop.split("=")[0].trim();
+			if (key === "url" && (prop.includes("doi") || prop.includes("ebook"))) return false;
+			return !keysToDelete.includes(key);
+		})
+		.sort();
+	// remove comma for last element
+	newProps[newProps.length - 1] = newProps.at(-1).slice(0, -1);
+
+	// Generate citekey, enclose entry with first/last line
+	newCitekey = generateCitekey(newProps);
 	newCitekey = ensureUniqueCitekey(newCitekey, libraryPath);
-	newEntryProperties[0] = newEntryProperties[0].split("{")[0] + "{" + newCitekey + ",";
+	newProps.unshift(firstLine.split("{")[0] + "{" + newCitekey + ",");
+	newProps.push("}");
 
-	// Create keywords field
+	// Insert keywords field
 	// (only if there is no keyword property already – some DOI providers do add
 	// keyword fields of their own)
-	if (!newEntryProperties.some((/** @type {string} */ prop) => prop.includes("keywords =")))
-		newEntryProperties.splice(1, 0, "\tkeywords = {},");
+	if (!newProps.some((/** @type {string} */ prop) => prop.includes("keywords =")))
+		newProps.splice(1, 0, "\tkeywords = {},");
 
 	// Write result
-	const newEntry = newEntryProperties.join("\n");
+	const newEntry = newProps.join("\n");
 	appendToFile(newEntry, libraryPath);
 
 	delay(0.1); // delay to ensure the file is written
