@@ -11,9 +11,9 @@ A citation picker and lightweight reference manager for [Alfred](https://www.alf
 - __Smart Search:__ Search for citekeys, authors, title, publication, keywords (tags), include or exclude authors in *et al.*, tab-completion, fuzzy-matching, sorting recently used entries to the top.
 - __Feature-rich:__ Paste single-entry bibliographies, open URLs, open or create literature notes, attach PDFs, search for `.csl` files online, and more.
 - __Blazingly Fast:__ Considerably quicker than any other citation picker (~200 ms to fully reload a library with ~4000 entries).
-- __Simple Installation:__ Just enter the path to your `.bib` file and you are ready to go.
+- __Simple Installation:__ Just enter the path to your `.bib` file, and you are ready to go.
 - __Lightweight Reference Manager:__ Automatically rename and file PDFs, remove, entries, and more.
-- __Quickyly Add New Entries:__ Select a DOI or ISBN and add them directly to your BibTeX library via hotkey.
+- __Quickly Add New Entries:__ Select a DOI or ISBN and add them directly to your BibTeX library via hotkey.
 - __Obsidian Integration:__ When located in your [Obsidian Vault](https://obsidian.md/), literature notes are automatically opened or created in Obsidian instead of the default markdown app.
 
 ## Table of Contents
@@ -42,19 +42,23 @@ A citation picker and lightweight reference manager for [Alfred](https://www.alf
 ## Installation
 1. [Download the latest release](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/releases/latest).
 2. Enter the BibTeX Library path.
-3. Set a hotkey for the citation picker by double-clicking the respective field in the workflow window.
+3. Use the citation picker via the Alfred keyword `ct`, or set a hotkey for the citation picker by double-clicking the respective field in the workflow window.
 
 > __Note__
-> [As soon as the workflow is admitted into the Alfred Gallery](https://www.alfredforum.com/topic/19356-supercharged-citation-picker/), it will automatically download updates. Until then, you have to update the workflow manually by downloading the [latest release here at GitHub](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/releases/latest).
+> [As soon as the workflow is admitted into the Alfred Gallery](https://www.alfredforum.com/topic/19356-supercharged-citation-picker/), it is automatically updated via the Gallery. Until then, you have to update the workflow manually by downloading the [latest release here at GitHub](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/releases/latest).
 
 ## Basic Usage
-Press the hotkey in any text field to start the citation picker.
+Use the `ct` keyword press the hotkey in any text field to start the citation picker.
 
 ### Search
-- You can search for the title, author/editor (last name), year, or collection or journal-title.
+- You can search for the title, author/editor (last name), year, collection, or journal name.
 - Prepend `@` to a word to search for a citekey, for example `@Grieser2020`.
 - Prepend `#` to search for keywords (tags), for example `#sociology`.
 - *Smart Queries*: You can search for any combination of the above. For example, the query `2020 #cognition grieser` searches for entries published in 2020, with the tag "cognition," and with "Grieser" as author/editor.
+
+> __Note__  
+> The citation picker prioritizes entries first by how well they match, then by
+  the recency their use, and lastly by how recently they have been added to the library.
 
 ### Citation Actions
 - `↵`: Paste the citekey of the selected citation.
@@ -84,7 +88,7 @@ Press the hotkey in any text field to start the citation picker.
 ### Available Formats
 You can use the `scp` and select __Change Citation Format__ to change the format of the citations:
 
-- pandoc (default)
+- Pandoc (default)
 - Org Mode
 - Multi-Markdown (MMD)
 - LaTeX
@@ -99,22 +103,25 @@ You can use the `scp` and select __Change Citation Format__ to change the format
 > Not all formats support all citation-related features. For example, adding Page numbers as well as inline-citations are not supported for Latex, Wikilinks, and Tags, and iA Writer does not support multiple citations.
 
 ### Other Format Customizations
-If you want to use a format that is not available, you can customize the format yourself by changing the workflow environment variables starting with `_format`. (Tutorial: [how to set environment variables in Alfred](https://www.alfredapp.com/help/workflows/advanced/variables/#environment))
+If you want to use a format that is not available, you can customize the format yourself by changing the workflow environment variables starting with `_format`. (Tutorial: [How to set environment variables in Alfred](https://www.alfredapp.com/help/workflows/advanced/variables/#environment))
 
-If there is a citation syntax that is commonly used, or if you want to improve support for an existing format, feel free to open a [Feature Request](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues/new?assignees=&labels=enhancement&template=feature_request.yml&title=Feature+Request%3A+).  
+If there is a citation syntax that is commonly used, or if you want to improve support for an existing format, feel free to open a [Feature Request](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues/new?assignees=&labels=enhancement&template=feature_request.yml&title=Feature+Request%3A+).
+
 You can also make a PR to [this file which defines the citation formats](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/scripts/toggle-citation-format.js).
 
 ## Advanced Usage
 
 ### Bibliography Actions
-- `⇧ + ↵`: Reveal the entry in Zotero, neovim, BibDesk, VS Code, or Sublime, depending on the setting in the workflow configuration.
+- `⇧ + ↵`: Reveal the entry in Zotero, neovim, BibDesk, VS Code, or Sublime Text, depending on the setting in the workflow configuration.
 - `⌘⌥ + ↵`: Paste the full bibliographic entry in the APA 6th Style (requires [Pandoc](https://pandoc.org/installing.html)).
 - `⌘ + L`: Preview the (unabridged) title, abstract, and list of keywords.
 - `⌘fn + ↵`: Delete the entry from the BibTeX library. (⚠️ This feature is untested with BibTeX files created with apps other than BibDesk and Bookends. [Create an issue](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues) for problems with other apps.)
-- `universal action`: Uses the selected __DOI__, __ISBN__, or __URL containing a DOI__ to add a new entry to the library.
+
+### Add New Entries
+- `universal action` or `hotkey`: Uses the selected __DOI__, __ISBN__, or __URL containing a DOI__ to add a new entry to the library.
   - *Experimental:* A second universal action can be used to parse & add a bibliographic entry. Requires [anystyle](https://github.com/inukshuk/anystyle).
   - The new entry is added to your library, with a correctly formatted and unique citekey. Afterward, the entry is opened.
-- `file action`: Use the "Add Entry and Auto-file" action on a PDF file that includes a DOI. The DOI is automatically retrieved from the PDF, the entry added to the library, and the PDF auto-filed (see [PDF Management Actions](#pdf-management-actions)). Requires [pdfgrep](https://pdfgrep.org/).
+- `file action`: Use the `Add Entry and Auto-file` action on a PDF file that includes a DOI. The DOI is automatically retrieved from the PDF, the entry added to the library, and the PDF auto-filed (see [PDF Management Actions](#pdf-management-actions)). Requires [pdfgrep](https://pdfgrep.org/).
 
 > __Note__
 > Adding or removing entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/) since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file are not reflected in Zotero.
@@ -122,7 +129,7 @@ You can also make a PR to [this file which defines the citation formats](https:/
 ### Literature Note Actions
 - The citation picker looks in the folder specified in the workflow settings for files that are *exactly* named like the citekey, optionally followed by an underscore and some text like `{citekey}_{title}.md`. The citekey must not contain underscores (`_`), the filename should not include the `@`.
 - Entries that have such a literature note is indicated by a `📓`.
-- `⌃⌥ + ↵`[^2]: Open the literature note.
+- `⌃⌥ + ↵`: Open the literature note.
   - If the file is in your [Obsidian Vault](https://obsidian.md/), it is opened directly in Obsidian instead of the default text editor.
   - If there is no literature note, a new one is created.
 - `⌘ + Y`: Preview the literature note with `QuickLook` (requires `QLmarkdown` or `Peek`[^1]).
@@ -144,11 +151,11 @@ Triggered via the Alfred Keyword `scp` (for `S`upercharged `C`itation `P`icker).
 - __Citation Style Search__: Search for a citation style (`.csl` file), which is downloaded to the location specified in your workflow settings (default: `~/.pandoc/csl/`).
 - __Force Buffer Reload__: Force a reload of the citation picker. Mostly for debugging purposes.
 
+<!-- vale Google.FirstPerson = NO -->
 ## Spread the Word
 As this is probably the most feature-rich and most performant citation picker on macOS, it is kind of a bummer that not many people know about this. However, I do not really know where to "advertise" this, since I am not aware of any forum or website for academics that work with markdown and BibTeX. So if you know a good place, feel free to contact me or spread the word yourself. 😊
 
 ## About the Developer
-<!-- vale Google.FirstPerson = NO -->
 In my day job, I am a sociologist studying the social mechanisms underlying the digital economy. For my PhD project, I investigate the governance of the app economy and how software ecosystems manage the tension between innovation and compatibility. If you are interested in this subject, feel free to get in touch.
 
 ### Profiles
