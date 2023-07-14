@@ -558,7 +558,18 @@
 			</dict>
 		</array>
 		<key>96FCE9BC-5201-4357-9B63-588F73AEF5F3</key>
-		<array/>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8C5097B2-3CE6-4055-983B-687409AB3FA2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>986EF1F7-54A1-4C67-A490-4DFCC60FA328</key>
 		<array>
 			<dict>
@@ -1691,7 +1702,7 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>scripts/generate_temporary_bib.sh</string>
+				<string>scripts/paste-full-bibliography.sh</string>
 				<key>type</key>
 				<integer>8</integer>
 			</dict>
@@ -1701,6 +1712,25 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 			<string>96FCE9BC-5201-4357-9B63-588F73AEF5F3</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>8C5097B2-3CE6-4055-983B-687409AB3FA2</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -3104,6 +3134,17 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>ypos</key>
 			<real>20</real>
 		</dict>
+		<key>8C5097B2-3CE6-4055-983B-687409AB3FA2</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>note</key>
+			<string>paste</string>
+			<key>xpos</key>
+			<real>1365</real>
+			<key>ypos</key>
+			<real>620</real>
+		</dict>
 		<key>9503EA26-7397-4C25-9DB0-EA2ED9821861</key>
 		<dict>
 			<key>colorindex</key>
@@ -3131,7 +3172,7 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>xpos</key>
 			<real>1205</real>
 			<key>ypos</key>
-			<real>610</real>
+			<real>620</real>
 		</dict>
 		<key>986EF1F7-54A1-4C67-A490-4DFCC60FA328</key>
 		<dict>
