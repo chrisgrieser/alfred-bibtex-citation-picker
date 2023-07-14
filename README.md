@@ -29,6 +29,7 @@ A citation picker and lightweight reference manager for [Alfred](https://www.alf
     - [Other Format Customization](#other-format-customizations)
   - [Advanced Usage](#advanced-usage)
     - [Bibliography Actions](#bibliography-actions)
+    - [Add New Entries](#add-new-entries)
     - [Literature Note Actions](#literature-note-actions)
     - [PDF Management Actions](#pdf-management-actions)
     - [Auxiliary Features](#auxiliary-features)
