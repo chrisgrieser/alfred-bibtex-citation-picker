@@ -208,7 +208,7 @@ function bibtexParse(rawBibtexStr) {
 			if (entryCategory === "online") entry.icon = "webpage";
 			else if (entryCategory === "report") entry.icon = "techreport";
 			else if (entryCategory === "inbook") entry.icon = "incollection";
-			else if (entryCategory === "misc" || entry.icon.includes("thesis")) entry.icon = "unpublished";
+			else if (entryCategory === "misc" || entryCategory.includes("thesis")) entry.icon = "unpublished";
 			else entry.icon = entryCategory;
 
 			// parse remaining lines
