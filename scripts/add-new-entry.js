@@ -167,7 +167,6 @@ function run(argv) {
 
 	// anystyle
 	else if (mode === "parse") {
-
 		// validate installation
 		const anystyleInstalled = app.doShellScript("command -v anystyle || true") !== ""
 		if (!anystyleInstalled) return "anystyle not found";
@@ -177,8 +176,8 @@ function run(argv) {
 		const tempPath = $.getenv("alfred_workflow_cache") + "/temp.txt";
 		writeToFile($.getenv("raw_entry"), tempPath);
 		const response = app.doShellScript(`anystyle --stdout --format=csl parse "${tempPath}"`);
-		const data = JSON.parse(response)[0];
 
+		const data = JSON.parse(response)[0];
 		entry.title = data.title;
 		entry.type = data.type.replace(/-?journal-?/, ""); // "journal-article" -> "article"
 		entry.author = (data.authors || data.author || [])
@@ -197,26 +196,29 @@ function run(argv) {
 	}
 
 	//───────────────────────────────────────────────────────────────────────────
-	// INSERT CONTENT TO APPEND
+	// CONSTRUCT BIBTEX ENTRY
 
 	// cleanup
 	if (entry.publisher) entry.publisher = entry.publisher.replace(/gmbh|ltd|publications?|llc/i, "").trim();
 	if (entry.pages) entry.pages = entry.pages.replace(/(\d+)[^\d]+?(\d+)/, "$1--$2"); // double-dash
 
-	// Generate citekey & enclosing lines
+	// citekey
 	let citekey = generateCitekey(entry.author, entry.year);
 	citekey = ensureUniqueCitekey(citekey, libraryPath);
+
+	// JSON -> bibtex
 	const firstLine = `@${entry.type}{${citekey},`;
 	const keywordsLine = "\tkeywords = {},";
 	const lastLine = "}";
-
-	// create bibtex text from entry object
 	const propertyLines = [];
 	for (const key in entry) {
 		if (key === "type") continue; // already inserted in first line
 		let value = entry[key];
 		// escape bibtex values
-		if (typeof value === "string") value = "{" + value.replace(/([A-Z]{2,})/g, "{$1}") + "}";
+		if (typeof value === "string") {
+			value = value.replace(/([A-Z]\S*)/g, "{$1}"); // uppercase in string
+			value = "{" + value + "}"; // full string
+		}
 		propertyLines.push(`\t${key} = ${value},`);
 	}
 	propertyLines.sort();
