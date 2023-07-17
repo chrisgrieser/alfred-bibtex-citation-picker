@@ -112,11 +112,11 @@ You can also make a PR to [this file which defines the citation formats](https:/
 - <kbd>⇧</kbd><kbd>↵</kbd>: Reveal the entry in Zotero, neovim, BibDesk, VS Code, or Sublime Text, depending on the setting in the workflow configuration.
 - <kbd>⌘</kbd><kbd>⌥</kbd><kbd>↵</kbd>: Paste the full bibliographic entry in the APA 6th Style (requires [Pandoc](https://pandoc.org/installing.html)).
 - <kbd>⌘</kbd><kbd>L</kbd>: Preview the (unabridged) title, abstract, and list of keywords.
-- <kbd>⌘</kbd><kbd>fn</kbd><kbd>↵</kbd>: Delete the entry from the BibTeX library. (⚠️ This feature is untested with BibTeX files created with apps other than BibDesk and Bookends. [Create an issue](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues) for problems with other apps.)
+- <kbd>⌘</kbd><kbd>fn</kbd><kbd>↵</kbd>: Delete the entry from the BibTeX library. ⚠️ This cannot be undone. Always make backups.
 
 ### Add New Entries
 - [Universal Action](https://www.alfredapp.com/help/features/universal-actions/) or [Hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/): Uses the selected __DOI__, __ISBN__, or __URL containing a DOI__ to add a new entry to the library.
-  - *Experimental:* A second universal action can be used to parse & add a bibliographic entry. Requires [anystyle](https://github.com/inukshuk/anystyle).
+  - A second [Universal Action](https://www.alfredapp.com/help/features/universal-actions/) can be used to parse & add a bibliographic entry. Requires [anystyle](https://github.com/inukshuk/anystyle).
   - The new entry is added to your library, with a correctly formatted and unique citekey. Afterward, the entry is opened.
 - [File Action](https://www.alfredapp.com/help/features/universal-actions/): Use the `Add Entry and Auto-file` action on a PDF file that includes a DOI. The DOI is automatically retrieved from the PDF, the entry added to the library, and the PDF auto-filed (see [PDF Management Actions](#pdf-management-actions)). Requires [pdfgrep](https://pdfgrep.org/).
 
@@ -124,18 +124,18 @@ You can also make a PR to [this file which defines the citation formats](https:/
 > Adding or removing entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/) since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file are not reflected in Zotero.
 
 ### Literature Note Actions
-- The citation picker looks in the folder specified in the workflow settings for files that are *exactly* named like the citekey, optionally followed by an underscore and some text like `{citekey}_{title}.md`. The citekey must not contain underscores (`_`), the filename should not include the `@`.
+- The citation picker looks in the folder specified in the workflow settings for files that are *exactly* named like the citekey, optionally followed by an underscore `_` and some text, for example: `{citekey}.md` or `{citekey}_{title}.md`. The citekey itself must not contain underscores, and the filename must not include the `@`.
 - Entries that have such a literature note is indicated by a `📓`.
-- `⌃⌥ + ↵`: Open the literature note.
+- <kdb>⌃</kdb><kdb>⌥</kdb><kdb>↵</kdb>: Open the literature note.
   - If the file is in your [Obsidian Vault](https://obsidian.md/), it is opened directly in Obsidian instead of the default text editor.
   - If there is no literature note, a new one is created.
-- `⌘ + Y`: Preview the literature note with `QuickLook` (requires `QLmarkdown` or `Peek`[^1]).
+- <kdb>⌘</kdb><kdb>Y</kdb>: Preview the literature note with `QuickLook` (requires `QLmarkdown` or `Peek`[^1]).
 - Add `*` to any search query to filter only for entries with literature notes, for example `* grieser` searches for entries matching "grieser" which also have a literature notes. Can be combined with other queries (see: [smart queries](#search)).
 
 ### PDF Management Actions
 The following features require that all your PDFs are located in the folder specified in your workflow settings.
-
-- <kbd>fn</kbd><kbd>↵</kbd>: __Auto-file and auto-rename__ the *currently selected PDF*. Inside your selected PDF folder, uses the template path: `{first_letter_of_citekey}/{citekey-author-part}/{citekey}_{shortened_title}.pdf`
+<!-- LTeX: enabled=false -->
+- <kbd>fn</kbd><kbd>↵</kbd>: __Auto-file and auto-rename__ the *currently selected PDF*. Inside your selected PDF folder, uses the template path: `{first_letter_of_citekey}/{citekey-author-part}/{citekey}_{shortened_title}.pdf` <!-- LTeX: enabled=true -->
 - The `📕` indicates that the entry already has an associated PDF at that location.
 - <kbd>⇪</kbd><kbd>↵</kbd>[^2]: If the entry has an associated PDF file, open it with the default PDF reader. The citekey must not contain an underscore (`_`).
 - Add `pdf` to any search query to filter only for entries with PDFs that have been added by the auto-file feature. `pdf grieser`, for example, displays only entries from the author "Grieser" with PDFs. Can be combined with other queries (see: [smart queries](#search)).
