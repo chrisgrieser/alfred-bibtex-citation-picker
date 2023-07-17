@@ -25,7 +25,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>07EF5E86-4F5B-40B4-9A81-9C28FA40AC82</string>
+				<string>2DC90122-FC40-44CA-8F59-E3C16AC99651</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -45,19 +45,6 @@
 				<string></string>
 				<key>vitoclose</key>
 				<true/>
-			</dict>
-		</array>
-		<key>07EF5E86-4F5B-40B4-9A81-9C28FA40AC82</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>48C3261E-BA0C-46A8-8A96-611C033D89F6</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
 			</dict>
 		</array>
 		<key>09C552E1-E9BA-418A-931E-D134C3FA1A7F</key>
@@ -272,31 +259,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>2A483E3B-2BAB-408A-9759-4C0F65D760CF</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>48C3261E-BA0C-46A8-8A96-611C033D89F6</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>2DC90122-FC40-44CA-8F59-E3C16AC99651</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>sourceoutputuid</key>
-				<string>14FB4C6A-E89A-4DBE-8F36-87C64E7B4314</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>9C01A8C9-CBF3-4261-A0F2-CD6DC0E55515</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1609,61 +1571,6 @@ JSON.stringify({ 'items': entry_array });
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>./scripts/validate-anystyle.sh</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>07EF5E86-4F5B-40B4-9A81-9C28FA40AC82</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string></string>
-						<key>matchcasesensitive</key>
-						<true/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string></string>
-						<key>outputlabel</key>
-						<string>yes</string>
-						<key>uid</key>
-						<string>14FB4C6A-E89A-4DBE-8F36-87C64E7B4314</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>no</string>
-				<key>hideelse</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
-			<key>uid</key>
-			<string>48C3261E-BA0C-46A8-8A96-611C033D89F6</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
@@ -2715,7 +2622,7 @@ In some cases, you may need to restart Alfred for this change to take effect.
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>175</real>
+			<real>205</real>
 			<key>ypos</key>
 			<real>585</real>
 		</dict>
@@ -2739,23 +2646,12 @@ In some cases, you may need to restart Alfred for this change to take effect.
 			<key>ypos</key>
 			<real>950</real>
 		</dict>
-		<key>07EF5E86-4F5B-40B4-9A81-9C28FA40AC82</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>note</key>
-			<string>valide anystyle</string>
-			<key>xpos</key>
-			<real>235</real>
-			<key>ypos</key>
-			<real>555</real>
-		</dict>
 		<key>09C552E1-E9BA-418A-931E-D134C3FA1A7F</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>235</real>
+			<real>205</real>
 			<key>ypos</key>
 			<real>470</real>
 		</dict>
@@ -2846,9 +2742,9 @@ In some cases, you may need to restart Alfred for this change to take effect.
 			<key>colorindex</key>
 			<integer>1</integer>
 			<key>xpos</key>
-			<real>690</real>
+			<real>715</real>
 			<key>ypos</key>
-			<real>650</real>
+			<real>690</real>
 		</dict>
 		<key>2A483E3B-2BAB-408A-9759-4C0F65D760CF</key>
 		<dict>
@@ -2875,7 +2771,7 @@ In some cases, you may need to restart Alfred for this change to take effect.
 			<key>note</key>
 			<string>create new entry</string>
 			<key>xpos</key>
-			<real>495</real>
+			<real>370</real>
 			<key>ypos</key>
 			<real>440</real>
 		</dict>
@@ -2955,17 +2851,6 @@ to set a hotkey for adding DOI/ISBN</string>
 			<real>290</real>
 			<key>ypos</key>
 			<real>1210</real>
-		</dict>
-		<key>48C3261E-BA0C-46A8-8A96-611C033D89F6</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>9</integer>
-			<key>note</key>
-			<string>installed</string>
-			<key>xpos</key>
-			<real>381</real>
-			<key>ypos</key>
-			<real>575</real>
 		</dict>
 		<key>4D0EDD75-8E26-4099-956B-50637A6F0C93</key>
 		<dict>
@@ -3199,9 +3084,9 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>colorindex</key>
 			<integer>1</integer>
 			<key>xpos</key>
-			<real>560</real>
+			<real>585</real>
 			<key>ypos</key>
-			<real>650</real>
+			<real>690</real>
 		</dict>
 		<key>A1A6DEC2-1AF1-4110-9DA9-01400A1902FF</key>
 		<dict>
@@ -3270,7 +3155,7 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>635</real>
+			<real>510</real>
 			<key>ypos</key>
 			<real>460</real>
 		</dict>
