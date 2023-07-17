@@ -46,7 +46,7 @@ A citation picker and lightweight reference manager for [Alfred](https://www.alf
 3. Use the citation picker via the Alfred keyword `ct`, or set a [hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) for the citation picker by double-clicking the respective field in the workflow window.
 
 ## Basic Usage
-Use the `ct` keyword press the [hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) in any text field to start the citation picker.
+Press the [hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) in any text field to start the citation picker. Alternatively, use the `ct` keyword.
 
 ### Search
 - You can search for the title, author/editor (last name), year, collection, or journal name.

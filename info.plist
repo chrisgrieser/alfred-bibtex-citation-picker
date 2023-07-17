@@ -2584,7 +2584,7 @@ In some cases, you may need to restart Alfred for this change to take effect.
 3. The default citation style is *Pandoc Citations*. To switch it to LaTeX, Multi-Markdown, Org Mode, eta, [[wikilinks]], #tags, or bare citkeys use the keyword `scp` in Alfred and select `Change Citation Format`.
 
 ## Basic Usage
-Use the `ct` keyword press the [hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) in any text field to start the citation picker.
+Press the [hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) in any text field to start the citation picker. Alternatively, use the `ct` keyword.
 
 ### Search
 - You can search for the title, author/editor (last name), year, collection, or journal name.
@@ -2597,8 +2597,8 @@ Use the `ct` keyword press the [hotkey](https://www.alfredapp.com/help/workflows
 - &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;⏎&lt;/kbd&gt;: Add another citation.
 - &lt;kbd&gt;⇧&lt;/kbd&gt;&lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↵&lt;/kbd&gt;: Paste an inline-citation (citation without surrounding formatting, for example `@Grieser2022` instead of `[@Grieser2022]`)
 - &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;⏎&lt;/kbd&gt;: Add page numbers before pasting the selected citekey.
-- Confirm the page number with &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↵&lt;/kbd&gt; or &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↵&lt;/kbd&gt; to add another citation afterward.
-- Confirm with &lt;kbd&gt;⇧&lt;/kbd&gt;&lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↵&lt;/kbd&gt; for an inline-citation with page number (`@Grieser2022 [p. 42]`).
+- Confirm the page number with &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↵&lt;/kbd&gt; (or &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;⏎&lt;/kbd&gt;) to add another citation afterward.
+- Confirm with &lt;kbd&gt;⇧&lt;/kbd&gt;&lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;⏎&lt;/kbd&gt; for an inline-citation with page number (`@Grieser2022 [p. 42]`).
 
 ### URL Actions
 - &lt;kbd&gt;⌃&lt;/kbd&gt;&lt;kbd&gt;⏎&lt;/kbd&gt;: Open the URL in the browser.
