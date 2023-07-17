@@ -43,13 +43,10 @@ A citation picker and lightweight reference manager for [Alfred](https://www.alf
 ## Installation
 1. [Download the latest release](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/releases/latest).
 2. Enter the BibTeX Library path.
-3. Use the citation picker via the Alfred keyword `ct`, or set a hotkey for the citation picker by double-clicking the respective field in the workflow window.
-
-> __Note__
-> [As soon as the workflow is admitted into the Alfred Gallery](https://www.alfredforum.com/topic/19356-supercharged-citation-picker/), it is automatically updated via the Gallery. Until then, you have to update the workflow manually by downloading the [latest release here at GitHub](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/releases/latest).
+3. Use the citation picker via the Alfred keyword `ct`, or set a [hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) for the citation picker by double-clicking the respective field in the workflow window.
 
 ## Basic Usage
-Use the `ct` keyword press the hotkey in any text field to start the citation picker.
+Use the `ct` keyword press the [hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) in any text field to start the citation picker.
 
 ### Search
 - You can search for the title, author/editor (last name), year, collection, or journal name.
@@ -58,15 +55,15 @@ Use the `ct` keyword press the hotkey in any text field to start the citation pi
 - *Smart Queries*: You can search for any combination of the above. For example, the query `2020 #cognition grieser` searches for entries published in 2020, with the tag "cognition," and with "Grieser" as author/editor.
 
 ### Citation Actions
-- <kbd>↵</kbd>: Paste the citekey of the selected citation.
-- <kbd>⌥</kbd><kbd>↵</kbd>: Add another citation.
-- <kbd>⇧</kbd><kbd>⌘</kbd><kbd>↵</kbd>: Paste an inline-citation (citation without surrounding formatting, for example `@Grieser2022` instead of `[@Grieser2022]`)
-- <kbd>⌘</kbd><kbd>↵</kbd>: Add page numbers before pasting the selected citekey.
-  - Confirm the page number with <kbd>⌥</kbd><kbd>↵</kbd> or <kbd>⌘</kbd><kbd>↵</kbd> to add another citation afterward.
-  - Confirm with <kbd>⇧</kbd><kbd>⌘</kbd><kbd>↵</kbd> for an inline-citation with page number (`@Grieser2022 [p. 42]`).
+- <kbd>⏎</kbd>: Paste the citekey of the selected citation.
+- <kbd>⌥</kbd><kbd>⏎</kbd>: Add another citation.
+- <kbd>⇧</kbd><kbd>⌘</kbd><kbd>⏎</kbd>: Paste an inline-citation (citation without surrounding formatting, for example `@Grieser2022` instead of `[@Grieser2022]`)
+- <kbd>⌘</kbd><kbd>⏎</kbd>: Add page numbers before pasting the selected citekey.
+  - Confirm the page number with <kbd>⌥</kbd><kbd>⏎</kbd> or <kbd>⌘</kbd><kbd>⏎</kbd> to add another citation afterward.
+  - Confirm with <kbd>⇧</kbd><kbd>⌘</kbd><kbd>⏎</kbd> for an inline-citation with page number (`@Grieser2022 [p. 42]`).
 
 ### URL Actions
-- <kbd>⌃</kbd><kbd>↵</kbd>: Open the URL in the browser.
+- <kbd>⌃</kbd><kbd>⏎</kbd>: Open the URL in the browser.
 - <kbd>⌘</kbd><kbd>C</kbd>: Copy the URL to the clipboard.
 - In both cases, if the entry has a DOI but not a URL, the citation picker uses the DOI-URL (`https://doi.org/…`) instead.
 
@@ -109,10 +106,10 @@ You can also make a PR to [this file which defines the citation formats](https:/
 ## Advanced Usage
 
 ### Bibliography Actions
-- <kbd>⇧</kbd><kbd>↵</kbd>: Reveal the entry in Zotero, neovim, BibDesk, VS Code, or Sublime Text, depending on the setting in the workflow configuration.
-- <kbd>⌘</kbd><kbd>⌥</kbd><kbd>↵</kbd>: Paste the full bibliographic entry in the APA 6th Style (requires [Pandoc](https://pandoc.org/installing.html)).
+- <kbd>⇧</kbd><kbd>⏎</kbd>: Reveal the entry in Zotero, neovim, BibDesk, VS Code, or Sublime Text, depending on the setting in the workflow configuration.
+- <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⏎</kbd>: Paste the full bibliographic entry in the APA 6th Style (requires [Pandoc](https://pandoc.org/installing.html)).
 - <kbd>⌘</kbd><kbd>L</kbd>: Preview the (unabridged) title, abstract, and list of keywords.
-- <kbd>⌘</kbd><kbd>fn</kbd><kbd>↵</kbd>: Delete the entry from the BibTeX library. ⚠️ This cannot be undone. Always make backups.
+- <kbd>⌘</kbd><kbd>fn</kbd><kbd>⏎</kbd>: Delete the entry from the BibTeX library. (⚠️ This cannot be undone.) 
 
 ### Add New Entries
 - [Universal Action](https://www.alfredapp.com/help/features/universal-actions/) or [Hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/): Uses the selected __DOI__, __ISBN__, or __URL containing a DOI__ to add a new entry to the library.
@@ -126,7 +123,7 @@ You can also make a PR to [this file which defines the citation formats](https:/
 ### Literature Note Actions
 - The citation picker looks in the folder specified in the workflow settings for files that are *exactly* named like the citekey, optionally followed by an underscore `_` and some text, for example: `{citekey}.md` or `{citekey}_{title}.md`. The citekey itself must not contain underscores, and the filename must not include the `@`.
 - Entries that have such a literature note is indicated by a `📓`.
-- <kdb>⌃</kdb><kdb>⌥</kdb><kdb>↵</kdb>: Open the literature note.
+- <kdb>⌃</kdb><kdb>⌥</kdb><kdb>⏎</kdb>: Open the literature note.
   - If the file is in your [Obsidian Vault](https://obsidian.md/), it is opened directly in Obsidian instead of the default text editor.
   - If there is no literature note, a new one is created.
 - <kdb>⌘</kdb><kdb>Y</kdb>: Preview the literature note with `QuickLook` (requires `QLmarkdown` or `Peek`[^1]).
@@ -135,9 +132,9 @@ You can also make a PR to [this file which defines the citation formats](https:/
 ### PDF Management Actions
 The following features require that all your PDFs are located in the folder specified in your workflow settings.
 <!-- LTeX: enabled=false -->
-- <kbd>fn</kbd><kbd>↵</kbd>: __Auto-file and auto-rename__ the *currently selected PDF*. Inside your selected PDF folder, uses the template path: `{first_letter_of_citekey}/{citekey-author-part}/{citekey}_{shortened_title}.pdf` <!-- LTeX: enabled=true -->
+- <kbd>fn</kbd><kbd>⏎</kbd>: __Auto-file and auto-rename__ the *currently selected PDF*. Inside your selected PDF folder, uses the template path: `{first_letter_of_citekey}/{citekey-author-part}/{citekey}_{shortened_title}.pdf` <!-- LTeX: enabled=true -->
 - The `📕` indicates that the entry already has an associated PDF at that location.
-- <kbd>⇪</kbd><kbd>↵</kbd>[^2]: If the entry has an associated PDF file, open it with the default PDF reader. The citekey must not contain an underscore (`_`).
+- <kbd>⇪</kbd><kbd>⏎</kbd>[^2]: If the entry has an associated PDF file, open it with the default PDF reader. The citekey must not contain an underscore (`_`).
 - Add `pdf` to any search query to filter only for entries with PDFs that have been added by the auto-file feature. `pdf grieser`, for example, displays only entries from the author "Grieser" with PDFs. Can be combined with other queries (see: [smart queries](#search)).
 
 ### Auxiliary Features

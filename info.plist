@@ -2580,11 +2580,11 @@ In some cases, you may need to restart Alfred for this change to take effect.
 	<key>readme</key>
 	<string>## Workflow Setup
 1. Add the path to your `.bib` to the right and you are good to go.
-
+2. Set the [hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/)
 3. The default citation style is *Pandoc Citations*. To switch it to LaTeX, Multi-Markdown, Org Mode, eta, [[wikilinks]], #tags, or bare citkeys use the keyword `scp` in Alfred and select `Change Citation Format`.
 
 ## Basic Usage
-Use the `ct` keyword press the hotkey in any text field to start the citation picker.
+Use the `ct` keyword press the [hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) in any text field to start the citation picker.
 
 ### Search
 - You can search for the title, author/editor (last name), year, collection, or journal name.
@@ -2593,15 +2593,15 @@ Use the `ct` keyword press the hotkey in any text field to start the citation pi
 - *Smart Queries*: You can search for any combination of the above. For example, the query `2020 #cognition grieser` searches for entries published in 2020, with the tag "cognition," and with "Grieser" as author/editor.
 
 ### Citation Actions
-- &lt;kbd&gt;↵&lt;/kbd&gt;: Paste the citekey of the selected citation.
-- &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↵&lt;/kbd&gt;: Add another citation.
+- &lt;kbd&gt;⏎&lt;/kbd&gt;: Paste the citekey of the selected citation.
+- &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;⏎&lt;/kbd&gt;: Add another citation.
 - &lt;kbd&gt;⇧&lt;/kbd&gt;&lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↵&lt;/kbd&gt;: Paste an inline-citation (citation without surrounding formatting, for example `@Grieser2022` instead of `[@Grieser2022]`)
-- &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↵&lt;/kbd&gt;: Add page numbers before pasting the selected citekey.
+- &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;⏎&lt;/kbd&gt;: Add page numbers before pasting the selected citekey.
 - Confirm the page number with &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↵&lt;/kbd&gt; or &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↵&lt;/kbd&gt; to add another citation afterward.
 - Confirm with &lt;kbd&gt;⇧&lt;/kbd&gt;&lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↵&lt;/kbd&gt; for an inline-citation with page number (`@Grieser2022 [p. 42]`).
 
 ### URL Actions
-- &lt;kbd&gt;⌃&lt;/kbd&gt;&lt;kbd&gt;↵&lt;/kbd&gt;: Open the URL in the browser.
+- &lt;kbd&gt;⌃&lt;/kbd&gt;&lt;kbd&gt;⏎&lt;/kbd&gt;: Open the URL in the browser.
 - &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;C&lt;/kbd&gt;: Copy the URL to the clipboard.
 - In both cases, if the entry has a DOI but not a URL, the citation picker uses the DOI-URL (`https://doi.org/…`) instead.
 
