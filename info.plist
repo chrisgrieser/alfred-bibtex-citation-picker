@@ -2578,34 +2578,40 @@ In some cases, you may need to restart Alfred for this change to take effect.
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>## Alfred Gallery
+	<string>## Workflow Setup
+1. Add the path to your `.bib` to the right and you are good to go.
 
-[This workflow is now included in the Alfred gallery](http://alfred.app/workflows/chrisgrieser/alfred-bibtex-citation-picker/) and auto-updates will there be managed by Alfred and not by this workflow anymore.
+3. The default citation style is *Pandoc Citations*. To switch it to LaTeX, Multi-Markdown, Org Mode, eta, [[wikilinks]], #tags, or bare citkeys use the keyword `scp` in Alfred and select `Change Citation Format`.
+
+## Basic Usage
+Use the `ct` keyword press the hotkey in any text field to start the citation picker.
+
+### Search
+- You can search for the title, author/editor (last name), year, collection, or journal name.
+- Prepend `@` to a word to search for a citekey, for example `@Grieser2020`.
+- Prepend `#` to search for keywords (tags), for example `#sociology`.
+- *Smart Queries*: You can search for any combination of the above. For example, the query `2020 #cognition grieser` searches for entries published in 2020, with the tag "cognition," and with "Grieser" as author/editor.
+
+### Citation Actions
+- &lt;kbd&gt;↵&lt;/kbd&gt;: Paste the citekey of the selected citation.
+- &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↵&lt;/kbd&gt;: Add another citation.
+- &lt;kbd&gt;⇧&lt;/kbd&gt;&lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↵&lt;/kbd&gt;: Paste an inline-citation (citation without surrounding formatting, for example `@Grieser2022` instead of `[@Grieser2022]`)
+- &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↵&lt;/kbd&gt;: Add page numbers before pasting the selected citekey.
+- Confirm the page number with &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↵&lt;/kbd&gt; or &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↵&lt;/kbd&gt; to add another citation afterward.
+- Confirm with &lt;kbd&gt;⇧&lt;/kbd&gt;&lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↵&lt;/kbd&gt; for an inline-citation with page number (`@Grieser2022 [p. 42]`).
+
+### URL Actions
+- &lt;kbd&gt;⌃&lt;/kbd&gt;&lt;kbd&gt;↵&lt;/kbd&gt;: Open the URL in the browser.
+- &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;C&lt;/kbd&gt;: Copy the URL to the clipboard.
+- In both cases, if the entry has a DOI but not a URL, the citation picker uses the DOI-URL (`https://doi.org/…`) instead.
+
+## Dozens of More Features
+For all the features this workflow has to offer, refer to the [README](https://github.com/chrisgrieser/alfred-bibtex-citation-picker#table-of-contents).
 
 ---
 
-# Supercharged Citation Picker
-- [README](https://github.com/chrisgrieser/alfred-bibtex-citation-picker#supercharged-citation-picker)
-- [Changelog](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/Changelog.md)
-- [Bug Reports](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues)
-
-## Workflow Setup
-1. Add the path to your `.bib` to the right and you are good to go.
-2. For all the features this workflow has to offer, refer to the [README](https://github.com/chrisgrieser/alfred-bibtex-citation-picker#supercharged-citation-picker).
-3. The default citation style is *Pandoc Citations*. To switch it to LaTeX, Multi-Markdown, Org Mode, eta, [[wikilinks]], #tags, or bare citkeys use the keyword `scp` in Alfred and select `Change Citation Format`.
-
 ## Created by
-[Chris Grieser](https://chris-grieser.de/)
-
-**Profiles**
-- [ResearchGate](https://www.researchgate.net/profile/Christopher-Grieser)
-- [Discord](https://discordapp.com/users/462774483044794368/)
-- [GitHub](https://github.com/chrisgrieser/)
-- [Twitter](https://twitter.com/pseudo_meta)
-- [LinkedIn](https://www.linkedin.com/in/christopher-grieser-ba693b17a/)
-
-**Buy me a Coffee**
-[Ko-Fi](https://ko-fi.com/pseudometa)</string>
+[Chris Grieser](https://chris-grieser.de/)</string>
 	<key>uidata</key>
 	<dict>
 		<key>00BFDB01-AD99-47DB-9BB8-5A6EA2E3016C</key>

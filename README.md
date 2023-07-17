@@ -3,7 +3,7 @@
 
 A citation picker and lightweight reference manager for [Alfred](https://www.alfredapp.com/). Uses a BibTeX File and supports various formats like [Pandoc Markdown](https://pandoc.org/MANUAL.html#citation-syntax), [Multi-Markdown](https://fletcher.github.io/MultiMarkdown-6/syntax/citation.html), [LaTeX](https://www.overleaf.com/learn/latex/Biblatex_citation_styles), or [Org Mode](https://orgmode.org/manual/Citations.html).
 
-<img width=60% alt="promo screenshot" src="assets/promo.png">
+<img width=60% alt="showcase screenshot" src="assets/showcase.png">
 
 ## Feature Overview
 - Inserts __Pandoc Citation Syntax__ (`[@citekey]`), supporting page numbers & multiple citations (`[@citekey, p. 23; @citekey, p. 42]`). Can also be configured to use __LaTeX__, __Multi-Markdown__, __eta templates__, __Org Mode__, `[[wikilinks]]`, `#tags` or `bare citkeys` as citation format.
@@ -57,21 +57,17 @@ Use the `ct` keyword press the hotkey in any text field to start the citation pi
 - Prepend `#` to search for keywords (tags), for example `#sociology`.
 - *Smart Queries*: You can search for any combination of the above. For example, the query `2020 #cognition grieser` searches for entries published in 2020, with the tag "cognition," and with "Grieser" as author/editor.
 
-> __Note__  
-> The citation picker prioritizes entries first by how well they match, then by
-  the recency their use, and lastly by how recently they have been added to the library.
-
 ### Citation Actions
-- `↵`: Paste the citekey of the selected citation.
-- `⌥ + ↵`: Add another citation.
-- `⌘⇧ + ↵`: Paste an inline-citation (citation without surrounding formatting, for example `@Grieser2022` instead of `[@Grieser2022]`)
-- `⌘ + ↵`: Add page numbers before pasting the selected citekey.
-  - Confirm the page number with `⌥ + ↵` to add another citation afterward.
-  - Confirm with `⌘⇧ + ↵` for an inline-citation with page number (`@Grieser2022 [p. 42]`).
+- <kbd>↵</kbd>: Paste the citekey of the selected citation.
+- <kbd>⌥</kbd><kbd>↵</kbd>: Add another citation.
+- <kbd>⇧</kbd><kbd>⌘</kbd><kbd>↵</kbd>: Paste an inline-citation (citation without surrounding formatting, for example `@Grieser2022` instead of `[@Grieser2022]`)
+- <kbd>⌘</kbd><kbd>↵</kbd>: Add page numbers before pasting the selected citekey.
+  - Confirm the page number with <kbd>⌥</kbd><kbd>↵</kbd> or <kbd>⌘</kbd><kbd>↵</kbd> to add another citation afterward.
+  - Confirm with <kbd>⇧</kbd><kbd>⌘</kbd><kbd>↵</kbd> for an inline-citation with page number (`@Grieser2022 [p. 42]`).
 
 ### URL Actions
-- `⌃ + ↵`: Open the URL in the browser.
-- `⌘ + C`: Copy the URL to the clipboard.
+- <kbd>⌃</kbd><kbd>↵</kbd>: Open the URL in the browser.
+- <kbd>⌘</kbd><kbd>C</kbd>: Copy the URL to the clipboard.
 - In both cases, if the entry has a DOI but not a URL, the citation picker uses the DOI-URL (`https://doi.org/…`) instead.
 
 ### Icon Meanings
@@ -113,18 +109,18 @@ You can also make a PR to [this file which defines the citation formats](https:/
 ## Advanced Usage
 
 ### Bibliography Actions
-- `⇧ + ↵`: Reveal the entry in Zotero, neovim, BibDesk, VS Code, or Sublime Text, depending on the setting in the workflow configuration.
-- `⌘⌥ + ↵`: Paste the full bibliographic entry in the APA 6th Style (requires [Pandoc](https://pandoc.org/installing.html)).
-- `⌘ + L`: Preview the (unabridged) title, abstract, and list of keywords.
-- `⌘fn + ↵`: Delete the entry from the BibTeX library. (⚠️ This feature is untested with BibTeX files created with apps other than BibDesk and Bookends. [Create an issue](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues) for problems with other apps.)
+- <kbd>⇧</kbd><kbd>↵</kbd>: Reveal the entry in Zotero, neovim, BibDesk, VS Code, or Sublime Text, depending on the setting in the workflow configuration.
+- <kbd>⌘</kbd><kbd>⌥</kbd><kbd>↵</kbd>: Paste the full bibliographic entry in the APA 6th Style (requires [Pandoc](https://pandoc.org/installing.html)).
+- <kbd>⌘</kbd><kbd>L</kbd>: Preview the (unabridged) title, abstract, and list of keywords.
+- <kbd>⌘</kbd><kbd>fn</kbd><kbd>↵</kbd>: Delete the entry from the BibTeX library. (⚠️ This feature is untested with BibTeX files created with apps other than BibDesk and Bookends. [Create an issue](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues) for problems with other apps.)
 
 ### Add New Entries
-- `universal action` or `hotkey`: Uses the selected __DOI__, __ISBN__, or __URL containing a DOI__ to add a new entry to the library.
+- [Universal Action](https://www.alfredapp.com/help/features/universal-actions/) or [Hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/): Uses the selected __DOI__, __ISBN__, or __URL containing a DOI__ to add a new entry to the library.
   - *Experimental:* A second universal action can be used to parse & add a bibliographic entry. Requires [anystyle](https://github.com/inukshuk/anystyle).
   - The new entry is added to your library, with a correctly formatted and unique citekey. Afterward, the entry is opened.
-- `file action`: Use the `Add Entry and Auto-file` action on a PDF file that includes a DOI. The DOI is automatically retrieved from the PDF, the entry added to the library, and the PDF auto-filed (see [PDF Management Actions](#pdf-management-actions)). Requires [pdfgrep](https://pdfgrep.org/).
+- [File Action](https://www.alfredapp.com/help/features/universal-actions/): Use the `Add Entry and Auto-file` action on a PDF file that includes a DOI. The DOI is automatically retrieved from the PDF, the entry added to the library, and the PDF auto-filed (see [PDF Management Actions](#pdf-management-actions)). Requires [pdfgrep](https://pdfgrep.org/).
 
-> __Note__
+> __Warn__
 > Adding or removing entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/) since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file are not reflected in Zotero.
 
 ### Literature Note Actions
@@ -139,14 +135,14 @@ You can also make a PR to [this file which defines the citation formats](https:/
 ### PDF Management Actions
 The following features require that all your PDFs are located in the folder specified in your workflow settings.
 
-- `fn + ↵`: __Auto-file and auto-rename__ the *currently selected PDF*. Inside your selected PDF folder, uses the template path: `{first_letter_of_citekey}/{citekey-author-part}/{citekey}_{shortened_title}.pdf`
+- <kbd>fn</kbd><kbd>↵</kbd>: __Auto-file and auto-rename__ the *currently selected PDF*. Inside your selected PDF folder, uses the template path: `{first_letter_of_citekey}/{citekey-author-part}/{citekey}_{shortened_title}.pdf`
 - The `📕` indicates that the entry already has an associated PDF at that location.
-- `Hyper + ↵`[^2]: If the entry has an associated PDF file, open it with the default PDF reader. The citekey must not contain an underscore (`_`).
+- <kbd>⇪</kbd><kbd>↵</kbd>[^2]: If the entry has an associated PDF file, open it with the default PDF reader. The citekey must not contain an underscore (`_`).
 - Add `pdf` to any search query to filter only for entries with PDFs that have been added by the auto-file feature. `pdf grieser`, for example, displays only entries from the author "Grieser" with PDFs. Can be combined with other queries (see: [smart queries](#search)).
 
 ### Auxiliary Features
 <!-- vale Vale.Spelling = NO -->
-Triggered via the Alfred Keyword `scp` (for `S`upercharged `C`itation `P`icker).
+Triggered via the Alfred Keyword `scp` (mnemonic: `S`upercharged `C`itation `P`icker).
 <!-- vale Vale.Spelling = YES -->
 - __Cheatsheet: Citation Picker Actions__: Open a cheat sheet of the available actions of the Supercharged Citation Picker.
 - __Citation Style Search__: Search for a citation style (`.csl` file), which is downloaded to the location specified in your workflow settings (default: `~/.pandoc/csl/`).
