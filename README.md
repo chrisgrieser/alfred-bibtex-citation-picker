@@ -117,7 +117,7 @@ You can also make a PR to [this file which defines the citation formats](https:/
   - The new entry is added to your library, with a correctly formatted and unique citekey. Afterward, the entry is opened.
 - [File Action](https://www.alfredapp.com/help/features/universal-actions/): Use the `Add Entry and Auto-file` action on a PDF file that includes a DOI. The DOI is automatically retrieved from the PDF, the entry added to the library, and the PDF auto-filed (see [PDF Management Actions](#pdf-management-actions)). Requires [pdfgrep](https://pdfgrep.org/).
 
-> __Warn__
+> __Warning__  
 > Adding or removing entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/) since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file are not reflected in Zotero.
 
 ### Literature Note Actions
