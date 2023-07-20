@@ -6,7 +6,7 @@ A citation picker and lightweight reference manager for [Alfred](https://www.alf
 <img width=60% alt="showcase screenshot" src="assets/showcase.png">
 
 ## Feature Overview
-- Inserts __Pandoc Citation Syntax__ (`[@citekey]`), supporting page numbers & multiple citations (`[@citekey, p. 23; @citekey, p. 42]`). Can also be configured to use __LaTeX__, __Multi-Markdown__, __eta templates__, __Org Mode__, `[[wikilinks]]`, `#tags` or `bare citkeys` as citation format.
+- Inserts __Pandoc Citation Syntax__ (`[@citekey]`), supporting page numbers & multiple citations (`[@citekey, p. 23; @citekey, p. 42]`). Can also be configured to use __LaTeX__, __Multi-Markdown__, __eta templates__, __Org Mode__, `[[wikilinks]]`, `#tags`, or `bare citkeys` as citation format.
 - __App-independent:__ Works system-wide, in every text field of every app.
 - __Smart Search:__ Search for citekeys, authors, title, publication, keywords (tags), include or exclude authors in *et al.*, tab-completion, fuzzy-matching, sorting recently used entries to the top.
 - __Feature-rich:__ Paste single-entry bibliographies, open URLs, open or create literature notes, attach PDFs, search for `.csl` files online, and more.
