@@ -3501,7 +3501,7 @@ to set a hotkey for adding DOI/ISBN</string>
 		<string>50</string>
 	</dict>
 	<key>version</key>
-	<string>11.7.3</string>
+	<string>11.7.4</string>
 	<key>webaddress</key>
 	<string>https://github.com/chrisgrieser/alfred-bibtex-citation-picker</string>
 </dict>
