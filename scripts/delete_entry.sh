@@ -2,7 +2,7 @@
 # shellcheck disable=SC2154
 
 # $citekey set in Alfred
-LIBRARY="${bibtex_library_path/#\~/$HOME}"
+LIBRARY="$bibtex_library_path"
 ENTRIES_BEFORE=$(grep -c -E "^@.*{" "$LIBRARY")
 
 # deletes from a line matching the citekey to the next "}", https://stackoverflow.com/a/14492880

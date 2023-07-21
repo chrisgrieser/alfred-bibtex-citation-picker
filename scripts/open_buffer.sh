@@ -1,8 +1,11 @@
 #!/bin/zsh
 # shellcheck disable=2154
-LIBRARY="${bibtex_library_path/#\~/$HOME}"
-LIT_NOTES_FOLDER="${literature_note_folder/#\~/$HOME}"
-PDF_FOLDER="${pdf_folder/#\~/$HOME}"
+
+# Workflow Config Vars
+LIBRARY="$bibtex_library_path"
+LIT_NOTES_FOLDER="$literature_note_folder"
+PDF_FOLDER="$pdf_folder"
+#───────────────────────────────────────────────────────────────────────────────
 
 BUFFER="$alfred_workflow_data/buffer.json"
 PREFS="./prefs.plist"

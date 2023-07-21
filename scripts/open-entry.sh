@@ -1,8 +1,7 @@
 #!/bin/zsh
 # shellcheck disable=SC2154,SC2086
-export PATH=/usr/local/bin/:/opt/homebrew/bin/:$PATH
 
-LIBRARY="${bibtex_library_path/#\~/$HOME}"
+LIBRARY="$bibtex_library_path"
 CITEKEY=$(echo "$*" | tr -d "\n")
 LINE_NO=$(grep -n "{$CITEKEY," "$LIBRARY" | head -n1 | cut -d':' -f1)
 
