@@ -1,5 +1,4 @@
 #!/usr/bin/env zsh
-export PATH=/usr/local/lib:/usr/local/bin:/opt/homebrew/bin/:$PATH
 
 if ! command -v pdfgrep &>/dev/null; then echo -n "pdfgrep not installed." && exit 1; fi
 

@@ -1,6 +1,5 @@
 #!/bin/zsh
 
-bibtex_library_path="${bibtex_library_path/#\~/$HOME}"
 citekey=$(echo "$*" | tr -d "\n")
 
 #───────────────────────────────────────────────────────────────────────────────
