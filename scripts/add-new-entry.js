@@ -93,34 +93,30 @@ function generateCitekey(authors, year) {
 
 //──────────────────────────────────────────────────────────────────────────────
 
-/** @type {AlfredRun} */
-// rome-ignore lint/correctness/noUnusedVariables: Alfred run
-function run(argv) {
+/** @param {string} input */
+function inputToEntryData(input) {
+	const entry = {};
 	const doiRegex = /\b10.\d{4,9}\/[-._;()/:A-Z0-9]+(?=$|[?/ ])/i; // https://www.crossref.org/blog/dois-and-matching-regular-expressions/
 	const isbnRegex = /^[\d-]{9,}$/;
-
-	const input = argv[0].trim();
-	const libraryPath = $.getenv("bibtex_library_path").replace(/^~/, app.pathTo("home folder"));
-
-	//───────────────────────────────────────────────────────────────────────────
-
-	const entry = {};
 	const isDOI = doiRegex.test(input);
 	const isISBN = isbnRegex.test(input);
 	const mode = $.getenv("mode");
-	if (!(isDOI || isISBN || mode === "parse")) return "input invalid";
+	if (!(isDOI || isISBN || mode === "parse")) return { error: "input invalid" };
 
 	// DOI
 	// https://citation.crosscite.org/docs.html
 	if (isDOI) {
 		const doi = input.match(doiRegex);
-		if (!doi) return "DOI invalid";
+		if (!doi) return { error: "DOI invalid" };
 		const doiURL = "https://doi.org/" + doi[0];
+
 		const response = app.doShellScript(
 			`curl -sL -H "Accept: application/vnd.citationstyles.csl+json" "${doiURL}"`,
 		);
+		if (!response) return { error: "No response by doi.org" };
 		if (response.startsWith("<!DOCTYPE html>") || response.toLowerCase().includes("doi not found"))
-			return "DOI not found";
+			return { error: "DOI not found" };
+
 		const data = JSON.parse(response);
 
 		entry.publisher = data.publisher;
@@ -141,35 +137,70 @@ function run(argv) {
 		}
 	}
 
-	// ISBN: Google Books
-	// https://developers.google.com/books/docs/v1/using
+	// ISBN: Google Books & OpenLibrary
+	// https://www.vinzius.com/post/free-and-paid-api-isbn/
 	else if (isISBN) {
-		// INFO ebooks.de API not working anymore :( https://www.ebook.de/de/tools/isbn2bibtex?isbn=9781471181979
 		const isbn = input;
-		const response = app.doShellScript(
-			`curl -sL "https://www.googleapis.com/books/v1/volumes?q=isbn:${isbn}"`,
-		);
-		if (!response) return "ISBN not found";
-		const fullData = JSON.parse(response);
-		if (fullData.totalItems === 0) return "ISBN not found";
-		const data = fullData.items[0].volumeInfo;
-		const bookAccessible = fullData.items[0].accessInfo.viewability !== "NO_PAGES"
+		// first tries OpenLibrary API, then Google Books API
 
-		entry.type = "book";
-		entry.year = parseInt(data.publishedDate.split("-")[0]);
-		entry.author = (data.authors || data.author || []).join(" and ");
-		entry.isbn = isbn;
-		entry.publisher = data.publisher;
-		entry.title = data.title;
-		if (data.subtitle) entry.title += ". " + data.subtitle;
-		if (bookAccessible) entry.url = data.previewLink;
+		// OPENLIBRARY -- https://openlibrary.org/developers/api
+		console.log("Attempting Open Library API…");
+		const response = app.doShellScript(
+			`curl -sL "https://openlibrary.org/api/books?bibkeys=isbn:${isbn}&jscmd=details&format=json"`,
+		);
+		if (!response) console.log("No response by OpenLibrary API");
+		const fullData = response ? JSON.parse(response)["isbn:" + isbn] : {};
+		const openLibraryHasData = response && fullData && Object.keys(fullData).length > 0;
+
+		if (openLibraryHasData) {
+			console.log("Open Library Data found.");
+			const data = fullData.details;
+
+			entry.type = "book";
+			entry.publisher = data.publishers.join(" and ");
+			entry.title = data.title;
+			entry.year = parseInt(data.publish_date.split(",")[1].trim());
+			entry.author = (data.authors || data.author || [])
+				.map((/** @type {{ name: string; }} */ author) => author.name)
+				.join(" and ");
+			entry.isbn = isbn;
+			if (data.subtitle) entry.title += ". " + data.subtitle;
+			const bookAccessible = fullData.preview !== "noview";
+			if (bookAccessible) entry.url = data.preview_url;
+		}
+
+		// GOOGLE BOOKS -- https://developers.google.com/books/docs/v1/using
+		else {
+			console.log("Attempting Google Books API…");
+			const response = app.doShellScript(
+				`curl -sL "https://www.googleapis.com/books/v1/volumes?q=isbn:${isbn}"`,
+			);
+			if (!response) {
+				console.log("No response by Google Books API");
+				return { error: "No response by Google Books API" };
+			}
+			const fullData = JSON.parse(response);
+			if (fullData.totalItems === 0) return { error: "ISBN not found" };
+			console.log("Google Books Data found.");
+
+			const data = fullData.items[0].volumeInfo;
+			entry.type = "book";
+			entry.year = parseInt(data.publishedDate.split("-")[0]);
+			entry.author = (data.authors || data.author || []).join(" and ");
+			entry.isbn = isbn;
+			entry.publisher = data.publisher;
+			entry.title = data.title;
+			if (data.subtitle) entry.title += ". " + data.subtitle;
+			const bookAccessible = fullData.items[0].accessInfo.viewability !== "NO_PAGES";
+			if (bookAccessible) entry.url = data.previewLink;
+		}
 	}
 
 	// anystyle
 	else if (mode === "parse") {
 		// validate installation
-		const anystyleInstalled = app.doShellScript("command -v anystyle || true") !== ""
-		if (!anystyleInstalled) return "anystyle not found";
+		const anystyleInstalled = app.doShellScript("command -v anystyle || true") !== "";
+		if (!anystyleInstalled) return { error: "anystyle not found" };
 
 		// INFO anystyle can't read STDIN, so this has to be written to a file
 		// https://github.com/inukshuk/anystyle-cli#anystyle-help-parse
@@ -192,11 +223,20 @@ function run(argv) {
 		} else if (entry.type === "incollection") {
 			entry.booktitle = data["container-title"];
 		}
-		
 	}
 
-	//───────────────────────────────────────────────────────────────────────────
-	// CONSTRUCT BIBTEX ENTRY
+	return entry;
+}
+
+/** @type {AlfredRun} */
+// rome-ignore lint/correctness/noUnusedVariables: Alfred run
+function run(argv) {
+	const input = argv[0].trim();
+	const libraryPath = $.getenv("bibtex_library_path").replace(/^~/, app.pathTo("home folder"));
+
+	// Get entry data
+	const entry = inputToEntryData(input);
+	if (entry.error) return entry.error;
 
 	// cleanup
 	if (entry.publisher) entry.publisher = entry.publisher.replace(/gmbh|ltd|publications?|llc/i, "").trim();

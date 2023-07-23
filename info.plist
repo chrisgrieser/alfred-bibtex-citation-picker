@@ -1472,7 +1472,7 @@ JSON.stringify({ 'items': entry_array });
 						<key>matchmode</key>
 						<integer>4</integer>
 						<key>matchstring</key>
-						<string>invalid|not found</string>
+						<string>invalid|not found|No response</string>
 						<key>outputlabel</key>
 						<string>error</string>
 						<key>uid</key>
