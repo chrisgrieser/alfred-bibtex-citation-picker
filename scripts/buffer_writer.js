@@ -204,7 +204,9 @@ function bibtexParse(rawBibtexStr) {
 			entry.citekey = lines[0].split("{")[1]?.trim();
 			lines.shift();
 
-			// standardize entry icons
+			// INFO will use icons saved as as `./icons/{entry.icon}.png` in the
+			// workflow folder. This means adding icons does not require any extra
+			// code, just an addition of the an icon file named like the category
 			if (entryCategory === "online") entry.icon = "webpage";
 			else if (entryCategory === "report") entry.icon = "techreport";
 			else if (entryCategory === "inbook") entry.icon = "incollection";
