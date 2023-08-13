@@ -26,10 +26,10 @@ function readFile(path) {
 }
 
 /**
- * @param {string} text
  * @param {string} filepath
+ * @param {string} text
  */
-function writeToFile(text, filepath) {
+function writeToFile(filepath, text) {
 	app.doShellScript(`mkdir -p "$(dirname "${filepath}")"`);
 	const str = $.NSString.alloc.initWithUTF8String(text);
 	str.writeToFileAtomicallyEncodingError(filepath, true, $.NSUTF8StringEncoding, null);
@@ -223,6 +223,8 @@ function inputToEntryData(input) {
 		} else if (entry.type === "incollection") {
 			entry.booktitle = data["container-title"];
 		}
+	} else {
+		return { error: "No DOI or ISBN in selected text" };
 	}
 
 	return entry;
@@ -231,8 +233,9 @@ function inputToEntryData(input) {
 /** @type {AlfredRun} */
 // rome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run(argv) {
+	const libraryPath = $.getenv("bibtex_library_path");
 	const input = argv[0].trim();
-	const libraryPath = $.getenv("bibtex_library_path").replace(/^~/, app.pathTo("home folder"));
+	if (!input) return "No input provided";
 
 	// Get entry data
 	const entry = inputToEntryData(input);
