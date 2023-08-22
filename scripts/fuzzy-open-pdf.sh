@@ -10,7 +10,7 @@ else
 	# no pdf folder, but try to get the pdf filepath from the `file` entry in the library
 	LIBRARY="$bibtex_library_path"
 	if [[ ! -f "$LIBRARY" ]]; then
-		echo "LIBRARY $LIBRARY does not exist"
+		echo "PDF_FOLDER $PDF_FOLDER and LIBRARY $LIBRARY do not exist"
 		return 1
 	fi
 	CITEKEY=$(echo "$*" | tr -d "\n")
@@ -26,8 +26,18 @@ else
 				if (entry ~ /file\s*=\s*{[^}]+}/) {
 					gsub(/.*file\s*=\s*{/, "", entry);
 					gsub(/}.*/, "", entry);
-					print entry;
-					found = 1;
+
+					# Split multiple file paths into an array
+					split(entry, file_paths, ";");
+
+					# Loop through the file paths and find the one ending with .pdf
+					for (i in file_paths) {
+						if (file_paths[i] ~ /\.pdf$/) {
+							print file_paths[i];
+							found = 1;
+							break;
+						}
+					}
 				}
 			}
 		}
@@ -42,7 +52,7 @@ else
 		open "$FILE_PATH"
 		return 0
 	else
-		echo "PDF_FOLDER $PDF_FOLDER does not exist"
+		echo "no pdf found for $CITEKEY"
 		return 1
 	fi
 fi
