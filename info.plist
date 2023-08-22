@@ -3316,7 +3316,7 @@ to set a hotkey for adding DOI/ISBN</string>
 				<false/>
 			</dict>
 			<key>description</key>
-			<string>Folder containing your PDFs. Only required for indicating PDFs via icons, opening them via `Hyper↵`, or auto-filing PDFs via  with `fn↵`.</string>
+			<string>Folder containing your PDFs. Only required for indicating PDFs via icons, opening them via `Hyper↵`, or auto-filing PDFs via  with `fn↵`. When left empty, `Hyper↵` tries to fall back to the PDF listed in the bibtex file under the key `file`.</string>
 			<key>label</key>
 			<string>PDF Folder</string>
 			<key>type</key>
@@ -3496,7 +3496,7 @@ to set a hotkey for adding DOI/ISBN</string>
 		<key>_format_page_suffix</key>
 		<string></string>
 		<key>alfred_bar_length</key>
-		<string>55</string>
+		<string>60</string>
 		<key>max_title_length</key>
 		<string>50</string>
 	</dict>

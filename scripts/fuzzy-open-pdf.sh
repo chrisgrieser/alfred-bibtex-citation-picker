@@ -2,10 +2,13 @@
 
 # shellcheck disable=2154
 PDF_FOLDER="$pdf_folder"
-CITEKEY="$*"
+CITEKEY=$(echo -n "$*")
 
 if [[ -d "$PDF_FOLDER" ]]; then
 	cd "$PDF_FOLDER" || return 1
+	# opening only requires pdf named with citekey, so PDFs with a method other
+	# than this workflow can also be opened.
+	FILE_PATH=$(find . -maxdepth 3 -type f -name "*.pdf" | grep -i "$CITEKEY" | head -n1)
 else
 	# no pdf folder, but try to get the pdf filepath from the `file` entry in the library
 	LIBRARY="$bibtex_library_path"
@@ -13,7 +16,6 @@ else
 		echo "PDF_FOLDER $PDF_FOLDER and LIBRARY $LIBRARY do not exist"
 		return 1
 	fi
-	CITEKEY=$(echo "$*" | tr -d "\n")
 	FILE_PATH=$(awk -v key="$CITEKEY" '
 		/^@/ {
 			entry = $0;
@@ -47,19 +49,7 @@ else
 			}
 		}
 	' "$LIBRARY")
-
-	if [[ -f "$FILE_PATH" ]]; then
-		open "$FILE_PATH"
-		return 0
-	else
-		echo "no pdf found for $CITEKEY"
-		return 1
-	fi
 fi
-
-# opening only requires pdf named with citekey, soPDFs field with a method other
-# than this workflow can also be opened.
-FILE_PATH=$(find . -maxdepth 3 -type f -name "*.pdf" | grep -i "$CITEKEY" | head -n1)
 
 if [[ -f "$FILE_PATH" ]]; then 
 	open "$FILE_PATH"

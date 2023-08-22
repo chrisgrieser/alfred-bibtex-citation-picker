@@ -131,10 +131,8 @@ You can also make a PR to [this file which defines the citation formats](https:/
 
 ### PDF Management Actions
 The following features require that all your PDFs are located in the folder specified in your workflow settings.
-<!-- LTeX: enabled=false -->
-- <kbd>fn</kbd><kbd>⏎</kbd>: __Auto-file and auto-rename__ the *currently selected PDF*. Inside your selected PDF folder, uses the template path: `{first_letter_of_citekey}/{citekey-author-part}/{citekey}_{shortened_title}.pdf` <!-- LTeX: enabled=true -->
 - The `📕` indicates that the entry already has an associated PDF at that location.
-- <kbd>⇪</kbd><kbd>⏎</kbd>[^2]: If the entry has an associated PDF file, open it with the default PDF reader. The citekey must not contain an underscore (`_`).
+- <kbd>⇪</kbd><kbd>⏎</kbd>[^2]: If the entry has an associated PDF file, open it with the default PDF reader. The citekey must not contain an underscore (`_`). If the PDF folder setting is left empty, tries to open a PDF file listed under the `file` key in the BibTeX file.
 - Add `pdf` to any search query to filter only for entries with PDFs that have been added by the auto-file feature. `pdf grieser`, for example, displays only entries from the author "Grieser" with PDFs. Can be combined with other queries (see: [smart queries](#search)).
 
 ### Auxiliary Features
