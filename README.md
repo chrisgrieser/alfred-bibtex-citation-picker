@@ -94,7 +94,7 @@ You can use the `scp` and select __Change Citation Format__ to change the format
 - bracketed citekey
 
 > __Note__  
-> Not all formats support all citation-related features. For example, adding Page numbers as well as inline-citations are not supported for Latex, Wikilinks, and Tags, and iA Writer does not support multiple citations.
+> Not all formats support all citation-related features. For example, adding Page numbers as well as inline-citations are not supported for Latex, Wikilinks, and Tags; and iA Writer does not support multiple citations.
 
 ### Other Format Customizations
 If you want to use a format that is not available, you can customize the format yourself by changing the workflow environment variables starting with `_format`. (Tutorial: [How to set environment variables in Alfred](https://www.alfredapp.com/help/workflows/advanced/variables/#environment))
