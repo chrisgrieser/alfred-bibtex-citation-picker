@@ -7,8 +7,54 @@ CITEKEY="$*"
 if [[ -d "$PDF_FOLDER" ]]; then
 	cd "$PDF_FOLDER" || return 1
 else
-	echo "$PDF_FOLDER does not exist"
-	return 1
+	# no pdf folder, but try to get the pdf filepath from the `file` entry in the library
+	LIBRARY="$bibtex_library_path"
+	if [[ ! -f "$LIBRARY" ]]; then
+		echo "PDF_FOLDER $PDF_FOLDER and LIBRARY $LIBRARY do not exist"
+		return 1
+	fi
+	CITEKEY=$(echo "$*" | tr -d "\n")
+	FILE_PATH=$(awk -v key="$CITEKEY" '
+		/^@/ {
+			entry = $0;
+			getline;
+			while ($0 != "}") {
+				entry = entry "\n" $0;
+				getline;
+			}
+			if (entry ~ key) {
+				if (entry ~ /file\s*=\s*{[^}]+}/) {
+					gsub(/.*file\s*=\s*{/, "", entry);
+					gsub(/}.*/, "", entry);
+
+					# Split multiple file paths into an array
+					split(entry, file_paths, ";");
+
+					# Loop through the file paths and find the one ending with .pdf
+					for (i in file_paths) {
+						if (file_paths[i] ~ /\.pdf$/) {
+							print file_paths[i];
+							found = 1;
+							break;
+						}
+					}
+				}
+			}
+		}
+		END {
+			if (!found) {
+				print "CITEKEY not found.";
+			}
+		}
+	' "$LIBRARY")
+
+	if [[ -f "$FILE_PATH" ]]; then
+		open "$FILE_PATH"
+		return 0
+	else
+		echo "no pdf found for $CITEKEY"
+		return 1
+	fi
 fi
 
 # opening only requires pdf named with citekey, soPDFs field with a method other
