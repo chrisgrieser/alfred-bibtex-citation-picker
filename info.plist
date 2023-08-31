@@ -1144,6 +1144,8 @@ JSON.stringify({ 'items': entry_array });
 			<dict>
 				<key>externalid</key>
 				<string>citation-picker-loop</string>
+				<key>inputmode</key>
+				<integer>1</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
