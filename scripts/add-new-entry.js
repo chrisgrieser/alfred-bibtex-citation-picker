@@ -254,7 +254,10 @@ function run(argv) {
 	for (const key in entry) {
 		if (key === "type") continue; // already inserted in first line
 		let value = entry[key];
-		if (typeof value === "string") value = "{{" + value + "}}"; // escape bibtex values
+		if (typeof value === "string") { // escape bibtex values
+			value = "{" + value + "}";
+			if (value.match(/[A-Z]/)) value = "{" + value + "}";
+		}
 		propertyLines.push(`\t${key} = ${value},`);
 	}
 	propertyLines.sort(); // sorts alphabetically by key
