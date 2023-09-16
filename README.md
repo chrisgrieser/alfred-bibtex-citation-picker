@@ -96,8 +96,8 @@ You can use the `scp` and select __Change Citation Format__ to change the format
 - bare citekey
 - bracketed citekey
 
-> __Note__  
-> Not all formats support all citation-related features. For example, adding Page numbers as well as inline-citations are not supported for Latex, Wikilinks, and Tags; and iA Writer does not support multiple citations.
+> [!NOTE]  
+> Not all formats support all citation-related features. For example, adding Page numbers as well as inline-citations are not supported for Latex, Wikilinks, and Tags.
 
 ### Other Format Customizations
 If you want to use a format that is not available, you can customize the format yourself by changing the workflow environment variables starting with `_format`. (Tutorial: [How to set environment variables in Alfred](https://www.alfredapp.com/help/workflows/advanced/variables/#environment))
@@ -120,7 +120,7 @@ You can also make a PR to [this file which defines the citation formats](https:/
   - The new entry is added to your library, with a correctly formatted and unique citekey. Afterward, the entry is opened.
 - [File Action](https://www.alfredapp.com/help/features/universal-actions/): Use the `Add Entry and Auto-file` action on a PDF file that includes a DOI. The DOI is automatically retrieved from the PDF, the entry added to the library, and the PDF auto-filed (see [PDF Management Actions](#pdf-management-actions)). Requires [pdfgrep](https://pdfgrep.org/).
 
-> __Warning__  
+> [!NOTE]
 > Adding or removing entries does __not__ work with the [BetterBibTeX Zotero Plugin](https://retorque.re/zotero-better-bibtex/) since the plugin only does a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file are not reflected in Zotero.
 
 ### Literature Note Actions
@@ -139,10 +139,8 @@ The following features require that all your PDFs are located in the folder spec
 - Add `pdf` to any search query to filter only for entries with PDFs that have been added by the auto-file feature. `pdf grieser`, for example, displays only entries from the author "Grieser" with PDFs. Can be combined with other queries (see: [smart queries](#search)).
 
 ### Auxiliary Features
-<!-- vale Vale.Spelling = NO -->
 Triggered via the Alfred Keyword `scp` (mnemonic: `S`upercharged `C`itation `P`icker).
-<!-- vale Vale.Spelling = YES -->
-- __Cheatsheet: Citation Picker Actions__: Open a cheat sheet of the available actions of the Supercharged Citation Picker.
+- __Cheatsheet__: Open a cheat sheet of the available actions of the Supercharged Citation Picker.
 - __Citation Style Search__: Search for a citation style (`.csl` file), which is downloaded to the location specified in your workflow settings (default: `~/.pandoc/csl/`).
 - __Force Buffer Reload__: Force a reload of the citation picker. Mostly for debugging purposes.
 
