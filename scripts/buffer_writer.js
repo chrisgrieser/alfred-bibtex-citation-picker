@@ -160,10 +160,10 @@ const decodePair = [...germanChars, ...frenchChars, ...otherChars, ...specialCha
  */
 function bibtexDecode(encodedStr) {
 	let decodedStr = encodedStr;
-	decodePair.forEach((pair) => {
+	for (const pair of decodePair) {
 		const half = pair.split(";");
 		decodedStr = decodedStr.replaceAll(half[0], half[1]);
-	});
+	}
 	return decodedStr;
 }
 
@@ -214,8 +214,8 @@ function bibtexParse(rawBibtexStr) {
 			else entry.icon = entryCategory;
 
 			// parse remaining lines
-			lines.forEach((line) => {
-				if (!line.includes("=")) return; // catch erroneous BibTeX formatting
+			for (const line of lines) {
+				if (!line.includes("=")) continue; // catch erroneous BibTeX formatting
 				const field = line.split("=")[0].trim().toLowerCase();
 				const value = line
 					.split("=")[1]
@@ -239,7 +239,7 @@ function bibtexParse(rawBibtexStr) {
 					default:
 						entry[field] = value;
 				}
-			});
+			};
 
 			if (!entry.url && entry.doi) entry.url = "https://doi.org/" + entry.doi;
 
@@ -288,7 +288,7 @@ const entryArray = bibtexParse(rawBibtex)
 	.reverse() // reverse, so recent entries come first
 	.map((entry) => {
 	const emojis = [];
-	// rome-ignore format: too long
+	// biome-ignore format: too long
 	const { title, url, citekey, keywords, icon, journal, volume, issue, booktitle, author, editor, year, abstract, primaryNamesEtAlString, primaryNames } = entry;
 
 	// Shorten Title (for display in Alfred)

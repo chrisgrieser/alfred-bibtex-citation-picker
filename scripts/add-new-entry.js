@@ -228,7 +228,7 @@ function inputToEntryData(input) {
 }
 
 /** @type {AlfredRun} */
-// rome-ignore lint/correctness/noUnusedVariables: Alfred run
+// biome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run(argv) {
 	const libraryPath = $.getenv("bibtex_library_path");
 	const input = argv[0].trim();
@@ -254,7 +254,8 @@ function run(argv) {
 	for (const key in entry) {
 		if (key === "type") continue; // already inserted in first line
 		let value = entry[key];
-		if (typeof value === "string") { // escape bibtex values
+		if (typeof value === "string") {
+			// escape bibtex values
 			value = "{" + value + "}";
 			if (value.match(/[A-Z]/)) value = "{" + value + "}";
 		}
