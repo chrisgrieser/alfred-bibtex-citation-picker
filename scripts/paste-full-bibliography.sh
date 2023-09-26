@@ -5,7 +5,7 @@ if ! command -v pandoc &>/dev/null; then
 	return 0
 fi
 
-CSL="./apa-6th-edition.csl"
+CSL="./apa-7th.csl"
 CITEKEY="$*"
 # shellcheck disable=SC2154
 LIBRARY="$bibtex_library_path"
