@@ -91,7 +91,7 @@ function generateCitekey(authors, year) {
 //──────────────────────────────────────────────────────────────────────────────
 
 /** @param {string} input */
-function inputToEntryData(input) {
+function inputToEntryJson(input) {
 	const entry = {};
 
 	const doiRegex = /\b10.\d{4,9}\/[-._;()/:A-Z0-9]+(?=$|[?/ ])/i; // https://www.crossref.org/blog/dois-and-matching-regular-expressions/
@@ -227,6 +227,37 @@ function inputToEntryData(input) {
 	return entry;
 }
 
+/**
+ * @param {object} entryJson
+ * @param {string} citekey
+ * @return {string} newEntryAsBibTex
+ */
+function json2bibtex(entryJson, citekey) {
+	const firstLine = `@${entryJson.type}{${citekey},`;
+	const keywordsLine = "\tkeywords = {},";
+	const lastLine = "}";
+	const propertyLines = [];
+	for (const key in entryJson) {
+		if (key === "type") continue; // already inserted in first line
+		let value = entryJson[key];
+		if (!value) continue; // missing value
+		if (typeof value === "string") {
+			// escape bibtex values, but do not double-enclose the author key, since
+			// it results in the author key being interpreted literal author name
+			value = "{" + value + "}";
+			if (value.match(/[A-Z]/) && key !== "author") value = "{" + value + "}";
+		}
+		propertyLines.push(`\t${key} = ${value},`);
+	}
+	propertyLines.sort(); // sorts alphabetically by key
+	// remove comma from last entry
+	propertyLines[propertyLines.length - 1] = propertyLines[propertyLines.length - 1].slice(0, -1);
+	const newEntryAsBibTex = [firstLine, keywordsLine, ...propertyLines, lastLine].join("\n");
+	return newEntryAsBibTex;
+}
+
+//──────────────────────────────────────────────────────────────────────────────
+
 /** @type {AlfredRun} */
 // biome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run(argv) {
@@ -235,7 +266,7 @@ function run(argv) {
 	if (!input) return "No input provided";
 
 	// Get entry data
-	const entry = inputToEntryData(input);
+	const entry = inputToEntryJson(input);
 	if (entry.error) return entry.error;
 
 	// cleanup
@@ -246,28 +277,9 @@ function run(argv) {
 	let citekey = generateCitekey(entry.author, entry.year);
 	citekey = ensureUniqueCitekey(citekey, libraryPath);
 
-	// JSON -> bibtex
-	const firstLine = `@${entry.type}{${citekey},`;
-	const keywordsLine = "\tkeywords = {},";
-	const lastLine = "}";
-	const propertyLines = [];
-	for (const key in entry) {
-		if (key === "type") continue; // already inserted in first line
-		let value = entry[key];
-		if (typeof value === "string") {
-			// escape bibtex values
-			value = "{" + value + "}";
-			if (value.match(/[A-Z]/)) value = "{" + value + "}";
-		}
-		propertyLines.push(`\t${key} = ${value},`);
-	}
-	propertyLines.sort(); // sorts alphabetically by key
-	// remove comma from last entry
-	propertyLines[propertyLines.length - 1] = propertyLines[propertyLines.length - 1].slice(0, -1);
-
-	// Write result
-	const newEntryAsBibTex = [firstLine, keywordsLine, ...propertyLines, lastLine].join("\n");
-	appendToFile(newEntryAsBibTex, libraryPath);
+	// JSON -> bibtex & Write
+	const entryAsBibTex = json2bibtex(entry, citekey);
+	appendToFile(entryAsBibTex, libraryPath);
 
 	// Copy Citation
 	const copyCitation = $.getenv("copy_citation_on_adding_entry") === "1";
