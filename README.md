@@ -9,7 +9,7 @@ formats like [Pandoc Markdown](https://pandoc.org/MANUAL.html#citation-syntax),
 [LaTeX](https://www.overleaf.com/learn/latex/Biblatex_citation_styles), or [Org
 Mode](https://orgmode.org/manual/Citations.html).
 
-<img width=60% alt="showcase screenshot" src="assets/showcase.png">
+<img width="1106" alt="showcase" src="https://github.com/chrisgrieser/alfred-bibtex-citation-picker/assets/73286100/c16c0621-ca62-4f05-909b-c2acd602feb1">
 
 ## Feature Overview
 
@@ -58,7 +58,7 @@ Mode](https://orgmode.org/manual/Citations.html).
 	* [Literature Note Actions](#literature-note-actions)
 	* [PDF Management Actions](#pdf-management-actions)
 	* [Auxiliary Features](#auxiliary-features)
-- [Spread the Word](#spread-the-word)
+- [Recommended Citation](#recommended-citation)
 - [About the Developer](#about-the-developer)
 	* [Profiles](#profiles)
 	* [Donate](#donate)
@@ -91,7 +91,7 @@ keyword.
 ### Citation Actions
 - <kbd>⏎</kbd>: Paste the citekey of the selected citation.
 - <kbd>⌥</kbd><kbd>⏎</kbd>: Add another citation.
-- <kbd>⇧</kbd><kbd>⌘</kbd><kbd>⏎</kbd>: Paste an inline-citation (citation 
+- <kbd>⇧</kbd><kbd>⌘</kbd><kbd>⏎</kbd>: Paste an inline-citation (citation
   without surrounding formatting, for example `@Grieser2022` instead of `[@Grieser2022]`)
 - <kbd>⌘</kbd><kbd>⏎</kbd>: Add page numbers before pasting the selected citekey.
   * Confirm the page number with <kbd>⌥</kbd><kbd>⏎</kbd> or
@@ -198,9 +198,9 @@ You can also make a PR to [this file which defines the citation formats](https:/
 - <kbd>⌘</kbd><kbd>Y</kbd>: Preview the literature note with `QuickLook`
   (requires `QLmarkdown` or `Peek`[^1]).
 - Add `*` to any search query to filter only for entries with literature notes,
-  for example `* grieser` searches for entries matching "grieser" which also
-	have a literature notes. Can be combined with other queries (see: [smart
-	queries](#search)).
+  for example `* grieser` searches for entries matching "Grieser" which also
+  have a literature notes. Can be combined with other queries (see: [smart
+  queries](#search)).
 
 ### PDF Management Actions
 The following features require that all your PDFs are located in the folder
@@ -225,14 +225,20 @@ Triggered via the Alfred Keyword `scp` (mnemonic: `S`upercharged `C`itation `P`i
 - __Force Buffer Reload__: Force a reload of the citation picker. Mostly for
   debugging purposes.
 
-<!-- vale Google.FirstPerson = NO -->
-## Spread the Word
-As this is probably the most feature-rich and most performant citation picker on
-macOS, it is kind of a bummer that not many people know about this. However, I
-do not really know where to "advertise" this, since I am not aware of any forum 
-or website for academics that work with markdown and BibTeX. If you know a good 
-place, feel free to contact me or spread the word yourself. 😊
+## Recommended Citation
 
+Please cite this software project as (APA):
+
+```txt
+Grieser, C. (2023). Supercharged Citation Picker [Computer software]. 
+https://github.com/chrisgrieser/alfred-bibtex-citation-picker
+```
+
+For other citation styles, use the following metadata:
+- [Citation File Format](./CITATION.cff)
+- [BibTeX](./CITATION.bib)
+
+<!-- vale Google.FirstPerson = NO -->
 ## About the Developer
 In my day job, I am a sociologist studying the social mechanisms underlying the
 digital economy. For my PhD project, I investigate the governance of the app
