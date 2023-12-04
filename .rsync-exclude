@@ -8,3 +8,5 @@ README.md
 LICENSE
 Makefile
 build-and-release.sh
+CITATION.bib
+CITATION.cff
