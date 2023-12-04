@@ -2605,6 +2605,16 @@ For all the features this workflow has to offer, refer to the [README](https://g
 
 ---
 
+## Recommended Citation
+Please cite this software project as (APA):
+
+`Grieser, C. (2023). Supercharged Citation Picker [Computer software]. https://github.com/chrisgrieser/alfred-bibtex-citation-picker`
+
+For other citation styles, use the following metadata:
+- [Citation File Format](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/CITATION.cff)
+- [BibTeX](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/CITATION.bib)
+
+
 ## Created by
 [Chris Grieser](https://chris-grieser.de/)</string>
 	<key>uidata</key>
