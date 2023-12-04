@@ -1309,7 +1309,7 @@ JSON.stringify({ 'items': entry_array });
 				<key>hotkey</key>
 				<integer>6</integer>
 				<key>hotmod</key>
-				<integer>1966080</integer>
+				<integer>1835008</integer>
 				<key>hotstring</key>
 				<string>Y</string>
 				<key>leftcursor</key>
@@ -1598,16 +1598,9 @@ JSON.stringify({ 'items': entry_array });
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>102</integer>
+				<integer>0</integer>
 				<key>script</key>
-				<string>export PATH=/usr/local/bin:$PATH
-
-citekey="{query}"
-bibfile=~`echo -n $bibtex_library_path | sed -e "s/~//"`
-csl=~`echo -n $csl_file | sed -e "s/~//"`
-dummyBib="---\nnocite: |\n  "$citekey"\n---\n::: {#refs}\n:::"
-
-echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl --bibliography $bibfile | tr "\n" " "</string>
+				<string></string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -2058,7 +2051,7 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>qlmanage -p "Actions Cheatsheet.webloc"</string>
+				<string>qlmanage -p "./assets/Actions Cheatsheet.webloc"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -3196,7 +3189,7 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>note</key>
 			<string>add prefix &amp; suffix, then save</string>
 			<key>xpos</key>
-			<real>855</real>
+			<real>845</real>
 			<key>ypos</key>
 			<real>50</real>
 		</dict>

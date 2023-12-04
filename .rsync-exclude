@@ -3,7 +3,6 @@
 .git/
 .github/
 docs/
-assets/
 prefs.plist
 README.md
 LICENSE
