@@ -242,6 +242,7 @@ function run() {
 	const tagEmoji = "🏷";
 	const abstractEmoji = "📄";
 	const pdfEmoji = "📕";
+	const secondLibraryIcon = "2️⃣ ";
 	const litNoteFilterStr = "*";
 	const pdfFilterStr = "pdf";
 	const alfredBarLength = parseInt($.getenv("alfred_bar_length"));
@@ -376,10 +377,10 @@ function run() {
 		if (keywords.length) largeTypeInfo += "\n\nkeywords: " + keywords.join(", ");
 
 		// // Indicate 2nd library (this set via .map thisAry)
-		const secondLibraryIcon = this.second ? "2️⃣ " : "";
+		const libraryIndicator = !this.isFirstLibrary ? secondLibraryIcon : "";
 
 		return {
-			title: secondLibraryIcon + shorterTitle,
+			title: libraryIndicator + shorterTitle,
 			autocomplete: primaryNames[0],
 			subtitle: namesToDisplay + year + collectionSubtitle + "   " + emojis.join(" "),
 			match: alfredMatcher,
@@ -399,8 +400,8 @@ function run() {
 				},
 				// opening in second library not implemented yet
 				shift: {
-					valid: !this.second,
-					subtitle: !this.second
+					valid: this.isFirstLibrary,
+					subtitle: this.isFirstLibrary
 						? `⇧: Open in ${openEntriesIn}`
 						: "⛔: Opening entries in 2nd library not yet implemented.",
 				},
@@ -413,12 +414,12 @@ function run() {
 	const firstBibtex = readFile(libraryPath);
 	const firstBibtexEntryArray = bibtexParse(firstBibtex)
 		.reverse() // reverse, so recent entries come first
-		.map(convertToAlfredItems, { second: false });
+		.map(convertToAlfredItems, { isFirstLibrary: true });
 
 	const secondBibtex = fileExists(secondaryLibraryPath) ? readFile(secondaryLibraryPath) : "";
 	const secondBibtexEntryArray = bibtexParse(secondBibtex)
 		.reverse()
-		.map(convertToAlfredItems, { second: true });
+		.map(convertToAlfredItems, { isFirstLibrary: false });
 
 	return JSON.stringify({ items: [...firstBibtexEntryArray, ...secondBibtexEntryArray] });
 }
