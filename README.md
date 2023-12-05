@@ -60,7 +60,7 @@ Mode](https://orgmode.org/manual/Citations.html), any various more formats.
 	* [Literature Note Actions](#literature-note-actions)
 	* [PDF Management Actions](#pdf-management-actions)
 	* [Auxiliary Features](#auxiliary-features)
-- [Recommended Citation](#recommended-citation)
+- [Cite this software project](#cite-this-software-project)
 - [About the Developer](#about-the-developer)
 	* [Profiles](#profiles)
 	* [Donate](#donate)
@@ -213,7 +213,7 @@ You can also make a PR to [this file which defines the citation formats](https:/
 The following features require that all your PDFs are located in the folder
 specified in your workflow settings.
 - The `📕` indicates that the entry already has an associated PDF at that location.
-- <kbd>⇪</kbd><kbd>⏎</kbd>[^2]: If the entry has an associated PDF file, open it
+- <kbd>Hyper</kbd><kbd>⏎</kbd>[^2]: If the entry has an associated PDF file, open it
   with the default PDF reader. The citekey must not contain an underscore (`_`).
   If the PDF folder setting is left empty, tries to open a PDF file listed under
   the `file` key in the BibTeX file.
@@ -232,9 +232,10 @@ Triggered via the Alfred Keyword `scp` (mnemonic: `S`upercharged `C`itation `P`i
 - __Force Buffer Reload__: Force a reload of the citation picker. Mostly for
   debugging purposes.
 
-## Recommended Citation
+## Cite this software project
 
-Please cite this software project as (APA):
+If you want to mention this software project in an academic publication, please cite
+it as:
 
 ```txt
 Grieser, C. (2023). Supercharged Citation Picker [Computer software]. 
