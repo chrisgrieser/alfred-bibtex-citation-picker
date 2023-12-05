@@ -11,6 +11,8 @@ function readFile(path) {
 	return ObjC.unwrap(str);
 }
 
+//──────────────────────────────────────────────────────────────────────────────
+
 class BibtexEntry {
 	constructor() {
 		this.author = []; // last names only
@@ -244,6 +246,7 @@ function run() {
 	const matchFullYears = $.getenv("match_year_type").includes("full");
 
 	const libraryPath = $.getenv("bibtex_library_path");
+	const secondaryLibraryPath = $.getenv("secondary_library_path");
 	const litNoteFolder = $.getenv("literature_note_folder");
 	const pdfFolder = $.getenv("pdf_folder");
 	let litNoteFolderCorrect = false;
@@ -284,9 +287,10 @@ function run() {
 	//──────────────────────────────────────────────────────────────────────────────
 
 	const rawBibtex = readFile(libraryPath);
+	const secondBibtex = secondaryLibraryPath ? readFile(secondaryLibraryPath) : "";
 	console.log("Bibtex Library Reading successful.");
 
-	const entryArray = bibtexParse(rawBibtex)
+	const entryArray = bibtexParse(rawBibtex + secondBibtex)
 		.reverse() // reverse, so recent entries come first
 		.map((entry) => {
 			const emojis = [];
@@ -298,7 +302,7 @@ function run() {
 			if (title.length > alfredBarLength) shorterTitle = title.slice(0, alfredBarLength).trim() + "…";
 
 			// URL
-			let urlSubtitle = "⛔� There is no URL or DOI.";
+			let urlSubtitle = "⛔ There is no URL or DOI.";
 			if (url) {
 				emojis.push(urlEmoji);
 				urlSubtitle = "⌃: Open URL – " + url;

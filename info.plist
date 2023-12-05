@@ -3291,6 +3291,27 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>config</key>
 			<dict>
 				<key>default</key>
+				<string></string>
+				<key>filtermode</key>
+				<integer>2</integer>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+			</dict>
+			<key>description</key>
+			<string>An optional, second .bib file.</string>
+			<key>label</key>
+			<string>2nd Library Path</string>
+			<key>type</key>
+			<string>filepicker</string>
+			<key>variable</key>
+			<string>secondary_library_path</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
 				<string>ct</string>
 				<key>placeholder</key>
 				<string>ct</string>

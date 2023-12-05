@@ -5,6 +5,7 @@
 LIBRARY="$bibtex_library_path"
 LIT_NOTES_FOLDER="$literature_note_folder"
 PDF_FOLDER="$pdf_folder"
+LIBRARY_SECOND="$secondary_library_path"
 #───────────────────────────────────────────────────────────────────────────────
 
 BUFFER="$alfred_workflow_data/buffer.json"
@@ -19,13 +20,14 @@ LAST_RUN_VERSION=$(head -n1 "$LAST_VERSION_FILE")
 THIS_VERSION="$alfred_workflow_version"
 
 # reload buffer if buffer is outdated compared to
-# - library file
+# - library or 2nd library file
 # - literature notes
 # - PDFs
 # - workflow preferences (potentially changing matching behavior etc)
 # - manually requested reload
 # - new workflow version (to ensure new features/bug fixes take effect)
 if [[ "$LIBRARY" -nt "$BUFFER" ]] ||
+	[[ "$LIBRARY_SECOND" -nt "$BUFFER" ]] ||
 	[[ "$LIT_NOTES_FOLDER" -nt "$BUFFER" ]] ||
 	[[ "$PDF_FOLDER" -nt "$BUFFER" ]] ||
 	[[ "$PREFS" -nt "$BUFFER" ]] ||
