@@ -110,13 +110,14 @@ keyword.
 
 ### Icon Meanings
 
-| Icon | Entry has       |
-|:-----|:----------------|
-| 🌐   | URL or DOI      |
-| 📄   | Abstract        |
-| n 🏷 | n Keywords      |
-| 📓   | Literature Note |
-| 📕   | PDF             |
+| Icon | Entry has                             |
+|:-----|:--------------------------------------|
+| 🌐   | URL or DOI                            |
+| 📄   | Abstract                              |
+| n 🏷 | n Keywords                            |
+| 📓   | Literature Note                       |
+| 📕   | PDF                                   |
+| 2️⃣    | entry is from 2nd library             |
 
 ## Changing the Citation Format
 

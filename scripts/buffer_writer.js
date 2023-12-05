@@ -11,6 +11,11 @@ function readFile(path) {
 	return ObjC.unwrap(str);
 }
 
+function fileExists(/** @type {string} */ filePath) {
+	if (!filePath) return false;
+	return Application("Finder").exists(Path(filePath));
+}
+
 //──────────────────────────────────────────────────────────────────────────────
 
 class BibtexEntry {
@@ -36,8 +41,8 @@ class BibtexEntry {
 		return this.editor; // if both are empty, will also return empty array
 	}
 	/** turn Array of names into into one string to display
-	* @param {string[]} names
-	*/
+	 * @param {string[]} names
+	 */
 	etAlStringify(names) {
 		switch (names.length) {
 			case 0:
@@ -125,7 +130,7 @@ function bibtexDecode(encodedStr) {
 		'\\"e;ë',
 	];
 	const specialChars = [
-		"{\ldots};…",
+		"{\\ldots};…",
 		"\\&;&",
 		'``;"',
 		',,;"',
@@ -145,9 +150,9 @@ function bibtexDecode(encodedStr) {
 }
 
 /**
-* @param {string} rawBibtexStr
-* @return {BibtexEntry[]}
-*/
+ * @param {string} rawBibtexStr
+ * @return {BibtexEntry[]}
+ */
 function bibtexParse(rawBibtexStr) {
 	const bibtexEntryDelimiter = /^@/m; // regex to avoid an "@" in a property value to break parsing
 	const bibtexPropertyDelimiter = /,(?=\s*[\w-]+\s*=)/; // last comma of a field, see: https://regex101.com/r/1dvpfC/1
@@ -171,7 +176,7 @@ function bibtexParse(rawBibtexStr) {
 	const bibtexEntryArray = bibtexDecode(rawBibtexStr)
 		.replace(bibtexCommentRegex, "") // remove comments
 		.split(bibtexEntryDelimiter)
-		.slice(1) // first element is BibTeX metadata
+		.slice(1) // first element is other stuff before first entry
 		.map((bibEntry) => {
 			const lines = bibEntry.split(bibtexPropertyDelimiter);
 			const entry = new BibtexEntry();
@@ -227,6 +232,7 @@ function bibtexParse(rawBibtexStr) {
 	return bibtexEntryArray;
 }
 
+
 //──────────────────────────────────────────────────────────────────────────────
 
 /** @type {AlfredRun} */
@@ -247,16 +253,14 @@ function run() {
 
 	const libraryPath = $.getenv("bibtex_library_path");
 	const secondaryLibraryPath = $.getenv("secondary_library_path");
+
 	const litNoteFolder = $.getenv("literature_note_folder");
 	const pdfFolder = $.getenv("pdf_folder");
-	let litNoteFolderCorrect = false;
-	if (litNoteFolder) litNoteFolderCorrect = Application("Finder").exists(Path(litNoteFolder));
-	let pdfFolderCorrect = false;
-	if (pdfFolder) pdfFolderCorrect = Application("Finder").exists(Path(pdfFolder));
+	const litNoteFolderCorrect = fileExists(litNoteFolder);
+	const pdfFolderCorrect = fileExists(pdfFolder);
 
 	//──────────────────────────────────────────────────────────────────────────────
 
-	const logStartTime = new Date();
 	let litNoteArray = [];
 	let pdfArray = [];
 
@@ -269,7 +273,6 @@ function run() {
 					.replace(/.*\/(.*)\.md/, "$1") // only basename w/o ext
 					.replace(/(_[^_]*$)/, ""); // INFO part before underscore, this method does not work for citkeys which contain an underscore though...
 			});
-		console.log("Literature Note Reading successful.");
 	}
 
 	if (pdfFolderCorrect) {
@@ -281,129 +284,133 @@ function run() {
 					.replace(/.*\/(.*)\.pdf/, "$1") // only basename w/o ext
 					.replace(/(_[^_]*$)/, ""); // INFO part before underscore, this method does not work for citkeys which contain an underscore though...
 			});
-		console.log("PDF Folder reading successful.");
 	}
 
 	//──────────────────────────────────────────────────────────────────────────────
 
-	const rawBibtex = readFile(libraryPath);
-	const secondBibtex = secondaryLibraryPath ? readFile(secondaryLibraryPath) : "";
-	console.log("Bibtex Library Reading successful.");
+	/** @param {BibtexEntry} entry */
+	function convertToAlfredItems(entry) {
+		const emojis = [];
+		// biome-ignore format: too long
+		const { title, url, citekey, keywords, icon, journal, volume, issue, booktitle, author, editor, year, abstract, primaryNamesEtAlString, primaryNames } = entry;
 
-	const entryArray = bibtexParse(rawBibtex + secondBibtex)
+		// Shorten Title (for display in Alfred)
+		let shorterTitle = title;
+		if (title.length > alfredBarLength) shorterTitle = title.slice(0, alfredBarLength).trim() + "…";
+
+		// URL
+		let urlSubtitle = "⛔ There is no URL or DOI.";
+		if (url) {
+			emojis.push(urlEmoji);
+			urlSubtitle = "⌃: Open URL – " + url;
+		}
+
+		// Literature Notes
+		let litNotePath = "";
+		const litNoteMatcher = [];
+		const hasLitNote = litNoteFolderCorrect && litNoteArray.includes(citekey);
+		if (hasLitNote) {
+			emojis.push(litNoteEmoji);
+			litNotePath = litNoteFolder + "/" + citekey + ".md";
+			litNoteMatcher.push(litNoteFilterStr);
+		}
+		// PDFs
+		const hasPdf = pdfFolderCorrect && pdfArray.includes(citekey);
+		const pdfMatcher = [];
+		if (hasPdf) {
+			emojis.push(pdfEmoji);
+			pdfMatcher.push(pdfFilterStr);
+		}
+
+		// Emojis for Abstracts and Keywords (tags)
+		if (abstract) emojis.push(abstractEmoji);
+		if (keywords.length) emojis.push(tagEmoji + " " + keywords.length.toString());
+
+		// Icon selection
+		const iconPath = `icons/${icon}.png`;
+
+		// Journal/Book Title
+		let collectionSubtitle = "";
+		if (icon === "article" && journal) {
+			collectionSubtitle += "    In: " + journal;
+			if (volume) collectionSubtitle += " " + volume;
+			if (issue) collectionSubtitle += "(" + issue + ")";
+		}
+		if ((icon === "incollection" || icon === "inbook") && booktitle)
+			collectionSubtitle += "    In: " + booktitle;
+
+		// display editor and add "Ed." when no authors
+		let namesToDisplay = primaryNamesEtAlString + " ";
+		if (!author.length && editor.length) {
+			if (editor.length > 1) namesToDisplay += "(Eds.) ";
+			else namesToDisplay += "(Ed.) ";
+		}
+
+		// Matching behavior
+		let keywordMatches = [];
+		if (keywords.length) keywordMatches = keywords.map((/** @type {string} */ tag) => "#" + tag);
+		let authorMatches = [...author, ...editor];
+		if (!matchAuthorsInEtAl) authorMatches = [...author.slice(0, 1), ...editor.slice(0, 1)]; // only match first two names
+		const yearMatches = [];
+		if (matchShortYears) yearMatches.push(year.slice(-2));
+		if (matchFullYears) yearMatches.push(year);
+
+		const alfredMatcher = [
+			"@" + citekey,
+			...keywordMatches,
+			title,
+			...authorMatches,
+			...yearMatches,
+			booktitle,
+			journal,
+			...litNoteMatcher,
+			...pdfMatcher,
+		]
+			.map((item) => item.replaceAll("-", " ") + " " + item) // match item with and without dash
+			.join(" ");
+
+		// Alfred: Large Type
+		let largeTypeInfo = `${title} \n(citekey: ${citekey})`;
+		if (abstract) largeTypeInfo += "\n\n" + abstract;
+		if (keywords.length) largeTypeInfo += "\n\nkeywords: " + keywords.join(", ");
+
+		// // Indicate 2nd library (this set via .map thisAry)
+		const secondLibraryIcon = this.second ? "2️⃣ " : "";
+
+		return {
+			title: secondLibraryIcon + shorterTitle,
+			autocomplete: primaryNames[0],
+			subtitle: namesToDisplay + year + collectionSubtitle + "   " + emojis.join(" "),
+			match: alfredMatcher,
+			arg: citekey,
+			icon: { path: iconPath },
+			uid: citekey,
+			text: {
+				copy: url,
+				largetype: largeTypeInfo,
+			},
+			quicklookurl: litNotePath,
+			mods: {
+				ctrl: {
+					valid: url !== "",
+					arg: url,
+					subtitle: urlSubtitle,
+				},
+			},
+		};
+	}
+
+	//───────────────────────────────────────────────────────────────────────────
+
+	const firstBibtex = readFile(libraryPath);
+	const firstBibtexEntryArray = bibtexParse(firstBibtex)
 		.reverse() // reverse, so recent entries come first
-		.map((entry) => {
-			const emojis = [];
-			// biome-ignore format: too long
-			const { title, url, citekey, keywords, icon, journal, volume, issue, booktitle, author, editor, year, abstract, primaryNamesEtAlString, primaryNames } = entry;
+		.map(convertToAlfredItems, { second: false });
 
-			// Shorten Title (for display in Alfred)
-			let shorterTitle = title;
-			if (title.length > alfredBarLength) shorterTitle = title.slice(0, alfredBarLength).trim() + "…";
+	const secondBibtex = fileExists(secondaryLibraryPath) ? readFile(secondaryLibraryPath) : "";
+	const secondBibtexEntryArray = bibtexParse(secondBibtex)
+		.reverse() // reverse, so recent entries come first
+		.map(convertToAlfredItems, { second: true });
 
-			// URL
-			let urlSubtitle = "⛔ There is no URL or DOI.";
-			if (url) {
-				emojis.push(urlEmoji);
-				urlSubtitle = "⌃: Open URL – " + url;
-			}
-
-			// Literature Notes
-			let litNotePath = "";
-			const litNoteMatcher = [];
-			const hasLitNote = litNoteFolderCorrect && litNoteArray.includes(citekey);
-			if (hasLitNote) {
-				emojis.push(litNoteEmoji);
-				litNotePath = litNoteFolder + "/" + citekey + ".md";
-				litNoteMatcher.push(litNoteFilterStr);
-			}
-			// PDFs
-			const hasPdf = pdfFolderCorrect && pdfArray.includes(citekey);
-			const pdfMatcher = [];
-			if (hasPdf) {
-				emojis.push(pdfEmoji);
-				pdfMatcher.push(pdfFilterStr);
-			}
-
-			// Emojis for Abstracts and Keywords (tags)
-			if (abstract) emojis.push(abstractEmoji);
-			if (keywords.length) emojis.push(tagEmoji + " " + keywords.length.toString());
-
-			// Icon selection
-			const iconPath = `icons/${icon}.png`;
-
-			// Journal/Book Title
-			let collectionSubtitle = "";
-			if (icon === "article" && journal) {
-				collectionSubtitle += "    In: " + journal;
-				if (volume) collectionSubtitle += " " + volume;
-				if (issue) collectionSubtitle += "(" + issue + ")";
-			}
-			if ((icon === "incollection" || icon === "inbook") && booktitle)
-				collectionSubtitle += "    In: " + booktitle;
-
-			// display editor and add "Ed." when no authors
-			let namesToDisplay = primaryNamesEtAlString + " ";
-			if (!author.length && editor.length) {
-				if (editor.length > 1) namesToDisplay += "(Eds.) ";
-				else namesToDisplay += "(Ed.) ";
-			}
-
-			// Matching behavior
-			let keywordMatches = [];
-			if (keywords.length) keywordMatches = keywords.map((/** @type {string} */ tag) => "#" + tag);
-			let authorMatches = [...author, ...editor];
-			if (!matchAuthorsInEtAl) authorMatches = [...author.slice(0, 1), ...editor.slice(0, 1)]; // only match first two names
-			const yearMatches = [];
-			if (matchShortYears) yearMatches.push(year.slice(-2));
-			if (matchFullYears) yearMatches.push(year);
-
-			const alfredMatcher = [
-				"@" + citekey,
-				...keywordMatches,
-				title,
-				...authorMatches,
-				...yearMatches,
-				booktitle,
-				journal,
-				...litNoteMatcher,
-				...pdfMatcher,
-			]
-				.map((item) => item.replaceAll("-", " ") + " " + item) // match item with and without dash
-				.join(" ");
-
-			// Alfred: Large Type
-			let largeTypeInfo = `${title} \n(citekey: ${citekey})`;
-			if (abstract) largeTypeInfo += "\n\n" + abstract;
-			if (keywords.length) largeTypeInfo += "\n\nkeywords: " + keywords.join(", ");
-
-			return {
-				title: shorterTitle,
-				autocomplete: primaryNames[0],
-				subtitle: namesToDisplay + year + collectionSubtitle + "   " + emojis.join(" "),
-				match: alfredMatcher,
-				arg: citekey,
-				icon: { path: iconPath },
-				uid: citekey,
-				text: {
-					copy: url,
-					largetype: largeTypeInfo,
-				},
-				quicklookurl: litNotePath,
-				mods: {
-					ctrl: {
-						valid: url !== "",
-						arg: url,
-						subtitle: urlSubtitle,
-					},
-				},
-			};
-		});
-
-	//──────────────────────────────────────────────────────────────────────────────
-
-	const logEndTime = new Date();
-	console.log("Buffer Writing Duration: " + (+logEndTime - +logStartTime).toString() + "ms");
-
-	return JSON.stringify({ items: entryArray }); 
+	return JSON.stringify({ items: [...firstBibtexEntryArray, ...secondBibtexEntryArray] });
 }

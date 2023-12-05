@@ -1,23 +1,14 @@
 #!/bin/zsh
 # shellcheck disable=2154
 
-# Workflow Config Vars
-LIBRARY="$bibtex_library_path"
-LIT_NOTES_FOLDER="$literature_note_folder"
-PDF_FOLDER="$pdf_folder"
-LIBRARY_SECOND="$secondary_library_path"
 #───────────────────────────────────────────────────────────────────────────────
 
 BUFFER="$alfred_workflow_data/buffer.json"
-PREFS="./prefs.plist"
-LAST_VERSION_FILE="$alfred_workflow_data/last_version.txt"
+last_version_file="$alfred_workflow_data/last_version.txt"
 
 # create folder and last version file, if not existing yet (e.g. first run)
 [[ -d "$alfred_workflow_data" ]] || mkdir -p "$alfred_workflow_data"
-[[ -e "$LAST_VERSION_FILE" ]] || echo "never run" >"$LAST_VERSION_FILE"
-
-LAST_RUN_VERSION=$(head -n1 "$LAST_VERSION_FILE")
-THIS_VERSION="$alfred_workflow_version"
+[[ -e "$last_version_file" ]] || echo "never run" >"$last_version_file"
 
 # reload buffer if buffer is outdated compared to
 # - library or 2nd library file
@@ -26,16 +17,16 @@ THIS_VERSION="$alfred_workflow_version"
 # - workflow preferences (potentially changing matching behavior etc)
 # - manually requested reload
 # - new workflow version (to ensure new features/bug fixes take effect)
-if [[ "$LIBRARY" -nt "$BUFFER" ]] ||
-	[[ "$LIBRARY_SECOND" -nt "$BUFFER" ]] ||
-	[[ "$LIT_NOTES_FOLDER" -nt "$BUFFER" ]] ||
-	[[ "$PDF_FOLDER" -nt "$BUFFER" ]] ||
-	[[ "$PREFS" -nt "$BUFFER" ]] ||
+if [[ "$bibtex_library_path" -nt "$BUFFER" ]] ||
+	[[ "$secondary_library_path" -nt "$BUFFER" ]] ||
+	[[ "$literature_note_folder" -nt "$BUFFER" ]] ||
+	[[ "$pdf_folder" -nt "$BUFFER" ]] ||
+	[[ "./prefs.plist" -nt "$BUFFER" ]] ||
 	[[ "$buffer_reload" == "true" ]] ||
-	[[ "$LAST_RUN_VERSION" != "$THIS_VERSION" ]] \
+	[[ "$(head -n1 "$last_version_file")" != "$alfred_workflow_version" ]] \
 	; then
 	osascript -l JavaScript "./scripts/buffer_writer.js" >"$BUFFER"
-	echo -n "$THIS_VERSION" >"$LAST_VERSION_FILE"
+	echo -n "$alfred_workflow_version" >"$last_version_file"
 fi
 
 # pass json to Alfred
