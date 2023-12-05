@@ -3,17 +3,17 @@
 ![Last Release](https://img.shields.io/github/v/release/chrisgrieser/alfred-bibtex-citation-picker?label=Latest%20Release&style=plastic)
 
 A citation picker and lightweight reference manager for
-[Alfred](https://www.alfredapp.com/). Uses a BibTeX File and supports various
-formats like [Pandoc Markdown](https://pandoc.org/MANUAL.html#citation-syntax),
+[Alfred](https://www.alfredapp.com/). Uses BibTeX File(s) and supports [Pandoc 
+Markdown](https://pandoc.org/MANUAL.html#citation-syntax),
 [Multi-Markdown](https://fletcher.github.io/MultiMarkdown-6/syntax/citation.html),
-[LaTeX](https://www.overleaf.com/learn/latex/Biblatex_citation_styles), or [Org
-Mode](https://orgmode.org/manual/Citations.html).
+[LaTeX](https://www.overleaf.com/learn/latex/Biblatex_citation_styles), [Org
+Mode](https://orgmode.org/manual/Citations.html), any various more formats.
 
 <img width="1106" alt="showcase" src="https://github.com/chrisgrieser/alfred-bibtex-citation-picker/assets/73286100/c16c0621-ca62-4f05-909b-c2acd602feb1">
 
 ## Feature Overview
 
-### Base Features
+### Core Features
 - Inserts __Pandoc Citation Syntax__ (`[@citekey]`), supporting page numbers &
   multiple citations (`[@citekey, p. 23; @citekey, p. 42]`). Can also be
   configured to use __LaTeX__, __Multi-Markdown__, __eta templates__, __Org
@@ -21,23 +21,25 @@ Mode](https://orgmode.org/manual/Citations.html).
 - __App-independent:__ Works system-wide, in every text field of every app.
 - __Smart Search:__ Search for citekeys, authors, title, publication, keywords
   (tags), include or exclude authors in *et al.*, tab-completion,
-  fuzzy-matching, sorting recently used entries to the top.
+  short queries, sorting recently used entries to the top, …
 - __Simple Installation:__ Just enter the path to your `.bib` file, and you are
   ready to go.
 - __Blazingly Fast:__ Considerably quicker than any other citation picker (~200
   ms to fully reload a library with ~4000 entries).
 
 ### Advanced Features
-- __Various Citation Actions:__ Paste single-entry bibliographies, open URLs,
+- __Citation Actions:__ Paste single-entry bibliographies, open URLs,
   open or create literature notes, attach PDFs, search for `.csl` files online,
   and more.
-- __Lightweight Reference Manager:__ Automatically rename and file PDFs, add or
-  remove entries, and more.
+- __Lightweight Reference Management:__ Automatically rename and file PDFs, add or
+  remove entries.
 - __Quickly Add New Entries:__ Select a DOI or ISBN and add them directly to
   your BibTeX library via hotkey.
+- __Support for two libraries:__ You can pick citations from two BibTeX Library
+  files at the same time.
 - __Obsidian Integration:__ When located in your [Obsidian
-  Vault](https://obsidian.md/), literature notes are automatically opened or
-  created in Obsidian instead of the default markdown app.
+  Vault](https://obsidian.md/), literature notes are automatically opened/created
+  in Obsidian instead of the default markdown app.
 
 ## Table of Contents
 
@@ -117,7 +119,7 @@ keyword.
 | n 🏷 | n Keywords                            |
 | 📓   | Literature Note                       |
 | 📕   | PDF                                   |
-| 2️⃣    | entry is from 2nd library             |
+| 2️⃣   | entry is from 2nd library             |
 
 ## Changing the Citation Format
 
@@ -158,11 +160,11 @@ You can also make a PR to [this file which defines the citation formats](https:/
 ### Bibliography Actions
 - <kbd>⇧</kbd><kbd>⏎</kbd>: Reveal the entry in Zotero, neovim, BibDesk, VS
   Code, or Sublime Text, depending on the setting in the workflow configuration.
-  (Not that this does not work for the secondary library.)
+  (Note that this does not work for the secondary library.)
 - <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⏎</kbd>: Paste the full bibliographic entry in
-  the APA 6th Style (requires [Pandoc](https://pandoc.org/installing.html)).
-- <kbd>⌘</kbd><kbd>L</kbd>: Preview the (unabridged) title, abstract, and list
-  of keywords.
+  the APA 7th Style (requires [Pandoc](https://pandoc.org/installing.html)).
+- <kbd>⌘</kbd><kbd>L</kbd>: Preview the unabridged title, abstract, and list
+  of all keywords (tags).
 - <kbd>⌘</kbd><kbd>fn</kbd><kbd>⏎</kbd>: Delete the entry from the BibTeX
   library. (⚠️ This cannot be undone.)
 
