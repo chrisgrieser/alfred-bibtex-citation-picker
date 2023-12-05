@@ -158,6 +158,7 @@ You can also make a PR to [this file which defines the citation formats](https:/
 ### Bibliography Actions
 - <kbd>⇧</kbd><kbd>⏎</kbd>: Reveal the entry in Zotero, neovim, BibDesk, VS
   Code, or Sublime Text, depending on the setting in the workflow configuration.
+  (Not that this does not work for the secondary library.)
 - <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⏎</kbd>: Paste the full bibliographic entry in
   the APA 6th Style (requires [Pandoc](https://pandoc.org/installing.html)).
 - <kbd>⌘</kbd><kbd>L</kbd>: Preview the (unabridged) title, abstract, and list

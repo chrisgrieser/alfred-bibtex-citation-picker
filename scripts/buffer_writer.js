@@ -71,9 +71,9 @@ class BibtexEntry {
 }
 
 /**
-* @param {string} encodedStr
-* @return {string} decodedStr
-*/
+ * @param {string} encodedStr
+ * @return {string} decodedStr
+ */
 function bibtexDecode(encodedStr) {
 	const germanChars = [
 		'{\\"u};ü',
@@ -232,7 +232,6 @@ function bibtexParse(rawBibtexStr) {
 	return bibtexEntryArray;
 }
 
-
 //──────────────────────────────────────────────────────────────────────────────
 
 /** @type {AlfredRun} */
@@ -250,6 +249,7 @@ function run() {
 	const matchAuthorsInEtAl = $.getenv("match_authors_in_etal") === "1";
 	const matchShortYears = $.getenv("match_year_type").includes("short");
 	const matchFullYears = $.getenv("match_year_type").includes("full");
+	const openEntriesIn = $.getenv("open_entries_in");
 
 	const libraryPath = $.getenv("bibtex_library_path");
 	const secondaryLibraryPath = $.getenv("secondary_library_path");
@@ -314,6 +314,7 @@ function run() {
 			litNotePath = litNoteFolder + "/" + citekey + ".md";
 			litNoteMatcher.push(litNoteFilterStr);
 		}
+
 		// PDFs
 		const hasPdf = pdfFolderCorrect && pdfArray.includes(citekey);
 		const pdfMatcher = [];
@@ -396,6 +397,13 @@ function run() {
 					arg: url,
 					subtitle: urlSubtitle,
 				},
+				// opening in second library not implemented yet
+				shift: {
+					valid: !this.second,
+					subtitle: !this.second
+						? `⇧: Open in ${openEntriesIn}`
+						: "⛔: Opening entries in 2nd library not yet implemented.",
+				},
 			},
 		};
 	}
@@ -409,7 +417,7 @@ function run() {
 
 	const secondBibtex = fileExists(secondaryLibraryPath) ? readFile(secondaryLibraryPath) : "";
 	const secondBibtexEntryArray = bibtexParse(secondBibtex)
-		.reverse() // reverse, so recent entries come first
+		.reverse()
 		.map(convertToAlfredItems, { second: true });
 
 	return JSON.stringify({ items: [...firstBibtexEntryArray, ...secondBibtexEntryArray] });
