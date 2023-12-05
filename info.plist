@@ -2605,8 +2605,9 @@ For all the features this workflow has to offer, refer to the [README](https://g
 
 ---
 
-## Recommended Citation
-Please cite this software project as (APA):
+## Cite This Software Project
+
+If you want to mention this software project in an academic publication, please cite it as:
 
 `Grieser, C. (2023). Supercharged Citation Picker [Computer software]. https://github.com/chrisgrieser/alfred-bibtex-citation-picker`
   
@@ -3527,7 +3528,7 @@ to set a hotkey for adding DOI/ISBN</string>
 		<string>50</string>
 	</dict>
 	<key>version</key>
-	<string>11.10.1</string>
+	<string>11.10.2</string>
 	<key>webaddress</key>
 	<string>https://github.com/chrisgrieser/alfred-bibtex-citation-picker</string>
 </dict>
