@@ -2,7 +2,7 @@
 ObjC.import("stdlib");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
-const homePath = app.pathTo("home folder");
+//──────────────────────────────────────────────────────────────────────────────
 
 /** @param {string} path */
 function readFile(path) {
@@ -11,31 +11,6 @@ function readFile(path) {
 	return ObjC.unwrap(str);
 }
 
-//──────────────────────────────────────────────────────────────────────────────
-
-const urlEmoji = "🌐";
-const litNoteEmoji = "📓";
-const tagEmoji = "🏷";
-const abstractEmoji = "📄";
-const pdfEmoji = "📕";
-const litNoteFilterStr = "*";
-const pdfFilterStr = "pdf";
-const alfredBarLength = parseInt($.getenv("alfred_bar_length"));
-
-const matchAuthorsInEtAl = $.getenv("match_authors_in_etal") === "1";
-const matchShortYears = $.getenv("match_year_type").includes("short");
-const matchFullYears = $.getenv("match_year_type").includes("full");
-
-const libraryPath = $.getenv("bibtex_library_path").replace(/^~/, homePath);
-const litNoteFolder = $.getenv("literature_note_folder").replace(/^~/, homePath);
-const pdfFolder = $.getenv("pdf_folder").replace(/^~/, homePath);
-let litNoteFolderCorrect = false;
-if (litNoteFolder) litNoteFolderCorrect = Application("Finder").exists(Path(litNoteFolder));
-let pdfFolderCorrect = false;
-if (pdfFolder) pdfFolderCorrect = Application("Finder").exists(Path(pdfFolder));
-
-//──────────────────────────────────────────────────────────────────────────────
-// BIBTEX PARSING
 class BibtexEntry {
 	constructor() {
 		this.author = []; // last names only
@@ -59,8 +34,8 @@ class BibtexEntry {
 		return this.editor; // if both are empty, will also return empty array
 	}
 	/** turn Array of names into into one string to display
-	 * @param {string[]} names
-	 */
+	* @param {string[]} names
+	*/
 	etAlStringify(names) {
 		switch (names.length) {
 			case 0:
@@ -88,77 +63,77 @@ class BibtexEntry {
 	}
 }
 
-const germanChars = [
-	'{\\"u};ü',
-	'{\\"a};ä',
-	'{\\"o};ö',
-	'{\\"U};Ü',
-	'{\\"A};Ä',
-	'{\\"O};Ö',
-	'\\"u;ü',
-	'\\"a;ä',
-	'\\"o;ö',
-	'\\"U;Ü',
-	'\\"A;Ä',
-	'\\"O;Ö',
-	"\\ss;ß",
-	"{\\ss};ß",
-
-	// Bookends
-	"\\''A;Ä",
-	"\\''O;Ö",
-	"\\''U;Ü",
-	"\\''a;ä",
-	"\\''o;ö",
-	"\\''u;ü",
-
-	// bibtex-tidy
-	'\\"{O};Ö',
-	'\\"{o};ö',
-	'\\"{A};Ä',
-	'\\"{a};ä',
-	'\\"{u};ü',
-	'\\"{U};Ü',
-];
-const frenchChars = [
-	"{\\'a};á",
-	"{\\'o};ó",
-	"{\\'e};é",
-	"{\\`{e}};é",
-	"{\\`e};é",
-	"\\'E;É",
-	"\\c{c};ç",
-	'\\"{i};ï',
-];
-const otherChars = [
-	"{\\~n};ñ",
-	"\\~a;ã",
-	"{\\v c};č",
-	"\\o{};ø",
-	"{\\o};ø",
-	"{\\O};Ø",
-	"\\^{i};î",
-	"\\'\\i;í",
-	"{\\'c};ć",
-	'\\"e;ë',
-];
-const specialChars = [
-	"\\&;&",
-	'``;"',
-	',,;"',
-	"`;'",
-	"\\textendash{};—",
-	"---;—",
-	"--;—",
-	"{	extquotesingle};'",
-];
-const decodePair = [...germanChars, ...frenchChars, ...otherChars, ...specialChars];
-
 /**
- * @param {string} encodedStr
- * @return {string} decodedStr
- */
+* @param {string} encodedStr
+* @return {string} decodedStr
+*/
 function bibtexDecode(encodedStr) {
+	const germanChars = [
+		'{\\"u};ü',
+		'{\\"a};ä',
+		'{\\"o};ö',
+		'{\\"U};Ü',
+		'{\\"A};Ä',
+		'{\\"O};Ö',
+		'\\"u;ü',
+		'\\"a;ä',
+		'\\"o;ö',
+		'\\"U;Ü',
+		'\\"A;Ä',
+		'\\"O;Ö',
+		"\\ss;ß",
+		"{\\ss};ß",
+
+		// Bookends
+		"\\''A;Ä",
+		"\\''O;Ö",
+		"\\''U;Ü",
+		"\\''a;ä",
+		"\\''o;ö",
+		"\\''u;ü",
+
+		// bibtex-tidy
+		'\\"{O};Ö',
+		'\\"{o};ö',
+		'\\"{A};Ä',
+		'\\"{a};ä',
+		'\\"{u};ü',
+		'\\"{U};Ü',
+	];
+	const frenchChars = [
+		"{\\'a};á",
+		"{\\'o};ó",
+		"{\\'e};é",
+		"{\\`{e}};é",
+		"{\\`e};é",
+		"\\'E;É",
+		"\\c{c};ç",
+		'\\"{i};ï',
+	];
+	const otherChars = [
+		"{\\~n};ñ",
+		"\\~a;ã",
+		"{\\v c};č",
+		"\\o{};ø",
+		"{\\o};ø",
+		"{\\O};Ø",
+		"\\^{i};î",
+		"\\'\\i;í",
+		"{\\'c};ć",
+		'\\"e;ë',
+	];
+	const specialChars = [
+		"{\ldots};…",
+		"\\&;&",
+		'``;"',
+		',,;"',
+		"`;'",
+		"\\textendash{};—",
+		"---;—",
+		"--;—",
+		"{	extquotesingle};'",
+	];
+	const decodePair = [...germanChars, ...frenchChars, ...otherChars, ...specialChars];
 	let decodedStr = encodedStr;
 	for (const pair of decodePair) {
 		const half = pair.split(";");
@@ -168,9 +143,9 @@ function bibtexDecode(encodedStr) {
 }
 
 /**
- * @param {string} rawBibtexStr
- * @return {BibtexEntry[]}
- */
+* @param {string} rawBibtexStr
+* @return {BibtexEntry[]}
+*/
 function bibtexParse(rawBibtexStr) {
 	const bibtexEntryDelimiter = /^@/m; // regex to avoid an "@" in a property value to break parsing
 	const bibtexPropertyDelimiter = /,(?=\s*[\w-]+\s*=)/; // last comma of a field, see: https://regex101.com/r/1dvpfC/1
@@ -200,7 +175,7 @@ function bibtexParse(rawBibtexStr) {
 			const entry = new BibtexEntry();
 
 			// parse first line (separate since different formatting)
-			const entryCategory = lines[0].split("{")[0].toLowerCase().trim(); 
+			const entryCategory = lines[0].split("{")[0].toLowerCase().trim();
 			entry.citekey = lines[0].split("{")[1]?.trim();
 			lines.shift();
 
@@ -210,7 +185,8 @@ function bibtexParse(rawBibtexStr) {
 			if (entryCategory === "online") entry.icon = "webpage";
 			else if (entryCategory === "report") entry.icon = "techreport";
 			else if (entryCategory === "inbook") entry.icon = "incollection";
-			else if (entryCategory === "misc" || entryCategory.includes("thesis")) entry.icon = "unpublished";
+			else if (entryCategory === "misc" || entryCategory.includes("thesis"))
+				entry.icon = "unpublished";
 			else entry.icon = entryCategory;
 
 			// parse remaining lines
@@ -239,7 +215,7 @@ function bibtexParse(rawBibtexStr) {
 					default:
 						entry[field] = value;
 				}
-			};
+			}
 
 			if (!entry.url && entry.doi) entry.url = "https://doi.org/" + entry.doi;
 
@@ -248,155 +224,182 @@ function bibtexParse(rawBibtexStr) {
 
 	return bibtexEntryArray;
 }
+
 //──────────────────────────────────────────────────────────────────────────────
 
-const logStartTime = new Date();
-let litNoteArray = [];
-let pdfArray = [];
+/** @type {AlfredRun} */
+// biome-ignore lint/correctness/noUnusedVariables: Alfred run
+function run() {
+	const urlEmoji = "🌐";
+	const litNoteEmoji = "📓";
+	const tagEmoji = "🏷";
+	const abstractEmoji = "📄";
+	const pdfEmoji = "📕";
+	const litNoteFilterStr = "*";
+	const pdfFilterStr = "pdf";
+	const alfredBarLength = parseInt($.getenv("alfred_bar_length"));
 
-if (litNoteFolderCorrect) {
-	litNoteArray = app
-		.doShellScript(`find "${litNoteFolder}" -type f -name "*.md"`)
-		.split("\r")
-		.map((/** @type {string} */ filepath) => {
-			return filepath
-				.replace(/.*\/(.*)\.md/, "$1") // only basename w/o ext
-				.replace(/(_[^_]*$)/, ""); // INFO part before underscore, this method does not work for citkeys which contain an underscore though...
+	const matchAuthorsInEtAl = $.getenv("match_authors_in_etal") === "1";
+	const matchShortYears = $.getenv("match_year_type").includes("short");
+	const matchFullYears = $.getenv("match_year_type").includes("full");
+
+	const libraryPath = $.getenv("bibtex_library_path");
+	const litNoteFolder = $.getenv("literature_note_folder");
+	const pdfFolder = $.getenv("pdf_folder");
+	let litNoteFolderCorrect = false;
+	if (litNoteFolder) litNoteFolderCorrect = Application("Finder").exists(Path(litNoteFolder));
+	let pdfFolderCorrect = false;
+	if (pdfFolder) pdfFolderCorrect = Application("Finder").exists(Path(pdfFolder));
+
+	//──────────────────────────────────────────────────────────────────────────────
+
+	const logStartTime = new Date();
+	let litNoteArray = [];
+	let pdfArray = [];
+
+	if (litNoteFolderCorrect) {
+		litNoteArray = app
+			.doShellScript(`find "${litNoteFolder}" -type f -name "*.md"`)
+			.split("\r")
+			.map((/** @type {string} */ filepath) => {
+				return filepath
+					.replace(/.*\/(.*)\.md/, "$1") // only basename w/o ext
+					.replace(/(_[^_]*$)/, ""); // INFO part before underscore, this method does not work for citkeys which contain an underscore though...
+			});
+		console.log("Literature Note Reading successful.");
+	}
+
+	if (pdfFolderCorrect) {
+		pdfArray = app
+			.doShellScript(`find "${pdfFolder}" -type f -name "*.pdf"`)
+			.split("\r")
+			.map((/** @type {string} */ filepath) => {
+				return filepath
+					.replace(/.*\/(.*)\.pdf/, "$1") // only basename w/o ext
+					.replace(/(_[^_]*$)/, ""); // INFO part before underscore, this method does not work for citkeys which contain an underscore though...
+			});
+		console.log("PDF Folder reading successful.");
+	}
+
+	//──────────────────────────────────────────────────────────────────────────────
+
+	const rawBibtex = readFile(libraryPath);
+	console.log("Bibtex Library Reading successful.");
+
+	const entryArray = bibtexParse(rawBibtex)
+		.reverse() // reverse, so recent entries come first
+		.map((entry) => {
+			const emojis = [];
+			// biome-ignore format: too long
+			const { title, url, citekey, keywords, icon, journal, volume, issue, booktitle, author, editor, year, abstract, primaryNamesEtAlString, primaryNames } = entry;
+
+			// Shorten Title (for display in Alfred)
+			let shorterTitle = title;
+			if (title.length > alfredBarLength) shorterTitle = title.slice(0, alfredBarLength).trim() + "…";
+
+			// URL
+			let urlSubtitle = "⛔� There is no URL or DOI.";
+			if (url) {
+				emojis.push(urlEmoji);
+				urlSubtitle = "⌃: Open URL – " + url;
+			}
+
+			// Literature Notes
+			let litNotePath = "";
+			const litNoteMatcher = [];
+			const hasLitNote = litNoteFolderCorrect && litNoteArray.includes(citekey);
+			if (hasLitNote) {
+				emojis.push(litNoteEmoji);
+				litNotePath = litNoteFolder + "/" + citekey + ".md";
+				litNoteMatcher.push(litNoteFilterStr);
+			}
+			// PDFs
+			const hasPdf = pdfFolderCorrect && pdfArray.includes(citekey);
+			const pdfMatcher = [];
+			if (hasPdf) {
+				emojis.push(pdfEmoji);
+				pdfMatcher.push(pdfFilterStr);
+			}
+
+			// Emojis for Abstracts and Keywords (tags)
+			if (abstract) emojis.push(abstractEmoji);
+			if (keywords.length) emojis.push(tagEmoji + " " + keywords.length.toString());
+
+			// Icon selection
+			const iconPath = `icons/${icon}.png`;
+
+			// Journal/Book Title
+			let collectionSubtitle = "";
+			if (icon === "article" && journal) {
+				collectionSubtitle += "    In: " + journal;
+				if (volume) collectionSubtitle += " " + volume;
+				if (issue) collectionSubtitle += "(" + issue + ")";
+			}
+			if ((icon === "incollection" || icon === "inbook") && booktitle)
+				collectionSubtitle += "    In: " + booktitle;
+
+			// display editor and add "Ed." when no authors
+			let namesToDisplay = primaryNamesEtAlString + " ";
+			if (!author.length && editor.length) {
+				if (editor.length > 1) namesToDisplay += "(Eds.) ";
+				else namesToDisplay += "(Ed.) ";
+			}
+
+			// Matching behavior
+			let keywordMatches = [];
+			if (keywords.length) keywordMatches = keywords.map((/** @type {string} */ tag) => "#" + tag);
+			let authorMatches = [...author, ...editor];
+			if (!matchAuthorsInEtAl) authorMatches = [...author.slice(0, 1), ...editor.slice(0, 1)]; // only match first two names
+			const yearMatches = [];
+			if (matchShortYears) yearMatches.push(year.slice(-2));
+			if (matchFullYears) yearMatches.push(year);
+
+			const alfredMatcher = [
+				"@" + citekey,
+				...keywordMatches,
+				title,
+				...authorMatches,
+				...yearMatches,
+				booktitle,
+				journal,
+				...litNoteMatcher,
+				...pdfMatcher,
+			]
+				.map((item) => item.replaceAll("-", " ") + " " + item) // match item with and without dash
+				.join(" ");
+
+			// Alfred: Large Type
+			let largeTypeInfo = `${title} \n(citekey: ${citekey})`;
+			if (abstract) largeTypeInfo += "\n\n" + abstract;
+			if (keywords.length) largeTypeInfo += "\n\nkeywords: " + keywords.join(", ");
+
+			return {
+				title: shorterTitle,
+				autocomplete: primaryNames[0],
+				subtitle: namesToDisplay + year + collectionSubtitle + "   " + emojis.join(" "),
+				match: alfredMatcher,
+				arg: citekey,
+				icon: { path: iconPath },
+				uid: citekey,
+				text: {
+					copy: url,
+					largetype: largeTypeInfo,
+				},
+				quicklookurl: litNotePath,
+				mods: {
+					ctrl: {
+						valid: url !== "",
+						arg: url,
+						subtitle: urlSubtitle,
+					},
+				},
+			};
 		});
-	console.log("Literature Note Reading successful.");
+
+	//──────────────────────────────────────────────────────────────────────────────
+
+	const logEndTime = new Date();
+	console.log("Buffer Writing Duration: " + (+logEndTime - +logStartTime).toString() + "ms");
+
+	return JSON.stringify({ items: entryArray }); 
 }
-
-if (pdfFolderCorrect) {
-	pdfArray = app
-		.doShellScript(`find "${pdfFolder}" -type f -name "*.pdf"`)
-		.split("\r")
-		.map((/** @type {string} */ filepath) => {
-			return filepath
-				.replace(/.*\/(.*)\.pdf/, "$1") // only basename w/o ext
-				.replace(/(_[^_]*$)/, ""); // INFO part before underscore, this method does not work for citkeys which contain an underscore though...
-		});
-	console.log("PDF Folder reading successful.");
-}
-
-//──────────────────────────────────────────────────────────────────────────────
-
-// const rawBibtex = app.doShellScript(`cat "${libraryPath}"`);
-const rawBibtex = readFile(libraryPath);
-console.log("Bibtex Library Reading successful.");
-
-const entryArray = bibtexParse(rawBibtex)
-	.reverse() // reverse, so recent entries come first
-	.map((entry) => {
-	const emojis = [];
-	// biome-ignore format: too long
-	const { title, url, citekey, keywords, icon, journal, volume, issue, booktitle, author, editor, year, abstract, primaryNamesEtAlString, primaryNames } = entry;
-
-	// Shorten Title (for display in Alfred)
-	let shorterTitle = title;
-	if (title.length > alfredBarLength) shorterTitle = title.slice(0, alfredBarLength).trim() + "…";
-
-	// URL
-	let urlSubtitle = "⛔️ There is no URL or DOI.";
-	if (url) {
-		emojis.push(urlEmoji);
-		urlSubtitle = "⌃: Open URL – " + url;
-	}
-
-	// Literature Notes
-	let litNotePath = "";
-	const litNoteMatcher = [];
-	const hasLitNote = litNoteFolderCorrect && litNoteArray.includes(citekey);
-	if (hasLitNote) {
-		emojis.push(litNoteEmoji);
-		litNotePath = litNoteFolder + "/" + citekey + ".md";
-		litNoteMatcher.push(litNoteFilterStr);
-	}
-	// PDFs
-	const hasPdf = pdfFolderCorrect && pdfArray.includes(citekey);
-	const pdfMatcher = [];
-	if (hasPdf) {
-		emojis.push(pdfEmoji);
-		pdfMatcher.push(pdfFilterStr);
-	}
-
-	// Emojis for Abstracts and Keywords (tags)
-	if (abstract) emojis.push(abstractEmoji);
-	if (keywords.length) emojis.push(tagEmoji + " " + keywords.length.toString());
-
-	// Icon selection
-	const iconPath = `icons/${icon}.png`;
-
-	// Journal/Book Title
-	let collectionSubtitle = "";
-	if (icon === "article" && journal) {
-		collectionSubtitle += "    In: " + journal;
-		if (volume) collectionSubtitle += " " + volume;
-		if (issue) collectionSubtitle += "(" + issue + ")";
-	}
-	if ((icon === "incollection" || icon === "inbook") && booktitle)
-		collectionSubtitle += "    In: " + booktitle;
-
-	// display editor and add "Ed." when no authors
-	let namesToDisplay = primaryNamesEtAlString + " ";
-	if (!author.length && editor.length) {
-		if (editor.length > 1) namesToDisplay += "(Eds.) ";
-		else namesToDisplay += "(Ed.) ";
-	}
-
-	// Matching behavior
-	let keywordMatches = [];
-	if (keywords.length) keywordMatches = keywords.map((/** @type {string} */ tag) => "#" + tag);
-	let authorMatches = [...author, ...editor];
-	if (!matchAuthorsInEtAl) authorMatches = [...author.slice(0, 1), ...editor.slice(0, 1)]; // only match first two names
-	const yearMatches = [];
-	if (matchShortYears) yearMatches.push(year.slice(-2));
-	if (matchFullYears) yearMatches.push(year);
-
-	const alfredMatcher = [
-		"@" + citekey,
-		...keywordMatches,
-		title,
-		...authorMatches,
-		...yearMatches,
-		booktitle,
-		journal,
-		...litNoteMatcher,
-		...pdfMatcher,
-	]
-		.map((item) => item.replaceAll("-", " ") + " " + item) // match item with and without dash
-		.join(" ");
-
-	// Alfred: Large Type
-	let largeTypeInfo = `${title} \n(citekey: ${citekey})`;
-	if (abstract) largeTypeInfo += "\n\n" + abstract;
-	if (keywords.length) largeTypeInfo += "\n\nkeywords: " + keywords.join(", ");
-
-	return {
-		title: shorterTitle,
-		autocomplete: primaryNames[0],
-		subtitle: namesToDisplay + year + collectionSubtitle + "   " + emojis.join(" "),
-		match: alfredMatcher,
-		arg: citekey,
-		icon: { path: iconPath },
-		uid: citekey,
-		text: {
-			copy: url,
-			largetype: largeTypeInfo,
-		},
-		quicklookurl: litNotePath,
-		mods: {
-			ctrl: {
-				valid: url !== "",
-				arg: url,
-				subtitle: urlSubtitle,
-			},
-		},
-	};
-});
-
-//──────────────────────────────────────────────────────────────────────────────
-
-const logEndTime = new Date();
-console.log("Buffer Writing Duration: " + (+logEndTime - +logStartTime).toString() + "ms");
-
-JSON.stringify({ items: entryArray }); // JXA direct return
