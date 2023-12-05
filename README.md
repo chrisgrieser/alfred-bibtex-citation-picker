@@ -81,12 +81,15 @@ keyword.
 
 ### Search
 - You can search for the title, author/editor (last name), year, collection, or
-  journal name.,
+  journal name.
 - Prepend `@` to a word to search for a citekey, for example `@Grieser2020`.
 - Prepend `#` to search for keywords (tags), for example `#sociology`.
 - *Smart Queries*: You can search for any combination of the above. For example,
   the query `2020 #cognition grieser` searches for entries published in 2020,
   with the tag "cognition," and with "Grieser" as author/editor.
+- *Short Queries*: You do not need to fully spell out every item. `grie #cogn
+  2020` gives you the same result as above, if no other author begins with
+  `grie` and no other tag starts with `cogn`.
 
 ### Citation Actions
 - <kbd>⏎</kbd>: Paste the citekey of the selected citation.
