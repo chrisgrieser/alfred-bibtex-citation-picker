@@ -3,8 +3,7 @@
 ![Last Release](https://img.shields.io/github/v/release/chrisgrieser/alfred-bibtex-citation-picker?label=Latest%20Release&style=plastic)
 
 A citation picker and lightweight reference manager for
-[Alfred](https://www.alfredapp.com/). Uses BibTeX File(s) and supports [Pandoc 
-Markdown](https://pandoc.org/MANUAL.html#citation-syntax),
+[Alfred](https://www.alfredapp.com/). Uses BibTeX Files and supports [Pandoc Markdown](https://pandoc.org/MANUAL.html#citation-syntax),
 [Multi-Markdown](https://fletcher.github.io/MultiMarkdown-6/syntax/citation.html),
 [LaTeX](https://www.overleaf.com/learn/latex/Biblatex_citation_styles), [Org
 Mode](https://orgmode.org/manual/Citations.html), any various more formats.
@@ -213,10 +212,10 @@ You can also make a PR to [this file which defines the citation formats](https:/
 The following features require that all your PDFs are located in the folder
 specified in your workflow settings.
 - The `📕` indicates that the entry already has an associated PDF at that location.
-- <kbd>Hyper</kbd><kbd>⏎</kbd>[^2]: If the entry has an associated PDF file, open it
-  with the default PDF reader. The citekey must not contain an underscore (`_`).
-  If the PDF folder setting is left empty, tries to open a PDF file listed under
-  the `file` key in the BibTeX file.
+- <kbd>Hyper</kbd><kbd>⏎</kbd>[^2]: If the entry has an associated PDF file,
+  open it with the default PDF reader. The citekey must not contain an
+  underscore (`_`). If the PDF folder setting is left empty, tries to open a PDF
+  file listed under the `file` key in the BibTeX file.
 - Add `pdf` to any search query to filter only for entries with PDFs that have
   been added by the auto-file feature. `pdf grieser`, for example, displays only
   entries from the author "Grieser" with PDFs. Can be combined with other
