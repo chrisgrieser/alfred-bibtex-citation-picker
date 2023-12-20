@@ -108,26 +108,26 @@ function bibtexDecode(encodedStr) {
 		'\\"{U};Ü',
 	];
 	const frenchChars = [
-		"{\\'a};á",
+		"{\\'a};a",
 		"{\\'o};ó",
-		"{\\'e};é",
-		"{\\`{e}};é",
-		"{\\`e};é",
+		"{\\'e};e",
+		"{\\`{e}};e",
+		"{\\`e};e",
 		"\\'E;É",
-		"\\c{c};ç",
-		'\\"{i};ï',
+		"\\c{c};c",
+		'\\"{i};i',
 	];
 	const otherChars = [
-		"{\\~n};ñ",
+		"{\\~n};n",
 		"\\~a;ã",
-		"{\\v c};č",
+		"{\\v c};c",
 		"\\o{};ø",
 		"{\\o};ø",
 		"{\\O};Ø",
-		"\\^{i};î",
+		"\\^{i};i",
 		"\\'\\i;í",
-		"{\\'c};ć",
-		'\\"e;ë',
+		"{\\'c};c",
+		'\\"e;e',
 	];
 	const specialChars = [
 		"{\\ldots};…",
@@ -242,10 +242,12 @@ function run() {
 	const tagEmoji = "🏷";
 	const abstractEmoji = "📄";
 	const pdfEmoji = "📕";
-	const secondLibraryIcon = "2️⃣ ";
+	const secondLibraryIcon = "2️⃣ "; // WARN formatting sometimes breaks this icon
 	const litNoteFilterStr = "*";
 	const pdfFilterStr = "pdf";
-	const alfredBarLength = parseInt($.getenv("alfred_bar_length"));
+	const alfredBarWidth = parseInt(
+		$.NSProcessInfo.processInfo.environment.objectForKey("alfred_bar_width").js || 60,
+	);
 
 	const matchAuthorsInEtAl = $.getenv("match_authors_in_etal") === "1";
 	const matchShortYears = $.getenv("match_year_type").includes("short");
@@ -297,7 +299,7 @@ function run() {
 
 		// Shorten Title (for display in Alfred)
 		let shorterTitle = title;
-		if (title.length > alfredBarLength) shorterTitle = title.slice(0, alfredBarLength).trim() + "…";
+		if (title.length > alfredBarWidth) shorterTitle = title.slice(0, alfredBarWidth).trim() + "…";
 
 		// URL
 		let urlSubtitle = "⛔ There is no URL or DOI.";
@@ -408,7 +410,7 @@ function run() {
 				"fn+cmd": {
 					valid: this.isFirstLibrary,
 					subtitle: this.isFirstLibrary
-						? "⌘+fn: Delete entry from BibTeX file. (⚠️ Experimental & irreversible)"
+						? "⌘+fn: Delete entry from BibTeX file. (! Experimental & irreversible)"
 						: "⛔: Deleting entries in 2nd library not yet implemented.",
 				},
 			},
