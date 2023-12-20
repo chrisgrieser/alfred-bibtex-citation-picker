@@ -1,20 +1,22 @@
 #!/bin/zsh
+# shellcheck disable=SC2154
 
+# GUARD
 if ! command -v pandoc &>/dev/null; then
 	echo -n "You need to install pandoc for this feature."
-	return 0
+	return 1
 fi
 
-CSL="./assets/apa-7th.csl"
-CITEKEY="$*"
-# shellcheck disable=SC2154
-LIBRARY="$bibtex_library_path"
-DUMMYDOC="---
-nocite: '@$CITEKEY'
+citekey="$*"
+csl=$([[ -f "$csl_for_pandoc" ]] && echo "$csl_for_pandoc" || echo "./assets/apa-7th.csl")
+library="$bibtex_library_path"
+
+dummydoc="---
+nocite: '@$citekey'
 ---"
 
-reference=$(echo -n "$DUMMYDOC" |
+reference=$(echo -n "$dummydoc" |
 	pandoc --citeproc --read=markdown --write=plain --wrap=none \
-	--csl="$CSL" --bibliography="$LIBRARY")
+	--csl="$csl" --bibliography="$library")
 
 echo -n "$reference"
