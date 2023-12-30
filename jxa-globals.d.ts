@@ -1,1 +1,0 @@
-../../../+ linter-configs/jxa/jxa-globals.d.ts

@@ -1,4 +1,5 @@
 .rsync-exclude
+.editorconfig
 .gitignore
 .git/
 .github/
@@ -10,3 +11,8 @@ Makefile
 .build-and-release.sh
 CITATION.bib
 CITATION.cff
+
+# symlinks
+alfred.d.ts
+jsconfig.json
+jxa-globals.d.ts
