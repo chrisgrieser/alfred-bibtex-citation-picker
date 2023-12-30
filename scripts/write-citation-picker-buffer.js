@@ -242,7 +242,7 @@ function run() {
 	const tagEmoji = "🏷";
 	const abstractEmoji = "📄";
 	const pdfEmoji = "📕";
-	const secondLibraryIcon = "2️⃣ "; // WARN formatting sometimes breaks this icon
+	const secondLibraryIcon = "2️⃣ ";
 	const litNoteFilterStr = "*";
 	const pdfFilterStr = "pdf";
 	const alfredBarWidth = parseInt(

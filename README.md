@@ -118,7 +118,7 @@ keyword.
 | n 🏷 | n Keywords                            |
 | 📓   | Literature Note                       |
 | 📕   | PDF                                   |
-| 2️⃣   | entry is from 2nd library             |
+| 2️⃣    | entry is from 2nd library             |
 
 ## Changing the Citation Format
 
@@ -174,17 +174,6 @@ You can also make a PR to [this file which defines the citation formats](https:/
   or [Hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/): Uses
   the selected __DOI__, __ISBN__, or __URL containing a DOI__ to add a new entry
   to the library.
-  * A second [Universal
-	Action](https://www.alfredapp.com/help/features/universal-actions/) can be
-	used to parse & add a bibliographic entry. Requires
-	[anystyle](https://github.com/inukshuk/anystyle).
-  * The new entry is added to your library, with a correctly formatted and
-	unique citekey. Afterward, the entry is opened.
-- [File Action](https://www.alfredapp.com/help/features/universal-actions/): Use
-  the `Add Entry and Auto-file` action on a PDF file that includes a DOI. The
-  DOI is automatically retrieved from the PDF, the entry added to the library,
-  and the PDF auto-filed (see [PDF Management
-  Actions](#pdf-management-actions)). Requires [pdfgrep](https://pdfgrep.org/).
 
 > [!NOTE]
 > Adding or removing entries does __not__ work with the [BetterBibTeX Zotero
@@ -199,7 +188,7 @@ You can also make a PR to [this file which defines the citation formats](https:/
   `{citekey}_{title}.md`. The citekey itself must not contain underscores, and
   the filename must not include the `@`.
 - Entries that have such a literature note is indicated by a `📓`.
-- <kbd>⌃</kbd><kbd>⌥</kdb><kbd>⏎</kbd>: Open the literature note.
+- <kbd>⌃</kbd><kbd>⌥</kbd><kbd>⏎</kbd>: Open the literature note.
   * If the file is in your [Obsidian Vault](https://obsidian.md/), it is opened
 	directly in Obsidian instead of the default text editor.
   * If there is no literature note, a new one is created.

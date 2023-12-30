@@ -24,16 +24,6 @@ function readFile(path) {
 	return ObjC.unwrap(str);
 }
 
-/**
- * @param {string} filepath
- * @param {string} text
- */
-function writeToFile(filepath, text) {
-	app.doShellScript(`mkdir -p "$(dirname "${filepath}")"`);
-	const str = $.NSString.alloc.initWithUTF8String(text);
-	str.writeToFileAtomicallyEncodingError(filepath, true, $.NSUTF8StringEncoding, null);
-}
-
 //──────────────────────────────────────────────────────────────────────────────
 
 /**
@@ -98,9 +88,8 @@ function inputToEntryJson(input) {
 	const isbnRegex = /^[\d-]{9,}$/;
 	const isDOI = doiRegex.test(input);
 	const isISBN = isbnRegex.test(input);
-	const mode = $.getenv("mode");
 
-	if (!(isDOI || isISBN || mode === "parse")) return { error: "input invalid" };
+	if (!isDOI && !isISBN) return { error: "input invalid" };
 
 	// DOI
 	// https://citation.crosscite.org/docs.html
@@ -195,35 +184,6 @@ function inputToEntryJson(input) {
 		}
 	}
 
-	// anystyle
-	else if (mode === "parse") {
-		// validate installation
-		const anystyleInstalled = app.doShellScript("command -v anystyle || true") !== "";
-		if (!anystyleInstalled) return { error: "anystyle not found" };
-
-		// INFO anystyle can't read STDIN, so this has to be written to a file
-		// https://github.com/inukshuk/anystyle-cli#anystyle-help-parse
-		const tempPath = $.getenv("alfred_workflow_cache") + "/temp.txt";
-		writeToFile($.getenv("raw_entry"), tempPath);
-		const response = app.doShellScript(`anystyle --stdout --format=csl parse "${tempPath}"`);
-
-		const data = JSON.parse(response)[0];
-		entry.title = data.title;
-		entry.type = data.type.replace(/-?journal-?/, ""); // "journal-article" -> "article"
-		entry.author = (data.authors || data.author || [])
-			.map((/** @type {{ given: any; family: any; }} */ author) => `${author.given} ${author.family}`)
-			.join(" and ");
-		entry.year = parseInt(data.issued);
-		if (entry.type === "article") {
-			entry.journal = data["container-title"];
-			entry.number = data.issue;
-			entry.volume = data.volume;
-			entry.pages = data.page;
-		} else if (entry.type === "incollection") {
-			entry.booktitle = data["container-title"];
-		}
-	}
-
 	return entry;
 }
 
@@ -270,7 +230,8 @@ function run(argv) {
 	if (entry.error) return entry.error;
 
 	// cleanup
-	if (entry.publisher) entry.publisher = entry.publisher.replace(/gmbh|ltd|publications?|llc/i, "").trim();
+	if (entry.publisher)
+		entry.publisher = entry.publisher.replace(/gmbh|ltd|publications?|llc/i, "").trim();
 	if (entry.pages) entry.pages = entry.pages.replace(/(\d+)[^\d]+?(\d+)/, "$1--$2"); // double-dash
 
 	// citekey
