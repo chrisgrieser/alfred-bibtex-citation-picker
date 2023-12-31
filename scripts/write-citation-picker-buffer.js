@@ -410,7 +410,7 @@ function run() {
 				"fn+cmd": {
 					valid: this.isFirstLibrary,
 					subtitle: this.isFirstLibrary
-						? "⌘+fn: Delete entry from BibTeX file. (! Experimental & irreversible)"
+						? "⌘+fn: Delete entry from BibTeX file (⚠️ irreversible)."
 						: "⛔: Deleting entries in 2nd library not yet implemented.",
 				},
 			},
