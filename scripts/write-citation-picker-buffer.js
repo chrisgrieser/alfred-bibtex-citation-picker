@@ -245,7 +245,7 @@ function run() {
 	const secondLibraryIcon = "2️⃣ ";
 	const litNoteFilterStr = "*";
 	const pdfFilterStr = "pdf";
-	const alfredBarWidth = parseInt(
+	const alfredBarWidth = Number.parseInt(
 		$.NSProcessInfo.processInfo.environment.objectForKey("alfred_bar_width").js || 60,
 	);
 
