@@ -2756,6 +2756,27 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>config</key>
 			<dict>
 				<key>default</key>
+				<string></string>
+				<key>filtermode</key>
+				<integer>2</integer>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+			</dict>
+			<key>description</key>
+			<string>Custom .csl file for the single-bibliography-pasting. (If empty, defaults to APA-7th.)</string>
+			<key>label</key>
+			<string>Custom .csl</string>
+			<key>type</key>
+			<string>filepicker</string>
+			<key>variable</key>
+			<string>csl_for_pandoc</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
 				<false/>
 				<key>required</key>
 				<false/>
@@ -2791,27 +2812,6 @@ to set a hotkey for adding DOI/ISBN</string>
 			<string>textfield</string>
 			<key>variable</key>
 			<string>alfred_bar_width</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>default</key>
-				<string></string>
-				<key>filtermode</key>
-				<integer>2</integer>
-				<key>placeholder</key>
-				<string></string>
-				<key>required</key>
-				<false/>
-			</dict>
-			<key>description</key>
-			<string>Custom .csl file for to use for the single-bibliography-pasting feature. (By default, or if this setting is left empty, uses the built-in "APA-7th" style.)</string>
-			<key>label</key>
-			<string>Custom .csl</string>
-			<key>type</key>
-			<string>filepicker</string>
-			<key>variable</key>
-			<string>csl_for_pandoc</string>
 		</dict>
 	</array>
 	<key>variables</key>

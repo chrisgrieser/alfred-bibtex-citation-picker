@@ -1,17 +1,11 @@
 #!/usr/bin/env osascript -l JavaScript
 
-//──────────────────────────────────────────────────────────────────────────────
-
 // JXA & Alfred specific
 ObjC.import("stdlib");
-ObjC.import("Foundation");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
 
-/**
- * @param {string} text
- * @param {string} absPath
- */
+/** @param {string} text @param {string} absPath */
 function appendToFile(text, absPath) {
 	const clean = text.replaceAll("'", "`"); // ' in text string breaks echo writing method
 	app.doShellScript(`echo '${clean}' >> '${absPath}'`); // use single quotes to prevent running of input such as "$(rm -rf /)"
@@ -211,12 +205,12 @@ function json2bibtex(entryJson, citekey) {
 		if (key === "type") continue; // already inserted in first line
 		let value = entryJson[key];
 		if (!value) continue; // missing value
-		if (typeof value === "string") {
+		if (typeof value === "string" && !value.match(/^\d+$/)) {
 			// double-escape bibtex values to preserve capitalization, but not
 			// author key, since it results in the author key being interpreted as
 			// literal author name
 			const hasCapitalLetter = value.match(/[A-Z]/);
-			value = (hasCapitalLetter && key !== "author") ? `{${value}}` : `{{${value}}}`;
+			value = (hasCapitalLetter && key !== "author") ? `{{${value}}}` : `{${value}}`;
 		}
 		propertyLines.push(`\t${key} = ${value},`);
 	}
