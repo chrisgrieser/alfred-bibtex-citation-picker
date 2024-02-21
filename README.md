@@ -243,7 +243,6 @@ digital economy. For my PhD project, I investigate the governance of the app
 economy and how software ecosystems manage the tension between innovation and
 compatibility. If you are interested in this subject, feel free to get in touch.
 
-### Profiles
 - [Academic Website](https://chris-grieser.de/)
 - [ResearchGate](https://www.researchgate.net/profile/Christopher-Grieser)
 - [Discord](https://discordapp.com/users/462774483044794368/)
@@ -251,6 +250,8 @@ compatibility. If you are interested in this subject, feel free to get in touch.
 - [Twitter](https://twitter.com/pseudo_meta)
 - [Mastodon](https://pkm.social/@pseudometa)
 - [LinkedIn](https://www.linkedin.com/in/christopher-grieser-ba693b17a/)
+
+*For bug reports and features requests, please use the [GitHub issue tracker](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues/new/choose).*
 
 ### Donate
 <a href='https://ko-fi.com/Y8Y86SQ91' target='_blank'>
