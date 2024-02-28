@@ -58,10 +58,10 @@ Mode](https://orgmode.org/manual/Citations.html), any various more formats.
 	* [Add New Entries](#add-new-entries)
 	* [Literature Note Actions](#literature-note-actions)
 	* [PDF Management Actions](#pdf-management-actions)
+	* [Link Preview](#link-preview)
 	* [Auxiliary Features](#auxiliary-features)
 - [Cite this software project](#cite-this-software-project)
 - [About the Developer](#about-the-developer)
-	* [Profiles](#profiles)
 	* [Donate](#donate)
 	* [Credits](#credits)
 
@@ -168,6 +168,7 @@ You can also make a PR to [this file which defines the citation formats](https:/
   of all keywords (tags).
 - <kbd>⌘</kbd><kbd>fn</kbd><kbd>⏎</kbd>: Delete the entry from the BibTeX
   library. (⚠️ This cannot be undone.)
+- <kbd>⌘</kbd><kbd>Y</kbd>: Preview the URL of entry in a QuickLook window.
 
 ### Add New Entries
 - [Universal Action](https://www.alfredapp.com/help/features/universal-actions/)
@@ -192,8 +193,6 @@ You can also make a PR to [this file which defines the citation formats](https:/
   * If the file is in your [Obsidian Vault](https://obsidian.md/), it is opened
 	directly in Obsidian instead of the default text editor.
   * If there is no literature note, a new one is created.
-- <kbd>⌘</kbd><kbd>Y</kbd>: Preview the literature note with `QuickLook`
-  (requires `QLmarkdown` or `Peek`[^1]).
 - Add `*` to any search query to filter only for entries with literature notes,
   for example `* grieser` searches for entries matching "Grieser" which also
   have a literature notes. Can be combined with other queries (see: [smart
@@ -211,6 +210,11 @@ specified in your workflow settings.
   been added by the auto-file feature. `pdf grieser`, for example, displays only
   entries from the author "Grieser" with PDFs. Can be combined with other
   queries (see: [smart queries](#search)).
+
+### Link Preview
+- Install the
+  [AlfredExtraPane](https://github.com/mr-pennyworth/alfred-extra-pane) for
+  previews of entry URLs.
 
 ### Auxiliary Features
 Triggered via the Alfred Keyword `scp` (mnemonic: `S`upercharged `C`itation `P`icker).
@@ -266,14 +270,6 @@ compatibility. If you are interested in this subject, feel free to get in touch.
 ### Credits
 <a href="https://www.flaticon.com/authors/freepik">Icons created by Freepik (Flaticon)</a>
 <!-- vale Google.FirstPerson = YES -->
-
-[^1]: [QLmarkdown](https://github.com/sbarex/QLMarkdown) and
-	[Peek](https://apps.apple.com/app/peek-quick-look-extension/id1554235898)
-	both enable previewing of Markdown documents. Peek works with a wide range
-	of other file types than Markdown, but costs around 5€. `QLMarkdown` is
-	free, but only works for Markdown and requires some minor setup. To enable
-	the proper display of YAML headers, you need to enable the respective
-	setting in the Advanced Options of `QLMarkdown` or Peek.
 
 [^2]: `Hyper` is an artificial "fifth" modifier key equal to `⌘⌥⌃⇧`, and can be
 	created using apps like [Karabiner

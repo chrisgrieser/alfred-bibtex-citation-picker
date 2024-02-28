@@ -808,9 +808,9 @@
 				<key>scriptfile</key>
 				<string>scripts/open_citation_picker.sh</string>
 				<key>subtext</key>
-				<string></string>
-				<key>title</key>
 				<string>Search BibTeX Library for...</string>
+				<key>title</key>
+				<string>{const:alfred_workflow_name}</string>
 				<key>type</key>
 				<integer>8</integer>
 				<key>withspace</key>
@@ -1097,13 +1097,13 @@
 				<key>acceptsfiles</key>
 				<false/>
 				<key>acceptsmulti</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>acceptstext</key>
 				<true/>
 				<key>acceptsurls</key>
 				<true/>
 				<key>name</key>
-				<string>Add DOI / ISBN</string>
+				<string>Add DOI / ISBN to BibTeX Library</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.universalaction</string>
@@ -1280,7 +1280,7 @@
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Supercharged Citation Picker</string>
+				<string>{const:alfred_workflow_name}</string>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -1474,6 +1474,11 @@
 			<integer>2</integer>
 		</dict>
 		<dict>
+			<key>config</key>
+			<dict>
+				<key>unstackview</key>
+				<false/>
+			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.hidealfred</string>
 			<key>uid</key>
@@ -1984,12 +1989,12 @@ Press the [hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) in
 - &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;C&lt;/kbd&gt;: Copy the URL to the clipboard.
 - In both cases, if the entry has a DOI but not a URL, the citation picker uses the DOI-URL (`https://doi.org/…`) instead.
 
-## Dozens of More Features
+## Many more Features
 For all the features this workflow has to offer, refer to the [README](https://github.com/chrisgrieser/alfred-bibtex-citation-picker#table-of-contents).
 
 ---
 
-## Cite This Software Project
+## Cite this Software Project
 
 If you want to mention this software project in an academic publication, please cite it as:
 

@@ -308,22 +308,20 @@ function run() {
 			urlSubtitle = "⌃: Open URL – " + url;
 		}
 
+		let extraMatcher = "";
+
 		// Literature Notes
-		let litNotePath = "";
-		const litNoteMatcher = [];
 		const hasLitNote = litNoteFolderCorrect && litNoteArray.includes(citekey);
 		if (hasLitNote) {
 			emojis.push(litNoteEmoji);
-			litNotePath = litNoteFolder + "/" + citekey + ".md";
-			litNoteMatcher.push(litNoteFilterStr);
+			extraMatcher += litNoteFilterStr;
 		}
 
 		// PDFs
 		const hasPdf = pdfFolderCorrect && pdfArray.includes(citekey);
-		const pdfMatcher = [];
 		if (hasPdf) {
 			emojis.push(pdfEmoji);
-			pdfMatcher.push(pdfFilterStr);
+			extraMatcher += pdfFilterStr;
 		}
 
 		// Emojis for Abstracts and Keywords (tags)
@@ -367,8 +365,7 @@ function run() {
 			...yearMatches,
 			booktitle,
 			journal,
-			...litNoteMatcher,
-			...pdfMatcher,
+			extraMatcher,
 		]
 			.map((item) => item.replaceAll("-", " ") + " " + item) // match item with and without dash
 			.join(" ");
@@ -393,7 +390,7 @@ function run() {
 				copy: url,
 				largetype: largeTypeInfo,
 			},
-			quicklookurl: litNotePath,
+			quicklookurl: url,
 			mods: {
 				ctrl: {
 					valid: url !== "",
