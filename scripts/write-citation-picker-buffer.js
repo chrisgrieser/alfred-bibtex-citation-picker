@@ -34,6 +34,7 @@ class BibtexEntry {
 		this.issue = "";
 		this.abstract = "";
 		this.keywords = [];
+		this.attachment = "";
 	}
 
 	primaryNamesArr() {
@@ -217,7 +218,11 @@ function bibtexParse(rawBibtexStr) {
 						break;
 					}
 					case "keywords":
-						entry[field] = value.split(bibtexKeywordValueDelimiter).map((t) => t.trim());
+						entry.keywords = value.split(bibtexKeywordValueDelimiter).map((t) => t.trim());
+						break;
+					case "file":
+					case "attachment":
+						entry.attachment = value;
 						break;
 					default:
 						entry[field] = value;
@@ -240,6 +245,7 @@ function run() {
 	const urlEmoji = "🌐";
 	const litNoteEmoji = "📓";
 	const tagEmoji = "🏷";
+	const attachmentEmoji = "📎";
 	const abstractEmoji = "📄";
 	const pdfEmoji = "📕";
 	const secondLibraryIcon = "2️⃣ ";
@@ -295,7 +301,7 @@ function run() {
 	function convertToAlfredItems(entry) {
 		const emojis = [];
 		// biome-ignore format: too long
-		const { title, url, citekey, keywords, icon, journal, volume, issue, booktitle, author, editor, year, abstract, primaryNamesEtAlString, primaryNames } = entry;
+		const { title, url, citekey, keywords, icon, journal, volume, issue, booktitle, author, editor, year, abstract, primaryNamesEtAlString, primaryNames, attachment } = entry;
 
 		// Shorten Title (for display in Alfred)
 		let shorterTitle = title;
@@ -324,9 +330,10 @@ function run() {
 			extraMatcher += pdfFilterStr;
 		}
 
-		// Emojis for Abstracts and Keywords (tags)
+		// Emojis
 		if (abstract) emojis.push(abstractEmoji);
 		if (keywords.length) emojis.push(tagEmoji + " " + keywords.length.toString());
+		if (attachment) emojis.push(attachmentEmoji);
 
 		// Icon selection
 		const iconPath = `icons/${icon}.png`;
@@ -409,6 +416,11 @@ function run() {
 					subtitle: this.isFirstLibrary
 						? "⌘+fn: Delete entry from BibTeX file (⚠️ irreversible)."
 						: "⛔: Deleting entries in 2nd library not yet implemented.",
+				},
+				"ctrl+alt+cmd": {
+					valid: Boolean(attachment),
+					subtitle: attachment ? "⌃⌥⌘: Open Attachment File" : "⛔: Entry has no attachment file.",
+					arg: attachment,
 				},
 			},
 		};

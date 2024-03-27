@@ -119,6 +119,7 @@ keyword.
 | 📓   | Literature Note                       |
 | 📕   | PDF                                   |
 | 2️⃣    | entry is from 2nd library             |
+| 📎   | entry has attachment                  |
 
 ## Changing the Citation Format
 
@@ -137,7 +138,7 @@ of the citations:
 - bare citekey
 - bracketed citekey
 
-> [!NOTE]  
+> [!NOTE]
 > Not all formats support all citation-related features. For example, adding
 > Page numbers as well as inline-citations are not supported for Latex,
 > Wikilinks, and Tags.
@@ -210,6 +211,9 @@ specified in your workflow settings.
   been added by the auto-file feature. `pdf grieser`, for example, displays only
   entries from the author "Grieser" with PDFs. Can be combined with other
   queries (see: [smart queries](#search)).
+- A `📎` indicates that the BibTeX entry has a `file` or `attachment` field. You
+  can use <kbd>⌃</kbd><kbd>⌥</kbd><kbd>⌘</kbd><kbd>⏎</kbd> to open the
+  attachment.
 
 ### Link Preview
 - Install the
@@ -249,9 +253,6 @@ compatibility. If you are interested in this subject, feel free to get in touch.
 
 - [Academic Website](https://chris-grieser.de/)
 - [ResearchGate](https://www.researchgate.net/profile/Christopher-Grieser)
-- [Discord](https://discordapp.com/users/462774483044794368/)
-- [GitHub](https://github.com/chrisgrieser/)
-- [Twitter](https://twitter.com/pseudo_meta)
 - [Mastodon](https://pkm.social/@pseudometa)
 - [LinkedIn](https://www.linkedin.com/in/christopher-grieser-ba693b17a/)
 
