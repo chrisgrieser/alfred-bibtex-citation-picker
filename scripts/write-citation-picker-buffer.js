@@ -20,7 +20,9 @@ function fileExists(/** @type {string} */ filePath) {
 
 class BibtexEntry {
 	constructor() {
+		/** @type {string[]} */
 		this.author = []; // last names only
+		/** @type {string[]} */
 		this.editor = [];
 		this.icon = "";
 		this.citekey = ""; // without "@"
@@ -33,6 +35,7 @@ class BibtexEntry {
 		this.volume = "";
 		this.issue = "";
 		this.abstract = "";
+		/** @type {string[]} */
 		this.keywords = [];
 		this.attachment = "";
 	}
@@ -144,8 +147,8 @@ function bibtexDecode(encodedStr) {
 	const decodePair = [...germanChars, ...frenchChars, ...otherChars, ...specialChars];
 	let decodedStr = encodedStr;
 	for (const pair of decodePair) {
-		const half = pair.split(";");
-		decodedStr = decodedStr.replaceAll(half[0], half[1]);
+		const [first, second] = pair.split(";") || [];
+		decodedStr = decodedStr.replaceAll(first, second);
 	}
 	return decodedStr;
 }
@@ -270,7 +273,9 @@ function run() {
 
 	//──────────────────────────────────────────────────────────────────────────────
 
+	/** @type {string[]} */
 	let litNoteArray = [];
+	/** @type {string[]} */
 	let pdfArray = [];
 
 	if (litNoteFolderCorrect) {
@@ -302,6 +307,8 @@ function run() {
 		const emojis = [];
 		// biome-ignore format: too long
 		const { title, url, citekey, keywords, icon, journal, volume, issue, booktitle, author, editor, year, abstract, primaryNamesEtAlString, primaryNames, attachment } = entry;
+		// @ts-ignore
+		const isFirstLibrary = Boolean(this.isFirstlibrary);
 
 		// Shorten Title (for display in Alfred)
 		let shorterTitle = title;
@@ -356,6 +363,7 @@ function run() {
 		}
 
 		// Matching behavior
+		/** @type {string[]} */
 		let keywordMatches = [];
 		if (keywords.length) keywordMatches = keywords.map((/** @type {string} */ tag) => "#" + tag);
 		let authorMatches = [...author, ...editor];
@@ -383,7 +391,7 @@ function run() {
 		if (keywords.length) largeTypeInfo += "\n\nkeywords: " + keywords.join(", ");
 
 		// // Indicate 2nd library (this set via .map thisAry)
-		const libraryIndicator = !this.isFirstLibrary ? secondLibraryIcon : "";
+		const libraryIndicator = isFirstLibrary ? "" : secondLibraryIcon;
 
 		return {
 			title: libraryIndicator + shorterTitle,
@@ -406,14 +414,14 @@ function run() {
 				},
 				// opening in second library not implemented yet
 				shift: {
-					valid: this.isFirstLibrary,
-					subtitle: this.isFirstLibrary
+					valid: isFirstLibrary,
+					subtitle: isFirstLibrary
 						? `⇧: Open in ${openEntriesIn}`
 						: "⛔: Opening entries in 2nd library not yet implemented.",
 				},
 				"fn+cmd": {
-					valid: this.isFirstLibrary,
-					subtitle: this.isFirstLibrary
+					valid: isFirstLibrary,
+					subtitle: isFirstLibrary
 						? "⌘+fn: Delete entry from BibTeX file (⚠️ irreversible)."
 						: "⛔: Deleting entries in 2nd library not yet implemented.",
 				},
