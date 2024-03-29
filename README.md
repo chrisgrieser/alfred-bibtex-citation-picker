@@ -213,7 +213,7 @@ specified in your workflow settings.
   queries (see: [smart queries](#search)).
 - A `📎` indicates that the BibTeX entry has a `file` or `attachment` field. You
   can use <kbd>⌃</kbd><kbd>⌥</kbd><kbd>⌘</kbd><kbd>⏎</kbd> to open the
-  attachment.
+  attachment. If there are multiple attachments, the first one is opened.
 
 ### Link Preview
 - Install the

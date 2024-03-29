@@ -228,7 +228,9 @@ function bibtexParse(rawBibtexStr) {
 					}
 					case "file":
 					case "attachment": {
-						entry.attachment = value;
+						// see https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues/45
+						const multipleAttachments = value.includes(";/Users/");
+						entry.attachment = multipleAttachments ? value.split(";/Users/")[0] : value;
 						break;
 					}
 					default:
