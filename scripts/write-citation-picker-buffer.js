@@ -11,7 +11,8 @@ function readFile(path) {
 	return ObjC.unwrap(str);
 }
 
-function fileExists(/** @type {string} */ filePath) {
+/** @param {string} filePath */
+function fileExists(filePath) {
 	if (!filePath) return false;
 	return Application("Finder").exists(Path(filePath));
 }
@@ -20,10 +21,8 @@ function fileExists(/** @type {string} */ filePath) {
 
 class BibtexEntry {
 	constructor() {
-		/** @type {string[]} */
-		this.author = []; // last names only
-		/** @type {string[]} */
-		this.editor = [];
+		/** @type {string[]} */ this.author = []; // last names only
+		/** @type {string[]} */ this.editor = [];
 		this.icon = "";
 		this.citekey = ""; // without "@"
 		this.title = "";
@@ -35,13 +34,12 @@ class BibtexEntry {
 		this.volume = "";
 		this.issue = "";
 		this.abstract = "";
-		/** @type {string[]} */
-		this.keywords = [];
+		/** @type {string[]} */ this.keywords = [];
 		this.attachment = "";
 	}
 
 	primaryNamesArr() {
-		if (this.author.length) return this.author;
+		if (this.author.length > 0) return this.author;
 		return this.editor; // if both are empty, will also return empty array
 	}
 	/** turn Array of names into into one string to display
@@ -157,49 +155,25 @@ function bibtexDecode(encodedStr) {
  * @return {BibtexEntry[]}
  */
 function bibtexParse(rawBibtexStr) {
-	const bibtexEntryDelimiter = /^@/m; // regex to avoid an "@" in a property value to break parsing
-	const bibtexPropertyDelimiter = /,(?=\s*[\w-]+\s*=)/; // last comma of a field, see: https://regex101.com/r/1dvpfC/1
-	const bibtexNameValueDelimiter = " and ";
-	const bibtexKeywordValueDelimiter = ",";
-	const bibtexCommentRegex = /^%.*$/gm;
-
-	/** @param {string} nameString */
-	function toLastNameArray(nameString) {
-		return nameString
-			.split(bibtexNameValueDelimiter) // array-fy
-			.map((name) => {
-				const lastname = name.includes(",")
-					? name.split(",")[0] // when last name — first name
-					: name.split(" ").pop(); // when first name — last name
-				return lastname || "ERROR";
-			});
-	}
-
-	//───────────────────────────────────────────────────────────────────────────
+	// last comma of a field, see: https://regex101.com/r/1dvpfC/1
+	const bibtexPropertyDelimiter = /,(?=\s*[\w-]+\s*=)/;
 
 	const bibtexEntryArray = bibtexDecode(rawBibtexStr)
-		.replace(bibtexCommentRegex, "") // remove comments
-		.split(bibtexEntryDelimiter)
+		.replace(/^%.*$/gm, "") // remove comments
+		.split(/^@/m) // split by `@` from citekeys
 		.slice(1) // first element is other stuff before first entry
 		.map((bibEntry) => {
 			const lines = bibEntry.split(bibtexPropertyDelimiter);
 			const entry = new BibtexEntry();
 
 			// parse first line (separate since different formatting)
-			const firstLine = lines[0] || "";
-			const entryCategory = firstLine.split("{")[0].toLowerCase().trim();
-			entry.citekey = firstLine.split("{")[1].trim();
+			const [category, citekey] = lines[0].split("{");
 			lines.shift();
-
+			entry.citekey = citekey.trim();
 			// INFO will use icons saved as as `./icons/{entry.icon}.png` in the
 			// workflow folder. This means adding icons does not require any extra
 			// code, just an addition of the an icon file named like the category
-			if (entryCategory === "online") entry.icon = "webpage";
-			else if (entryCategory === "report") entry.icon = "techreport";
-			else if (entryCategory === "inbook") entry.icon = "incollection";
-			else if (entryCategory === "misc" || entryCategory.includes("thesis"))
-				entry.icon = "unpublished";
-			else entry.icon = entryCategory;
+			entry.icon = category.toLowerCase().trim();
 
 			// parse remaining lines
 			for (const line of lines) {
@@ -213,7 +187,13 @@ function bibtexParse(rawBibtexStr) {
 				switch (field) {
 					case "author":
 					case "editor": {
-						entry[field] = toLastNameArray(value);
+						// create last name array
+						entry[field] = value.split(" and ").map((name) => {
+							const lastname = name.includes(",")
+								? name.split(",")[0] // when last name — first name
+								: name.split(" ").pop(); // when first name — last name
+							return lastname || "ERROR";
+						});
 						break;
 					}
 					case "date":
@@ -223,7 +203,7 @@ function bibtexParse(rawBibtexStr) {
 						break;
 					}
 					case "keywords": {
-						entry.keywords = value.split(bibtexKeywordValueDelimiter).map((t) => t.trim());
+						entry.keywords = value.split(/ *, */);
 						break;
 					}
 					case "file":
@@ -240,7 +220,6 @@ function bibtexParse(rawBibtexStr) {
 			}
 
 			if (!entry.url && entry.doi) entry.url = "https://doi.org/" + entry.doi;
-
 			return entry;
 		});
 
@@ -261,9 +240,7 @@ function run() {
 	const secondLibraryIcon = "2️⃣ ";
 	const litNoteFilterStr = "*";
 	const pdfFilterStr = "pdf";
-	const alfredBarWidth = $.getenv("alfred_bar_width")
-		? Number.parseInt($.getenv("alfred_bar_width"))
-		: 60;
+	const alfredBarWidth = Number.parseInt($.getenv("alfred_bar_width") || "60");
 
 	const matchAuthorsInEtAl = $.getenv("match_authors_in_etal") === "1";
 	const matchShortYears = $.getenv("match_year_type").includes("short");
@@ -316,8 +293,8 @@ function run() {
 	function convertToAlfredItems(entry, whichLibrary) {
 		const emojis = [];
 		// biome-ignore format: too long
-		const { 
-			title, url, citekey, keywords, icon, journal, volume, issue, booktitle, 
+		const {
+			title, url, citekey, keywords, icon, journal, volume, issue, booktitle,
 			author, editor, year, abstract, primaryNamesEtAlString, primaryNames, attachment
 		} = entry;
 		const isFirstLibrary = whichLibrary === "first";
@@ -424,8 +401,8 @@ function run() {
 					arg: url,
 					subtitle: urlSubtitle,
 				},
-				// opening in second library not implemented yet
 				shift: {
+					// opening in second library not implemented yet
 					valid: isFirstLibrary,
 					subtitle: isFirstLibrary
 						? `⇧: Open in ${openEntriesIn}`
