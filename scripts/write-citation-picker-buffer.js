@@ -213,7 +213,7 @@ function bibtexParse(rawBibtexStr) {
 						break;
 					}
 					default:
-						// @ts-ignore
+						// @ts-expect-error
 						entry[field] = value;
 				}
 			}
