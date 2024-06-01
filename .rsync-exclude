@@ -7,7 +7,7 @@ docs/
 prefs.plist
 README.md
 LICENSE
-Makefile
+Justfile
 .build-and-release.sh
 CITATION.bib
 CITATION.cff
