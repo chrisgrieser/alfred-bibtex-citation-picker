@@ -326,7 +326,7 @@ function run() {
 
 		// Emojis
 		if (abstract) emojis.push(abstractEmoji);
-		if (keywords.length) emojis.push(tagEmoji + " " + keywords.length.toString());
+		if (keywords.length > 0) emojis.push(tagEmoji + " " + keywords.length.toString());
 		if (attachment) emojis.push(attachmentEmoji);
 
 		// Icon selection
@@ -344,7 +344,7 @@ function run() {
 
 		// display editor and add "Ed." when no authors
 		let namesToDisplay = primaryNamesEtAlString + " ";
-		if (!author.length && editor.length) {
+		if (author.length === 0 && editor.length > 0) {
 			if (editor.length > 1) namesToDisplay += "(Eds.) ";
 			else namesToDisplay += "(Ed.) ";
 		}
@@ -352,7 +352,8 @@ function run() {
 		// Matching behavior
 		/** @type {string[]} */
 		let keywordMatches = [];
-		if (keywords.length) keywordMatches = keywords.map((/** @type {string} */ tag) => "#" + tag);
+		if (keywords.length > 0)
+			keywordMatches = keywords.map((/** @type {string} */ tag) => "#" + tag);
 		let authorMatches = [...author, ...editor];
 		if (!matchAuthorsInEtAl) authorMatches = [...author.slice(0, 1), ...editor.slice(0, 1)]; // only match first two names
 		const yearMatches = [];
@@ -375,7 +376,7 @@ function run() {
 		// Alfred: Large Type
 		let largeTypeInfo = `${title} \n(citekey: ${citekey})`;
 		if (abstract) largeTypeInfo += "\n\n" + abstract;
-		if (keywords.length) largeTypeInfo += "\n\nkeywords: " + keywords.join(", ");
+		if (keywords.length > 0) largeTypeInfo += "\n\nkeywords: " + keywords.join(", ");
 
 		// // Indicate 2nd library (this set via .map thisAry)
 		const libraryIndicator = isFirstLibrary ? "" : secondLibraryIcon;
