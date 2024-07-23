@@ -1,9 +1,8 @@
 #!/usr/bin/env osascript -l JavaScript
-
-// JXA & Alfred specific
 ObjC.import("stdlib");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
+//──────────────────────────────────────────────────────────────────────────────
 
 /** @param {string} text @param {string} absPath */
 function appendToFile(text, absPath) {
@@ -52,22 +51,22 @@ function generateCitekey(authors, year) {
 	const yearStr = year ? year.toString() : "NY";
 
 	const lastNameArr = [];
-	if (!authors) lastNameArr.push("NoAuthor");
-	else {
+	if (authors) {
 		const author = authors.split(" and "); // "and" used as delimiter in bibtex for names
 		for (const name of author) {
 			const isLastFirst = name.includes(","); // doi.org returns "first last", isbn mostly "last, first"
 			const lastName = isLastFirst ? name.split(",")[0].trim() : name.split(" ").pop();
 			lastNameArr.push(lastName);
 		}
+	} else {
+		lastNameArr.push("NoAuthor");
 	}
 	const authorStr = (lastNameArr.length < 3 ? lastNameArr.join("") : lastNameArr[0] + "EtAl")
 		// strip diacritics https://stackoverflow.com/a/37511463
 		.normalize("NFD")
-		// biome-ignore lint/nursery/noMisleadingCharacterClass: unclear
+		// biome-ignore lint/suspicious/noMisleadingCharacterClass: unclear
 		.replace(/[\u0300-\u036f]/g, "")
-		// no hyphens
-		.replaceAll("-", "");
+		.replaceAll("-", ""); // no hyphens
 
 	const citekey = authorStr + yearStr;
 	return citekey;
@@ -75,7 +74,10 @@ function generateCitekey(authors, year) {
 
 //──────────────────────────────────────────────────────────────────────────────
 
-/** @param {string} input */
+/**
+ * @param {string} input
+ * @return {Record<string, any>|string} entryJson or error message
+ */
 function inputToEntryJson(input) {
 	const entry = {};
 
@@ -84,40 +86,36 @@ function inputToEntryJson(input) {
 	const isDOI = doiRegex.test(input);
 	const isISBN = isbnRegex.test(input);
 
-	if (!isDOI && !isISBN) return { error: "input invalid" };
+	if (!isDOI && !isISBN) return "input invalid";
 
 	// DOI
 	// https://citation.crosscite.org/docs.html
 	if (isDOI) {
 		const doi = input.match(doiRegex);
-		if (!doi) return { error: "DOI invalid" };
+		if (!doi) return "DOI invalid";
 		const doiURL = "https://doi.org/" + doi[0];
 
 		const response = app.doShellScript(
 			`curl -sL -H "Accept: application/vnd.citationstyles.csl+json" "${doiURL}"`,
 		);
-		if (!response) return { error: "No response by doi.org" };
-		if (
-			response.startsWith("<!DOCTYPE html>") ||
-			response.toLowerCase().includes("doi not found")
-		)
-			return { error: "DOI not found" };
+		if (!response) return "No response by doi.org";
+		if (response.startsWith("<!DOCTYPE html>") || response.toLowerCase().includes("doi not found"))
+			return "DOI not found";
 
 		const data = JSON.parse(response);
 
 		entry.publisher = data.publisher;
 		entry.author = (data.authors || data.author || [])
 			.map(
-				(/** @type {{ given: any; family: any; }} */ author) =>
-					`${author.given} ${author.family}`,
+				(/** @type {{ given: any; family: any; }} */ author) => `${author.given} ${author.family}`,
 			)
 			.join(" and ");
-		const published =
-			data["published-print"] || data["published-online"] || data.published || null;
+		const published = data["published-print"] || data["published-online"] || data.published || null;
 		entry.year = published ? published["date-parts"][0][0] : "NY";
 		entry.doi = doi[0];
 		entry.url = data.URL || doiURL;
 		entry.type = data.type.replace(/-?journal-?/, ""); // "journal-article" -> "article"
+		if (entry.type === "book-chapter") entry.type = "incollection";
 		entry.title = data.title;
 		if (entry.type === "article") {
 			entry.journal = data["container-title"];
@@ -134,24 +132,19 @@ function inputToEntryJson(input) {
 		// first tries OpenLibrary API, then Google Books API
 
 		// OPENLIBRARY -- https://openlibrary.org/developers/api
-		console.log("Attempting Open Library API…");
 		const response = app.doShellScript(
 			`curl -sL "https://openlibrary.org/api/books?bibkeys=isbn:${isbn}&jscmd=details&format=json"`,
 		);
-		if (!response) console.log("No response by OpenLibrary API");
 		const fullData = response ? JSON.parse(response)["isbn:" + isbn] : {};
 		const openLibraryHasData = response && fullData && Object.keys(fullData).length > 0;
 
 		if (openLibraryHasData) {
-			console.log("Open Library Data found.");
 			const data = fullData.details;
 
 			entry.type = "book";
 			entry.publisher = data.publishers.join(" and ");
 			entry.title = data.title;
-			entry.year = data.publish_date
-				? Number.parseInt(data.publish_date.match(/\d{4}/)[0])
-				: "NY";
+			entry.year = data.publish_date ? Number.parseInt(data.publish_date.match(/\d{4}/)[0]) : "NY";
 			entry.author = (data.authors || data.author || [])
 				.map((/** @type {{ name: string; }} */ author) => author.name)
 				.join(" and ");
@@ -163,17 +156,12 @@ function inputToEntryJson(input) {
 
 		// GOOGLE BOOKS -- https://developers.google.com/books/docs/v1/using
 		else {
-			console.log("Attempting Google Books API…");
 			const response = app.doShellScript(
 				`curl -sL "https://www.googleapis.com/books/v1/volumes?q=isbn:${isbn}"`,
 			);
-			if (!response) {
-				console.log("No response by Google Books API");
-				return { error: "No response by Google Books API" };
-			}
+			if (!response) return "No response by Google Books API";
 			const fullData = JSON.parse(response);
-			if (fullData.totalItems === 0) return { error: "ISBN not found" };
-			console.log("Google Books Data found.");
+			if (fullData.totalItems === 0) return "ISBN not found";
 
 			const data = fullData.items[0].volumeInfo;
 			entry.type = "book";
@@ -192,7 +180,7 @@ function inputToEntryJson(input) {
 }
 
 /**
- * @param {object} entryJson
+ * @param {Record<string, any>} entryJson
  * @param {string} citekey
  * @return {string} newEntryAsBibTex
  */
@@ -210,7 +198,7 @@ function json2bibtex(entryJson, citekey) {
 			// author key, since it results in the author key being interpreted as
 			// literal author name
 			const hasCapitalLetter = value.match(/[A-Z]/);
-			value = (hasCapitalLetter && key !== "author") ? `{{${value}}}` : `{${value}}`;
+			value = hasCapitalLetter && key !== "author" ? `{{${value}}}` : `{${value}}`;
 		}
 		propertyLines.push(`\t${key} = ${value},`);
 	}
@@ -230,7 +218,8 @@ function run(argv) {
 
 	// Get entry data
 	const entry = inputToEntryJson(input);
-	if (entry.error) return entry.error;
+	if (typeof entry === "string") return entry;
+	if (!entry) return "Invalid input";
 
 	// cleanup
 	if (entry.publisher)
