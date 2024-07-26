@@ -8,7 +8,7 @@ if ! command -v pandoc &>/dev/null; then
 fi
 
 citekey="$*"
-csl=$([[ -f "$csl_for_pandoc" ]] && echo "$csl_for_pandoc" || echo "./assets/apa-7th.csl")
+csl=$([[ -f "$csl_for_pandoc" ]] && echo "$csl_for_pandoc" || echo "./support/apa-7th.csl")
 library="$bibtex_library_path"
 
 dummydoc="---
