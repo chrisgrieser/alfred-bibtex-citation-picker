@@ -61,9 +61,8 @@ Mode](https://orgmode.org/manual/Citations.html), any various more formats.
 	* [Link Preview](#link-preview)
 	* [Auxiliary Features](#auxiliary-features)
 - [Cite this software project](#cite-this-software-project)
+- [Credits](#credits)
 - [About the Developer](#about-the-developer)
-	* [Donate](#donate)
-	* [Credits](#credits)
 
 <!-- tocstop -->
 
@@ -203,7 +202,7 @@ You can also make a PR to [this file which defines the citation formats](https:/
 The following features require that all your PDFs are located in the folder
 specified in your workflow settings.
 - The `📕` indicates that the entry already has an associated PDF at that location.
-- <kbd>Hyper</kbd><kbd>⏎</kbd>[^2]: If the entry has an associated PDF file,
+- <kbd>Hyper</kbd><kbd>⏎</kbd>[^1]: If the entry has an associated PDF file,
   open it with the default PDF reader. The citekey must not contain an
   underscore (`_`). If the PDF folder setting is left empty, tries to open a PDF
   file listed under the `file` key in the BibTeX file.
@@ -231,18 +230,16 @@ Triggered via the Alfred Keyword `scp` (mnemonic: `S`upercharged `C`itation `P`i
   debugging purposes.
 
 ## Cite this software project
-
-If you want to mention this software project in an academic publication, please cite
-it as:
+If you want to mention this software project in an academic publication, please
+cite it as:
 
 ```txt
 Grieser, C. (2023). Supercharged Citation Picker [Computer software]. 
 https://github.com/chrisgrieser/alfred-bibtex-citation-picker
 ```
 
-For other citation styles, use the following metadata:
-- [Citation File Format](./CITATION.cff)
-- [BibTeX](./CITATION.bib)
+## Credits
+<a href="https://www.flaticon.com/authors/freepik">Icons created by Freepik (Flaticon)</a>
 
 <!-- vale Google.FirstPerson = NO -->
 ## About the Developer
@@ -258,7 +255,6 @@ compatibility. If you are interested in this subject, feel free to get in touch.
 
 *For bug reports and features requests, please use the [GitHub issue tracker](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues/new/choose).*
 
-### Donate
 <a href='https://ko-fi.com/Y8Y86SQ91' target='_blank'>
 <img
 	height='36'
@@ -268,11 +264,9 @@ compatibility. If you are interested in this subject, feel free to get in touch.
 	alt='Buy Me a Coffee at ko-fi.com'
 /></a>
 
-### Credits
-<a href="https://www.flaticon.com/authors/freepik">Icons created by Freepik (Flaticon)</a>
 <!-- vale Google.FirstPerson = YES -->
 
-[^2]: `Hyper` is an artificial "fifth" modifier key equal to `⌘⌥⌃⇧`, and can be
+[^1]: `Hyper` is an artificial "fifth" modifier key equal to `⌘⌥⌃⇧`, and can be
 	created using apps like [Karabiner
 	Elements](https://karabiner-elements.pqrs.org/),
 	[BetterTouchTool](https://www.macupdate.com/app/mac/32953/bettertouchtool),
