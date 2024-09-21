@@ -4,15 +4,15 @@
 .git/
 .github/
 docs/
+assets/
 prefs.plist
 README.md
 LICENSE
 Justfile
 .build-and-release.sh
-CITATION.bib
-CITATION.cff
+.markdownlint.yaml
 
 # symlinks
-alfred.d.ts
-jsconfig.json
 jxa-globals.d.ts
+jsconfig.json
+alfred.d.ts
