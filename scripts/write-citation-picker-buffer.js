@@ -250,8 +250,22 @@ function run() {
 
 	const litNoteFolder = $.getenv("literature_note_folder");
 	const pdfFolder = $.getenv("pdf_folder");
-	const litNoteFolderCorrect = fileExists(litNoteFolder);
-	const pdfFolderCorrect = fileExists(pdfFolder);
+	const litNoteFolderExists = fileExists(litNoteFolder);
+	const pdfFolderExists = fileExists(pdfFolder);
+
+	// GUARD
+	if (pdfFolder && !pdfFolderExists) {
+		return JSON.stringify({
+			items: [{ title: "PDF folder does not exist.", subtitle: pdfFolder, valid: false }],
+		});
+	}
+	if (litNoteFolder && !litNoteFolderExists) {
+		return JSON.stringify({
+			items: [
+				{ title: "Literature folder does not exist.", subtitle: litNoteFolder, valid: false },
+			],
+		});
+	}
 
 	//──────────────────────────────────────────────────────────────────────────────
 
@@ -260,7 +274,7 @@ function run() {
 	/** @type {string[]} */
 	let pdfArray = [];
 
-	if (litNoteFolderCorrect) {
+	if (litNoteFolderExists) {
 		litNoteArray = app
 			.doShellScript(`find "${litNoteFolder}" -type f -name "*.md"`)
 			.split("\r")
@@ -271,13 +285,13 @@ function run() {
 			});
 	}
 
-	if (pdfFolderCorrect) {
+	if (pdfFolderExists) {
 		pdfArray = app
 			.doShellScript(`find "${pdfFolder}" -type f -name "*.pdf"`)
 			.split("\r")
 			.map((/** @type {string} */ filepath) => {
 				return filepath
-					.replace(/.*\/(.*)\.pdf/, "$1") // only basename w/o ext
+					.replace(/.*\/(.*)\.pdf$/, "$1") // only basename w/o ext
 					.replace(/(_[^_]*$)/, ""); // INFO part before underscore, this method does not work for citkeys which contain an underscore though...
 			});
 	}
@@ -311,14 +325,14 @@ function run() {
 		let extraMatcher = "";
 
 		// Literature Notes
-		const hasLitNote = litNoteFolderCorrect && litNoteArray.includes(citekey);
+		const hasLitNote = litNoteFolderExists && litNoteArray.includes(citekey);
 		if (hasLitNote) {
 			emojis.push(litNoteEmoji);
 			extraMatcher += litNoteFilterStr;
 		}
 
 		// PDFs
-		const hasPdf = pdfFolderCorrect && pdfArray.includes(citekey);
+		const hasPdf = pdfFolderExists && pdfArray.includes(citekey);
 		if (hasPdf) {
 			emojis.push(pdfEmoji);
 			extraMatcher += pdfFilterStr;
@@ -415,7 +429,9 @@ function run() {
 				},
 				"ctrl+alt+cmd": {
 					valid: Boolean(attachment),
-					subtitle: attachment ? "⌃⌥⌘: Open Attachment File" : "⛔: Entry has no attachment file.",
+					subtitle: attachment
+						? "⌃⌥⌘: Open Attachment File"
+						: "⛔: Entry has no attachment file.",
 					arg: attachment,
 				},
 			},
