@@ -1,9 +1,11 @@
 #!/bin/zsh
 # shellcheck disable=SC2154
+export PATH=/usr/local/lib:/usr/local/bin:/opt/homebrew/bin/:$PATH
+#───────────────────────────────────────────────────────────────────────────────
 
 # GUARD
 if ! command -v pandoc &>/dev/null; then
-	echo -n "You need to install pandoc for this feature."
+	echo -n "You need to install \`pandoc\` for this feature."
 	return 1
 fi
 
@@ -16,7 +18,7 @@ nocite: '@$citekey'
 ---"
 
 reference=$(echo -n "$dummydoc" |
-	pandoc --citeproc --read=markdown --write=plain --wrap=none \
-	--csl="$csl" --bibliography="$library")
+	command pandoc --citeproc --read=markdown --write=plain --wrap=none \
+	--csl="$csl" --bibliography="$library" 2>&1)
 
 echo -n "$reference"
