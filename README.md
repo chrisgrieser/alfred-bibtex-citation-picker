@@ -1,6 +1,7 @@
 # Supercharged Citation Picker
-![Download Count](https://img.shields.io/github/downloads/chrisgrieser/alfred-bibtex-citation-picker/total?label=Total%20Downloads&style=plastic)
-![Last Release](https://img.shields.io/github/v/release/chrisgrieser/alfred-bibtex-citation-picker?label=Latest%20Release&style=plastic)
+![GitHub Downloads](https://img.shields.io/github/downloads/chrisgrieser/alfred-bibtex-citation-picker/total?label=GitHub%20Downloads&style=plastic&logo=github)
+![Alfred Gallery Downloads](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchrisgrieser%2F.config%2Frefs%2Fheads%2Fmain%2FAlfred.alfredpreferences%2Falfred-workflow-download-count.yaml&query=alfred-bibtex-citation-picker&style=plastic&logo=alfred&label=Gallery%20Downloads&color=%235C1F87)
+![Latest Release](https://img.shields.io/github/v/release/chrisgrieser/alfred-bibtex-citation-picker?label=Latest%20Release&style=plastic)
 
 A citation picker and lightweight reference manager for
 [Alfred](https://www.alfredapp.com/). Uses BibTeX Files and supports [Pandoc Markdown](https://pandoc.org/MANUAL.html#citation-syntax),
