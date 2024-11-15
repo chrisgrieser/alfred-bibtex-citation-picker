@@ -1,81 +1,79 @@
 # Supercharged Citation Picker
-![GitHub Downloads](https://img.shields.io/github/downloads/chrisgrieser/alfred-bibtex-citation-picker/total?label=GitHub%20Downloads&style=plastic&logo=github)
-![Alfred Gallery Downloads](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchrisgrieser%2F.config%2Frefs%2Fheads%2Fmain%2FAlfred.alfredpreferences%2Falfred-workflow-download-count.yaml&query=alfred-bibtex-citation-picker&style=plastic&logo=alfred&label=Gallery%20Downloads&color=%235C1F87)
-![Latest Release](https://img.shields.io/github/v/release/chrisgrieser/alfred-bibtex-citation-picker?label=Latest%20Release&style=plastic)
+![GitHub downloads](https://img.shields.io/github/downloads/chrisgrieser/alfred-bibtex-citation-picker/total?label=GitHub%20Downloads&style=plastic&logo=github)
+![Alfred gallery downloads](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchrisgrieser%2F.config%2Frefs%2Fheads%2Fmain%2FAlfred.alfredpreferences%2Falfred-workflow-download-count.yaml&query=alfred-bibtex-citation-picker&style=plastic&logo=alfred&label=Gallery%20Downloads&color=%235C1F87)
+![Latest release](https://img.shields.io/github/v/release/chrisgrieser/alfred-bibtex-citation-picker?label=Latest%20Release&style=plastic)
 
 A citation picker and lightweight reference manager for
-[Alfred](https://www.alfredapp.com/). Uses BibTeX Files and supports [Pandoc Markdown](https://pandoc.org/MANUAL.html#citation-syntax),
+[Alfred](https://www.alfredapp.com/). Uses BibTeX files and supports [Pandoc Markdown](https://pandoc.org/MANUAL.html#citation-syntax),
 [Multi-Markdown](https://fletcher.github.io/MultiMarkdown-6/syntax/citation.html),
 [LaTeX](https://www.overleaf.com/learn/latex/Biblatex_citation_styles), [Org
 Mode](https://orgmode.org/manual/Citations.html), any various more formats.
 
 <img width="1106" alt="showcase" src="https://github.com/chrisgrieser/alfred-bibtex-citation-picker/assets/73286100/c16c0621-ca62-4f05-909b-c2acd602feb1">
 
-## Feature Overview
+## Feature overview
 
-### Core Features
-- Inserts __Pandoc Citation Syntax__ (`[@citekey]`), supporting page numbers &
+### Core features
+- Inserts __Pandoc Citation syntax__ (`[@citekey]`), supporting page numbers &
   multiple citations (`[@citekey, p. 23; @citekey, p. 42]`). Can also be
   configured to use __LaTeX__, __Multi-Markdown__, __eta templates__, __Org
   Mode__, `[[wikilinks]]`, `#tags`, or `bare citkeys` as citation format.
 - __App-independent:__ Works system-wide, in every text field of every app.
-- __Smart Search:__ Search for citekeys, authors, title, publication, keywords
+- __Smart search:__ Search for citekeys, authors, title, publication, keywords
   (tags), include or exclude authors in *et al.*, tab-completion,
   short queries, sorting recently used entries to the top, …
-- __Simple Installation:__ Just enter the path to your `.bib` file, and you are
+- __Simple installation:__ Just enter the path to your `.bib` file, and you are
   ready to go.
-- __Blazingly Fast:__ Considerably quicker than any other citation picker (~200
+- __Blazingly fast:__ Considerably quicker than any other citation picker (~200
   ms to fully reload a library with ~4000 entries).
 
-### Advanced Features
-- __Citation Actions:__ Paste single-entry bibliographies, open URLs,
+### Advanced features
+- __Citation actions:__ Paste single-entry bibliographies, open URLs,
   open or create literature notes, attach PDFs, search for `.csl` files online,
   and more.
-- __Lightweight Reference Management:__ Automatically rename and file PDFs, add or
+- __Lightweight reference management:__ Automatically rename and file PDFs, add or
   remove entries.
-- __Quickly Add New Entries:__ Select a DOI or ISBN and add them directly to
+- __Quickly add new entries:__ Select a DOI or ISBN and add them directly to
   your BibTeX library via hotkey.
 - __Support for two libraries:__ You can pick citations from two BibTeX Library
   files at the same time.
-- __Obsidian Integration:__ When located in your [Obsidian
+- __Obsidian integration:__ When located in your [Obsidian
   Vault](https://obsidian.md/), literature notes are automatically opened/created
   in Obsidian instead of the default markdown app.
 
-## Table of Contents
+## Table of contents
 
 <!-- toc -->
 
 - [Installation](#installation)
-- [Basic Usage](#basic-usage)
-	* [Search](#search)
-	* [Citation Actions](#citation-actions)
-	* [URL Actions](#url-actions)
-	* [Icon Meanings](#icon-meanings)
-- [Changing the Citation Format](#changing-the-citation-format)
-	* [Available Formats](#available-formats)
-	* [Other Format Customizations](#other-format-customizations)
-- [Advanced Usage](#advanced-usage)
-	* [Bibliography Actions](#bibliography-actions)
-	* [Add New Entries](#add-new-entries)
-	* [Literature Note Actions](#literature-note-actions)
-	* [PDF Management Actions](#pdf-management-actions)
-	* [Link Preview](#link-preview)
-	* [Auxiliary Features](#auxiliary-features)
+- [Basic usage](#basic-usage)
+  * [Search](#search)
+  * [Citation actions](#citation-actions)
+  * [URL actions](#url-actions)
+  * [Icon meanings](#icon-meanings)
+- [Changing the citation format](#changing-the-citation-format)
+- [Advanced usage](#advanced-usage)
+  * [Bibliography actions](#bibliography-actions)
+  * [Add new entries](#add-new-entries)
+  * [Literature note actions](#literature-note-actions)
+  * [PDF management actions](#pdf-management-actions)
+  * [Link preview](#link-preview)
+  * [Auxiliary features](#auxiliary-features)
 - [Cite this software project](#cite-this-software-project)
 - [Credits](#credits)
-- [About the Developer](#about-the-developer)
+- [About the developer](#about-the-developer)
 
 <!-- tocstop -->
 
 ## Installation
 1. [Download the latest release](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/releases/latest).
-2. Enter the BibTeX Library path.
+2. Enter the BibTeX library path.
 3. Use the citation picker via the Alfred keyword `ct`, or set a
    [hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) for the
    citation picker by double-clicking the respective field in the workflow
    window.
 
-## Basic Usage
+## Basic usage
 Press the [hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) in
 any text field to start the citation picker. Alternatively, use the `ct`
 keyword.
@@ -92,7 +90,7 @@ keyword.
   2020` gives you the same result as above, if no other author begins with
   `grie` and no other tag starts with `cogn`.
 
-### Citation Actions
+### Citation actions
 - <kbd>⏎</kbd>: Paste the citekey of the selected citation.
 - <kbd>⌥</kbd><kbd>⏎</kbd>: Add another citation.
 - <kbd>⇧</kbd><kbd>⌘</kbd><kbd>⏎</kbd>: Paste an inline-citation (citation
@@ -103,13 +101,13 @@ keyword.
   * Confirm with <kbd>⇧</kbd><kbd>⌘</kbd><kbd>⏎</kbd> for an inline-citation
 	with page number (`@Grieser2022 [p. 42]`).
 
-### URL Actions
+### URL actions
 - <kbd>⌃</kbd><kbd>⏎</kbd>: Open the URL in the browser.
 - <kbd>⌘</kbd><kbd>C</kbd>: Copy the URL to the clipboard.
 - In both cases, if the entry has a DOI but not a URL, the citation picker uses
   the DOI-URL (`https://doi.org/…`) instead.
 
-### Icon Meanings
+### Icon meanings
 
 | Icon | Entry has                             |
 |:-----|:--------------------------------------|
@@ -121,18 +119,19 @@ keyword.
 | 2️⃣    | entry is from 2nd library             |
 | 📎   | entry has attachment                  |
 
-## Changing the Citation Format
-
-### Available Formats
-You can use the `scp` and select __Change Citation Format__ to change the format
+## Changing the citation format
+You can use the `scp` and select __Change citation format__ to change the format
 of the citations:
-
 - Pandoc (default)
 - Org Mode
-- Multi-Markdown (MMD)
+- Multi-Markdown (`MMD`)
 - LaTeX
 - eta template
 - iA Writer
+- Formatted single entry
+	* Requires [Pandoc](https://pandoc.org/installing.html).
+	* The used citation style can be customized in the workflow configuration
+	  (default: APA 7th).
 - `[[wikilink]]`
 - `#tag`
 - bare citekey
@@ -143,35 +142,33 @@ of the citations:
 > Page numbers as well as inline-citations are not supported for Latex,
 > Wikilinks, and Tags.
 
-### Other Format Customizations
-If you want to use a format that is not available, you can customize the format
-yourself by changing the workflow environment variables starting with `_format`.
-(Tutorial: [How to set environment variables in
-Alfred](https://www.alfredapp.com/help/workflows/advanced/variables/#environment))
-
 If there is a citation syntax that is commonly used, or if you want to improve
 support for an existing format, feel free to open a [Feature
-Request](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues/new?assignees=&labels=enhancement&template=feature_request.yml&title=Feature+Request%3A+).
+Request](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues/new?assignees=&labels=enhancement&template=feature_request.yml&title=Feature+Request%3A+)
+or make a PR to [this file which defines the citation
+formats](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/scripts/toggle-citation-format.js).
 
-You can also make a PR to [this file which defines the citation formats](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/scripts/toggle-citation-format.js).
+> [!NOTE]
+> Due to technical restrictions, you may need to set the citation style once
+> more after updates to this workflow.
 
-## Advanced Usage
+## Advanced usage
 
-### Bibliography Actions
-- <kbd>⇧</kbd><kbd>⏎</kbd>: Reveal the entry in Zotero, neovim, BibDesk, VS
+### Bibliography actions
+- <kbd>⇧</kbd><kbd>⏎</kbd>: Reveal the entry in Zotero, Neovim, BibDesk, VS
   Code, or Sublime Text, depending on the setting in the workflow configuration.
   (Note that this does not work for the secondary library.)
 - <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⏎</kbd>: Paste the full bibliographic entry.
 	* Requires [Pandoc](https://pandoc.org/installing.html).
-	* The used citation style can be customized in the settings. By default, the
-	  APA 7th Style is used.
-- <kbd>⌘</kbd><kbd>L</kbd>: Preview the unabridged title, abstract, and list
-  of all keywords (tags).
+	* The used citation style can be customized in the workflow configuration.
+	  (default: APA 7th)
+- <kbd>⌘</kbd><kbd>L</kbd>: Preview the unabridged title, abstract, and list of
+  all keywords (tags).
 - <kbd>⌘</kbd><kbd>fn</kbd><kbd>⏎</kbd>: Delete the entry from the BibTeX
   library. (⚠️ This cannot be undone.)
 - <kbd>⌘</kbd><kbd>Y</kbd>: Preview the URL of entry in a QuickLook window.
 
-### Add New Entries
+### Add new entries
 - [Universal Action](https://www.alfredapp.com/help/features/universal-actions/)
   or [Hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/): Uses
   the selected __DOI__, __ISBN__, or __URL containing a DOI__ to add a new entry
@@ -183,7 +180,7 @@ You can also make a PR to [this file which defines the citation formats](https:/
 > a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file
 > are not reflected in Zotero.
 
-### Literature Note Actions
+### Literature note actions
 - The citation picker looks in the folder specified in the workflow settings for
   files that are *exactly* named like the citekey, optionally followed by an
   underscore `_` and some text, for example: `{citekey}.md` or
@@ -199,7 +196,7 @@ You can also make a PR to [this file which defines the citation formats](https:/
   have a literature notes. Can be combined with other queries (see: [smart
   queries](#search)).
 
-### PDF Management Actions
+### PDF management actions
 The following features require that all your PDFs are located in the folder
 specified in your workflow settings.
 - The `📕` indicates that the entry already has an associated PDF at that location.
@@ -211,17 +208,17 @@ specified in your workflow settings.
   been added by the auto-file feature. `pdf grieser`, for example, displays only
   entries from the author "Grieser" with PDFs. Can be combined with other
   queries (see: [smart queries](#search)).
-- A `📎` indicates that the BibTeX entry has a `file` or `attachment` field. You
+- A `📎` indicates that the BibTeX entry has an `attachment` or `file` field. You
   can use <kbd>⌃</kbd><kbd>⌥</kbd><kbd>⌘</kbd><kbd>⏎</kbd> to open the
   attachment. If there are multiple attachments, the first one is opened.
 
-### Link Preview
+### Link preview
 - Install the
   [AlfredExtraPane](https://github.com/mr-pennyworth/alfred-extra-pane) for
   previews of entry URLs.
 
-### Auxiliary Features
-Triggered via the Alfred Keyword `scp` (mnemonic: `S`upercharged `C`itation `P`icker).
+### Auxiliary features
+Triggered via the Alfred Keyword `scp` (mnemonic: Supercharged Citation Picker).
 - __Cheatsheet__: Open a cheat sheet of the available actions of the
   Supercharged Citation Picker.
 - __Citation Style Search__: Search for a citation style (`.csl` file), which is
@@ -239,11 +236,13 @@ Grieser, C. (2023). Supercharged Citation Picker [Computer software].
 https://github.com/chrisgrieser/alfred-bibtex-citation-picker
 ```
 
-## Credits
-<a href="https://www.flaticon.com/authors/freepik">Icons created by Freepik (Flaticon)</a>
+For other citation styles, use the following metadata: [cff
+file](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/CITATION.cff)
 
-<!-- vale Google.FirstPerson = NO -->
-## About the Developer
+## Credits
+<a href="https://www.flaticon.com/authors/freepik">Icons created by `Freepik` (`Flaticon`)</a>
+
+## About the developer
 In my day job, I am a sociologist studying the social mechanisms underlying the
 digital economy. For my PhD project, I investigate the governance of the app
 economy and how software ecosystems manage the tension between innovation and
