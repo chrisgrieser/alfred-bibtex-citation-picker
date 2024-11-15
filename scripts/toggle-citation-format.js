@@ -136,6 +136,22 @@ function run(argv) {
 			setFormat("page_suffix", "");
 			break;
 		}
+		case "formatted single entry": {
+			// Uses separate module for pasting text. Values here set to empty
+			// string just for clarity that they aren't used.
+			setFormat("citation_start", "");
+			setFormat("citation_end", "");
+			setFormat("citekey_delimiter", "");
+			setFormat("citekey_prefix", "");
+			setFormat("citekey_suffix", "");
+			setFormat("page_before_citekey", "");
+			setFormat("page_prefix", "");
+			setFormat("page_suffix", "");
+			break;
+		}
 		default:
 	}
+
+	// for Alfred notification
+	return citationFormat
 }
