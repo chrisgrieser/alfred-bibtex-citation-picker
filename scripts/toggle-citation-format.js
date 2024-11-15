@@ -1,8 +1,8 @@
 #!/usr/bin/env osascript -l JavaScript
-
 ObjC.import("stdlib");
 const app = Application.currentApplication();
 app.includeStandardAdditions = true;
+//──────────────────────────────────────────────────────────────────────────────
 
 /**
  * @param {string} envVar
@@ -17,11 +17,14 @@ function setFormat(envVar, newValue) {
 }
 
 /** @type {AlfredRun} */
-// rome-ignore lint/correctness/noUnusedVariables: Alfred run
+// biome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run(argv) {
 	const citationFormat = argv[0];
+
+	setFormat("current_citation_style", citationFormat);
+
 	switch (citationFormat) {
-		case "pandoc":
+		case "pandoc": {
 			// https://pandoc.org/MANUAL.html#citation-syntax
 			setFormat("citation_start", "[");
 			setFormat("citation_end", "]");
@@ -32,7 +35,8 @@ function run(argv) {
 			setFormat("page_prefix", ", p. ");
 			setFormat("page_suffix", "");
 			break;
-		case "org":
+		}
+		case "org": {
 			// https://orgmode.org/manual/Citations.html
 			setFormat("citation_start", "[cite:");
 			setFormat("citation_end", "]");
@@ -43,7 +47,8 @@ function run(argv) {
 			setFormat("page_prefix", ", p. ");
 			setFormat("page_suffix", "");
 			break;
-		case "multi-markdown":
+		}
+		case "multi-markdown": {
 			setFormat("citation_start", "[");
 			setFormat("citation_end", "]");
 			setFormat("citekey_delimiter", ";");
@@ -53,7 +58,8 @@ function run(argv) {
 			setFormat("page_prefix", "");
 			setFormat("page_suffix", "");
 			break;
-		case "latex":
+		}
+		case "latex": {
 			setFormat("citation_start", "\\cite{");
 			setFormat("citation_end", "}");
 			setFormat("citekey_delimiter", ", ");
@@ -63,7 +69,8 @@ function run(argv) {
 			setFormat("page_prefix", "[");
 			setFormat("page_suffix", "]");
 			break;
-		case "wikilink":
+		}
+		case "wikilink": {
 			setFormat("citation_start", "");
 			setFormat("citation_end", "");
 			setFormat("citekey_delimiter", ", ");
@@ -73,7 +80,8 @@ function run(argv) {
 			setFormat("page_prefix", "| ");
 			setFormat("page_suffix", "");
 			break;
-		case "bracketed citekey":
+		}
+		case "bracketed citekey": {
 			setFormat("citation_start", "(");
 			setFormat("citation_end", ")");
 			setFormat("citekey_delimiter", ", ");
@@ -83,7 +91,8 @@ function run(argv) {
 			setFormat("page_prefix", ", p. ");
 			setFormat("page_suffix", "");
 			break;
-		case "tag":
+		}
+		case "tag": {
 			setFormat("citation_start", "");
 			setFormat("citation_end", "");
 			setFormat("citekey_delimiter", ", ");
@@ -93,7 +102,8 @@ function run(argv) {
 			setFormat("page_prefix", ", p. ");
 			setFormat("page_suffix", "");
 			break;
-		case "bare citekey":
+		}
+		case "bare citekey": {
 			setFormat("citation_start", "");
 			setFormat("citation_end", "");
 			setFormat("citekey_delimiter", ", ");
@@ -103,7 +113,8 @@ function run(argv) {
 			setFormat("page_prefix", ", ");
 			setFormat("page_suffix", "");
 			break;
-		case "eta":
+		}
+		case "eta": {
 			setFormat("citation_start", "{% cite ");
 			setFormat("citation_end", " --prefix %}");
 			setFormat("citekey_delimiter", "; ");
@@ -113,7 +124,8 @@ function run(argv) {
 			setFormat("page_prefix", ", p. ");
 			setFormat("page_suffix", "");
 			break;
-		case "iA Writer":
+		}
+		case "iA Writer": {
 			setFormat("citation_start", "[");
 			setFormat("citation_end", "]");
 			setFormat("citekey_delimiter", "; ");
@@ -123,10 +135,7 @@ function run(argv) {
 			setFormat("page_prefix", ", p. ");
 			setFormat("page_suffix", "");
 			break;
+		}
 		default:
-			app.openLocation(
-				"https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/README.md#further-format-customization",
-			);
-			break;
 	}
 }
