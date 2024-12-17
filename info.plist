@@ -2932,21 +2932,21 @@ to set a hotkey for adding DOI/ISBN</string>
 	<key>variables</key>
 	<dict>
 		<key>_format_citation_end</key>
-		<string></string>
+		<string>]</string>
 		<key>_format_citation_start</key>
-		<string></string>
+		<string>[</string>
 		<key>_format_citekey_delimiter</key>
-		<string></string>
+		<string>; </string>
 		<key>_format_citekey_prefix</key>
-		<string></string>
+		<string>@</string>
 		<key>_format_citekey_suffix</key>
 		<string></string>
 		<key>_format_current_citation_style</key>
-		<string>formatted single entry</string>
+		<string>pandoc</string>
 		<key>_format_page_before_citekey</key>
-		<string></string>
+		<string>false</string>
 		<key>_format_page_prefix</key>
-		<string></string>
+		<string>, p. </string>
 		<key>_format_page_suffix</key>
 		<string></string>
 	</dict>

@@ -24,7 +24,8 @@ function run(argv) {
 		app.pathTo("home folder") + "/Library/Application Support/obsidian/obsidian.json";
 	const vaults = JSON.parse(app.read(obsidianJsonFilePath)).vaults;
 	const isFileInObsidianVault = Object.values(vaults).some((v) =>
-		literatureNotePath.startsWith(v.path),
+		// lowercase comparison, since macOS filesystem is case-insensitive
+		literatureNotePath.toLowerCase().startsWith(v.path.toLowerCase()),
 	);
 
 	if (isFileInObsidianVault) {
