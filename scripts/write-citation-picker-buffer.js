@@ -174,12 +174,12 @@ function bibtexParse(rawBibtexStr) {
 			const properties = propertyStr.trim().split(/,(?=\s*[\w-]+\s*=)/);
 
 			for (const line of properties) {
-				// GUARD erroneous BibTeX formatting, empty lines, etc.
-				if (!line.includes("=")) continue;
+				const equalSignPos = line.indexOf("=");
+				if (equalSignPos === -1) continue; // GUARD erroneous BibTeX formatting, empty lines, etc.
 
-				const field = line.split("=")[0].trim().toLowerCase();
+				const field = line.slice(0, equalSignPos).trim().toLowerCase();
 				const value = line
-					.split("=")[1]
+					.slice(equalSignPos + 1)
 					.replace(/{|}|,$/g, "") // remove TeX escaping
 					.trim();
 
