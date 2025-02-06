@@ -46,9 +46,10 @@ function ensureUniqueCitekey(citekey, libraryPath) {
 /**
  * @param {string} authors all authors in one string joined with " and "
  * @param {number} year
+ * @param {number} origyear
  */
-function generateCitekey(authors, year) {
-	const yearStr = year ? year.toString() : "NY";
+function generateCitekey(authors, year, origyear) {
+	const yearStr = (origyear || year || "NY").toString();
 
 	const lastNameArr = [];
 	if (authors) {
@@ -78,6 +79,7 @@ function generateCitekey(authors, year) {
  * @param {string} input
  * @return {Record<string, any>|string} entryJson or error message
  */
+// biome-ignore lint/complexity/noExcessiveCognitiveComplexity: okay here
 function inputToEntryJson(input) {
 	const entry = {};
 
@@ -227,7 +229,7 @@ function run(argv) {
 	if (entry.pages) entry.pages = entry.pages.replace(/(\d+)[^\d]+?(\d+)/, "$1--$2"); // double-dash
 
 	// citekey
-	let citekey = generateCitekey(entry.author, entry.year);
+	let citekey = generateCitekey(entry.author, entry.year, entry.origyear);
 	citekey = ensureUniqueCitekey(citekey, libraryPath);
 
 	// JSON -> bibtex & Write

@@ -27,6 +27,7 @@ class BibtexEntry {
 		this.citekey = ""; // without "@"
 		this.title = "";
 		this.year = ""; // as string since no calculations are made
+		this.origyear = ""; // as string since no calculations are made
 		this.url = "";
 		this.booktitle = "";
 		this.journal = "";
@@ -158,6 +159,7 @@ function bibtexParse(rawBibtexStr) {
 	const bibtexEntryArray = bibtexDecode(rawBibtexStr)
 		.split(/^@/m) // split by `@` from citekeys
 		.slice(1) // first element is other stuff before first entry
+		// biome-ignore lint/complexity/noExcessiveCognitiveComplexity: TODO
 		.reduce((/** @type {BibtexEntry[]} */ acc, rawEntryStr) => {
 			const [_, category, citekey, propertyStr] =
 				rawEntryStr.trim().match(/^(.*?){(.*?),(.*)}$/s) || [];
@@ -199,6 +201,10 @@ function bibtexParse(rawBibtexStr) {
 					case "year": {
 						const yearDigits = value.match(/\d{4}/);
 						if (yearDigits) entry.year = yearDigits[0]; // edge case of BibTeX files with wrong years
+						break;
+					}
+					case "origyear": {
+						entry.origyear = value;
 						break;
 					}
 					case "keywords": {
@@ -302,11 +308,12 @@ function run() {
 	 * @param {BibtexEntry} entry
 	 * @param {"first"|"second"} whichLibrary
 	 */
+	// biome-ignore lint/complexity/noExcessiveCognitiveComplexity: okay here
 	function convertToAlfredItems(entry, whichLibrary) {
 		const emojis = [];
 		// biome-ignore format: too long
 		const {
-			title, url, citekey, keywords, icon, journal, volume, issue, booktitle,
+			title, url, citekey, keywords, icon, journal, volume, issue, booktitle, origyear,
 			author, editor, year, abstract, primaryNamesEtAlString, primaryNames, attachment
 		} = entry;
 		const isFirstLibrary = whichLibrary === "first";
@@ -395,10 +402,13 @@ function run() {
 		// // Indicate 2nd library (this set via .map thisAry)
 		const libraryIndicator = isFirstLibrary ? "" : secondLibraryIcon;
 
+		// year
+		const displayYear = origyear ? `${year} [${origyear}]` : year;
+
 		return {
 			title: libraryIndicator + shorterTitle,
 			autocomplete: primaryNames[0],
-			subtitle: namesToDisplay + year + collectionSubtitle + "   " + emojis.join(" "),
+			subtitle: namesToDisplay + displayYear + collectionSubtitle + "   " + emojis.join(" "),
 			match: alfredMatcher,
 			arg: citekey,
 			icon: { path: iconPath },
