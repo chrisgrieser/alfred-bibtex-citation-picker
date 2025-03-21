@@ -25,22 +25,22 @@ Mode](https://orgmode.org/manual/Citations.html), any various more formats.
   short queries, sorting recently used entries to the top, …
 - __Simple installation:__ Just enter the path to your `.bib` file, and you are
   ready to go.
-- __Blazingly fast:__ Considerably quicker than any other citation picker (~200
-  ms to fully reload a library with ~4000 entries).
+- __Blazingly fast:__ Considerably quicker than any other citation picker
+  (~200ms to fully reload a library with ~4000 entries).
 
 ### Advanced features
 - __Citation actions:__ Paste single-entry bibliographies, open URLs,
   open or create literature notes, attach PDFs, search for `.csl` files online,
   and more.
-- __Lightweight reference management:__ Automatically rename and file PDFs, add or
-  remove entries.
+- __Lightweight reference management:__ Automatically rename and file PDFs, add,
+  or remove entries.
 - __Quickly add new entries:__ Select a DOI or ISBN and add them directly to
   your BibTeX library via hotkey.
 - __Support for two libraries:__ You can pick citations from two BibTeX Library
   files at the same time.
 - __Obsidian integration:__ When located in your [Obsidian
-  Vault](https://obsidian.md/), literature notes are automatically opened/created
-  in Obsidian instead of the default markdown app.
+  Vault](https://obsidian.md/), literature notes are automatically
+  opened/created in Obsidian instead of the default Markdown app.
 
 ## Table of contents
 
@@ -48,18 +48,18 @@ Mode](https://orgmode.org/manual/Citations.html), any various more formats.
 
 - [Installation](#installation)
 - [Basic usage](#basic-usage)
-  * [Search](#search)
-  * [Citation actions](#citation-actions)
-  * [URL actions](#url-actions)
-  * [Icon meanings](#icon-meanings)
+	* [Search](#search)
+	* [Citation actions](#citation-actions)
+	* [URL actions](#url-actions)
+	* [Icon meanings](#icon-meanings)
 - [Changing the citation format](#changing-the-citation-format)
 - [Advanced usage](#advanced-usage)
-  * [Bibliography actions](#bibliography-actions)
-  * [Add new entries](#add-new-entries)
-  * [Literature note actions](#literature-note-actions)
-  * [PDF management actions](#pdf-management-actions)
-  * [Link preview](#link-preview)
-  * [Auxiliary features](#auxiliary-features)
+	* [Bibliography actions](#bibliography-actions)
+	* [Add new entries](#add-new-entries)
+	* [Literature note actions](#literature-note-actions)
+	* [PDF management actions](#pdf-management-actions)
+	* [Link preview](#link-preview)
+	* [Auxiliary features](#auxiliary-features)
 - [Cite this software project](#cite-this-software-project)
 - [Credits](#credits)
 - [About the developer](#about-the-developer)
@@ -209,7 +209,7 @@ specified in your workflow settings.
   been added by the auto-file feature. `pdf grieser`, for example, displays only
   entries from the author "Grieser" with PDFs. Can be combined with other
   queries (see: [smart queries](#search)).
-- A `📎` indicates that the BibTeX entry has an `attachment` or `file` field. You
+- A `📎` indicates that the BibTeX entry has a `field` or `attachment` field. You
   can use <kbd>⌃</kbd><kbd>⌥</kbd><kbd>⌘</kbd><kbd>⏎</kbd> to open the
   attachment. If there are multiple attachments, the first one is opened.
 
@@ -256,14 +256,9 @@ compatibility. If you are interested in this subject, feel free to get in touch.
 
 *For bug reports and features requests, please use the [GitHub issue tracker](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues/new/choose).*
 
-<a href='https://ko-fi.com/Y8Y86SQ91' target='_blank'>
-<img
-	height='36'
-	style='border:0px;height:36px;'
-	src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3'
-	border='0'
-	alt='Buy Me a Coffee at ko-fi.com'
-/></a>
+<a href='https://ko-fi.com/Y8Y86SQ91' target='_blank'> <img height='36'
+style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3'
+border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
 <!-- vale Google.FirstPerson = YES -->
 
