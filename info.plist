@@ -2162,7 +2162,7 @@ file](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/CI
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>note</key>
-			<string>Delete Entry</string>
+			<string>delete entry</string>
 			<key>xpos</key>
 			<real>1415</real>
 			<key>ypos</key>
@@ -2339,7 +2339,7 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>note</key>
-			<string>open/create Literature Note</string>
+			<string>open/create literature note</string>
 			<key>xpos</key>
 			<real>1210</real>
 			<key>ypos</key>
@@ -2519,7 +2519,7 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>note</key>
-			<string>Open Entry</string>
+			<string>open entry</string>
 			<key>xpos</key>
 			<real>1210</real>
 			<key>ypos</key>
@@ -2539,7 +2539,7 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>note</key>
-			<string>Citation Picker</string>
+			<string>Citation picker</string>
 			<key>xpos</key>
 			<real>525</real>
 			<key>ypos</key>
@@ -2665,7 +2665,7 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>description</key>
 			<string>The .bib file containing your library.</string>
 			<key>label</key>
-			<string>BibTeX Library Path</string>
+			<string>BibTeX library path</string>
 			<key>type</key>
 			<string>filepicker</string>
 			<key>variable</key>
@@ -2686,7 +2686,7 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>description</key>
 			<string>An optional, second .bib file.</string>
 			<key>label</key>
-			<string>2nd Library Path</string>
+			<string>2nd library path</string>
 			<key>type</key>
 			<string>filepicker</string>
 			<key>variable</key>
@@ -2705,7 +2705,7 @@ to set a hotkey for adding DOI/ISBN</string>
 				<true/>
 			</dict>
 			<key>description</key>
-			<string>Keyword for the Citation Picker. Alternatively, the Citation Picker can also be triggered via hotkey.</string>
+			<string>Keyword for the citation picker. Alternatively, the citation picker can also be triggered via hotkey.</string>
 			<key>label</key>
 			<string>Keyword</string>
 			<key>type</key>
@@ -2749,7 +2749,7 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>description</key>
 			<string>Folder containing your literature notes (as markdown files). Only required for indicating literature notes via icon, and for creating/opening literature notes with `⌥⌃↵`.</string>
 			<key>label</key>
-			<string>Literature Note Folder</string>
+			<string>Literature note folder</string>
 			<key>type</key>
 			<string>filepicker</string>
 			<key>variable</key>
@@ -2768,9 +2768,9 @@ to set a hotkey for adding DOI/ISBN</string>
 				<false/>
 			</dict>
 			<key>description</key>
-			<string>Folder where downloaded citation styles will be saved. Only required for downloading citation styles via `scp` → `Citation Styles` or via `csl`.</string>
+			<string>Folder where downloaded citation styles will be saved. Only required for downloading citation styles via `scp` → `Citation styles` or via `csl`.</string>
 			<key>label</key>
-			<string>Citation Styles Folder</string>
+			<string>Citation styles folder</string>
 			<key>type</key>
 			<string>filepicker</string>
 			<key>variable</key>
@@ -2810,7 +2810,7 @@ to set a hotkey for adding DOI/ISBN</string>
 				</array>
 			</dict>
 			<key>description</key>
-			<string>App to open entries in when using `⇧↵`. Reference Managers will reveal the entry, while Text Editors will open the .bib file at the line containing the entry. ("default app" does not support opening at a specific line.)</string>
+			<string>App to open entries in when using `⇧↵`. Reference managers will reveal the entry, while text editors will open the .bib file at the line containing the entry. ("default app" does not support opening at a specific line.)</string>
 			<key>label</key>
 			<string>Open entries in…</string>
 			<key>type</key>
@@ -2826,15 +2826,15 @@ to set a hotkey for adding DOI/ISBN</string>
 				<key>pairs</key>
 				<array>
 					<array>
-						<string>Full Years</string>
+						<string>Full years</string>
 						<string>full</string>
 					</array>
 					<array>
-						<string>Short Years</string>
+						<string>Short years</string>
 						<string>short</string>
 					</array>
 					<array>
-						<string>Short &amp; Full Years</string>
+						<string>Short &amp; full years</string>
 						<string>short+full</string>
 					</array>
 				</array>
@@ -2842,7 +2842,7 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>description</key>
 			<string>Given the year "1990", short years will only match "90".</string>
 			<key>label</key>
-			<string>Match Behavior</string>
+			<string>Match behavior</string>
 			<key>type</key>
 			<string>popupbutton</string>
 			<key>variable</key>
@@ -2896,7 +2896,7 @@ to set a hotkey for adding DOI/ISBN</string>
 				<key>required</key>
 				<false/>
 				<key>text</key>
-				<string>Copy Citation</string>
+				<string>Copy citation</string>
 			</dict>
 			<key>description</key>
 			<string>Copy the Pandoc citation to the clipboard.</string>
