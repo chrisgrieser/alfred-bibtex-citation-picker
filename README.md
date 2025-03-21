@@ -4,7 +4,8 @@
 ![Latest release](https://img.shields.io/github/v/release/chrisgrieser/alfred-bibtex-citation-picker?label=Latest%20Release&style=plastic)
 
 A citation picker and lightweight reference manager for
-[Alfred](https://www.alfredapp.com/). Uses BibTeX files and supports [Pandoc Markdown](https://pandoc.org/MANUAL.html#citation-syntax),
+[Alfred](https://www.alfredapp.com/). Uses `.bib` files and supports [Pandoc
+Markdown](https://pandoc.org/MANUAL.html#citation-syntax),
 [Multi-Markdown](https://fletcher.github.io/MultiMarkdown-6/syntax/citation.html),
 [LaTeX](https://www.overleaf.com/learn/latex/Biblatex_citation_styles), [Org
 Mode](https://orgmode.org/manual/Citations.html), any various more formats.

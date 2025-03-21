@@ -754,7 +754,7 @@
 	<key>createdby</key>
 	<string>Chris Grieser</string>
 	<key>description</key>
-	<string>BibTeX Citation Picker for Pandoc Citation Syntax</string>
+	<string>Citation picker and lightweight references manager for `.bib` files</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
