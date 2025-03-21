@@ -2800,10 +2800,6 @@ to set a hotkey for adding DOI/ISBN</string>
 						<string>VS Code</string>
 					</array>
 					<array>
-						<string>neovim &amp; alacritty</string>
-						<string>neovim &amp; alacritty</string>
-					</array>
-					<array>
 						<string>default app for .bib files</string>
 						<string>default app for .bib files</string>
 					</array>
