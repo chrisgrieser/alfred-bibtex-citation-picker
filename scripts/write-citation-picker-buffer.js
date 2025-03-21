@@ -244,7 +244,7 @@ function run() {
 	const secondLibraryIcon = "2️⃣ ";
 	const litNoteFilterStr = "*";
 	const pdfFilterStr = "pdf";
-	const alfredBarWidth = Number.parseInt($.getenv("alfred_bar_width") || "60");
+	const alfredBarWidth = Number.parseInt($.getenv("alfred_bar_width"));
 
 	const matchAuthorsInEtAl = $.getenv("match_authors_in_etal") === "1";
 	const matchShortYears = $.getenv("match_year_type").includes("short");

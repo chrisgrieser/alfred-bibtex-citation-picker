@@ -2910,13 +2910,17 @@ to set a hotkey for adding DOI/ISBN</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>default</key>
-				<string>70</string>
-				<key>placeholder</key>
-				<string>55</string>
-				<key>required</key>
+				<key>defaultvalue</key>
+				<integer>70</integer>
+				<key>markercount</key>
+				<integer>21</integer>
+				<key>maxvalue</key>
+				<integer>150</integer>
+				<key>minvalue</key>
+				<integer>50</integer>
+				<key>onlystoponmarkers</key>
 				<true/>
-				<key>trim</key>
+				<key>showmarkers</key>
 				<true/>
 			</dict>
 			<key>description</key>
@@ -2924,7 +2928,7 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>label</key>
 			<string>Truncate entries at</string>
 			<key>type</key>
-			<string>textfield</string>
+			<string>slider</string>
 			<key>variable</key>
 			<string>alfred_bar_width</string>
 		</dict>
@@ -2950,8 +2954,6 @@ to set a hotkey for adding DOI/ISBN</string>
 		<key>_format_page_suffix</key>
 		<string></string>
 	</dict>
-	<key>variablesdontexport</key>
-	<array/>
 	<key>version</key>
 	<string>11.17.0</string>
 	<key>webaddress</key>
