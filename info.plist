@@ -176,6 +176,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>35F98A49-EA9E-41E0-8A81-6BBFD4D7634E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B15FCEB3-D411-49F9-BD12-2B4F4E63AC39</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>387C2AA0-E567-46B7-96C2-46E4BD95733B</key>
 		<array>
 			<dict>
@@ -496,11 +509,49 @@
 				<false/>
 			</dict>
 		</array>
+		<key>B15FCEB3-D411-49F9-BD12-2B4F4E63AC39</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9203374D-5043-4889-A74F-07A4F9E81B27</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>B35474AD-DDAA-4056-AE14-9BE2D3CFCCA0</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>E1D3B211-1CE6-4A09-B45E-7C55A61CDC06</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>B598D796-0CA2-42A8-B348-5388FEA9A66E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>35F98A49-EA9E-41E0-8A81-6BBFD4D7634E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>3750D0A8-1AEB-4164-B057-CA2A177F213B</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>8B51C1A0-EAD2-457B-A532-6CC16C7F015E</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -689,7 +740,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>8B51C1A0-EAD2-457B-A532-6CC16C7F015E</string>
+				<string>B598D796-0CA2-42A8-B348-5388FEA9A66E</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -762,12 +813,42 @@
 	<key>objects</key>
 	<array>
 		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Enter page number(s)</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.junction</string>
+			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>B35474AD-DDAA-4056-AE14-9BE2D3CFCCA0</string>
+			<string>35F98A49-EA9E-41E0-8A81-6BBFD4D7634E</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>9203374D-5043-4889-A74F-07A4F9E81B27</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -859,48 +940,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>subtext</key>
-				<string>⌘ or ⌥: add another citation afterwards</string>
-				<key>text</key>
-				<string>Enter Page Number(s)</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>8B51C1A0-EAD2-457B-A532-6CC16C7F015E</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>scripts/page-number-inserter.sh</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>E1D3B211-1CE6-4A09-B45E-7C55A61CDC06</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
@@ -917,6 +956,130 @@
 			<string>DD59F90F-8FD2-486D-A8A8-2FFA47DE45F6</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{var:_format_citation_super_prefix}{var:_format_page_prefix}{query}{var:_format_page_suffix}{var:_format_citation_start}{var:pageless_citation}{var:_format_citation_end}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>B15FCEB3-D411-49F9-BD12-2B4F4E63AC39</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:_format_page_before_citekey}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>true</string>
+						<key>outputlabel</key>
+						<string>true</string>
+						<key>uid</key>
+						<string>3750D0A8-1AEB-4164-B057-CA2A177F213B</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>false</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>B598D796-0CA2-42A8-B348-5388FEA9A66E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>B35474AD-DDAA-4056-AE14-9BE2D3CFCCA0</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>subtext</key>
+				<string>⌘ or ⌥: add another citation afterwards</string>
+				<key>text</key>
+				<string>Enter page number(s)</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>8B51C1A0-EAD2-457B-A532-6CC16C7F015E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{var:pageless_citation}{var:_format_page_prefix}{query}{var:_format_page_suffix}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>E1D3B211-1CE6-4A09-B45E-7C55A61CDC06</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>1</integer>
+				<key>focusedappvariable</key>
+				<true/>
+				<key>focusedappvariablename</key>
+				<string>focusedapp</string>
+				<key>hotkey</key>
+				<integer>6</integer>
+				<key>hotmod</key>
+				<integer>1835008</integer>
+				<key>hotstring</key>
+				<string>Y</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>2</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>3E40FE4A-DAEF-4583-AE6B-8638CCD6BEE0</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -977,92 +1140,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>scripts/page-number-inserter.sh</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>1C0964D1-AA81-478A-B406-28E96DDD9E82</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>1</integer>
-				<key>focusedappvariable</key>
-				<true/>
-				<key>focusedappvariablename</key>
-				<string>focusedapp</string>
-				<key>hotkey</key>
-				<integer>6</integer>
-				<key>hotmod</key>
-				<integer>1835008</integer>
-				<key>hotstring</key>
-				<string>Y</string>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>2</integer>
-				<key>relatedAppsMode</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>3E40FE4A-DAEF-4583-AE6B-8638CCD6BEE0</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:_format_current_citation_style}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>1</integer>
-						<key>matchstring</key>
-						<string>formatted single entry</string>
-						<key>outputlabel</key>
-						<string>regular</string>
-						<key>uid</key>
-						<string>3750D0A8-1AEB-4164-B057-CA2A177F213B</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>single entry</string>
-				<key>hideelse</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
-			<key>uid</key>
-			<string>AAFDDBD8-78E7-4FEE-8BA5-4F12FA778F76</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -1099,27 +1176,8 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<true/>
-				<key>clipboardtext</key>
-				<string>{var:_format_citation_start}{query}{var:_format_citation_end}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>CB4D33E2-A031-4542-A640-3B73D66EE39E</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
-				<string>{var:previous_citation}{query}</string>
+				<string>{var:pageless_citation}{var:_format_page_prefix}{query}{var:_format_page_suffix}</string>
 				<key>passthroughargument</key>
 				<false/>
 				<key>variables</key>
@@ -1128,24 +1186,7 @@
 			<key>type</key>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>986EF1F7-54A1-4C67-A490-4DFCC60FA328</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>{var:_format_citekey_prefix}{query}{var:_format_citekey_suffix}</string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>E451F6F1-8CE4-44B5-90E2-8B457B48C81C</string>
+			<string>1C0964D1-AA81-478A-B406-28E96DDD9E82</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1200,6 +1241,38 @@
 				<array>
 					<dict>
 						<key>inputstring</key>
+						<string>{var:_format_current_citation_style}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>1</integer>
+						<key>matchstring</key>
+						<string>formatted single entry</string>
+						<key>outputlabel</key>
+						<string>regular</string>
+						<key>uid</key>
+						<string>3750D0A8-1AEB-4164-B057-CA2A177F213B</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>single entry</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>AAFDDBD8-78E7-4FEE-8BA5-4F12FA778F76</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
 						<string></string>
 						<key>matchcasesensitive</key>
 						<false/>
@@ -1222,6 +1295,59 @@
 			<string>alfred.workflow.utility.conditional</string>
 			<key>uid</key>
 			<string>BC0E1F77-0045-40D3-845C-946E6BCFC90D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{var:_format_citation_super_prefix}{var:_format_citation_start}{query}{var:_format_citation_end}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>CB4D33E2-A031-4542-A640-3B73D66EE39E</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{var:previous_citation}{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>986EF1F7-54A1-4C67-A490-4DFCC60FA328</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{var:_format_citekey_prefix}{query}{var:_format_citekey_suffix}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>E451F6F1-8CE4-44B5-90E2-8B457B48C81C</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1260,42 +1386,6 @@
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>0F42598F-2E5E-474F-8E68-9FC22069FF39</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<true/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>83A9C045-9885-4C76-B88D-DAC01E9528C0</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>{var:_format_citekey_prefix}{query}{var:_format_citekey_suffix}</string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>A1A6DEC2-1AF1-4110-9DA9-01400A1902FF</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1372,25 +1462,38 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
 				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>scripts/paste-formatted-single-entry.sh</string>
-				<key>type</key>
-				<integer>8</integer>
+				<key>transient</key>
+				<false/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.output.clipboard</string>
 			<key>uid</key>
-			<string>AD3AD409-A1A0-4F46-9AD2-68A69650155B</string>
+			<string>83A9C045-9885-4C76-B88D-DAC01E9528C0</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{var:_format_citekey_prefix}{query}{var:_format_citekey_suffix}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>A1A6DEC2-1AF1-4110-9DA9-01400A1902FF</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1414,25 +1517,6 @@
 			<string>406E52C6-C22D-4A6F-9C4D-3FEEFA513B34</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<true/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>8C5097B2-3CE6-4055-983B-687409AB3FA2</string>
-			<key>version</key>
-			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1520,14 +1604,14 @@
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>scripts/paste-full-bibliography.sh</string>
+				<string>scripts/paste-formatted-single-entry.sh</string>
 				<key>type</key>
 				<integer>8</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>96FCE9BC-5201-4357-9B63-588F73AEF5F3</string>
+			<string>AD3AD409-A1A0-4F46-9AD2-68A69650155B</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -1635,6 +1719,25 @@ echo "$*"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>8C5097B2-3CE6-4055-983B-687409AB3FA2</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
@@ -1661,14 +1764,14 @@ echo "$*"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>scripts/open-entry.sh</string>
+				<string>scripts/paste-full-bibliography.sh</string>
 				<key>type</key>
 				<integer>8</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>AF09AE5D-C351-4190-8AA6-B1924D88B22F</string>
+			<string>96FCE9BC-5201-4357-9B63-588F73AEF5F3</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -1682,7 +1785,7 @@ echo "$*"</string>
 				<key>fixedorder</key>
 				<false/>
 				<key>items</key>
-				<string>[{"title":"Pandoc","arg":"pandoc","subtitle":"[@citekey, p. 42]"},{"title":"Formatted single entry","arg":"formatted single entry","subtitle":"in APA or the custom .csl style  ℹ️ page numbers and multiple entries not supported"},{"title":"Org Mode","arg":"org","subtitle":"[cite:@citekey, p. 42]"},{"title":"Multi-Markdown (MMD)","arg":"multi-markdown","subtitle":"[42][#citekey]"},{"title":"Latex","arg":"latex","subtitle":"\\cite{citekey}    ℹ️ page numbers not supported"},{"title":"Wikilink","arg":"wikilink","subtitle":"[[citekey]]         ℹ️ page number will become alias"},{"title":"Eta template","arg":"eta","subtitle":"{% cite citekey %}"},{"title":"iA Writer","arg":"iA Writer","subtitle":"[^citekey, p. 42]"},{"title":"Tag","arg":"tag","subtitle":"#citekey"},{"title":"Bare citekey","arg":"bare citekey","subtitle":"citekey"},{"title":"Bracketed citekey","arg":"bracketed citekey","subtitle":"(citekey)"}]</string>
+				<string>[{"title":"Pandoc","arg":"pandoc","subtitle":"[@citekey, p. 42]"},{"title":"Latex","arg":"latex","subtitle":"\\autocite[p. 42]{citekey}      ℹ️ page numbers and multiple entries not supported"},{"title":"Org Mode","arg":"org","subtitle":"[cite:@citekey, p. 42]"},{"title":"Multi-Markdown (MMD)","arg":"multi-markdown","subtitle":"[p. 42][#citekey]      ℹ️ page numbers and multiple entries not supported"},{"title":"Eta template","arg":"eta","subtitle":"{% cite citekey %}"},{"title":"Formatted single entry","arg":"formatted single entry","subtitle":"in APA or the custom .csl style      ℹ️ page numbers and multiple entries not supported"},{"title":"Wikilink","arg":"wikilink","subtitle":"[[citekey]]      ℹ️ page number will become alias"},{"title":"iA Writer","arg":"iA Writer","subtitle":"[^citekey, p. 42]"},{"title":"Tag","arg":"tag","subtitle":"#citekey"},{"title":"Bare citekey","arg":"bare citekey","subtitle":"citekey"},{"title":"Bracketed citekey","arg":"bracketed citekey","subtitle":"(citekey)"}]</string>
 				<key>matchmode</key>
 				<integer>0</integer>
 				<key>runningsubtext</key>
@@ -1734,7 +1837,7 @@ echo "$*"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>scripts/toggle-citation-format.js</string>
+				<string>scripts/set-citation-style-formatting-vars.js</string>
 				<key>type</key>
 				<integer>8</integer>
 			</dict>
@@ -1761,6 +1864,29 @@ echo "$*"</string>
 			<string>68FC61FC-44E7-43F2-856B-B1B89E83B099</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/open-entry.sh</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>AF09AE5D-C351-4190-8AA6-B1924D88B22F</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2042,16 +2168,17 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>## Workflow setup
+	<string>## ℹ️ Latex and MMD** citation formats were updated in v11.19
+You need to set them once again via `scp` and Change citation format` for the changes to take effect.
+
+---
+
+## Workflow setup
 1. Add the path to your `.bib` to the right.
 2. Set the [hotkeys](https://www.alfredapp.com/help/workflows/triggers/hotkey/).
 
 ### Set citation style
 The default citation style is *Pandoc Citations*. To switch it to LaTeX, Multi-Markdown, Org Mode, eta, [[wikilinks]], #tags, or bare citkeys use the keyword `scp` in Alfred and select `Change Citation Format`.
-
-&gt; ℹ️ 
-&gt; Due to technical restrictions, you may need to set the citation style once
-&gt; more after updates to this workflow.
 
 ---
 
@@ -2124,9 +2251,9 @@ file](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/CI
 			<key>note</key>
 			<string>open attachment</string>
 			<key>xpos</key>
-			<real>1210</real>
+			<real>1275</real>
 			<key>ypos</key>
-			<real>1315</real>
+			<real>1435</real>
 		</dict>
 		<key>0D1FD15D-6D4B-4234-AA7B-8ED1F449A45D</key>
 		<dict>
@@ -2144,9 +2271,9 @@ file](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/CI
 			<key>note</key>
 			<string>enclose page numbers in brackets &amp; add citation</string>
 			<key>xpos</key>
-			<real>1145</real>
+			<real>1255</real>
 			<key>ypos</key>
-			<real>420</real>
+			<real>540</real>
 		</dict>
 		<key>0F739BDB-D7EC-482F-9798-A9B04AF57CA9</key>
 		<dict>
@@ -2164,9 +2291,9 @@ file](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/CI
 			<key>note</key>
 			<string>delete entry</string>
 			<key>xpos</key>
-			<real>1415</real>
+			<real>1480</real>
 			<key>ypos</key>
-			<real>1725</real>
+			<real>1845</real>
 		</dict>
 		<key>113F2026-78AB-41BA-8836-6145DE94CBEF</key>
 		<dict>
@@ -2175,40 +2302,40 @@ file](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/CI
 			<key>note</key>
 			<string>open PDF</string>
 			<key>xpos</key>
-			<real>1210</real>
+			<real>1275</real>
 			<key>ypos</key>
-			<real>1180</real>
+			<real>1300</real>
 		</dict>
 		<key>1B72EC4E-33E7-4144-B43B-3037510ADA3A</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<real>1620</real>
+			<real>1685</real>
 			<key>ypos</key>
-			<real>1680</real>
+			<real>1800</real>
 		</dict>
 		<key>1C0964D1-AA81-478A-B406-28E96DDD9E82</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>note</key>
-			<string>add page number</string>
+			<string>add page number AFTER citekey &amp; add citekey</string>
 			<key>xpos</key>
-			<real>1180</real>
+			<real>1375</real>
 			<key>ypos</key>
-			<real>185</real>
+			<real>360</real>
 		</dict>
 		<key>1D828BA0-497E-4524-9E2E-06552154CAA0</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>note</key>
-			<string>add prefix &amp; suffix</string>
+			<string>enclose citekey</string>
 			<key>xpos</key>
-			<real>965</real>
+			<real>1050</real>
 			<key>ypos</key>
-			<real>150</real>
+			<real>295</real>
 		</dict>
 		<key>2D72874E-4A27-4A0C-98B3-15EFBEBE1031</key>
 		<dict>
@@ -2237,9 +2364,9 @@ file](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/CI
 			<key>note</key>
 			<string>open URL/DOI</string>
 			<key>xpos</key>
-			<real>1210</real>
+			<real>1275</real>
 			<key>ypos</key>
-			<real>1445</real>
+			<real>1565</real>
 		</dict>
 		<key>346A58DA-B1B4-4F03-8F05-20B42A4EF996</key>
 		<dict>
@@ -2248,9 +2375,18 @@ file](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/CI
 			<key>note</key>
 			<string>error</string>
 			<key>xpos</key>
-			<real>1455</real>
+			<real>1520</real>
 			<key>ypos</key>
-			<real>1120</real>
+			<real>1240</real>
+		</dict>
+		<key>35F98A49-EA9E-41E0-8A81-6BBFD4D7634E</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
+			<key>xpos</key>
+			<real>1065</real>
+			<key>ypos</key>
+			<real>15</real>
 		</dict>
 		<key>387C2AA0-E567-46B7-96C2-46E4BD95733B</key>
 		<dict>
@@ -2272,7 +2408,7 @@ to set a hotkey for the citation picker</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>20</real>
+			<real>15</real>
 		</dict>
 		<key>3E40FE4A-DAEF-4583-AE6B-8638CCD6BEE0</key>
 		<dict>
@@ -2292,9 +2428,9 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<real>1195</real>
+			<real>1260</real>
 			<key>ypos</key>
-			<real>1755</real>
+			<real>1875</real>
 		</dict>
 		<key>406E52C6-C22D-4A6F-9C4D-3FEEFA513B34</key>
 		<dict>
@@ -2341,18 +2477,18 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>note</key>
 			<string>open/create literature note</string>
 			<key>xpos</key>
-			<real>1210</real>
+			<real>1275</real>
 			<key>ypos</key>
-			<real>1580</real>
+			<real>1700</real>
 		</dict>
 		<key>5B6D763D-7B64-4EA7-BCE2-0929216BA8D2</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<real>1620</real>
+			<real>1685</real>
 			<key>ypos</key>
-			<real>1795</real>
+			<real>1915</real>
 		</dict>
 		<key>5DDAD2E1-5F9B-4181-99AB-45A86844AA87</key>
 		<dict>
@@ -2361,18 +2497,20 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>note</key>
 			<string>remove comma</string>
 			<key>xpos</key>
-			<real>1250</real>
+			<real>1375</real>
 			<key>ypos</key>
-			<real>420</real>
+			<real>540</real>
 		</dict>
 		<key>5F683C78-5D0B-4A39-B3FF-37ABA8DA0D73</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>7</integer>
+			<key>note</key>
+			<string>add next citation</string>
 			<key>xpos</key>
-			<real>1455</real>
+			<real>1580</real>
 			<key>ypos</key>
-			<real>120</real>
+			<real>265</real>
 		</dict>
 		<key>68FC61FC-44E7-43F2-856B-B1B89E83B099</key>
 		<dict>
@@ -2399,9 +2537,9 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>note</key>
 			<string>autofile</string>
 			<key>xpos</key>
-			<real>1210</real>
+			<real>1275</real>
 			<key>ypos</key>
-			<real>1040</real>
+			<real>1165</real>
 		</dict>
 		<key>8200BEAE-A1E0-48D6-85CF-AA561B6CD603</key>
 		<dict>
@@ -2426,20 +2564,20 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>note</key>
-			<string>paste without brackets</string>
+			<string>paste</string>
 			<key>xpos</key>
-			<real>1455</real>
+			<real>1580</real>
 			<key>ypos</key>
-			<real>485</real>
+			<real>605</real>
 		</dict>
 		<key>8B51C1A0-EAD2-457B-A532-6CC16C7F015E</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>xpos</key>
-			<real>915</real>
+			<real>1065</real>
 			<key>ypos</key>
-			<real>20</real>
+			<real>160</real>
 		</dict>
 		<key>8C5097B2-3CE6-4055-983B-687409AB3FA2</key>
 		<dict>
@@ -2448,18 +2586,29 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>note</key>
 			<string>paste</string>
 			<key>xpos</key>
-			<real>1405</real>
+			<real>1470</real>
 			<key>ypos</key>
-			<real>705</real>
+			<real>825</real>
+		</dict>
+		<key>9203374D-5043-4889-A74F-07A4F9E81B27</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
+			<key>note</key>
+			<string>paste</string>
+			<key>xpos</key>
+			<real>1580</real>
+			<key>ypos</key>
+			<real>15</real>
 		</dict>
 		<key>9608AE94-464B-4B17-A1CA-71855DDB207D</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<real>1555</real>
+			<real>1620</real>
 			<key>ypos</key>
-			<real>1825</real>
+			<real>1945</real>
 		</dict>
 		<key>96FCE9BC-5201-4357-9B63-588F73AEF5F3</key>
 		<dict>
@@ -2468,40 +2617,40 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>note</key>
 			<string>paste single bibliography</string>
 			<key>xpos</key>
-			<real>1210</real>
+			<real>1275</real>
 			<key>ypos</key>
-			<real>765</real>
+			<real>885</real>
 		</dict>
 		<key>986EF1F7-54A1-4C67-A490-4DFCC60FA328</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>note</key>
-			<string>finish</string>
+			<string>add previous citations</string>
 			<key>xpos</key>
-			<real>1365</real>
+			<real>1490</real>
 			<key>ypos</key>
-			<real>340</real>
+			<real>460</real>
 		</dict>
 		<key>A1A6DEC2-1AF1-4110-9DA9-01400A1902FF</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>note</key>
-			<string>add prefix &amp; suffix</string>
+			<string>enclose citekey</string>
 			<key>xpos</key>
-			<real>1145</real>
+			<real>1255</real>
 			<key>ypos</key>
-			<real>515</real>
+			<real>635</real>
 		</dict>
 		<key>AAFDDBD8-78E7-4FEE-8BA5-4F12FA778F76</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>xpos</key>
-			<real>915</real>
+			<real>1030</real>
 			<key>ypos</key>
-			<real>240</real>
+			<real>385</real>
 		</dict>
 		<key>AD3AD409-A1A0-4F46-9AD2-68A69650155B</key>
 		<dict>
@@ -2510,9 +2659,9 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>note</key>
 			<string>formatted single entry</string>
 			<key>xpos</key>
-			<real>1210</real>
+			<real>1275</real>
 			<key>ypos</key>
-			<real>630</real>
+			<real>750</real>
 		</dict>
 		<key>AF09AE5D-C351-4190-8AA6-B1924D88B22F</key>
 		<dict>
@@ -2521,18 +2670,42 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>note</key>
 			<string>open entry</string>
 			<key>xpos</key>
-			<real>1210</real>
+			<real>1275</real>
 			<key>ypos</key>
-			<real>905</real>
+			<real>1030</real>
+		</dict>
+		<key>B15FCEB3-D411-49F9-BD12-2B4F4E63AC39</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
+			<key>note</key>
+			<string>1. add page number AFTER citekey
+2. add citekey
+3. enclose citation</string>
+			<key>xpos</key>
+			<real>1255</real>
+			<key>ypos</key>
+			<real>45</real>
 		</dict>
 		<key>B35474AD-DDAA-4056-AE14-9BE2D3CFCCA0</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>xpos</key>
-			<real>1090</real>
+			<real>1255</real>
 			<key>ypos</key>
-			<real>15</real>
+			<real>155</real>
+		</dict>
+		<key>B598D796-0CA2-42A8-B348-5388FEA9A66E</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>7</integer>
+			<key>note</key>
+			<string>page before citekey?</string>
+			<key>xpos</key>
+			<real>943</real>
+			<key>ypos</key>
+			<real>85</real>
 		</dict>
 		<key>B8AEF220-7CBC-4D07-BA5F-D28094B3D4B4</key>
 		<dict>
@@ -2543,7 +2716,7 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>xpos</key>
 			<real>525</real>
 			<key>ypos</key>
-			<real>20</real>
+			<real>15</real>
 		</dict>
 		<key>BC0E1F77-0045-40D3-845C-946E6BCFC90D</key>
 		<dict>
@@ -2559,11 +2732,11 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>note</key>
-			<string>add another citation</string>
+			<string>save as previous citation</string>
 			<key>xpos</key>
-			<real>1370</real>
+			<real>1490</real>
 			<key>ypos</key>
-			<real>150</real>
+			<real>295</real>
 		</dict>
 		<key>CA8E66FF-6C89-4A85-8CCA-E8FA26727F32</key>
 		<dict>
@@ -2581,53 +2754,53 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>note</key>
-			<string>enclose in start/end formatting &amp; paste</string>
+			<string>enclose citation &amp; paste</string>
 			<key>xpos</key>
-			<real>1455</real>
+			<real>1580</real>
 			<key>ypos</key>
-			<real>310</real>
+			<real>430</real>
 		</dict>
 		<key>DD59F90F-8FD2-486D-A8A8-2FFA47DE45F6</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>note</key>
-			<string>add prefix &amp; suffix, then save</string>
+			<string>enclose citekey, then save</string>
 			<key>xpos</key>
-			<real>845</real>
+			<real>835</real>
 			<key>ypos</key>
-			<real>50</real>
+			<real>45</real>
 		</dict>
 		<key>E1D3B211-1CE6-4A09-B45E-7C55A61CDC06</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>note</key>
-			<string>add page number</string>
+			<string>add page number AFTER citekey &amp; add citekey</string>
 			<key>xpos</key>
-			<real>1180</real>
+			<real>1375</real>
 			<key>ypos</key>
-			<real>20</real>
+			<real>190</real>
 		</dict>
 		<key>E451F6F1-8CE4-44B5-90E2-8B457B48C81C</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>note</key>
-			<string>add prefix &amp; suffix</string>
+			<string>enclose citekey</string>
 			<key>xpos</key>
-			<real>1250</real>
+			<real>1375</real>
 			<key>ypos</key>
-			<real>340</real>
+			<real>460</real>
 		</dict>
 		<key>F4AE9C32-4A15-421F-A8FE-C71500135BA3</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<real>1270</real>
+			<real>1335</real>
 			<key>ypos</key>
-			<real>1725</real>
+			<real>1845</real>
 		</dict>
 		<key>FC604ACD-94BE-4F8B-B73C-8475943837C7</key>
 		<dict>
@@ -2643,9 +2816,9 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>colorindex</key>
 			<integer>1</integer>
 			<key>xpos</key>
-			<real>1600</real>
+			<real>1665</real>
 			<key>ypos</key>
-			<real>1120</real>
+			<real>1240</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
@@ -2935,6 +3108,8 @@ to set a hotkey for adding DOI/ISBN</string>
 		<string>]</string>
 		<key>_format_citation_start</key>
 		<string>[</string>
+		<key>_format_citation_super_prefix</key>
+		<string></string>
 		<key>_format_citekey_delimiter</key>
 		<string>; </string>
 		<key>_format_citekey_prefix</key>

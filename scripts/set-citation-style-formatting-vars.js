@@ -26,6 +26,7 @@ function run(argv) {
 	switch (citationFormat) {
 		case "pandoc": {
 			// https://pandoc.org/MANUAL.html#citation-syntax
+			setFormat("citation_super_prefix", "");
 			setFormat("citation_start", "[");
 			setFormat("citation_end", "]");
 			setFormat("citekey_delimiter", "; ");
@@ -38,6 +39,7 @@ function run(argv) {
 		}
 		case "org": {
 			// https://orgmode.org/manual/Citations.html
+			setFormat("citation_super_prefix", "");
 			setFormat("citation_start", "[cite:");
 			setFormat("citation_end", "]");
 			setFormat("citekey_delimiter", "; ");
@@ -49,28 +51,35 @@ function run(argv) {
 			break;
 		}
 		case "multi-markdown": {
+			// https://fletcher.github.io/MultiMarkdown-6/syntax/citation.html
+			setFormat("citation_super_prefix", "");
 			setFormat("citation_start", "[");
 			setFormat("citation_end", "]");
 			setFormat("citekey_delimiter", ";");
 			setFormat("citekey_prefix", "#");
 			setFormat("citekey_suffix", "");
-			setFormat("page_before_citekey", "true");
-			setFormat("page_prefix", "");
-			setFormat("page_suffix", "");
+			setFormat("page_before_citekey", "true"); // `true` also disallows multi-citations
+			setFormat("page_prefix", "[p. ");
+			setFormat("page_suffix", "]");
 			break;
 		}
 		case "latex": {
-			setFormat("citation_start", "\\cite{");
+			// https://www.citedrive.com/en/docs/guides/biblatex/
+			// https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues/62
+			// `citation_super_prefix` is needed, as page numbers need to come after this
+			setFormat("citation_super_prefix", "\\autocite");
+			setFormat("citation_start", "{");
 			setFormat("citation_end", "}");
 			setFormat("citekey_delimiter", ", ");
 			setFormat("citekey_prefix", "");
 			setFormat("citekey_suffix", "");
-			setFormat("page_before_citekey", "true");
-			setFormat("page_prefix", "[");
+			setFormat("page_before_citekey", "true"); // `true` also disallows multi-citations
+			setFormat("page_prefix", "[p. ");
 			setFormat("page_suffix", "]");
 			break;
 		}
 		case "wikilink": {
+			setFormat("citation_super_prefix", "");
 			setFormat("citation_start", "");
 			setFormat("citation_end", "");
 			setFormat("citekey_delimiter", ", ");
@@ -82,6 +91,7 @@ function run(argv) {
 			break;
 		}
 		case "bracketed citekey": {
+			setFormat("citation_super_prefix", "");
 			setFormat("citation_start", "(");
 			setFormat("citation_end", ")");
 			setFormat("citekey_delimiter", ", ");
@@ -93,6 +103,7 @@ function run(argv) {
 			break;
 		}
 		case "tag": {
+			setFormat("citation_super_prefix", "");
 			setFormat("citation_start", "");
 			setFormat("citation_end", "");
 			setFormat("citekey_delimiter", ", ");
@@ -104,6 +115,7 @@ function run(argv) {
 			break;
 		}
 		case "bare citekey": {
+			setFormat("citation_super_prefix", "");
 			setFormat("citation_start", "");
 			setFormat("citation_end", "");
 			setFormat("citekey_delimiter", ", ");
@@ -115,6 +127,7 @@ function run(argv) {
 			break;
 		}
 		case "eta": {
+			setFormat("citation_super_prefix", "");
 			setFormat("citation_start", "{% cite ");
 			setFormat("citation_end", " --prefix %}");
 			setFormat("citekey_delimiter", "; ");
@@ -126,6 +139,7 @@ function run(argv) {
 			break;
 		}
 		case "iA Writer": {
+			setFormat("citation_super_prefix", "");
 			setFormat("citation_start", "[");
 			setFormat("citation_end", "]");
 			setFormat("citekey_delimiter", "; ");
@@ -139,6 +153,7 @@ function run(argv) {
 		case "formatted single entry": {
 			// Uses separate module for pasting text. Values here set to empty
 			// string just for clarity that they aren't used.
+			setFormat("citation_super_prefix", "");
 			setFormat("citation_start", "");
 			setFormat("citation_end", "");
 			setFormat("citekey_delimiter", "");
@@ -153,5 +168,5 @@ function run(argv) {
 	}
 
 	// for Alfred notification
-	return citationFormat
+	return citationFormat;
 }
