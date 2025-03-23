@@ -2175,10 +2175,14 @@ You need to set them once again via `scp` and Change citation format` for the ch
 
 ## Workflow setup
 1. Add the path to your `.bib` to the right.
-2. Set the [hotkeys](https://www.alfredapp.com/help/workflows/triggers/hotkey/).
+2. Select your citation format. The default is *Pandoc Citations*. To switch to
+   another format like LaTeX, Multi-Markdown, org mode, eta, \[\[wikilinks\]\],
+   or #tags use the keyword `scp` in Alfred and select `Change citation format`.
+3. Use the citation picker via the Alfred keyword `cc`, or set a
+   [hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) for the
+   citation picker by double-clicking the respective field in the workflow
+   window.
 
-### Set citation style
-The default citation style is *Pandoc Citations*. To switch it to LaTeX, Multi-Markdown, Org Mode, eta, [[wikilinks]], #tags, or bare citkeys use the keyword `scp` in Alfred and select `Change Citation Format`.
 
 ---
 
@@ -2857,9 +2861,9 @@ to set a hotkey for adding DOI/ISBN</string>
 				<false/>
 			</dict>
 			<key>description</key>
-			<string>An optional, second .bib file.</string>
+			<string>An optional, 2nd library file.</string>
 			<key>label</key>
-			<string>2nd library path</string>
+			<string></string>
 			<key>type</key>
 			<string>filepicker</string>
 			<key>variable</key>
@@ -2899,9 +2903,9 @@ to set a hotkey for adding DOI/ISBN</string>
 				<false/>
 			</dict>
 			<key>description</key>
-			<string>Folder containing your PDFs. Only required for indicating PDFs via icons, opening them via `Hyper↵`, or auto-filing PDFs via  with `fn↵`. When left empty, `Hyper↵` tries to fall back to the PDF listed in the bibtex file under the key `file`.</string>
+			<string>PDF Folder. Only required for indicating PDFs via icons, opening them via `Hyper↵`, or auto-filing PDFs via  with `fn↵`. When left empty, `Hyper↵` tries to fall back to the PDF listed in the bibtex file under the key `file`.</string>
 			<key>label</key>
-			<string>PDF Folder</string>
+			<string>Folders</string>
 			<key>type</key>
 			<string>filepicker</string>
 			<key>variable</key>
@@ -2920,9 +2924,9 @@ to set a hotkey for adding DOI/ISBN</string>
 				<false/>
 			</dict>
 			<key>description</key>
-			<string>Folder containing your literature notes (as markdown files). Only required for indicating literature notes via icon, and for creating/opening literature notes with `⌥⌃↵`.</string>
+			<string>Literature note folder. Literature notes need to be saves als `.md` files. Only required for indicating literature notes via icon, and for creating/opening literature notes with `⌥⌃↵`.</string>
 			<key>label</key>
-			<string>Literature note folder</string>
+			<string></string>
 			<key>type</key>
 			<string>filepicker</string>
 			<key>variable</key>
@@ -2941,9 +2945,9 @@ to set a hotkey for adding DOI/ISBN</string>
 				<false/>
 			</dict>
 			<key>description</key>
-			<string>Folder where downloaded citation styles will be saved. Only required for downloading citation styles via `scp` → `Citation styles` or via `csl`.</string>
+			<string>Citation styles folder where downloaded citation styles will be saved. Only required for downloading citation styles via `scp` → `Citation styles` or via the keyword `csl`.</string>
 			<key>label</key>
-			<string>Citation styles folder</string>
+			<string></string>
 			<key>type</key>
 			<string>filepicker</string>
 			<key>variable</key>
@@ -3056,25 +3060,6 @@ to set a hotkey for adding DOI/ISBN</string>
 			<string>filepicker</string>
 			<key>variable</key>
 			<string>csl_for_pandoc</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>default</key>
-				<false/>
-				<key>required</key>
-				<false/>
-				<key>text</key>
-				<string>Copy citation</string>
-			</dict>
-			<key>description</key>
-			<string>Copy the Pandoc citation to the clipboard.</string>
-			<key>label</key>
-			<string>On adding new entries</string>
-			<key>type</key>
-			<string>checkbox</string>
-			<key>variable</key>
-			<string>copy_citation_on_adding_entry</string>
 		</dict>
 		<dict>
 			<key>config</key>

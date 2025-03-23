@@ -8,7 +8,7 @@ A citation picker and lightweight reference manager for
 Markdown](https://pandoc.org/MANUAL.html#citation-syntax),
 [Multi-Markdown](https://fletcher.github.io/MultiMarkdown-6/syntax/citation.html),
 [LaTeX](https://www.overleaf.com/learn/latex/Biblatex_citation_styles), [Org
-Mode](https://orgmode.org/manual/Citations.html), any various more formats.
+Mode](https://orgmode.org/manual/Citations.html), and various more formats.
 
 <img width="1106" alt="showcase" src="https://github.com/chrisgrieser/alfred-bibtex-citation-picker/assets/73286100/c16c0621-ca62-4f05-909b-c2acd602feb1">
 
@@ -69,7 +69,10 @@ Mode](https://orgmode.org/manual/Citations.html), any various more formats.
 ## Installation
 1. [Download the latest release](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/releases/latest).
 2. Enter the BibTeX library path.
-3. Use the citation picker via the Alfred keyword `ct`, or set a
+3. Select your citation format. The default is *Pandoc Citations*. To switch to
+   another format like LaTeX, Multi-Markdown, org mode, eta, \[\[wikilinks\]\],
+   or #tags use the keyword `scp` in Alfred and select `Change citation format`.
+4. Use the citation picker via the Alfred keyword `cc`, or set a
    [hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) for the
    citation picker by double-clicking the respective field in the workflow
    window.

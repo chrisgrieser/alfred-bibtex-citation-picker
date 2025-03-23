@@ -236,13 +236,6 @@ function run(argv) {
 	const entryAsBibTex = json2bibtex(entry, citekey);
 	appendToFile(entryAsBibTex, libraryPath);
 
-	// Copy Citation
-	const copyCitation = $.getenv("copy_citation_on_adding_entry") === "1";
-	if (copyCitation) {
-		const pandocCitation = `[@${citekey}]`;
-		app.setTheClipboardTo(pandocCitation);
-	}
-
 	delay(0.1); // delay to ensure the file is written
 	return citekey; // pass for opening function
 }
