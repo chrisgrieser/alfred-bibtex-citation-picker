@@ -3,22 +3,22 @@
 ![Alfred gallery downloads](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchrisgrieser%2F.config%2Frefs%2Fheads%2Fmain%2FAlfred.alfredpreferences%2Falfred-workflow-download-count.yaml&query=alfred-bibtex-citation-picker&style=plastic&logo=alfred&label=Gallery%20Downloads&color=%235C1F87)
 ![Latest release](https://img.shields.io/github/v/release/chrisgrieser/alfred-bibtex-citation-picker?label=Latest%20Release&style=plastic)
 
-A citation picker and lightweight reference manager for
-[Alfred](https://www.alfredapp.com/). Uses `.bib` files and supports [Pandoc
-Markdown](https://pandoc.org/MANUAL.html#citation-syntax),
+A smart citation picker and lightweight reference manager for
+[Alfred](https://www.alfredapp.com/). Uses `.bib` files and supports
+[Pandoc](https://pandoc.org/MANUAL.html#citation-syntax),
 [Multi-Markdown](https://fletcher.github.io/MultiMarkdown-6/syntax/citation.html),
-[LaTeX](https://www.overleaf.com/learn/latex/Biblatex_citation_styles), [Org
-Mode](https://orgmode.org/manual/Citations.html), and various more formats.
+[LaTeX](https://www.overleaf.com/learn/latex/Biblatex_citation_styles), [org
+mode](https://orgmode.org/manual/Citations.html), and various other formats.
 
 <img width="1106" alt="showcase" src="https://github.com/chrisgrieser/alfred-bibtex-citation-picker/assets/73286100/c16c0621-ca62-4f05-909b-c2acd602feb1">
 
 ## Feature overview
 
 ### Core features
-- Inserts __Pandoc Citation syntax__ (`[@citekey]`), supporting page numbers &
+- Inserts __Pandoc citation syntax__ (`[@citekey]`), supporting page numbers &
   multiple citations (`[@citekey, p. 23; @citekey, p. 42]`). Can also be
-  configured to use __LaTeX__, __Multi-Markdown__, __eta templates__, __Org
-  Mode__, `[[wikilinks]]`, `#tags`, or `bare citkeys` as citation format.
+  configured to use __LaTeX__, __Multi-Markdown__, __eta templates__, __org
+  mode__, `[[wikilinks]]`, `#tags`, or `bare citkeys` as citation format.
 - __App-independent:__ Works system-wide, in every text field of every app.
 - __Smart search:__ Search for citekeys, authors, title, publication, keywords
   (tags), include or exclude authors in *et al.*, tab-completion,
@@ -26,7 +26,7 @@ Mode](https://orgmode.org/manual/Citations.html), and various more formats.
 - __Simple installation:__ Just enter the path to your `.bib` file, and you are
   ready to go.
 - __Blazingly fast:__ Considerably quicker than any other citation picker
-  (~200ms to fully reload a library with ~4000 entries).
+  (200 ms to fully reload a library with 4000 entries).
 
 ### Advanced features
 - __Citation actions:__ Paste single-entry bibliographies, open URLs,
@@ -262,8 +262,6 @@ compatibility. If you are interested in this subject, feel free to get in touch.
 <a href='https://ko-fi.com/Y8Y86SQ91' target='_blank'> <img height='36'
 style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3'
 border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
-
-<!-- vale Google.FirstPerson = YES -->
 
 [^1]: `Hyper` is an artificial "fifth" modifier key equal to `⌘⌥⌃⇧`, and can be
 	created using apps like [Karabiner
