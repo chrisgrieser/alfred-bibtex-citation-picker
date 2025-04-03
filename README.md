@@ -187,7 +187,7 @@ formats](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main
 ### Literature note actions
 - The citation picker looks in the folder specified in the workflow settings for
   files that are *exactly* named like the citekey, optionally followed by an
-  underscore `_` and some text, for example: `{citekey}.md` or
+  underscore `_` and some text. For example: `{citekey}.md` or
   `{citekey}_{title}.md`. The citekey itself must not contain underscores, and
   the filename must not include the `@`.
 - Entries that have such a literature note is indicated by a `📓`.
@@ -203,16 +203,21 @@ formats](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main
 ### PDF management actions
 The following features require that all your PDFs are located in the folder
 specified in your workflow settings.
-- The `📕` indicates that the entry already has an associated PDF at that location.
+- The citation picker looks in the folder specified in the workflow settings for
+  PDFs that are *exactly* named like the citekey, optionally followed by an
+  underscore `_` and some text. For example: `{citekey}.pdf` or
+  `{citekey}_{title}.pdf`. The citekey itself must not contain underscores, and
+  the filename must not include the `@`.
+- The `📕` indicates that the entry already has an associated PDF at that
+  location.
 - <kbd>Hyper</kbd><kbd>⏎</kbd>[^1]: If the entry has an associated PDF file,
-  open it with the default PDF reader. The citekey must not contain an
-  underscore (`_`). If the PDF folder setting is left empty, tries to open a PDF
-  file listed under the `file` key in the BibTeX file.
+  open it with the default PDF reader. If the PDF folder setting is left empty,
+  tries to open a PDF file listed under the `file` key in the BibTeX file.
 - Add `pdf` to any search query to filter only for entries with PDFs that have
   been added by the auto-file feature. `pdf grieser`, for example, displays only
   entries from the author "Grieser" with PDFs. Can be combined with other
   queries (see: [smart queries](#search)).
-- A `📎` indicates that the BibTeX entry has a `field` or `attachment` field. You
+- A `📎` indicates that the BibTeX entry has a `file` or `attachment` field. You
   can use <kbd>⌃</kbd><kbd>⌥</kbd><kbd>⌘</kbd><kbd>⏎</kbd> to open the
   attachment. If there are multiple attachments, the first one is opened.
 
