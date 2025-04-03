@@ -159,9 +159,9 @@ formats](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main
 ## Advanced usage
 
 ### Bibliography actions
-- <kbd>⇧</kbd><kbd>⏎</kbd>: Reveal the entry in Zotero, Neovim, BibDesk, VS
-  Code, or Sublime Text, depending on the setting in the workflow configuration.
-  (Note that this does not work for the secondary library.)
+- <kbd>⇧</kbd><kbd>⏎</kbd>: Reveal the entry in Zotero, Neovim, VS Code,
+  BibDesk, or Sublime Text, depending on the setting in the workflow
+  configuration. (Note that this does not work for the secondary library.)
 - <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⏎</kbd>: Paste the full bibliographic entry.
 	* Requires [Pandoc](https://pandoc.org/installing.html).
 	* The used citation style can be customized in the workflow configuration.
@@ -257,7 +257,7 @@ digital economy. For my PhD project, I investigate the governance of the app
 economy and how software ecosystems manage the tension between innovation and
 compatibility. If you are interested in this subject, feel free to get in touch.
 
-- [Academic Website](https://chris-grieser.de/)
+- [Academic website](https://chris-grieser.de/)
 - [ResearchGate](https://www.researchgate.net/profile/Christopher-Grieser)
 - [Mastodon](https://pkm.social/@pseudometa)
 - [LinkedIn](https://www.linkedin.com/in/christopher-grieser-ba693b17a/)
