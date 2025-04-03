@@ -285,9 +285,7 @@ function run() {
 			.doShellScript(`find "${litNoteFolder}" -type f -name "*.md"`)
 			.split("\r")
 			.map((/** @type {string} */ filepath) => {
-				return filepath
-					.replace(/.*\/(.*)\.md/, "$1") // only basename w/o ext
-					.replace(/(_[^_]*$)/, ""); // INFO part before underscore, this method does not work for citkeys which contain an underscore though...
+				return filepath.replace(/.*\/(.*)\.md/, "$1") // only basename w/o ext
 			});
 	}
 
@@ -298,7 +296,7 @@ function run() {
 			.map((/** @type {string} */ filepath) => {
 				return filepath
 					.replace(/.*\/(.*)\.pdf$/, "$1") // only basename w/o ext
-					.replace(/(_[^_]*$)/, ""); // INFO part before underscore, this method does not work for citkeys which contain an underscore though...
+					.replace(/(_[^_]*$)/, ""); // part before underscore
 			});
 	}
 

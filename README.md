@@ -186,19 +186,16 @@ formats](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main
 
 ### Literature note actions
 - The citation picker looks in the folder specified in the workflow settings for
-  files that are *exactly* named like the citekey, optionally followed by an
-  underscore `_` and some text. For example: `{citekey}.md` or
-  `{citekey}_{title}.md`. The citekey itself must not contain underscores, and
-  the filename must not include the `@`.
-- Entries that have such a literature note is indicated by a `📓`.
+  files that are *exactly* named like the citekey. Entries that have such a
+  literature note are indicated by a `📓`.
 - <kbd>⌃</kbd><kbd>⌥</kbd><kbd>⏎</kbd>: Open the literature note.
-  * If the file is in your [Obsidian Vault](https://obsidian.md/), it is opened
-	directly in Obsidian instead of the default text editor.
+  * If the file is in your [Obsidian Vault](https://obsidian.md/), it is
+	opened directly in Obsidian instead of the default text editor.
   * If there is no literature note, a new one is created.
 - Add `*` to any search query to filter only for entries with literature notes,
   for example `* grieser` searches for entries matching "Grieser" which also
-  have a literature notes. Can be combined with other queries (see: [smart
-  queries](#search)).
+	have a literature notes. Can be combined with other queries (see: [smart
+	queries](#search)).
 
 ### PDF management actions
 The following features require that all your PDFs are located in the folder
@@ -208,11 +205,9 @@ specified in your workflow settings.
   underscore `_` and some text. For example: `{citekey}.pdf` or
   `{citekey}_{title}.pdf`. The citekey itself must not contain underscores, and
   the filename must not include the `@`.
-- The `📕` indicates that the entry already has an associated PDF at that
-  location.
+- The `📕` indicates that the entry has an associated PDF at that location.
 - <kbd>Hyper</kbd><kbd>⏎</kbd>[^1]: If the entry has an associated PDF file,
-  open it with the default PDF reader. If the PDF folder setting is left empty,
-  tries to open a PDF file listed under the `file` key in the BibTeX file.
+  open it with the default PDF reader.
 - Add `pdf` to any search query to filter only for entries with PDFs that have
   been added by the auto-file feature. `pdf grieser`, for example, displays only
   entries from the author "Grieser" with PDFs. Can be combined with other
@@ -249,7 +244,8 @@ For other citation styles, use the following metadata: [cff
 file](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/CITATION.cff)
 
 ## Credits
-<a href="https://www.flaticon.com/authors/freepik">Icons created by `Freepik` (`Flaticon`)</a>
+<a href="https://www.flaticon.com/authors/freepik">Icons created by `Freepik`
+(`Flaticon`)</a>
 
 ## About the developer
 In my day job, I am a sociologist studying the social mechanisms underlying the

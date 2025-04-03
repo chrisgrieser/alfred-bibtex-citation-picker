@@ -941,6 +941,23 @@
 			<key>config</key>
 			<dict>
 				<key>argument</key>
+				<string>{var:_format_citation_super_prefix}{var:_format_page_prefix}{query}{var:_format_page_suffix}{var:_format_citation_start}{var:pageless_citation}{var:_format_citation_end}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>B15FCEB3-D411-49F9-BD12-2B4F4E63AC39</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
 				<false/>
@@ -954,23 +971,6 @@
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>DD59F90F-8FD2-486D-A8A8-2FFA47DE45F6</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>{var:_format_citation_super_prefix}{var:_format_page_prefix}{query}{var:_format_page_suffix}{var:_format_citation_start}{var:pageless_citation}{var:_format_citation_end}</string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>B15FCEB3-D411-49F9-BD12-2B4F4E63AC39</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1062,11 +1062,11 @@
 				<key>focusedappvariablename</key>
 				<string>focusedapp</string>
 				<key>hotkey</key>
-				<integer>6</integer>
+				<integer>0</integer>
 				<key>hotmod</key>
-				<integer>1835008</integer>
+				<integer>0</integer>
 				<key>hotstring</key>
-				<string>Y</string>
+				<string></string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -1959,7 +1959,7 @@ echo "$*"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>scripts/fuzzy-open-pdf.sh</string>
+				<string>scripts/open-pdf.sh</string>
 				<key>type</key>
 				<integer>8</integer>
 			</dict>

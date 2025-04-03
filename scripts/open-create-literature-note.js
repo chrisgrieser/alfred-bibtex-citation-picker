@@ -11,9 +11,9 @@ function run(argv) {
 	const literatureNotePath =
 		$.getenv("literature_note_folder").replace(/^~/, app.pathTo("home folder")) +
 		`/${citekey}.md`;
+	const literatureNoteExists = Application("Finder").exists(Path(literatureNotePath));
 
 	// Create literature note
-	const literatureNoteExists = Application("Finder").exists(Path(literatureNotePath));
 	if (!literatureNoteExists) {
 		const template = "---\ntags: \naliases:\n---\n\n";
 		app.doShellScript(`echo '${template}' > '${literatureNotePath}'`);
