@@ -212,9 +212,10 @@ specified in your workflow settings.
   been added by the auto-file feature. `pdf grieser`, for example, displays only
   entries from the author "Grieser" with PDFs. Can be combined with other
   queries (see: [smart queries](#search)).
-- A `📎` indicates that the BibTeX entry has a `file` or `attachment` field. You
-  can use <kbd>⌃</kbd><kbd>⌥</kbd><kbd>⌘</kbd><kbd>⏎</kbd> to open the
-  attachment. If there are multiple attachments, the first one is opened.
+- A `📎` indicates that the BibTeX entry has a `file`, `local-url`, or
+  `attachment` field. You can use
+  <kbd>⌃</kbd><kbd>⌥</kbd><kbd>⌘</kbd><kbd>⏎</kbd> to open the attachment. If
+  there are multiple attachments, the first one is opened.
 
 ### Link preview
 - Install the

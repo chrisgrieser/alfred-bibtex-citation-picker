@@ -212,6 +212,7 @@ function bibtexParse(rawBibtexStr) {
 						break;
 					}
 					case "file":
+					case "local-url":
 					case "attachment": {
 						// see https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues/45
 						const multipleAttachments = value.includes(";/Users/");
