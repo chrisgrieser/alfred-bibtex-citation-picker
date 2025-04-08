@@ -202,10 +202,6 @@ function bibtexParse(rawBibtexStr) {
 						if (yearDigits) entry.year = yearDigits[0]; // edge case of BibTeX files with wrong years
 						break;
 					}
-					case "origyear": {
-						entry.origyear = value;
-						break;
-					}
 					case "keywords": {
 						entry.keywords = value.split(/ *, */);
 						break;
