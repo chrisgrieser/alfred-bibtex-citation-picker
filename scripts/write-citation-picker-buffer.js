@@ -215,8 +215,11 @@ function bibtexParse(rawBibtexStr) {
 						break;
 					}
 					default:
-						// @ts-expect-error // more performant not to check for all the remaining cases
-						entry[field] = value;
+						// check if field is needed before adding it, to reduce JSON size
+						if (field in entry) {
+							// @ts-expect-error unclear how to annotate it so typescript is happy
+							entry[field] = value;
+						}
 				}
 			}
 
