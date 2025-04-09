@@ -210,18 +210,8 @@ function bibtexParse(rawBibtexStr) {
 					case "file":
 					case "local-url":
 					case "attachment": {
-						// GUARD invalid URIs https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Malformed_URI
-						// see also  https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues/64
-						let path = value
-						try {
-							path = decodeURIComponent(value)
-						} catch (_error) {
-							console.log(`Malformed path for ${entry.citekey}: ${value}`)
-						}
-						entry.attachment = path
-							.replace(/;\/Users\/.*/, "") // multiple attachments https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues/45
-							.replace(/^file:\/\//, "") // `file://` makes the later existence check invalid
-							.replace(/^~/, app.pathTo("home folder")); // expand ~
+						// PERF file is decoded later when opening
+						entry.attachment = value;
 						break;
 					}
 					default:
