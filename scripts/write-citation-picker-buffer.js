@@ -158,7 +158,8 @@ function bibtexDecode(encodedStr) {
 function bibtexParse(rawBibtexStr) {
 	const bibtexEntryArray = bibtexDecode(rawBibtexStr)
 		.split(/^@/m) // split by `@` from citekeys
-		.slice(1) // first element is other stuff before first entry
+		.slice(1) // first element is header info before first entry
+		// biome-ignore lint/complexity/noExcessiveCognitiveComplexity: okay here
 		.reduce((/** @type {BibtexEntry[]} */ acc, rawEntryStr) => {
 			const [_, category, citekey, propertyStr] =
 				rawEntryStr.trim().match(/^(.*?){(.*?),(.*)}$/s) || [];
@@ -209,14 +210,22 @@ function bibtexParse(rawBibtexStr) {
 					case "file":
 					case "local-url":
 					case "attachment": {
-						entry.attachment = decodeURIComponent(value)
+						// GUARD invalid URIs https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Malformed_URI
+						// see also  https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues/64
+						let path = value
+						try {
+							path = decodeURIComponent(value)
+						} catch (_error) {
+							console.log(`Malformed path for ${entry.citekey}: ${value}`)
+						}
+						entry.attachment = path
 							.replace(/;\/Users\/.*/, "") // multiple attachments https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues/45
 							.replace(/^file:\/\//, "") // `file://` makes the later existence check invalid
 							.replace(/^~/, app.pathTo("home folder")); // expand ~
 						break;
 					}
 					default:
-						// @ts-expect-error more performant not to check for all the remaining cases
+						// @ts-expect-error // more performant not to check for all the remaining cases
 						entry[field] = value;
 				}
 			}

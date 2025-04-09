@@ -2168,7 +2168,7 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>## ℹ️ Latex and MMD** citation formats were updated in v11.19
+	<string>## ℹ️ Latex and MMD citation formats were updated in v11.19
 You need to set them once again via `scp` and Change citation format` for the changes to take effect.
 
 ---
