@@ -19,6 +19,7 @@ function run(argv) {
 	try {
 		path = decodeURIComponent(path);
 	} catch (_error) {
+		console.log("Malformed path:", path);
 		return (`Malformed path : ${path}`); // Alfred notification
 	}
 	path = path
@@ -26,11 +27,10 @@ function run(argv) {
 		.replace(/^file:\/\//, "")
 		.replace(/^~/, app.pathTo("home folder")); // expand ~
 
-	if (!fileExists(path)) {
-		return (`File does not exist : ${path}`); // Alfred notification
-	}
+	// GUARD file existence
+	if (!fileExists(path)) return (`File does not exist : ${path}`); // Alfred notification
 
-	console.log("attachment path:", path);
 	// shell `open` appears to be the only reliable way for opening files
 	app.doShellScript(`open '${path}'`);
+	console.log("attachment path:", path);
 }
