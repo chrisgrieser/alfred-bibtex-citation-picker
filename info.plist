@@ -1982,7 +1982,7 @@ echo "$*"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>./scripts/decode-attachment.js</string>
+				<string>./scripts/open-attachment.js</string>
 				<key>type</key>
 				<integer>8</integer>
 			</dict>
@@ -2253,7 +2253,7 @@ file](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/CI
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>note</key>
-			<string>decode attachment</string>
+			<string>decode &amp; open attachment</string>
 			<key>xpos</key>
 			<real>1275</real>
 			<key>ypos</key>
@@ -2370,7 +2370,7 @@ file](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/CI
 			<key>xpos</key>
 			<real>1275</real>
 			<key>ypos</key>
-			<real>1565</real>
+			<real>1575</real>
 		</dict>
 		<key>346A58DA-B1B4-4F03-8F05-20B42A4EF996</key>
 		<dict>

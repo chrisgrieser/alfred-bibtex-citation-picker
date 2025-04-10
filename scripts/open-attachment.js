@@ -19,16 +19,17 @@ function run(argv) {
 	try {
 		path = decodeURIComponent(path);
 	} catch (_error) {
-		console.log("Malformed path:", path);
-		return (`Malformed path : ${path}`); // Alfred notification
+		const errmsg = "Malformed path: "+ path
+		console.log(errmsg);
+		return errmsg; // Alfred notification
 	}
 	path = path
 		.replace(/;\/Users\/.*/, "") // multiple attachments https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues/45
-		.replace(/^file:\/\//, "")
+		.replace(/^file:\/\/(localhost)?/, "") // prefix breaks file existence check
 		.replace(/^~/, app.pathTo("home folder")); // expand ~
 
 	// GUARD file existence
-	if (!fileExists(path)) return (`File does not exist : ${path}`); // Alfred notification
+	if (!fileExists(path)) return (`File does not exist: ${path}`); // Alfred notification
 
 	// shell `open` appears to be the only reliable way for opening files
 	app.doShellScript(`open '${path}'`);
