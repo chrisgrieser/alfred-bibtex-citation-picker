@@ -3110,6 +3110,8 @@ to set a hotkey for adding DOI/ISBN</string>
 		<key>_format_page_suffix</key>
 		<string></string>
 	</dict>
+	<key>variablesdontexport</key>
+	<array/>
 	<key>version</key>
 	<string>11.20.4</string>
 	<key>webaddress</key>

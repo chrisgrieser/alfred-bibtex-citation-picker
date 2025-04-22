@@ -16,7 +16,7 @@ library="$bibtex_library_path"
 dummydoc="---
 suppress-bibliography: true
 ---
-@$citekey"
+[@$citekey]"
 
 reference=$(echo -n "$dummydoc" |
 	command pandoc --citeproc --read=markdown --write=plain --wrap=none \
