@@ -383,7 +383,7 @@
 				<key>modifiersubtext</key>
 				<string>⌘: Add another citation</string>
 				<key>vitoclose</key>
-				<false/>
+				<true/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
