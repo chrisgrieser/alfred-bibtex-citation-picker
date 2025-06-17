@@ -25,7 +25,7 @@ function readFile(path) {
  */
 function ensureUniqueCitekey(citekey, libraryPath) {
 	// check if citekey already exists
-	const citekeyArray = readFile(libraryPath)
+	const existingCitekeys = readFile(libraryPath)
 		.split("\n")
 		.filter((line) => line.startsWith("@"))
 		.map((line) => line.split("{")[1].slice(0, -1));
@@ -33,7 +33,7 @@ function ensureUniqueCitekey(citekey, libraryPath) {
 	const alphabet = "abcdefghijklmnopqrstuvwxyz";
 	let i = -1;
 	let nextCitekey = citekey;
-	while (citekeyArray.includes(nextCitekey)) {
+	while (existingCitekeys.includes(nextCitekey)) {
 		const firstLoop = i === -1;
 		const nextLetter = firstLoop ? "" : alphabet[i];
 		nextCitekey = citekey + nextLetter;
@@ -55,7 +55,8 @@ function generateCitekey(authors, year, origyear) {
 	if (authors) {
 		const author = authors.split(" and "); // "and" used as delimiter in bibtex for names
 		for (const name of author) {
-			const isLastFirst = name.includes(","); // doi.org returns "first last", isbn mostly "last, first"
+			// doi.org returns "firstName lastName", isbn mostly "lastName, firstName"
+			const isLastFirst = name.includes(",");
 			const lastName = isLastFirst ? name.split(",")[0].trim() : name.split(" ").pop();
 			lastNameArr.push(lastName);
 		}
@@ -84,7 +85,7 @@ function inputToEntryJson(input) {
 	const entry = {};
 
 	const doiRegex = /\b10.\d{4,9}\/[-._;()/:A-Z0-9]+(?=$|[?/ ])/i; // https://www.crossref.org/blog/dois-and-matching-regular-expressions/
-	const isbnRegex = /^[\d-]{9,}$/;
+	const isbnRegex = /^[\d-]{9,40}$/;
 	const isDOI = doiRegex.test(input);
 	const isISBN = isbnRegex.test(input);
 
@@ -101,18 +102,21 @@ function inputToEntryJson(input) {
 			`curl -sL -H "Accept: application/vnd.citationstyles.csl+json" "${doiURL}"`,
 		);
 		if (!response) return "No response by doi.org";
-		if (response.startsWith("<!DOCTYPE html>") || response.toLowerCase().includes("doi not found"))
-			return "DOI not found";
+		const invalid =
+			response.startsWith("<!DOCTYPE html>") || response.toLowerCase().includes("doi not found");
+		if (invalid) return "DOI not found";
 
 		const data = JSON.parse(response);
 
 		entry.publisher = data.publisher;
 		entry.author = (data.authors || data.author || [])
 			.map(
-				(/** @type {{ given: any; family: any; }} */ author) => `${author.given} ${author.family}`,
+				(/** @type {{ given: string; family: string; }} */ author) =>
+					`${author.given} ${author.family}`,
 			)
 			.join(" and ");
-		const published = data["published-print"] || data["published-online"] || data.published || null;
+		const published =
+			data["published-print"] || data["published-online"] || data.published || null;
 		entry.year = published ? published["date-parts"][0][0] : "NY";
 		entry.doi = doi[0];
 		entry.url = data.URL || doiURL;
@@ -146,7 +150,9 @@ function inputToEntryJson(input) {
 			entry.type = "book";
 			entry.publisher = data.publishers.join(" and ");
 			entry.title = data.title;
-			entry.year = data.publish_date ? Number.parseInt(data.publish_date.match(/\d{4}/)[0]) : "NY";
+			entry.year = data.publish_date
+				? Number.parseInt(data.publish_date.match(/\d{4}/)[0])
+				: "NY";
 			entry.author = (data.authors || data.author || [])
 				.map((/** @type {{ name: string; }} */ author) => author.name)
 				.join(" and ");
@@ -220,7 +226,7 @@ function run(argv) {
 
 	// Get entry data
 	const entry = inputToEntryJson(input);
-	if (typeof entry === "string") return entry;
+	if (typeof entry === "string") return entry; // error message
 	if (!entry) return "Invalid input";
 
 	// cleanup
@@ -232,10 +238,10 @@ function run(argv) {
 	let citekey = generateCitekey(entry.author, entry.year, entry.origyear);
 	citekey = ensureUniqueCitekey(citekey, libraryPath);
 
-	// JSON -> bibtex & Write
+	// JSON -> bibtex & write
 	const entryAsBibTex = json2bibtex(entry, citekey);
 	appendToFile(entryAsBibTex, libraryPath);
 
 	delay(0.1); // delay to ensure the file is written
-	return citekey; // pass for opening function
+	return citekey; // pass to opening function in Alfred
 }
