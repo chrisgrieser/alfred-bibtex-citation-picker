@@ -204,9 +204,11 @@ function json2bibtex(entryJson, citekey) {
 		if (typeof value === "string" && !value.match(/^\d+$/)) {
 			// double-escape bibtex values to preserve capitalization, but not
 			// author key, since it results in the author key being interpreted as
-			// literal author name
+			// literal author name, and not doi, since it behaves weirdly with some
+			// citation styles like Chicago
 			const hasCapitalLetter = value.match(/[A-Z]/);
-			value = hasCapitalLetter && key !== "author" ? `{{${value}}}` : `{${value}}`;
+			const ignoreDueToKey = ["author", "doi"].includes(key);
+			value = hasCapitalLetter && ignoreDueToKey ? `{{${value}}}` : `{${value}}`;
 		}
 		propertyLines.push(`\t${key} = ${value},`);
 	}
