@@ -6,10 +6,9 @@ ObjC.import("stdlib");
 
 /** @param {string} url @return {string} */
 function httpRequest(url) {
-	const queryURL = $.NSURL.URLWithString(url);
-	const data = $.NSData.dataWithContentsOfURL(queryURL);
-	const requestStr = $.NSString.alloc.initWithDataEncoding(data, $.NSUTF8StringEncoding).js;
-	return requestStr;
+	const queryUrl = $.NSURL.URLWithString(url);
+	const data = $.NSData.dataWithContentsOfURL(queryUrl);
+	return $.NSString.alloc.initWithDataEncoding(data, $.NSUTF8StringEncoding).js;
 }
 
 /** @param {string} str */
@@ -41,13 +40,13 @@ function fixCasing(str) {
 // biome-ignore lint/correctness/noUnusedVariables: Alfred run
 function run() {
 	// $csl_folder set as Alfred environment variable
-	const localCSLs = app.doShellScript('ls -t "$csl_folder"').split("\r");
+	const localCsls = app.doShellScript('ls -t "$csl_folder"').split("\r");
 
 	const apiUrl =
 		"https://api.github.com/repos/citation-style-language/styles/git/trees/master?recursive=1";
 	const baseUrl = "https://raw.githubusercontent.com/citation-style-language/styles/master/";
 
-	const onlineCSLs = JSON.parse(httpRequest(apiUrl))
+	const onlineCsls = JSON.parse(httpRequest(apiUrl))
 		.tree.map((/** @type {{ path: string; }} */ item) => item.path)
 		.filter((/** @type {string} */ item) => item.endsWith(".csl"))
 		.map((/** @type {string} */ csl) => {
@@ -61,7 +60,7 @@ function run() {
 				dependentMatch = " dependent";
 				filename = filename.slice(10);
 			}
-			if (localCSLs.includes(filename)) {
+			if (localCsls.includes(filename)) {
 				prefix = "✅ ";
 				sub += "↵: Update local .csl file. ";
 			}
@@ -76,7 +75,7 @@ function run() {
 		});
 
 	return JSON.stringify({
-		items: onlineCSLs,
+		items: onlineCsls,
 		cache: {
 			seconds: 3600 * 24,
 			loosereload: true,

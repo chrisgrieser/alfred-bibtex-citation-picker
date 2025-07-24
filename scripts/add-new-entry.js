@@ -66,7 +66,6 @@ function generateCitekey(authors, year, origyear) {
 	const authorStr = (lastNameArr.length < 3 ? lastNameArr.join("") : lastNameArr[0] + "EtAl")
 		// strip diacritics https://stackoverflow.com/a/37511463
 		.normalize("NFD")
-		// biome-ignore lint/suspicious/noMisleadingCharacterClass: unclear
 		.replace(/[\u0300-\u036f]/g, "")
 		.replaceAll("-", ""); // no hyphens
 
@@ -80,26 +79,25 @@ function generateCitekey(authors, year, origyear) {
  * @param {string} input
  * @return {Record<string, any>|string} entryJson or error message
  */
-// biome-ignore lint/complexity/noExcessiveCognitiveComplexity: okay here
 function inputToEntryJson(input) {
 	const entry = {};
 
 	const doiRegex = /\b10.\d{4,9}\/[-._;()/:A-Z0-9]+(?=$|[?/ ])/i; // https://www.crossref.org/blog/dois-and-matching-regular-expressions/
 	const isbnRegex = /^[\d-]{9,40}$/;
-	const isDOI = doiRegex.test(input);
-	const isISBN = isbnRegex.test(input);
+	const isDoi = doiRegex.test(input);
+	const isIsbn = isbnRegex.test(input);
 
-	if (!isDOI && !isISBN) return "input invalid";
+	if (!isDoi && !isIsbn) return "input invalid";
 
 	// DOI
 	// https://citation.crosscite.org/docs.html
-	if (isDOI) {
+	if (isDoi) {
 		const doi = input.match(doiRegex);
 		if (!doi) return "DOI invalid";
-		const doiURL = "https://doi.org/" + doi[0];
+		const doiUrl = "https://doi.org/" + doi[0];
 
 		const response = app.doShellScript(
-			`curl -sL -H "Accept: application/vnd.citationstyles.csl+json" "${doiURL}"`,
+			`curl -sL -H "Accept: application/vnd.citationstyles.csl+json" "${doiUrl}"`,
 		);
 		if (!response) return "No response by doi.org";
 		const invalid =
@@ -119,7 +117,7 @@ function inputToEntryJson(input) {
 			data["published-print"] || data["published-online"] || data.published || null;
 		entry.year = published ? published["date-parts"][0][0] : "NY";
 		entry.doi = doi[0];
-		entry.url = data.URL || doiURL;
+		entry.url = data.URL || doiUrl;
 		entry.type = data.type.replace(/-?journal-?/, ""); // "journal-article" -> "article"
 		if (entry.type === "book-chapter") entry.type = "incollection";
 		entry.title = data.title;
@@ -133,7 +131,7 @@ function inputToEntryJson(input) {
 
 	// ISBN: Google Books & OpenLibrary
 	// https://www.vinzius.com/post/free-and-paid-api-isbn/
-	else if (isISBN) {
+	else if (isIsbn) {
 		const isbn = input;
 		// first tries OpenLibrary API, then Google Books API
 
@@ -164,14 +162,14 @@ function inputToEntryJson(input) {
 
 		// GOOGLE BOOKS -- https://developers.google.com/books/docs/v1/using
 		else {
-			const response = app.doShellScript(
+			const resp = app.doShellScript(
 				`curl -sL "https://www.googleapis.com/books/v1/volumes?q=isbn:${isbn}"`,
 			);
-			if (!response) return "No response by Google Books API";
-			const fullData = JSON.parse(response);
-			if (fullData.totalItems === 0) return "ISBN not found";
+			if (!resp) return "No response by Google Books API";
+			const allData = JSON.parse(resp);
+			if (allData.totalItems === 0) return "ISBN not found";
 
-			const data = fullData.items[0].volumeInfo;
+			const data = allData.items[0].volumeInfo;
 			entry.type = "book";
 			entry.year = Number.parseInt(data.publishedDate.split("-")[0]);
 			entry.author = (data.authors || data.author || []).join(" and ");
@@ -179,7 +177,7 @@ function inputToEntryJson(input) {
 			entry.publisher = data.publisher;
 			entry.title = data.title;
 			if (data.subtitle) entry.title += ". " + data.subtitle;
-			const bookAccessible = fullData.items[0].accessInfo.viewability !== "NO_PAGES";
+			const bookAccessible = allData.items[0].accessInfo.viewability !== "NO_PAGES";
 			if (bookAccessible) entry.url = data.previewLink;
 		}
 	}
@@ -232,9 +230,12 @@ function run(argv) {
 	if (!entry) return "Invalid input";
 
 	// cleanup
-	if (entry.publisher)
+	if (entry.publisher) {
 		entry.publisher = entry.publisher.replace(/gmbh|ltd|publications?|llc/i, "").trim();
-	if (entry.pages) entry.pages = entry.pages.replace(/(\d+)[^\d]+?(\d+)/, "$1--$2"); // double-dash
+	}
+	if (entry.pages) {
+		entry.pages = entry.pages.replace(/(\d+)[^\d]+?(\d+)/, "$1--$2"); // double-dash
+	}
 
 	// citekey
 	let citekey = generateCitekey(entry.author, entry.year, entry.origyear);

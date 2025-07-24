@@ -159,7 +159,6 @@ function bibtexParse(rawBibtexStr) {
 	const bibtexEntryArray = bibtexDecode(rawBibtexStr)
 		.split(/^@/m) // split by `@` from citekeys
 		.slice(1) // first element is header info before first entry
-		// biome-ignore lint/complexity/noExcessiveCognitiveComplexity: okay here
 		.reduce((/** @type {BibtexEntry[]} */ acc, rawEntryStr) => {
 			const [_, category, citekey, propertyStr] =
 				rawEntryStr.trim().match(/^(.*?){(.*?),(.*)}$/s) || [];
@@ -305,7 +304,6 @@ function run() {
 	 * @param {BibtexEntry} entry
 	 * @param {"first"|"second"} whichLibrary
 	 */
-	// biome-ignore lint/complexity/noExcessiveCognitiveComplexity: okay here
 	function convertToAlfredItems(entry, whichLibrary) {
 		const emojis = [];
 		// biome-ignore format: too long
