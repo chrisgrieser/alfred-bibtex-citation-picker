@@ -2168,12 +2168,7 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>## ℹ️ Latex and MMD citation formats were updated in v11.19
-You need to set them once again via `scp` and Change citation format` for the changes to take effect.
-
----
-
-## Workflow setup
+	<string>## Workflow setup
 1. Add the path to your `.bib` to the right.
 2. Select your citation format. The default is *Pandoc Citations*. To switch to
    another format like LaTeX, Multi-Markdown, org mode, eta, \[\[wikilinks\]\],
@@ -3110,8 +3105,6 @@ to set a hotkey for adding DOI/ISBN</string>
 		<key>_format_page_suffix</key>
 		<string></string>
 	</dict>
-	<key>variablesdontexport</key>
-	<array/>
 	<key>version</key>
 	<string>11.20.7</string>
 	<key>webaddress</key>

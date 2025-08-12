@@ -1,7 +1,6 @@
 # Supercharged Citation Picker
 ![GitHub downloads](https://img.shields.io/github/downloads/chrisgrieser/alfred-bibtex-citation-picker/total?label=GitHub%20Downloads&style=plastic&logo=github)
 ![Alfred gallery downloads](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchrisgrieser%2F.config%2Frefs%2Fheads%2Fmain%2FAlfred.alfredpreferences%2Falfred-gallery-downloads.yaml&query="supercharged-citation-picker"&style=plastic&logo=alfred&label=Gallery%20Downloads&color=%235C1F87)
-
 ![Latest release](https://img.shields.io/github/v/release/chrisgrieser/alfred-bibtex-citation-picker?label=Latest%20Release&style=plastic)
 
 A smart citation picker and lightweight reference manager for
@@ -27,7 +26,7 @@ mode](https://orgmode.org/manual/Citations.html), and various other formats.
 - __Simple installation:__ Just enter the path to your `.bib` file, and you are
   ready to go.
 - __Blazingly fast:__ Considerably quicker than any other citation picker
-  (200 ms to fully reload a library with 4000 entries).
+  (200 milliseconds to fully reload a library with 4000 entries).
 
 ### Advanced features
 - __Citation actions:__ Paste single-entry bibliographies, open URLs,
