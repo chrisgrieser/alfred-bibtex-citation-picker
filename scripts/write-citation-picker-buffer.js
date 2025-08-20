@@ -203,7 +203,7 @@ function bibtexParse(rawBibtexStr) {
 						break;
 					}
 					case "keywords": {
-						entry.keywords = value.split(/ *, */);
+						entry.keywords = value ? value.split(/ *, */) : [];
 						break;
 					}
 					case "file":
