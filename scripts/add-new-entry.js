@@ -149,7 +149,7 @@ function inputToEntryJson(input) {
 			entry.publisher = data.publishers.join(" and ");
 			entry.title = data.title;
 			entry.year = data.publish_date
-				? Number.parseInt(data.publish_date.match(/\d{4}/)[0])
+				? Number.parseInt(data.publish_date.match(/\d{4}/)[0], 10)
 				: "NY";
 			entry.author = (data.authors || data.author || [])
 				.map((/** @type {{ name: string; }} */ author) => author.name)
@@ -171,7 +171,7 @@ function inputToEntryJson(input) {
 
 			const data = allData.items[0].volumeInfo;
 			entry.type = "book";
-			entry.year = Number.parseInt(data.publishedDate.split("-")[0]);
+			entry.year = Number.parseInt(data.publishedDate.split("-")[0], 10);
 			entry.author = (data.authors || data.author || []).join(" and ");
 			entry.isbn = isbn;
 			entry.publisher = data.publisher;
