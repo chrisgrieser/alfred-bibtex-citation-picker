@@ -206,7 +206,7 @@ function json2bibtex(entryJson, citekey) {
 			// citation styles like Chicago
 			const hasCapitalLetter = value.match(/[A-Z]/);
 			const ignoreDueToKey = ["author", "doi"].includes(key);
-			value = hasCapitalLetter && ignoreDueToKey ? `{{${value}}}` : `{${value}}`;
+			value = hasCapitalLetter && !ignoreDueToKey ? `{{${value}}}` : `{${value}}`;
 		}
 		propertyLines.push(`\t${key} = ${value},`);
 	}
