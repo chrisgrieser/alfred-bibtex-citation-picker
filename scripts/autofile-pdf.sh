@@ -37,7 +37,8 @@ AUTHOR=$(echo -n "$citekey" | sed -E 's/[[:digit:]]+.*//') # assumes citekey is 
 FIRST_CHARACTER=${citekey:0:1}
 
 # shellcheck disable=2154
-title=$(grep --ignore-case --after-context=20 --max-count=1 "{${citekey}," "${bibtex_library_path}" | grep -E "\btitle ?=")
+title=$(grep --ignore-case --after-context=20 --max-count=1 "{${citekey}," "${bibtex_library_path}" |
+	grep --extended-regexp "\btitle ?=" --max-count=1)
 safe_truncated_title=$(
 	echo -n "$title" |
 		cut -d= -f2 |
@@ -52,7 +53,7 @@ AUTOFILE_FOLDER="$PDF_FOLDER/$FIRST_CHARACTER/$AUTHOR"
 AUTOFILE_PATH="$AUTOFILE_FOLDER/${citekey}_${safe_truncated_title}.pdf"
 
 if [[ -e "$AUTOFILE_PATH" ]]; then
-	echo "⛔️ There already is a pdf file."
+	echo "⛔️ There is already a PDF file."
 	echo "Delete it and run auto-file again."
 	open -R "$AUTOFILE_PATH"
 	return 1
