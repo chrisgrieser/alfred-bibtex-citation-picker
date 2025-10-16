@@ -18,7 +18,7 @@ if [[ "$mode" == "id+autofile" ]]; then
 	SELECTED_FILE="$pdf_filepath" # set via Alfred
 else
 	NO_OF_SELECTIONS=$(osascript -l JavaScript -e 'Application("Finder").selection().length')
-	SELECTED_FILE=$(osascript -l JavaScript -e 'decodeURI(Application("Finder").selection()[0]?.url()).slice(7)')
+	SELECTED_FILE=$(osascript -l JavaScript -e 'decodeURIComponent(Application("Finder").selection()[0]?.url()).slice(7)')
 	EXT="${SELECTED_FILE##*.}"
 
 	if [[ $NO_OF_SELECTIONS -eq 0 ]]; then
