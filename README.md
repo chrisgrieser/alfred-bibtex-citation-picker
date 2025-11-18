@@ -112,7 +112,7 @@ keyword.
   the DOI-URL (`https://doi.org/…`) instead.
 
 ### Icon meanings
-
+<!-- markdownlint-disable table-column-style -->
 | Icon | Entry has                             |
 |:-----|:--------------------------------------|
 | 🌐   | URL or DOI                            |
@@ -122,6 +122,7 @@ keyword.
 | 📕   | PDF                                   |
 | 2️⃣    | entry is from 2nd library             |
 | 📎   | entry has attachment                  |
+<!-- markdownlint-enable table-column-style -->
 
 ## Changing the citation format
 You can use the `scp` and select __Change citation format__ to change the format
@@ -131,7 +132,7 @@ of the citations:
 - Multi-Markdown (`MMD`)
 - LaTeX
 - eta template
-- iA Writer
+- `iA Writer`
 - Formatted single entry
 	* Requires [Pandoc](https://pandoc.org/installing.html).
 	* The used citation style can be customized in the workflow configuration
@@ -143,7 +144,7 @@ of the citations:
 
 > [!NOTE]
 > Not all formats support all citation-related features. For example, adding
-> Page numbers as well as inline-citations are not supported for Latex,
+> Page numbers as well as inline-citations are not supported for LaTeX,
 > Wikilinks, and Tags.
 
 If there is a citation syntax that is commonly used, or if you want to improve
