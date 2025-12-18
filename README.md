@@ -48,18 +48,18 @@ mode](https://orgmode.org/manual/Citations.html), and various other formats.
 
 - [Installation](#installation)
 - [Basic usage](#basic-usage)
-	* [Search](#search)
-	* [Citation actions](#citation-actions)
-	* [URL actions](#url-actions)
-	* [Icon meanings](#icon-meanings)
+    - [Search](#search)
+    - [Citation actions](#citation-actions)
+    - [URL actions](#url-actions)
+    - [Icon meanings](#icon-meanings)
 - [Changing the citation format](#changing-the-citation-format)
 - [Advanced usage](#advanced-usage)
-	* [Bibliography actions](#bibliography-actions)
-	* [Add new entries](#add-new-entries)
-	* [Literature note actions](#literature-note-actions)
-	* [PDF management actions](#pdf-management-actions)
-	* [Link preview](#link-preview)
-	* [Auxiliary features](#auxiliary-features)
+    - [Bibliography actions](#bibliography-actions)
+    - [Add new entries](#add-new-entries)
+    - [Literature note actions](#literature-note-actions)
+    - [PDF management actions](#pdf-management-actions)
+    - [Link preview](#link-preview)
+    - [Auxiliary features](#auxiliary-features)
 - [Cite this software project](#cite-this-software-project)
 - [Credits](#credits)
 - [About the developer](#about-the-developer)
@@ -97,13 +97,15 @@ keyword.
 ### Citation actions
 - <kbd>⏎</kbd>: Paste the citekey of the selected citation.
 - <kbd>⌥</kbd><kbd>⏎</kbd>: Add another citation.
-- <kbd>⇧</kbd><kbd>⌘</kbd><kbd>⏎</kbd>: Paste an inline-citation (citation
-  without surrounding formatting, for example `@Grieser2022` instead of `[@Grieser2022]`)
-- <kbd>⌘</kbd><kbd>⏎</kbd>: Add page numbers before pasting the selected citekey.
-  * Confirm the page number with <kbd>⌥</kbd><kbd>⏎</kbd> or
-	<kbd>⌘</kbd><kbd>⏎</kbd> to add another citation afterward.
-  * Confirm with <kbd>⇧</kbd><kbd>⌘</kbd><kbd>⏎</kbd> for an inline-citation
-	with page number (`@Grieser2022 [p. 42]`).
+- <kbd>⇧ ⇧</kbd> <kbd>⌘ ⌘</kbd> <kbd>⏎ ⏎</kbd>: Paste an inline-citation
+  (citation without surrounding formatting, for example `@Grieser2022` instead
+  of `[@Grieser2022]`)
+- <kbd>⌘ ⌘</kbd> <kbd>⏎ ⏎</kbd>: Add page numbers before pasting the selected
+  citekey.
+    - Confirm the page number with <kbd>⌥</kbd><kbd>⏎</kbd> or
+    <kbd>⌘</kbd><kbd>⏎</kbd> to add another citation afterward.
+    - Confirm with <kbd>⇧</kbd><kbd>⌘</kbd><kbd>⏎</kbd> for an inline-citation
+    with page number (`@Grieser2022 [p. 42]`).
 
 ### URL actions
 - <kbd>⌃</kbd><kbd>⏎</kbd>: Open the URL in the browser.
@@ -113,6 +115,7 @@ keyword.
 
 ### Icon meanings
 <!-- markdownlint-disable table-column-style -->
+
 | Icon | Entry has                             |
 |:-----|:--------------------------------------|
 | 🌐   | URL or DOI                            |
@@ -122,6 +125,7 @@ keyword.
 | 📕   | PDF                                   |
 | 2️⃣    | entry is from 2nd library             |
 | 📎   | entry has attachment                  |
+
 <!-- markdownlint-enable table-column-style -->
 
 ## Changing the citation format
@@ -134,9 +138,9 @@ of the citations:
 - eta template
 - `iA Writer`
 - Formatted single entry
-	* Requires [Pandoc](https://pandoc.org/installing.html).
-	* The used citation style can be customized in the workflow configuration
-	  (default: APA 7th).
+    - Requires [Pandoc](https://pandoc.org/installing.html).
+    - The used citation style can be customized in the workflow configuration
+      (default: APA 7th).
 - `[[wikilink]]`
 - `#tag`
 - bare citekey
@@ -164,9 +168,9 @@ formats](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main
   BibDesk, or Sublime Text, depending on the setting in the workflow
   configuration. (Note that this does not work for the secondary library.)
 - <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⏎</kbd>: Paste the full bibliographic entry.
-	* Requires [Pandoc](https://pandoc.org/installing.html).
-	* The used citation style can be customized in the workflow configuration.
-	  (default: APA 7th)
+    - Requires [Pandoc](https://pandoc.org/installing.html).
+    - The used citation style can be customized in the workflow configuration.
+      (default: APA 7th)
 - <kbd>⌘</kbd><kbd>L</kbd>: Preview the unabridged title, abstract, and list of
   all keywords (tags).
 - <kbd>⌘</kbd><kbd>fn</kbd><kbd>⏎</kbd>: Delete the entry from the BibTeX
@@ -190,13 +194,13 @@ formats](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main
   files that are *exactly* named like the citekey. Entries that have such a
   literature note are indicated by a `📓`.
 - <kbd>⌃</kbd><kbd>⌥</kbd><kbd>⏎</kbd>: Open the literature note.
-  * If the file is in your [Obsidian Vault](https://obsidian.md/), it is
-	opened directly in Obsidian instead of the default text editor.
-  * If there is no literature note, a new one is created.
+    - If the file is in your [Obsidian Vault](https://obsidian.md/), it is
+    opened directly in Obsidian instead of the default text editor.
+    - If there is no literature note, a new one is created.
 - Add `*` to any search query to filter only for entries with literature notes,
   for example `* grieser` searches for entries matching "Grieser" which also
-	have a literature notes. Can be combined with other queries (see: [smart
-	queries](#search)).
+    have a literature notes. Can be combined with other queries (see: [smart
+    queries](#search)).
 
 ### PDF management actions
 The following features require that all your PDFs are located in the folder
@@ -267,7 +271,7 @@ style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3'
 border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
 [^1]: `Hyper` is an artificial "fifth" modifier key equal to `⌘⌥⌃⇧`, and can be
-	created using apps like [Karabiner
-	Elements](https://karabiner-elements.pqrs.org/),
-	[BetterTouchTool](https://www.macupdate.com/app/mac/32953/bettertouchtool),
-	or [Hyperkey](https://hyperkey.app/).
+    created using apps like [Karabiner
+    Elements](https://karabiner-elements.pqrs.org/),
+    [BetterTouchTool](https://www.macupdate.com/app/mac/32953/bettertouchtool),
+    or [Hyperkey](https://hyperkey.app/).
