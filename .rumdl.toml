@@ -30,7 +30,10 @@ style = "ordered"
 # badges and `kbd` for hotkey instructions
 allowed-elements = ["a", "img", "kbd"]
 
-[MD049]  # emphasis style
+[MD049]  # emphasis-style
+style = "asterisk"  # better than underscore, since it's not considered a word-char
+
+[MD050]  # strong-style
 style = "asterisk"  # better than underscore, since it's not considered a word-char
 
 [MD063]  # heading-capitalization

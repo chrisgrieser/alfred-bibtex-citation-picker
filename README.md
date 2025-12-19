@@ -15,30 +15,30 @@ mode](https://orgmode.org/manual/Citations.html), and various other formats.
 ## Feature overview
 
 ### Core features
-- Inserts __Pandoc citation syntax__ (`[@citekey]`), supporting page numbers &
+- Inserts **Pandoc citation syntax** (`[@citekey]`), supporting page numbers &
   multiple citations (`[@citekey, p. 23; @citekey, p. 42]`). Can also be
-  configured to use __LaTeX__, __Multi-Markdown__, __eta templates__, __org
+  configured to use **LaTeX**, **Multi-Markdown**, **eta templates**, __org
   mode__, `[[wikilinks]]`, `#tags`, or `bare citkeys` as citation format.
-- __App-independent:__ Works system-wide, in every text field of every app.
-- __Smart search:__ Search for citekeys, authors, title, publication, keywords
+- **App-independent:** Works system-wide, in every text field of every app.
+- **Smart search:** Search for citekeys, authors, title, publication, keywords
   (tags), include or exclude authors in *et al.*, tab-completion,
   short queries, sorting recently used entries to the top, …
-- __Simple installation:__ Just enter the path to your `.bib` file, and you are
+- **Simple installation:** Just enter the path to your `.bib` file, and you are
   ready to go.
-- __Blazingly fast:__ Considerably quicker than any other citation picker
+- **Blazingly fast:** Considerably quicker than any other citation picker
   (200 milliseconds to fully reload a library with 4000 entries).
 
 ### Advanced features
-- __Citation actions:__ Paste single-entry bibliographies, open URLs,
+- **Citation actions:** Paste single-entry bibliographies, open URLs,
   open or create literature notes, attach PDFs, search for `.csl` files online,
   and more.
-- __Lightweight reference management:__ Automatically rename and file PDFs, add,
+- **Lightweight reference management:** Automatically rename and file PDFs, add,
   or remove entries.
-- __Quickly add new entries:__ Select a DOI or ISBN and add them directly to
+- **Quickly add new entries:** Select a DOI or ISBN and add them directly to
   your BibTeX library via hotkey.
-- __Support for two libraries:__ You can pick citations from two BibTeX Library
+- **Support for two libraries:** You can pick citations from two BibTeX Library
   files at the same time.
-- __Obsidian integration:__ When located in your [Obsidian
+- **Obsidian integration:** When located in your [Obsidian
   Vault](https://obsidian.md/), literature notes are automatically
   opened/created in Obsidian instead of the default Markdown app.
 
@@ -129,7 +129,7 @@ keyword.
 <!-- markdownlint-enable table-column-style -->
 
 ## Changing the citation format
-You can use the `scp` and select __Change citation format__ to change the format
+You can use the `scp` and select **Change citation format** to change the format
 of the citations:
 - Pandoc (default)
 - Org Mode
@@ -180,11 +180,11 @@ formats](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main
 ### Add new entries
 - [Universal Action](https://www.alfredapp.com/help/features/universal-actions/)
   or [Hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/): Uses
-  the selected __DOI__, __ISBN__, or __URL containing a DOI__ to add a new entry
+  the selected **DOI**, **ISBN**, or **URL containing a DOI** to add a new entry
   to the library.
 
 > [!NOTE]
-> Adding or removing entries does __not__ work with the [BetterBibTeX Zotero
+> Adding or removing entries does **not** work with the [BetterBibTeX Zotero
 > Plugin](https://retorque.re/zotero-better-bibtex/) since the plugin only does
 > a one-way-sync (Zotero ➞ BibTeX file), meaning any changes to the `.bib` file
 > are not reflected in Zotero.
@@ -229,12 +229,12 @@ specified in your workflow settings.
 
 ### Auxiliary features
 Triggered via the Alfred Keyword `scp` (mnemonic: Supercharged Citation Picker).
-- __Cheatsheet__: Open a cheat sheet of the available actions of the
+- **Cheat sheet**: Open a cheat sheet of the available actions of the
   Supercharged Citation Picker.
-- __Citation Style Search__: Search for a citation style (`.csl` file), which is
+- **Citation Style Search**: Search for a citation style (`.csl` file), which is
   downloaded to the location specified in your workflow settings (default:
   `~/.pandoc/csl/`).
-- __Force Buffer Reload__: Force a reload of the citation picker. Mostly for
+- **Force Buffer Reload**: Force a reload of the citation picker. Mostly for
   debugging purposes.
 
 ## Cite this software project
@@ -264,7 +264,8 @@ compatibility. If you are interested in this subject, feel free to get in touch.
 - [Mastodon](https://pkm.social/@pseudometa)
 - [LinkedIn](https://www.linkedin.com/in/christopher-grieser-ba693b17a/)
 
-*For bug reports and features requests, please use the [GitHub issue tracker](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues/new/choose).*
+*For bug reports and features requests, please use the [GitHub issue
+tracker](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues/new/choose).*
 
 <a href='https://ko-fi.com/Y8Y86SQ91' target='_blank'> <img height='36'
 style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3'
