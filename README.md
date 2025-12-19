@@ -1,4 +1,4 @@
-# Supercharged Citation Picker
+# Supercharged citation picker
 ![GitHub downloads](https://img.shields.io/github/downloads/chrisgrieser/alfred-bibtex-citation-picker/total?label=GitHub%20Downloads&style=plastic&logo=github)
 ![Alfred gallery downloads](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchrisgrieser%2F.config%2Frefs%2Fheads%2Fmain%2FAlfred.alfredpreferences%2Falfred-gallery-downloads.yaml&query="supercharged-citation-picker"&style=plastic&logo=alfred&label=Gallery%20Downloads&color=%235C1F87)
 ![Latest release](https://img.shields.io/github/v/release/chrisgrieser/alfred-bibtex-citation-picker?label=Latest%20Release&style=plastic)
@@ -116,15 +116,15 @@ keyword.
 ### Icon meanings
 <!-- markdownlint-disable table-column-style -->
 
-| Icon | Entry has                             |
-|:-----|:--------------------------------------|
-| 🌐   | URL or DOI                            |
-| 📄   | Abstract                              |
-| n 🏷 | n Keywords                            |
-| 📓   | Literature Note                       |
-| 📕   | PDF                                   |
-| 2️⃣    | entry is from 2nd library             |
-| 📎   | entry has attachment                  |
+| Icon | Entry has                 |
+| :--- | :------------------------ |
+| 🌐   | URL or DOI                |
+| 📄   | Abstract                  |
+| n 🏷  | n Keywords                |
+| 📓   | Literature Note           |
+| 📕   | PDF                       |
+| 2️⃣   | entry is from 2nd library |
+| 📎   | entry has attachment      |
 
 <!-- markdownlint-enable table-column-style -->
 
