@@ -267,12 +267,9 @@ compatibility. If you are interested in this subject, feel free to get in touch.
 *For bug reports and features requests, please use the [GitHub issue
 tracker](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/issues/new/choose).*
 
-<a href='https://ko-fi.com/Y8Y86SQ91' target='_blank'> <img height='36'
-style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3'
-border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+If you find this project helpful, you can support me via [🩷 GitHub
+Sponsors](https://github.com/sponsors/chrisgrieser?frequency=one-time).
 
 [^1]: `Hyper` is an artificial "fifth" modifier key equal to `⌘⌥⌃⇧`, and can be
-    created using apps like [Karabiner
-    Elements](https://karabiner-elements.pqrs.org/),
-    [BetterTouchTool](https://www.macupdate.com/app/mac/32953/bettertouchtool),
+    created using apps like [Karabiner Elements](https://karabiner-elements.pqrs.org/), [BetterTouchTool](https://www.macupdate.com/app/mac/32953/bettertouchtool),
     or [Hyperkey](https://hyperkey.app/).
