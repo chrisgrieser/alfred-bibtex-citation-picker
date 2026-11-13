@@ -432,6 +432,10 @@ function run() {
 						? "⌘+fn: Delete entry from BibTeX file (⚠️ irreversible)."
 						: "⛔: Deleting entries in 2nd library not yet implemented.",
 				},
+				"ctrl+shift": {
+					valid: true,
+					subtitle: "⌃⇧: Create Citar Note in Emacs (citar-create-note)",
+				},
 				"ctrl+alt+cmd": {
 					valid: Boolean(attachment),
 					subtitle: attachment

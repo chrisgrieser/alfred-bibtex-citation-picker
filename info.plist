@@ -243,6 +243,19 @@
 		</array>
 		<key>406E52C6-C22D-4A6F-9C4D-3FEEFA513B34</key>
 		<array/>
+		<key>4E5964B3-80D8-4358-876D-5D4D6D9B61A5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>346A58DA-B1B4-4F03-8F05-20B42A4EF996</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>52B9C3DF-F265-4201-9508-55BA584F851F</key>
 		<array/>
 		<key>55B921A5-4319-4B5C-A06B-66427377E219</key>
@@ -681,6 +694,16 @@
 				<string>⌘+fn: Delete BibTeX Entry (⚠️ Experimental)</string>
 				<key>vitoclose</key>
 				<true/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>4E5964B3-80D8-4358-876D-5D4D6D9B61A5</string>
+				<key>modifiers</key>
+				<integer>393216</integer>
+				<key>modifiersubtext</key>
+				<string>⌃⇧: Create Citar Note in Emacs</string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>BC0E1F77-0045-40D3-845C-946E6BCFC90D</key>
@@ -2166,6 +2189,29 @@ echo -n $dummyBib | pandoc --citeproc --read=markdown --write=plain --csl $csl -
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>scripts/create-citar-note.sh</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>4E5964B3-80D8-4358-876D-5D4D6D9B61A5</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>## Workflow setup
@@ -2228,9 +2274,9 @@ file](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/CI
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>330</real>
+			<real>330.0</real>
 			<key>ypos</key>
-			<real>935</real>
+			<real>935.0</real>
 		</dict>
 		<key>04E17547-EDD2-4C44-9F41-F15391DD8775</key>
 		<dict>
@@ -2239,9 +2285,9 @@ file](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/CI
 			<key>note</key>
 			<string>auxiliary features</string>
 			<key>xpos</key>
-			<real>30</real>
+			<real>30.0</real>
 			<key>ypos</key>
-			<real>550</real>
+			<real>550.0</real>
 		</dict>
 		<key>09F708C6-75EE-48E9-9D2F-3F9F8276971B</key>
 		<dict>
@@ -2250,18 +2296,18 @@ file](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/CI
 			<key>note</key>
 			<string>decode &amp; open attachment</string>
 			<key>xpos</key>
-			<real>1275</real>
+			<real>1275.0</real>
 			<key>ypos</key>
-			<real>1435</real>
+			<real>1435.0</real>
 		</dict>
 		<key>0D1FD15D-6D4B-4234-AA7B-8ED1F449A45D</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>1</integer>
 			<key>xpos</key>
-			<real>650</real>
+			<real>650.0</real>
 			<key>ypos</key>
-			<real>305</real>
+			<real>305.0</real>
 		</dict>
 		<key>0F42598F-2E5E-474F-8E68-9FC22069FF39</key>
 		<dict>
@@ -2270,18 +2316,18 @@ file](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/CI
 			<key>note</key>
 			<string>enclose page numbers in brackets &amp; add citation</string>
 			<key>xpos</key>
-			<real>1255</real>
+			<real>1255.0</real>
 			<key>ypos</key>
-			<real>540</real>
+			<real>540.0</real>
 		</dict>
 		<key>0F739BDB-D7EC-482F-9798-A9B04AF57CA9</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>275</real>
+			<real>275.0</real>
 			<key>ypos</key>
-			<real>590</real>
+			<real>590.0</real>
 		</dict>
 		<key>10ACA015-64F3-4D2E-A659-213C5A665FDE</key>
 		<dict>
@@ -2290,9 +2336,9 @@ file](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/CI
 			<key>note</key>
 			<string>delete entry</string>
 			<key>xpos</key>
-			<real>1480</real>
+			<real>1480.0</real>
 			<key>ypos</key>
-			<real>1845</real>
+			<real>1845.0</real>
 		</dict>
 		<key>113F2026-78AB-41BA-8836-6145DE94CBEF</key>
 		<dict>
@@ -2301,18 +2347,18 @@ file](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/CI
 			<key>note</key>
 			<string>open PDF</string>
 			<key>xpos</key>
-			<real>1275</real>
+			<real>1275.0</real>
 			<key>ypos</key>
-			<real>1300</real>
+			<real>1300.0</real>
 		</dict>
 		<key>1B72EC4E-33E7-4144-B43B-3037510ADA3A</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<real>1685</real>
+			<real>1685.0</real>
 			<key>ypos</key>
-			<real>1800</real>
+			<real>1800.0</real>
 		</dict>
 		<key>1C0964D1-AA81-478A-B406-28E96DDD9E82</key>
 		<dict>
@@ -2321,9 +2367,9 @@ file](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/CI
 			<key>note</key>
 			<string>add page number AFTER citekey &amp; add citekey</string>
 			<key>xpos</key>
-			<real>1375</real>
+			<real>1375.0</real>
 			<key>ypos</key>
-			<real>360</real>
+			<real>360.0</real>
 		</dict>
 		<key>1D828BA0-497E-4524-9E2E-06552154CAA0</key>
 		<dict>
@@ -2332,18 +2378,18 @@ file](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/CI
 			<key>note</key>
 			<string>enclose citekey</string>
 			<key>xpos</key>
-			<real>1050</real>
+			<real>1050.0</real>
 			<key>ypos</key>
-			<real>295</real>
+			<real>295.0</real>
 		</dict>
 		<key>2D72874E-4A27-4A0C-98B3-15EFBEBE1031</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>330</real>
+			<real>330.0</real>
 			<key>ypos</key>
-			<real>810</real>
+			<real>810.0</real>
 		</dict>
 		<key>2DC90122-FC40-44CA-8F59-E3C16AC99651</key>
 		<dict>
@@ -2352,9 +2398,9 @@ file](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/CI
 			<key>note</key>
 			<string>create new entry</string>
 			<key>xpos</key>
-			<real>260</real>
+			<real>260.0</real>
 			<key>ypos</key>
-			<real>385</real>
+			<real>385.0</real>
 		</dict>
 		<key>30006A6B-EAF9-4531-8694-5E878A0FB80E</key>
 		<dict>
@@ -2363,9 +2409,9 @@ file](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/CI
 			<key>note</key>
 			<string>open URL/DOI</string>
 			<key>xpos</key>
-			<real>1275</real>
+			<real>1275.0</real>
 			<key>ypos</key>
-			<real>1575</real>
+			<real>1575.0</real>
 		</dict>
 		<key>346A58DA-B1B4-4F03-8F05-20B42A4EF996</key>
 		<dict>
@@ -2374,27 +2420,27 @@ file](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/CI
 			<key>note</key>
 			<string>error</string>
 			<key>xpos</key>
-			<real>1520</real>
+			<real>1520.0</real>
 			<key>ypos</key>
-			<real>1240</real>
+			<real>1240.0</real>
 		</dict>
 		<key>35F98A49-EA9E-41E0-8A81-6BBFD4D7634E</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>xpos</key>
-			<real>1065</real>
+			<real>1065.0</real>
 			<key>ypos</key>
-			<real>15</real>
+			<real>15.0</real>
 		</dict>
 		<key>387C2AA0-E567-46B7-96C2-46E4BD95733B</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>5</integer>
 			<key>xpos</key>
-			<real>30</real>
+			<real>30.0</real>
 			<key>ypos</key>
-			<real>385</real>
+			<real>385.0</real>
 		</dict>
 		<key>3E233EB1-E0B2-48CC-9E6F-A5CAFDFD26AD</key>
 		<dict>
@@ -2405,9 +2451,9 @@ file](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main/CI
 
 to set a hotkey for the citation picker</string>
 			<key>xpos</key>
-			<real>30</real>
+			<real>30.0</real>
 			<key>ypos</key>
-			<real>15</real>
+			<real>15.0</real>
 		</dict>
 		<key>3E40FE4A-DAEF-4583-AE6B-8638CCD6BEE0</key>
 		<dict>
@@ -2418,18 +2464,18 @@ to set a hotkey for the citation picker</string>
 
 to set a hotkey for adding DOI/ISBN</string>
 			<key>xpos</key>
-			<real>30</real>
+			<real>30.0</real>
 			<key>ypos</key>
-			<real>210</real>
+			<real>210.0</real>
 		</dict>
 		<key>3FA32575-5519-475C-AFED-6182B53063A6</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<real>1260</real>
+			<real>1260.0</real>
 			<key>ypos</key>
-			<real>1875</real>
+			<real>1875.0</real>
 		</dict>
 		<key>406E52C6-C22D-4A6F-9C4D-3FEEFA513B34</key>
 		<dict>
@@ -2438,36 +2484,47 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>note</key>
 			<string>quicklook cheatsheets</string>
 			<key>xpos</key>
-			<real>330</real>
+			<real>330.0</real>
 			<key>ypos</key>
-			<real>675</real>
+			<real>675.0</real>
+		</dict>
+		<key>4E5964B3-80D8-4358-876D-5D4D6D9B61A5</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>2</integer>
+			<key>note</key>
+			<string>create citar note via emacsclient (citar-create-note)</string>
+			<key>xpos</key>
+			<real>1275.0</real>
+			<key>ypos</key>
+			<real>1830.0</real>
 		</dict>
 		<key>52B9C3DF-F265-4201-9508-55BA584F851F</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>615</real>
+			<real>615.0</real>
 			<key>ypos</key>
-			<real>810</real>
+			<real>810.0</real>
 		</dict>
 		<key>55B921A5-4319-4B5C-A06B-66427377E219</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>115</real>
+			<real>115.0</real>
 			<key>ypos</key>
-			<real>730</real>
+			<real>730.0</real>
 		</dict>
 		<key>57D40C47-4A2C-47A2-9E7A-A3CC8C3FB671</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>275</real>
+			<real>275.0</real>
 			<key>ypos</key>
-			<real>840</real>
+			<real>840.0</real>
 		</dict>
 		<key>5A83CD14-6282-49D4-9482-F89DC21A185F</key>
 		<dict>
@@ -2476,18 +2533,18 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>note</key>
 			<string>open/create literature note</string>
 			<key>xpos</key>
-			<real>1275</real>
+			<real>1275.0</real>
 			<key>ypos</key>
-			<real>1700</real>
+			<real>1700.0</real>
 		</dict>
 		<key>5B6D763D-7B64-4EA7-BCE2-0929216BA8D2</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<real>1685</real>
+			<real>1685.0</real>
 			<key>ypos</key>
-			<real>1915</real>
+			<real>1915.0</real>
 		</dict>
 		<key>5DDAD2E1-5F9B-4181-99AB-45A86844AA87</key>
 		<dict>
@@ -2496,9 +2553,9 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>note</key>
 			<string>remove comma</string>
 			<key>xpos</key>
-			<real>1375</real>
+			<real>1375.0</real>
 			<key>ypos</key>
-			<real>540</real>
+			<real>540.0</real>
 		</dict>
 		<key>5F683C78-5D0B-4A39-B3FF-37ABA8DA0D73</key>
 		<dict>
@@ -2507,27 +2564,27 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>note</key>
 			<string>add next citation</string>
 			<key>xpos</key>
-			<real>1580</real>
+			<real>1580.0</real>
 			<key>ypos</key>
-			<real>265</real>
+			<real>265.0</real>
 		</dict>
 		<key>68FC61FC-44E7-43F2-856B-B1B89E83B099</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>275</real>
+			<real>275.0</real>
 			<key>ypos</key>
-			<real>965</real>
+			<real>965.0</real>
 		</dict>
 		<key>7416BB08-7009-4A47-B833-524B2C3BDB55</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>330</real>
+			<real>330.0</real>
 			<key>ypos</key>
-			<real>560</real>
+			<real>560.0</real>
 		</dict>
 		<key>7E602D21-0A78-4DC6-A807-28A5602897C8</key>
 		<dict>
@@ -2536,27 +2593,27 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>note</key>
 			<string>autofile</string>
 			<key>xpos</key>
-			<real>1275</real>
+			<real>1275.0</real>
 			<key>ypos</key>
-			<real>1165</real>
+			<real>1165.0</real>
 		</dict>
 		<key>8200BEAE-A1E0-48D6-85CF-AA561B6CD603</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>615</real>
+			<real>615.0</real>
 			<key>ypos</key>
-			<real>935</real>
+			<real>935.0</real>
 		</dict>
 		<key>824D0711-2DC5-46B0-8EA1-BD0A74DF5AAA</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>475</real>
+			<real>475.0</real>
 			<key>ypos</key>
-			<real>935</real>
+			<real>935.0</real>
 		</dict>
 		<key>83A9C045-9885-4C76-B88D-DAC01E9528C0</key>
 		<dict>
@@ -2565,18 +2622,18 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>note</key>
 			<string>paste</string>
 			<key>xpos</key>
-			<real>1580</real>
+			<real>1580.0</real>
 			<key>ypos</key>
-			<real>605</real>
+			<real>605.0</real>
 		</dict>
 		<key>8B51C1A0-EAD2-457B-A532-6CC16C7F015E</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>xpos</key>
-			<real>1065</real>
+			<real>1065.0</real>
 			<key>ypos</key>
-			<real>160</real>
+			<real>160.0</real>
 		</dict>
 		<key>8C5097B2-3CE6-4055-983B-687409AB3FA2</key>
 		<dict>
@@ -2585,9 +2642,9 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>note</key>
 			<string>paste</string>
 			<key>xpos</key>
-			<real>1470</real>
+			<real>1470.0</real>
 			<key>ypos</key>
-			<real>825</real>
+			<real>825.0</real>
 		</dict>
 		<key>9203374D-5043-4889-A74F-07A4F9E81B27</key>
 		<dict>
@@ -2596,18 +2653,18 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>note</key>
 			<string>paste</string>
 			<key>xpos</key>
-			<real>1580</real>
+			<real>1580.0</real>
 			<key>ypos</key>
-			<real>15</real>
+			<real>15.0</real>
 		</dict>
 		<key>9608AE94-464B-4B17-A1CA-71855DDB207D</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<real>1620</real>
+			<real>1620.0</real>
 			<key>ypos</key>
-			<real>1945</real>
+			<real>1945.0</real>
 		</dict>
 		<key>96FCE9BC-5201-4357-9B63-588F73AEF5F3</key>
 		<dict>
@@ -2616,9 +2673,9 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>note</key>
 			<string>paste single bibliography</string>
 			<key>xpos</key>
-			<real>1275</real>
+			<real>1275.0</real>
 			<key>ypos</key>
-			<real>885</real>
+			<real>885.0</real>
 		</dict>
 		<key>986EF1F7-54A1-4C67-A490-4DFCC60FA328</key>
 		<dict>
@@ -2627,9 +2684,9 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>note</key>
 			<string>add previous citations</string>
 			<key>xpos</key>
-			<real>1490</real>
+			<real>1490.0</real>
 			<key>ypos</key>
-			<real>460</real>
+			<real>460.0</real>
 		</dict>
 		<key>A1A6DEC2-1AF1-4110-9DA9-01400A1902FF</key>
 		<dict>
@@ -2638,18 +2695,18 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>note</key>
 			<string>enclose citekey</string>
 			<key>xpos</key>
-			<real>1255</real>
+			<real>1255.0</real>
 			<key>ypos</key>
-			<real>635</real>
+			<real>635.0</real>
 		</dict>
 		<key>AAFDDBD8-78E7-4FEE-8BA5-4F12FA778F76</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>xpos</key>
-			<real>1030</real>
+			<real>1030.0</real>
 			<key>ypos</key>
-			<real>385</real>
+			<real>385.0</real>
 		</dict>
 		<key>AD3AD409-A1A0-4F46-9AD2-68A69650155B</key>
 		<dict>
@@ -2658,9 +2715,9 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>note</key>
 			<string>formatted single entry</string>
 			<key>xpos</key>
-			<real>1275</real>
+			<real>1275.0</real>
 			<key>ypos</key>
-			<real>750</real>
+			<real>750.0</real>
 		</dict>
 		<key>AF09AE5D-C351-4190-8AA6-B1924D88B22F</key>
 		<dict>
@@ -2669,9 +2726,9 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>note</key>
 			<string>open entry</string>
 			<key>xpos</key>
-			<real>1275</real>
+			<real>1275.0</real>
 			<key>ypos</key>
-			<real>1030</real>
+			<real>1030.0</real>
 		</dict>
 		<key>B15FCEB3-D411-49F9-BD12-2B4F4E63AC39</key>
 		<dict>
@@ -2682,18 +2739,18 @@ to set a hotkey for adding DOI/ISBN</string>
 2. add citekey
 3. enclose citation</string>
 			<key>xpos</key>
-			<real>1255</real>
+			<real>1255.0</real>
 			<key>ypos</key>
-			<real>45</real>
+			<real>45.0</real>
 		</dict>
 		<key>B35474AD-DDAA-4056-AE14-9BE2D3CFCCA0</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>7</integer>
 			<key>xpos</key>
-			<real>1255</real>
+			<real>1255.0</real>
 			<key>ypos</key>
-			<real>155</real>
+			<real>155.0</real>
 		</dict>
 		<key>B598D796-0CA2-42A8-B348-5388FEA9A66E</key>
 		<dict>
@@ -2702,9 +2759,9 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>note</key>
 			<string>page before citekey?</string>
 			<key>xpos</key>
-			<real>943</real>
+			<real>943.0</real>
 			<key>ypos</key>
-			<real>85</real>
+			<real>85.0</real>
 		</dict>
 		<key>B8AEF220-7CBC-4D07-BA5F-D28094B3D4B4</key>
 		<dict>
@@ -2713,18 +2770,18 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>note</key>
 			<string>Citation picker</string>
 			<key>xpos</key>
-			<real>525</real>
+			<real>525.0</real>
 			<key>ypos</key>
-			<real>15</real>
+			<real>15.0</real>
 		</dict>
 		<key>BC0E1F77-0045-40D3-845C-946E6BCFC90D</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>9</integer>
 			<key>xpos</key>
-			<real>420</real>
+			<real>420.0</real>
 			<key>ypos</key>
-			<real>405</real>
+			<real>405.0</real>
 		</dict>
 		<key>C64ACAF0-66C8-48A8-A3C4-B55C7E282697</key>
 		<dict>
@@ -2733,9 +2790,9 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>note</key>
 			<string>save as previous citation</string>
 			<key>xpos</key>
-			<real>1490</real>
+			<real>1490.0</real>
 			<key>ypos</key>
-			<real>295</real>
+			<real>295.0</real>
 		</dict>
 		<key>CA8E66FF-6C89-4A85-8CCA-E8FA26727F32</key>
 		<dict>
@@ -2744,9 +2801,9 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>note</key>
 			<string>error</string>
 			<key>xpos</key>
-			<real>505</real>
+			<real>505.0</real>
 			<key>ypos</key>
-			<real>305</real>
+			<real>305.0</real>
 		</dict>
 		<key>CB4D33E2-A031-4542-A640-3B73D66EE39E</key>
 		<dict>
@@ -2755,9 +2812,9 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>note</key>
 			<string>enclose citation &amp; paste</string>
 			<key>xpos</key>
-			<real>1580</real>
+			<real>1580.0</real>
 			<key>ypos</key>
-			<real>430</real>
+			<real>430.0</real>
 		</dict>
 		<key>DD59F90F-8FD2-486D-A8A8-2FFA47DE45F6</key>
 		<dict>
@@ -2766,9 +2823,9 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>note</key>
 			<string>enclose citekey, then save</string>
 			<key>xpos</key>
-			<real>835</real>
+			<real>835.0</real>
 			<key>ypos</key>
-			<real>45</real>
+			<real>45.0</real>
 		</dict>
 		<key>E1D3B211-1CE6-4A09-B45E-7C55A61CDC06</key>
 		<dict>
@@ -2777,9 +2834,9 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>note</key>
 			<string>add page number AFTER citekey &amp; add citekey</string>
 			<key>xpos</key>
-			<real>1375</real>
+			<real>1375.0</real>
 			<key>ypos</key>
-			<real>190</real>
+			<real>190.0</real>
 		</dict>
 		<key>E451F6F1-8CE4-44B5-90E2-8B457B48C81C</key>
 		<dict>
@@ -2788,36 +2845,36 @@ to set a hotkey for adding DOI/ISBN</string>
 			<key>note</key>
 			<string>enclose citekey</string>
 			<key>xpos</key>
-			<real>1375</real>
+			<real>1375.0</real>
 			<key>ypos</key>
-			<real>460</real>
+			<real>460.0</real>
 		</dict>
 		<key>F4AE9C32-4A15-421F-A8FE-C71500135BA3</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<real>1335</real>
+			<real>1335.0</real>
 			<key>ypos</key>
-			<real>1845</real>
+			<real>1845.0</real>
 		</dict>
 		<key>FC604ACD-94BE-4F8B-B73C-8475943837C7</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<real>475</real>
+			<real>475.0</real>
 			<key>ypos</key>
-			<real>810</real>
+			<real>810.0</real>
 		</dict>
 		<key>FCCA3147-A52B-4254-938A-C8EFA2FF7933</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>1</integer>
 			<key>xpos</key>
-			<real>1665</real>
+			<real>1665.0</real>
 			<key>ypos</key>
-			<real>1240</real>
+			<real>1240.0</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
@@ -3080,6 +3137,27 @@ to set a hotkey for adding DOI/ISBN</string>
 			<string>slider</string>
 			<key>variable</key>
 			<string>alfred_bar_width</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>emacsclient</string>
+				<key>placeholder</key>
+				<string>/opt/homebrew/bin/emacsclient</string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Path to emacsclient, used by ⌃⇧ to create a citar note via `citar-create-note`. Emacs server must be running.</string>
+			<key>label</key>
+			<string>emacsclient path</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>emacsclient_path</string>
 		</dict>
 	</array>
 	<key>variables</key>

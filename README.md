@@ -197,6 +197,11 @@ formats](https://github.com/chrisgrieser/alfred-bibtex-citation-picker/blob/main
     - If the file is in your [Obsidian Vault](https://obsidian.md/), it is
     opened directly in Obsidian instead of the default text editor.
     - If there is no literature note, a new one is created.
+- <kbd>⌃</kbd><kbd>⇧</kbd><kbd>⏎</kbd>: Create a [citar](https://github.com/emacs-citar/citar)
+  note in Emacs via `citar-create-note`. Requires a running Emacs server
+  (`(server-start)` in your init file) with citar loaded or installed. If
+  `emacsclient` is not on Alfred's `PATH`, set its location in the workflow
+  configuration.
 - Add `*` to any search query to filter only for entries with literature notes,
   for example `* grieser` searches for entries matching "Grieser" which also
     have a literature notes. Can be combined with other queries (see: [smart
